@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Song WebVC-->
+        <scene sceneID="44f-6V-rv5">
+            <objects>
+                <viewController storyboardIdentifier="Song" id="X7n-9v-F3q" customClass="SongWebVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yEv-GA-YAi"/>
+                        <viewControllerLayoutGuide type="bottom" id="iXv-Mr-YkC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oPa-hK-hCD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BcD-RS-7P0"/>
+                    </view>
+                    <connections>
+                        <outlet property="songWebView" destination="oPa-hK-hCD" id="dFh-cH-tOK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r5n-f8-682" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4121" y="-690"/>
+        </scene>
+        <!--Scripture WebVC-->
+        <scene sceneID="ofm-be-dI6">
+            <objects>
+                <viewController storyboardIdentifier="Scripture" id="3LK-4N-X4B" customClass="ScriptureWebVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kZJ-V1-hMq"/>
+                        <viewControllerLayoutGuide type="bottom" id="NNj-yp-9KS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ReW-rK-CMG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="RLT-Nb-HgH"/>
+                    </view>
+                    <connections>
+                        <outlet property="scriptureWebView" destination="ReW-rK-CMG" id="8aW-pZ-px1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vtk-2E-Q94" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4868" y="-690"/>
+        </scene>
+        <!--Lesson WebVC-->
+        <scene sceneID="SgO-II-L5j">
+            <objects>
+                <viewController storyboardIdentifier="Lesson" id="S9r-8S-pl4" customClass="LessonWebVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lxe-Xk-erv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uig-wQ-Lxz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WLZ-Dw-VW0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cD5-aD-WTB"/>
+                    </view>
+                    <connections>
+                        <outlet property="lessonWebView" destination="WLZ-Dw-VW0" id="POy-XR-IpI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmV-vq-dLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5612" y="-690"/>
+        </scene>
+    </scenes>
+</document>

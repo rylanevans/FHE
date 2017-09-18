@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tutorials-->
+        <scene sceneID="pCv-BV-ql5">
+            <objects>
+                <viewController storyboardIdentifier="Tutorial" id="fuG-nE-0lE" userLabel="Tutorials" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="npT-WL-eZ3"/>
+                        <viewControllerLayoutGuide type="bottom" id="l5I-bz-Kch"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WDs-YW-uHn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sT6-3s-3ng">
+                                <rect key="frame" x="16" y="64" width="343" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Apple TV. Best used when with Apple TV to be displayed on your family room TV.
+
+Family. Add family memebrs and enable the ones who are attending. 
+
+Lessons. Songs, Scriptures, Lessons, Activities/Games, and Rules can be edited, added, and rotated in order of next, random, or manual.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="dne-aK-sQX"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Tutorial" id="lJK-bQ-4C3"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZwY-y3-YeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16703.200000000001" y="-1984.8575712143929"/>
+        </scene>
+        <!--About me-->
+        <scene sceneID="SSK-gy-weV">
+            <objects>
+                <viewController storyboardIdentifier="AboutMe" id="Yaz-76-6gB" userLabel="About me" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ljk-Yh-mBJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="mqH-ex-0ET"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6HK-HL-QCj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rylan" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-4j-QbG">
+                                <rect key="frame" x="116" y="72" width="142" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-9Y-v3e">
+                                <rect key="frame" x="73" y="215" width="229" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">My name is Rylan Evans. 
+
+Support. I spent a lot of time and effort building something I thought would be both helpful and practiacl for parents and children. God has blessed me with many things. This is my way of giving back. This app will always be FREE. I will not ask for monitary return. This is a service. I want to support others with an easy way to teach and raise their children. Tips are accepted as tokens of appreciateion. I use all the money toward improving this app or developing new apps that I think may be helpful others. Your welcome and thank you for downloading the FHE app.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Signature" translatesAutoresizingMaskIntoConstraints="NO" id="kYc-89-BgY">
+                                <rect key="frame" x="209" y="559" width="128" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="JGc-Yw-aJn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Me" id="Jn9-re-VJb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2O-P3-Hp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17410.400000000001" y="-1985.7571214392806"/>
+        </scene>
+        <!--Other Apps-->
+        <scene sceneID="xJh-QQ-Vdb">
+            <objects>
+                <tableViewController storyboardIdentifier="OtherApps" id="pfT-tA-DRg" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QCa-P6-K2v">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection headerTitle="RYLAN'S APPS" id="9uJ-Zl-kZl">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="372" id="Azh-IC-kTx">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="372"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Azh-IC-kTx" id="xt7-AV-9wL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="371.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="CXD-GC-Ms2">
+                                                    <rect key="frame" x="8" y="8" width="359" height="355.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BSSBG" translatesAutoresizingMaskIntoConstraints="NO" id="EU7-rj-J9s">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="306"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball Simple Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWF-bS-8Pg">
+                                                            <rect key="frame" x="0.0" y="306" width="359" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-dh-4es">
+                                                            <rect key="frame" x="0.0" y="326.5" width="359" height="29"/>
+                                                            <string key="text">Discription:
+Tool for parents to track their kids basketball stats and then share them with friends and family.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CXD-GC-Ms2" secondAttribute="trailing" id="DaS-zJ-a1L"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CXD-GC-Ms2" secondAttribute="bottom" id="K7i-HF-HBw"/>
+                                                <constraint firstItem="CXD-GC-Ms2" firstAttribute="top" secondItem="xt7-AV-9wL" secondAttribute="topMargin" id="x8S-AO-8eu"/>
+                                                <constraint firstItem="CXD-GC-Ms2" firstAttribute="leading" secondItem="xt7-AV-9wL" secondAttribute="leadingMargin" id="zQm-Tu-RAp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="pfT-tA-DRg" id="eOh-uL-Sx4"/>
+                            <outlet property="delegate" destination="pfT-tA-DRg" id="QXv-uj-IAw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Other Apps" id="z1c-Yl-pfp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTK-y9-QZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18122.400000000001" y="-1986.656671664168"/>
+        </scene>
+        <!--Disclaimer-->
+        <scene sceneID="EZt-Eu-2ds">
+            <objects>
+                <viewController storyboardIdentifier="Disclaimer" id="k46-iE-gW5" userLabel="Disclaimer" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wCO-6u-QuY"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qhe-fj-XTo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DKR-u2-SPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts6-Y1-CAd">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Purpose. The app is a mechinism to establish consitancy and order in our homes.
+
+Focus. Because of my own personal beliefs, this app was designed around Christian principles found and taught by the Church of Jesus Christ of Latter-Day Saints (LDS Church). However, the app is designed for anyone of any faith to create, modify, or delete to tailor toward their own family structure and core beliefs. My desire is that kids learn from their parents in the home the most improtant things in life. To bring things they are learning from school, social media, friends, work, etc. and talk about them together. Learn and grow as a family with a safe and loving place to come together and talk about the important things. 
+
+Resource. I developed this app as a resource to be an easy tool for parents to orginize and host FHE. It is NOT designed to replace: preparation, personal insperation, or family revolation. My hope is to add to those things.
+
+Offiliaction. I am a member of the LDS Church, but I am not paid, sponsored or endorsed by the church. 
+
+Content. The songs, scriptures, talks, and referances are all owned by the LDS Church. All content is avaliable at LDS.org.
+
+Docterine. The lessons taught and topcis selected are of my own personal opinions and do not reflect the docterine of the church. I encourage parents and gardians to search, ponder, and pray for their own lessons and topics and add to my template based on the spirits personal revolatuions. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BDd-qc-l2b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Disclaimer" id="clM-bN-wDr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVe-lk-uJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18802.400000000001" y="-1985.7571214392806"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BSSBG" width="2854" height="1306"/>
+        <image name="Rylan" width="492" height="666"/>
+        <image name="Signature" width="98" height="31"/>
+    </resources>
+</document>
