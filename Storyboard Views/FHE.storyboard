@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -39,7 +38,7 @@
         <!--Opening Prayer-->
         <scene sceneID="OPb-ao-NGh">
             <objects>
-                <viewController storyboardIdentifier="OpeningPrayerVC" title="Opening Prayer" id="W2J-kG-43N" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpeningPrayer" title="Opening Prayer" id="W2J-kG-43N" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pLB-yk-BQd"/>
                         <viewControllerLayoutGuide type="bottom" id="uSl-VP-1cD"/>
@@ -55,13 +54,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HandsBG" translatesAutoresizingMaskIntoConstraints="NO" id="k8a-LX-oB9">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="JcN-89-MnK"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="JcN-89-MnK"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9q-Te-H87" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="2ij-zs-uX5"/>
@@ -216,7 +215,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-FB-bnZ">
-                                <rect key="frame" x="0.0" y="179" width="150" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="150" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="T2G-0O-ySz"/>
                                     <constraint firstAttribute="height" constant="95" id="Ykx-yS-xHp"/>
@@ -227,7 +226,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bna-LS-SFs" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="87" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="87" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykh-09-x1D">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="28.5"/>
@@ -244,7 +243,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Ze-Zu-m3h" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="Sve-l7-VlM" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -287,7 +286,7 @@
         <!--Song-->
         <scene sceneID="Vor-fE-Lo2">
             <objects>
-                <viewController storyboardIdentifier="SongVC" title="Song" id="ivS-E9-Po5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Song" title="Song" id="ivS-E9-Po5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DuQ-jT-JLc"/>
                         <viewControllerLayoutGuide type="bottom" id="MIA-X7-uCo"/>
@@ -303,13 +302,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PianoBG" translatesAutoresizingMaskIntoConstraints="NO" id="YxZ-ZT-tbh">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="zC7-Jw-2eu"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="zC7-Jw-2eu"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj9-5l-hbs" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="d6o-fy-ORy"/>
@@ -466,7 +465,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-G1-3ej">
-                                <rect key="frame" x="0.0" y="179" width="135" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="Ahb-nt-9fo"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="f7s-9w-46x"/>
@@ -478,7 +477,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jm6-V7-xwN" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qze-2d-xO3">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -495,7 +494,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eoO-83-MjU" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="zYr-98-TuW" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -546,7 +545,7 @@
         <!--Rule-->
         <scene sceneID="VBF-kZ-T8z">
             <objects>
-                <viewController storyboardIdentifier="RuleVC" title="Rule" id="RFP-iF-3XJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Rule" title="Rule" id="RFP-iF-3XJ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dIJ-0d-1Q9"/>
                         <viewControllerLayoutGuide type="bottom" id="t7Q-Rd-rkx"/>
@@ -561,14 +560,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="IcI-es-GgZ" userLabel="Image and header">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PoliceBG" translatesAutoresizingMaskIntoConstraints="NO" id="SeC-Lg-X7Z">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JournalBG" translatesAutoresizingMaskIntoConstraints="NO" id="SeC-Lg-X7Z">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="2UU-4V-cVF"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="2UU-4V-cVF"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yya-sr-kax" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="rF1-Ld-4lk"/>
@@ -716,11 +715,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="X">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-ha-03J">
-                                <rect key="frame" x="0.0" y="179" width="135" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="0tu-oI-xuR"/>
                                     <constraint firstAttribute="height" constant="95" id="1yo-z1-0ft"/>
@@ -732,7 +731,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kem-EC-Sc4" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-cm-api">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -749,7 +748,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pG0-SW-Nfs" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="yF2-5j-xOR" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -792,7 +791,7 @@
         <!--Scripture-->
         <scene sceneID="b9u-ad-HS5">
             <objects>
-                <viewController storyboardIdentifier="ScriptureVC" title="Scripture" id="0aA-xK-YGk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Scripture" title="Scripture" id="0aA-xK-YGk" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7tO-Tn-Xu3"/>
                         <viewControllerLayoutGuide type="bottom" id="Occ-w2-Pt9"/>
@@ -808,13 +807,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScriptureBG" translatesAutoresizingMaskIntoConstraints="NO" id="45D-on-QNt">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="UaV-ON-aej"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="UaV-ON-aej"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AfL-XS-Z9Y" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="k8C-rT-N9m"/>
@@ -971,7 +970,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scripture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-du-65p">
-                                <rect key="frame" x="0.0" y="179" width="160" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="160" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="955-V5-GVW"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="SLy-Vm-UVT"/>
@@ -982,7 +981,7 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lYD-fC-hX7" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-zL-PxZ">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -999,7 +998,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pUD-kx-zBL" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="cAC-Xm-JbC" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -1050,7 +1049,7 @@
         <!--Calendar-->
         <scene sceneID="HhL-8W-8SN">
             <objects>
-                <viewController storyboardIdentifier="CalendarVC" title="Calendar" id="ZFw-sH-GMu" customClass="CalendarAppVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calendar" title="Calendar" id="ZFw-sH-GMu" customClass="CalendarAppVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qsu-EU-HUp"/>
                         <viewControllerLayoutGuide type="bottom" id="Buz-ie-7c5"/>
@@ -1066,13 +1065,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CalendarBG" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-1S-6lV">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="ifJ-Qh-d5S"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="ifJ-Qh-d5S"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qam-he-Rqq" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="Qdl-ir-muo"/>
@@ -1227,7 +1226,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcw-Eu-OHU">
-                                <rect key="frame" x="0.0" y="179" width="170" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="170" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="N8R-hn-CSk"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="sL3-8I-pdh"/>
@@ -1239,7 +1238,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6fn-fk-2ke" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIs-Ob-b8X">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -1256,7 +1255,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pCQ-yk-doA" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="Y0X-99-KJ4" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -1299,7 +1298,7 @@
         <!--Testimony-->
         <scene sceneID="lTF-rB-uyM">
             <objects>
-                <viewController storyboardIdentifier="TestimonyVC" title="Testimony" id="fLO-R1-Ws9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Testimony" title="Testimony" id="fLO-R1-Ws9" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05f-at-qF9"/>
                         <viewControllerLayoutGuide type="bottom" id="cQN-oA-WyB"/>
@@ -1315,13 +1314,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeavenBG" translatesAutoresizingMaskIntoConstraints="NO" id="0HT-em-SVP">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="sGF-2i-zI1"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="sGF-2i-zI1"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENw-zo-npn" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="r3E-Zm-shj"/>
@@ -1473,7 +1472,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testimony" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xF-UQ-M64">
-                                <rect key="frame" x="0.0" y="179" width="175" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="175" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="JV9-9U-Bux"/>
                                     <constraint firstAttribute="height" constant="95" id="ll5-9N-iaE"/>
@@ -1485,7 +1484,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ais-Ct-jHW" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-8P-hqN">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -1502,7 +1501,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3wn-LI-pDq" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="R9y-Rs-Qdo" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -1545,7 +1544,7 @@
         <!--Spotlight-->
         <scene sceneID="VUm-KO-m0K">
             <objects>
-                <viewController storyboardIdentifier="SpotlightVC" title="Spotlight" id="Enk-5M-ZvE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Spotlight" title="Spotlight" id="Enk-5M-ZvE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iTR-YN-Wrp"/>
                         <viewControllerLayoutGuide type="bottom" id="LYZ-Ck-cCm"/>
@@ -1560,14 +1559,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="7UH-Zt-cFf" userLabel="Image and header">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IdeaBG" translatesAutoresizingMaskIntoConstraints="NO" id="a1V-bT-h3D">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpotlightBG" translatesAutoresizingMaskIntoConstraints="NO" id="a1V-bT-h3D">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="FPI-DY-Lfe"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="FPI-DY-Lfe"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sg-LO-jtp" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="GFP-Ya-61x"/>
@@ -1719,7 +1718,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-XS-MYQ">
-                                <rect key="frame" x="0.0" y="179" width="180" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="180" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="7h8-8X-pK4"/>
                                     <constraint firstAttribute="height" constant="95" id="VT3-Fd-vaZ"/>
@@ -1731,7 +1730,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="idl-Q1-bm1" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="153" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="153" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTk-oO-5LW">
                                         <rect key="frame" x="0.0" y="0.0" width="153" height="28.5"/>
@@ -1748,7 +1747,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vXB-nx-q2m" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="YMO-eV-VRR" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -1791,7 +1790,7 @@
         <!--Misc.-->
         <scene sceneID="YFm-wo-u7O">
             <objects>
-                <viewController storyboardIdentifier="MiscVC" title="Misc." id="eWq-pv-eEs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Misc" title="Misc." id="eWq-pv-eEs" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Eq-Xv-ktD"/>
                         <viewControllerLayoutGuide type="bottom" id="BVt-fe-XXe"/>
@@ -1807,13 +1806,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MiscBG" translatesAutoresizingMaskIntoConstraints="NO" id="CxB-Z8-ADK">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="rRx-Sf-56b"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="rRx-Sf-56b"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09Z-aA-VGR" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="Fqy-ZX-qFw"/>
@@ -1965,7 +1964,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misc." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-5W-Fjw">
-                                <rect key="frame" x="0.0" y="179" width="135" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="6l2-rJ-LIy"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="Em3-ur-IBR"/>
@@ -1977,7 +1976,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7IF-dZ-c3k" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMU-Na-2e9">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -1994,7 +1993,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-1j-S4e" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="J8o-01-iTF" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -2037,7 +2036,7 @@
         <!--Thought-->
         <scene sceneID="sFG-Ae-WTV">
             <objects>
-                <viewController storyboardIdentifier="ThoughtVC" title="Thought" id="eAf-bf-f3B" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Thought" title="Thought" id="eAf-bf-f3B" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rl7-dG-2nu"/>
                         <viewControllerLayoutGuide type="bottom" id="3H1-cY-TLq"/>
@@ -2052,14 +2051,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Ndd-Lw-fOq" userLabel="Image and header">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JournalBG" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-J7-VOE">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IdeaBG" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-J7-VOE">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="sby-eq-cLI"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="sby-eq-cLI"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKC-tQ-kAW" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="kWL-U6-AmE"/>
@@ -2211,7 +2210,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-5L-JHB">
-                                <rect key="frame" x="0.0" y="179" width="175" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="175" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="CbS-EK-sGk"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="FQv-iq-Hwj"/>
@@ -2223,7 +2222,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="azP-zM-PHm" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBb-mN-eLh">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -2240,7 +2239,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SCa-Rw-LJB" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="jg1-jg-wQ4" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -2283,7 +2282,7 @@
         <!--Lesson-->
         <scene sceneID="gGp-BB-Gr5">
             <objects>
-                <viewController storyboardIdentifier="LessonVC" title="Lesson" id="qwK-Ja-Lqd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Lesson" title="Lesson" id="qwK-Ja-Lqd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fgd-WK-lQY"/>
                         <viewControllerLayoutGuide type="bottom" id="Aor-mb-wTW"/>
@@ -2299,13 +2298,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChristusBG" translatesAutoresizingMaskIntoConstraints="NO" id="3Fe-86-joJ">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="WIp-fp-Qg2"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="WIp-fp-Qg2"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pdB-YR-g1v" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="FjY-yf-IDI"/>
@@ -2462,7 +2461,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctB-Cl-XZZ">
-                                <rect key="frame" x="0.0" y="179" width="135" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="ZdZ-lP-YQ2"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="rnO-3M-Z90"/>
@@ -2472,7 +2471,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-Kk-GlR" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-OR-GOK">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -2489,7 +2488,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ATt-RT-ijy" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="1l6-qW-RzK" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -2540,7 +2539,7 @@
         <!--Council-->
         <scene sceneID="cyE-UI-gCG">
             <objects>
-                <viewController storyboardIdentifier="CouncilVC" title="Council" id="Hc4-GV-zQc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Council" title="Council" id="Hc4-GV-zQc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AhB-Vw-oKX"/>
                         <viewControllerLayoutGuide type="bottom" id="4Ex-yB-AfM"/>
@@ -2556,13 +2555,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CouchBG" translatesAutoresizingMaskIntoConstraints="NO" id="UIw-Qa-PH4">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="5gv-F9-a7z"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="5gv-F9-a7z"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibk-fI-UaP" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="H3L-fb-U1J"/>
@@ -2714,7 +2713,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Council" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihq-qe-EsE">
-                                <rect key="frame" x="0.0" y="179" width="135" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="Gnd-rj-90o"/>
                                     <constraint firstAttribute="height" constant="95" id="fxe-lh-3zQ"/>
@@ -2726,7 +2725,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-Ge-FS8" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-Yr-A2Y">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -2743,7 +2742,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5nE-el-0fQ" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="H1z-sE-1JX" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -2786,7 +2785,7 @@
         <!--ClosingPrayer-->
         <scene sceneID="doA-Vv-ITx">
             <objects>
-                <viewController storyboardIdentifier="ClosingPrayerVC" title="ClosingPrayer" id="oFt-LC-QD1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClosingPrayer" title="ClosingPrayer" id="oFt-LC-QD1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Srf-OQ-sg6"/>
                         <viewControllerLayoutGuide type="bottom" id="dSr-xD-aaL"/>
@@ -2802,13 +2801,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HandsBG" translatesAutoresizingMaskIntoConstraints="NO" id="qx1-TR-73V">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="lDs-p7-C4Y"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="lDs-p7-C4Y"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub3-kh-Yik" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="bpC-S1-twU"/>
@@ -2963,7 +2962,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-Kl-TQT">
-                                <rect key="frame" x="0.0" y="179" width="150" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="150" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="5mO-8r-wCG"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="iC3-6N-pEi"/>
@@ -2973,7 +2972,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MK2-l9-P8W" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="87" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="87" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqx-zh-nVo">
                                         <rect key="frame" x="0.0" y="0.0" width="87" height="28.5"/>
@@ -2990,7 +2989,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="05Y-tk-pOn" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="yiI-lI-x35" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -3033,7 +3032,7 @@
         <!--Activity-->
         <scene sceneID="m4k-YN-H2H">
             <objects>
-                <viewController storyboardIdentifier="ActivityVC" title="Activity" id="xAK-06-azI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Activity" title="Activity" id="xAK-06-azI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hSM-j6-RyY"/>
                         <viewControllerLayoutGuide type="bottom" id="t2E-yE-rRD"/>
@@ -3049,13 +3048,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ActivityBG" translatesAutoresizingMaskIntoConstraints="NO" id="iW1-ZE-ynG">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="3wq-qK-xqr"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="3wq-qK-xqr"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cV9-dC-r70" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="N6v-PZ-YS9"/>
@@ -3203,11 +3202,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="X">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.37876808643341064" green="0.27919739484786987" blue="0.19387608766555786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyG-QU-7R1">
-                                <rect key="frame" x="0.0" y="179" width="175" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="175" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="Iig-f6-VG7"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="175" id="bGV-8m-GnA"/>
@@ -3218,7 +3217,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-nl-pBH" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOX-gr-BLh">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -3235,7 +3234,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F13-CJ-IOe" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="7Qb-SP-nf3" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -3278,7 +3277,7 @@
         <!--Treat-->
         <scene sceneID="pxZ-1t-3e1">
             <objects>
-                <viewController storyboardIdentifier="TreatVC" title="Treat" id="X55-qV-eYU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Treat" title="Treat" id="X55-qV-eYU" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zWl-Qt-WeK"/>
                         <viewControllerLayoutGuide type="bottom" id="X12-3M-knZ"/>
@@ -3294,13 +3293,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CookiesBG" translatesAutoresizingMaskIntoConstraints="NO" id="hUh-Ap-LBy">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="254.5"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="9D8-uG-Sx5"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="9D8-uG-Sx5"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygj-2R-Ya7" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="250" width="375" height="4"/>
+                                                <rect key="frame" x="0.0" y="254.5" width="375" height="4"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="4" id="qC1-cV-ip7"/>
@@ -3448,11 +3447,11 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="X">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.027689384296536446" green="0.019797815009951591" blue="0.007264221552759409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-eG-ufm">
-                                <rect key="frame" x="0.0" y="179" width="135" height="95"/>
+                                <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="KRN-4p-Ye1"/>
                                     <constraint firstAttribute="height" constant="95" id="y1i-x4-KHF"/>
@@ -3464,7 +3463,7 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-on-ukW" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="278" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaj-ea-d1k">
                                         <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
@@ -3481,7 +3480,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EF4-WO-k7m" userLabel="Assignee">
-                                <rect key="frame" x="285" y="238.5" width="75" height="95.5"/>
+                                <rect key="frame" x="285" y="243" width="75" height="95.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="QXj-PB-GoC" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
@@ -3535,7 +3534,7 @@
         <image name="MiscBG" width="2048" height="2048"/>
         <image name="Missing Profile" width="770" height="770"/>
         <image name="PianoBG" width="4256" height="2832"/>
-        <image name="PoliceBG" width="4326" height="3456"/>
         <image name="ScriptureBG" width="5838" height="3897"/>
+        <image name="SpotlightBG" width="4459" height="2508"/>
     </resources>
 </document>

@@ -11,20 +11,20 @@ import UIKit
 class HomePageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.instanceVC(name: "OpeningPrayerVC"),
-                self.instanceVC(name: "SongVC"),
-                self.instanceVC(name: "RuleVC"),
-                self.instanceVC(name: "ScriptureVC"),
-                self.instanceVC(name: "CalendarVC"),
-                self.instanceVC(name: "TestimonyVC"),
-                self.instanceVC(name: "SpotlightVC"),
-                self.instanceVC(name: "MiscVC"),
-                self.instanceVC(name: "ThoughtVC"),
-                self.instanceVC(name: "LessonVC"),
-                self.instanceVC(name: "CouncilVC"),
-                self.instanceVC(name: "ClosingPrayerVC"),
-                self.instanceVC(name: "ActivityVC"),
-                self.instanceVC(name: "TreatVC")]
+        return [self.instanceVC(name: "OpeningPrayer"),
+                self.instanceVC(name: "Song"),
+                self.instanceVC(name: "Rule"),
+                self.instanceVC(name: "Scripture"),
+                self.instanceVC(name: "Calendar"),
+                self.instanceVC(name: "Testimony"),
+                self.instanceVC(name: "Spotlight"),
+                self.instanceVC(name: "Misc"),
+                self.instanceVC(name: "Thought"),
+                self.instanceVC(name: "Lesson"),
+                self.instanceVC(name: "Council"),
+                self.instanceVC(name: "ClosingPrayer"),
+                self.instanceVC(name: "Activity"),
+                self.instanceVC(name: "Treat")]
     }()
     
     func instanceVC(name: String) -> UIViewController {
