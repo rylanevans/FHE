@@ -14,7 +14,7 @@
         <!--Settings-->
         <scene sceneID="rAr-tP-jy4">
             <objects>
-                <tableViewController title="Settings" id="hta-wX-sdS" userLabel="Settings" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EditPrayer" title="Prayer" id="hta-wX-sdS" userLabel="Settings" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BVN-Jl-h62">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
         <!--Settings-->
         <scene sceneID="Mq3-4N-8Ix">
             <objects>
-                <tableViewController title="Settings" id="naF-sB-Cpf" userLabel="Settings" sceneMemberID="viewController">
+                <tableViewController title="Songs" id="naF-sB-Cpf" userLabel="Settings" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="l6f-Sy-RKf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
