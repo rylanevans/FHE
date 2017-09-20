@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,48 +12,86 @@
         <!--Tutorials-->
         <scene sceneID="lcb-CT-GXy">
             <objects>
-                <tableViewController storyboardIdentifier="Tutorials" title="Tutorials" id="U1u-eF-GtX" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Tutorial" title="Tutorials" id="U1u-eF-GtX" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mQm-Ti-wia">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sT6-3s-3ng">
-                            <rect key="frame" x="0.0" y="132" width="375" height="319"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <string key="text">Apple TV. Best used when with Apple TV to be displayed on your family room TV.
-
-Family. Add family memebrs and enable the ones who are attending. 
-
-Lessons. Songs, Scriptures, Lessons, Activities/Games, and Rules can be edited, added, and rotated in order of next, random, or manual.</string>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <sections>
-                            <tableViewSection id="3Ot-1h-o9x">
+                            <tableViewSection headerTitle="Display" id="3Ot-1h-o9x">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rHj-Fm-s8T">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rHj-Fm-s8T" id="wBH-k6-U0s">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best used when with Apple TV to be displayed on your family room TV." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5i-hW-hJg">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="F5i-hW-hJg" secondAttribute="trailing" constant="8" id="Urv-qL-DRP"/>
+                                                <constraint firstItem="F5i-hW-hJg" firstAttribute="leading" secondItem="wBH-k6-U0s" secondAttribute="leading" constant="8" id="cHZ-rM-UsK"/>
+                                                <constraint firstItem="F5i-hW-hJg" firstAttribute="top" secondItem="wBH-k6-U0s" secondAttribute="top" id="dJe-zM-Deb"/>
+                                                <constraint firstAttribute="bottom" secondItem="F5i-hW-hJg" secondAttribute="bottom" id="n4G-hx-fsD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H8y-IQ-vzp">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Family" id="Djs-Jc-UEm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jeA-Pr-Kwl">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H8y-IQ-vzp" id="tpK-52-q4U">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jeA-Pr-Kwl" id="Qj5-e8-I2d">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add family memebrs and enable the ones who are attending." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yey-Tu-6er">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yey-Tu-6er" firstAttribute="top" secondItem="Qj5-e8-I2d" secondAttribute="top" id="A7i-yf-2ay"/>
+                                                <constraint firstAttribute="bottom" secondItem="Yey-Tu-6er" secondAttribute="bottom" id="HU1-3t-ywn"/>
+                                                <constraint firstItem="Yey-Tu-6er" firstAttribute="leading" secondItem="Qj5-e8-I2d" secondAttribute="leading" constant="8" id="UyF-Hn-ucp"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yey-Tu-6er" secondAttribute="trailing" constant="8" id="oRv-nw-ux2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2bU-0m-PSz">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Lessons" id="VaN-yA-qAF">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eEL-Dd-H8d">
+                                        <rect key="frame" x="0.0" y="172" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2bU-0m-PSz" id="I53-M2-xru">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eEL-Dd-H8d" id="VaF-Qt-jIb">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Songs, Scriptures, Lessons, Games, and Rules can be edited, added, and rotated in order of next, random, or manual." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqx-bX-MCr">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Oqx-bX-MCr" secondAttribute="bottom" id="A4K-7d-aOh"/>
+                                                <constraint firstItem="Oqx-bX-MCr" firstAttribute="top" secondItem="VaF-Qt-jIb" secondAttribute="top" id="QuW-H5-Uzd"/>
+                                                <constraint firstAttribute="trailing" secondItem="Oqx-bX-MCr" secondAttribute="trailing" constant="8" id="W8x-SY-fmO"/>
+                                                <constraint firstItem="Oqx-bX-MCr" firstAttribute="leading" secondItem="VaF-Qt-jIb" secondAttribute="leading" constant="8" id="zaQ-Yf-E9y"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -73,7 +110,7 @@ Lessons. Songs, Scriptures, Lessons, Activities/Games, and Rules can be edited, 
         <!--About me-->
         <scene sceneID="SSK-gy-weV">
             <objects>
-                <viewController storyboardIdentifier="AboutMe" id="Yaz-76-6gB" userLabel="About me" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutMe" id="Yaz-76-6gB" userLabel="About me" customClass="AboutMeVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ljk-Yh-mBJ"/>
                         <viewControllerLayoutGuide type="bottom" id="mqH-ex-0ET"/>
@@ -182,122 +219,172 @@ $24.99</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2O-P3-Hp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17410.400000000001" y="-1985.7571214392806"/>
+            <point key="canvasLocation" x="17358" y="-1987"/>
         </scene>
-        <!--Other Apps-->
-        <scene sceneID="xJh-QQ-Vdb">
+        <!--Disclaimer-->
+        <scene sceneID="K8o-AC-ZgO">
             <objects>
-                <tableViewController storyboardIdentifier="OtherApps" id="pfT-tA-DRg" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="QCa-P6-K2v">
+                <tableViewController storyboardIdentifier="Disclaimer" title="Disclaimer" id="N9w-M6-VmM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iTp-YD-Zcv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="RYLAN'S APPS" id="9uJ-Zl-kZl">
+                            <tableViewSection headerTitle="Purpose" id="QkW-G9-X2h" userLabel="Purpose">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="372" id="Azh-IC-kTx">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="372"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QSB-yA-7FW">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Azh-IC-kTx" id="xt7-AV-9wL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="371.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QSB-yA-7FW" id="5SK-YZ-lfN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="CXD-GC-Ms2">
-                                                    <rect key="frame" x="8" y="8" width="359" height="355.5"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BSSBG" translatesAutoresizingMaskIntoConstraints="NO" id="EU7-rj-J9s">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="306"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball Simple Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWF-bS-8Pg">
-                                                            <rect key="frame" x="0.0" y="306" width="359" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-dh-4es">
-                                                            <rect key="frame" x="0.0" y="326.5" width="359" height="29"/>
-                                                            <string key="text">Discription:
-Tool for parents to track their kids basketball stats and then share them with friends and family.</string>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="8"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The app is a mechinism to establish consitancy and order in our homes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqG-Ef-IeJ">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="CXD-GC-Ms2" secondAttribute="trailing" id="DaS-zJ-a1L"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="CXD-GC-Ms2" secondAttribute="bottom" id="K7i-HF-HBw"/>
-                                                <constraint firstItem="CXD-GC-Ms2" firstAttribute="top" secondItem="xt7-AV-9wL" secondAttribute="topMargin" id="x8S-AO-8eu"/>
-                                                <constraint firstItem="CXD-GC-Ms2" firstAttribute="leading" secondItem="xt7-AV-9wL" secondAttribute="leadingMargin" id="zQm-Tu-RAp"/>
+                                                <constraint firstAttribute="bottom" secondItem="eqG-Ef-IeJ" secondAttribute="bottom" id="IZq-gS-vsd"/>
+                                                <constraint firstAttribute="trailing" secondItem="eqG-Ef-IeJ" secondAttribute="trailing" constant="8" id="IoK-mk-OS2"/>
+                                                <constraint firstItem="eqG-Ef-IeJ" firstAttribute="top" secondItem="5SK-YZ-lfN" secondAttribute="top" id="Mqo-4J-MJZ"/>
+                                                <constraint firstItem="eqG-Ef-IeJ" firstAttribute="leading" secondItem="5SK-YZ-lfN" secondAttribute="leading" constant="8" id="i08-Sx-c57"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="pfT-tA-DRg" id="eOh-uL-Sx4"/>
-                            <outlet property="delegate" destination="pfT-tA-DRg" id="QXv-uj-IAw"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Other Apps" id="z1c-Yl-pfp"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sTK-y9-QZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18122.400000000001" y="-1986.656671664168"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="K8o-AC-ZgO">
-            <objects>
-                <tableViewController storyboardIdentifier="Disclaimer" id="N9w-M6-VmM" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iTp-YD-Zcv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ts6-Y1-CAd">
-                            <rect key="frame" x="0.0" y="132" width="375" height="575"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <string key="text">Purpose. The app is a mechinism to establish consitancy and order in our homes.
-
-Focus. Because of my own personal beliefs, this app was designed around Christian principles found and taught by the Church of Jesus Christ of Latter-Day Saints (LDS Church). However, the app is designed for anyone of any faith to create, modify, or delete to tailor toward their own family structure and core beliefs. My desire is that kids learn from their parents in the home the most improtant things in life. To bring things they are learning from school, social media, friends, work, etc. and talk about them together. Learn and grow as a family with a safe and loving place to come together and talk about the important things. 
-
-Resource. I developed this app as a resource to be an easy tool for parents to orginize and host FHE. It is NOT designed to replace: preparation, personal insperation, or family revolation. My hope is to add to those things.
-
-Offiliaction. I am a member of the LDS Church, but I am not paid, sponsored or endorsed by the church. 
-
-Content. The songs, scriptures, talks, and referances are all owned by the LDS Church. All content is avaliable at LDS.org.
-
-Docterine. The lessons taught and topcis selected are of my own personal opinions and do not reflect the docterine of the church. I encourage parents and gardians to search, ponder, and pray for their own lessons and topics and add to my template based on the spirits personal revolatuions. </string>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <sections>
-                            <tableViewSection id="QkW-G9-X2h">
+                            <tableViewSection headerTitle="Focus" id="g5N-Jm-VRY" userLabel="Focus">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="huH-kg-Erc">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="syC-iA-ne5">
+                                        <rect key="frame" x="0.0" y="100" width="375" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="huH-kg-Erc" id="9Tw-fp-RlU">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syC-iA-ne5" id="If3-Jh-Om1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fca-X8-0AV">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="50.5"/>
+                                                    <string key="text">Because of my own personal beliefs, this app was designed around Christian principles found and taught by the Church of Jesus Christ of Latter-Day Saints (LDS Church). However, the app is designed for anyone of any faith to create, modify, or delete to tailor toward their own family structure and core beliefs. My desire is that kids learn from their parents in the home the most improtant things in life. To bring things they are learning from school, social media, friends, work, etc. and talk about them together. Learn and grow as a family with a safe and loving place to come together and talk about the important things. </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fca-X8-0AV" firstAttribute="top" secondItem="If3-Jh-Om1" secondAttribute="top" id="3UG-eM-cte"/>
+                                                <constraint firstAttribute="bottom" secondItem="fca-X8-0AV" secondAttribute="bottom" id="IZ1-Rd-ylF"/>
+                                                <constraint firstAttribute="trailing" secondItem="fca-X8-0AV" secondAttribute="trailing" constant="8" id="gYt-nw-bfK"/>
+                                                <constraint firstItem="fca-X8-0AV" firstAttribute="leading" secondItem="If3-Jh-Om1" secondAttribute="leading" constant="8" id="uX1-3z-mMn"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5XL-jm-MyZ">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Resource" id="6jh-by-gc8">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6Lz-fT-kIU">
+                                        <rect key="frame" x="0.0" y="179" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5XL-jm-MyZ" id="5xm-Ss-Rbc">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Lz-fT-kIU" id="4rR-IV-Oc8">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usl-ND-s0Y">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <string key="text">I developed this app as a resource to be an easy tool for parents to orginize and host FHE. It is NOT designed to replace: preparation, personal insperation, or family revolation. My hope is to add to those things.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Usl-ND-s0Y" secondAttribute="bottom" id="CPQ-gk-U01"/>
+                                                <constraint firstItem="Usl-ND-s0Y" firstAttribute="top" secondItem="4rR-IV-Oc8" secondAttribute="top" id="CXt-R2-men"/>
+                                                <constraint firstItem="Usl-ND-s0Y" firstAttribute="leading" secondItem="4rR-IV-Oc8" secondAttribute="leading" constant="8" id="N8W-mS-Qmq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Usl-ND-s0Y" secondAttribute="trailing" constant="8" id="V6O-g9-IaV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9VZ-GH-Vaw">
-                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Offiliaction" id="gb3-0v-Csm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wHs-7C-iSq">
+                                        <rect key="frame" x="0.0" y="251" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9VZ-GH-Vaw" id="jOC-cG-1vl">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wHs-7C-iSq" id="UdJ-SG-9CC">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a member of the LDS Church, but I am not paid, sponsored or endorsed by the church. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-2v-OSW">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NhL-2v-OSW" firstAttribute="top" secondItem="UdJ-SG-9CC" secondAttribute="top" id="ALJ-Jb-c1G"/>
+                                                <constraint firstItem="NhL-2v-OSW" firstAttribute="leading" secondItem="UdJ-SG-9CC" secondAttribute="leading" constant="8" id="k49-iy-8fl"/>
+                                                <constraint firstAttribute="bottom" secondItem="NhL-2v-OSW" secondAttribute="bottom" id="pV2-cl-TRL"/>
+                                                <constraint firstAttribute="trailing" secondItem="NhL-2v-OSW" secondAttribute="trailing" constant="8" id="pdg-x5-Fso"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Content" id="tkO-Tl-cZ5">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eQ7-DX-TbJ">
+                                        <rect key="frame" x="0.0" y="323" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQ7-DX-TbJ" id="vUk-y8-R9b">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a member of the LDS Church, but I am not paid, sponsored or endorsed by the church. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oL-dq-dh3">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="6oL-dq-dh3" secondAttribute="bottom" id="4zx-wf-WdG"/>
+                                                <constraint firstItem="6oL-dq-dh3" firstAttribute="top" secondItem="vUk-y8-R9b" secondAttribute="top" id="U1Q-qv-ZJn"/>
+                                                <constraint firstItem="6oL-dq-dh3" firstAttribute="leading" secondItem="vUk-y8-R9b" secondAttribute="leading" constant="8" id="VpP-i1-4Pe"/>
+                                                <constraint firstAttribute="trailing" secondItem="6oL-dq-dh3" secondAttribute="trailing" constant="8" id="d4j-VG-zes"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Docterine" id="49k-dO-Bjg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bbt-DT-6b8">
+                                        <rect key="frame" x="0.0" y="395" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bbt-DT-6b8" id="dpP-YL-ZXH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL3-jI-sP8">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <string key="text">The lessons taught and topcis selected are of my own personal opinions and do not reflect the docterine of the church. I encourage parents and gardians to search, ponder, and pray for their own lessons and topics and add to my template based on the spirits personal revolatuions. </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="DL3-jI-sP8" secondAttribute="bottom" id="7IC-vW-ZCH"/>
+                                                <constraint firstAttribute="trailing" secondItem="DL3-jI-sP8" secondAttribute="trailing" constant="8" id="C4c-1D-FYv"/>
+                                                <constraint firstItem="DL3-jI-sP8" firstAttribute="top" secondItem="dpP-YL-ZXH" secondAttribute="top" id="WZr-mQ-pON"/>
+                                                <constraint firstItem="DL3-jI-sP8" firstAttribute="leading" secondItem="dpP-YL-ZXH" secondAttribute="leading" constant="8" id="dTL-w7-5aF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -311,7 +398,123 @@ Docterine. The lessons taught and topcis selected are of my own personal opinion
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ca-D1-Sf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18919" y="-1986"/>
+            <point key="canvasLocation" x="18917.599999999999" y="-1986.656671664168"/>
+        </scene>
+        <!--Other AppsTVC-->
+        <scene sceneID="H2N-eg-VSh">
+            <objects>
+                <viewController storyboardIdentifier="OtherApps" id="eB4-OG-QUr" customClass="OtherAppsTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kJ-Jw-2oD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CXD-GC-Ms2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BSSBG" translatesAutoresizingMaskIntoConstraints="NO" id="EU7-rj-J9s">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="350" id="glF-35-8jC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-JF-oUp">
+                                        <rect key="frame" x="0.0" y="350" width="375" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMJ-OG-Zba">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="vT9-KV-Bvo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basketball Simple Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWF-bS-8Pg">
+                                                <rect key="frame" x="15" y="0.0" width="345" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="xPH-6h-hNh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-PE-l1s">
+                                                <rect key="frame" x="360" y="0.0" width="15" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="daA-sl-Enu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spi-zm-bWv">
+                                        <rect key="frame" x="0.0" y="380" width="375" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPy-Um-tGk">
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="0WS-KO-SWx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-dh-4es">
+                                                <rect key="frame" x="15" y="0.0" width="345" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="ZyM-GG-bTQ"/>
+                                                </constraints>
+                                                <string key="text">Discription:
+Tool for parents to track their kids basketball stats and then share them with friends and family.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aza-1f-0zQ">
+                                                <rect key="frame" x="360" y="0.0" width="15" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="Mxb-k3-whp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHr-wE-xrd">
+                                        <rect key="frame" x="0.0" y="410" width="375" height="237"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QP-WU-2BJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <action selector="basketballSSTapped:" destination="eB4-OG-QUr" eventType="touchUpInside" id="dGK-Z5-DVs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CXD-GC-Ms2" secondAttribute="bottom" id="43F-eL-HHU"/>
+                            <constraint firstAttribute="trailing" secondItem="CXD-GC-Ms2" secondAttribute="trailing" id="4nf-wQ-OHP"/>
+                            <constraint firstItem="7QP-WU-2BJ" firstAttribute="top" secondItem="0h0-E0-nQs" secondAttribute="top" id="Lg6-wJ-9nd"/>
+                            <constraint firstItem="0h0-E0-nQs" firstAttribute="trailing" secondItem="7QP-WU-2BJ" secondAttribute="trailing" id="Phg-E5-6ZN"/>
+                            <constraint firstItem="7QP-WU-2BJ" firstAttribute="leading" secondItem="0h0-E0-nQs" secondAttribute="leading" id="dZ8-pI-s9r"/>
+                            <constraint firstItem="0h0-E0-nQs" firstAttribute="bottom" secondItem="7QP-WU-2BJ" secondAttribute="bottom" id="eE6-OT-tsP"/>
+                            <constraint firstItem="CXD-GC-Ms2" firstAttribute="top" secondItem="0h0-E0-nQs" secondAttribute="top" id="jdW-1l-IWw"/>
+                            <constraint firstItem="CXD-GC-Ms2" firstAttribute="leading" secondItem="9kJ-Jw-2oD" secondAttribute="leading" id="tIG-D8-YFP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0h0-E0-nQs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jpW-7c-AQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18156" y="-1988"/>
         </scene>
     </scenes>
     <resources>

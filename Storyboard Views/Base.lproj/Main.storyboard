@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -2278,6 +2277,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="zAv-NF-e7z" secondAttribute="trailing" id="egs-3K-4uG"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ej9-wx-lWD" kind="show" id="oDN-cO-pJc"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="z5L-zU-LP0">
                                         <rect key="frame" x="0.0" y="480" width="375" height="44"/>
@@ -2317,6 +2319,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="21N-TH-q15" secondAttribute="trailing" id="e21-sV-xlO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4HQ-I2-M5l" kind="show" id="efL-9P-TtX"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="abF-IT-zLF">
                                         <rect key="frame" x="0.0" y="524" width="375" height="44"/>
@@ -2356,6 +2361,9 @@
                                                 <constraint firstItem="cC6-5H-UsY" firstAttribute="centerY" secondItem="skv-bX-o9h" secondAttribute="centerY" id="D2g-vU-kKp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="l98-P3-lzI" kind="show" id="emn-2X-C8h"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="pUe-Rr-IGL">
                                         <rect key="frame" x="0.0" y="568" width="375" height="44"/>
@@ -2395,6 +2403,9 @@
                                                 <constraint firstItem="zXI-cW-2cb" firstAttribute="centerY" secondItem="ZL0-Ri-O6E" secondAttribute="centerY" id="fv5-pn-Fdh"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="L3Q-ss-ODH" kind="show" id="1m4-wV-sbb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -2410,13 +2421,37 @@
             </objects>
             <point key="canvasLocation" x="8040.8000000000002" y="1170.7646176911546"/>
         </scene>
-        <!--MoreDetails-->
+        <!--Tutorial-->
+        <scene sceneID="HHW-2o-wCf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MoreDetails" referencedIdentifier="Tutorial" id="Ej9-wx-lWD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sse-8r-Ubg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8750" y="1313"/>
+        </scene>
+        <!--AboutMe-->
         <scene sceneID="H6U-RQ-j1I">
             <objects>
-                <viewControllerPlaceholder storyboardName="MoreDetails" id="4HQ-I2-M5l" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MoreDetails" referencedIdentifier="AboutMe" id="4HQ-I2-M5l" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMZ-7f-YF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8728" y="1360"/>
+            <point key="canvasLocation" x="8754" y="1363"/>
+        </scene>
+        <!--OtherApps-->
+        <scene sceneID="2oL-a5-wba">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MoreDetails" referencedIdentifier="OtherApps" id="l98-P3-lzI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cyX-Jm-xGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8764" y="1416"/>
+        </scene>
+        <!--Disclaimer-->
+        <scene sceneID="mM2-jD-0da">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MoreDetails" referencedIdentifier="Disclaimer" id="L3Q-ss-ODH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63h-g1-aKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8764" y="1468"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="hvV-g8-06a">

@@ -23,7 +23,7 @@ class ScriptureWebVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myURL = URL(string: "https://www.lds.org/scriptures/bofm/2-ne/3.7?lang=eng#0")
+        let myURL = URL(string: "https://www.lds.org/scriptures/bofm/1-ne/3.7?lang=eng#6")
         let myRequest = URLRequest(url: myURL!)
         _ = webView?.load(myRequest)
     }

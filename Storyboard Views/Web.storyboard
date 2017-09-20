@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -75,6 +74,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmV-vq-dLW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5612" y="-690"/>
+        </scene>
+        <!--BasketballSimpleStats-->
+        <scene sceneID="1xA-n9-F9T">
+            <objects>
+                <viewController storyboardIdentifier="BasketballSimpleStats" title="BasketballSimpleStats" id="8a4-xd-epL" customClass="BasketballSimpleStatsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qEP-sM-Oxs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="DGd-3Q-ni8"/>
+                    </view>
+                    <connections>
+                        <outlet property="scriptureWebView" destination="qEP-sM-Oxs" id="h4G-YL-ekL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kl7-yh-pZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6402" y="-690"/>
         </scene>
     </scenes>
 </document>
