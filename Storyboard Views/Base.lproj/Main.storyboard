@@ -763,7 +763,7 @@
         <!--Family Members-->
         <scene sceneID="Gxd-F4-leK">
             <objects>
-                <tableViewController id="e7q-Hn-HHg" sceneMemberID="viewController">
+                <tableViewController id="e7q-Hn-HHg" customClass="FamilyTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H0I-Df-5Lq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -859,7 +859,7 @@
         <!--New Member-->
         <scene sceneID="nkl-LC-mVo">
             <objects>
-                <viewController id="z09-W1-aaa" sceneMemberID="viewController">
+                <viewController id="z09-W1-aaa" customClass="FamilyDetailsVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z2n-Mx-AKW"/>
                         <viewControllerLayoutGuide type="bottom" id="ysV-CF-1KG"/>
@@ -1103,7 +1103,7 @@
         <!--Settings-->
         <scene sceneID="Rvy-Bj-6d3">
             <objects>
-                <tableViewController title="Rotations" id="i8y-lY-JNp" userLabel="Settings" sceneMemberID="viewController">
+                <tableViewController title="Rotations" id="i8y-lY-JNp" userLabel="Settings" customClass="RotationsTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YWt-CX-u53">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1720,7 +1720,7 @@
         <!--FHE-->
         <scene sceneID="FIL-sz-VeZ">
             <objects>
-                <viewController title="FHE" id="blj-Lq-6RZ" sceneMemberID="viewController">
+                <viewController title="FHE" id="blj-Lq-6RZ" customClass="FHETVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h34-YY-S2U"/>
                         <viewControllerLayoutGuide type="bottom" id="i1X-tR-dH6"/>
@@ -1908,7 +1908,7 @@
         <!--Settings-->
         <scene sceneID="TXi-2w-V2t">
             <objects>
-                <tableViewController title="Misc" id="ZAB-7G-v7y" userLabel="Settings" sceneMemberID="viewController">
+                <tableViewController title="Misc" id="ZAB-7G-v7y" userLabel="Settings" customClass="MiscTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dvg-FD-cLQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2086,6 +2086,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLa-c3-axB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="positiveFeedbackButtonTapped:" destination="ZAB-7G-v7y" eventType="touchUpInside" id="3dT-TN-iUc"/>
+                                                    </connections>
+                                                </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HKl-fD-2zr">
                                                     <rect key="frame" x="16" y="4.5" width="318" height="35"/>
                                                     <subviews>
@@ -2112,6 +2119,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cLa-c3-axB" secondAttribute="bottom" id="7LU-nh-8bT"/>
+                                                <constraint firstItem="cLa-c3-axB" firstAttribute="top" secondItem="osg-CJ-cX5" secondAttribute="top" id="8jE-5i-gdg"/>
+                                                <constraint firstItem="cLa-c3-axB" firstAttribute="leading" secondItem="osg-CJ-cX5" secondAttribute="leading" id="ACB-Bp-Bxu"/>
+                                                <constraint firstAttribute="trailing" secondItem="cLa-c3-axB" secondAttribute="trailing" id="QCB-cK-kYG"/>
                                                 <constraint firstItem="HKl-fD-2zr" firstAttribute="centerY" secondItem="osg-CJ-cX5" secondAttribute="centerY" id="ewR-Xs-mhG"/>
                                                 <constraint firstItem="HKl-fD-2zr" firstAttribute="leading" secondItem="osg-CJ-cX5" secondAttribute="leadingMargin" constant="8" id="ntI-SQ-eXV"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HKl-fD-2zr" secondAttribute="trailing" id="qCP-hh-tCl"/>

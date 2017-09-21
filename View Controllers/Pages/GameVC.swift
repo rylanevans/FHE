@@ -6,4 +6,23 @@
 //  Copyright © 2017 Rylan Evans. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class GameVC: UIViewController {
+    
+    @IBAction func closeWindowButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+}

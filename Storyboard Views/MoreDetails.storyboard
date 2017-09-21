@@ -5,9 +5,16 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Noteworthy.ttc">
+            <string>Noteworthy-Bold</string>
+            <string>Noteworthy-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Tutorials-->
         <scene sceneID="lcb-CT-GXy">
@@ -18,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Display" id="3Ot-1h-o9x">
+                            <tableViewSection headerTitle="DISPLAY" id="3Ot-1h-o9x">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rHj-Fm-s8T">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -29,7 +36,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best used when with Apple TV to be displayed on your family room TV." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5i-hW-hJg">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -44,7 +51,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Family" id="Djs-Jc-UEm">
+                            <tableViewSection headerTitle="FAMILY" id="Djs-Jc-UEm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jeA-Pr-Kwl">
                                         <rect key="frame" x="0.0" y="100" width="375" height="44"/>
@@ -55,7 +62,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add family memebrs and enable the ones who are attending." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yey-Tu-6er">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -70,7 +77,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Lessons" id="VaN-yA-qAF">
+                            <tableViewSection headerTitle="LESSONS" id="VaN-yA-qAF">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eEL-Dd-H8d">
                                         <rect key="frame" x="0.0" y="172" width="375" height="44"/>
@@ -81,7 +88,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Songs, Scriptures, Lessons, Games, and Rules can be edited, added, and rotated in order of next, random, or manual." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqx-bX-MCr">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -120,25 +127,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4WE-hL-PHN">
-                                <rect key="frame" x="16" y="20" width="343" height="547"/>
+                                <rect key="frame" x="16" y="20" width="343" height="572"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rylan" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-4j-QbG">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="200"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="791-pG-uk9">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="7cE-yv-YhX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Evans" translatesAutoresizingMaskIntoConstraints="NO" id="qhr-4j-QbG">
+                                        <rect key="frame" x="0.0" y="20.5" width="343" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="m1n-Qn-grY"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0m-GS-r5p">
+                                        <rect key="frame" x="0.0" y="220.5" width="343" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="zSx-tS-ITW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BdJ-9Y-v3e">
-                                        <rect key="frame" x="0.0" y="200" width="343" height="212"/>
+                                        <rect key="frame" x="0.0" y="245.5" width="343" height="173"/>
                                         <string key="text">My name is Rylan Evans. 
 
-Support. I spent a lot of time and effort building something I thought would be both helpful and practiacl for parents and children. God has blessed me with many things. This is my way of giving back. This app will always be FREE. I will not ask for monitary return. This is a service. I want to support others with an easy way to teach and raise their children. Tips are accepted as tokens of appreciateion. I use all the money toward improving this app or developing new apps that I think may be helpful others. Your welcome and thank you for downloading the FHE app.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+I would appreciate your support. 
+
+I spent a lot of time and effort building something I thought would be both helpful and practiacl for parents and children. God has blessed me with many things in my life. Family is my greatest blessing! This is my way of giving back to what I treasure most, family. Please consider a donation.  A little goes a long way. Thank you for downloading the FHE app.</string>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ6-se-aod">
+                                        <rect key="frame" x="0.0" y="418.5" width="343" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="T03-h2-9Tb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IyO-Zc-de9">
-                                        <rect key="frame" x="0.0" y="412" width="343" height="35"/>
+                                        <rect key="frame" x="0.0" y="439" width="343" height="35"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyo-vI-qky">
                                                 <rect key="frame" x="0.0" y="0.0" width="193" height="35"/>
@@ -155,43 +191,51 @@ Support. I spent a lot of time and effort building something I thought would be 
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="che-3s-n8h">
-                                        <rect key="frame" x="0.0" y="447" width="343" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Th-Af-pVZ">
+                                        <rect key="frame" x="0.0" y="474" width="343" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Yw2-qD-68G"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="che-3s-n8h">
+                                        <rect key="frame" x="0.0" y="494" width="343" height="78"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nat-wk-jKg">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="100"/>
-                                                <state key="normal">
-                                                    <string key="title">"Thank you."
-$1.99</string>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nat-wk-jKg">
+                                                <rect key="frame" x="0.0" y="0.0" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nat-wk-jKg" secondAttribute="height" multiplier="1:1" id="Pel-Sq-5qF"/>
+                                                </constraints>
+                                                <state key="normal" image="Thank you"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBf-SF-Pef">
-                                                <rect key="frame" x="86" y="0.0" width="85.5" height="100"/>
-                                                <state key="normal">
-                                                    <string key="title">"Like it."
-$4.99</string>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBf-SF-Pef">
+                                                <rect key="frame" x="88" y="0.0" width="78.5" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="OBf-SF-Pef" secondAttribute="height" multiplier="1:1" id="Zda-aj-J8r"/>
+                                                </constraints>
+                                                <state key="normal" image="Like it"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck8-5j-pX3">
-                                                <rect key="frame" x="171.5" y="0.0" width="86" height="100"/>
-                                                <state key="normal">
-                                                    <string key="title">"Love it!"
-$9.99</string>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ck8-5j-pX3">
+                                                <rect key="frame" x="176.5" y="0.0" width="78" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Ck8-5j-pX3" secondAttribute="height" multiplier="1:1" id="aDe-OK-kHq"/>
+                                                </constraints>
+                                                <state key="normal" image="Love it"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afF-Re-MZy">
-                                                <rect key="frame" x="257.5" y="0.0" width="85.5" height="100"/>
-                                                <state key="normal">
-                                                    <string key="title">"Amazing!"
-$24.99</string>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afF-Re-MZy">
+                                                <rect key="frame" x="264.5" y="0.0" width="78.5" height="78"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="afF-Re-MZy" secondAttribute="height" multiplier="1:1" id="6d1-8n-t0A"/>
+                                                </constraints>
+                                                <state key="normal" image="Amazing"/>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="nat-wk-jKg" secondAttribute="bottom" id="0bn-ZH-MXN"/>
                                             <constraint firstAttribute="bottom" secondItem="afF-Re-MZy" secondAttribute="bottom" id="6fb-kM-L7x"/>
                                             <constraint firstItem="afF-Re-MZy" firstAttribute="top" secondItem="che-3s-n8h" secondAttribute="top" id="Kgd-wf-eBy"/>
-                                            <constraint firstAttribute="height" constant="100" id="OJW-YD-FpY"/>
                                             <constraint firstItem="nat-wk-jKg" firstAttribute="top" secondItem="che-3s-n8h" secondAttribute="top" id="gKn-cL-yLz"/>
                                             <constraint firstItem="OBf-SF-Pef" firstAttribute="top" secondItem="che-3s-n8h" secondAttribute="top" id="mBG-4w-oP6"/>
                                             <constraint firstItem="Ck8-5j-pX3" firstAttribute="top" secondItem="che-3s-n8h" secondAttribute="top" id="mua-Id-yQH"/>
@@ -205,12 +249,18 @@ $24.99</string>
                                     <constraint firstItem="BdJ-9Y-v3e" firstAttribute="leading" secondItem="4WE-hL-PHN" secondAttribute="leading" id="ZBW-p9-DyX"/>
                                 </constraints>
                             </stackView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2C-ll-sY6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4WE-hL-PHN" firstAttribute="leading" secondItem="JGc-Yw-aJn" secondAttribute="leading" constant="16" id="4vX-av-bcj"/>
-                            <constraint firstItem="4WE-hL-PHN" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="JGc-Yw-aJn" secondAttribute="bottom" constant="-100" id="Akc-Hh-7Nh"/>
+                            <constraint firstItem="JGc-Yw-aJn" firstAttribute="trailing" secondItem="R2C-ll-sY6" secondAttribute="trailing" id="AwG-hC-it2"/>
                             <constraint firstItem="4WE-hL-PHN" firstAttribute="trailing" secondItem="JGc-Yw-aJn" secondAttribute="trailing" constant="-16" id="Coj-fR-85D"/>
+                            <constraint firstItem="R2C-ll-sY6" firstAttribute="top" secondItem="JGc-Yw-aJn" secondAttribute="top" id="MqV-bd-Seg"/>
+                            <constraint firstItem="JGc-Yw-aJn" firstAttribute="bottom" secondItem="R2C-ll-sY6" secondAttribute="bottom" id="SuX-Dv-dMk"/>
+                            <constraint firstItem="R2C-ll-sY6" firstAttribute="leading" secondItem="JGc-Yw-aJn" secondAttribute="leading" id="g6L-8s-Dzu"/>
                             <constraint firstItem="4WE-hL-PHN" firstAttribute="top" secondItem="JGc-Yw-aJn" secondAttribute="top" id="jTH-hW-zjb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JGc-Yw-aJn"/>
@@ -219,7 +269,7 @@ $24.99</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2O-P3-Hp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17358" y="-1987"/>
+            <point key="canvasLocation" x="17357.599999999999" y="-1987.5562218890557"/>
         </scene>
         <!--Disclaimer-->
         <scene sceneID="K8o-AC-ZgO">
@@ -230,7 +280,7 @@ $24.99</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection headerTitle="Purpose" id="QkW-G9-X2h" userLabel="Purpose">
+                            <tableViewSection headerTitle="PURPOSE" id="QkW-G9-X2h" userLabel="Purpose">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QSB-yA-7FW">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -241,7 +291,7 @@ $24.99</string>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The app is a mechinism to establish consitancy and order in our homes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqG-Ef-IeJ">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -256,7 +306,7 @@ $24.99</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Focus" id="g5N-Jm-VRY" userLabel="Focus">
+                            <tableViewSection headerTitle="FOCUS" id="g5N-Jm-VRY" userLabel="Focus">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="51" id="syC-iA-ne5">
                                         <rect key="frame" x="0.0" y="100" width="375" height="51"/>
@@ -268,7 +318,7 @@ $24.99</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fca-X8-0AV">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="50.5"/>
                                                     <string key="text">Because of my own personal beliefs, this app was designed around Christian principles found and taught by the Church of Jesus Christ of Latter-Day Saints (LDS Church). However, the app is designed for anyone of any faith to create, modify, or delete to tailor toward their own family structure and core beliefs. My desire is that kids learn from their parents in the home the most improtant things in life. To bring things they are learning from school, social media, friends, work, etc. and talk about them together. Learn and grow as a family with a safe and loving place to come together and talk about the important things. </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -283,7 +333,7 @@ $24.99</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Resource" id="6jh-by-gc8">
+                            <tableViewSection headerTitle="RESOURCES" id="6jh-by-gc8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6Lz-fT-kIU">
                                         <rect key="frame" x="0.0" y="179" width="375" height="44"/>
@@ -295,7 +345,7 @@ $24.99</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Usl-ND-s0Y">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
                                                     <string key="text">I developed this app as a resource to be an easy tool for parents to orginize and host FHE. It is NOT designed to replace: preparation, personal insperation, or family revolation. My hope is to add to those things.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -310,7 +360,7 @@ $24.99</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Offiliaction" id="gb3-0v-Csm">
+                            <tableViewSection headerTitle="AFFILIATION" id="gb3-0v-Csm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="wHs-7C-iSq">
                                         <rect key="frame" x="0.0" y="251" width="375" height="44"/>
@@ -321,7 +371,7 @@ $24.99</string>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a member of the LDS Church, but I am not paid, sponsored or endorsed by the church. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-2v-OSW">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -336,7 +386,7 @@ $24.99</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Content" id="tkO-Tl-cZ5">
+                            <tableViewSection headerTitle="CONTENT" id="tkO-Tl-cZ5">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eQ7-DX-TbJ">
                                         <rect key="frame" x="0.0" y="323" width="375" height="44"/>
@@ -347,7 +397,7 @@ $24.99</string>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a member of the LDS Church, but I am not paid, sponsored or endorsed by the church. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oL-dq-dh3">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -362,7 +412,7 @@ $24.99</string>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Docterine" id="49k-dO-Bjg">
+                            <tableViewSection headerTitle="DOCTRINE" id="49k-dO-Bjg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Bbt-DT-6b8">
                                         <rect key="frame" x="0.0" y="395" width="375" height="44"/>
@@ -374,7 +424,7 @@ $24.99</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL3-jI-sP8">
                                                     <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
                                                     <string key="text">The lessons taught and topcis selected are of my own personal opinions and do not reflect the docterine of the church. I encourage parents and gardians to search, ponder, and pray for their own lessons and topics and add to my template based on the spirits personal revolatuions. </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -434,7 +484,7 @@ $24.99</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="xPH-6h-hNh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -450,10 +500,10 @@ $24.99</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Spi-zm-bWv">
-                                        <rect key="frame" x="0.0" y="380" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="380" width="375" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vPy-Um-tGk">
-                                                <rect key="frame" x="0.0" y="0.0" width="15" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="0WS-KO-SWx"/>
                                                 </constraints>
@@ -462,18 +512,18 @@ $24.99</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yez-dh-4es">
-                                                <rect key="frame" x="15" y="0.0" width="345" height="30"/>
+                                                <rect key="frame" x="15" y="0.0" width="345" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ZyM-GG-bTQ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ZyM-GG-bTQ"/>
                                                 </constraints>
                                                 <string key="text">Discription:
 Tool for parents to track their kids basketball stats and then share them with friends and family.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aza-1f-0zQ">
-                                                <rect key="frame" x="360" y="0.0" width="15" height="30"/>
+                                                <rect key="frame" x="360" y="0.0" width="15" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="15" id="Mxb-k3-whp"/>
                                                 </constraints>
@@ -484,7 +534,7 @@ Tool for parents to track their kids basketball stats and then share them with f
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHr-wE-xrd">
-                                        <rect key="frame" x="0.0" y="410" width="375" height="237"/>
+                                        <rect key="frame" x="0.0" y="480" width="375" height="167"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -518,8 +568,12 @@ Tool for parents to track their kids basketball stats and then share them with f
         </scene>
     </scenes>
     <resources>
+        <image name="Amazing" width="200" height="200"/>
         <image name="BSSBG" width="2854" height="1306"/>
-        <image name="Rylan" width="492" height="666"/>
+        <image name="Evans" width="544" height="725"/>
+        <image name="Like it" width="200" height="200"/>
+        <image name="Love it" width="200" height="200"/>
         <image name="Signature" width="98" height="31"/>
+        <image name="Thank you" width="200" height="200"/>
     </resources>
 </document>

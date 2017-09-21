@@ -38,7 +38,7 @@
         <!--Opening Prayer-->
         <scene sceneID="OPb-ao-NGh">
             <objects>
-                <viewController storyboardIdentifier="OpeningPrayer" title="Opening Prayer" id="W2J-kG-43N" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpeningPrayer" title="Opening Prayer" id="W2J-kG-43N" customClass="PrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pLB-yk-BQd"/>
                         <viewControllerLayoutGuide type="bottom" id="uSl-VP-1cD"/>
@@ -213,8 +213,11 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="OnI-FG-wnF"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-FB-bnZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQG-FB-bnZ">
                                 <rect key="frame" x="0.0" y="183.5" width="150" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="T2G-0O-ySz"/>
@@ -226,18 +229,18 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bna-LS-SFs" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="87" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="78.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykh-09-x1D">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykh-09-x1D">
+                                        <rect key="frame" x="0.0" y="0.0" width="78.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvo-Xj-b8s">
-                                        <rect key="frame" x="0.0" y="32.5" width="87" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvo-Xj-b8s">
+                                        <rect key="frame" x="0.0" y="32.5" width="78.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -286,7 +289,7 @@
         <!--Song-->
         <scene sceneID="Vor-fE-Lo2">
             <objects>
-                <viewController storyboardIdentifier="Song" title="Song" id="ivS-E9-Po5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Song" title="Song" id="ivS-E9-Po5" customClass="SongVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DuQ-jT-JLc"/>
                         <viewControllerLayoutGuide type="bottom" id="MIA-X7-uCo"/>
@@ -413,6 +416,11 @@
                                                                 <state key="normal" title="Sing Song">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <segue destination="hKd-NG-uUJ" kind="show" identifier="" id="pxn-Wq-TsI">
                                                                         <nil key="action"/>
@@ -463,6 +471,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="ivS-E9-Po5" eventType="touchUpInside" id="Rfn-de-MUc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-G1-3ej">
                                 <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
@@ -477,16 +488,16 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jm6-V7-xwN" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qze-2d-xO3">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qze-2d-xO3">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuF-Yn-kv7">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -545,7 +556,7 @@
         <!--Rule-->
         <scene sceneID="VBF-kZ-T8z">
             <objects>
-                <viewController storyboardIdentifier="Rule" title="Rule" id="RFP-iF-3XJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Rule" title="Rule" id="RFP-iF-3XJ" customClass="RuleVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dIJ-0d-1Q9"/>
                         <viewControllerLayoutGuide type="bottom" id="t7Q-Rd-rkx"/>
@@ -647,7 +658,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Rlq-9B-uFq"/>
                                                         </constraints>
-                                                        <string key="text">Description of what will be in there. Some times it will be text. Other times, it will be bullet points. Other times it will be random stuff.</string>
+                                                        <string key="text">1. Don't do that.
+2. It's ok to do that.
+3. Yep. 
+4. Nope
+5. Wonderful.</string>
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -717,6 +732,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="RFP-iF-3XJ" eventType="touchUpInside" id="YQb-IJ-YqR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-ha-03J">
                                 <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
@@ -731,16 +749,16 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Kem-EC-Sc4" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-cm-api">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcB-cm-api">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lw-nm-3P9">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -791,7 +809,7 @@
         <!--Scripture-->
         <scene sceneID="b9u-ad-HS5">
             <objects>
-                <viewController storyboardIdentifier="Scripture" title="Scripture" id="0aA-xK-YGk" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Scripture" title="Scripture" id="0aA-xK-YGk" customClass="ScriptureVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7tO-Tn-Xu3"/>
                         <viewControllerLayoutGuide type="bottom" id="Occ-w2-Pt9"/>
@@ -918,6 +936,11 @@
                                                                 <state key="normal" title="Read Scripture">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <segue destination="H3f-IO-XG5" kind="show" id="Unx-Jp-ss8">
                                                                         <nil key="action"/>
@@ -968,6 +991,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="0aA-xK-YGk" eventType="touchUpInside" id="jAG-u1-aPs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scripture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-du-65p">
                                 <rect key="frame" x="0.0" y="183.5" width="160" height="95"/>
@@ -981,16 +1007,16 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lYD-fC-hX7" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-zL-PxZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-zL-PxZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeb-d1-Dje">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1049,7 +1075,7 @@
         <!--Calendar-->
         <scene sceneID="HhL-8W-8SN">
             <objects>
-                <viewController storyboardIdentifier="Calendar" title="Calendar" id="ZFw-sH-GMu" customClass="CalendarAppVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Calendar" title="Calendar" id="ZFw-sH-GMu" customClass="CalendarVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qsu-EU-HUp"/>
                         <viewControllerLayoutGuide type="bottom" id="Buz-ie-7c5"/>
@@ -1127,7 +1153,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-4D-yl9">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planning for..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1X-4D-yl9">
                                                         <rect key="frame" x="0.0" y="15" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="KK4-JN-cQZ"/>
@@ -1151,7 +1177,11 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Jik-xo-ZTU"/>
                                                         </constraints>
-                                                        <string key="text">Description of what will be in there. Some times it will be text. Other times, it will be bullet points. Other times it will be random stuff.</string>
+                                                        <string key="text">1. Birthdays
+2. Holidays
+3. Actitivies
+4. Traveling / Vacations
+5. Family dinners</string>
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1176,6 +1206,11 @@
                                                                 <state key="normal" title="Show Calendar">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="showCalendarButton:" destination="ZFw-sH-GMu" eventType="touchUpInside" id="hgW-Ey-g9N"/>
                                                                 </connections>
@@ -1224,6 +1259,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="ZFw-sH-GMu" eventType="touchUpInside" id="UoL-JH-dkM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcw-Eu-OHU">
                                 <rect key="frame" x="0.0" y="183.5" width="170" height="95"/>
@@ -1238,18 +1276,18 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6fn-fk-2ke" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="177.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIs-Ob-b8X">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIs-Ob-b8X">
+                                        <rect key="frame" x="0.0" y="0.0" width="177.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3U-cL-6p9">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming events..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3U-cL-6p9">
+                                        <rect key="frame" x="0.0" y="32.5" width="177.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                                        <color key="textColor" red="0.011455828323960304" green="0.38442963361740112" blue="0.80014735460281372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1298,7 +1336,7 @@
         <!--Testimony-->
         <scene sceneID="lTF-rB-uyM">
             <objects>
-                <viewController storyboardIdentifier="Testimony" title="Testimony" id="fLO-R1-Ws9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Testimony" title="Testimony" id="fLO-R1-Ws9" customClass="TestimonyVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05f-at-qF9"/>
                         <viewControllerLayoutGuide type="bottom" id="cQN-oA-WyB"/>
@@ -1376,7 +1414,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu3-Q6-hte">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have a testimony that..." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nu3-Q6-hte">
                                                         <rect key="frame" x="0.0" y="15" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="iKL-gQ-ddV"/>
@@ -1400,8 +1438,15 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DWi-Iu-Wrv"/>
                                                         </constraints>
-                                                        <string key="text">Description of what will be in there. Some times it will be text. Other times, it will be bullet points. Other times it will be random stuff.</string>
-                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                                        <mutableString key="text">1. Heavenly Father lives and loves His children. I am a child of God.
+2. Jesus Christ lives, that He is the Son of God, and that He carried out the infinite Atonement.
+3. Joseph Smith is the prophet of God who was called to restore the Gospel. 
+4. The Church of Jesus Christ of Latter-day Saints is the Savior's true Church on the earth.
+5. The Church is led by a living prophet today. 
+6. The Book of Mormon is another testiment of Jesus Christ.
+7. A testimony is a spiritual witness given by the Holy Ghost. 
+8. A testimony grows to include all principles of the Gospel.</mutableString>
+                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1470,6 +1515,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="fLO-R1-Ws9" eventType="touchUpInside" id="feU-be-To1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testimony" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xF-UQ-M64">
                                 <rect key="frame" x="0.0" y="183.5" width="175" height="95"/>
@@ -1484,18 +1532,18 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ais-Ct-jHW" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="139.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-8P-hqN">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfb-8P-hqN">
+                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKu-M0-UbM">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My core beliefs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKu-M0-UbM">
+                                        <rect key="frame" x="0.0" y="32.5" width="139.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1544,7 +1592,7 @@
         <!--Spotlight-->
         <scene sceneID="VUm-KO-m0K">
             <objects>
-                <viewController storyboardIdentifier="Spotlight" title="Spotlight" id="Enk-5M-ZvE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Spotlight" title="Spotlight" id="Enk-5M-ZvE" customClass="SpotlightVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iTR-YN-Wrp"/>
                         <viewControllerLayoutGuide type="bottom" id="LYZ-Ck-cCm"/>
@@ -1622,7 +1670,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-XG-8oA">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Name, I noticed &quot;____&quot; about you." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7P2-XG-8oA">
                                                         <rect key="frame" x="0.0" y="15" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="bvP-kS-2q0"/>
@@ -1646,7 +1694,14 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="2Sv-FR-7Wn"/>
                                                         </constraints>
-                                                        <string key="text">Description of what will be in there. Some times it will be text. Other times, it will be bullet points. Other times it will be random stuff.</string>
+                                                        <string key="text">1. Emotional
+2. Financial
+3. Intellectual
+4. Social
+5. Occupational
+6. Physical
+7. Environmental
+8. Spiritual</string>
                                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1716,6 +1771,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="Enk-5M-ZvE" eventType="touchUpInside" id="4aL-Jn-xIH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-XS-MYQ">
                                 <rect key="frame" x="0.0" y="183.5" width="180" height="95"/>
@@ -1730,18 +1788,18 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="idl-Q1-bm1" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="153" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="124" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affirmation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTk-oO-5LW">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTk-oO-5LW">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQz-IX-aCN">
-                                        <rect key="frame" x="0.0" y="32.5" width="153" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Affirmations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQz-IX-aCN">
+                                        <rect key="frame" x="0.0" y="32.5" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -1790,7 +1848,7 @@
         <!--Misc.-->
         <scene sceneID="YFm-wo-u7O">
             <objects>
-                <viewController storyboardIdentifier="Misc" title="Misc." id="eWq-pv-eEs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Misc" title="Misc." id="eWq-pv-eEs" customClass="MiscVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Eq-Xv-ktD"/>
                         <viewControllerLayoutGuide type="bottom" id="BVt-fe-XXe"/>
@@ -1962,6 +2020,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="eWq-pv-eEs" eventType="touchUpInside" id="BKl-e8-64a"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misc." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHh-5W-Fjw">
                                 <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
@@ -1976,18 +2037,18 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="7IF-dZ-c3k" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="133" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMU-Na-2e9">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMU-Na-2e9">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzK-vg-jQn">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzK-vg-jQn">
+                                        <rect key="frame" x="0.0" y="32.5" width="133" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2036,7 +2097,7 @@
         <!--Thought-->
         <scene sceneID="sFG-Ae-WTV">
             <objects>
-                <viewController storyboardIdentifier="Thought" title="Thought" id="eAf-bf-f3B" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Thought" title="Thought" id="eAf-bf-f3B" customClass="ThoughtVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rl7-dG-2nu"/>
                         <viewControllerLayoutGuide type="bottom" id="3H1-cY-TLq"/>
@@ -2208,6 +2269,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="eAf-bf-f3B" eventType="touchUpInside" id="q7h-RA-3wb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xei-5L-JHB">
                                 <rect key="frame" x="0.0" y="183.5" width="175" height="95"/>
@@ -2222,18 +2286,18 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="azP-zM-PHm" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="82.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBb-mN-eLh">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBb-mN-eLh">
+                                        <rect key="frame" x="0.0" y="0.0" width="82.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftk-Um-LUB">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
-                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftk-Um-LUB">
+                                        <rect key="frame" x="0.0" y="32.5" width="82.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="18"/>
+                                        <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2282,7 +2346,7 @@
         <!--Lesson-->
         <scene sceneID="gGp-BB-Gr5">
             <objects>
-                <viewController storyboardIdentifier="Lesson" title="Lesson" id="qwK-Ja-Lqd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Lesson" title="Lesson" id="qwK-Ja-Lqd" customClass="LessonVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fgd-WK-lQY"/>
                         <viewControllerLayoutGuide type="bottom" id="Aor-mb-wTW"/>
@@ -2409,6 +2473,11 @@
                                                                 <state key="normal" title="See Lesson">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <segue destination="n9R-if-sCG" kind="show" id="HTl-pd-hiI">
                                                                         <nil key="action"/>
@@ -2459,6 +2528,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="qwK-Ja-Lqd" eventType="touchUpInside" id="lAE-Ht-cNM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctB-Cl-XZZ">
                                 <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
@@ -2471,16 +2543,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hOO-Kk-GlR" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-OR-GOK">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwb-OR-GOK">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWK-H8-oPv">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2539,7 +2611,7 @@
         <!--Council-->
         <scene sceneID="cyE-UI-gCG">
             <objects>
-                <viewController storyboardIdentifier="Council" title="Council" id="Hc4-GV-zQc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Council" title="Council" id="Hc4-GV-zQc" customClass="CouncilVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AhB-Vw-oKX"/>
                         <viewControllerLayoutGuide type="bottom" id="4Ex-yB-AfM"/>
@@ -2711,6 +2783,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="Hc4-GV-zQc" eventType="touchUpInside" id="zGy-hG-F5r"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Council" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihq-qe-EsE">
                                 <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
@@ -2725,16 +2800,16 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Pbg-Ge-FS8" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-Yr-A2Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-Yr-A2Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uC-T3-OUY">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uC-T3-OUY">
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -2785,7 +2860,7 @@
         <!--ClosingPrayer-->
         <scene sceneID="doA-Vv-ITx">
             <objects>
-                <viewController storyboardIdentifier="ClosingPrayer" title="ClosingPrayer" id="oFt-LC-QD1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClosingPrayer" title="ClosingPrayer" id="oFt-LC-QD1" customClass="PrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Srf-OQ-sg6"/>
                         <viewControllerLayoutGuide type="bottom" id="dSr-xD-aaL"/>
@@ -2961,7 +3036,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-Kl-TQT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shu-Kl-TQT">
                                 <rect key="frame" x="0.0" y="183.5" width="150" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="5mO-8r-wCG"/>
@@ -2972,16 +3047,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MK2-l9-P8W" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="87" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="96" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqx-zh-nVo">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqx-zh-nVo">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMX-Tu-DS4">
-                                        <rect key="frame" x="0.0" y="32.5" width="87" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="96" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3032,7 +3107,7 @@
         <!--Activity-->
         <scene sceneID="m4k-YN-H2H">
             <objects>
-                <viewController storyboardIdentifier="Activity" title="Activity" id="xAK-06-azI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Activity" title="Activity" id="xAK-06-azI" customClass="GameVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hSM-j6-RyY"/>
                         <viewControllerLayoutGuide type="bottom" id="t2E-yE-rRD"/>
@@ -3204,6 +3279,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="0.37876808643341064" green="0.27919739484786987" blue="0.19387608766555786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="xAK-06-azI" eventType="touchUpInside" id="Xqn-9J-Qfv"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyG-QU-7R1">
                                 <rect key="frame" x="0.0" y="183.5" width="175" height="95"/>
@@ -3217,16 +3295,16 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uGg-nl-pBH" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOX-gr-BLh">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOX-gr-BLh">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj6-bl-wsD">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -3277,7 +3355,7 @@
         <!--Treat-->
         <scene sceneID="pxZ-1t-3e1">
             <objects>
-                <viewController storyboardIdentifier="Treat" title="Treat" id="X55-qV-eYU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Treat" title="Treat" id="X55-qV-eYU" customClass="TreatVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zWl-Qt-WeK"/>
                         <viewControllerLayoutGuide type="bottom" id="X12-3M-knZ"/>
@@ -3449,6 +3527,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="0.027689384296536446" green="0.019797815009951591" blue="0.007264221552759409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeWindowButtonTapped:" destination="X55-qV-eYU" eventType="touchUpInside" id="wBd-1l-m3l"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-eG-ufm">
                                 <rect key="frame" x="0.0" y="183.5" width="135" height="95"/>
@@ -3463,16 +3544,16 @@
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-on-ukW" userLabel="Title and Subtitle">
-                                <rect key="frame" x="16" y="282.5" width="117" height="53"/>
+                                <rect key="frame" x="16" y="282.5" width="114.5" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gategory" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaj-ea-d1k">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="28.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaj-ea-d1k">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="25"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subcategory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsE-cU-kh8">
-                                        <rect key="frame" x="0.0" y="32.5" width="117" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="32.5" width="114.5" height="20.5"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="18"/>
                                         <color key="textColor" red="0.01145582832" green="0.38442963359999999" blue="0.80014735459999997" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
