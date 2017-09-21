@@ -27,8 +27,4 @@ class SongWebVC: UIViewController {
         let myRequest = URLRequest(url: myURL!)
         _ = webView?.load(myRequest)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

@@ -41,28 +41,6 @@ class HomePageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
                                animated: true,
                                completion: nil)
         }
-        
-        //        self.delegate = self
-        //        configurePageControl()
-    }
-    
-    //    override func viewDidLayoutSubviews() {
-    //        super.viewDidLayoutSubviews()
-    //        for view in self.view.subviews {
-    //            if view is UIScrollView {
-    //                view.frame = UIScreen.main.bounds
-    //            } else if view is UIPageControl {
-    //                view.backgroundColor = UIColor.clear
-    //            }
-    //        }
-    //    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if UIDevice.current.orientation.isLandscape {
-            print("Landscape")
-        } else {
-            print("Portrait")
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +48,7 @@ class HomePageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
         
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -77,16 +56,6 @@ class HomePageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageVi
     }
     
     var pageControl = UIPageControl()
-    
-    //    func configurePageControl() {
-    //        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width, height: 50))
-    //        pageControl.numberOfPages = orderedViewControllers.count
-    //        pageControl.currentPage = 0
-    //        pageControl.tintColor = UIColor.white
-    //        pageControl.pageIndicatorTintColor = UIColor.lightGray
-    //        pageControl.currentPageIndicatorTintColor = UIColor.blue
-    //        self.view.addSubview(pageControl)
-    //    }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]

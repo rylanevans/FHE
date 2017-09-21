@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import UIKit
 
-class FamilyTVC {
+class FamilyTVC: UITableViewController {
     
-//    func switchCellSwitchValueChanged(_ cell: SwitchTableViewCell) {
-//        guard let indexPath = tableView.indexPath(for: cell) else {return}
-//        let alarm = AlarmController.sharedInstance.alarms[indexPath.row]
-//        AlarmController.sharedInstance.toggleEnabled(alarm)
-//        if alarm.enabled {
-//            scheduleLocalNotification(alarm)
-//        } else {
-//            cancelLocalNotification(alarm)
-//        }
-//        tableView.reloadRows(at: [indexPath], with: .automatic)
-//    }
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
 }

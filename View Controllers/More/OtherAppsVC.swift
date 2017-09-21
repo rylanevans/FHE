@@ -8,15 +8,14 @@
 
 import UIKit
 
-class OtherAppsTVC: UIViewController {
+class OtherAppsVC: UIViewController {
     
     @IBAction func basketballSSTapped(_ sender: Any) {
         UIApplication.shared.openURL(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?mt=8")! as URL)
         
 //        UIApplication.shared.open(NSURL("https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?mt=8") as URL, options: [:], completionHandler: nil)
-        
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
     }
