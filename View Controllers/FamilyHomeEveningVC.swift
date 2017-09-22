@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomePageVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.instanceVC(name: "OpeningPrayer"),
