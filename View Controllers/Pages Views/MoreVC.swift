@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MiscVC: UIViewController {
+class MoreVC: UIViewController {
     
     @IBAction func closeWindowButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
