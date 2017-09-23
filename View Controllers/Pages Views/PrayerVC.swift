@@ -11,8 +11,8 @@ import UIKit
 class PrayerVC: UIViewController {
     
     @IBAction func closeWindowButtonTapped(_ sender: Any) {
-//        self.parent?.
-    }
+        dismiss(animated: true, completion: nil)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
