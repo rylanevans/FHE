@@ -10,6 +10,7 @@ import UIKit
 
 class FamilyDetailsVC: UIViewController {
     
+    @IBOutlet weak var attendingMemberSwithTapped: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()

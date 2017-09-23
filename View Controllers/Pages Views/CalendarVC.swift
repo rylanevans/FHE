@@ -21,7 +21,8 @@ class CalendarVC: UIViewController {
     func gotoAppleCalendar(date: NSDate) {
         let interval = date.timeIntervalSinceReferenceDate
         let url = NSURL(string: "calshow:\(interval)")!
-        UIApplication.shared.openURL(url as URL)
+//        UIApplication.shared.openURL(url as URL)
+        UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
     }
     
     override func viewDidLoad() {

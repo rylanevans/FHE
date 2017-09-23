@@ -55,6 +55,10 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    static func dismissView() {
+        
+    }
+    
     var pageControl = UIPageControl()
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
