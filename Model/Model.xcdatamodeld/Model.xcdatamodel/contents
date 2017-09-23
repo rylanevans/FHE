@@ -1,4 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Calendar" representedClassName="Calendar" syncable="YES" codeGenerationType="class">
+        <attribute name="calendarActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="calendarDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Council" representedClassName="Council" syncable="YES" codeGenerationType="class">
+        <attribute name="councilActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="councilDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
+        <attribute name="gameActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gameCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
+        <attribute name="lessonActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lessonDetails" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lessonTheme" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lessonTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lessonURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
+        <attribute name="memberAge" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="memberAttending" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="memberName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memberPhoto" optional="YES" syncable="YES"/>
+    </entity>
+    <entity name="Misc" representedClassName="Misc" syncable="YES" codeGenerationType="class">
+        <attribute name="miscActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="miscDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Prayer" representedClassName="Prayer" syncable="YES" codeGenerationType="class">
+        <attribute name="prayerActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="prayerDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Rule" representedClassName="Rule" syncable="YES" codeGenerationType="class">
+        <attribute name="ruleActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ruleCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ruleDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ruleTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
+        <attribute name="scriptureActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scriptureBook" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scriptureChapter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scriptureSource" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scriptureTheme" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scriptureTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scriptureURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
+        <attribute name="songActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="songNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songSource" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songTheme" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="songURL" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Spotlight" representedClassName="Spotlight" syncable="YES" codeGenerationType="class">
+        <attribute name="spotlightActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="spotlightDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Testimony" representedClassName="Testimony" syncable="YES" codeGenerationType="class">
+        <attribute name="testimonyActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="testimonyDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Thought" representedClassName="Thought" syncable="YES" codeGenerationType="class">
+        <attribute name="thoughtActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thoughtDetail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Treat" representedClassName="Treat" syncable="YES" codeGenerationType="class">
+        <attribute name="treatActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="treatCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="treatDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="treatTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Member" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Prayer" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="Song" positionX="-36" positionY="9" width="128" height="135"/>
+        <element name="Rule" positionX="-18" positionY="27" width="128" height="105"/>
+        <element name="Scripture" positionX="0" positionY="45" width="128" height="150"/>
+        <element name="Calendar" positionX="18" positionY="63" width="128" height="75"/>
+        <element name="Testimony" positionX="36" positionY="81" width="128" height="75"/>
+        <element name="Spotlight" positionX="-9" positionY="36" width="128" height="75"/>
+        <element name="Misc" positionX="0" positionY="45" width="128" height="75"/>
+        <element name="Thought" positionX="9" positionY="54" width="128" height="75"/>
+        <element name="Lesson" positionX="18" positionY="63" width="128" height="120"/>
+        <element name="Council" positionX="27" positionY="72" width="128" height="75"/>
+        <element name="Game" positionX="36" positionY="81" width="128" height="105"/>
+        <element name="Treat" positionX="45" positionY="90" width="128" height="105"/>
+    </elements>
 </model>
