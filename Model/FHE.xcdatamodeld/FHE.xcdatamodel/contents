@@ -35,7 +35,7 @@
         <attribute name="miscTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Prayer" representedClassName="Prayer" syncable="YES" codeGenerationType="class">
-        <attribute name="prayerActive" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prayerActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="prayerDetail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prayerTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -56,10 +56,10 @@
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
         <attribute name="songActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="songSource" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songTheme" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="soungSource" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Spotlight" representedClassName="Spotlight" syncable="YES" codeGenerationType="class">
         <attribute name="spotlightActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
