@@ -1,5 +1,5 @@
 //
-//  Council+Convience.swift
+//  Council+Convenience.swift
 //  FHE
 //
 //  Created by Rylan Evans on 9/23/17.

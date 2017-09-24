@@ -1,5 +1,5 @@
 //
-//  Member+Convience.swift
+//  Member+Convenience.swift
 //  FHE
 //
 //  Created by Rylan Evans on 9/23/17.

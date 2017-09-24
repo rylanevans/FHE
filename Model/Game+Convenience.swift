@@ -1,5 +1,5 @@
 //
-//  Game+Convience.swift
+//  Game+Convenience.swift
 //  FHE
 //
 //  Created by Rylan Evans on 9/23/17.
