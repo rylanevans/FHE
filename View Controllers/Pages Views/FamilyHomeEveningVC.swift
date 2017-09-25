@@ -33,6 +33,9 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setCustomNavBar()
+        
         self.dataSource = self
         self.delegate = self
         if let firstViewController = orderedViewControllers.first {
@@ -43,16 +46,13 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    func setCustomNavBar() {
         
-//        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
-        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
     }
     
     var pageControl = UIPageControl()

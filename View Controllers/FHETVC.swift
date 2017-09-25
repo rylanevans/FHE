@@ -17,6 +17,10 @@ class FHETVC: UITableViewController {
         super.viewDidLoad()
     }
     
+    //    override func viewDidDisappear(_ animated: Bool) {
+    //        super.viewDidDisappear(animated)
+    //        self.tabBarController?.tabBar.isHidden = true
+    //    }
     
     // MARK: - Table view data source
     

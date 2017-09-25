@@ -10,10 +10,6 @@ import UIKit
 
 class CalendarVC: UIViewController {
     
-    @IBAction func closeWindowButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func showCalendarButton(_ sender: Any) {
         gotoAppleCalendar(date: Date() as NSDate)
     }

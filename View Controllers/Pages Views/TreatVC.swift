@@ -10,10 +10,6 @@ import UIKit
 
 class TreatVC: UIViewController {
     
-    @IBAction func closeWindowButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
