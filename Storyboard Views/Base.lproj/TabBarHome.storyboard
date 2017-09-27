@@ -1841,6 +1841,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rT-eA-zhv" userLabel="Background">
+                                <rect key="frame" x="10" y="558" width="355" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpX-2P-h4B">
                                 <rect key="frame" x="10" y="558" width="355" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1864,10 +1868,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Mhv-QS-hml" secondAttribute="trailing" id="73C-bW-t3a"/>
+                            <constraint firstItem="7rT-eA-zhv" firstAttribute="trailing" secondItem="FpX-2P-h4B" secondAttribute="trailing" id="8Cb-eS-2EA"/>
+                            <constraint firstItem="7rT-eA-zhv" firstAttribute="top" secondItem="FpX-2P-h4B" secondAttribute="top" id="Dwc-MV-PBa"/>
+                            <constraint firstItem="7rT-eA-zhv" firstAttribute="bottom" secondItem="FpX-2P-h4B" secondAttribute="bottom" id="ENV-Rg-gHi"/>
                             <constraint firstItem="oX6-RR-eA2" firstAttribute="bottom" secondItem="FpX-2P-h4B" secondAttribute="bottom" constant="10" id="I8O-et-7LZ"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" constant="10" id="O5E-3w-Wx4"/>
                             <constraint firstItem="c80-MV-Pho" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="Z2E-Vx-cBL"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="top" secondItem="c80-MV-Pho" secondAttribute="bottom" id="Zf9-DV-rtl"/>
+                            <constraint firstItem="7rT-eA-zhv" firstAttribute="leading" secondItem="FpX-2P-h4B" secondAttribute="leading" id="g4i-Fg-4UQ"/>
                             <constraint firstItem="c80-MV-Pho" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" id="hge-UY-1FI"/>
                             <constraint firstAttribute="trailing" secondItem="FpX-2P-h4B" secondAttribute="trailing" constant="10" id="jwx-ZG-kED"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" id="nq3-Dw-QuO"/>
@@ -1880,6 +1888,9 @@
                     <navigationItem key="navigationItem" title="Family Home Evening" id="jtg-6P-4Lj">
                         <barButtonItem key="backBarButtonItem" title=" " id="mTI-Kh-UMh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backgroundShadow" destination="7rT-eA-zhv" id="VXd-4B-kDJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOx-IT-pkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

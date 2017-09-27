@@ -12,17 +12,20 @@ class FHETVC: UITableViewController {
     
     @IBOutlet weak var christTeachingImage: UIImageView!
     
+    @IBOutlet weak var backgroundShadow: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        christTeachingImage.semanticContentAttribute = .forceRightToLeft
+        christTeachingImage.semanticContentAttribute = .forceLeftToRight
     }
     
-    func setCustomNavBar() {
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        
-        navigationController?.navigationBar.shadowImage = UIImage()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundShadow.layer.cornerRadius = 10.0
+        backgroundShadow.layer.shadowRadius = 4.0
+        backgroundShadow.layer.shadowOpacity = 0.2
+        backgroundShadow.layer.shadowOffset = CGSize(width: 0, height: 2)
+        backgroundShadow.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
     
     //    override func viewDidDisappear(_ animated: Bool) {
@@ -32,12 +35,12 @@ class FHETVC: UITableViewController {
     
     // MARK: - Table view data source
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 0
-//    }
+    //    override func numberOfSections(in tableView: UITableView) -> Int {
+    //        return 0
+    //    }
+    //
+    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //        return 0
+    //    }
 }
 

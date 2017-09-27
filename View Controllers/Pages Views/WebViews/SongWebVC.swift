@@ -19,6 +19,7 @@ class SongWebVC: UIViewController {
         super.loadView()
         self.webView = WKWebView()
         self.view = self.webView
+        setCustomNavBar()
     }
     
     override func viewDidLoad() {
@@ -27,4 +28,14 @@ class SongWebVC: UIViewController {
         let myRequest = URLRequest(url: myURL!)
         _ = webView?.load(myRequest)
     }
+    
+    func setCustomNavBar() {
+        
+//        navigationController?.navigationBar.backgroundColor?.cgColor
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Testing", style: .plain, target: nil, action: nil)
+    }
+    
 }

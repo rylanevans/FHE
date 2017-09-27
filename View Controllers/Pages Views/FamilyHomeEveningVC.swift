@@ -34,6 +34,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setCustomNavBar()
         
         self.dataSource = self
         self.delegate = self
@@ -45,12 +46,10 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         }
     }
     
+    
     func setCustomNavBar() {
-        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        
         navigationController?.navigationBar.shadowImage = UIImage()
-        
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
     }
     
