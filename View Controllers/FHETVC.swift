@@ -10,11 +10,19 @@ import UIKit
 
 class FHETVC: UITableViewController {
     
-    
-    
+    @IBOutlet weak var christTeachingImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        christTeachingImage.semanticContentAttribute = .forceRightToLeft
+    }
+    
+    func setCustomNavBar() {
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     //    override func viewDidDisappear(_ animated: Bool) {

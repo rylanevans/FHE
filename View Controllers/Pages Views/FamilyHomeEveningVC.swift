@@ -34,7 +34,6 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCustomNavBar()
         
         self.dataSource = self
         self.delegate = self
