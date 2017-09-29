@@ -50,7 +50,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     func setCustomNavBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: nil, action: nil)
     }
     
     var pageControl = UIPageControl()

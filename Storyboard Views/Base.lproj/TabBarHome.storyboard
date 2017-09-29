@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hyC-og-ZeS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,32 +20,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                            <integer key="value" value="2"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                    <connections>
-                        <segue destination="yd2-88-qUk" kind="relationship" relationship="viewControllers" id="OcW-LD-Jdb"/>
-                        <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="TAd-jO-kMY"/>
-                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="viewControllers" id="DUB-ei-VMK"/>
-                        <segue destination="UrF-9H-00o" kind="relationship" relationship="viewControllers" id="7dH-c4-MJW"/>
-                        <segue destination="KbM-YR-tSG" kind="relationship" relationship="viewControllers" id="U3r-1a-I59"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2740" y="33"/>
-        </scene>
         <!--Tasks-->
         <scene sceneID="wC0-Iq-Zzi">
             <objects>
@@ -1669,10 +1643,36 @@
             </objects>
             <point key="canvasLocation" x="6683" y="1081"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qRB-lA-5hS">
+            <objects>
+                <tabBarController id="hyC-og-ZeS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gNO-d4-scI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="yd2-88-qUk" kind="relationship" relationship="viewControllers" id="R8m-Wa-JUH"/>
+                        <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="hjv-Up-wWY"/>
+                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="viewControllers" id="WWr-Ca-VuR"/>
+                        <segue destination="UrF-9H-00o" kind="relationship" relationship="viewControllers" id="8fL-SK-e9E"/>
+                        <segue destination="KbM-YR-tSG" kind="relationship" relationship="viewControllers" id="XIj-uw-p08"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFs-xC-HLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="52"/>
+        </scene>
         <!--FHE-->
         <scene sceneID="FIL-sz-VeZ">
             <objects>
-                <viewController title="FHE" id="blj-Lq-6RZ" customClass="FHETVC" sceneMemberID="viewController">
+                <viewController title="FHE" id="blj-Lq-6RZ" customClass="FHETVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h34-YY-S2U"/>
                         <viewControllerLayoutGuide type="bottom" id="i1X-tR-dH6"/>
@@ -1687,7 +1687,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a9M-Bv-gwV" userLabel="Image and header">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeachBG" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-LN-14A">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JesusChrist" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-LN-14A">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct9-Dg-tH8" userLabel="Blue Line">
@@ -1726,6 +1726,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignments" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-Df-2s4">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="DaM-Kg-k8P"/>
                                                 </constraints>
@@ -1864,15 +1865,24 @@
                                     <segue destination="sPM-tt-iak" kind="presentation" id="aj5-ZG-3Zr"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Serve" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-AV-1uI" userLabel="Serve">
+                                <rect key="frame" x="0.0" y="0.0" width="225" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="5va-vK-tmp"/>
+                                    <constraint firstAttribute="height" constant="100" id="RSX-PI-pc0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Mhv-QS-hml" secondAttribute="trailing" id="73C-bW-t3a"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="trailing" secondItem="FpX-2P-h4B" secondAttribute="trailing" id="8Cb-eS-2EA"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="top" secondItem="FpX-2P-h4B" secondAttribute="top" id="Dwc-MV-PBa"/>
+                            <constraint firstItem="Aim-AV-1uI" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="EEI-yf-uz5"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="bottom" secondItem="FpX-2P-h4B" secondAttribute="bottom" id="ENV-Rg-gHi"/>
                             <constraint firstItem="oX6-RR-eA2" firstAttribute="bottom" secondItem="FpX-2P-h4B" secondAttribute="bottom" constant="10" id="I8O-et-7LZ"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" constant="10" id="O5E-3w-Wx4"/>
+                            <constraint firstItem="Aim-AV-1uI" firstAttribute="leading" secondItem="oX6-RR-eA2" secondAttribute="leading" id="WPn-Wr-LAw"/>
                             <constraint firstItem="c80-MV-Pho" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="Z2E-Vx-cBL"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="top" secondItem="c80-MV-Pho" secondAttribute="bottom" id="Zf9-DV-rtl"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="leading" secondItem="FpX-2P-h4B" secondAttribute="leading" id="g4i-Fg-4UQ"/>
@@ -1885,11 +1895,9 @@
                         <viewLayoutGuide key="safeArea" id="oX6-RR-eA2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="FHE" image="FHE-25" id="irb-mt-ZHO"/>
-                    <navigationItem key="navigationItem" title="Family Home Evening" id="jtg-6P-4Lj">
-                        <barButtonItem key="backBarButtonItem" title=" " id="mTI-Kh-UMh"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="backgroundShadow" destination="7rT-eA-zhv" id="VXd-4B-kDJ"/>
+                        <outlet property="backgroundShadow" destination="7rT-eA-zhv" id="Nhf-hL-euM"/>
+                        <outlet property="christTeachingImage" destination="Xbf-LN-14A" id="HjA-k1-QtP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOx-IT-pkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2605,6 +2613,7 @@
         <image name="Game" width="82" height="83"/>
         <image name="Help" width="62" height="62"/>
         <image name="Info" width="64" height="64"/>
+        <image name="JesusChrist" width="800" height="533"/>
         <image name="Lesson" width="74" height="75"/>
         <image name="Misc" width="68" height="68"/>
         <image name="Misc-25" width="19" height="6"/>
@@ -2616,12 +2625,12 @@
         <image name="ReportBug" width="84" height="76"/>
         <image name="Rule" width="80" height="78"/>
         <image name="Scripture" width="78" height="76"/>
+        <image name="Serve" width="333" height="199"/>
         <image name="Song" width="44" height="80"/>
         <image name="Spotlight" width="62" height="66"/>
         <image name="Subscribe" width="76" height="72"/>
         <image name="Suggestions" width="84" height="85"/>
         <image name="Tasks-25" width="16" height="15"/>
-        <image name="TeachBG" width="646" height="533"/>
         <image name="Testimony" width="66" height="56"/>
         <image name="Thought" width="78" height="73"/>
         <image name="Treat" width="72" height="78"/>
