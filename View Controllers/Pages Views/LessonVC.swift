@@ -9,8 +9,14 @@
 import UIKit
 
 class LessonVC: UIViewController {
+    @IBOutlet weak var lessonThemeLabel: UILabel!
+    @IBOutlet weak var lessonMemberPhotoImage: UIImageView!
+    @IBOutlet weak var lessonMemberNameLabel: UILabel!
+    @IBOutlet weak var lessonTitleLabel: UILabel!
+    @IBOutlet weak var lessonDetailLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

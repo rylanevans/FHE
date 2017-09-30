@@ -9,11 +9,13 @@
 import UIKit
 
 class SongVC: UIViewController {
+    @IBOutlet weak var songThemeLabel: UILabel!
+    @IBOutlet weak var songMemberPhotoImage: UIImageView!
+    @IBOutlet weak var songMemberNameLabel: UILabel!
+    @IBOutlet weak var songLocationLabel: UILabel!
+    @IBOutlet weak var songDetailLabel: UILabel!
 
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 }

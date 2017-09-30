@@ -9,8 +9,14 @@
 import UIKit
 
 class CouncilVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var councilMemberPhotoImage: UIImageView!
+    
+    @IBOutlet weak var councilMemberNameLabel: UILabel!
+    @IBOutlet weak var councilTitleLabel: UILabel!
+    @IBOutlet weak var councilDetailLabel: UILabel!
+    
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

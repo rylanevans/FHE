@@ -8,8 +8,11 @@
 
 import UIKit
 
-class PrayerVC: UIViewController {
-    
+class OPrayerVC: UIViewController {
+    @IBOutlet weak var prayerMemberPhotoImage: UIStackView!
+    @IBOutlet weak var prayerMemberNameLabel: UILabel!
+    @IBOutlet weak var prayerTitleLabel: UILabel!
+    @IBOutlet weak var prayerDetailLabel: UILabel!
     
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)

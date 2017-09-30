@@ -36,7 +36,7 @@
         <!--Opening Prayer-->
         <scene sceneID="OPb-ao-NGh">
             <objects>
-                <viewController storyboardIdentifier="OpeningPrayer" title="Opening Prayer" id="W2J-kG-43N" customClass="PrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpeningPrayer" title="Opening Prayer" id="W2J-kG-43N" customClass="OPrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pLB-yk-BQd"/>
                         <viewControllerLayoutGuide type="bottom" id="uSl-VP-1cD"/>
@@ -334,6 +334,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yRs-O4-45a"/>
                     </view>
+                    <connections>
+                        <outlet property="prayerDetailLabel" destination="fmr-X3-p85" id="Vxb-Hb-Bj4"/>
+                        <outlet property="prayerMemberNameLabel" destination="zLu-r7-5TX" id="AqR-H7-23E"/>
+                        <outlet property="prayerMemberPhotoImage" destination="8Ze-Zu-m3h" id="e3h-9i-o5e"/>
+                        <outlet property="prayerTitleLabel" destination="w1A-c6-lBo" id="4QA-ZE-zJD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Id2-Ia-KcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -650,6 +656,13 @@
                         <viewLayoutGuide key="safeArea" id="Je6-hJ-iRf"/>
                     </view>
                     <navigationItem key="navigationItem" id="0sr-IN-YrD"/>
+                    <connections>
+                        <outlet property="songDetailLabel" destination="Euy-le-FJP" id="KPa-89-aHg"/>
+                        <outlet property="songLocationLabel" destination="zHA-mF-QbM" id="sqJ-kM-4mg"/>
+                        <outlet property="songMemberNameLabel" destination="x9E-WE-xjc" id="7e4-lt-SIl"/>
+                        <outlet property="songMemberPhotoImage" destination="zYr-98-TuW" id="EEz-8P-raK"/>
+                        <outlet property="songThemeLabel" destination="Ztd-LU-SQb" id="qR6-rB-NA9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSD-DG-zxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -967,6 +980,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wJP-O2-E9H"/>
                     </view>
+                    <connections>
+                        <outlet property="ruleCategoryLabel" destination="8Ih-hg-Odg" id="LIW-Ld-8Pw"/>
+                        <outlet property="ruleDetailLabel" destination="anB-QJ-TVX" id="1zz-tS-w7s"/>
+                        <outlet property="ruleMemberNameLabel" destination="MdO-sK-TKS" id="0fo-Ml-Cwa"/>
+                        <outlet property="ruleMemberPhotoImage" destination="yF2-5j-xOR" id="sCO-dN-yLC"/>
+                        <outlet property="ruleTitleLabel" destination="QYM-x2-p9H" id="veT-oS-RjW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbo-JN-bZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1292,6 +1312,7 @@
                         <outlet property="scriptureLocationLabel" destination="reb-RJ-bmf" id="tKb-M6-A9w"/>
                         <outlet property="scriptureMemberNameLabel" destination="vqh-T7-JAY" id="qyV-nd-I3k"/>
                         <outlet property="scriptureMemberPhotoImage" destination="cAC-Xm-JbC" id="Ea1-QM-MTW"/>
+                        <outlet property="scriptureThemeLabel" destination="cwD-eT-u4s" id="5dj-Zd-Kb6"/>
                         <outlet property="scriptureTitleLabel" destination="dxa-Qg-HUs" id="DQY-jA-k9R"/>
                     </connections>
                 </viewController>
@@ -1599,6 +1620,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="ZFw-sH-GMu" eventType="touchUpInside" id="Vii-NO-OwN"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="Sj5-xI-cPd"/>
                                 </connections>
                             </button>
@@ -1618,6 +1640,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gEZ-m7-B24"/>
                     </view>
+                    <connections>
+                        <outlet property="calendarDetailLabel" destination="qXW-bH-XwY" id="0St-0R-SKy"/>
+                        <outlet property="calendarMemberNameLabel" destination="yky-py-8CQ" id="nQn-lr-L6x"/>
+                        <outlet property="calendarMemberPhotoImage" destination="Y0X-99-KJ4" id="Se6-Mn-aDN"/>
+                        <outlet property="calendarTitleLabel" destination="Z1X-4D-yl9" id="Y0z-Tf-cX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYG-wN-KOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1887,6 +1915,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="fLO-R1-Ws9" eventType="touchUpInside" id="tAM-cq-pS9"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="sO3-uI-ZeO"/>
                                 </connections>
                             </button>
@@ -1906,6 +1935,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="azU-aR-grg"/>
                     </view>
+                    <connections>
+                        <outlet property="testimonyDetailLabel" destination="ESf-pJ-3XQ" id="uB8-f4-IZI"/>
+                        <outlet property="testimonyMemberNameLabel" destination="RHv-8W-BRK" id="90q-64-U6g"/>
+                        <outlet property="testimonyMemberPhotoImage" destination="R9y-Rs-Qdo" id="821-rj-P09"/>
+                        <outlet property="testimonyTitleLabel" destination="Nu3-Q6-hte" id="OYh-PV-qyu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC4-UX-umY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2198,6 +2233,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="Enk-5M-ZvE" eventType="touchUpInside" id="IFP-Xb-RiC"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="eYu-mR-cMr"/>
                                 </connections>
                             </button>
@@ -2217,6 +2253,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fxq-EO-Peo"/>
                     </view>
+                    <connections>
+                        <outlet property="spotlightDetailLabel" destination="eiW-bO-srL" id="An8-Ef-Jyc"/>
+                        <outlet property="spotlightMemberNameLabel" destination="Z70-W8-bQ1" id="o1b-P8-Yfq"/>
+                        <outlet property="spotlightMemberPhotoImage" destination="YMO-eV-VRR" id="qvh-2C-1lM"/>
+                        <outlet property="spotlightTitleLabel" destination="7P2-XG-8oA" id="X2N-yP-BDP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05V-E8-2vX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2225,7 +2267,7 @@
         <!--Misc.-->
         <scene sceneID="YFm-wo-u7O">
             <objects>
-                <viewController storyboardIdentifier="Misc" title="Misc." id="eWq-pv-eEs" customClass="MiscVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Misc" title="Misc." id="eWq-pv-eEs" customClass="MisVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Eq-Xv-ktD"/>
                         <viewControllerLayoutGuide type="bottom" id="BVt-fe-XXe"/>
@@ -2508,6 +2550,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="eWq-pv-eEs" eventType="touchUpInside" id="nyn-pt-d3n"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="5Lf-21-HXW"/>
                                 </connections>
                             </button>
@@ -2527,6 +2570,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2ek-ox-Lub"/>
                     </view>
+                    <connections>
+                        <outlet property="miscDetailLabel" destination="MYU-N7-LUl" id="hf7-VS-ldC"/>
+                        <outlet property="miscMemberNameLabel" destination="TDe-PN-M3A" id="fpY-xw-oTq"/>
+                        <outlet property="miscMemberPhotoImage" destination="J8o-01-iTF" id="lEQ-QI-VSv"/>
+                        <outlet property="miscTitleLabel" destination="WKi-K1-EJm" id="lHW-1Y-3Ty"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydr-kU-ns4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2812,6 +2861,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="eAf-bf-f3B" eventType="touchUpInside" id="D2i-xk-ZbZ"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="yaN-I2-RhQ"/>
                                 </connections>
                             </button>
@@ -2831,6 +2881,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8LE-0y-SAz"/>
                     </view>
+                    <connections>
+                        <outlet property="thoughtDetailLabel" destination="hZn-BQ-Nzi" id="jru-G0-qOQ"/>
+                        <outlet property="thoughtMemberNameLabel" destination="jV0-Tk-af9" id="6Np-a4-xdG"/>
+                        <outlet property="thoughtMemberPhotoImage" destination="jg1-jg-wQ4" id="ccw-Uk-BIU"/>
+                        <outlet property="thoughtTitleLabel" destination="XcO-Pn-WZL" id="HGa-6a-nFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cga-d5-eGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3124,6 +3180,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="qwK-Ja-Lqd" eventType="touchUpInside" id="9hd-Vz-Gy6"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="rTB-iA-WKb"/>
                                 </connections>
                             </button>
@@ -3143,6 +3200,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T42-Dg-vtx"/>
                     </view>
+                    <connections>
+                        <outlet property="lessonDetailLabel" destination="i8k-lp-cG4" id="CrV-hZ-ONT"/>
+                        <outlet property="lessonMemberNameLabel" destination="TYF-OE-kqk" id="JdK-34-Ly8"/>
+                        <outlet property="lessonMemberPhotoImage" destination="1l6-qW-RzK" id="N5e-lp-JFQ"/>
+                        <outlet property="lessonThemeLabel" destination="2ih-UB-lKM" id="EUR-05-YeV"/>
+                        <outlet property="lessonTitleLabel" destination="IVk-UN-FHg" id="aRV-bN-4fn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nwn-Yj-a32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3435,6 +3499,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="Hc4-GV-zQc" eventType="touchUpInside" id="bEo-lz-RyQ"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="SIZ-Lp-YkF"/>
                                 </connections>
                             </button>
@@ -3454,6 +3519,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TWN-QP-7MD"/>
                     </view>
+                    <connections>
+                        <outlet property="councilDetailLabel" destination="z2Q-jv-aJI" id="xR7-Gd-sfu"/>
+                        <outlet property="councilMemberNameLabel" destination="aIm-Bg-ip0" id="CPU-JY-vAT"/>
+                        <outlet property="councilMemberPhotoImage" destination="H1z-sE-1JX" id="e6H-Xn-Cj1"/>
+                        <outlet property="councilTitleLabel" destination="ifZ-VA-FJz" id="PFO-zl-lZT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGZ-Xq-j0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3462,7 +3533,7 @@
         <!--ClosingPrayer-->
         <scene sceneID="doA-Vv-ITx">
             <objects>
-                <viewController storyboardIdentifier="ClosingPrayer" title="ClosingPrayer" id="oFt-LC-QD1" customClass="PrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClosingPrayer" title="ClosingPrayer" id="oFt-LC-QD1" customClass="CPrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Srf-OQ-sg6"/>
                         <viewControllerLayoutGuide type="bottom" id="dSr-xD-aaL"/>
@@ -3750,6 +3821,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="oFt-LC-QD1" eventType="touchUpInside" id="tnt-4m-mXY"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="tjM-n3-LcQ"/>
                                 </connections>
                             </button>
@@ -3769,6 +3841,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8wM-Db-hrd"/>
                     </view>
+                    <connections>
+                        <outlet property="prayerDetailLabel" destination="bqV-1q-6Qw" id="u7L-30-XXf"/>
+                        <outlet property="prayerMemberNameLabel" destination="8fS-HP-sy9" id="upI-xV-xng"/>
+                        <outlet property="prayerMemberPhotoImage" destination="yiI-lI-x35" id="ElG-x4-NiP"/>
+                        <outlet property="prayerTitleLabel" destination="oHb-fQ-vuU" id="4Hs-YY-dpg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivI-ie-FPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4068,6 +4146,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="closeButtonPressed:" destination="xAK-06-azI" eventType="touchUpInside" id="L6W-XV-POz"/>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="MAZ-qw-4nf"/>
                                 </connections>
                             </button>
@@ -4087,6 +4166,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OH4-iK-jJn"/>
                     </view>
+                    <connections>
+                        <outlet property="gameDetailLabel" destination="qG3-Ld-dnO" id="UIN-Yj-RJR"/>
+                        <outlet property="gameMemberNameLabel" destination="5xs-mA-B3g" id="4ej-4I-dUI"/>
+                        <outlet property="gameMemberPhotoImage" destination="7Qb-SP-nf3" id="CC8-qD-RkE"/>
+                        <outlet property="gameThemeLabel" destination="YFB-Ze-dIw" id="hfS-bl-0Zz"/>
+                        <outlet property="gameTitleLabel" destination="Pp8-rU-pVO" id="sgR-F5-OXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WB0-2s-UiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4388,6 +4474,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="c9g-aU-Nbs"/>
+                                    <action selector="closedButtonPressed:" destination="X55-qV-eYU" eventType="touchUpInside" id="vFd-me-Piw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4406,6 +4493,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gUK-LR-O3p"/>
                     </view>
+                    <connections>
+                        <outlet property="treatCategoryLabel" destination="6fu-U6-Ab3" id="PRg-n5-Sj2"/>
+                        <outlet property="treatDetailLabel" destination="nEP-Pz-ygP" id="Pvc-es-5w3"/>
+                        <outlet property="treatMemberNameLabel" destination="VsY-0g-iTu" id="B6V-O9-dcB"/>
+                        <outlet property="treatMemberPhotoImage" destination="QXj-PB-GoC" id="2Z4-h6-8WM"/>
+                        <outlet property="treatTitleLabel" destination="2iB-Qu-x1E" id="HDB-8J-Tdm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkK-7P-RsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
