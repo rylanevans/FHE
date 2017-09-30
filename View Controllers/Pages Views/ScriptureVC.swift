@@ -9,8 +9,13 @@
 import UIKit
 
 class ScriptureVC: UIViewController {
+    @IBOutlet weak var scriptureThemeLabel: UILabel!
+    @IBOutlet weak var scriptureMemberPhotoImage: UIImageView!
+    @IBOutlet weak var scriptureMemberNameLabel: UILabel!
+    @IBOutlet weak var scriptureLocationLabel: UILabel!
+    @IBOutlet weak var scriptureTitleLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

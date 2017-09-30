@@ -10,6 +10,9 @@ import UIKit
 
 class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    
+    // MARK: - Ordered Page Views Array
+    
     lazy var orderedViewControllers: [UIViewController] = {
         return [self.instanceVC(name: "OpeningPrayer"),
                 self.instanceVC(name: "Song"),
@@ -27,14 +30,20 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
                 self.instanceVC(name: "Treat")]
     }()
     
+    
+    // MARK: - Instance View Controller
+    
     func instanceVC(name: String) -> UIViewController {
         return UIStoryboard(name: "FHE", bundle: nil).instantiateViewController(withIdentifier: name)
     }
     
+    
+    // MARK: - View did load for FamilyHomeEveningVC
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCustomNavBar()
+        self.view.backgroundColor = #colorLiteral(red: 0.8487482071, green: 0.9164986014, blue: 0.9956217408, alpha: 1)
         
         self.dataSource = self
         self.delegate = self
@@ -47,18 +56,20 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     }
     
     
-    func setCustomNavBar() {
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Test", style: .plain, target: nil, action: nil)
-    }
+    // MARK: - Page Control variable set up
     
     var pageControl = UIPageControl()
+    
+    
+    // MARK: - Page Controller Animation
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
     }
+    
+    
+    // MARK: - Page Controller scroll backward
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
@@ -77,6 +88,9 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         
         return orderedViewControllers[previousIndex]
     }
+    
+    
+    // MARK: - Page Controller scroll forward
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
@@ -97,9 +111,15 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         return orderedViewControllers[nextIndex]
     }
     
+    
+    // MARK: - Page Controller show page dots on bottom
+    
     public func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return orderedViewControllers.count
     }
+    
+    
+    // MARK: - Page Controller show current location on dots
     
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
