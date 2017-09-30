@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Lesson {
-    convenience init(lessonTheme: String, lessonTitle: String, lessonDetail: String, lessonURL: String, lessonActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(lessonImage: UIImage, lessonTheme: String, lessonTitle: String, lessonDetail: String, lessonURL: String, lessonActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.lessonImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Lesson"))
         self.lessonTheme = lessonTheme
         self.lessonTitle = lessonTitle
         self.lessonDetail = lessonDetail

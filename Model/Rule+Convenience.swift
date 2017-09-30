@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Rule {
-    convenience init(ruleTitle: String, ruleDetail: String, ruleActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(ruleImage: UIImage, ruleTitle: String, ruleDetail: String, ruleActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.ruleImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Rule"))
         self.ruleTitle = ruleTitle
         self.ruleDetail = ruleDetail
         self.ruleActive = ruleActive

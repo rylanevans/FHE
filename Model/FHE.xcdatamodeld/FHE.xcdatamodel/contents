@@ -3,23 +3,27 @@
     <entity name="Calendar" representedClassName="Calendar" syncable="YES" codeGenerationType="class">
         <attribute name="calendarActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="calendarDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="calendarImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="calendarTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Council" representedClassName="Council" syncable="YES" codeGenerationType="class">
         <attribute name="councilActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="councilDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="councilImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="councilTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
         <attribute name="gameActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="gameCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gameDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gameImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="gameTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="gameURL" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
         <attribute name="lessonActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lessonDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lessonImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="lessonTheme" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lessonTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lessonURL" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,26 +32,31 @@
         <attribute name="memberAge" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="memberAttending" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="memberName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="memberPhoto" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <entity name="Misc" representedClassName="Misc" syncable="YES" codeGenerationType="class">
         <attribute name="miscActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="miscDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="miscImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="miscTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Prayer" representedClassName="Prayer" syncable="YES" codeGenerationType="class">
         <attribute name="prayerActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="prayerDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prayerImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="prayerTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Rule" representedClassName="Rule" syncable="YES" codeGenerationType="class">
         <attribute name="ruleActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ruleDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ruleImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="ruleTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
         <attribute name="scriptureActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="scriptureBook" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scriptureChapter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scriptureImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="scriptureSource" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scriptureTheme" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scriptureTitle" optional="YES" attributeType="String" syncable="YES"/>
@@ -56,6 +65,7 @@
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
         <attribute name="songActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="songImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="songSource" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songTheme" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songTitle" optional="YES" attributeType="String" syncable="YES"/>
@@ -64,39 +74,43 @@
     <entity name="Spotlight" representedClassName="Spotlight" syncable="YES" codeGenerationType="class">
         <attribute name="spotlightActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="spotlightDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="spotlightImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="spotlightTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Testimony" representedClassName="Testimony" syncable="YES" codeGenerationType="class">
         <attribute name="testimonyActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="testimonyDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testimonyImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="testimonyTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Thought" representedClassName="Thought" syncable="YES" codeGenerationType="class">
         <attribute name="thoughtActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="thoughtDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thoughtImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="thoughtTitle" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Treat" representedClassName="Treat" syncable="YES" codeGenerationType="class">
         <attribute name="treatActive" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="treatCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="treatDetail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="treatImage" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="treatTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="treatURL" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Calendar" positionX="9" positionY="117" width="128" height="90"/>
-        <element name="Council" positionX="54" positionY="162" width="128" height="90"/>
-        <element name="Game" positionX="9" positionY="108" width="128" height="120"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="120"/>
-        <element name="Member" positionX="-45" positionY="0" width="128" height="90"/>
-        <element name="Misc" positionX="36" positionY="144" width="128" height="90"/>
-        <element name="Prayer" positionX="-18" positionY="54" width="128" height="90"/>
-        <element name="Rule" positionX="0" positionY="108" width="128" height="90"/>
-        <element name="Scripture" positionX="9" positionY="72" width="128" height="165"/>
-        <element name="Song" positionX="27" positionY="126" width="128" height="120"/>
-        <element name="Spotlight" positionX="27" positionY="135" width="128" height="90"/>
-        <element name="Testimony" positionX="18" positionY="126" width="128" height="90"/>
-        <element name="Thought" positionX="45" positionY="153" width="128" height="90"/>
-        <element name="Treat" positionX="18" positionY="117" width="128" height="120"/>
+        <element name="Calendar" positionX="9" positionY="117" width="128" height="105"/>
+        <element name="Council" positionX="54" positionY="162" width="128" height="105"/>
+        <element name="Game" positionX="9" positionY="108" width="128" height="135"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="135"/>
+        <element name="Member" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="Misc" positionX="36" positionY="144" width="128" height="105"/>
+        <element name="Prayer" positionX="-18" positionY="54" width="128" height="105"/>
+        <element name="Rule" positionX="0" positionY="108" width="128" height="105"/>
+        <element name="Scripture" positionX="9" positionY="72" width="128" height="180"/>
+        <element name="Song" positionX="27" positionY="126" width="128" height="135"/>
+        <element name="Spotlight" positionX="27" positionY="135" width="128" height="105"/>
+        <element name="Testimony" positionX="18" positionY="126" width="128" height="105"/>
+        <element name="Thought" positionX="45" positionY="153" width="128" height="105"/>
+        <element name="Treat" positionX="18" positionY="117" width="128" height="135"/>
     </elements>
 </model>

@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Council {
-    convenience init(councilTitle: String, councilDetail: String, councilActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(councilImage: UIImage, councilTitle: String, councilDetail: String, councilActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.councilImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Council"))
         self.councilTitle = councilTitle
         self.councilDetail = councilDetail
         self.councilActive = councilActive

@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+        </array>
         <array key="BradleyHand-Bold.ttf">
             <string>BradleyHandITCTT-Bold</string>
         </array>
@@ -1654,13 +1657,13 @@
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
-                            <integer key="value" value="2"/>
+                            <integer key="value" value="1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="yd2-88-qUk" kind="relationship" relationship="viewControllers" id="R8m-Wa-JUH"/>
                         <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="hjv-Up-wWY"/>
-                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="viewControllers" id="WWr-Ca-VuR"/>
+                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="viewControllers" id="Lkc-Qe-eTQ"/>
                         <segue destination="UrF-9H-00o" kind="relationship" relationship="viewControllers" id="8fL-SK-e9E"/>
                         <segue destination="KbM-YR-tSG" kind="relationship" relationship="viewControllers" id="XIj-uw-p08"/>
                     </connections>
@@ -1730,7 +1733,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="DaM-Kg-k8P"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

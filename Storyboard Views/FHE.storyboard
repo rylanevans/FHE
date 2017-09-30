@@ -9,8 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="AmericanTypewriter.ttc">
+            <string>AmericanTypewriter</string>
+            <string>AmericanTypewriter-CondensedLight</string>
+        </array>
         <array key="Noteworthy.ttc">
-            <string>Noteworthy-Bold</string>
             <string>Noteworthy-Light</string>
         </array>
         <array key="Zapfino.ttf">
@@ -116,7 +119,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="SGI-p5-pNg"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -151,7 +154,7 @@
 2. Share Gratitude
 3. Ask for needs
 4. Close in Jesus Christ's name</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -369,7 +372,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="p4s-Tx-PjG"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -400,7 +403,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="fex-tx-YZy"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -639,7 +642,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Xsf-Ty-VZv"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -675,7 +678,7 @@
 3. Yep. 
 4. Nope
 5. Wonderful.</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -894,7 +897,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="WpN-GX-TTB"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -925,7 +928,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="hhQ-qD-71g"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1162,7 +1165,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="KK4-JN-cQZ"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1197,7 +1200,7 @@
 2. Birthdays / Holidays
 3. Traveling / Vacations
 4. Family dinners</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1425,7 +1428,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="iKL-gQ-ddV"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1452,7 +1455,7 @@
 6. The Book of Mormon is another testiment of Jesus Christ.
 7. A testimony is a spiritual witness given by the Holy Ghost. 
 8. A testimony grows to include all principles of the Gospel.</string>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                         <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1660,7 +1663,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="bvP-kS-2q0"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1699,7 +1702,7 @@
 6. Physical
 7. Environmental
 8. Spiritual</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -1918,7 +1921,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="g3s-VA-Wcd"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1950,7 +1953,7 @@
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="j6Q-ys-G2M"/>
                                                                 </constraints>
                                                                 <string key="text">Description of what will be in there. Some times it will be text. Other times, it will be bullet points. Other times it will be random stuff.</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -2050,15 +2053,31 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPx-oQ-UHK">
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="TPR-x9-yKp"/>
+                                    <constraint firstAttribute="width" constant="25" id="ieK-QY-oBm"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="WhiteHome">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="5Lf-21-HXW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gHh-5W-Fjw" firstAttribute="bottom" secondItem="09Z-aA-VGR" secondAttribute="bottom" id="2fP-7q-I3F"/>
+                            <constraint firstItem="FPx-oQ-UHK" firstAttribute="leading" secondItem="2ek-ox-Lub" secondAttribute="leading" constant="15" id="7sK-Sp-9Dh"/>
                             <constraint firstItem="f7N-1j-S4e" firstAttribute="bottom" secondItem="09Z-aA-VGR" secondAttribute="bottom" constant="60" id="Fw6-E7-6D3"/>
                             <constraint firstAttribute="bottom" secondItem="e5a-sP-5nT" secondAttribute="bottom" id="HHC-C5-e3J"/>
                             <constraint firstItem="e5a-sP-5nT" firstAttribute="leading" secondItem="eaY-dw-VhY" secondAttribute="leading" id="MTH-dn-WRW"/>
                             <constraint firstItem="gHh-5W-Fjw" firstAttribute="leading" secondItem="eaY-dw-VhY" secondAttribute="leading" id="j06-hN-6vY"/>
                             <constraint firstAttribute="trailing" secondItem="e5a-sP-5nT" secondAttribute="trailing" id="rd6-eY-ePf"/>
+                            <constraint firstItem="FPx-oQ-UHK" firstAttribute="top" secondItem="eaY-dw-VhY" secondAttribute="top" constant="15" id="tD0-dq-Hbc"/>
                             <constraint firstItem="YTv-ac-gjD" firstAttribute="trailing" secondItem="f7N-1j-S4e" secondAttribute="trailing" constant="15" id="tDw-9l-wVZ"/>
                             <constraint firstItem="e5a-sP-5nT" firstAttribute="top" secondItem="eaY-dw-VhY" secondAttribute="top" id="zk4-Im-lE6"/>
                         </constraints>
@@ -2153,7 +2172,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="EMS-vR-1g7"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2185,7 +2204,7 @@
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="k3c-Nq-UKL"/>
                                                                 </constraints>
                                                                 <string key="text">Description of what will be in there. Some times it will be text. Other times, it will be bullet points. Other times it will be random stuff.</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -2388,7 +2407,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Ymx-UK-w6H"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2419,7 +2438,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="LFa-Qc-1I0"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -2639,7 +2658,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="BRm-zk-n0l"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2670,7 +2689,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="FQu-Fs-2K9"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -2873,7 +2892,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="p8q-xL-OPX"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -2908,7 +2927,7 @@
 2. Share Gratitude
 3. Ask for needs
 4. Close in Jesus Christ's name</string>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -3119,7 +3138,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="iQr-b8-pF6"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -3150,7 +3169,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="pX6-6U-QNL"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -3362,7 +3381,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="277-fq-18u"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -3393,7 +3412,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="c62-Se-cN8"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="30"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <size key="shadowOffset" width="0.0" height="0.0"/>

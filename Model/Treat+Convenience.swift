@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Treat {
-    convenience init(treatCategory: String, treatTitle: String, treatDetail: String, treatURL: String, treatActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(treatImage: UIImage, treatCategory: String, treatTitle: String, treatDetail: String, treatURL: String, treatActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.treatImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Treat"))
         self.treatCategory = treatCategory
         self.treatTitle = treatTitle
         self.treatDetail = treatDetail

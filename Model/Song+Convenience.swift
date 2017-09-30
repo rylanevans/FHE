@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Song {
-    convenience init(songTheme: String, songTitle: String, songSource: String, songURL: String, songActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(songImage: UIImage, songTheme: String, songTitle: String, songSource: String, songURL: String, songActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
         self.songTheme = songTheme
         self.songTitle = songTitle
         self.songSource = songSource

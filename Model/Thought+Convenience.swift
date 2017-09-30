@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Thought {
-    convenience init(thoughtTitle: String, thoughtDetail: String, thoughtActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(thoughtImage: UIImage, thoughtTitle: String, thoughtDetail: String, thoughtActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.thoughtImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Thought"))
         self.thoughtTitle = thoughtTitle
         self.thoughtDetail = thoughtDetail
         self.thoughtActive = thoughtActive

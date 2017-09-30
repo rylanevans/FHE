@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Game {
-    convenience init(gameCategory: String, gameTitle: String, gameDetail: String, gameURL: String, gameActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(gameImage: UIImage, gameCategory: String, gameTitle: String, gameDetail: String, gameURL: String, gameActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.gameImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Game"))
         self.gameCategory = gameCategory
         self.gameTitle = gameTitle
         self.gameDetail = gameDetail

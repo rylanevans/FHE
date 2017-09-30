@@ -7,12 +7,14 @@
 //
 
 import CoreData
+import UIKit
 
 extension Scripture {
-    convenience init(scriptureTheme: String, scriptureSource: String, scriptureBook: String, scriptureChapter: String, scriptureVerse: String, scriptureTitle: String, scriptureActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(scriptureImage: UIImage, scriptureTheme: String, scriptureSource: String, scriptureBook: String, scriptureChapter: String, scriptureVerse: String, scriptureTitle: String, scriptureActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.scriptureImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Scripture"))
         self.scriptureTheme = scriptureTheme
         self.scriptureTitle = scriptureTitle
         self.scriptureSource = scriptureSource
