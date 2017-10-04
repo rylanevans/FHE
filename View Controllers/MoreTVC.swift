@@ -8,11 +8,24 @@
 
 import UIKit
 import AVFoundation
+import MessageUI
 
-class MoreTVC: UITableViewController {
+class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0, green: 0.4755483866, blue: 0.9911283851, alpha: 1),
+            NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
+        ]
+    }
+    
+    // MARK: -  MFMailComposeViewControllerDelegate Method
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     func thankYou() {
@@ -46,24 +59,40 @@ class MoreTVC: UITableViewController {
     }
     
     func reportProblem() {
-        let mailToReportProblem = "mailto:rylanjevans@gmail.com?&subject=FHE%20App%20Bug&body=Report%20your%20problem%20below..."
-        if let url = URL(string: "\(mailToReportProblem)") {
-            UIApplication.shared.open(url)
-        }
+        guard MFMailComposeViewController.canSendMail() else {return}
+        let mailController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = self
+        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setSubject("FHE App Bugs")
+        mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...", isHTML: false)
+        
+        self.present(mailController, animated: true, completion: nil)
     }
-    
+
     func suggestions() {
-        let mailToReportProblem = "mailto:rylanjevans@gmail.com?&subject=FHE%20App%20Suggestions&body=Make%20any%20suggestion%20below..."
-        if let url = URL(string: "\(mailToReportProblem)") {
-            UIApplication.shared.open(url)
-        }
+        guard MFMailComposeViewController.canSendMail() else {return}
+        let mailController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = self
+        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setSubject("FHE App Tips")
+        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...", isHTML: false)
+        
+        self.present(mailController, animated: true, completion: nil)
     }
     
     func subscribe() {
-        let mailToReportProblem = "mailto:rylanjevans@gmail.com?&subject=FHE%20App%20Subscription&body=Please%20add%20me%20to%20future%20updates%20and/or%20apps%20you%20build."
-        if let url = URL(string: "\(mailToReportProblem)") {
-            UIApplication.shared.open(url)
-        }
+        guard MFMailComposeViewController.canSendMail() else {return}
+        let mailController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = self
+        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setSubject("FHE App Subscription")
+        mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
+        
+        self.present(mailController, animated: true, completion: nil)
+//        let mailToReportProblem = "mailto:rylanjevans@gmail.com?&subject=FHE%20App%20Subscription&body=Please%20add%20me%20to%20future%20updates%20and/or%20apps%20you%20build."
+//        if let url = URL(string: "\(mailToReportProblem)") {
+//            UIApplication.shared.open(url)
+//        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
