@@ -32,7 +32,10 @@ class MoreTVC: UITableViewController {
     }
     
     func positiveFeedback() {
-        print("Positive Feedback")
+        let appID = "itms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8"
+        if let url = URL(string: "\(appID)") {
+            UIApplication.shared.open(url)
+        }
     }
     
     func shareWithNetwork() {
