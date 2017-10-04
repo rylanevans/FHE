@@ -16,9 +16,8 @@ class FHETVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        christTeachingImage.semanticContentAttribute = .forceLeftToRight
     }
+    
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()

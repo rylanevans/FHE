@@ -2113,8 +2113,54 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="FEEDBACK" id="bri-76-Nfi">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="WxL-4D-wKH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="CBR-V7-ePS">
                                         <rect key="frame" x="0.0" y="232" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CBR-V7-ePS" id="06C-Rd-oRR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7v-eb-hLx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HMA-tN-Tt8">
+                                                    <rect key="frame" x="16" y="9.5" width="351" height="25"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Share" translatesAutoresizingMaskIntoConstraints="NO" id="pS8-M3-1pe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="Zeh-gY-10b"/>
+                                                                <constraint firstAttribute="width" secondItem="pS8-M3-1pe" secondAttribute="height" multiplier="1:1" id="lHT-dH-dLX"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Share" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1Q-ja-i9K">
+                                                            <rect key="frame" x="33" y="0.0" width="305.5" height="25"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPY-yG-Pal">
+                                                            <rect key="frame" x="346.5" y="0.0" width="4.5" height="25"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HMA-tN-Tt8" secondAttribute="trailing" id="14A-i7-jdt"/>
+                                                <constraint firstItem="m7v-eb-hLx" firstAttribute="top" secondItem="06C-Rd-oRR" secondAttribute="top" id="RiG-bv-CB4"/>
+                                                <constraint firstItem="HMA-tN-Tt8" firstAttribute="centerY" secondItem="06C-Rd-oRR" secondAttribute="centerY" id="XRl-jr-8Nx"/>
+                                                <constraint firstAttribute="trailing" secondItem="m7v-eb-hLx" secondAttribute="trailing" id="YE9-nX-CEq"/>
+                                                <constraint firstItem="m7v-eb-hLx" firstAttribute="leading" secondItem="06C-Rd-oRR" secondAttribute="leading" id="eCv-FI-3DS"/>
+                                                <constraint firstItem="HMA-tN-Tt8" firstAttribute="leading" secondItem="06C-Rd-oRR" secondAttribute="leadingMargin" constant="8" id="gcK-cM-5lL"/>
+                                                <constraint firstAttribute="bottom" secondItem="m7v-eb-hLx" secondAttribute="bottom" id="rJx-8L-eCi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="WxL-4D-wKH">
+                                        <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WxL-4D-wKH" id="osg-CJ-cX5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -2122,9 +2168,6 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLa-c3-axB">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                                    <connections>
-                                                        <action selector="positiveFeedbackButtonTapped:" destination="ZAB-7G-v7y" eventType="touchUpInside" id="3dT-TN-iUc"/>
-                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HKl-fD-2zr">
                                                     <rect key="frame" x="16" y="12" width="351" height="20"/>
@@ -2163,7 +2206,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="uWO-TG-2qI">
-                                        <rect key="frame" x="0.0" y="276" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uWO-TG-2qI" id="cfQ-Fq-sdC">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -2202,7 +2245,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="277-7r-F1o">
-                                        <rect key="frame" x="0.0" y="320" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="364" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="277-7r-F1o" id="EJa-LH-aPY">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -2241,7 +2284,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="4VO-Ga-hyb">
-                                        <rect key="frame" x="0.0" y="364" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="408" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4VO-Ga-hyb" id="ff1-RK-ahJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -2284,7 +2327,7 @@
                             <tableViewSection headerTitle="INFO" id="2mY-qA-VOl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="z5L-zU-LP0">
-                                        <rect key="frame" x="0.0" y="436" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="480" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z5L-zU-LP0" id="BfF-Yn-DEH">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -2326,7 +2369,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="abF-IT-zLF">
-                                        <rect key="frame" x="0.0" y="480" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="524" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abF-IT-zLF" id="skv-bX-o9h">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -2368,7 +2411,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="MPr-ud-VZF">
-                                        <rect key="frame" x="0.0" y="524" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="568" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MPr-ud-VZF" id="IPh-HO-thi">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -2410,7 +2453,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="pUe-Rr-IGL">
-                                        <rect key="frame" x="0.0" y="568" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="612" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pUe-Rr-IGL" id="ZL0-Ri-O6E">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -2629,6 +2672,7 @@
         <image name="Rule" width="80" height="78"/>
         <image name="Scripture" width="78" height="76"/>
         <image name="Serve" width="333" height="199"/>
+        <image name="Share" width="202" height="219"/>
         <image name="Song" width="44" height="80"/>
         <image name="Spotlight" width="62" height="66"/>
         <image name="Subscribe" width="76" height="72"/>
