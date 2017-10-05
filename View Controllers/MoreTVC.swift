@@ -9,8 +9,11 @@
 import UIKit
 import AVFoundation
 import MessageUI
+import AVFoundation
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
+    
+    // MARK: - View did load settings
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +23,20 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0, green: 0.4755483866, blue: 0.9911283851, alpha: 1),
             NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
+        clickSoundURL()
+        
+        InAppPurchasesService.instance.delegate = self
+        InAppPurchasesService.instance.loadProducts()
     }
     
-    // MARK: -  MFMailComposeViewControllerDelegate Method
+    // MARK: - Functions for each table view cell
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     
     func thankYou() {
-        print("Thank you")
+        InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .thankYou)
     }
     
     func likeIt() {
@@ -51,12 +58,15 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
+    // MARK: - Activity view contorller share options
+    
     func shareWithNetwork() {
         let string: String = "Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/basketball-simple-stats/id1292069519?mt=8"
-        
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
+    
+    // MARK: -  MFMailComposeViewControllerDelegate Method to report a problem
     
     func reportProblem() {
         guard MFMailComposeViewController.canSendMail() else {return}
@@ -68,6 +78,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         
         self.present(mailController, animated: true, completion: nil)
     }
+    
+    // MARK: -  MFMailComposeViewControllerDelegate Method to provide suggestions
 
     func suggestions() {
         guard MFMailComposeViewController.canSendMail() else {return}
@@ -80,6 +92,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.present(mailController, animated: true, completion: nil)
     }
     
+    // MARK: -  MFMailComposeViewControllerDelegate Method to subscribe
+    
     func subscribe() {
         guard MFMailComposeViewController.canSendMail() else {return}
         let mailController = MFMailComposeViewController()
@@ -89,34 +103,59 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
-//        let mailToReportProblem = "mailto:rylanjevans@gmail.com?&subject=FHE%20App%20Subscription&body=Please%20add%20me%20to%20future%20updates%20and/or%20apps%20you%20build."
-//        if let url = URL(string: "\(mailToReportProblem)") {
-//            UIApplication.shared.open(url)
-//        }
     }
+    
+    // MARK: - Did select row at calls certain functions
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.section == 0 {
             switch indexPath.row {
-            case 0: thankYou()
-            case 1: likeIt()
-            case 2: loveIt()
-            case 3: amazing()
+            case 0: thankYou(); playClick()
+            case 1: likeIt(); playClick()
+            case 2: loveIt(); playClick()
+            case 3: amazing(); playClick()
             default:
                 print("Error with MoreTVC index selection")
             }
         } else if
             indexPath.section == 1 {
             switch indexPath.row {
-            case 0: shareWithNetwork()
-            case 1: positiveFeedback()
-            case 2: reportProblem()
-            case 3: suggestions()
-            case 4: subscribe()
+            case 0: shareWithNetwork(); playClick()
+            case 1: positiveFeedback(); playClick()
+            case 2: reportProblem(); playClick()
+            case 3: suggestions(); playClick()
+            case 4: subscribe(); playClick()
             default:
                 print("Error with MoreTVC index selection")
             }
         }
+    }
+    
+    // MARK: - Audio bioler plate
+    
+    var clickSound: AVAudioPlayer!
+    
+    func clickSoundURL() {
+        let click = Bundle.main.path(forResource: "Click", ofType: "wav")
+        let clickURL = URL(fileURLWithPath: click!)
+        do {
+            try clickSound = AVAudioPlayer(contentsOf: clickURL)
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func playClick() {
+        if clickSound.isPlaying {
+            clickSound.stop()
+        }
+        clickSound.play()
+    }
+}
+
+extension MoreTVC: IAPServiceDelege {
+    func iapProductsLoaded() {
+        print("IAP Products loaded")
     }
 }

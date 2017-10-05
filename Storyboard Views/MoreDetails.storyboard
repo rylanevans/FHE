@@ -109,6 +109,7 @@
                             <outlet property="delegate" destination="U1u-eF-GtX" id="ckx-I8-uze"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Tutorials" id="pNw-KB-W8H"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrt-Sa-SDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -464,12 +465,13 @@ I spent a lot of time and effort building something I thought would be both help
                             <outlet property="delegate" destination="N9w-M6-VmM" id="ff9-UC-Ln6"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Disclaimer" id="MiG-6Z-uFm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ca-D1-Sf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18917.599999999999" y="-1986.656671664168"/>
         </scene>
-        <!--Other AppsVC-->
+        <!--Rylan's Other Apps-->
         <scene sceneID="H2N-eg-VSh">
             <objects>
                 <viewController storyboardIdentifier="OtherApps" id="eB4-OG-QUr" customClass="OtherAppsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
@@ -580,6 +582,7 @@ Tool for parents to track their kids basketball stats and then share them with f
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0h0-E0-nQs"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Rylan's Other Apps" id="13j-IK-Kgq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpW-7c-AQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
