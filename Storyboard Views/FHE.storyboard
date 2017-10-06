@@ -343,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Id2-Ia-KcB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4822" y="-1520"/>
+            <point key="canvasLocation" x="5052" y="-1520"/>
         </scene>
         <!--Song-->
         <scene sceneID="Vor-fE-Lo2">
@@ -664,7 +664,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSD-DG-zxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5594.202898550725" y="-1520.3804347826087"/>
+            <point key="canvasLocation" x="5825" y="-1520"/>
         </scene>
         <!--Rule-->
         <scene sceneID="VBF-kZ-T8z">
@@ -980,7 +980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dbo-JN-bZh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6340.579710144928" y="-1521.1956521739132"/>
+            <point key="canvasLocation" x="6571" y="-1520"/>
         </scene>
         <!--Scripture-->
         <scene sceneID="b9u-ad-HS5">
@@ -1191,6 +1191,9 @@
                                                                         <integer key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="readScriptureButtonPressed:" destination="0aA-xK-YGk" eventType="touchUpInside" id="oAc-Jd-d4e"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcb-rZ-SCF" userLabel="Spacer">
                                                                 <rect key="frame" x="252" y="0.0" width="132" height="30"/>
@@ -1303,7 +1306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxb-vr-Iua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7053.6231884057979" y="-1522.0108695652175"/>
+            <point key="canvasLocation" x="7284" y="-1521"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="HhL-8W-8SN">
@@ -1626,7 +1629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYG-wN-KOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7718.8405797101459" y="-1522.8260869565217"/>
+            <point key="canvasLocation" x="7949" y="-1522"/>
         </scene>
         <!--Testimony-->
         <scene sceneID="lTF-rB-uyM">
@@ -1921,7 +1924,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZC4-UX-umY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8385.507246376812" y="-1522.8260869565217"/>
+            <point key="canvasLocation" x="8616" y="-1522"/>
         </scene>
         <!--Spotlight-->
         <scene sceneID="VUm-KO-m0K">
@@ -2239,7 +2242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05V-E8-2vX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9053.6231884057979" y="-1522.8260869565217"/>
+            <point key="canvasLocation" x="9284" y="-1522"/>
         </scene>
         <!--Misc.-->
         <scene sceneID="YFm-wo-u7O">
@@ -2556,7 +2559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydr-kU-ns4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9724.6376811594218" y="-1521.1956521739132"/>
+            <point key="canvasLocation" x="9955" y="-1520"/>
         </scene>
         <!--Thought-->
         <scene sceneID="sFG-Ae-WTV">
@@ -3078,6 +3081,9 @@
                                                                         <integer key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="seeLessonButtonPressed:" destination="qwK-Ja-Lqd" eventType="touchUpInside" id="OTJ-5g-ZQn"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DR9-cC-b6W" userLabel="Spacer">
                                                                 <rect key="frame" x="242" y="0.0" width="142" height="30"/>

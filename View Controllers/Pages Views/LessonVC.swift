@@ -16,23 +16,22 @@ class LessonVC: UIViewController {
     @IBOutlet weak var lessonTitleLabel: UILabel!
     @IBOutlet weak var lessonDetailLabel: UILabel!
     
+    @IBAction func seeLessonButtonPressed(_ sender: Any) {
+        let URL = NSURL(string: "https://www.youtube.com/playlist?list=PLbuu8VeGQ5CN5XZeSk8cUkHUpqKHaKYwP")!
+        let lessonWebVC = SFSafariViewController(url: URL as URL)
+        lessonWebVC.delegate = self
+        
+        present(lessonWebVC, animated: true, completion: nil)
+    }
 
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }
 
-//let URL = NSURL(string: "https://www.lds.org/music/library/hymns/praise-to-the-man?lang=eng")!
-//let songWebVC = SFSafariViewController(url: URL as URL)
-//songWebVC.delegate = self
-//
-//present(songWebVC, animated: true, completion: nil)
-//}
-//
-//
-//extension SongVC: SFSafariViewControllerDelegate {
-//    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-//        controller.dismiss(animated: true, completion: nil)
-//    }
-//}
+extension LessonVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
 
