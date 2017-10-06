@@ -10,10 +10,11 @@ import CoreData
 import UIKit
 
 extension Rule {
-    convenience init(ruleImage: UIImage, ruleTitle: String, ruleDetail: String, ruleActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(ruleAssignmentOrder: Int64, ruleImage: UIImage, ruleTitle: String, ruleDetail: String, ruleActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.ruleAssignmentOrder = ruleAssignmentOrder
         self.ruleImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Rule"))
         self.ruleTitle = ruleTitle
         self.ruleDetail = ruleDetail

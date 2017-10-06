@@ -10,10 +10,11 @@ import CoreData
 import UIKit
 
 extension Game {
-    convenience init(gameImage: UIImage, gameCategory: String, gameTitle: String, gameDetail: String, gameURL: String, gameActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(gameAssignmentOrder: Int64, ameImage: UIImage, gameCategory: String, gameTitle: String, gameDetail: String, gameURL: String, gameActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.gameAssignmentOrder = gameAssignmentOrder
         self.gameImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Game"))
         self.gameCategory = gameCategory
         self.gameTitle = gameTitle
