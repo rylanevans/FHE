@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import MessageUI
 import AVFoundation
+import StoreKit
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
@@ -52,16 +53,20 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func positiveFeedback() {
-        let appID = "itms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8"
-        if let url = URL(string: "\(appID)") {
-            UIApplication.shared.open(url)
-        }
+        SKStoreReviewController.requestReview()
     }
+    
+//    func positiveFeedback() {
+//        let appID = "itms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8"
+//        if let url = URL(string: "\(appID)") {
+//            UIApplication.shared.open(url)
+//        }
+//    }
     
     // MARK: - Activity view contorller share options
     
     func shareWithNetwork() {
-        let string: String = "Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/basketball-simple-stats/id1292069519?mt=8"
+        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
