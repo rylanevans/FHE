@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Song WebVC-->
+        <!--Song-->
         <scene sceneID="44f-6V-rv5">
             <objects>
                 <viewController storyboardIdentifier="Song" id="X7n-9v-F3q" customClass="SongWebVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,35 +20,12 @@
                     <view key="view" contentMode="scaleToFill" id="oPa-hK-hCD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sY-gt-iyh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="1Ta-HX-9Pr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WhiteHome" translatesAutoresizingMaskIntoConstraints="NO" id="GEv-ED-HOv">
-                                <rect key="frame" x="15" y="15" width="35" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="YsW-0W-EIB"/>
-                                    <constraint firstAttribute="height" constant="35" id="lX9-C3-EPF"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="GEv-ED-HOv" firstAttribute="leading" secondItem="BcD-RS-7P0" secondAttribute="leading" constant="15" id="6d3-jt-GhE"/>
-                            <constraint firstItem="7sY-gt-iyh" firstAttribute="leading" secondItem="BcD-RS-7P0" secondAttribute="leading" id="7Ls-Tj-ySE"/>
-                            <constraint firstItem="7sY-gt-iyh" firstAttribute="top" secondItem="oPa-hK-hCD" secondAttribute="top" id="Swg-7e-CUf"/>
-                            <constraint firstItem="7sY-gt-iyh" firstAttribute="trailing" secondItem="BcD-RS-7P0" secondAttribute="trailing" id="ZaJ-cX-NXY"/>
-                            <constraint firstAttribute="top" secondItem="GEv-ED-HOv" secondAttribute="top" constant="-15" id="haQ-Yx-9nQ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BcD-RS-7P0"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Song" id="5uj-nc-g0p">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="6Yv-lV-3uG"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="songWebView" destination="oPa-hK-hCD" id="dFh-cH-tOK"/>
                     </connections>

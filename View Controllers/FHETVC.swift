@@ -18,15 +18,7 @@ class FHETVC: UIViewController {
         super.viewDidLoad()
     }
     
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        backgroundShadow.layer.cornerRadius = 10.0
-//        backgroundShadow.layer.shadowRadius = 4.0
-//        backgroundShadow.layer.shadowOpacity = 0.2
-//        backgroundShadow.layer.shadowOffset = CGSize(width: 0, height: 2)
-//        backgroundShadow.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-//    }
+
     
     //    override func viewDidDisappear(_ animated: Bool) {
     //        super.viewDidDisappear(animated)

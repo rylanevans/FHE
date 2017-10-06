@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SongVC: UIViewController {
     @IBOutlet weak var songThemeLabel: UILabel!
@@ -15,7 +16,21 @@ class SongVC: UIViewController {
     @IBOutlet weak var songLocationLabel: UILabel!
     @IBOutlet weak var songDetailLabel: UILabel!
 
+    @IBAction func singSongPressed(_ sender: Any) {
+        let URL = NSURL(string: "https://www.lds.org/music/library/hymns/praise-to-the-man?lang=eng")!
+        let songWebVC = SFSafariViewController(url: URL as URL)
+        songWebVC.delegate = self
+        
+        present(songWebVC, animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension SongVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

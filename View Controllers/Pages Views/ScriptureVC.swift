@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureThemeLabel: UILabel!
@@ -15,7 +16,24 @@ class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureLocationLabel: UILabel!
     @IBOutlet weak var scriptureTitleLabel: UILabel!
     
+    
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }
+//
+//let URL = NSURL(string: "https://www.lds.org/music/library/hymns/praise-to-the-man?lang=eng")!
+//let songWebVC = SFSafariViewController(url: URL as URL)
+//songWebVC.delegate = self
+//
+//present(songWebVC, animated: true, completion: nil)
+//}
+//
+//
+//extension SongVC: SFSafariViewControllerDelegate {
+//    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+//        controller.dismiss(animated: true, completion: nil)
+//    }
+//}
+
