@@ -1074,24 +1074,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-Hk-8AW">
-                                                    <rect key="frame" x="16" y="9.5" width="318" height="25"/>
+                                                    <rect key="frame" x="16" y="7" width="318" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Family" translatesAutoresizingMaskIntoConstraints="NO" id="4JZ-do-6nN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Chb-5S-9Kv"/>
                                                                 <constraint firstAttribute="width" secondItem="4JZ-do-6nN" secondAttribute="height" multiplier="1:1" id="Exh-uA-osM"/>
-                                                                <constraint firstAttribute="height" constant="25" id="Kpq-xh-iDY"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Family" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yR0-6v-ete">
-                                                            <rect key="frame" x="33" y="0.0" width="213.5" height="25"/>
+                                                            <rect key="frame" x="38" y="0.0" width="208.5" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="CZv-Cy-hJD"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozl-K3-ljO">
-                                                            <rect key="frame" x="254.5" y="0.0" width="63.5" height="25"/>
+                                                            <rect key="frame" x="254.5" y="0.0" width="63.5" height="30"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="ZcR-gH-9up"/>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="75" id="vmD-SX-y3W"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
