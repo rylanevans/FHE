@@ -77,11 +77,12 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         guard MFMailComposeViewController.canSendMail() else {return}
         let modelName = UIDevice.current.modelName
         let OSVersion = UIDevice.current.systemVersion
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
         mailController.setToRecipients(["rylanjevans@gmail.com"])
         mailController.setSubject("FHE App Bugs")
-        mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information\n📱 \(modelName)\n⚙️ \(OSVersion)", isHTML: false)
+        mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information\n📱 Device Type: \(modelName)\n⚙️ Operating System: \(OSVersion)\n🛠 App Version: \(appVersion ?? "Info not avaliable")", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
     }
@@ -92,11 +93,12 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         guard MFMailComposeViewController.canSendMail() else {return}
         let modelName = UIDevice.current.modelName
         let OSVersion = UIDevice.current.systemVersion
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
         mailController.setToRecipients(["rylanjevans@gmail.com"])
         mailController.setSubject("FHE App Tips")
-        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information\n📱 \(modelName)\n⚙️ \(OSVersion)", isHTML: false)
+        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information\n📱 Device Type: \(modelName)\n⚙️ Operating System: \(OSVersion)\n🛠 App Version: \(appVersion ?? "Info not avaliable")", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
     }
