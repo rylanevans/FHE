@@ -16,7 +16,13 @@ class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureLocationLabel: UILabel!
     @IBOutlet weak var scriptureTitleLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func readScriptureButtonPressed(_ sender: Any) {
+        playClick()
         let URL = NSURL(string: "https://www.lds.org/scriptures/bofm/1-ne/3.7?lang=eng#6")!
         let scriptureWebVC = SFSafariViewController(url: URL as URL)
         scriptureWebVC.delegate = self
@@ -25,6 +31,7 @@ class ScriptureVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

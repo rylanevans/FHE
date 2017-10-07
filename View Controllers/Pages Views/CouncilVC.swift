@@ -15,8 +15,13 @@ class CouncilVC: UIViewController {
     @IBOutlet weak var councilTitleLabel: UILabel!
     @IBOutlet weak var councilDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

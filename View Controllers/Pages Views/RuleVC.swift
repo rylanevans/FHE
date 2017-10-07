@@ -14,8 +14,14 @@ class RuleVC: UIViewController {
     @IBOutlet weak var ruleMemberNameLabel: UILabel!
     @IBOutlet weak var ruleTitleLabel: UILabel!
     @IBOutlet weak var ruleDetailLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
 
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

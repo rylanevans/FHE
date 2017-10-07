@@ -14,7 +14,13 @@ class ThoughtVC: UIViewController {
     @IBOutlet weak var thoughtTitleLabel: UILabel!
     @IBOutlet weak var thoughtDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

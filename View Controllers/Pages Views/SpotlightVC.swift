@@ -14,7 +14,13 @@ class SpotlightVC: UIViewController {
     @IBOutlet weak var spotlightTitleLabel: UILabel!
     @IBOutlet weak var spotlightDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

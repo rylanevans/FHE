@@ -15,6 +15,11 @@ class SongVC: UIViewController {
     @IBOutlet weak var songMemberNameLabel: UILabel!
     @IBOutlet weak var songLocationLabel: UILabel!
     @IBOutlet weak var songDetailLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
 
     @IBAction func singSongPressed(_ sender: Any) {
         let URL = NSURL(string: "https://www.lds.org/music/library/hymns/praise-to-the-man?lang=eng")!
@@ -25,6 +30,7 @@ class SongVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

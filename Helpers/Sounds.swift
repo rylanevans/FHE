@@ -31,3 +31,25 @@ extension UIViewController {
         UIViewController.clickSound.play()
     }
 }
+
+extension UIPageViewController {
+    
+    static var clickSoundPVC: AVAudioPlayer!
+    
+    func clickSoundURLPVC() {
+        let click = Bundle.main.path(forResource: "Click", ofType: "wav")
+        let clickURL = URL(fileURLWithPath: click!)
+        do {
+            try UIPageViewController.clickSound = AVAudioPlayer(contentsOf: clickURL)
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func playClickPVC() {
+        if UIPageViewController.clickSound.isPlaying {
+            UIPageViewController.clickSound.stop()
+        }
+        UIPageViewController.clickSound.play()
+    }
+}

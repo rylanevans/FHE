@@ -16,7 +16,13 @@ class LessonVC: UIViewController {
     @IBOutlet weak var lessonTitleLabel: UILabel!
     @IBOutlet weak var lessonDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func seeLessonButtonPressed(_ sender: Any) {
+        playClick()
         let URL = NSURL(string: "https://www.youtube.com/playlist?list=PLbuu8VeGQ5CN5XZeSk8cUkHUpqKHaKYwP")!
         let lessonWebVC = SFSafariViewController(url: URL as URL)
         lessonWebVC.delegate = self
@@ -25,6 +31,7 @@ class LessonVC: UIViewController {
     }
 
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

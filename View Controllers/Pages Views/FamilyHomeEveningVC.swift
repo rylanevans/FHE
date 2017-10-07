@@ -10,7 +10,30 @@ import UIKit
 
 class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    // MARK: - View did load for FamilyHomeEveningVC
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = #colorLiteral(red: 0.8487482071, green: 0.9164986014, blue: 0.9956217408, alpha: 1)
+        
+        self.clickSoundURL()
+        
+        self.dataSource = self
+        self.delegate = self
+        if let firstViewController = orderedViewControllers.first {
+            setViewControllers([firstViewController],
+                               direction: .forward,
+                               animated: true,
+                               completion: nil)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        playClickPVC()
+    }
+
     // MARK: - Ordered Page Views Array
     
     lazy var orderedViewControllers: [UIViewController] = {
@@ -35,24 +58,6 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     func instanceVC(name: String) -> UIViewController {
         return UIStoryboard(name: "FHE", bundle: nil).instantiateViewController(withIdentifier: name)
-    }
-    
-    
-    // MARK: - View did load for FamilyHomeEveningVC
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.view.backgroundColor = #colorLiteral(red: 0.8487482071, green: 0.9164986014, blue: 0.9956217408, alpha: 1)
-        
-        self.dataSource = self
-        self.delegate = self
-        if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                               direction: .forward,
-                               animated: true,
-                               completion: nil)
-        }
     }
     
     

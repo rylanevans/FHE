@@ -14,11 +14,18 @@ class CalendarVC: UIViewController {
     @IBOutlet weak var calendarTitleLabel: UILabel!
     @IBOutlet weak var calendarDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func showCalendarButton(_ sender: Any) {
+        playClick()
         gotoAppleCalendar(date: Date() as NSDate)
     }
     

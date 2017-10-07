@@ -20,6 +20,9 @@ class FHETVC: UIViewController {
         self.clickSoundURL()
     }
     
+    @IBAction func beginButtonPressed(_ sender: Any) {
+//        playClick()
+    }
     
     
 

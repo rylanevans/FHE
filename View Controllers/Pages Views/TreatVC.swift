@@ -15,7 +15,13 @@ class TreatVC: UIViewController {
     @IBOutlet weak var treatTitleLabel: UILabel!
     @IBOutlet weak var treatDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func closedButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

@@ -817,6 +817,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="gGL-Vb-eTp"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="84K-m0-M4n">
                             <connections>
+                                <action selector="addMemberButtonPressed:" destination="e7q-Hn-HHg" id="LuH-f4-Tcs"/>
                                 <segue destination="z09-W1-aaa" kind="show" id="z8r-XC-LcH"/>
                             </connections>
                         </barButtonItem>
@@ -829,7 +830,7 @@
         <!--New Member-->
         <scene sceneID="nkl-LC-mVo">
             <objects>
-                <viewController id="z09-W1-aaa" customClass="FamilyDetailsVC" sceneMemberID="viewController">
+                <viewController id="z09-W1-aaa" customClass="FamilyDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z2n-Mx-AKW"/>
                         <viewControllerLayoutGuide type="bottom" id="ysV-CF-1KG"/>
@@ -1048,7 +1049,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Member" id="LPQ-jU-ouS">
                         <barButtonItem key="backBarButtonItem" title="Back" id="qGF-JT-Mmm"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yQv-Le-mXQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="yQv-Le-mXQ">
+                            <connections>
+                                <action selector="saveMemberButtonPressed:" destination="z09-W1-aaa" id="kcm-51-Qv7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGz-Zv-SiV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1869,6 +1874,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="beginButtonPressed:" destination="blj-Lq-6RZ" eventType="touchUpInside" id="UzY-Bc-eXo"/>
                                     <segue destination="sPM-tt-iak" kind="presentation" id="aj5-ZG-3Zr"/>
                                 </connections>
                             </button>

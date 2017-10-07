@@ -14,7 +14,13 @@ class OPrayerVC: UIViewController {
     @IBOutlet weak var prayerTitleLabel: UILabel!
     @IBOutlet weak var prayerDetailLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        clickSoundURL()
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
+        playClick()
         dismiss(animated: true, completion: nil)
     }
 }

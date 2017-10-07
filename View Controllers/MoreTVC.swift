@@ -140,6 +140,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             }
         }
     }
+    
+    
 }
 
 extension MoreTVC: IAPServiceDelege {
