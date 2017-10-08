@@ -841,27 +841,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UCz-SA-dA0">
-                                <rect key="frame" x="112.5" y="160" width="150" height="363.5"/>
+                                <rect key="frame" x="112.5" y="134.5" width="150" height="413.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-rI-Q9I">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeMask" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-rI-Q9I" customClass="UIImageViewWithMask" customModule="FHE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="1jO-aw-2pE"/>
-                                            <constraint firstAttribute="height" constant="150" id="A2U-FS-jhi"/>
+                                            <constraint firstAttribute="height" constant="200" id="A2U-FS-jhi"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="imageToMask" value="Rylan"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.011488396674394608" green="0.47702902555465698" blue="0.9915732741355896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="tyX-El-c56" appends="YES" id="05P-9L-5FD"/>
                                         </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUz-i2-AUv">
-                                        <rect key="frame" x="0.0" y="162" width="150" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="212" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="enE-eo-Mfb">
-                                        <rect key="frame" x="0.0" y="194.5" width="150" height="30"/>
+                                        <rect key="frame" x="0.0" y="244.5" width="150" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-MO-Ojm">
                                                 <rect key="frame" x="0.0" y="0.0" width="39.5" height="30"/>
@@ -878,7 +894,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7eC-ab-TLF">
-                                        <rect key="frame" x="0.0" y="236.5" width="150" height="30"/>
+                                        <rect key="frame" x="0.0" y="286.5" width="150" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-Wa-hmH">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
@@ -895,19 +911,19 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age is only used for sorting." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-5c-gHk">
-                                        <rect key="frame" x="0.0" y="278.5" width="150" height="9.5"/>
+                                        <rect key="frame" x="0.0" y="328.5" width="150" height="9.5"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysg-Xj-Bz5">
-                                        <rect key="frame" x="0.0" y="300" width="150" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="350" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-W7-Z0X">
-                                        <rect key="frame" x="0.0" y="332.5" width="150" height="31"/>
+                                        <rect key="frame" x="0.0" y="382.5" width="150" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attending?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73O-fz-oER">
                                                 <rect key="frame" x="0.0" y="0.0" width="72.5" height="31"/>
@@ -2611,6 +2627,7 @@
         <image name="Family-25" width="20" height="18"/>
         <image name="Game" width="82" height="83"/>
         <image name="Help" width="62" height="62"/>
+        <image name="HomeMask" width="1024" height="1024"/>
         <image name="Info" width="64" height="64"/>
         <image name="JesusChrist" width="800" height="533"/>
         <image name="Lesson" width="74" height="75"/>
@@ -2623,6 +2640,7 @@
         <image name="Recycle-25" width="18" height="17"/>
         <image name="ReportBug" width="84" height="76"/>
         <image name="Rule" width="80" height="78"/>
+        <image name="Rylan" width="492" height="666"/>
         <image name="Scripture" width="78" height="76"/>
         <image name="Serve" width="333" height="199"/>
         <image name="Share" width="202" height="219"/>
