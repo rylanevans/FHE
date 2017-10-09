@@ -16,11 +16,42 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var attendingMemberSwithTapped: UISwitch!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+//    var newMember: Member
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         self.clickSoundURL()
+        
+        // Handle the text field’s user input through delegate callbacks.
+        memberNameText.delegate = self
+        
+//        // Set up views if editing an existing Member.
+//        if let newMember = newMember {
+//            navigationItem.title = meal.name
+//            memberNameText.text   = meal.name
+//            photoMemberImageView.image = meal.photo
+//        }
+        
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        memberNameText.inputAccessoryView = toolBar
+        memberAgeText.inputAccessoryView = toolBar
+        
+        // Enable the Save button only if the text field has a valid Meal name.
+        checkValidMemberName()
     }
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,6 +69,12 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     // MARK: UITextFieldDelegate
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidMemberName()
         navigationItem.title = textField.text
@@ -52,6 +89,10 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         // Disable the Save button if the text field is empty.
         let text = memberNameText.text ?? ""
         saveButton.isEnabled = !text.isEmpty
+    }
+    
+    @objc func donePressedOnKeyboard() {
+        view.endEditing(true)
     }
     
     // MARK: UIImagePickerControllerDelegate
@@ -92,14 +133,16 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     //            let photo = photoImageView.image
     //            let rating = ratingControl.rating
     //
-    //            // Set the meal to be passed to MemberListTableViewController after the unwind segue.
-    //            meal = Meal(name: name, photo: photo, rating: rating)
+    //            // Set the new member to be passed to MemberListTableViewController after the unwind segue.
+    //            newMember = Member()
     //        }
     //    }
     
     // MARK: Actions
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        playClick()
+        
         // Hide the keyboard.
         memberNameText.resignFirstResponder()
         

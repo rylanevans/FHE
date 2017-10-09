@@ -22,6 +22,7 @@ class SongVC: UIViewController {
     }
 
     @IBAction func singSongPressed(_ sender: Any) {
+        playClick()
         let URL = NSURL(string: "https://www.lds.org/music/library/hymns/praise-to-the-man?lang=eng")!
         let songWebVC = SFSafariViewController(url: URL as URL)
         songWebVC.delegate = self
