@@ -8,9 +8,21 @@
 
 import UIKit
 
-class OtherAppsVC: UIViewController {
+class OtherAppsTVC: UITableViewController {
     
-    @IBAction func basketballSSTapped(_ sender: Any) {
+    @IBOutlet weak var tableCell: UIView!
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.playClick()
+        
+        let indexPath = indexPath.row
+        
+        if indexPath == 0 {
+            basketballSSTapped()
+        }
+    }
+    
+    func basketballSSTapped() {
         
         UIApplication.shared.open(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?mt=8")! as URL, options: ["":""], completionHandler: nil)
         

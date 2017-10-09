@@ -7,9 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
 import MessageUI
-import AVFoundation
 import StoreKit
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
@@ -136,8 +134,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             }
         }
     }
-    
-    
 }
 
 extension MoreTVC: IAPServiceDelege {
