@@ -82,7 +82,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         mailController.mailComposeDelegate = self
         mailController.setToRecipients(["rylanjevans@gmail.com"])
         mailController.setSubject("FHE App Bugs")
-        mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information\n📱 Device Type: \(modelName)\n⚙️ Operating System: \(OSVersion)\n🛠 App Version: \(appVersion ?? "Info not avaliable")", isHTML: false)
+        mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
     }
@@ -98,7 +98,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         mailController.mailComposeDelegate = self
         mailController.setToRecipients(["rylanjevans@gmail.com"])
         mailController.setSubject("FHE App Tips")
-        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information\n📱 Device Type: \(modelName)\n⚙️ Operating System: \(OSVersion)\n🛠 App Version: \(appVersion ?? "Info not avaliable")", isHTML: false)
+        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
     }
@@ -122,21 +122,15 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.playClick()
         if indexPath.section == 0 {
             switch indexPath.row {
-            case 0: thankYou()
-            case 1: likeIt()
-            case 2: loveIt()
-            case 3: amazing()
-            default:
-                print("Error with MoreTVC index selection")
-            }
-        } else if
-            indexPath.section == 1 {
-            switch indexPath.row {
-            case 0: shareWithNetwork()
-            case 1: positiveFeedback()
-            case 2: reportProblem()
-            case 3: suggestions()
-            case 4: subscribe()
+            case 1: thankYou()
+            case 2: likeIt()
+            case 3: loveIt()
+            case 4: amazing()
+            case 6: shareWithNetwork()
+            case 7: positiveFeedback()
+            case 8: reportProblem()
+            case 9: suggestions()
+            case 10: subscribe()
             default:
                 print("Error with MoreTVC index selection")
             }

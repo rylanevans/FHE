@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class UIImageViewWithMask: UIImageView {
+class UIImageViewWithMaskAndShadow: UIImageView {
     
     var imageToMaskView = UIImageView()
     var maskingImageView = UIImageView()
@@ -50,6 +50,20 @@ class UIImageViewWithMask: UIImageView {
         }
     }
     
+    @IBInspectable
+    var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    @IBInspectable
+    var borderColor = UIColor.clear.cgColor {
+        didSet {
+            layer.borderColor = borderColor
+        }
+    }
+    
     func updateView() {
         
         if imageToMaskView.image != nil {
@@ -59,7 +73,7 @@ class UIImageViewWithMask: UIImageView {
             
             maskingImageView.image = image // The Mask
             maskingImageView.frame = bounds
-            maskingImageView.contentMode = .scaleToFill
+            maskingImageView.contentMode = .scaleAspectFit
             
             imageToMaskView.layer.mask = maskingImageView.layer
             
