@@ -20,7 +20,7 @@ class CalendarVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-        playClick()
+ 
         dismiss(animated: true, completion: nil)
     }
     

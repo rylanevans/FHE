@@ -29,11 +29,6 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        playClickPVC()
-    }
-
     // MARK: - Ordered Page Views Array
     
     lazy var orderedViewControllers: [UIViewController] = {

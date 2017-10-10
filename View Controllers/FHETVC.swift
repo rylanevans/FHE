@@ -20,7 +20,13 @@ class FHETVC: UIViewController {
         self.clickSoundURL()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        playClick()
+    }
+    
     @IBAction func beginButtonPressed(_ sender: Any) {
+        
     }
     
     

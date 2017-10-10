@@ -25,7 +25,7 @@ class FamilyTVC: UITableViewController {
     
     
     @IBAction func addMemberButtonPressed(_ sender: Any) {
-        playClick()
+
     }
     
     

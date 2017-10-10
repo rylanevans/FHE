@@ -16,11 +16,11 @@ class CPrayerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clickSoundURL()
+
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-        playClick()
+
         dismiss(animated: true, completion: nil)
     }
 }

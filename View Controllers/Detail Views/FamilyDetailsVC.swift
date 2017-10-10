@@ -55,22 +55,6 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         checkValidMemberName()
     }
     
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if self.isMovingToParentViewController {
-            playClick()
-        }
-    }
-    
-    override func viewWillDisappear(_ animated : Bool) {
-        super.viewWillDisappear(animated)
-        if self.isMovingFromParentViewController {
-            playClick()
-        }
-    }
-    
     // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -164,7 +148,6 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     @IBAction func saveMemberButtonPressed(_ sender: Any) {
         
-        playClick()
     }
 }
 

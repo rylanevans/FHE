@@ -9,6 +9,13 @@
 import UIKit
 
 extension UIViewController {
+    
+//    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        // Hide the keyboard.
+//        textField.resignFirstResponder()
+//        return true
+//    }
+    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false

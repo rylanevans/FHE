@@ -11,7 +11,7 @@ import MessageUI
 import StoreKit
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
-    
+       
     // MARK: - View did load settings
     
     override func viewDidLoad() {
@@ -138,7 +138,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     // MARK: - Did select row at calls certain functions
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.playClick()
         if indexPath.section == 0 {
             switch indexPath.row {
             case 1: thankYou()
