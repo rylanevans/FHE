@@ -26,6 +26,33 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         
         InAppPurchasesService.instance.delegate = self
         InAppPurchasesService.instance.loadProducts()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handlePurchase(_ :)), name: NSNotification.Name(IAPServicePurchaseNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleFailure), name: NSNotification.Name(IAPServiceFailureNotification), object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func handlePurchase(_ notification: Notification) {
+        guard let productID = notification.object as? String else { return }
+        switch productID {
+        case IAP_FHE_ID_thankYou:
+            debugPrint("Purchase was made for $1.99")
+            break
+        default:
+            break
+        }
+    }
+    
+    @objc func handleFailure() {
+        print("Purchase Failed")
+    }
+    
+    func hideAdsBtnWasPressed(_ sender: Any) {
+        InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .hideAds)
     }
     
     // MARK: - Functions for each table view cell
@@ -54,12 +81,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         SKStoreReviewController.requestReview()
     }
     
-    //    func positiveFeedback() {
-    //        let appID = "itms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8"
-    //        if let url = URL(string: "\(appID)") {
-    //            UIApplication.shared.open(url)
-    //        }
-    //    }
     
     // MARK: - Activity view contorller share options
     

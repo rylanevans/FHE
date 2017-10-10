@@ -33,7 +33,10 @@ class InAppPurchasesService: NSObject, SKProductsRequestDelegate {
     }
     
     func productIdToStringSet() {
-        productIds.insert(IAP_FHE_ID_likeIt)
+        let ids = [IAP_FHE_ID_thankYou, IAP_FHE_ID_likeIt, IAP_FHE_ID_loveIt, IAP_FHE_ID_amazing]
+        for id in ids {
+            productIds.insert(id)
+        }
     }
     
     func requestProducts(forIds ids: Set<String>) {
@@ -66,11 +69,14 @@ extension InAppPurchasesService: SKPaymentTransactionObserver {
             switch transaction.transactionState {
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
+//                sendNotificationFor(status: .purchased, withIdentifier: nil)
                 debugPrint("Purchase was successfull")
                 break
             case .restored:
                 break
             case .failed:
+                SKPaymentQueue.default().finishTransaction(transaction)
+//                sendNotificationFor(status: .failed, withIdentifier: nil)
                 break
             case .deferred:
                 break

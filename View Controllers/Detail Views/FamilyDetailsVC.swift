@@ -25,6 +25,10 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         
         self.clickSoundURL()
         
+        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        
+        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        
         // Handle the text field’s user input through delegate callbacks.
         memberNameText.delegate = self
         
