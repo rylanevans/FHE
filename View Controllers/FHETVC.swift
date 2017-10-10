@@ -21,6 +21,7 @@ class FHETVC: UIViewController {
     }
     
     @IBAction func beginButtonPressed(_ sender: Any) {
+        playClick()
 
     }
     

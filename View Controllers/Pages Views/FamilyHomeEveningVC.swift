@@ -10,19 +10,12 @@ import UIKit
 
 class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        playClick()
-    }
-    
     // MARK: - View did load for FamilyHomeEveningVC
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = #colorLiteral(red: 0.8487482071, green: 0.9164986014, blue: 0.9956217408, alpha: 1)
-        
-        self.clickSoundURL()
         
         self.dataSource = self
         self.delegate = self
