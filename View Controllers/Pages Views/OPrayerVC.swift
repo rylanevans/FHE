@@ -16,7 +16,10 @@ class OPrayerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    @objc func gestureRecognizerAction(_ gesture: UIPanGestureRecognizer) {
+        print(gesture)
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
