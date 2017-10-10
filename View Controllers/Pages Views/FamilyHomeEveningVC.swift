@@ -10,6 +10,11 @@ import UIKit
 
 class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        playClick()
+    }
+    
     // MARK: - View did load for FamilyHomeEveningVC
     
     override func viewDidLoad() {

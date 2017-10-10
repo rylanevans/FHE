@@ -305,15 +305,23 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y1-SB-VFa">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="rdA-79-W1f"/>
-                                    <constraint firstAttribute="width" constant="35" id="tUN-p3-bwS"/>
+                                    <constraint firstAttribute="width" constant="25" id="tUN-p3-bwS"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="W2J-kG-43N" eventType="touchUpInside" id="7en-bp-PU4"/>
                                 </connections>
@@ -623,13 +631,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrZ-0M-Tgy">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="bE3-Bb-q98"/>
-                                    <constraint firstAttribute="width" constant="35" id="vua-Te-8C6"/>
+                                    <constraint firstAttribute="width" constant="25" id="vua-Te-8C6"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -940,13 +948,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9c-zG-8rQ">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="3Mu-N0-lBY"/>
+                                    <constraint firstAttribute="width" constant="25" id="3Mu-N0-lBY"/>
                                     <constraint firstAttribute="height" constant="25" id="IU7-4g-dWG"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1259,15 +1267,15 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpZ-WJ-dpO">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <color key="backgroundColor" red="0.88598001003265381" green="0.89427775144577026" blue="0.89001995325088501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="1xg-wX-Q40"/>
-                                    <constraint firstAttribute="width" constant="35" id="uZ8-B7-sUQ"/>
+                                    <constraint firstAttribute="width" constant="25" id="uZ8-B7-sUQ"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -1590,13 +1598,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noU-S4-oUb">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="KcQ-Ib-7XV"/>
+                                    <constraint firstAttribute="width" constant="25" id="KcQ-Ib-7XV"/>
                                     <constraint firstAttribute="height" constant="25" id="ulR-Z1-4Vl"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1885,13 +1893,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agR-Zc-btY">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="3tD-1a-wXa"/>
-                                    <constraint firstAttribute="width" constant="35" id="P6A-VN-0Q6"/>
+                                    <constraint firstAttribute="width" constant="25" id="P6A-VN-0Q6"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2203,13 +2211,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqG-zo-TQh">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="EFS-SD-quj"/>
-                                    <constraint firstAttribute="width" constant="35" id="s8e-DV-ePP"/>
+                                    <constraint firstAttribute="width" constant="25" id="s8e-DV-ePP"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2514,14 +2522,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPx-oQ-UHK">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="TPR-x9-yKp"/>
-                                    <constraint firstAttribute="width" constant="35" id="ieK-QY-oBm"/>
+                                    <constraint firstAttribute="width" constant="25" id="ieK-QY-oBm"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2831,13 +2839,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aev-Xc-9iN">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="aTv-s0-j1Y"/>
+                                    <constraint firstAttribute="width" constant="25" id="aTv-s0-j1Y"/>
                                     <constraint firstAttribute="height" constant="25" id="wvp-84-BNN"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -3148,13 +3156,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lpp-xX-7JI">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="kGN-ax-n3y"/>
+                                    <constraint firstAttribute="width" constant="25" id="kGN-ax-n3y"/>
                                     <constraint firstAttribute="height" constant="25" id="tAK-Ug-eDg"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -3459,13 +3467,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wi-7i-Qkj">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="2yV-pL-l9i"/>
-                                    <constraint firstAttribute="width" constant="35" id="d0d-Vp-BxY"/>
+                                    <constraint firstAttribute="width" constant="25" id="d0d-Vp-BxY"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -3781,13 +3789,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNM-EG-Ctf">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="nsi-vc-48Q"/>
-                                    <constraint firstAttribute="width" constant="35" id="osQ-sy-Wxs"/>
+                                    <constraint firstAttribute="width" constant="25" id="osQ-sy-Wxs"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -4100,14 +4108,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L75-m5-X1g">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <color key="backgroundColor" red="0.34687170386314392" green="0.27552023530006409" blue="0.1821599006652832" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="3Rj-To-04a"/>
-                                    <constraint firstAttribute="width" constant="35" id="hfz-fU-ugn"/>
+                                    <constraint firstAttribute="width" constant="25" id="hfz-fU-ugn"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -4427,13 +4435,13 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNS-BO-DoB">
-                                <rect key="frame" x="15" y="15" width="35" height="25"/>
+                                <rect key="frame" x="15" y="15" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="PiZ-QZ-cPc"/>
-                                    <constraint firstAttribute="width" constant="35" id="W0R-CW-zX3"/>
+                                    <constraint firstAttribute="width" constant="25" id="W0R-CW-zX3"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" image="BackHome">
+                                <state key="normal" image="WhiteHome">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -4477,7 +4485,6 @@
     </scenes>
     <resources>
         <image name="ActivityBG" width="144" height="94"/>
-        <image name="BackHome" width="1184" height="790"/>
         <image name="Calendar" width="66" height="72"/>
         <image name="ChristusBG" width="138" height="104"/>
         <image name="CookiesBG" width="142" height="92"/>
@@ -4503,5 +4510,6 @@
         <image name="Testimony" width="66" height="56"/>
         <image name="Thought" width="78" height="73"/>
         <image name="Treat" width="72" height="78"/>
+        <image name="WhiteHome" width="157" height="148"/>
     </resources>
 </document>
