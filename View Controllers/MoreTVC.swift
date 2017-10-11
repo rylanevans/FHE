@@ -11,7 +11,7 @@ import MessageUI
 import StoreKit
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
-       
+    
     // MARK: - View did load settings
     
     override func viewDidLoad() {
@@ -57,10 +57,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     // MARK: - Functions for each table view cell
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
     func thankYou() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .thankYou)
     }
@@ -77,15 +73,14 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .amazing)
     }
     
-    func positiveFeedback() {
-        SKStoreReviewController.requestReview()
+    func positiveReview() {
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: ["":""], completionHandler: nil)
     }
-    
     
     // MARK: - Activity view contorller share options
     
     func shareWithNetwork() {
-        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8")
+        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
@@ -99,7 +94,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setToRecipients(["apps@rylanevans.com"])
         mailController.setSubject("FHE App Bugs")
         mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
@@ -115,7 +110,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setToRecipients(["apps@rylanevans.com"])
         mailController.setSubject("FHE App Tips")
         mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
@@ -128,11 +123,15 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         guard MFMailComposeViewController.canSendMail() else {return}
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setToRecipients(["apps@rylanevans.com"])
         mailController.setSubject("FHE App Subscription")
         mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Did select row at calls certain functions
@@ -145,7 +144,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             case 3: loveIt()
             case 4: amazing()
             case 6: shareWithNetwork()
-            case 7: positiveFeedback()
+            case 7: positiveReview()
             case 8: reportProblem()
             case 9: suggestions()
             case 10: subscribe()

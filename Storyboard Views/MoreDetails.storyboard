@@ -188,14 +188,14 @@
                         <viewControllerLayoutGuide type="bottom" id="mqH-ex-0ET"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6HK-HL-QCj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doA-Vs-Yxv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1000"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEA-hW-km0">
-                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="1000"/>
+                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="980"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4WE-hL-PHN">
                                                 <rect key="frame" x="15" y="15" width="345" height="585"/>
@@ -426,14 +426,14 @@ I spent a lot of time and effort building something I thought would be both help
                         <constraints>
                             <constraint firstItem="doA-Vs-Yxv" firstAttribute="top" secondItem="JGc-Yw-aJn" secondAttribute="top" id="70o-56-qOW"/>
                             <constraint firstItem="doA-Vs-Yxv" firstAttribute="leading" secondItem="6HK-HL-QCj" secondAttribute="leading" id="Ww9-QK-JJA"/>
-                            <constraint firstItem="doA-Vs-Yxv" firstAttribute="bottom" secondItem="JGc-Yw-aJn" secondAttribute="bottom" constant="20" id="nux-pk-H93"/>
+                            <constraint firstItem="doA-Vs-Yxv" firstAttribute="bottom" secondItem="6HK-HL-QCj" secondAttribute="bottom" constant="250" id="nux-pk-H93"/>
                             <constraint firstAttribute="trailing" secondItem="doA-Vs-Yxv" secondAttribute="trailing" id="q6E-2v-pGb"/>
                             <constraint firstItem="CEA-hW-km0" firstAttribute="width" secondItem="6HK-HL-QCj" secondAttribute="width" id="uXB-HL-wYh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JGc-Yw-aJn"/>
                     </view>
                     <navigationItem key="navigationItem" title="About Me" id="Jn9-re-VJb"/>
-                    <size key="freeformSize" width="375" height="1000"/>
+                    <size key="freeformSize" width="375" height="750"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2O-P3-Hp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -881,6 +881,68 @@ I spent a lot of time and effort building something I thought would be both help
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="131" id="luW-6d-57i">
+                                        <rect key="frame" x="0.0" y="912" width="375" height="131"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="luW-6d-57i" id="mUP-zb-Kqp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFo-w0-n2R">
+                                                    <rect key="frame" x="24" y="12" width="327" height="107"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXj-ou-jFK" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="107"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                    <size key="value" width="0.0" height="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subscribe-1" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-Ux-3Km">
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="107"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="cXj-ou-jFK" firstAttribute="top" secondItem="cqk-Ux-3Km" secondAttribute="top" id="Bik-SC-BN6"/>
+                                                        <constraint firstItem="cXj-ou-jFK" firstAttribute="trailing" secondItem="cqk-Ux-3Km" secondAttribute="trailing" id="I1z-An-05h"/>
+                                                        <constraint firstItem="cXj-ou-jFK" firstAttribute="leading" secondItem="cqk-Ux-3Km" secondAttribute="leading" id="bAu-JG-G6p"/>
+                                                        <constraint firstItem="cqk-Ux-3Km" firstAttribute="leading" secondItem="bFo-w0-n2R" secondAttribute="leading" id="cdI-Hi-mYW"/>
+                                                        <constraint firstItem="cXj-ou-jFK" firstAttribute="bottom" secondItem="cqk-Ux-3Km" secondAttribute="bottom" id="dgR-Ik-PFE"/>
+                                                        <constraint firstItem="cqk-Ux-3Km" firstAttribute="top" secondItem="bFo-w0-n2R" secondAttribute="top" id="fZO-N8-Rhf"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cqk-Ux-3Km" secondAttribute="trailing" id="lPF-Ic-sMX"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cqk-Ux-3Km" secondAttribute="bottom" id="zOZ-4W-PD2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bFo-w0-n2R" secondAttribute="trailing" constant="24" id="Zj8-l6-TCc"/>
+                                                <constraint firstAttribute="bottom" secondItem="bFo-w0-n2R" secondAttribute="bottom" constant="12" id="o4M-75-DUp"/>
+                                                <constraint firstItem="bFo-w0-n2R" firstAttribute="leading" secondItem="mUP-zb-Kqp" secondAttribute="leading" constant="24" id="ozE-2E-PaV"/>
+                                                <constraint firstItem="bFo-w0-n2R" firstAttribute="top" secondItem="mUP-zb-Kqp" secondAttribute="top" constant="12" id="zkl-be-vR0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -908,6 +970,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Love it" width="200" height="200"/>
         <image name="RylanEvans.com" width="304" height="141"/>
         <image name="Signature" width="98" height="31"/>
+        <image name="Subscribe-1" width="166" height="50"/>
         <image name="Thank you" width="200" height="200"/>
     </resources>
 </document>

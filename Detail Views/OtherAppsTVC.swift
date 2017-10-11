@@ -32,7 +32,7 @@ class OtherAppsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
                 print("Error with MoreTVC index selection")
             }
         }
-      }
+    }
     
     func rylanEvansTapped() {
         playClick()
@@ -45,16 +45,16 @@ class OtherAppsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     func basketballSSTapped() {
         playClick()
-        UIApplication.shared.open(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?mt=8")! as URL, options: ["":""], completionHandler: nil)
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1224378809?")! as URL, options: ["":""], completionHandler: nil)
         
-//        UIApplication.shared.openURL(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?mt=8")! as URL)
+        //        UIApplication.shared.openURL(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?")! as URL)
         
-//        UIApplication.shared.open(NSURL("https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?mt=8") as URL, options: [:], completionHandler: nil)
+        //        UIApplication.shared.open(NSURL("https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?") as URL, options: [:], completionHandler: nil)
     }
     
     func shareWithNetwork() {
         playClick()
-        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?mt=8")
+        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
@@ -66,11 +66,15 @@ class OtherAppsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         guard MFMailComposeViewController.canSendMail() else {return}
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["rylanjevans@gmail.com"])
+        mailController.setToRecipients(["apps@rylanevans.com"])
         mailController.setSubject("FHE App Subscription")
         mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 

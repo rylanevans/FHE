@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class FHETVC: UIViewController {
     
@@ -22,7 +23,10 @@ class FHETVC: UIViewController {
     
     @IBAction func beginButtonPressed(_ sender: Any) {
         playClick()
-
+        let appReviewPresentedRandom = arc4random_uniform(4)
+        if appReviewPresentedRandom == UInt32(1) {
+            SKStoreReviewController.requestReview()
+        }
     }
     
     

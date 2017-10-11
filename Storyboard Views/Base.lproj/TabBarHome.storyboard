@@ -1033,7 +1033,7 @@
         <!--Rotations-->
         <scene sceneID="mBl-xo-ShF">
             <objects>
-                <tableViewController title="Rotations" id="5bJ-qa-7Fh" customClass="RotationsTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Rotations" id="5bJ-qa-7Fh" customClass="PrepareTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cbg-Rs-6uw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
