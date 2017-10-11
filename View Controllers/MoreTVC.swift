@@ -66,15 +66,15 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func likeIt() {
-        print("Like it")
+        InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .likeIt)
     }
     
     func loveIt() {
-        print("Love it")
+        InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .loveIt)
     }
     
     func amazing() {
-        print("Amazing")
+        InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .amazing)
     }
     
     func positiveFeedback() {

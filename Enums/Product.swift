@@ -9,6 +9,9 @@
 import Foundation
 
 enum Product: Int {
-    case thankYou = 0
-    case hideAds = 1
+    case amazing = 0
+    case likeIt = 1
+    case loveIt = 2
+    case thankYou = 3
+    case hideAds = 4
 }
