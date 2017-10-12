@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 
 extension Treat {
-    convenience init(treatAssignmentOrder: Int64, treatImage: UIImage, treatCategory: String, treatTitle: String, treatDetail: String, treatURL: String, treatActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(treatAssignmentOrder: Int64, treatImage: UIImage, treatCategory: String, treatTitle: String, treatDetail: String, treatActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
@@ -19,7 +19,6 @@ extension Treat {
         self.treatCategory = treatCategory
         self.treatTitle = treatTitle
         self.treatDetail = treatDetail
-        self.treatURL = treatURL
         self.treatActive = treatActive
     }
 }
