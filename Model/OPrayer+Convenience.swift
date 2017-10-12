@@ -17,8 +17,8 @@ extension OPrayer {
 
         self.oPrayerAssignmentOrder = oPrayerAssignmentOrder
         self.oPrayerImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Prayer"))
-        self.oPrayerTitle = prayerTitle
-        self.oPrayerDetail = prayerDetail
-        self.oPrayerActive = prayerActive
+        self.oPrayerTitle = oPrayerTitle
+        self.oPrayerDetail = oPrayerDetail
+        self.oPrayerActive = oPrayerActive
     }
 }

@@ -25,53 +25,52 @@ class MemberController {
 //
 //        return [sampleDad, sampleMom, sampleLilly, sampleAnisten, sampleReed, sampleClaire, samplePapa, sampleGrammy]
 //    }
-    
-    let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
-    
-    init() {
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
-        let completedSortDescriptor = NSSortDescriptor(key: "memberOrder", ascending: true)
-        let dueSortDescriptor = NSSortDescriptor(key: "due", ascending: true)
-        request.sortDescriptors = [completedSortDescriptor, dueSortDescriptor]
-        self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: Stack.sharedStack.managedObjectContext, sectionNameKeyPath: "isComplete", cacheName: nil)
-        do {
-            try fetchedResultsController.performFetch()
-        } catch let error as NSError {
-            print("Unable to perform fetch request: \(error.localizedDescription)")
-        }
-    }
-    
-    func addTask(_ name: String, notes: String?, due: Date?) {
-        let _ = Task(name: name, notes: notes, due: due)
-        saveToPersistentStorage()
-    }
-    
-    func updateTask(_ task: Task, name: String, notes: String?, due: Date?) {
-        task.name = name
-        task.notes = notes
-        task.due = due
-        saveToPersistentStorage()
-    }
-    
-    func removeTask(_ task: Task) {
-        
-        task.managedObjectContext?.delete(task)
-        saveToPersistentStorage()
-    }
-    
-    func isCompleteValueToggle(_ task: Task) {
-        task.isComplete = !task.isComplete.boolValue as NSNumber
-        saveToPersistentStorage()
-    }
-    
-    // MARK: - Persistence
-    
-    func saveToPersistentStorage() {
-        
-        do {
-            try Stack.sharedStack.managedObjectContext.save()
-        } catch {
-            print("Error saving Managed Object Context. Items not saved.")
-        }
-    }
+//    
+//    let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
+//    
+//    init() {
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Member")
+//        let completedSortDescriptor = NSSortDescriptor(key: "memberOrder", ascending: true)
+//        request.sortDescriptors = [completedSortDescriptor]
+//        self.fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: Stack.sharedStack.managedObjectContext, sectionNameKeyPath: "memberOrder", cacheName: nil)
+//        do {
+//            try fetchedResultsController.performFetch()
+//        } catch let error as NSError {
+//            print("Unable to perform fetch request: \(error.localizedDescription)")
+//        }
+//    }
+//    
+//    func addTask(_ name: String, notes: String?, due: Date?) {
+//        let _ = Task(name: name, notes: notes, due: due)
+//        saveToPersistentStorage()
+//    }
+//    
+//    func updateTask(_ task: Task, name: String, notes: String?, due: Date?) {
+//        task.name = name
+//        task.notes = notes
+//        task.due = due
+//        saveToPersistentStorage()
+//    }
+//    
+//    func removeTask(_ task: Task) {
+//        
+//        task.managedObjectContext?.delete(task)
+//        saveToPersistentStorage()
+//    }
+//    
+//    func isCompleteValueToggle(_ task: Task) {
+//        task.isComplete = !task.isComplete.boolValue as NSNumber
+//        saveToPersistentStorage()
+//    }
+//    
+//    // MARK: - Persistence
+//    
+//    func saveToPersistentStorage() {
+//        
+//        do {
+//            try Stack.sharedStack.managedObjectContext.save()
+//        } catch {
+//            print("Error saving Managed Object Context. Items not saved.")
+//        }
+//    }
 }
