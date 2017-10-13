@@ -10,13 +10,14 @@ import CoreData
 import UIKit
 
 extension Song {
-    convenience init(songAssignmentOrder: Int64, songImage: UIImage, songTheme: String, songTitle: String, songSource: String, songURL: String, songActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(songDateCreated: Date, songAssignmentOrder: Int64, songImage: UIImage, songNumber: String, songTitle: String, songSource: String, songURL: String, songActive: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.songDateCreated = songDateCreated
         self.songAssignmentOrder = songAssignmentOrder
         self.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
-        self.songTheme = songTheme
+        self.songNumber = songNumber
         self.songTitle = songTitle
         self.songSource = songSource
         self.songURL = songURL

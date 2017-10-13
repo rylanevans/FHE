@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
          */
-        let container = NSPersistentContainer(name: "Nothing")
+        let container = NSPersistentContainer(name: "FHE")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
@@ -88,8 +88,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
-//
-//let ad = UIApplication.shared.delegate as! AppDelegate
-//let context = ad.presistentContainer.viewContext
+
+let ad = UIApplication.shared.delegate as! AppDelegate
+let context = ad.persistentContainer.viewContext
 
 

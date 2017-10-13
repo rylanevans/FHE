@@ -20,6 +20,14 @@ class TasksTVC: UITableViewController {
         ]
     }
     
+//    func toggleSwitch() {
+//        if (sender.isOn == true) {
+//            output.text = "Yes! It is on."
+//        } else {
+//            output.text = "No. It is off."
+//        }
+//    }
+    
     // MARK: - Table view data source
     
 //    override func numberOfSections(in tableView: UITableView) -> Int {
