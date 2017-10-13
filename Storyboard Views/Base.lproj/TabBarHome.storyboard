@@ -841,7 +841,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="UCz-SA-dA0">
-                                <rect key="frame" x="57" y="119.5" width="262.5" height="443"/>
+                                <rect key="frame" x="56.5" y="119.5" width="262.5" height="443"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="enE-eo-Mfb">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="40"/>
@@ -935,6 +935,7 @@
                                                 <color key="value" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
                                         <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="tyX-El-c56" appends="YES" id="05P-9L-5FD"/>

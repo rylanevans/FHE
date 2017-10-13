@@ -46,6 +46,7 @@
         <attribute name="lessonTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lessonURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="lessonToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToLesson" inverseEntity="Member" syncable="YES"/>
+        <relationship name="lessonToTheme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="themeToLesson" inverseEntity="Theme" syncable="YES"/>
     </entity>
     <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
         <attribute name="memberAge" attributeType="String" syncable="YES"/>
@@ -104,6 +105,7 @@
         <attribute name="scriptureURL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scriptureVerse" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="scriptureToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToScripture" inverseEntity="Member" syncable="YES"/>
+        <relationship name="scriptureToTheme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="themeToScripture" inverseEntity="Theme" syncable="YES"/>
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
         <attribute name="songActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -115,6 +117,7 @@
         <attribute name="songTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songURL" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="songToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToSong" inverseEntity="Member" syncable="YES"/>
+        <relationship name="songToTheme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="themeToSong" inverseEntity="Theme" syncable="YES"/>
     </entity>
     <entity name="Spotlight" representedClassName="Spotlight" syncable="YES" codeGenerationType="class">
         <attribute name="spotlightActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -131,6 +134,12 @@
         <attribute name="testimonyImage" attributeType="Binary" syncable="YES"/>
         <attribute name="testimonyTitle" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="testimonyToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToTestimony" inverseEntity="Member" syncable="YES"/>
+    </entity>
+    <entity name="Theme" representedClassName="Theme" syncable="YES" codeGenerationType="class">
+        <attribute name="theme" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="themeToLesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="lessonToTheme" inverseEntity="Lesson" syncable="YES"/>
+        <relationship name="themeToScripture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scripture" inverseName="scriptureToTheme" inverseEntity="Scripture" syncable="YES"/>
+        <relationship name="themeToSong" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="songToTheme" inverseEntity="Song" syncable="YES"/>
     </entity>
     <entity name="Thought" representedClassName="Thought" syncable="YES" codeGenerationType="class">
         <attribute name="thoughtActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -155,16 +164,17 @@
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
         <element name="CPrayer" positionX="9" positionY="144" width="128" height="135"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="165"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="165"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="180"/>
         <element name="Member" positionX="-45" positionY="0" width="128" height="330"/>
         <element name="Misc" positionX="36" positionY="144" width="128" height="135"/>
         <element name="OPrayer" positionX="-18" positionY="54" width="128" height="135"/>
         <element name="Rule" positionX="0" positionY="108" width="128" height="135"/>
-        <element name="Scripture" positionX="9" positionY="72" width="128" height="210"/>
-        <element name="Song" positionX="27" positionY="126" width="128" height="180"/>
+        <element name="Scripture" positionX="9" positionY="72" width="128" height="225"/>
+        <element name="Song" positionX="27" positionY="126" width="128" height="195"/>
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="135"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="135"/>
         <element name="Thought" positionX="45" positionY="153" width="128" height="135"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="150"/>
+        <element name="Theme" positionX="9" positionY="153" width="128" height="105"/>
     </elements>
 </model>

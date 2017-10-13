@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
+class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var manuallyAssignMemberImage: UIImageView!
@@ -96,11 +96,11 @@ class SongDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
-        let sortByDate = NSSortDescriptor(key: "songDateCreated", ascending: false)
-        fetchRequest.sortDescriptors = [sortByDate]
+//        let sortByDate = NSSortDescriptor(key: "songDateCreated", ascending: false)
+//        fetchRequest.sortDescriptors = [sortByDate]
         
-//        let sortAssignmentOrder = NSSortDescriptor(key: "songAssignmentOrder", ascending: true)
-//        fetchRequest.sortDescriptors = [sortAssignmentOrder]
+        let sortAssignmentOrder = NSSortDescriptor(key: "songAssignmentOrder", ascending: true)
+        fetchRequest.sortDescriptors = [sortAssignmentOrder]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
