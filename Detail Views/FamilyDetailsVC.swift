@@ -21,23 +21,9 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hideKeyboardWhenTappedAround()
-        
         self.clickSoundURL()
         
-        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        
-        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        
-        // Handle the text field’s user input through delegate callbacks.
-        memberNameText.delegate = self
-        
-//        // Set up views if editing an existing Member.
-//        if let newMember = newMember {
-//            navigationItem.title = meal.name
-//            memberNameText.text   = meal.name
-//            photoMemberImageView.image = meal.photo
-//        }
+        self.hideKeyboardWhenTappedAround()
         
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
@@ -48,10 +34,13 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        memberNameText.inputAccessoryView = toolBar
+        memberAgeText.delegate = self
+        memberNameText.delegate = self
+        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         memberAgeText.inputAccessoryView = toolBar
+        memberNameText.inputAccessoryView = toolBar
         
-        // Enable the Save button only if the text field has a valid Meal name.
         checkValidMemberName()
     }
     

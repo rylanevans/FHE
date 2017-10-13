@@ -307,7 +307,7 @@ Family Member</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" returnKeyType="done" textContentType="url"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Atonement, Obedience, Commandments, etc." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hnG-gz-v9q">
                                 <rect key="frame" x="43" y="84" width="279" height="30"/>
@@ -349,7 +349,7 @@ Family Member</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-Rw-k0G">
                                 <rect key="frame" x="25" y="380" width="55" height="24"/>
@@ -375,12 +375,12 @@ Family Member</string>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkR-Ef-RrM" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="10" y="607" width="355" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.3301134838" blue="0.32484726899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Od4-48-ECD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
-                                <state key="normal" title="Save">
+                                <state key="normal" title="Delete">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -391,6 +391,9 @@ Family Member</string>
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="LLF-cG-el9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t15-FV-7Rp">
                                 <rect key="frame" x="37" y="55" width="95" height="21"/>
@@ -404,7 +407,7 @@ Family Member</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -416,14 +419,13 @@ Family Member</string>
                         <viewLayoutGuide key="safeArea" id="Yt8-XR-MSc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Song" id="6lb-bc-UXo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="BC7-6n-GXp">
-                            <color key="tintColor" red="1" green="0.3301134838" blue="0.32484726899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BC7-6n-GXp"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="saveButton" destination="BC7-6n-GXp" id="YPo-7g-s7q"/>
                         <outlet property="songNumberTextField" destination="Knu-sx-6MW" id="PWu-fg-0OE"/>
                         <outlet property="songSourceTextField" destination="xUa-Za-gb6" id="dD3-zH-uQp"/>
-                        <outlet property="songThemePicker" destination="ins-vl-Ebv" id="CHA-Xg-0Cu"/>
+                        <outlet property="songThemePicker" destination="ins-vl-Ebv" id="n2n-1L-9VN"/>
                         <outlet property="songThemeTextField" destination="hnG-gz-v9q" id="Kaq-Ak-VFC"/>
                         <outlet property="songTitleTextField" destination="rqY-8S-tFX" id="BKb-Ph-Rxh"/>
                         <outlet property="songURLTextField" destination="zbu-dq-I81" id="iYP-A6-Xgq"/>
