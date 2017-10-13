@@ -9,6 +9,15 @@
 import UIKit
 
 class SongCell: UITableViewCell {
+    
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var songSourceLabel: UILabel!
+    @IBOutlet weak var songNumberLabel: UILabel!
+    @IBOutlet weak var songURLLabel: UILabel!
+    @IBOutlet weak var songDateLabel: UILabel!
+    @IBOutlet weak var songActiveLabel: UILabel!
+    @IBOutlet weak var songManualOrderLabel: UILabel!
+    @IBOutlet weak var songImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +31,14 @@ class SongCell: UITableViewCell {
     }
     
     func configureCell(song: Song) {
-        // add what I want it to load into the cell, title.text = blah blah blah
+        songTitleLabel.text = song.songTitle
+        songSourceLabel.text = song.songSource
+        songNumberLabel.text = "#\(String(describing: song.songNumber))"
+        songURLLabel.text = song.songURL
+        songDateLabel.text = "\(String(describing: song.songDateCreated))"
+        songActiveLabel.text = "\(song.songActive)"
+        songManualOrderLabel.text = "\(song.songAssignmentOrder)"
+ 
     }
 
 }

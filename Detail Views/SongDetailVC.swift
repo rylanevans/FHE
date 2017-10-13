@@ -24,6 +24,7 @@ class SongDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         
+        generatedTestSong()
         attemptFetch()
     }
     
@@ -55,9 +56,9 @@ class SongDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return 0
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 150
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
         playClick()
@@ -94,8 +95,12 @@ class SongDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func attemptFetch() {
         
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
-        let sortAssignmentOrder = NSSortDescriptor(key: "songAssignmentOrder", ascending: true)
-        fetchRequest.sortDescriptors = [sortAssignmentOrder]
+        
+        let sortByDate = NSSortDescriptor(key: "songDateCreated", ascending: false)
+        fetchRequest.sortDescriptors = [sortByDate]
+        
+//        let sortAssignmentOrder = NSSortDescriptor(key: "songAssignmentOrder", ascending: true)
+//        fetchRequest.sortDescriptors = [sortAssignmentOrder]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -149,13 +154,33 @@ class SongDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func generatedTestSong() {
-        let song = Song(context: context)
-        song.songActive = true
-        song.songAssignmentOrder = 1
-//        song.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
-        song.songSource = String(describing: SongSources.childrensSongBook)
-        song.songNumber = "#200"
-        song.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song.songTitle = "The Spirit of God"
+        let song1 = Song(context: context)
+        song1.songActive = true
+        song1.songAssignmentOrder = 1
+        song1.songSource = String(describing: SongSources.childrensSongBook)
+        song1.songNumber = "#201"
+        song1.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+        song1.songTitle = "Song 1"
+        song1.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        
+        let song2 = Song(context: context)
+        song2.songActive = true
+        song2.songAssignmentOrder = 2
+        song2.songSource = String(describing: SongSources.hymns)
+        song2.songNumber = "#202"
+        song2.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+        song2.songTitle = "Song 2"
+        song2.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        
+        let song3 = Song(context: context)
+        song3.songActive = true
+        song3.songAssignmentOrder = 3
+        song3.songSource = String(describing: SongSources.childrensSongBook)
+        song3.songNumber = "#203"
+        song3.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+        song3.songTitle = "Song 3"
+        song3.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        
+        ad.saveContext()
     }
 }

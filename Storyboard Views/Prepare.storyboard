@@ -238,6 +238,16 @@ Family Member</string>
                                                 <constraint firstItem="U4c-kW-i1X" firstAttribute="bottom" secondItem="Eh4-e4-VZy" secondAttribute="bottomMargin" id="tqc-E4-z5M"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="songActiveLabel" destination="O4u-cF-TFC" id="07M-QX-jSD"/>
+                                            <outlet property="songDateLabel" destination="Oqc-2J-YK3" id="Y5Z-pb-6gz"/>
+                                            <outlet property="songImage" destination="seh-98-k41" id="TdV-75-zLL"/>
+                                            <outlet property="songManualOrderLabel" destination="FNk-7K-w8h" id="q4D-jC-HC0"/>
+                                            <outlet property="songNumberLabel" destination="AIh-E4-QQk" id="qsv-TW-Phn"/>
+                                            <outlet property="songSourceLabel" destination="GcX-Bu-ewt" id="fwM-ZA-H7m"/>
+                                            <outlet property="songTitleLabel" destination="B3C-TF-ycs" id="Dcc-1K-e6V"/>
+                                            <outlet property="songURLLabel" destination="LUx-W9-bGo" id="bcg-4A-6GW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>

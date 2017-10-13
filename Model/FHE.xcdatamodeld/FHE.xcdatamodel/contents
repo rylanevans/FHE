@@ -108,7 +108,7 @@
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
         <attribute name="songActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="songAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="songDateCreated" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="songDateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="songImage" attributeType="Binary" syncable="YES"/>
         <attribute name="songNumber" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="songSource" optional="YES" attributeType="String" syncable="YES"/>
@@ -152,6 +152,7 @@
     <elements>
         <element name="Calendar" positionX="9" positionY="117" width="128" height="135"/>
         <element name="Council" positionX="54" positionY="162" width="128" height="135"/>
+        <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
         <element name="CPrayer" positionX="9" positionY="144" width="128" height="135"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="165"/>
         <element name="Lesson" positionX="45" positionY="144" width="128" height="165"/>
@@ -165,6 +166,5 @@
         <element name="Testimony" positionX="18" positionY="126" width="128" height="135"/>
         <element name="Thought" positionX="45" positionY="153" width="128" height="135"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="150"/>
-        <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
     </elements>
 </model>
