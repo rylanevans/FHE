@@ -12,13 +12,16 @@ import StoreKit
 class FHETVC: UIViewController {
     
     @IBOutlet weak var christTeachingImage: UIImageView!
-    
     @IBOutlet weak var backgroundShadow: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.clickSoundURL()
+    }
+    
+    @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
+        playClick()
     }
     
     @IBAction func beginButtonPressed(_ sender: Any) {

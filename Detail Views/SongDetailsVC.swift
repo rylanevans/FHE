@@ -13,20 +13,25 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var songThemePicker: UIPickerView!
+    @IBOutlet weak var songSourcePicker: UIPickerView!
     @IBOutlet weak var songThemeTextField: UITextField!
     @IBOutlet weak var songTitleTextField: UITextField!
     @IBOutlet weak var songSourceTextField: UITextField!
     @IBOutlet weak var songNumberTextField: UITextField!
     @IBOutlet weak var songURLTextField: UITextField!
-    @IBAction func songActiveSwitch(_ sender: UISwitch) {
-    }
+    @IBOutlet weak var songSwitch: UISwitch!
     
-    
-    //    @IBAction func songThemePickerChanged(_ sender: UIPickerView) {
-    //        showDateField.text = dateFormatter(date: eventDate.date as NSDate)
-    //    }
-    
+    var songSources = ["Children's Song Book", "Hymn Book"]
     var songThemes = [Theme]()
+    var songToEdit: Song?
+    var songAssignment: Song?
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("showed keyboard")
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        print("keyboard hid")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +40,29 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         self.hideKeyboardWhenTappedAround()
         
-        songThemeTextField.inputView = songThemePicker
-        
         let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
         toolBar.sizeToFit()
-        
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
-        
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
+        
+        
+        
+        songThemePicker.delegate = self
+        songThemePicker.dataSource = self
+        songThemePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        songSourcePicker.delegate = self
+        songSourcePicker.dataSource = self
+        songSourcePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         songThemeTextField.delegate = self
-        songThemePicker.dataSource = self
         songThemeTextField.attributedPlaceholder = NSAttributedString(string: "Atonement, Obedience, Commandments, etc.", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        songThemeTextField.inputView = songThemePicker
         songThemeTextField.inputAccessoryView = toolBar
         
         songTitleTextField.delegate = self
@@ -58,6 +71,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         songSourceTextField.delegate = self
         songSourceTextField.attributedPlaceholder = NSAttributedString(string: "Hymn or Children's Book", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        songSourceTextField.inputView = songSourcePicker
         songSourceTextField.inputAccessoryView = toolBar
         
         songNumberTextField.delegate = self
@@ -68,23 +82,29 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.whateverthewebsiteis.com", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songURLTextField.inputAccessoryView = toolBar
         
-        //        let songTheme1 = Theme(context: context)
-        //        songTheme1.theme = "Charity"
-        //        let songTheme2 = Theme(context: context)
-        //        songTheme2.theme = "Atonement"
-        //        let songTheme3 = Theme(context: context)
-        //        songTheme3.theme = "Articles of Faith"
-        //        let songTheme4 = Theme(context: context)
-        //        songTheme4.theme = "Commandments"
-        //        let songTheme5 = Theme(context: context)
-        //        songTheme5.theme = "Heavenly Father"
-        //        let songTheme6 = Theme(context: context)
-        //        songTheme6.theme = "Jesus Christ"
-        //
-        //        ad.saveContext()
-        getThemes()
-        checkValidMemberName()
+
         
+//                        let songTheme1 = Theme(context: context)
+//                        songTheme1.theme = "Charity"
+//                        let songTheme2 = Theme(context: context)
+//                        songTheme2.theme = "Atonement"
+//                        let songTheme3 = Theme(context: context)
+//                        songTheme3.theme = "Articles of Faith"
+//                        let songTheme4 = Theme(context: context)
+//                        songTheme4.theme = "Commandments"
+//                        let songTheme5 = Theme(context: context)
+//                        songTheme5.theme = "Heavenly Father"
+//                        let songTheme6 = Theme(context: context)
+//                        songTheme6.theme = "Jesus Christ"
+//
+//                        ad.saveContext()
+        
+        checkValidMemberName()
+        getThemes()
+        
+        if songToEdit != nil {
+            loadSongData()
+        }
     }
     
     // MARK: UITextFieldDelegate
@@ -97,16 +117,20 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidMemberName()
-        navigationItem.title = textField.text
+        switch (textField.tag) {
+        case 1:
+            navigationItem.title = textField.text
+            break;
+        default:
+            return
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        // Disable the Save button while editing.
         saveButton.isEnabled = false
     }
     
     func checkValidMemberName() {
-        // Disable the Save button if the text field is empty.
         let text = songTitleTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
     }
@@ -116,12 +140,21 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let songTheme = songThemes[row]
-        return songTheme.theme
+        if pickerView.tag == 1 {
+            let songTheme = songThemes[row]
+            return songTheme.theme
+        } else {
+            let songSource = songSources[row]
+            return songSource
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return songThemes.count
+        if pickerView.tag == 1 {
+            return songThemes.count
+        } else {
+            return songSources.count
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -129,7 +162,12 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // update when selected
+        if pickerView.tag == 1 {
+            let songTheme = songThemes[row]
+            songThemeTextField.text = songTheme.theme
+        } else {
+            songSourceTextField.text = songSources[row]
+        }
     }
     
     func getThemes() {
@@ -142,6 +180,72 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             // handle the error
         }
     }
+    
+    @IBAction func songSwitchPressed(_ sender: UISwitch) {
+        
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        let song = Song(context: context)
+        
+        if let theme = songThemeTextField.text {
+            song.songTheme = theme
+        }
+        
+        if let source = songSourceTextField.text {
+            song.songSource = source
+        }
+        
+        if let title = songTitleTextField.text {
+            song.songTitle = title
+        }
+        
+        if let number = songNumberTextField.text {
+            song.songNumber = number
+        }
+        
+        if let URL = songURLTextField.text {
+            song.songURL = URL
+        }
+        
+        if songSwitch.isOn == true {
+            song.songActive = true
+        }
+        
+        song.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        
+        //add songDateCreated
+        
+        ad.saveContext()
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func loadSongData() {
+        if let song = songToEdit {
+            
+            songThemeTextField.text = song.songTheme
+            songTitleTextField.text = song.songTitle
+            songSourceTextField.text = song.songSource
+            songNumberTextField.text = song.songNumber
+            songURLTextField.text = song.songURL
+            songSwitch.isOn = song.songActive
+        }
+    }
+    
+//    func overrideSongAssignment() {
+//        if let changeAssignmentTo = songAssignment {
+//            if let relationship = changeAssignmentTo.songToMember {
+//                var index = 0
+//                repeat {
+//                    let i = themes[index]
+//                    if i.name == theme.name
+//
+//                } while (index < themes.count)
+//            }
+//        }
+//
+//    }
+
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
         playClick()

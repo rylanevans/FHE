@@ -30,14 +30,13 @@ class SongCell: UITableViewCell {
     }
     
     func configureCell(song: Song) {
-//        songTitleLabel.text = song.songTitle
-//        songSourceLabel.text = song.songSource
-//        songNumberLabel.text = "#\(String(describing: song.songNumber))"
-//        songURLLabel.text = song.songURL
-//        songDateLabel.text = "\(String(describing: song.songDateCreated))"
-//        songActiveLabel.text = "\(song.songActive)"
-//        songManualOrderLabel.text = "\(song.songAssignmentOrder)"
- 
+        songTitleLabel.text = song.songTitle
+        songSourceLabel.text = song.songSource
+        songNumberLabel.text = "#\(String(describing: song.songNumber))"
+        songURLLabel.text = song.songURL
+        songDateLabel.text = "\(String(describing: song.songDateCreated))"
+        songActiveLabel.text = "\(song.songActive)"
+        songManualOrderLabel.text = "\(song.songAssignmentOrder)"
     }
 
 }

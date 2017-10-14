@@ -54,7 +54,13 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidMemberName()
-        navigationItem.title = textField.text
+        switch (textField.tag) {
+        case 1:
+            navigationItem.title = textField.text
+            break;
+        default:
+            return
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

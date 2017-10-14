@@ -40,6 +40,23 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         cell.configureCell(song: song)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objects = controller.fetchedObjects, objects.count > 0 {
+            let song = objects[indexPath.row]
+            performSegue(withIdentifier: "SongDetailsVCExisting", sender: song)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SongDetailsVCExisting" {
+            if let destination = segue.destination as? SongDetailsVC {
+                if let song = sender as? Song {
+                    destination.songToEdit = song
+                }
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = controller.sections {
             
@@ -103,6 +120,8 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         fetchRequest.sortDescriptors = [sortAssignmentOrder]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        controller.delegate = self
         
         self.controller = controller
         
@@ -181,6 +200,6 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         song3.songTitle = "Song 3"
         song3.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
         
-        ad.saveContext()
+//        ad.saveContext()
     }
 }

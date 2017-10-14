@@ -94,7 +94,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["apps@rylanevans.com"])
+        mailController.setToRecipients(["support@rylanevans.com"])
         mailController.setSubject("FHE App Bugs")
         mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
@@ -110,7 +110,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["apps@rylanevans.com"])
+        mailController.setToRecipients(["customerservice@rylanevans.com"])
         mailController.setSubject("FHE App Tips")
         mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
@@ -123,7 +123,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         guard MFMailComposeViewController.canSendMail() else {return}
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["apps@rylanevans.com"])
+        mailController.setToRecipients(["subscribe@rylanevans.com"])
         mailController.setSubject("FHE App Subscription")
         mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
         

@@ -66,7 +66,7 @@ class OtherAppsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         guard MFMailComposeViewController.canSendMail() else {return}
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["apps@rylanevans.com"])
+        mailController.setToRecipients(["subscribe@rylanevans.com"])
         mailController.setSubject("FHE App Subscription")
         mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
         
