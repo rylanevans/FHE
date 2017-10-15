@@ -28,75 +28,75 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     var songToEdit: Song?
     var songAssignment: Song?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.clickSoundURL()
-        
-        self.hideKeyboardWhenTappedAround()
-        
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.sizeToFit()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
-        toolBar.setItems([flexibleSpace, doneButton], animated: false)
-        
-        songThemePicker.delegate = self
-        songThemePicker.dataSource = self
-        songThemePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        songSourcePicker.delegate = self
-        songSourcePicker.dataSource = self
-        songSourcePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        songThemeTextField.delegate = self
-        songThemeTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        songThemeTextField.inputView = songThemePicker
-//        songThemeTextField.inputAccessoryView = toolBar
-//        songThemePicker.frame.size.height = 225
-        
-        songTitleTextField.delegate = self
-        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "When There's Love At Home", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        songTitleTextField.inputAccessoryView = toolBar
-        
-        songSourceTextField.delegate = self
-        songSourceTextField.attributedPlaceholder = NSAttributedString(string: "Hymn or Children's Book", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        songSourceTextField.inputView = songSourcePicker
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        self.clickSoundURL()
+//        
+//        self.hideKeyboardWhenTappedAround()
+//        
+//        let toolBar = UIToolbar()
+//        toolBar.barStyle = UIBarStyle.default
+//        toolBar.sizeToFit()
+//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+//        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+//        
+//        songThemePicker.delegate = self
+//        songThemePicker.dataSource = self
+//        songThemePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+//        
+//        songSourcePicker.delegate = self
+//        songSourcePicker.dataSource = self
+//        songSourcePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+//        
+//        songThemeTextField.delegate = self
+//        songThemeTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+//        songThemeTextField.inputView = songThemePicker
+////        songThemeTextField.inputAccessoryView = toolBar
+////        songThemePicker.frame.size.height = 225
+//        
+//        songTitleTextField.delegate = self
+//        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "When There's Love At Home", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+//        songTitleTextField.inputAccessoryView = toolBar
+//        
+//        songSourceTextField.delegate = self
+//        songSourceTextField.attributedPlaceholder = NSAttributedString(string: "Hymn or Children's Book", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+//        songSourceTextField.inputView = songSourcePicker
 //        songSourceTextField.inputAccessoryView = toolBar
-        
-        songNumberTextField.delegate = self
-        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "33", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        songNumberTextField.inputAccessoryView = toolBar
-        
-        songURLTextField.delegate = self
-        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        songURLTextField.inputAccessoryView = toolBar
-        
-
-        
-//                        let songTheme1 = Theme(context: context)
-//                        songTheme1.theme = "Charity"
-//                        let songTheme2 = Theme(context: context)
-//                        songTheme2.theme = "Atonement"
-//                        let songTheme3 = Theme(context: context)
-//                        songTheme3.theme = "Articles of Faith"
-//                        let songTheme4 = Theme(context: context)
-//                        songTheme4.theme = "Commandments"
-//                        let songTheme5 = Theme(context: context)
-//                        songTheme5.theme = "Heavenly Father"
-//                        let songTheme6 = Theme(context: context)
-//                        songTheme6.theme = "Jesus Christ"
+//        
+//        songNumberTextField.delegate = self
+//        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "33", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+//        songNumberTextField.inputAccessoryView = toolBar
+//        
+//        songURLTextField.delegate = self
+//        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+//        songURLTextField.inputAccessoryView = toolBar
+//        
 //
-//                        ad.saveContext()
-        
-        checkValidTitle()
-        getThemes()
-        
-        if songToEdit != nil {
-            loadSongData()
-        }
-    }
+//        
+////                        let songTheme1 = Theme(context: context)
+////                        songTheme1.theme = "Charity"
+////                        let songTheme2 = Theme(context: context)
+////                        songTheme2.theme = "Atonement"
+////                        let songTheme3 = Theme(context: context)
+////                        songTheme3.theme = "Articles of Faith"
+////                        let songTheme4 = Theme(context: context)
+////                        songTheme4.theme = "Commandments"
+////                        let songTheme5 = Theme(context: context)
+////                        songTheme5.theme = "Heavenly Father"
+////                        let songTheme6 = Theme(context: context)
+////                        songTheme6.theme = "Jesus Christ"
+////
+////                        ad.saveContext()
+//        
+//        checkValidTitle()
+//        getThemes()
+//        
+//        if songToEdit != nil {
+//            loadSongData()
+//        }
+//    }
     
     // MARK: UITextFieldDelegate
     

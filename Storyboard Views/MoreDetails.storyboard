@@ -192,10 +192,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doA-Vs-Yxv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="730"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEA-hW-km0">
-                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="980"/>
+                                        <rect key="frame" x="-0.5" y="0.0" width="375" height="730"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4WE-hL-PHN">
                                                 <rect key="frame" x="15" y="15" width="345" height="585"/>
@@ -464,7 +464,7 @@ I spent a lot of time and effort building something I thought would be both help
                         <constraints>
                             <constraint firstItem="doA-Vs-Yxv" firstAttribute="top" secondItem="JGc-Yw-aJn" secondAttribute="top" id="70o-56-qOW"/>
                             <constraint firstItem="doA-Vs-Yxv" firstAttribute="leading" secondItem="6HK-HL-QCj" secondAttribute="leading" id="Ww9-QK-JJA"/>
-                            <constraint firstItem="doA-Vs-Yxv" firstAttribute="bottom" secondItem="6HK-HL-QCj" secondAttribute="bottom" constant="250" id="nux-pk-H93"/>
+                            <constraint firstItem="doA-Vs-Yxv" firstAttribute="bottom" secondItem="6HK-HL-QCj" secondAttribute="bottom" id="nux-pk-H93"/>
                             <constraint firstAttribute="trailing" secondItem="doA-Vs-Yxv" secondAttribute="trailing" id="q6E-2v-pGb"/>
                             <constraint firstItem="CEA-hW-km0" firstAttribute="width" secondItem="6HK-HL-QCj" secondAttribute="width" id="uXB-HL-wYh"/>
                         </constraints>
