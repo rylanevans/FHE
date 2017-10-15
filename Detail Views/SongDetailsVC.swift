@@ -11,7 +11,9 @@ import CoreData
 
 class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: BounceButton!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
+    @IBOutlet weak var hideSaveButton: UIImageView!
     @IBOutlet weak var songThemePicker: UIPickerView!
     @IBOutlet weak var songSourcePicker: UIPickerView!
     @IBOutlet weak var songThemeTextField: UITextField!
@@ -25,13 +27,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     var songThemes = [Theme]()
     var songToEdit: Song?
     var songAssignment: Song?
-    
-    @objc func keyboardWillShow(notification: NSNotification) {
-        print("showed keyboard")
-    }
-    @objc func keyboardWillHide(notification: NSNotification) {
-        print("keyboard hid")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,39 +42,35 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: Notification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: Notification.Name.UIKeyboardWillHide, object: nil)
-        
-        
-        
         songThemePicker.delegate = self
         songThemePicker.dataSource = self
-        songThemePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        songThemePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
         songSourcePicker.delegate = self
         songSourcePicker.dataSource = self
-        songSourcePicker.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        songSourcePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
         songThemeTextField.delegate = self
-        songThemeTextField.attributedPlaceholder = NSAttributedString(string: "Atonement, Obedience, Commandments, etc.", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        songThemeTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songThemeTextField.inputView = songThemePicker
-        songThemeTextField.inputAccessoryView = toolBar
+//        songThemeTextField.inputAccessoryView = toolBar
+//        songThemePicker.frame.size.height = 225
         
         songTitleTextField.delegate = self
-        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "When there is love at home", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "When There's Love At Home", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songTitleTextField.inputAccessoryView = toolBar
         
         songSourceTextField.delegate = self
         songSourceTextField.attributedPlaceholder = NSAttributedString(string: "Hymn or Children's Book", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songSourceTextField.inputView = songSourcePicker
-        songSourceTextField.inputAccessoryView = toolBar
+//        songSourceTextField.inputAccessoryView = toolBar
         
         songNumberTextField.delegate = self
-        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "#33", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "33", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songNumberTextField.inputAccessoryView = toolBar
         
         songURLTextField.delegate = self
-        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.whateverthewebsiteis.com", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songURLTextField.inputAccessoryView = toolBar
         
 
@@ -99,7 +90,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
 //
 //                        ad.saveContext()
         
-        checkValidMemberName()
+        checkValidTitle()
         getThemes()
         
         if songToEdit != nil {
@@ -116,7 +107,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        checkValidMemberName()
+        checkValidTitle()
         switch (textField.tag) {
         case 1:
             navigationItem.title = textField.text
@@ -130,9 +121,12 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         saveButton.isEnabled = false
     }
     
-    func checkValidMemberName() {
+    func checkValidTitle() {
         let text = songTitleTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
+        if text.isEmpty != true {
+            hideSaveButton.isHidden = true
+        }
     }
     
     @objc func donePressedOnKeyboard() {
@@ -186,6 +180,9 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        playClick()
+        
         let song = Song(context: context)
         
         if let theme = songThemeTextField.text {
@@ -248,7 +245,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
 
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
-        playClick()
+        
     }
     
     
