@@ -1327,7 +1327,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-6d-uhb" userLabel="Image and header">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScriptureBG" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-1S-6lV">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CalendarBG" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-1S-6lV">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="299"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="ifJ-Qh-d5S"/>
@@ -4477,29 +4477,30 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ActivityBG" width="144" height="94"/>
+        <image name="ActivityBG" width="5472" height="3648"/>
         <image name="Calendar" width="66" height="72"/>
-        <image name="ChristusBG" width="138" height="104"/>
-        <image name="CookiesBG" width="142" height="92"/>
-        <image name="CouchBG" width="136" height="88"/>
+        <image name="CalendarBG" width="3872" height="2592"/>
+        <image name="ChristusBG" width="1024" height="768"/>
+        <image name="CookiesBG" width="4374" height="2916"/>
+        <image name="CouchBG" width="4272" height="2848"/>
         <image name="Council" width="68" height="52"/>
         <image name="Game" width="82" height="83"/>
-        <image name="HandsBG" width="140" height="100"/>
-        <image name="HeavenBG" width="92" height="134"/>
-        <image name="IdeaBG" width="136" height="100"/>
-        <image name="JournalBG" width="138" height="102"/>
+        <image name="HandsBG" width="4554" height="3416"/>
+        <image name="HeavenBG" width="4912" height="3264"/>
+        <image name="IdeaBG" width="1981" height="1588"/>
+        <image name="JournalBG" width="4592" height="3448"/>
         <image name="Lesson" width="74" height="75"/>
         <image name="Misc" width="68" height="68"/>
-        <image name="MiscBG" width="140" height="140"/>
+        <image name="MiscBG" width="2048" height="2048"/>
         <image name="Missing Profile" width="770" height="770"/>
-        <image name="PianoBG" width="136" height="84"/>
+        <image name="PianoBG" width="4256" height="2832"/>
         <image name="Prayer" width="48" height="79"/>
         <image name="Rule" width="80" height="78"/>
         <image name="Scripture" width="78" height="76"/>
-        <image name="ScriptureBG" width="138" height="92"/>
+        <image name="ScriptureBG" width="5838" height="3897"/>
         <image name="Song" width="44" height="80"/>
         <image name="Spotlight" width="62" height="66"/>
-        <image name="SpotlightBG" width="134" height="76"/>
+        <image name="SpotlightBG" width="4459" height="2508"/>
         <image name="Testimony" width="66" height="56"/>
         <image name="Thought" width="78" height="73"/>
         <image name="Treat" width="72" height="78"/>
