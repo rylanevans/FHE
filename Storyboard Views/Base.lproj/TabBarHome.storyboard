@@ -1600,9 +1600,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="yd2-88-qUk" kind="relationship" relationship="viewControllers" id="R8m-Wa-JUH"/>
-                        <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="hjv-Up-wWY"/>
-                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="viewControllers" id="Lkc-Qe-eTQ"/>
                         <segue destination="UrF-9H-00o" kind="relationship" relationship="viewControllers" id="8fL-SK-e9E"/>
+                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="viewControllers" id="Lkc-Qe-eTQ"/>
+                        <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="hjv-Up-wWY"/>
                         <segue destination="KbM-YR-tSG" kind="relationship" relationship="viewControllers" id="XIj-uw-p08"/>
                     </connections>
                 </tabBarController>

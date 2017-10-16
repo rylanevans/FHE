@@ -10,15 +10,12 @@ import CoreData
 import UIKit
 
 extension Calendar {
-    convenience init(calendarAssignmentOrder: Int64, calendarImage: UIImage, calendarTitle: String, calendarDetail: String, calendarActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(title: String, detail: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
-        
-        self.calendarAssignmentOrder = calendarAssignmentOrder
-        self.calendarImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Calendar"))
-        self.calendarTitle = calendarTitle
-        self.calendarDetail = calendarDetail
-        self.calendarActive = calendarActive
+
+        self.title = title
+        self.detail = detail
     }
 }
 

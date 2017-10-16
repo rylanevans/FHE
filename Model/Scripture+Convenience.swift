@@ -10,19 +10,18 @@ import CoreData
 import UIKit
 
 extension Scripture {
-    convenience init(scriptureAssignmentOrder: Int64, scriptureImage: UIImage, scriptureTheme: String, scriptureSource: String, scriptureBook: String, scriptureChapter: String, scriptureVerse: String, scriptureTitle: String, scriptureActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(order: Int64, topic: String, scripture: String, book: String, chapter: String, verse: String, title: String, dateCreated: Date, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
-        self.scriptureAssignmentOrder = scriptureAssignmentOrder
-        self.scriptureImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Scripture"))
-        self.scriptureTheme = scriptureTheme
-        self.scriptureTitle = scriptureTitle
-        self.scriptureSource = scriptureSource
-        self.scriptureBook = scriptureBook
-        self.scriptureChapter = scriptureChapter
-        self.scriptureVerse = scriptureVerse
-        self.scriptureActive = scriptureActive
+        self.order = order
+        self.topic = topic
+        self.title = title
+        self.scripture = scripture
+        self.book = book
+        self.chapter = chapter
+        self.verse = verse
+        self.dateCreated = dateCreated
     }
 }
 

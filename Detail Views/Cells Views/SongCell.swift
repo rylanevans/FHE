@@ -10,13 +10,12 @@ import UIKit
 
 class SongCell: UITableViewCell {
     
-    @IBOutlet weak var songTitleLabel: UILabel!
-    @IBOutlet weak var songSourceLabel: UILabel!
-    @IBOutlet weak var songNumberLabel: UILabel!
-    @IBOutlet weak var songURLLabel: UILabel!
-    @IBOutlet weak var songDateLabel: UILabel!
-    @IBOutlet weak var songActiveLabel: UILabel!
-    @IBOutlet weak var songManualOrderLabel: UILabel!
+    @IBOutlet weak var topicLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bookLabel: UILabel!
+    @IBOutlet weak var chapterLabel: UILabel!
+    @IBOutlet weak var verseLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,13 +29,9 @@ class SongCell: UITableViewCell {
     }
     
     func configureCell(song: Song) {
-        songTitleLabel.text = song.songTitle
-        songSourceLabel.text = song.songSource
-        songNumberLabel.text = "#\(String(describing: song.songNumber))"
-        songURLLabel.text = song.songURL
-        songDateLabel.text = "\(String(describing: song.songDateCreated))"
-        songActiveLabel.text = "\(song.songActive)"
-        songManualOrderLabel.text = "\(song.songAssignmentOrder)"
+        titleLabel.text = song.songTitle
+        bookLabel.text = song.songSource
+        numberLabel.text = "#\(String(describing: song.songNumber))"
     }
 
 }

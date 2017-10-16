@@ -11,14 +11,15 @@ import CoreData
 import UIKit
 
 extension Member {
-    convenience init(memberOrder: Int64, memberPhoto: UIImage, memberName: String, memberAge: String, memberAttending: Bool, in context:NSManagedObjectContext) {
+    convenience init(dateCreted: Date, order: Int64, photo: UIImage, name: String, age: String, attending: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
-        self.memberOrder = memberOrder
-        self.memberPhoto = UIImagePNGRepresentation(memberPhoto)
-        self.memberName = memberName
-        self.memberAge = memberAge
-        self.memberAttending = memberAttending
+        self.dateCreated = dateCreated
+        self.order = order
+        self.photo = UIImagePNGRepresentation(photo)
+        self.name = name
+        self.age = age
+        self.attending = attending
     }
 }

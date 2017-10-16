@@ -23,7 +23,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var songURLTextField: UITextField!
     
     var songBooks = ["Children's Song Book", "Hymn Book"]
-    var songTopics = [Theme]()
+    var songTopics = [Topic]()
     var songToEdit: Song?
     var songAssignment: Song?
     
@@ -52,8 +52,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songTopicTextField.delegate = self
         songTopicTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songTopicTextField.inputView = songTopicPicker
-        //        songThemeTextField.inputAccessoryView = toolBar
-        //        songThemePicker.frame.size.height = 225
+        //        songTopicTextField.inputAccessoryView = toolBar
+        //        songTopicPicker.frame.size.height = 225
         
         songTitleTextField.delegate = self
         songTitleTextField.attributedPlaceholder = NSAttributedString(string: "When There's Love At Home", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
@@ -74,23 +74,23 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         
         
-        //                        let songTheme1 = Theme(context: context)
-        //                        songTheme1.theme = "Charity"
-        //                        let songTheme2 = Theme(context: context)
-        //                        songTheme2.theme = "Atonement"
-        //                        let songTheme3 = Theme(context: context)
-        //                        songTheme3.theme = "Articles of Faith"
-        //                        let songTheme4 = Theme(context: context)
-        //                        songTheme4.theme = "Commandments"
-        //                        let songTheme5 = Theme(context: context)
-        //                        songTheme5.theme = "Heavenly Father"
-        //                        let songTheme6 = Theme(context: context)
-        //                        songTheme6.theme = "Jesus Christ"
+        //                        let songTopic1 = Topic(context: context)
+        //                        songTopic1.Topic = "Charity"
+        //                        let songTopic2 = Topic(context: context)
+        //                        songTopic2.Topic = "Atonement"
+        //                        let songTopic3 = Topic(context: context)
+        //                        songTopic3.Topic = "Articles of Faith"
+        //                        let songTopic4 = Topic(context: context)
+        //                        songTopic4.Topic = "Commandments"
+        //                        let songTopic5 = Topic(context: context)
+        //                        songTopic5.Topic = "Heavenly Father"
+        //                        let songTopic6 = Topic(context: context)
+        //                        songTopic6.Topic = "Jesus Christ"
         //
         //                        ad.saveContext()
         
         checkValidTitle()
-        getThemes()
+        getTopics()
         
         if songToEdit != nil {
             loadSongData()
@@ -134,8 +134,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1 {
-            let songTheme = songTopics[row]
-            return songTheme.theme
+            let songTopic = songTopics[row]
+            return songTopic.Topic
         } else {
             let songSource = songBooks[row]
             return songSource
@@ -156,15 +156,15 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-            let songTheme = songTopics[row]
-            songTopicTextField.text = songTheme.theme
+            let songTopic = songTopics[row]
+            songTopicTextField.text = songTopic.Topic
         } else {
             songBookTextField.text = songBooks[row]
         }
     }
     
-    func getThemes() {
-        let fetchRequest: NSFetchRequest<Theme> = Theme.fetchRequest()
+    func getTopics() {
+        let fetchRequest: NSFetchRequest<Topic> = Topic.fetchRequest()
         
         do {
             self.songTopics = try context.fetch(fetchRequest)
@@ -180,8 +180,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         let song = Song(context: context)
         
-        if let theme = songTopicTextField.text {
-            song.songTheme = theme
+        if let Topic = songTopicTextField.text {
+            song.songTopic = Topic
         }
         
         if let source = songBookTextField.text {
@@ -211,7 +211,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     func loadSongData() {
         if let song = songToEdit {
             
-            songTopicTextField.text = song.songTheme
+            songTopicTextField.text = song.songTopic
             songTitleTextField.text = song.songTitle
             songBookTextField.text = song.songSource
             songNumberTextField.text = song.songNumber
@@ -224,10 +224,10 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     //            if let relationship = changeAssignmentTo.songToMember {
     //                var index = 0
     //                repeat {
-    //                    let i = themes[index]
-    //                    if i.name == theme.name
+    //                    let i = Topics[index]
+    //                    if i.name == Topic.name
     //
-    //                } while (index < themes.count)
+    //                } while (index < Topics.count)
     //            }
     //        }
     //

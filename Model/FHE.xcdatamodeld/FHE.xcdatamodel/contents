@@ -1,181 +1,139 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Calendar" representedClassName="Calendar" syncable="YES" codeGenerationType="class">
-        <attribute name="calendarActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="calendarAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="calendarDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="calendarImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="calendarTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="calendarToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToCalendar" inverseEntity="Member" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Council" representedClassName="Council" syncable="YES" codeGenerationType="class">
-        <attribute name="councilActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="councilAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="councilDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="councilImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="councilTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="councilToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToCouncil" inverseEntity="Member" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Counter" representedClassName="Counter" syncable="YES" codeGenerationType="class">
         <attribute name="numberOfTimesBeginWasPressed" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
-    <entity name="CPrayer" representedClassName="CPrayer" syncable="YES" codeGenerationType="class">
-        <attribute name="cPrayerActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="cPrayerAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="cPrayerDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="cPrayerImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="cPrayerTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="cPrayerToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToCPrayer" inverseEntity="Member" syncable="YES"/>
-    </entity>
     <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
-        <attribute name="gameActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="gameAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="gameCategory" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="gameDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="gameImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="gameTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="gameURL" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="gameToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToGame" inverseEntity="Member" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
-        <attribute name="lessonActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="lessonAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="lessonDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lessonImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="lessonTheme" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lessonTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="lessonURL" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="lessonToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToLesson" inverseEntity="Member" syncable="YES"/>
-        <relationship name="lessonToTheme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="themeToLesson" inverseEntity="Theme" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
-        <attribute name="memberAge" attributeType="String" syncable="YES"/>
-        <attribute name="memberAttending" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="memberName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="memberOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="memberPhoto" attributeType="Binary" syncable="YES"/>
-        <relationship name="memberToCalendar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Calendar" inverseName="calendarToMember" inverseEntity="Calendar" syncable="YES"/>
-        <relationship name="memberToCouncil" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Council" inverseName="councilToMember" inverseEntity="Council" syncable="YES"/>
-        <relationship name="memberToCPrayer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CPrayer" inverseName="cPrayerToMember" inverseEntity="CPrayer" syncable="YES"/>
-        <relationship name="memberToGame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="gameToMember" inverseEntity="Game" syncable="YES"/>
-        <relationship name="memberToLesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="lessonToMember" inverseEntity="Lesson" syncable="YES"/>
-        <relationship name="memberToMisc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Misc" inverseName="miscToMember" inverseEntity="Misc" syncable="YES"/>
-        <relationship name="memberToOPrayer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OPrayer" inverseName="oPrayerToMember" inverseEntity="OPrayer" syncable="YES"/>
-        <relationship name="memberToRule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rule" inverseName="ruleToMember" inverseEntity="Rule" syncable="YES"/>
-        <relationship name="memberToScripture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scripture" inverseName="scriptureToMember" inverseEntity="Scripture" syncable="YES"/>
-        <relationship name="memberToSong" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="songToMember" inverseEntity="Song" syncable="YES"/>
-        <relationship name="memberToSpotlight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Spotlight" inverseName="spotlightToMember" inverseEntity="Spotlight" syncable="YES"/>
-        <relationship name="memberToTestimony" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Testimony" inverseName="testimonyToMember" inverseEntity="Testimony" syncable="YES"/>
-        <relationship name="memberToThought" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Thought" inverseName="thoughtToMember" inverseEntity="Thought" syncable="YES"/>
-        <relationship name="memberToTreat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Treat" inverseName="treatToMember" inverseEntity="Treat" syncable="YES"/>
+        <attribute name="age" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attending" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
     <entity name="Misc" representedClassName="Misc" syncable="YES" codeGenerationType="class">
-        <attribute name="miscActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="miscAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="miscDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="miscImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="miscTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="miscToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToMisc" inverseEntity="Member" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="OPrayer" representedClassName="OPrayer" syncable="YES" codeGenerationType="class">
-        <attribute name="oPrayerActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="oPrayerAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="oPrayerDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="oPrayerImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="oPrayerTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="oPrayerToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToOPrayer" inverseEntity="Member" syncable="YES"/>
+    <entity name="Prayer" representedClassName="Prayer" syncable="YES" codeGenerationType="class">
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Rule" representedClassName="Rule" syncable="YES" codeGenerationType="class">
-        <attribute name="ruleActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="ruleAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="ruleDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="ruleImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="ruleTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="ruleToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToRule" inverseEntity="Member" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
-        <attribute name="scriptureActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="scriptureAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="scriptureBook" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scriptureChapter" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scriptureImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="scriptureSource" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scriptureTheme" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scriptureTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scriptureURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="scriptureVerse" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="scriptureToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToScripture" inverseEntity="Member" syncable="YES"/>
-        <relationship name="scriptureToTheme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="themeToScripture" inverseEntity="Theme" syncable="YES"/>
+        <attribute name="book" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scripture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="verse" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
-        <attribute name="songActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="songAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="songDateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="songImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="songNumber" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="songSource" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="songTheme" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="songTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="songURL" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="songToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToSong" inverseEntity="Member" syncable="YES"/>
-        <relationship name="songToTheme" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Theme" inverseName="themeToSong" inverseEntity="Theme" syncable="YES"/>
+        <attribute name="book" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Spotlight" representedClassName="Spotlight" syncable="YES" codeGenerationType="class">
-        <attribute name="spotlightActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="spotlightAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="spotlightDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="spotlightImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="spotlightTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="spotlightToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToSpotlight" inverseEntity="Member" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
+        <attribute name="calendarEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="calendarOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="councilEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="councilOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cPrayerEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cPrayerOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gameEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="gameOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lessonEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lessonOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="miscEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="miscOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="oPrayerEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="oPrayerOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ruleEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ruleOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scriptureEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scriptureOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="songEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="songOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="spotLightEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="spotLightOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="testimonyEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="testimonyOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thoughtEnabled" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="thoughtOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="treatEnabled" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="treatOrder" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Testimony" representedClassName="Testimony" syncable="YES" codeGenerationType="class">
-        <attribute name="testimonyActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="testimonyAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="testimonyDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="testimonyImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="testimonyTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="testimonyToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToTestimony" inverseEntity="Member" syncable="YES"/>
-    </entity>
-    <entity name="Theme" representedClassName="Theme" syncable="YES" codeGenerationType="class">
-        <attribute name="theme" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="themeToLesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="lessonToTheme" inverseEntity="Lesson" syncable="YES"/>
-        <relationship name="themeToScripture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scripture" inverseName="scriptureToTheme" inverseEntity="Scripture" syncable="YES"/>
-        <relationship name="themeToSong" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="songToTheme" inverseEntity="Song" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Thought" representedClassName="Thought" syncable="YES" codeGenerationType="class">
-        <attribute name="thoughtActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="thoughtAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="thoughtDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="thoughtImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="thoughtTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="thoughtToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToThought" inverseEntity="Member" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Treat" representedClassName="Treat" syncable="YES" codeGenerationType="class">
-        <attribute name="treatActive" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="treatAssignmentOrder" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="treatCategory" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="treatDetail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="treatImage" attributeType="Binary" syncable="YES"/>
-        <attribute name="treatTitle" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="treatToMember" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="memberToTreat" inverseEntity="Member" syncable="YES"/>
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateCreated" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Calendar" positionX="9" positionY="117" width="128" height="135"/>
-        <element name="Council" positionX="54" positionY="162" width="128" height="135"/>
+        <element name="Calendar" positionX="9" positionY="117" width="128" height="75"/>
+        <element name="Council" positionX="54" positionY="162" width="128" height="75"/>
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
-        <element name="CPrayer" positionX="9" positionY="144" width="128" height="135"/>
-        <element name="Game" positionX="9" positionY="108" width="128" height="165"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="180"/>
-        <element name="Member" positionX="-45" positionY="0" width="128" height="330"/>
-        <element name="Misc" positionX="36" positionY="144" width="128" height="135"/>
-        <element name="OPrayer" positionX="-18" positionY="54" width="128" height="135"/>
-        <element name="Rule" positionX="0" positionY="108" width="128" height="135"/>
-        <element name="Scripture" positionX="9" positionY="72" width="128" height="225"/>
-        <element name="Song" positionX="27" positionY="126" width="128" height="210"/>
-        <element name="Spotlight" positionX="27" positionY="135" width="128" height="135"/>
-        <element name="Testimony" positionX="18" positionY="126" width="128" height="135"/>
-        <element name="Thought" positionX="45" positionY="153" width="128" height="135"/>
-        <element name="Treat" positionX="18" positionY="117" width="128" height="150"/>
-        <element name="Theme" positionX="9" positionY="153" width="128" height="105"/>
+        <element name="Prayer" positionX="9" positionY="144" width="128" height="75"/>
+        <element name="Game" positionX="9" positionY="108" width="128" height="135"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="135"/>
+        <element name="Member" positionX="-45" positionY="0" width="128" height="135"/>
+        <element name="Misc" positionX="36" positionY="144" width="128" height="75"/>
+        <element name="Rule" positionX="0" positionY="108" width="128" height="120"/>
+        <element name="Scripture" positionX="9" positionY="72" width="128" height="165"/>
+        <element name="Song" positionX="27" positionY="126" width="128" height="150"/>
+        <element name="Spotlight" positionX="27" positionY="135" width="128" height="75"/>
+        <element name="Testimony" positionX="18" positionY="126" width="128" height="75"/>
+        <element name="Thought" positionX="45" positionY="153" width="128" height="30"/>
+        <element name="Treat" positionX="18" positionY="117" width="128" height="120"/>
+        <element name="Task" positionX="9" positionY="153" width="128" height="465"/>
     </elements>
 </model>

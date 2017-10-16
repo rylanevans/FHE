@@ -10,14 +10,11 @@ import CoreData
 import UIKit
 
 extension Spotlight {
-    convenience init(spotlightAssignmentOrder: Int64, spotlight: UIImage, spotlightTitle: String, spotlightDetail: String, spotlightActive: Bool, in context:NSManagedObjectContext) {
+    convenience init(title: String, detail: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
-        self.spotlightAssignmentOrder = spotlightAssignmentOrder
-        self.spotlightImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Spotlight"))
-        self.spotlightTitle = spotlightTitle
-        self.spotlightDetail = spotlightDetail
-        self.spotlightActive = spotlightActive
+        self.title = title
+        self.detail = detail
     }
 }
