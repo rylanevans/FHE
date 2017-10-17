@@ -10,10 +10,11 @@ import CoreData
 import UIKit
 
 extension Game {
-    convenience init(order: Int64, dateCreated: Date, category: String, title: String, detail: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, order: Int64, dateCreated: Date, category: String, title: String, detail: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.selected = selected
         self.order = order
         self.dateCreated = dateCreated
         self.category = category

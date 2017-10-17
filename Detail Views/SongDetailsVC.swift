@@ -62,7 +62,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songBookTextField.delegate = self
         songBookTextField.attributedPlaceholder = NSAttributedString(string: "Hymn or Children's Book", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songBookTextField.inputView = songBookPicker
-        songBookTextField.inputAccessoryView = toolBar
+//        songBookTextField.inputAccessoryView = toolBar
         
         songNumberTextField.delegate = self
         songNumberTextField.attributedPlaceholder = NSAttributedString(string: "33", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])

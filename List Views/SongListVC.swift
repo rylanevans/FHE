@@ -24,7 +24,7 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         tableView.delegate = self
         tableView.dataSource = self
         
-        generatedTestSong()
+//        generatedTestSong()
         attemptFetch()
     }
     
@@ -73,10 +73,6 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         return 0
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    
     @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
         playClick()
         
@@ -116,8 +112,8 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 //        let sortByDate = NSSortDescriptor(key: "songDateCreated", ascending: false)
 //        fetchRequest.sortDescriptors = [sortByDate]
         
-        let sortAssignmentOrder = NSSortDescriptor(key: "songAssignmentOrder", ascending: true)
-        fetchRequest.sortDescriptors = [sortAssignmentOrder]
+        let sortOrder = NSSortDescriptor(key: "order", ascending: true)
+        fetchRequest.sortDescriptors = [sortOrder]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         

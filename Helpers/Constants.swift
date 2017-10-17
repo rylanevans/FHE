@@ -30,7 +30,7 @@ let topicsArray = [
                 "Atonement",
                 "Christlike Attributes",
                 "Commandments",
-                "Scripture",
+                "Scriptures",
                 "Restoration",
                 "Principles & Ordinances",
                 "Perfect the Saints",

@@ -16,6 +16,7 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var chapterLabel: UILabel!
     @IBOutlet weak var verseLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,9 +30,11 @@ class SongCell: UITableViewCell {
     }
     
     func configureCell(song: Song) {
-        titleLabel.text = song.title
-        bookLabel.text = song.book
-        numberLabel.text = "#\(String(describing: song.number))"
+        let topic = song.topic ?? "Topic"
+        let title = song.title ?? "Title"
+        let number = song.number ?? "NA"
+        topicLabel.text = "\(topic)   "
+        titleLabel.text = title
+        numberLabel.text = number
     }
-
 }
