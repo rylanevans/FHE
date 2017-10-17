@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 
 extension Treat {
-    convenience init(order: Int64, dateCreated: UIImage, category: String, title: String, detail: String, in context:NSManagedObjectContext) {
+    convenience init(order: Int64, dateCreated: Date, category: String, title: String, detail: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         

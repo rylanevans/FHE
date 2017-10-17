@@ -22,8 +22,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var songNumberTextField: UITextField!
     @IBOutlet weak var songURLTextField: UITextField!
     
-    var songBooks = ["Children's Song Book", "Hymn Book"]
-    var songTopics = [Topic]()
+    var songBooks = songBooksArray
+    var songTopics = topicsArray
     var songToEdit: Song?
     var songAssignment: Song?
     
@@ -90,7 +90,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         //                        ad.saveContext()
         
         checkValidTitle()
-        getTopics()
         
         if songToEdit != nil {
             loadSongData()
@@ -135,7 +134,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1 {
             let songTopic = songTopics[row]
-            return songTopic.Topic
+            return songTopic
         } else {
             let songSource = songBooks[row]
             return songSource
@@ -157,22 +156,22 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
             let songTopic = songTopics[row]
-            songTopicTextField.text = songTopic.Topic
+            songTopicTextField.text = songTopic
         } else {
             songBookTextField.text = songBooks[row]
         }
     }
     
-    func getTopics() {
-        let fetchRequest: NSFetchRequest<Topic> = Topic.fetchRequest()
-        
-        do {
-            self.songTopics = try context.fetch(fetchRequest)
-            self.songTopicPicker.reloadAllComponents()
-        } catch {
-            // handle the error
-        }
-    }
+//    func getTopics() {
+//        let fetchRequest: NSFetchRequest<Topic> = Topic.fetchRequest()
+//
+//        do {
+//            self.songTopics = try context.fetch(fetchRequest)
+//            self.songTopicPicker.reloadAllComponents()
+//        } catch {
+//            // handle the error
+//        }
+//    }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
@@ -180,24 +179,24 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         let song = Song(context: context)
         
-        if let Topic = songTopicTextField.text {
-            song.songTopic = Topic
+        if let topic = songBookTextField.text {
+            song.topic = topic
         }
         
-        if let source = songBookTextField.text {
-            song.songSource = source
+        if let book = songBookTextField.text {
+            song.book = book
         }
         
         if let title = songTitleTextField.text {
-            song.songTitle = title
+            song.title = title
         }
         
         if let number = songNumberTextField.text {
-            song.songNumber = number
+            song.number = number
         }
         
         if let URL = songURLTextField.text {
-            song.songURL = URL
+            song.url = URL
         }
         
         //        song.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
@@ -211,11 +210,11 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     func loadSongData() {
         if let song = songToEdit {
             
-            songTopicTextField.text = song.songTopic
-            songTitleTextField.text = song.songTitle
-            songBookTextField.text = song.songSource
-            songNumberTextField.text = song.songNumber
-            songURLTextField.text = song.songURL
+            songTopicTextField.text = song.topic
+            songTitleTextField.text = song.title
+            songBookTextField.text = song.book
+            songNumberTextField.text = song.number
+            songURLTextField.text = song.url
         }
     }
     

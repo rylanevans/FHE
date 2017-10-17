@@ -180,7 +180,7 @@ Family Member</string>
                                                                             <rect key="frame" x="8" y="8" width="295" height="67"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3C-TF-ycs">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="32"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="35"/>
                                                                                     <color key="backgroundColor" red="0.02490932308" green="0.48162311320000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="IRz-Hk-V3P"/>
@@ -199,7 +199,7 @@ Family Member</string>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title - Name Of The Object" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn3-Os-tSi">
-                                                                                    <rect key="frame" x="0.0" y="32" width="207.5" height="35"/>
+                                                                                    <rect key="frame" x="0.0" y="35" width="207.5" height="32"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" constant="35" id="ZRq-6I-smS"/>
                                                                                     </constraints>
@@ -576,6 +576,7 @@ Family Member</string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="deleteButtonPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="vQm-Ia-BNO"/>
                                                             <action selector="saveButtonPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="JPx-jU-vER"/>
                                                         </connections>
                                                     </button>
@@ -732,12 +733,15 @@ Family Member</string>
                     <navigationItem key="navigationItem" title="Add Song" id="6lb-bc-UXo">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="BC7-6n-GXp">
                             <color key="tintColor" red="1" green="0.3301134838" blue="0.32484726899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deleteButtonPressed:" destination="6h5-I3-Zmd" id="qMU-H5-j39"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="deleteButton" destination="BC7-6n-GXp" id="1Xg-No-urD"/>
-                        <outlet property="hideSaveButton" destination="w6t-VD-Iio" id="in2-j1-wMt"/>
+                        <outlet property="hideSaveButton" destination="w6t-VD-Iio" id="WDJ-6l-Qno"/>
                         <outlet property="saveButton" destination="RRD-lx-vuo" id="ngE-t9-zOv"/>
                         <outlet property="songBookPicker" destination="ImO-af-ShY" id="Bcy-sp-gdw"/>
                         <outlet property="songBookTextField" destination="vRN-lS-kJc" id="xli-Dy-cuP"/>

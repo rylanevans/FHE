@@ -10,11 +10,10 @@ import CoreData
 import UIKit
 
 extension Prayer {
-    convenience init(order: Int64, title: String, detail: String, in context:NSManagedObjectContext) {
+    convenience init(title: String, detail: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
-        
-        self.order = order
+
         self.title = title
         self.detail = detail
     }

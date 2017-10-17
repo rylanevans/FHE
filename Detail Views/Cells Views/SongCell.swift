@@ -29,9 +29,9 @@ class SongCell: UITableViewCell {
     }
     
     func configureCell(song: Song) {
-        titleLabel.text = song.songTitle
-        bookLabel.text = song.songSource
-        numberLabel.text = "#\(String(describing: song.songNumber))"
+        titleLabel.text = song.title
+        bookLabel.text = song.book
+        numberLabel.text = "#\(String(describing: song.number))"
     }
 
 }

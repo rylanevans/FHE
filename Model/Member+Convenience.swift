@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 
 extension Member {
-    convenience init(dateCreted: Date, order: Int64, photo: UIImage, name: String, age: String, attending: Bool, in context:NSManagedObjectContext) {
+    convenience init(dateCreated: Date, order: Int64, photo: UIImage, name: String, age: String, attending: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         

@@ -174,31 +174,25 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     func generatedTestSong() {
         let song1 = Song(context: context)
-        song1.songActive = true
-        song1.songAssignmentOrder = 1
-        song1.songSource = String(describing: SongSources.childrensSongBook)
-        song1.songNumber = "#201"
-        song1.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song1.songTitle = "Song 1"
-        song1.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        song1.order = 3
+        song1.book = songBooksArray[0]
+        song1.number = "#201"
+        song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+        song1.title = "Song 1"
         
         let song2 = Song(context: context)
-        song2.songActive = true
-        song2.songAssignmentOrder = 2
-        song2.songSource = String(describing: SongSources.hymns)
-        song2.songNumber = "#202"
-        song2.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song2.songTitle = "Song 2"
-        song2.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        song2.order = 1
+        song2.book = songBooksArray[1]
+        song2.number = "#202"
+        song2.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+        song2.title = "Song 2"
         
         let song3 = Song(context: context)
-        song3.songActive = true
-        song3.songAssignmentOrder = 3
-        song3.songSource = String(describing: SongSources.childrensSongBook)
-        song3.songNumber = "#203"
-        song3.songURL = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song3.songTitle = "Song 3"
-        song3.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
+        song3.order = 2
+        song3.book = songBooksArray[0]
+        song3.number = "#203"
+        song3.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+        song3.title = "Song 3"
         
 //        ad.saveContext()
     }

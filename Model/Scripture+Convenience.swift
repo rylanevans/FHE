@@ -10,14 +10,14 @@ import CoreData
 import UIKit
 
 extension Scripture {
-    convenience init(order: Int64, topic: String, scripture: String, book: String, chapter: String, verse: String, title: String, dateCreated: Date, in context:NSManagedObjectContext) {
+    convenience init(order: Int64, topic: String, volume: String, book: String, chapter: String, verse: String, title: String, dateCreated: Date, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.order = order
         self.topic = topic
         self.title = title
-        self.scripture = scripture
+        self.volume = volume
         self.book = book
         self.chapter = chapter
         self.verse = verse
