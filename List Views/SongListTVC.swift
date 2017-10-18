@@ -1,5 +1,5 @@
 //
-//  PrepareDetails.swift
+//  SongListTVC.swift
 //  FHE
 //
 //  Created by Rylan Evans on 10/12/17.
@@ -10,37 +10,69 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
+class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {    
     
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var manuallyAssignMemberImage: UIImageView!
     @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var memberPicker: UIPickerView!
+    
+    
+    var memberArray = ["Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         clickSoundURL()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.hideKeyboardWhenTappedAround()
         
-//        generatedTestSong()
+        memberPicker.delegate = self
+        memberPicker.dataSource = self
+        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        
+        
+        generatedTestSong()
         attemptFetch()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let assignee = memberArray[row]
+        return assignee
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return memberArray.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//            assigneeText.text = memberArray[row]
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        if let staticCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleTableViewCell", for: indexPath) as! SongTitleTableViewCell {
+//            return staticCell
+//        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongTableViewCell", for: indexPath) as! SongTableViewCell
         configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
         return cell
     }
     
-    func configureCell(cell: SongCell, indexPath: NSIndexPath) {
+    func configureCell(cell: SongTableViewCell, indexPath: NSIndexPath) {
         let song = controller.object(at: indexPath as IndexPath)
         cell.configureCell(song: song)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let objects = controller.fetchedObjects, objects.count > 0 {
             let song = objects[indexPath.row]
             performSegue(withIdentifier: "SongDetailsVCExisting", sender: song)
@@ -57,7 +89,8 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = controller.sections {
             
             let sectionInfo = sections[section]
@@ -66,21 +99,16 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         return 0
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = controller.sections {
             return sections.count
         }
         return 0
     }
     
-    @IBAction func selectImageFromPhotoLibrary(_ sender: Any) {
+    @IBAction func selectMemberToAssign(_ sender: Any) {
         playClick()
-        
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = .photoLibrary
-        imagePickerController.delegate = self
-        
-        present(imagePickerController, animated: true, completion: nil)
+
     }
     
     // MARK: UIImagePickerControllerDelegate
@@ -153,7 +181,7 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
             break
         case.update:
             if let indexPath = indexPath {
-                let cell = tableView.cellForRow(at: indexPath) as! SongCell
+                let cell = tableView.cellForRow(at: indexPath) as! SongTableViewCell
                 configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
             }
             break
@@ -172,23 +200,26 @@ class SongListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         let song1 = Song(context: context)
         song1.order = 3
         song1.book = songBooksArray[0]
-        song1.number = "#201"
+        song1.number = "201"
         song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song1.title = "Song 1"
+        song1.title = "Nearer My God To Thee"
+        song1.topic = "Atonement"
         
         let song2 = Song(context: context)
         song2.order = 1
         song2.book = songBooksArray[1]
-        song2.number = "#202"
+        song2.number = "86"
         song2.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song2.title = "Song 2"
+        song2.title = "A Poor Wayfaring Man of Grief"
+        song2.topic = "God Head"
         
         let song3 = Song(context: context)
         song3.order = 2
         song3.book = songBooksArray[0]
-        song3.number = "#203"
+        song3.number = "57"
         song3.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song3.title = "Song 3"
+        song3.title = "High on the Mountain Top"
+        song3.topic = "Perfect the Saints"
         
 //        ad.saveContext()
     }

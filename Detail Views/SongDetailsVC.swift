@@ -177,9 +177,15 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         playClick()
         
-        let song = Song(context: context)
+        let song: Song!
         
-        if let topic = songBookTextField.text {
+        if songToEdit == nil {
+            song = Song(context: context)
+        } else {
+            song = songToEdit
+        }
+        
+        if let topic = songTopicTextField.text {
             song.topic = topic
         }
         
@@ -199,12 +205,9 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             song.url = URL
         }
         
-        //        song.songImage = UIImagePNGRepresentation(#imageLiteral(resourceName: "Song"))
-        
         //add songDateCreated
         
         ad.saveContext()
-        navigationController?.popViewController(animated: true)
     }
     
     func loadSongData() {
@@ -218,23 +221,13 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         }
     }
     
-    //    func overrideSongAssignment() {
-    //        if let changeAssignmentTo = songAssignment {
-    //            if let relationship = changeAssignmentTo.songToMember {
-    //                var index = 0
-    //                repeat {
-    //                    let i = Topics[index]
-    //                    if i.name == Topic.name
-    //
-    //                } while (index < Topics.count)
-    //            }
-    //        }
-    //
-    //    }
-    
-    
     @IBAction func deleteButtonPressed(_ sender: Any) {
+        if songToEdit != nil {
+            context.delete(songToEdit!)
+            ad.saveContext()
+        }
         
+        _ = navigationController?.popViewController(animated: true)
     }
     
     

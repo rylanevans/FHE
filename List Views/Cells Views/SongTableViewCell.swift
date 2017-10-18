@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SongCell: UITableViewCell {
+class SongTableViewCell: UITableViewCell {
     
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -17,6 +17,7 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var verseLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
+//    var delegate: SongTableViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,8 +34,15 @@ class SongCell: UITableViewCell {
         let topic = song.topic ?? "Topic"
         let title = song.title ?? "Title"
         let number = song.number ?? "NA"
+        let book = song.book ?? "Book"
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
-        numberLabel.text = number
+        numberLabel.text = "#\(number)"
+        bookLabel.text = book
     }
 }
+
+//protocol SongTableViewCellDelegate {
+//    func buttonCellButtonTapped(_ sender: SongTableViewCell)
+//}
+
