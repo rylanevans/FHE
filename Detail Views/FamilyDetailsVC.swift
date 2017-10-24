@@ -142,7 +142,12 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     }
     
     @IBAction func saveMemberButtonPressed(_ sender: Any) {
-        
+//        var member: Member!
+//        
+//        let newPicture = Member(context: context)
+//        newPicture.photo = photoMemberImageView.image
+//        
+//        member.photo = newPicture
     }
 }
 

@@ -22,7 +22,7 @@ class LessonVC: UIViewController {
     }
     
     @IBAction func seeLessonButtonPressed(_ sender: Any) {
-        playClick()
+//        playClick()
         let URL = NSURL(string: "https://www.youtube.com/playlist?list=PLbuu8VeGQ5CN5XZeSk8cUkHUpqKHaKYwP")!
         let lessonWebVC = SFSafariViewController(url: URL as URL)
         lessonWebVC.delegate = self

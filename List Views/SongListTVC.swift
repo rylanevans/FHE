@@ -49,7 +49,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//            assigneeText.text = memberArray[row]
+        //            assigneeText.text = memberArray[row]
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -59,9 +59,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if let staticCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleTableViewCell", for: indexPath) as! SongTitleTableViewCell {
-//            return staticCell
-//        }
+        //        if let staticCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleTableViewCell", for: indexPath) as! SongTitleTableViewCell {
+        //            return staticCell
+        //        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongTableViewCell", for: indexPath) as! SongTableViewCell
         configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
         return cell
@@ -108,7 +108,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     @IBAction func selectMemberToAssign(_ sender: Any) {
         playClick()
-
+        
     }
     
     // MARK: UIImagePickerControllerDelegate
@@ -137,24 +137,36 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
-//        let sortByDate = NSSortDescriptor(key: "songDateCreated", ascending: false)
-//        fetchRequest.sortDescriptors = [sortByDate]
+        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+        let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
+        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
         
-        let sortOrder = NSSortDescriptor(key: "order", ascending: true)
-        fetchRequest.sortDescriptors = [sortOrder]
-        
-        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
-        controller.delegate = self
-        
-        self.controller = controller
-        
-        do {
-            try controller.performFetch()
-        } catch {
-            let error = error as NSError
-            print("\(error)")
+        if segment.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [sortByDate]
+        } else if segment.selectedSegmentIndex == 1 {
+            fetchRequest.sortDescriptors = [sortByTitle]
+        } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [sortByOrder]
+            
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            
+            controller.delegate = self
+            
+            self.controller = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
         }
+    }
+    
+    @IBAction func songSegemtChanged(_ sender: Any) {
+        attemptFetch()
+//        self.reloadInputViews()
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -221,6 +233,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         song3.title = "High on the Mountain Top"
         song3.topic = "Perfect the Saints"
         
-//        ad.saveContext()
+        //        ad.saveContext()
     }
 }

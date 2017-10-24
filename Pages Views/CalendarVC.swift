@@ -25,7 +25,7 @@ class CalendarVC: UIViewController {
     }
     
     @IBAction func showCalendarButton(_ sender: Any) {
-        playClick()
+//        playClick()
         gotoAppleCalendar(date: Date() as NSDate)
     }
     

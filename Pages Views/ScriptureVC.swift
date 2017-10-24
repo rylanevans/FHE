@@ -22,7 +22,7 @@ class ScriptureVC: UIViewController {
     }
     
     @IBAction func readScriptureButtonPressed(_ sender: Any) {
-        playClick()
+//        playClick()
         let URL = NSURL(string: "https://www.lds.org/scriptures/bofm/1-ne/3.7?lang=eng#6")!
         let scriptureWebVC = SFSafariViewController(url: URL as URL)
         scriptureWebVC.delegate = self

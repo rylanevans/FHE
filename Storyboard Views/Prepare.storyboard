@@ -111,12 +111,16 @@ Family Member</string>
                                                         <constraint firstAttribute="height" constant="30" id="80g-ca-8ed"/>
                                                     </constraints>
                                                     <segments>
-                                                        <segment title="Default"/>
+                                                        <segment title="Created"/>
+                                                        <segment title="Title"/>
                                                         <segment title="Random"/>
                                                         <segment title="Manual"/>
                                                         <segment title="Off"/>
                                                     </segments>
                                                     <color key="tintColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="songSegemtChanged:" destination="Vn6-Vj-ADL" eventType="valueChanged" id="vDW-N7-k2C"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -303,7 +307,7 @@ Family Member</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UK9-aM-eEm">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uCh-jb-svO">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uCh-jb-svO">
                                                 <rect key="frame" x="15" y="0.0" width="345" height="972"/>
                                                 <subviews>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-FV-S2f">
@@ -334,7 +338,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Charity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-4h-jE3">
-                                                        <rect key="frame" x="0.0" y="35" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="43" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="2ye-fg-ki6"/>
                                                         </constraints>
@@ -343,7 +347,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh2-RW-xz4">
-                                                        <rect key="frame" x="0.0" y="65" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="81" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="q2x-lf-20d"/>
                                                         </constraints>
@@ -352,7 +356,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKs-bG-MYD">
-                                                        <rect key="frame" x="0.0" y="100" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="124" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="J8a-m6-2np"/>
                                                         </constraints>
@@ -361,7 +365,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scripture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-ZO-RKe">
-                                                        <rect key="frame" x="0.0" y="130" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="158" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="zOd-rI-vOO"/>
                                                         </constraints>
@@ -370,7 +374,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Holy Bible" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tCE-Z5-xhf">
-                                                        <rect key="frame" x="0.0" y="130" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="158" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="1II-yv-lYu"/>
                                                         </constraints>
@@ -379,7 +383,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ru-Fd-POI">
-                                                        <rect key="frame" x="0.0" y="130" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="162" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="8sb-3T-Rn9"/>
                                                         </constraints>
@@ -388,7 +392,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genesis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-lS-kJc">
-                                                        <rect key="frame" x="0.0" y="165" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="205" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="yIj-6m-36O"/>
                                                         </constraints>
@@ -397,7 +401,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-zy-fGj">
-                                                        <rect key="frame" x="0.0" y="195" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="239" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="j0o-I4-Rne"/>
                                                         </constraints>
@@ -406,7 +410,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Pf-pX-BTW">
-                                                        <rect key="frame" x="0.0" y="195" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="239" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="MCA-8A-20J"/>
                                                         </constraints>
@@ -415,7 +419,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verse(s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2K-Cj-2vd">
-                                                        <rect key="frame" x="0.0" y="195" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="239" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="yGY-Pv-EfY"/>
                                                         </constraints>
@@ -424,7 +428,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="26-27" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EEk-QS-3wz">
-                                                        <rect key="frame" x="0.0" y="195" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="239" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="UrT-ia-v38"/>
                                                         </constraints>
@@ -433,7 +437,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuF-5Q-njf">
-                                                        <rect key="frame" x="0.0" y="195" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="243" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="HW3-RW-zP0"/>
                                                         </constraints>
@@ -442,7 +446,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="201" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-CM-O4s">
-                                                        <rect key="frame" x="0.0" y="230" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="286" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="vwM-sB-cK6"/>
                                                         </constraints>
@@ -451,7 +455,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Lesson URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTX-oM-d8W">
-                                                        <rect key="frame" x="0.0" y="260" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="324" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="3Ko-BO-HVw"/>
                                                         </constraints>
@@ -460,7 +464,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www.SpesificWebSiteYouWantToUse.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-xK-p7C">
-                                                        <rect key="frame" x="0.0" y="290" width="345" height="30"/>
+                                                        <rect key="frame" x="0.0" y="362" width="345" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="rCX-Vp-pZ5"/>
                                                         </constraints>
@@ -469,7 +473,7 @@ Family Member</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USz-zv-GpQ">
-                                                        <rect key="frame" x="0.0" y="320" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="396" width="345" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="Mop-cl-M1v"/>
                                                         </constraints>
@@ -478,7 +482,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v0H-2q-6Rt">
-                                                        <rect key="frame" x="0.0" y="320" width="345" height="150"/>
+                                                        <rect key="frame" x="0.0" y="396" width="345" height="150"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="150" id="ezJ-Yg-XNY"/>
@@ -499,7 +503,7 @@ Family Member</string>
                                                         </userDefinedRuntimeAttributes>
                                                     </textView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r47-4K-0yR">
-                                                        <rect key="frame" x="0.0" y="320" width="345" height="8"/>
+                                                        <rect key="frame" x="0.0" y="400" width="345" height="8"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="8" id="aBy-5R-e5w"/>
                                                         </constraints>
@@ -508,7 +512,7 @@ Family Member</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-lx-vuo" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="328" width="345" height="50"/>
+                                                        <rect key="frame" x="0.0" y="416" width="345" height="50"/>
                                                         <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="gYp-s6-xdI"/>
@@ -531,7 +535,7 @@ Family Member</string>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53l-gi-Vvh">
-                                                        <rect key="frame" x="0.0" y="378" width="345" height="594"/>
+                                                        <rect key="frame" x="0.0" y="474" width="345" height="498"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -539,7 +543,7 @@ Family Member</string>
                                                 </subviews>
                                             </stackView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6t-VD-Iio">
-                                                <rect key="frame" x="15" y="328" width="345" height="50"/>
+                                                <rect key="frame" x="15" y="416" width="345" height="50"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -548,7 +552,7 @@ Family Member</string>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-L4-dLC">
-                                                <rect key="frame" x="297" y="108" width="55" height="14"/>
+                                                <rect key="frame" x="297" y="132" width="55" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="55" id="36Q-gp-yOx"/>
                                                 </constraints>
