@@ -13,8 +13,6 @@ class SongTableViewCell: UITableViewCell {
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var chapterLabel: UILabel!
-    @IBOutlet weak var verseLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
 //    var delegate: SongTableViewCellDelegate?
@@ -30,7 +28,7 @@ class SongTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(song: Song) {
+    func configureSongDetailCell(song: Song) {
         let topic = song.topic ?? "Topic"
         let title = song.title ?? "Title"
         let number = song.number ?? "NA"

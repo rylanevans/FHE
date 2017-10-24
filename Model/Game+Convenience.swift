@@ -22,4 +22,10 @@ extension Game {
         self.detail = detail
         self.url = url
     }
+    
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        
+        self.dateCreated = NSDate() as Date
+    }
 }

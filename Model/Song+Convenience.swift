@@ -23,5 +23,11 @@ extension Song {
         self.book = book
         self.url = url
     }
+    
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        
+        self.dateCreated = NSDate() as Date
+    }
 }
 

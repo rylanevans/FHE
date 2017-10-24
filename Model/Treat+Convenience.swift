@@ -21,4 +21,10 @@ extension Treat {
         self.title = title
         self.detail = detail
     }
+    
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        
+        self.dateCreated = NSDate() as Date
+    }
 }

@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {    
+class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, TitleTableViewCellDelegate {
     
     @IBOutlet weak var manuallyAssignMemberImage: UIImageView!
-    @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var memberPicker: UIPickerView!
     
     
@@ -22,18 +21,18 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        clickSoundURL()
-        
         self.hideKeyboardWhenTappedAround()
         
         memberPicker.delegate = self
         memberPicker.dataSource = self
         memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        
-        generatedTestSong()
+//        generatedTestSong()
         attemptFetch()
     }
+    
+    
+    // MARK: - Picker View Set up
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let assignee = memberArray[row]
@@ -52,24 +51,54 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         //            assigneeText.text = memberArray[row]
     }
     
+    
+    // MARK: - Text Field Options
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
     
+    
+    // MARK: - Table view data source
+        
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //        if let staticCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleTableViewCell", for: indexPath) as! SongTitleTableViewCell {
-        //            return staticCell
-        //        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SongTableViewCell", for: indexPath) as! SongTableViewCell
-        configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
-        return cell
+        if indexPath.item == 0 {
+        let titleCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleTableViewCell", for: indexPath) as! SongTitleTableViewCell
+        configureSongTitleCell(cell: titleCell, indexPath: indexPath as NSIndexPath)
+        return titleCell
+        } else {
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongTableViewCell", for: indexPath) as! SongTableViewCell
+        configureSongDetailCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        return detailCell
+        }
     }
     
-    func configureCell(cell: SongTableViewCell, indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let sections = controller.sections {
+            
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
+        return 0
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if let sections = controller.sections {
+            return sections.count
+        }
+        return 0
+    }
+    
+    func configureSongTitleCell(cell: SongTitleTableViewCell, indexPath: NSIndexPath) {
         let song = controller.object(at: indexPath as IndexPath)
-        cell.configureCell(song: song)
+        cell.configureSongTitleCell(song: song)
+    }
+    
+    func configureSongDetailCell(cell: SongTableViewCell, indexPath: NSIndexPath) {
+        let song = controller.object(at: indexPath as IndexPath)
+        cell.configureSongDetailCell(song: song)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -89,26 +118,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let sections = controller.sections {
-            
-            let sectionInfo = sections[section]
-            return sectionInfo.numberOfObjects
-        }
-        return 0
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = controller.sections {
-            return sections.count
-        }
-        return 0
-    }
-    
     @IBAction func selectMemberToAssign(_ sender: Any) {
         playClick()
-        
     }
     
     // MARK: UIImagePickerControllerDelegate
@@ -129,44 +140,55 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: - TitleTableViewCellDelegate
+    
+    func segmentChanged(_ sender: SongTitleTableViewCell) {
+        // Tyring to save to CoreData with this action and fetch it when sorting through attemptFetch()
+
+//        let sortBy = Task(context: context)
+//        sortBy.sort = "order"
+//        ad.saveContext()
+//        tableView.reloadData()
+    }
+    
     // MARK: - Boiler Code for Core Data
     
     var controller: NSFetchedResultsController<Song>!
     
     func attemptFetch() {
-        
+    
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
         let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortByOrder]
         
-        if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByDate]
-        } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByTitle]
-        } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByOrder]
-            
-            
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            
-            controller.delegate = self
-            
-            self.controller = controller
-            
-            do {
-                try controller.performFetch()
-            } catch {
-                let error = error as NSError
-                print("\(error)")
-            }
+//        if SongTitleTableViewCell.shared.segment.selectedSegmentIndex == 0 {
+//            fetchRequest.sortDescriptors = [sortByDate]
+//            print("Sort by Created")
+//        } else if SongTitleTableViewCell.shared.segment.selectedSegmentIndex == 1 {
+//            fetchRequest.sortDescriptors = [sortByTitle]
+//            print("Sort by Title")
+//        } else if SongTitleTableViewCell.shared.segment.selectedSegmentIndex == 2 {
+//            fetchRequest.sortDescriptors = [sortByOrder]
+//            print("Sort by Order")
+//        } else {
+//            fetchRequest.sortDescriptors = [sortByOrder]
+//        }
+        
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        controller.delegate = self
+        
+        self.controller = controller
+        
+        do {
+            try controller.performFetch()
+        } catch {
+            let error = error as NSError
+            print("\(error)")
         }
-    }
-    
-    @IBAction func songSegemtChanged(_ sender: Any) {
-        attemptFetch()
-//        self.reloadInputViews()
     }
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -193,8 +215,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             break
         case.update:
             if let indexPath = indexPath {
-                let cell = tableView.cellForRow(at: indexPath) as! SongTableViewCell
-                configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+                let cellDetail = tableView.cellForRow(at: indexPath) as! SongTableViewCell
+                configureSongDetailCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+
+                let cellTitle = tableView.cellForRow(at: indexPath) as! SongTitleTableViewCell
+                configureSongTitleCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
             }
             break
         case.move:
@@ -233,6 +258,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         song3.title = "High on the Mountain Top"
         song3.topic = "Perfect the Saints"
         
-        //        ad.saveContext()
+        ad.saveContext()
     }
 }

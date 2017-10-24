@@ -18,9 +18,14 @@ extension Member {
         self.dateCreated = dateCreated
         self.order = order
         self.photo = UIImagePNGRepresentation(photo)
-//        NSObject
         self.name = name
         self.age = age
         self.attending = attending
+    }
+    
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        
+        self.dateCreated = NSDate() as Date
     }
 }

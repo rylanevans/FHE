@@ -9,7 +9,13 @@
 import UIKit
 
 class SongTitleTableViewCell: UITableViewCell {
+    @IBOutlet weak var songAssigneeMemberImage: UIImageView!
+    @IBOutlet weak var songAssigneeLabel: UILabel!
+    @IBOutlet weak var segment: UISegmentedControl!
     
+    static let shared = SongTitleTableViewCell()
+    
+    var delegate: TitleTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +28,18 @@ class SongTitleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    func configureCell(song: Song) {
-//        let topic = song.topic ?? "Topic"
-//        let title = song.title ?? "Title"
-//        let number = song.number ?? "NA"
-//        topicLabel.text = "\(topic)   "
-//        titleLabel.text = title
-//        numberLabel.text = number
-//    }
+    @IBAction func songSegemtChanged(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.segmentChanged(self)
+        }
+    }
+    
+    func configureSongTitleCell(song: Song) {
+        let book = song.book ?? "Book"
+        songAssigneeLabel.text = book
+    }
+}
+
+protocol TitleTableViewCellDelegate {
+    func segmentChanged(_ sender: SongTitleTableViewCell)
 }

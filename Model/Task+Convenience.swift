@@ -12,7 +12,7 @@ import UIKit
 
 extension Task {
     
-    convenience init(enabled: Bool, name: String, order: Int64, assigned: Bool, in context:NSManagedObjectContext) {
+    convenience init(sort: String, enabled: Bool, name: String, order: Int64, assigned: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
