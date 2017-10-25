@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTitleTableViewCell" rowHeight="175" id="HW3-OG-hJc" customClass="SongTitleTableViewCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTitleCell" rowHeight="175" id="HW3-OG-hJc" customClass="SongTitleCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HW3-OG-hJc" id="tEJ-LQ-sKE">
@@ -147,7 +147,7 @@ Family Member
                                     <outlet property="songAssigneeMemberImage" destination="dMu-2M-dV2" id="5wk-4J-9OH"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="70" id="nQ5-Q3-NYt" customClass="SongTableViewCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongDetailCell" rowHeight="70" id="nQ5-Q3-NYt" customClass="SongDetailCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="203" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQ5-Q3-NYt" id="plH-np-Myr">

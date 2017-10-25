@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, TitleTableViewCellDelegate {
+class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongTitleCellDelegate {
     
     @IBOutlet weak var manuallyAssignMemberImage: UIImageView!
     @IBOutlet weak var memberPicker: UIPickerView!
@@ -65,18 +65,18 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.item == 0 {
-        let titleCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleTableViewCell", for: indexPath) as! SongTitleTableViewCell
+        let titleCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleCell", for: indexPath) as! SongTitleCell
         configureSongTitleCell(cell: titleCell, indexPath: indexPath as NSIndexPath)
         return titleCell
         } else {
-        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongTableViewCell", for: indexPath) as! SongTableViewCell
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongDetailCell", for: indexPath) as! SongDetailCell
         configureSongDetailCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
         return detailCell
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let sections = controller.sections {
+        if let sections = songController.sections {
             
             let sectionInfo = sections[section]
             return sectionInfo.numberOfObjects
@@ -85,24 +85,24 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = controller.sections {
+        if let sections = songController.sections {
             return sections.count
         }
         return 0
     }
     
-    func configureSongTitleCell(cell: SongTitleTableViewCell, indexPath: NSIndexPath) {
-        let song = controller.object(at: indexPath as IndexPath)
+    func configureSongTitleCell(cell: SongTitleCell, indexPath: NSIndexPath) {
+        let song = songController.object(at: indexPath as IndexPath)
         cell.configureSongTitleCell(song: song)
     }
     
-    func configureSongDetailCell(cell: SongTableViewCell, indexPath: NSIndexPath) {
-        let song = controller.object(at: indexPath as IndexPath)
+    func configureSongDetailCell(cell: SongDetailCell, indexPath: NSIndexPath) {
+        let song = songController.object(at: indexPath as IndexPath)
         cell.configureSongDetailCell(song: song)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let objects = controller.fetchedObjects, objects.count > 0 {
+        if let objects = songController.fetchedObjects, objects.count > 0 {
             let song = objects[indexPath.row]
             performSegue(withIdentifier: "SongDetailsVCExisting", sender: song)
         }
@@ -142,7 +142,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - TitleTableViewCellDelegate
     
-    func segmentChanged(_ sender: SongTitleTableViewCell) {
+    func segmentChanged(_ sender: SongTitleCell) {
         // Tyring to save to CoreData with this action and fetch it when sorting through attemptFetch()
 
 //        let sortBy = Task(context: context)
@@ -153,7 +153,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - Boiler Code for Core Data
     
-    var controller: NSFetchedResultsController<Song>!
+    var songController: NSFetchedResultsController<Song>!
     
     func attemptFetch() {
     
@@ -164,13 +164,13 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortByOrder]
         
-//        if SongTitleTableViewCell.shared.segment.selectedSegmentIndex == 0 {
+//        if SongTitleCell.shared.segment.selectedSegmentIndex == 0 {
 //            fetchRequest.sortDescriptors = [sortByDate]
 //            print("Sort by Created")
-//        } else if SongTitleTableViewCell.shared.segment.selectedSegmentIndex == 1 {
+//        } else if SongTitleCell.shared.segment.selectedSegmentIndex == 1 {
 //            fetchRequest.sortDescriptors = [sortByTitle]
 //            print("Sort by Title")
-//        } else if SongTitleTableViewCell.shared.segment.selectedSegmentIndex == 2 {
+//        } else if SongTitleCell.shared.segment.selectedSegmentIndex == 2 {
 //            fetchRequest.sortDescriptors = [sortByOrder]
 //            print("Sort by Order")
 //        } else {
@@ -181,7 +181,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         controller.delegate = self
         
-        self.controller = controller
+        self.songController = controller
         
         do {
             try controller.performFetch()
@@ -215,10 +215,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             break
         case.update:
             if let indexPath = indexPath {
-                let cellDetail = tableView.cellForRow(at: indexPath) as! SongTableViewCell
+                let cellDetail = tableView.cellForRow(at: indexPath) as! SongDetailCell
                 configureSongDetailCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
 
-                let cellTitle = tableView.cellForRow(at: indexPath) as! SongTitleTableViewCell
+                let cellTitle = tableView.cellForRow(at: indexPath) as! SongTitleCell
                 configureSongTitleCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
             }
             break
