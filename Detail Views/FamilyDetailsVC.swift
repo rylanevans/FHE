@@ -10,13 +10,13 @@ import UIKit
 
 class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var photoMemberImageView: UIImageView!
+    @IBOutlet weak var saveButton: BounceButton!
+    @IBOutlet weak var deleteButton: UIBarButtonItem!
+    @IBOutlet weak var hideSaveButton: UIImageView!
+    @IBOutlet weak var photoMemberImage: UIImageView!
     @IBOutlet weak var memberNameText: UITextField!
     @IBOutlet weak var memberAgeText: UITextField!
-    @IBOutlet weak var attendingMemberSwithTapped: UISwitch!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
-    
-//    var newMember: Member
+    @IBOutlet weak var attendingSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +72,9 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         // Disable the Save button if the text field is empty.
         let text = memberNameText.text ?? ""
         saveButton.isEnabled = !text.isEmpty
+        if text.isEmpty != true {
+            hideSaveButton.isHidden = true
+        }
     }
     
     @objc func donePressedOnKeyboard() {
@@ -87,10 +90,10 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // The info dictionary contains multiple representations of the image, and this uses the original.
-        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        // Set photoImageView to display the selected image.
-        photoMemberImageView.image = selectedImage
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            // Set photoImageView to display the selected image.
+            photoMemberImage.image = selectedImage
+        }
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
@@ -109,19 +112,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         }
     }
     
-    // This method lets you configure a view controller before it's presented.
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if saveButton == sender {
-    //            let name = nameTextField.text ?? ""
-    //            let photo = photoImageView.image
-    //            let rating = ratingControl.rating
-    //
-    //            // Set the new member to be passed to MemberListTableViewController after the unwind segue.
-    //            newMember = Member()
-    //        }
-    //    }
-    
-    // MARK: Actions
+    // MARK: SelectFromPhotoLibrary
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
         playClick()
@@ -141,13 +132,59 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    @IBAction func saveMemberButtonPressed(_ sender: Any) {
-//        var member: Member!
-//        
-//        let newPicture = Member(context: context)
-//        newPicture.photo = photoMemberImageView.image
-//        
-//        member.photo = newPicture
+    
+    
+    var memberToEdit: Member?
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        playClick()
+        
+        let member: Member!
+        
+        if memberToEdit == nil {
+            member = Member(context: context)
+        } else {
+            member = memberToEdit
+        }
+        
+        if let photo = photoMemberImage.image {
+            member.photo = photo
+        }
+        
+        if let name = memberNameText.text {
+            member.name = name
+        }
+        
+        if let age = Int64(memberAgeText.text!) {
+            member.age = age
+        }
+        
+        if attendingSwitch.isOn {
+            member.attending = true
+        } else {
+            member.attending = false
+        }
+        
+        ad.saveContext()
+    }
+    
+    func loadMemberData() {
+        if let member = memberToEdit {
+            
+            photoMemberImage.image = member.photo as? UIImage
+            memberNameText.text = member.name
+            memberAgeText.text = "\(member.age)"
+            attendingSwitch.isOn = member.attending
+        }
+    }
+    
+    @IBAction func deleteButtonPressed(_ sender: Any) {
+        if memberToEdit != nil {
+            context.delete(memberToEdit!)
+            ad.saveContext()
+        }
+        
+        _ = navigationController?.popViewController(animated: true)
     }
 }
 

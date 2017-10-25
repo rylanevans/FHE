@@ -13,6 +13,7 @@
     <customFonts key="customFonts">
         <array key="AmericanTypewriter.ttc">
             <string>AmericanTypewriter</string>
+            <string>AmericanTypewriter-CondensedLight</string>
             <string>AmericanTypewriter-Light</string>
         </array>
         <array key="Noteworthy.ttc">
@@ -70,7 +71,7 @@ Family Member
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zX-0f7" userLabel="Next, Random, Manual, Off">
+                                                <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zX-0f7" userLabel="Song Rotation">
                                                     <rect key="frame" x="0.0" y="131.5" width="359" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="C6C-n3-2O5"/>
@@ -343,7 +344,7 @@ Family Member
                                                             <constraint firstAttribute="height" constant="30" id="2ye-fg-ki6"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh2-RW-xz4">
@@ -361,7 +362,7 @@ Family Member
                                                             <constraint firstAttribute="height" constant="30" id="J8a-m6-2np"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scripture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgr-ZO-RKe">
@@ -397,7 +398,7 @@ Family Member
                                                             <constraint firstAttribute="height" constant="30" id="yIj-6m-36O"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-zy-fGj">
@@ -451,7 +452,7 @@ Family Member
                                                             <constraint firstAttribute="height" constant="30" id="vwM-sB-cK6"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Lesson URL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTX-oM-d8W">
@@ -469,7 +470,7 @@ Family Member
                                                             <constraint firstAttribute="height" constant="30" id="rCX-Vp-pZ5"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USz-zv-GpQ">
@@ -1139,6 +1140,6 @@ Family Member
         <image name="Selected" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6XO-GI-9PR"/>
+        <segue reference="ihB-K5-KCE"/>
     </inferredMetricsTieBreakers>
 </document>

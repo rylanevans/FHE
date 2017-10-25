@@ -205,8 +205,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             song.url = URL
         }
         
-        //add songDateCreated
-        
         ad.saveContext()
     }
     
@@ -229,6 +227,4 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         _ = navigationController?.popViewController(animated: true)
     }
-    
-    
 }

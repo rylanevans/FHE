@@ -26,9 +26,9 @@ class MemberDetailCell: UITableViewCell {
     
     func configureMemberDetailCell(member: Member) {
         let name = member.name ?? ""
-//        let photo = member.photo ?? #imageLiteral(resourceName: "NoPhoto")
+        let photo = member.photo ?? #imageLiteral(resourceName: "NoPhoto")
         let attending = member.attending
-//        memberImage = photo
+        memberImage.image = photo as? UIImage
         nameLabel.text = name
         attendingSwitch.isOn = attending
     }

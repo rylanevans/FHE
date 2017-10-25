@@ -36,7 +36,7 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <relationship name="task" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="assignment" inverseEntity="Task" syncable="YES"/>
+        <relationship name="toTask" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="assignment" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Misc" representedClassName="Misc" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
@@ -85,7 +85,7 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sort" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="task" inverseEntity="Member" syncable="YES"/>
+        <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="toTask" inverseEntity="Member" syncable="YES"/>
     </entity>
     <entity name="Testimony" representedClassName="Testimony" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
@@ -109,7 +109,6 @@
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="150"/>
         <element name="Lesson" positionX="45" positionY="144" width="128" height="150"/>
-        <element name="Member" positionX="-45" positionY="0" width="128" height="150"/>
         <element name="Misc" positionX="36" positionY="144" width="128" height="75"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="75"/>
         <element name="Rule" positionX="0" positionY="108" width="128" height="135"/>
@@ -120,5 +119,6 @@
         <element name="Testimony" positionX="18" positionY="126" width="128" height="75"/>
         <element name="Thought" positionX="45" positionY="153" width="128" height="30"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="135"/>
+        <element name="Member" positionX="27" positionY="162" width="128" height="150"/>
     </elements>
 </model>
