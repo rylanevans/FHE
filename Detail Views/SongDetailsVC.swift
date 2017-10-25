@@ -72,23 +72,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         songURLTextField.inputAccessoryView = toolBar
         
-        
-        
-        //                        let songTopic1 = Topic(context: context)
-        //                        songTopic1.Topic = "Charity"
-        //                        let songTopic2 = Topic(context: context)
-        //                        songTopic2.Topic = "Atonement"
-        //                        let songTopic3 = Topic(context: context)
-        //                        songTopic3.Topic = "Articles of Faith"
-        //                        let songTopic4 = Topic(context: context)
-        //                        songTopic4.Topic = "Commandments"
-        //                        let songTopic5 = Topic(context: context)
-        //                        songTopic5.Topic = "Heavenly Father"
-        //                        let songTopic6 = Topic(context: context)
-        //                        songTopic6.Topic = "Jesus Christ"
-        //
-        //                        ad.saveContext()
-        
         checkValidTitle()
         
         if songToEdit != nil {

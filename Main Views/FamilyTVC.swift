@@ -20,7 +20,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         self.hideKeyboardWhenTappedAround()
         
-        generatedTestMember()
+//        generatedTestMember()
         memberAttemptFetch()
     }
     
@@ -199,7 +199,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         member1.name = "Mom"
         member1.photo = #imageLiteral(resourceName: "Mom") as UIImage
-        member1.attending = false
+        member1.attending = true
         member1.order = 1
         member1.age = 35
         
@@ -218,7 +218,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         member3.age = 10
         
         let member4 = Member(context: context)
-        member4.name = "Mom"
+        member4.name = "Reed"
         member4.photo = #imageLiteral(resourceName: "Reed") as UIImage
         member4.attending = true
         member4.order = 4
@@ -226,8 +226,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         let member5 = Member(context: context)
         member5.name = "Claire"
-        member5.photo = #imageLiteral(resourceName: "Mom") as UIImage
-        member5.attending = false
+        member5.photo = #imageLiteral(resourceName: "Claire") as UIImage
+        member5.attending = true
         member5.order = 5
         member5.age = 5
         

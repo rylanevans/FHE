@@ -18,6 +18,8 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     @IBOutlet weak var memberAgeText: UITextField!
     @IBOutlet weak var attendingSwitch: UISwitch!
     
+    var memberToEdit: Member?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,10 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         memberNameText.inputAccessoryView = toolBar
         
         checkValidMemberName()
+        
+        if memberToEdit != nil {
+            loadMemberData()
+        }
     }
     
     // MARK: UITextFieldDelegate
@@ -131,10 +137,6 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         
         present(imagePickerController, animated: true, completion: nil)
     }
-    
-    
-    
-    var memberToEdit: Member?
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
