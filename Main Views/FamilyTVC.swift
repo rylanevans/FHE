@@ -90,9 +90,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
     
     // MARK: - TitleTableViewCellDelegate
     
@@ -113,9 +110,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
         
-        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+//        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
-        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
+//        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortByOrder]
         
         //        if MemberTitleCell.shared.segment.selectedSegmentIndex == 0 {

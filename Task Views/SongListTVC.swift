@@ -159,9 +159,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
-        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+//        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
-        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
+//        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [sortByOrder]
         
 //        if SongTitleCell.shared.segment.selectedSegmentIndex == 0 {

@@ -261,6 +261,7 @@ Family Member
                                         <constraint firstItem="ehY-h6-wex" firstAttribute="centerX" secondItem="plH-np-Myr" secondAttribute="centerX" id="adY-ft-KJ6"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="bookLabel" destination="2uu-vQ-5q2" id="cHk-VC-15G"/>
                                     <outlet property="numberLabel" destination="xUW-6g-xtE" id="mNg-SD-JH7"/>
@@ -590,7 +591,7 @@ Family Member
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H6N-LD-aFs" firstAttribute="trailing" secondItem="uZf-mo-d0Z" secondAttribute="trailing" id="0Gy-av-2ig"/>
                             <constraint firstItem="H6N-LD-aFs" firstAttribute="leading" secondItem="uZf-mo-d0Z" secondAttribute="leading" id="aC6-wg-nZV"/>
@@ -766,10 +767,10 @@ Family Member
             </objects>
             <point key="canvasLocation" x="7122" y="1985"/>
         </scene>
-        <!--View Controller-->
+        <!--Rule-->
         <scene sceneID="Ozl-bs-mOF">
             <objects>
-                <viewController id="koj-QU-geU" sceneMemberID="viewController">
+                <viewController title="Rule" id="koj-QU-geU" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NK5-Ez-hBD"/>
                         <viewControllerLayoutGuide type="bottom" id="5zO-3B-LXY"/>
