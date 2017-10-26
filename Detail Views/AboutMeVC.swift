@@ -80,6 +80,11 @@ class AboutMeVC: UIViewController {
     func amazing() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .amazing)
     }
+    
+    @IBAction func closeWindowPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AboutMeVC: IAPServiceDelege {

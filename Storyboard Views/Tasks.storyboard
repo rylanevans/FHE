@@ -237,7 +237,7 @@ Family Member
                                                     <real key="value" value="0.0"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                    <real key="value" value="2"/>
+                                                    <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                     <size key="value" width="0.0" height="0.0"/>
@@ -247,6 +247,9 @@ Family Member
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                     <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -558,7 +561,7 @@ Family Member
                                                     <constraint firstAttribute="width" constant="55" id="36Q-gp-yOx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -763,7 +766,7 @@ Family Member
             </objects>
             <point key="canvasLocation" x="7122" y="1985"/>
         </scene>
-        <!--New Rule-->
+        <!--View Controller-->
         <scene sceneID="Ozl-bs-mOF">
             <objects>
                 <viewController id="koj-QU-geU" sceneMemberID="viewController">
@@ -920,10 +923,6 @@ Family Member
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="buv-kN-eau"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Rule" id="TMr-KU-quK">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="Nnu-aV-4XL"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Xbt-lH-TkL"/>
-                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J28-ud-jpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1140,6 +1139,6 @@ Family Member
         <image name="Selected" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ihB-K5-KCE"/>
+        <segue reference="6XO-GI-9PR"/>
     </inferredMetricsTieBreakers>
 </document>

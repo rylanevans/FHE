@@ -38,8 +38,8 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         
         memberAgeText.delegate = self
         memberNameText.delegate = self
-        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
-        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
+        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
+        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         memberAgeText.inputAccessoryView = toolBar
         memberNameText.inputAccessoryView = toolBar
         
@@ -172,11 +172,11 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     func loadMemberData() {
         if let member = memberToEdit {
-            
             photoMemberImage.image = member.photo as? UIImage
             memberNameText.text = member.name
             memberAgeText.text = "\(member.age)"
             attendingSwitch.isOn = member.attending
+            textFieldDidEndEditing(memberNameText)
         }
     }
     
