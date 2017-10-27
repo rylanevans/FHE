@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import WebKit
 
 class LessonVC: UIViewController {
     @IBOutlet weak var lessonThemeLabel: UILabel!
@@ -15,30 +16,21 @@ class LessonVC: UIViewController {
     @IBOutlet weak var lessonMemberNameLabel: UILabel!
     @IBOutlet weak var lessonTitleLabel: UILabel!
     @IBOutlet weak var lessonDetailLabel: UILabel!
+    @IBOutlet weak var lessonWebKit: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         clickSoundURL()
+        
+        let url = URL(string: "https://www.youtube.com/embed/h_6EcIc4l1g?rel=0&amp;controls=0&amp;showinfo=0")
+        let request = URLRequest(url: url!)
+        
+        lessonWebKit.load(request)
     }
     
-    @IBAction func seeLessonButtonPressed(_ sender: Any) {
-//        playClick()
-        let URL = NSURL(string: "https://www.youtube.com/playlist?list=PLbuu8VeGQ5CN5XZeSk8cUkHUpqKHaKYwP")!
-        let lessonWebVC = SFSafariViewController(url: URL as URL)
-        lessonWebVC.delegate = self
-        
-        present(lessonWebVC, animated: true, completion: nil)
-    }
-
     @IBAction func closeButtonPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
-    }
-}
-
-extension LessonVC: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true, completion: nil)
     }
 }
 

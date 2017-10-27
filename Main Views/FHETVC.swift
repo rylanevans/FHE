@@ -14,6 +14,7 @@ class FHETVC: UIViewController {
     @IBOutlet weak var christTeachingImage: UIImageView!
     @IBOutlet weak var backgroundShadow: UIView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

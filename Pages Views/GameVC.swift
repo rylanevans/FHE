@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class GameVC: UIViewController {
     @IBOutlet weak var gameThemeLabel: UILabel!
@@ -20,8 +21,23 @@ class GameVC: UIViewController {
 
     }
     
+    @IBAction func detailsButtonPressed(_ sender: Any) {
+        //        playClick()
+        let URL = NSURL(string: "https://en.wikipedia.org/wiki/Button,_button,_who%27s_got_the_button%3F")!
+        let gameWebVC = SFSafariViewController(url: URL as URL)
+        gameWebVC.delegate = self
+        
+        present(gameWebVC, animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension GameVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

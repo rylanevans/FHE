@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CouncilVC: UIViewController {
     @IBOutlet weak var councilMemberPhotoImage: UIImageView!
@@ -20,8 +21,23 @@ class CouncilVC: UIViewController {
 
     }
     
+    @IBAction func detailsButtonPressed(_ sender: Any) {
+        //        playClick()
+        let URL = NSURL(string: "https://www.ready.gov/build-a-kit")!
+        let councilWebVC = SFSafariViewController(url: URL as URL)
+        councilWebVC.delegate = self
+        
+        present(councilWebVC, animated: true, completion: nil)
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension CouncilVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SafariServices
+import WebKit
 
 class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureThemeLabel: UILabel!
@@ -15,19 +15,16 @@ class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureMemberNameLabel: UILabel!
     @IBOutlet weak var scriptureLocationLabel: UILabel!
     @IBOutlet weak var scriptureTitleLabel: UILabel!
+    @IBOutlet weak var scriptureWebKit: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         clickSoundURL()
-    }
-    
-    @IBAction func readScriptureButtonPressed(_ sender: Any) {
-//        playClick()
-        let URL = NSURL(string: "https://www.lds.org/scriptures/bofm/1-ne/3.7?lang=eng#6")!
-        let scriptureWebVC = SFSafariViewController(url: URL as URL)
-        scriptureWebVC.delegate = self
         
-        present(scriptureWebVC, animated: true, completion: nil)
+        let url = URL(string: "https://www.lds.org/scriptures/bofm/1-ne/3.7?lang=eng#6")
+        let request = URLRequest(url: url!)
+        
+        scriptureWebKit.load(request)
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
@@ -35,10 +32,3 @@ class ScriptureVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 }
-
-extension ScriptureVC: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-}
-
