@@ -31,25 +31,28 @@
                         <sections>
                             <tableViewSection id="3Ot-1h-o9x">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="200" id="lnY-lh-rge">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="210" id="lnY-lh-rge">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lnY-lh-rge" id="Blc-Nz-MTN">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n6C-xv-kGx">
-                                                    <rect key="frame" x="0.0" y="-50.5" width="375" height="300.5"/>
+                                                    <rect key="frame" x="0.0" y="-45.5" width="375" height="300.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Apple TV" translatesAutoresizingMaskIntoConstraints="NO" id="he3-n4-EMt">
-                                                            <rect key="frame" x="0.0" y="-75" width="375" height="450.5"/>
+                                                            <rect key="frame" x="0.0" y="-87.5" width="375" height="475.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="he3-n4-EMt" secondAttribute="height" multiplier="15:19" id="eNy-yD-J0z"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="he3-n4-EMt" firstAttribute="height" secondItem="n6C-xv-kGx" secondAttribute="height" constant="150" id="8Mp-LZ-vro"/>
                                                         <constraint firstItem="he3-n4-EMt" firstAttribute="width" secondItem="n6C-xv-kGx" secondAttribute="width" id="Hrg-T2-L13"/>
                                                         <constraint firstAttribute="height" constant="300" id="Koz-II-zTS"/>
+                                                        <constraint firstItem="he3-n4-EMt" firstAttribute="height" secondItem="n6C-xv-kGx" secondAttribute="height" priority="750" id="R1s-tD-1lO"/>
                                                         <constraint firstItem="he3-n4-EMt" firstAttribute="centerY" secondItem="n6C-xv-kGx" secondAttribute="centerY" id="kpv-va-Gug"/>
                                                         <constraint firstItem="he3-n4-EMt" firstAttribute="centerX" secondItem="n6C-xv-kGx" secondAttribute="centerX" id="ohi-1l-gXC"/>
                                                     </constraints>
@@ -63,7 +66,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="rHj-Fm-s8T">
-                                        <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="210" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rHj-Fm-s8T" id="wBH-k6-U0s">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -96,7 +99,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ra5-5s-JO2">
-                                        <rect key="frame" x="0.0" y="244" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="254" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ra5-5s-JO2" id="WN9-6b-lT9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -129,7 +132,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="bkg-rd-Dn7">
-                                        <rect key="frame" x="0.0" y="288" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="298" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkg-rd-Dn7" id="yj0-Bx-o0d">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -162,7 +165,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Tem-c2-1GJ">
-                                        <rect key="frame" x="0.0" y="332" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="342" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tem-c2-1GJ" id="xAh-2y-HuO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -233,13 +236,16 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Teach" translatesAutoresizingMaskIntoConstraints="NO" id="AeV-P6-zks">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="300.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="AeV-P6-zks" secondAttribute="height" multiplier="5:4" id="xzT-zl-gwq"/>
+                                                            </constraints>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="AeV-P6-zks" firstAttribute="centerX" secondItem="bPY-Gf-fI6" secondAttribute="centerX" id="5dn-Z3-zsZ"/>
                                                         <constraint firstItem="AeV-P6-zks" firstAttribute="width" secondItem="bPY-Gf-fI6" secondAttribute="width" id="IFM-g3-yxt"/>
-                                                        <constraint firstItem="AeV-P6-zks" firstAttribute="height" secondItem="bPY-Gf-fI6" secondAttribute="height" id="NGF-Ay-CeP"/>
+                                                        <constraint firstItem="AeV-P6-zks" firstAttribute="height" secondItem="bPY-Gf-fI6" secondAttribute="height" priority="750" id="NGF-Ay-CeP"/>
                                                         <constraint firstAttribute="height" constant="300" id="WOf-rF-R4y"/>
                                                         <constraint firstItem="AeV-P6-zks" firstAttribute="centerY" secondItem="bPY-Gf-fI6" secondAttribute="centerY" id="gDJ-gT-iAz"/>
                                                     </constraints>

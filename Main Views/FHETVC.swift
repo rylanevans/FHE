@@ -21,6 +21,11 @@ class FHETVC: UIViewController {
         self.clickSoundURL()
     }
     
+    @IBAction func editButtonPressed(_ sender: Any) {
+        playClick()
+        self.tabBarController?.selectedIndex = 0
+    }
+    
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
         playClick()
     }

@@ -81,6 +81,7 @@
     </entity>
     <entity name="Task" representedClassName="Task" syncable="YES" codeGenerationType="class">
         <attribute name="assigned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defaultNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="enabled" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -109,16 +110,16 @@
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="150"/>
         <element name="Lesson" positionX="45" positionY="144" width="128" height="150"/>
+        <element name="Member" positionX="27" positionY="162" width="128" height="150"/>
         <element name="Misc" positionX="36" positionY="144" width="128" height="75"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="75"/>
         <element name="Rule" positionX="0" positionY="108" width="128" height="135"/>
         <element name="Scripture" positionX="9" positionY="72" width="128" height="180"/>
         <element name="Song" positionX="27" positionY="126" width="128" height="165"/>
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="75"/>
-        <element name="Task" positionX="9" positionY="153" width="128" height="135"/>
+        <element name="Task" positionX="9" positionY="153" width="128" height="150"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="75"/>
         <element name="Thought" positionX="45" positionY="153" width="128" height="30"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="135"/>
-        <element name="Member" positionX="27" positionY="162" width="128" height="150"/>
     </elements>
 </model>

@@ -40,6 +40,10 @@ class OtherAppsTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func rylanEvansTapped() {
         playClick()
         let URL = NSURL(string: "https://www.rylanevans.com")!

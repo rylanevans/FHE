@@ -33,7 +33,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H0I-Df-5Lq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MemberTitleCell" rowHeight="175" id="N6a-6i-4b5" customClass="MemberTitleCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="175"/>
@@ -43,9 +43,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoyBG" translatesAutoresizingMaskIntoConstraints="NO" id="yit-FP-ZBH">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="174.5"/>
+                                            <rect key="frame" x="0.0" y="0.5" width="375" height="174"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="175" id="rHW-Gz-JZN"/>
+                                                <constraint firstAttribute="width" secondItem="yit-FP-ZBH" secondAttribute="height" multiplier="125:58" id="Tai-py-CNV"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-sW-ZuL">
@@ -102,7 +102,6 @@ Cgo
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="yit-FP-ZBH" firstAttribute="height" secondItem="MFy-P2-lEQ" secondAttribute="height" id="3FI-No-N0Q"/>
                                         <constraint firstItem="iuN-sW-ZuL" firstAttribute="centerY" secondItem="qwo-ih-auM" secondAttribute="centerY" id="4qX-PW-oqZ"/>
                                         <constraint firstItem="yit-FP-ZBH" firstAttribute="centerY" secondItem="MFy-P2-lEQ" secondAttribute="centerY" id="CpZ-Hk-raS"/>
                                         <constraint firstItem="iuN-sW-ZuL" firstAttribute="width" secondItem="qwo-ih-auM" secondAttribute="width" id="GS1-Me-Kyi"/>
@@ -114,27 +113,28 @@ Cgo
                                         <constraint firstItem="iuN-sW-ZuL" firstAttribute="height" secondItem="qwo-ih-auM" secondAttribute="height" id="aa7-Zj-Bip"/>
                                         <constraint firstItem="Ces-54-Ldu" firstAttribute="trailing" secondItem="MFy-P2-lEQ" secondAttribute="trailing" constant="-8" id="crB-Is-fKH"/>
                                         <constraint firstItem="yit-FP-ZBH" firstAttribute="centerX" secondItem="MFy-P2-lEQ" secondAttribute="centerX" id="woi-Da-32L"/>
+                                        <constraint firstItem="yit-FP-ZBH" firstAttribute="height" secondItem="MFy-P2-lEQ" secondAttribute="height" priority="750" id="xCX-RH-dgd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="segment" destination="qwo-ih-auM" id="1nn-CH-uzU"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MemberDetailCell" rowHeight="125" id="jw9-WN-kNq" customClass="MemberDetailCell" customModule="FHE" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="203" width="375" height="125"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MemberDetailCell" rowHeight="75" id="jw9-WN-kNq" customClass="MemberDetailCell" customModule="FHE" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="203" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jw9-WN-kNq" id="SPt-d5-9KL">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-iA-211">
-                                            <rect key="frame" x="5" y="5" width="365" height="115"/>
+                                            <rect key="frame" x="5" y="2.5" width="365" height="70"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OQ1-kZ-Eki">
-                                                    <rect key="frame" x="12.5" y="3" width="340" height="109"/>
+                                                    <rect key="frame" x="12.5" y="3" width="340" height="64"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="GVZ-oV-PcC">
-                                                            <rect key="frame" x="0.0" y="29.5" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="7" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="IUn-Zr-C19"/>
                                                                 <constraint firstAttribute="width" constant="50" id="r7f-Pb-uYQ"/>
@@ -152,7 +152,7 @@ Cgo
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kFU-KC-cxw">
-                                                            <rect key="frame" x="50" y="44.5" width="12" height="20.5"/>
+                                                            <rect key="frame" x="50" y="22" width="12" height="20.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="12" id="oV9-mN-MX3"/>
                                                             </constraints>
@@ -161,13 +161,13 @@ Cgo
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmr-Wy-dHW" userLabel="Name">
-                                                            <rect key="frame" x="62" y="41" width="191" height="27.5"/>
+                                                            <rect key="frame" x="62" y="18.5" width="191" height="27.5"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PgM-VR-pPn">
-                                                            <rect key="frame" x="253" y="31" width="62" height="47.5"/>
+                                                            <rect key="frame" x="253" y="8.5" width="62" height="47.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attending?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-ue-mwE">
                                                                     <rect key="frame" x="0.0" y="0.0" width="62" height="16.5"/>
@@ -182,13 +182,13 @@ Cgo
                                                             </subviews>
                                                         </stackView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rec-Xi-98F">
-                                                            <rect key="frame" x="315" y="28" width="10" height="53.5"/>
+                                                            <rect key="frame" x="315" y="5" width="10" height="54"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="10" id="ZQD-bA-0yk"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discloser" translatesAutoresizingMaskIntoConstraints="NO" id="ml0-pm-ecg">
-                                                            <rect key="frame" x="325" y="44.5" width="15" height="20"/>
+                                                            <rect key="frame" x="325" y="22" width="15" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="H4r-sB-cFo"/>
                                                                 <constraint firstAttribute="height" constant="20" id="REb-dS-h84"/>
@@ -226,10 +226,11 @@ Cgo
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="bjm-iA-211" firstAttribute="centerX" secondItem="SPt-d5-9KL" secondAttribute="centerX" id="8UC-M7-1Qb"/>
                                         <constraint firstItem="bjm-iA-211" firstAttribute="width" secondItem="SPt-d5-9KL" secondAttribute="width" constant="-10" id="Bhz-Pg-0sb"/>
-                                        <constraint firstItem="bjm-iA-211" firstAttribute="height" secondItem="SPt-d5-9KL" secondAttribute="height" constant="-10" id="HnY-Pd-ZtR"/>
+                                        <constraint firstItem="bjm-iA-211" firstAttribute="height" secondItem="SPt-d5-9KL" secondAttribute="height" constant="-5" id="HnY-Pd-ZtR"/>
                                         <constraint firstItem="bjm-iA-211" firstAttribute="centerY" secondItem="SPt-d5-9KL" secondAttribute="centerY" id="WjX-8p-90f"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -1365,6 +1366,17 @@ Cgo
                                     <constraint firstAttribute="width" secondItem="Aim-AV-1uI" secondAttribute="height" multiplier="94:39" id="0hA-iO-hBA"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opk-ej-Y5A" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                <rect key="frame" x="20" y="286.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="NTq-7Q-Ulr"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="feW-ZG-eLH"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Edit"/>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="blj-Lq-6RZ" eventType="touchUpInside" id="UwN-79-SKR"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLa-h8-geB" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="330" y="286.5" width="25" height="25"/>
                                 <constraints>
@@ -1386,17 +1398,19 @@ Cgo
                             <constraint firstItem="Aim-AV-1uI" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="EEI-yf-uz5"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="width" secondItem="FpX-2P-h4B" secondAttribute="width" id="EgJ-bt-7Pi"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerX" secondItem="oX6-RR-eA2" secondAttribute="centerX" id="FoL-7r-ebN"/>
-                            <constraint firstItem="oX6-RR-eA2" firstAttribute="bottom" secondItem="tLa-h8-geB" secondAttribute="bottom" constant="306.5" id="KRi-4x-LyC"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="opk-ej-Y5A" secondAttribute="trailing" constant="20" symbolic="YES" id="LL0-xY-RC8"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="centerY" secondItem="FpX-2P-h4B" secondAttribute="centerY" id="PH5-DG-irf"/>
                             <constraint firstItem="tLa-h8-geB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JmO-vl-PYE" secondAttribute="leading" constant="20" symbolic="YES" id="Pcq-Qa-tdk"/>
                             <constraint firstItem="Aim-AV-1uI" firstAttribute="leading" secondItem="oX6-RR-eA2" secondAttribute="leading" id="WPn-Wr-LAw"/>
                             <constraint firstItem="c80-MV-Pho" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="Z2E-Vx-cBL"/>
+                            <constraint firstItem="opk-ej-Y5A" firstAttribute="leading" secondItem="KSk-zz-gqD" secondAttribute="leading" constant="20" id="ZK5-F1-p5g"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="top" secondItem="c80-MV-Pho" secondAttribute="bottom" id="Zf9-DV-rtl"/>
                             <constraint firstItem="c80-MV-Pho" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" id="hge-UY-1FI"/>
                             <constraint firstItem="tLa-h8-geB" firstAttribute="centerY" secondItem="3K6-Df-2s4" secondAttribute="centerY" id="ltN-9E-aRx"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" id="nq3-Dw-QuO"/>
                             <constraint firstItem="7rT-eA-zhv" firstAttribute="height" secondItem="FpX-2P-h4B" secondAttribute="height" id="qYL-tP-K2e"/>
                             <constraint firstAttribute="trailing" secondItem="c80-MV-Pho" secondAttribute="trailing" id="u2e-rH-K4S"/>
+                            <constraint firstItem="opk-ej-Y5A" firstAttribute="centerY" secondItem="3K6-Df-2s4" secondAttribute="centerY" id="whX-2V-fnn"/>
                             <constraint firstItem="Aim-AV-1uI" firstAttribute="trailing" secondItem="Xbf-LN-14A" secondAttribute="trailing" multiplier="3:4.6" id="xCj-hb-Lsg"/>
                             <constraint firstItem="tLa-h8-geB" firstAttribute="trailing" secondItem="KSk-zz-gqD" secondAttribute="trailing" constant="-20" id="xZy-95-sLi"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="bottom" secondItem="oX6-RR-eA2" secondAttribute="bottom" id="zVD-ll-0K8"/>
@@ -1411,7 +1425,7 @@ Cgo
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOx-IT-pkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1655" y="1152"/>
+            <point key="canvasLocation" x="1653.5999999999999" y="1151.8740629685158"/>
         </scene>
         <!--FHE-->
         <scene sceneID="Lwj-uJ-db0">
@@ -1471,17 +1485,6 @@ Cgo
                                                                 <constraint firstAttribute="width" secondItem="a5r-10-Euo" secondAttribute="height" multiplier="1:1" id="WWy-I1-J7R"/>
                                                                 <constraint firstAttribute="height" constant="30" id="rkd-4y-ngX"/>
                                                             </constraints>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                    <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                    <real key="value" value="15"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="&quot;Thank you.&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GS-wz-hxg">
                                                             <rect key="frame" x="37" y="0.0" width="263.5" height="30"/>
@@ -2535,18 +2538,18 @@ I spent a lot of time and effort building something I thought would be both help
                         <sections>
                             <tableViewSection id="c79-aN-Y3T">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="178" id="yzm-9I-ttL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="yzm-9I-ttL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yzm-9I-ttL" id="u4t-a5-YHP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="178"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yis-LW-9iE">
-                                                    <rect key="frame" x="24" y="12" width="327" height="154"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="143"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS5-Vm-x69" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="154"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="143"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2567,7 +2570,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RylanEvans.com" translatesAutoresizingMaskIntoConstraints="NO" id="axk-2H-13r">
-                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="154"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="143"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="axk-2H-13r" secondAttribute="height" multiplier="327:154" id="Gc1-Aa-uuR"/>
+                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
@@ -2608,7 +2614,7 @@ I spent a lot of time and effort building something I thought would be both help
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="367" id="hga-oJ-3hc">
-                                        <rect key="frame" x="0.0" y="178" width="375" height="367"/>
+                                        <rect key="frame" x="0.0" y="44" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hga-oJ-3hc" id="tLx-Pm-PfQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
@@ -2640,6 +2646,9 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BSS" translatesAutoresizingMaskIntoConstraints="NO" id="uqh-y8-pHW">
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="342.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="uqh-y8-pHW" secondAttribute="height" multiplier="109:114" id="Jq7-md-r8V"/>
+                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
@@ -2671,7 +2680,7 @@ I spent a lot of time and effort building something I thought would be both help
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="367" id="fiX-st-Rsb">
-                                        <rect key="frame" x="0.0" y="545" width="375" height="367"/>
+                                        <rect key="frame" x="0.0" y="411" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fiX-st-Rsb" id="6yv-up-ZRf">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
@@ -2703,6 +2712,9 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FHE Icon" translatesAutoresizingMaskIntoConstraints="NO" id="3vm-0h-JiV">
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="342.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="3vm-0h-JiV" secondAttribute="height" multiplier="109:114" id="EBO-Hp-wUe"/>
+                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
@@ -2743,7 +2755,7 @@ I spent a lot of time and effort building something I thought would be both help
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="tsw-Bw-5EM">
-                                        <rect key="frame" x="0.0" y="912" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="778" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tsw-Bw-5EM" id="Rbo-qa-lXg">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
@@ -2775,6 +2787,9 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subscribe-1" translatesAutoresizingMaskIntoConstraints="NO" id="PiM-pc-ojP">
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="107"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="PiM-pc-ojP" secondAttribute="height" multiplier="327:107" id="TTD-Nh-sCk"/>
+                                                            </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
@@ -2835,6 +2850,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Close" width="267" height="267"/>
         <image name="Council" width="68" height="52"/>
         <image name="Discloser" width="67" height="117"/>
+        <image name="Edit" width="498" height="498"/>
         <image name="Evans" width="684" height="1013"/>
         <image name="FHE Icon" width="341" height="341"/>
         <image name="Family" width="84" height="80"/>
