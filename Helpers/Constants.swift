@@ -39,7 +39,8 @@ let topicsArray = [
                 "Care for the Poor & Needy"
 ]
 
-let songBooksArray = ["Children's Song Book", "Hymn Book"]
+let songBooksArray = ["Children's", "Hymn"]
+//["Children's Songbook", "Hymns"]
 
 let scriptureVolumesArray = ["Old Testament", "New Testament", "Book of Mormon", "Doctrine and Covenants", "Pearl of Great Price"]
 

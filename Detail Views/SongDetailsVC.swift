@@ -21,6 +21,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var songBookTextField: UITextField!
     @IBOutlet weak var songNumberTextField: UITextField!
     @IBOutlet weak var songURLTextField: UITextField!
+    @IBOutlet weak var songOnDeckImage: UIImageView!
     
     var songBooks = songBooksArray
     var songTopics = topicsArray
@@ -56,20 +57,20 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         //        songTopicPicker.frame.size.height = 225
         
         songTitleTextField.delegate = self
-        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "When There's Love At Home", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
+        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "Love At Home", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songTitleTextField.inputAccessoryView = toolBar
         
         songBookTextField.delegate = self
-        songBookTextField.attributedPlaceholder = NSAttributedString(string: "Hymn or Children's Book", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
+        songBookTextField.attributedPlaceholder = NSAttributedString(string: "Hymns or Children's", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songBookTextField.inputView = songBookPicker
 //        songBookTextField.inputAccessoryView = toolBar
         
         songNumberTextField.delegate = self
-        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "33", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
+        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "294", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songNumberTextField.inputAccessoryView = toolBar
         
         songURLTextField.delegate = self
-        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
+        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
         songURLTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
@@ -145,6 +146,11 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         }
     }
     
+    @IBAction func songOnDeckPressed(_ sender: Any) {
+        playClick()
+    }
+    
+    
 //    func getTopics() {
 //        let fetchRequest: NSFetchRequest<Topic> = Topic.fetchRequest()
 //
@@ -193,12 +199,12 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func loadSongData() {
         if let song = songToEdit {
-            
             songTopicTextField.text = song.topic
             songTitleTextField.text = song.title
             songBookTextField.text = song.book
             songNumberTextField.text = song.number
             songURLTextField.text = song.url
+            textFieldDidEndEditing(songTitleTextField)
         }
     }
     

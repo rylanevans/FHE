@@ -43,7 +43,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         memberAgeText.inputAccessoryView = toolBar
         memberNameText.inputAccessoryView = toolBar
         
-        checkValidMemberName()
+        checkValidName()
         
         if memberToEdit != nil {
             loadMemberData()
@@ -59,7 +59,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        checkValidMemberName()
+        checkValidName()
         switch (textField.tag) {
         case 1:
             navigationItem.title = textField.text
@@ -74,7 +74,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         saveButton.isEnabled = false
     }
     
-    func checkValidMemberName() {
+    func checkValidName() {
         // Disable the Save button if the text field is empty.
         let text = memberNameText.text ?? ""
         saveButton.isEnabled = !text.isEmpty
