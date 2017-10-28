@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import CoreData
 
-class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, MemberTitleCellDelegate {
+class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
+    @IBOutlet weak var segment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +37,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.item == 0 {
-            let titleCell = tableView.dequeueReusableCell(withIdentifier: "MemberTitleCell", for: indexPath) as! MemberTitleCell
-            configureMemberTitleCell(cell: titleCell, indexPath: indexPath as NSIndexPath)
-            return titleCell
-        } else {
-            let detailCell = tableView.dequeueReusableCell(withIdentifier: "MemberDetailCell", for: indexPath) as! MemberDetailCell
-            configureMemberDetailCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
-            return detailCell
-        }
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "FamilyCell", for: indexPath) as! FamilyCell
+        configureFamilyCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        return detailCell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,14 +58,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         return 0
     }
     
-    func configureMemberTitleCell(cell: MemberTitleCell, indexPath: NSIndexPath) {
+    func configureFamilyCell(cell: FamilyCell, indexPath: NSIndexPath) {
         let member = memberController.object(at: indexPath as IndexPath)
-        cell.configureMemberTitleCell(member: member)
-    }
-    
-    func configureMemberDetailCell(cell: MemberDetailCell, indexPath: NSIndexPath) {
-        let member = memberController.object(at: indexPath as IndexPath)
-        cell.configureMemberDetailCell(member: member)
+        cell.configureFamilyCell(member: member)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,7 +83,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     
     // MARK: - TitleTableViewCellDelegate
     
-    func segmentChanged(_ sender: MemberTitleCell) {
+    func segmentChanged(_ sender: Any) {
         // Tyring to save to CoreData with this action and fetch it when sorting through memberAttemptFetch()
         
         //        let sortBy = Task(context: context)
@@ -166,11 +156,11 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             break
         case.update:
             if let indexPath = indexPath {
-                let cellDetail = tableView.cellForRow(at: indexPath) as! MemberDetailCell
-                configureMemberDetailCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                let cellDetail = tableView.cellForRow(at: indexPath) as! FamilyCell
+                configureFamilyCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
                 
-                let cellTitle = tableView.cellForRow(at: indexPath) as! MemberTitleCell
-                configureMemberTitleCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                let cellTitle = tableView.cellForRow(at: indexPath) as! FamilyCell
+                configureFamilyCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
             }
             break
         case.move:

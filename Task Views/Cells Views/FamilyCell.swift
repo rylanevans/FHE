@@ -1,5 +1,5 @@
 //
-//  MemberDetailCell.swift
+//  FamilyCell.swift
 //  FHE
 //
 //  Created by Rylan Evans on 10/24/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemberDetailCell: UITableViewCell {
+class FamilyCell: UITableViewCell {
     @IBOutlet weak var memberImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var attendingSwitch: UISwitch!
@@ -24,7 +24,7 @@ class MemberDetailCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureMemberDetailCell(member: Member) {
+    func configureFamilyCell(member: Member) {
         let name = member.name ?? ""
         let photo = member.photo ?? #imageLiteral(resourceName: "NoPhoto")
         let attending = member.attending
