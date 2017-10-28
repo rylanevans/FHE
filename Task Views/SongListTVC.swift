@@ -11,8 +11,9 @@ import UIKit
 import CoreData
 
 class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongTitleCellDelegate {
-    
-    @IBOutlet weak var manuallyAssignMemberImage: UIImageView!
+    @IBOutlet weak var songAssigneeMemberImage: UIImageView!
+    @IBOutlet weak var songAssigneeLabel: UILabel!
+    @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var memberPicker: UIPickerView!
     
     
@@ -69,8 +70,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         configureSongTitleCell(cell: titleCell, indexPath: indexPath as NSIndexPath)
         return titleCell
         } else {
-        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongDetailCell", for: indexPath) as! SongDetailCell
-        configureSongDetailCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
+        configureSongCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
         return detailCell
         }
     }
@@ -96,9 +97,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         cell.configureSongTitleCell(song: song)
     }
     
-    func configureSongDetailCell(cell: SongDetailCell, indexPath: NSIndexPath) {
+    func configureSongCell(cell: SongCell, indexPath: NSIndexPath) {
         let song = songController.object(at: indexPath as IndexPath)
-        cell.configureSongDetailCell(song: song)
+        cell.configureSongCell(song: song)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -215,8 +216,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             break
         case.update:
             if let indexPath = indexPath {
-                let cellDetail = tableView.cellForRow(at: indexPath) as! SongDetailCell
-                configureSongDetailCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                let cellDetail = tableView.cellForRow(at: indexPath) as! SongCell
+                configureSongCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
 
                 let cellTitle = tableView.cellForRow(at: indexPath) as! SongTitleCell
                 configureSongTitleCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)

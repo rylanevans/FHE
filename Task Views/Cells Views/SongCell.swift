@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SongDetailCell: UITableViewCell {
-    
+class SongCell: UITableViewCell {
+    @IBOutlet weak var onDeckImage: UIImageView!
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookLabel: UILabel!
@@ -26,7 +26,11 @@ class SongDetailCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureSongDetailCell(song: Song) {
+    @IBAction func onDeckButtonPressed(_ sender: Any) {
+    }
+    
+    
+    func configureSongCell(song: Song) {
         let topic = song.topic ?? "Topic"
         let title = song.title ?? "Title"
         let number = song.number ?? "NA"
