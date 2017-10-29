@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongTitleCellDelegate {
+class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
     @IBOutlet weak var songAssigneeMemberImage: UIImageView!
     @IBOutlet weak var songAssigneeLabel: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -65,15 +65,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // MARK: - Table view data source
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.item == 0 {
-        let titleCell = tableView.dequeueReusableCell(withIdentifier: "SongTitleCell", for: indexPath) as! SongTitleCell
-        configureSongTitleCell(cell: titleCell, indexPath: indexPath as NSIndexPath)
-        return titleCell
-        } else {
         let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
         configureSongCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
         return detailCell
-        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,11 +84,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             return sections.count
         }
         return 0
-    }
-    
-    func configureSongTitleCell(cell: SongTitleCell, indexPath: NSIndexPath) {
-        let song = songController.object(at: indexPath as IndexPath)
-        cell.configureSongTitleCell(song: song)
     }
     
     func configureSongCell(cell: SongCell, indexPath: NSIndexPath) {
@@ -135,7 +124,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         // Set photoImageView to display the selected image.
-        manuallyAssignMemberImage.image = selectedImage
+        songAssigneeMemberImage.image = selectedImage
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
@@ -143,8 +132,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - TitleTableViewCellDelegate
     
-    func segmentChanged(_ sender: SongTitleCell) {
-        // Tyring to save to CoreData with this action and fetch it when sorting through attemptFetch()
+
+    @IBAction func segmentChanged(_ sender: Any) {
+        playClick()
+    // Tyring to save to CoreData with this action and fetch it when sorting through attemptFetch()
 
 //        let sortBy = Task(context: context)
 //        sortBy.sort = "order"
@@ -218,9 +209,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             if let indexPath = indexPath {
                 let cellDetail = tableView.cellForRow(at: indexPath) as! SongCell
                 configureSongCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
-
-                let cellTitle = tableView.cellForRow(at: indexPath) as! SongTitleCell
-                configureSongTitleCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
             }
             break
         case.move:
