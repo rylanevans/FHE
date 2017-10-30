@@ -152,7 +152,7 @@ Family Member
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-h6-wex">
                                             <rect key="frame" x="5" y="2.5" width="365" height="51"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
                                                     <rect key="frame" x="5" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="TC3-Qb-2tK"/>
@@ -1133,6 +1133,7 @@ Family Member
         <image name="Discloser" width="67" height="117"/>
         <image name="Missing Profile" width="770" height="770"/>
         <image name="MusicBG" width="2188" height="1458"/>
+        <image name="NotSelected" width="256" height="256"/>
         <image name="Recycle-25" width="18" height="17"/>
         <image name="Selected" width="256" height="256"/>
     </resources>

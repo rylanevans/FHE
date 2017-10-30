@@ -30,6 +30,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
 //        generatedTestSong()
         attemptFetch()
+        tableView.reloadData()
     }
     
     
@@ -63,11 +64,49 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     
     // MARK: - Table view data source
-        
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
-        configureSongCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
-        return detailCell
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch segment.selectedSegmentIndex {
+        case 0: return "Sorted By Date Created"
+        case 1: return "Sorted Alphabetically"
+        case 2:
+            guard let sections = songController.sections, let index = Int(sections[section].name) else {return nil}
+            switch index {
+            case 0: return "0"
+            case 1: return "1"
+            case 2: return "2"
+            case 3: return "3"
+            case 4: return "4"
+            case 5: return "5"
+            default: return ">5"
+            }
+        default: return "No Header"
+        }
+
+//        guard let sections = songController.sections,
+//            let index = Int(sections[section].name) else {return nil}
+//        if index == 0 {
+//            return "0"
+//        } else if index == 1 {
+//            return "1"
+//        } else if index == 2 {
+//            return "2"
+//        } else if index == 3 {
+//            return "3"
+//        } else if index == 4 {
+//            return "4"
+//        } else if index == 5 {
+//            return "5"
+//        } else {
+//            return ">5"
+//        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if let sections = songController.sections {
+            return sections.count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,17 +117,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
         return 0
     }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = songController.sections {
-            return sections.count
-        }
-        return 0
-    }
-    
-    func configureSongCell(cell: SongCell, indexPath: NSIndexPath) {
-        let song = songController.object(at: indexPath as IndexPath)
-        cell.configureSongCell(song: song)
+        
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
+        configureSongCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        return detailCell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -96,6 +129,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             let song = objects[indexPath.row]
             performSegue(withIdentifier: "SongDetailsVCExisting", sender: song)
         }
+    }
+    
+    func configureSongCell(cell: SongCell, indexPath: NSIndexPath) {
+        let song = songController.object(at: indexPath as IndexPath)
+        cell.configureSongCell(song: song)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -135,7 +173,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
 
     @IBAction func segmentChanged(_ sender: Any) {
         playClick()
-    // Tyring to save to CoreData with this action and fetch it when sorting through attemptFetch()
+        attemptFetch()
+        tableView.reloadData()
 
 //        let sortBy = Task(context: context)
 //        sortBy.sort = "order"
@@ -148,38 +187,79 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     var songController: NSFetchedResultsController<Song>!
     
     func attemptFetch() {
-    
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
-//        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
-//        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [sortByOrder]
         
-//        if SongTitleCell.shared.segment.selectedSegmentIndex == 0 {
-//            fetchRequest.sortDescriptors = [sortByDate]
-//            print("Sort by Created")
-//        } else if SongTitleCell.shared.segment.selectedSegmentIndex == 1 {
-//            fetchRequest.sortDescriptors = [sortByTitle]
-//            print("Sort by Title")
-//        } else if SongTitleCell.shared.segment.selectedSegmentIndex == 2 {
-//            fetchRequest.sortDescriptors = [sortByOrder]
-//            print("Sort by Order")
-//        } else {
-//            fetchRequest.sortDescriptors = [sortByOrder]
-//        }
-        
-        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        
-        controller.delegate = self
-        
-        self.songController = controller
-        
-        do {
-            try controller.performFetch()
-        } catch {
-            let error = error as NSError
-            print("\(error)")
+        if segment.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [sortByDate]
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "dateCreated", cacheName: nil)
+            
+            controller.delegate = self
+            
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 1 {
+            fetchRequest.sortDescriptors = [sortByTitle]
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "title", cacheName: nil)
+            
+            controller.delegate = self
+            
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [sortByOrder]
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
+            
+            controller.delegate = self
+            
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+        } else if segment.selectedSegmentIndex == 3 {
+            fetchRequest.sortDescriptors = nil
+//            useRandom = YES
+//            self.fetchedResultsController = nil
+//            [self.tableView reload Data]
+        } else {
+            fetchRequest.sortDescriptors = [sortByOrder]
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
+            
+            controller.delegate = self
+            
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
         }
     }
     
@@ -224,27 +304,27 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func generatedTestSong() {
         let song1 = Song(context: context)
-        song1.order = 3
+        song1.order = 1
         song1.book = songBooksArray[0]
         song1.number = "201"
         song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song1.title = "Nearer My God To Thee"
+        song1.title = "😇 Nearer My God To Thee"
         song1.topic = "Atonement"
         
         let song2 = Song(context: context)
-        song2.order = 1
+        song2.order = 2
         song2.book = songBooksArray[1]
         song2.number = "86"
         song2.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song2.title = "A Poor Wayfaring Man of Grief"
+        song2.title = "😩 A Poor Wayfaring Man of Grief"
         song2.topic = "God Head"
         
         let song3 = Song(context: context)
-        song3.order = 2
+        song3.order = 3
         song3.book = songBooksArray[0]
         song3.number = "57"
         song3.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song3.title = "High on the Mountain Top"
+        song3.title = "🏔 High on the Mountain Top"
         song3.topic = "Perfect the Saints"
         
         ad.saveContext()

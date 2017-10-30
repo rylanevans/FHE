@@ -14,15 +14,15 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -35,10 +35,13 @@ class SongCell: UITableViewCell {
         let title = song.title ?? "Title"
         let number = song.number ?? "NA"
         let book = song.book ?? "Book"
+        let onDeck = song.selected
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
         numberLabel.text = "#\(number)"
         bookLabel.text = book
+        if onDeck == true {
+            onDeckImage.image = #imageLiteral(resourceName: "Selected")
+        }
     }
 }
-

@@ -2519,10 +2519,10 @@ I spent a lot of time and effort building something I thought would be both help
             </objects>
             <point key="canvasLocation" x="-1199" y="1170"/>
         </scene>
-        <!--Other Apps-->
+        <!--Developer-->
         <scene sceneID="d7Q-1X-TVt">
             <objects>
-                <tableViewController storyboardIdentifier="OtherApps" id="zHT-LK-G62" customClass="OtherAppsTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Developer" id="zHT-LK-G62" customClass="DeveloperTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J8x-Xa-CSB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2777,7 +2777,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subscribe-1" translatesAutoresizingMaskIntoConstraints="NO" id="PiM-pc-ojP">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="PiM-pc-ojP">
                                                             <rect key="frame" x="0.0" y="0.0" width="327" height="107"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="PiM-pc-ojP" secondAttribute="height" multiplier="327:107" id="TTD-Nh-sCk"/>
@@ -2812,6 +2812,72 @@ I spent a lot of time and effort building something I thought would be both help
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="IeE-rX-NmX">
+                                        <rect key="frame" x="0.0" y="909" width="375" height="131"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IeE-rX-NmX" id="deE-wR-CJ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-Ke-WNz">
+                                                    <rect key="frame" x="24" y="12" width="327" height="107"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-0e-Qoe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="107"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                    <size key="value" width="-1" height="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-qq-gbr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="107"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Nye-qq-gbr" secondAttribute="height" multiplier="327:107" id="XVw-Sc-itt"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="JaW-0e-Qoe" firstAttribute="trailing" secondItem="Nye-qq-gbr" secondAttribute="trailing" id="I7s-M0-5oz"/>
+                                                        <constraint firstItem="JaW-0e-Qoe" firstAttribute="top" secondItem="Nye-qq-gbr" secondAttribute="top" id="OUn-jQ-BrS"/>
+                                                        <constraint firstItem="Nye-qq-gbr" firstAttribute="leading" secondItem="fJI-Ke-WNz" secondAttribute="leading" id="YzO-bB-d5Q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Nye-qq-gbr" secondAttribute="trailing" id="amQ-uM-PR9"/>
+                                                        <constraint firstItem="JaW-0e-Qoe" firstAttribute="bottom" secondItem="Nye-qq-gbr" secondAttribute="bottom" id="dRY-TA-oFL"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Nye-qq-gbr" secondAttribute="bottom" id="f9f-zq-g3E"/>
+                                                        <constraint firstItem="JaW-0e-Qoe" firstAttribute="leading" secondItem="Nye-qq-gbr" secondAttribute="leading" id="lXm-pC-nnO"/>
+                                                        <constraint firstItem="Nye-qq-gbr" firstAttribute="top" secondItem="fJI-Ke-WNz" secondAttribute="top" id="x35-p0-UIn"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="fJI-Ke-WNz" firstAttribute="top" secondItem="deE-wR-CJ2" secondAttribute="top" constant="12" id="DwZ-mm-ytK"/>
+                                                <constraint firstItem="fJI-Ke-WNz" firstAttribute="leading" secondItem="deE-wR-CJ2" secondAttribute="leading" constant="24" id="MSw-NN-NFw"/>
+                                                <constraint firstAttribute="trailing" secondItem="fJI-Ke-WNz" secondAttribute="trailing" constant="24" id="TrG-Gr-NrX"/>
+                                                <constraint firstAttribute="bottom" secondItem="fJI-Ke-WNz" secondAttribute="bottom" constant="12" id="f9b-Df-mSh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -2820,7 +2886,7 @@ I spent a lot of time and effort building something I thought would be both help
                             <outlet property="delegate" destination="zHT-LK-G62" id="cxT-b8-Hhf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Other Apps" id="7eX-Hz-ion"/>
+                    <navigationItem key="navigationItem" title="Developer Details" id="7eX-Hz-ion"/>
                     <connections>
                         <outlet property="tableCell" destination="yis-LW-9iE" id="vmQ-vG-6om"/>
                     </connections>
@@ -2861,6 +2927,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Missing Profile" width="770" height="770"/>
         <image name="More25" width="26" height="8"/>
         <image name="MoreFilled25" width="25" height="7"/>
+        <image name="Patreon" width="500" height="254"/>
         <image name="PositiveFeedback" width="44" height="43"/>
         <image name="Prayer" width="48" height="79"/>
         <image name="Profile" width="68" height="72"/>
@@ -2877,7 +2944,6 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Song" width="44" height="80"/>
         <image name="Spotlight" width="62" height="66"/>
         <image name="Subscribe" width="76" height="72"/>
-        <image name="Subscribe-1" width="166" height="50"/>
         <image name="Suggestions" width="84" height="85"/>
         <image name="Tasks25" width="25" height="25"/>
         <image name="TasksFilled25" width="25" height="25"/>
@@ -2885,6 +2951,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Thank you" width="200" height="200"/>
         <image name="Thought" width="78" height="73"/>
         <image name="Treat" width="72" height="78"/>
+        <image name="Twitter" width="1200" height="628"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fh2-ar-ueD"/>

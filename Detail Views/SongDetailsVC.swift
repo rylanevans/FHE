@@ -26,7 +26,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     var songBooks = songBooksArray
     var songTopics = topicsArray
     var songToEdit: Song?
-    var songAssignment: Song?
+    var songAssignment: Task?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
@@ -205,6 +204,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             songNumberTextField.text = song.number
             songURLTextField.text = song.url
             textFieldDidEndEditing(songTitleTextField)
+            
+            
         }
     }
     
