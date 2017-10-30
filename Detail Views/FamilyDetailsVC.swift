@@ -141,7 +141,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
-        let member: Member!
+        var member: Member!
         
         if memberToEdit == nil {
             member = Member(context: context)
@@ -168,6 +168,8 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         }
         
         ad.saveContext()
+        
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func loadMemberData() {

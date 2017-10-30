@@ -33,7 +33,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         tableView.reloadData()
     }
     
-    
     // MARK: - Picker View Set up
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -65,43 +64,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch segment.selectedSegmentIndex {
-        case 0: return "Sorted By Date Created"
-        case 1: return "Sorted Alphabetically"
-        case 2:
-            guard let sections = songController.sections, let index = Int(sections[section].name) else {return nil}
-            switch index {
-            case 0: return "0"
-            case 1: return "1"
-            case 2: return "2"
-            case 3: return "3"
-            case 4: return "4"
-            case 5: return "5"
-            default: return ">5"
-            }
-        default: return "No Header"
-        }
-
-//        guard let sections = songController.sections,
-//            let index = Int(sections[section].name) else {return nil}
-//        if index == 0 {
-//            return "0"
-//        } else if index == 1 {
-//            return "1"
-//        } else if index == 2 {
-//            return "2"
-//        } else if index == 3 {
-//            return "3"
-//        } else if index == 4 {
-//            return "4"
-//        } else if index == 5 {
-//            return "5"
-//        } else {
-//            return ">5"
-//        }
-    }
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = songController.sections {
             return sections.count
@@ -117,7 +79,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
         return 0
     }
-        
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let detailCell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
         configureSongCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
@@ -170,16 +132,16 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - TitleTableViewCellDelegate
     
-
+    
     @IBAction func segmentChanged(_ sender: Any) {
         playClick()
         attemptFetch()
         tableView.reloadData()
-
-//        let sortBy = Task(context: context)
-//        sortBy.sort = "order"
-//        ad.saveContext()
-//        tableView.reloadData()
+        
+        //        let sortBy = Task(context: context)
+        //        sortBy.sort = "order"
+        //        ad.saveContext()
+        //        tableView.reloadData()
     }
     
     // MARK: - Boiler Code for Core Data
@@ -190,7 +152,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
         let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
-        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
+        let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+        let sortByTopic = NSSortDescriptor(key: "topic", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
@@ -226,9 +189,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByOrder]
+            fetchRequest.sortDescriptors = [sortByTopic]
             
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "topic", cacheName: nil)
             
             controller.delegate = self
             
@@ -241,11 +204,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 print("\(error)")
             }
         } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = nil
-//            useRandom = YES
-//            self.fetchedResultsController = nil
-//            [self.tableView reload Data]
-        } else {
             fetchRequest.sortDescriptors = [sortByOrder]
             
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
@@ -260,6 +218,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 let error = error as NSError
                 print("\(error)")
             }
+        } else {
+            fetchRequest.sortDescriptors = nil
         }
     }
     
@@ -308,7 +268,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         song1.book = songBooksArray[0]
         song1.number = "201"
         song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song1.title = "😇 Nearer My God To Thee"
+        song1.title = "Nearer My God To Thee"
         song1.topic = "Atonement"
         
         let song2 = Song(context: context)
@@ -316,7 +276,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         song2.book = songBooksArray[1]
         song2.number = "86"
         song2.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song2.title = "😩 A Poor Wayfaring Man of Grief"
+        song2.title = "A Poor Wayfaring Man of Grief"
         song2.topic = "God Head"
         
         let song3 = Song(context: context)
@@ -324,7 +284,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         song3.book = songBooksArray[0]
         song3.number = "57"
         song3.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song3.title = "🏔 High on the Mountain Top"
+        song3.title = "High on the Mountain Top"
         song3.topic = "Perfect the Saints"
         
         ad.saveContext()

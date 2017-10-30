@@ -79,7 +79,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             loadSongData()
         }
     }
-    
+        
     // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -165,7 +165,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         playClick()
         
-        let song: Song!
+        var song: Song!
         
         if songToEdit == nil {
             song = Song(context: context)
@@ -194,6 +194,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         }
         
         ad.saveContext()
+        
+//        _ = navigationController?.popViewController(animated: true)
     }
     
     func loadSongData() {
@@ -204,8 +206,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             songNumberTextField.text = song.number
             songURLTextField.text = song.url
             textFieldDidEndEditing(songTitleTextField)
-            
-            
         }
     }
     
