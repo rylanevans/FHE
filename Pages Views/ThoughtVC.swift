@@ -22,7 +22,7 @@ class ThoughtVC: UIViewController {
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
         //        playClick()
-        let URL = NSURL(string: "https://media.giphy.com/media/l44QkVjrTiBgettq8/giphy.gif")!
+        let URL = NSURL(string: "https://media.giphy.com/media/3o85xsGXVuYh8lM3EQ/giphy.gif")!
         let thoughtWebVC = SFSafariViewController(url: URL as URL)
         thoughtWebVC.delegate = self
         

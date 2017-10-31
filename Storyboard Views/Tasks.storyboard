@@ -43,7 +43,7 @@
                                     </constraints>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-4T-Nj7">
-                                    <rect key="frame" x="10" y="155" width="355" height="35"/>
+                                    <rect key="frame" x="10" y="154.5" width="355" height="35"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -77,6 +77,7 @@ Family Member
                                             <segments>
                                                 <segment title="Created"/>
                                                 <segment title="Title"/>
+                                                <segment title="Topic"/>
                                                 <segment title="Random"/>
                                                 <segment title="Manual"/>
                                                 <segment title="Off"/>
@@ -462,7 +463,7 @@ Family Member
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-Qm-UUX">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-Qm-UUX">
                                                         <rect key="frame" x="196" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="m60-Vz-SXO"/>
@@ -508,7 +509,6 @@ Family Member
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="deleteButtonPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="vQm-Ia-BNO"/>
                                                     <action selector="saveButtonPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="JPx-jU-vER"/>
                                                 </connections>
                                             </button>
@@ -1135,7 +1135,6 @@ Family Member
         <image name="MusicBG" width="2188" height="1458"/>
         <image name="NotSelected" width="256" height="256"/>
         <image name="Recycle-25" width="18" height="17"/>
-        <image name="Selected" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6XO-GI-9PR"/>

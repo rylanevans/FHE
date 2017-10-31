@@ -149,18 +149,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         playClick()
     }
     
-    
-//    func getTopics() {
-//        let fetchRequest: NSFetchRequest<Topic> = Topic.fetchRequest()
-//
-//        do {
-//            self.songTopics = try context.fetch(fetchRequest)
-//            self.songTopicPicker.reloadAllComponents()
-//        } catch {
-//            // handle the error
-//        }
-//    }
-    
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         playClick()
@@ -195,7 +183,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         ad.saveContext()
         
-//        _ = navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func loadSongData() {
@@ -205,6 +193,12 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             songBookTextField.text = song.book
             songNumberTextField.text = song.number
             songURLTextField.text = song.url
+
+            let onDeck = song.selected
+            if onDeck == true {
+                songOnDeckImage.image = #imageLiteral(resourceName: "Selected")
+            }
+            
             textFieldDidEndEditing(songTitleTextField)
         }
     }

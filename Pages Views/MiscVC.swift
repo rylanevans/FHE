@@ -22,7 +22,7 @@ class MisVC: UIViewController {
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
         //        playClick()
-        let URL = NSURL(string: "https://media.giphy.com/media/3o85xsGXVuYh8lM3EQ/giphy.gif")!
+        let URL = NSURL(string: "https://www.youtube.com/watch?v=nomxXk6Q1rk")!
         let miscWebVC = SFSafariViewController(url: URL as URL)
         miscWebVC.delegate = self
         

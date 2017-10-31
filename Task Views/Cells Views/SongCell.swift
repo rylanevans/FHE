@@ -30,11 +30,11 @@ class SongCell: UITableViewCell {
     }
     
     
-    func configureSongCell(song: Song) {
+    func configureCell(song: Song) {
         let topic = song.topic ?? "Topic"
-        let title = song.title ?? "Title"
+        let title = song.title
         let number = song.number ?? "NA"
-        let book = song.book ?? "Book"
+        let book = song.book
         let onDeck = song.selected
         topicLabel.text = "\(topic)   "
         titleLabel.text = title

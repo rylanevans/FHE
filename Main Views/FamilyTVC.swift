@@ -36,10 +36,11 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let detailCell = tableView.dequeueReusableCell(withIdentifier: "FamilyCell", for: indexPath) as! FamilyCell
-        configureFamilyCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
-        return detailCell
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if let sections = memberController.sections {
+            return sections.count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,11 +52,14 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         return 0
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = memberController.sections {
-            return sections.count
-        }
-        return 0
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let detailCell = tableView.dequeueReusableCell(withIdentifier: "FamilyCell", for: indexPath) as! FamilyCell
+        configureFamilyCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        return detailCell
     }
     
     func configureFamilyCell(cell: FamilyCell, indexPath: NSIndexPath) {
