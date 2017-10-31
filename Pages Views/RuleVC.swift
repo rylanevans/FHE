@@ -26,7 +26,7 @@ class RuleVC: UIViewController {
         let ruleWebVC = SFSafariViewController(url: URL as URL)
         ruleWebVC.delegate = self
         
-        present(thoughtWebVC, animated: true, completion: nil)
+        present(ruleWebVC, animated: true, completion: nil)
     }
 
     @IBAction func closeButtonPressed(_ sender: Any) {

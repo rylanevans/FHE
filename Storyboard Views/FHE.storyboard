@@ -74,17 +74,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e22-Db-rio" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="5EV-Ft-t00"/>
+                                                            <constraint firstAttribute="width" constant="20" id="5EV-Ft-t00"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="FeG-NR-4pK">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6e-j7-Mck" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
@@ -111,7 +111,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU8-4P-qyl" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="wlA-44-J9I"/>
@@ -121,7 +121,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="y1v-PS-Cq8">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.4755483865737915" blue="0.99112838506698608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -418,17 +418,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EX-OT-AE9" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="fJC-T4-2ep"/>
+                                                            <constraint firstAttribute="width" constant="20" id="fJC-T4-2ep"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fXQ-I4-Srg">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-Dr-N6f" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
@@ -455,7 +455,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGD-z0-dCa" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="HRk-G6-2Wb"/>
@@ -465,7 +465,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hymn" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-LU-SQb">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -772,17 +772,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGf-yb-qzg" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="F1s-mc-ti7"/>
+                                                            <constraint firstAttribute="width" constant="20" id="F1s-mc-ti7"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="YOt-D6-hE1">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-bT-HfV" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
@@ -809,7 +809,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64J-Oi-9jg" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="fgS-GH-kaa"/>
@@ -819,7 +819,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8Ih-hg-Odg">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1113,17 +1113,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOL-bh-pfq" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="Rna-mp-fAI"/>
+                                                            <constraint firstAttribute="width" constant="20" id="Rna-mp-fAI"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Jwp-kW-ON7">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80C-DS-wde" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11.333333333333314"/>
@@ -1150,7 +1150,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyc-7y-0pC" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="nxN-lu-Sff"/>
@@ -1160,7 +1160,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="cwD-eT-u4s">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1471,17 +1471,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jw-7b-XnC" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="NOX-39-MXZ"/>
+                                                            <constraint firstAttribute="width" constant="20" id="NOX-39-MXZ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="wo0-dJ-dtM">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-o9-roK" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11.666666666666686"/>
@@ -1508,7 +1508,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OP-4Y-GcC" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="9nB-cy-d92"/>
@@ -1518,7 +1518,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planning" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="9gy-gL-v1C">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1805,17 +1805,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sld-dY-TY5" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="yaZ-G4-CbL"/>
+                                                            <constraint firstAttribute="width" constant="20" id="yaZ-G4-CbL"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="BI4-jI-3wC">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgb-uR-9og" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="13.666666666666686"/>
@@ -1842,7 +1842,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVh-Lg-sPJ" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="opk-YH-j1o"/>
@@ -1852,7 +1852,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Core Beliefs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="ICb-Ra-hyb">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2092,17 +2092,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQs-Aw-ZNg" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="RqT-BK-zXd"/>
+                                                            <constraint firstAttribute="width" constant="20" id="RqT-BK-zXd"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Ygt-dU-9ls">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGI-nn-i37" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="12.333333333333314"/>
@@ -2129,7 +2129,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeC-fr-3RY" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="H4n-6q-yex"/>
@@ -2139,7 +2139,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Affirmations" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="sS6-z8-RxA">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2402,17 +2402,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-Rq-pbc" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="qFJ-ux-aQ8"/>
+                                                            <constraint firstAttribute="width" constant="20" id="qFJ-ux-aQ8"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ITC-zM-K4L">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns0-S9-h5a" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="12"/>
@@ -2439,7 +2439,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-12-nUM" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="xFr-6c-WE8"/>
@@ -2449,7 +2449,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miscellaneous" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="blc-o3-HpQ">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2739,17 +2739,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mh-3C-uf5" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="1fd-1G-OIC"/>
+                                                            <constraint firstAttribute="width" constant="20" id="1fd-1G-OIC"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="1vg-0b-qMC">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j36-Qh-FfF" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11.666666666666686"/>
@@ -2776,7 +2776,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIT-NB-vRe" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="Hni-H6-fuQ"/>
@@ -2786,7 +2786,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idea(s)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="JT6-9U-oNA">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3071,17 +3071,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qk1-wi-bFb" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="STv-5I-XnZ"/>
+                                                            <constraint firstAttribute="width" constant="20" id="STv-5I-XnZ"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cdU-KB-8Ze">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7u-Vs-gVF" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11.333333333333314"/>
@@ -3108,7 +3108,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lw-vd-zc5" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="ID5-F8-51h"/>
@@ -3118,7 +3118,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-UB-lKM">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3404,17 +3404,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPy-Bg-XZs" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="J98-Et-abk"/>
+                                                            <constraint firstAttribute="width" constant="20" id="J98-Et-abk"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Cma-p5-Xif">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-G7-zSD" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="14.333333333333314"/>
@@ -3441,7 +3441,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6j-fT-uFJ" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="Uxe-u3-010"/>
@@ -3451,7 +3451,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discussion" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Y5t-u3-G8a">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3736,17 +3736,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fa-vA-eDw" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="3ee-Sa-1Pe"/>
+                                                            <constraint firstAttribute="width" constant="20" id="3ee-Sa-1Pe"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Gs4-gp-fkO">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-Y3-J19" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
@@ -3773,7 +3773,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fx-yF-KE1" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="1lb-gQ-keD"/>
@@ -3783,7 +3783,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rek-8Y-CcF">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4066,17 +4066,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJV-2v-nOi" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="2EE-lM-vl5"/>
+                                                            <constraint firstAttribute="width" constant="20" id="2EE-lM-vl5"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hiN-pM-QNr">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB0-Jd-3fM" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="10.666666666666686"/>
@@ -4103,7 +4103,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYI-0x-lKE" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="K6w-bf-xAi"/>
@@ -4113,7 +4113,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indoors" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="YFB-Ze-dIw">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4394,17 +4394,17 @@
                                                 <rect key="frame" x="0.0" y="303" width="414" height="65"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1m-JF-Egw" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="MzW-YK-F3u"/>
+                                                            <constraint firstAttribute="width" constant="20" id="MzW-YK-F3u"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VvA-ES-Lnp">
-                                                        <rect key="frame" x="10" y="0.0" width="40" height="65"/>
+                                                        <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofr-fD-lcC" userLabel="Spacer">
                                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
@@ -4431,7 +4431,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9De-a7-FVe" userLabel="Spacer">
-                                                        <rect key="frame" x="50" y="0.0" width="10" height="65"/>
+                                                        <rect key="frame" x="60" y="0.0" width="10" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="10" id="eSG-qc-51p"/>
@@ -4441,7 +4441,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baking" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-U6-Ab3">
-                                                        <rect key="frame" x="60" y="0.0" width="354" height="65"/>
+                                                        <rect key="frame" x="70" y="0.0" width="344" height="65"/>
                                                         <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
                                                         <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
