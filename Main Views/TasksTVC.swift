@@ -20,6 +20,7 @@ class TasksTVC: UITableViewController {
             NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
         print("Test")
+        print("2")
         
         clickSoundURL()
         
