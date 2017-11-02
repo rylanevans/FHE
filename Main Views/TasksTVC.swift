@@ -19,6 +19,7 @@ class TasksTVC: UITableViewController {
             NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0, green: 0.4755483866, blue: 0.9911283851, alpha: 1),
             NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
+        print("Test")
         
         clickSoundURL()
         
