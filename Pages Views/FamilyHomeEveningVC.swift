@@ -19,6 +19,11 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         
         self.dataSource = self
         self.delegate = self
+        
+        let pageControl: UIPageControl = UIPageControl.appearance(whenContainedInInstancesOf: [FamilyHomeEveningVC.self])
+        pageControl.pageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.01864526048, green: 0.4776622653, blue: 1, alpha: 1)
+        
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,
@@ -77,7 +82,9 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         let previousIndex = viewControllerIndex - 1
         
         guard previousIndex >= 0 else {
-            return orderedViewControllers.last
+            return nil
+            // if you want it to loop backwards return the following...
+            // return orderedViewControllers.last
         }
         
         guard orderedViewControllers.count > previousIndex else {
@@ -99,7 +106,9 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         let nextIndex = viewControllerIndex + 1
         
         guard nextIndex != orderedViewControllers.count else {
-            return orderedViewControllers.first
+            return nil
+            // if you want it to loop forward return the following...
+            // return orderedViewControllers.first
         }
         
         guard orderedViewControllers.count > nextIndex else {
@@ -110,14 +119,14 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     }
     
     
-    // MARK: - Page Controller show page dots on bottom
+    // MARK: - Page Controller show how many dots
     
     public func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return orderedViewControllers.count
     }
     
     
-    // MARK: - Page Controller show current location on dots
+    // MARK: - Page Controller show page dots on bottom
     
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
@@ -126,5 +135,6 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         }
         return firstViewControllerIndex
     }
+
 }
 
