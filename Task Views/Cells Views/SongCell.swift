@@ -30,9 +30,7 @@ class SongCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func onDeckButtonPressed(_ sender: Any) {
-        print("Was pressed")
-        
+    @IBAction func onDeckButtonPressed(_ sender: Any) {        
         if let delegate = delegate {
             delegate.onDeckCellButtonTapped(self)
         }

@@ -30,8 +30,9 @@ class TasksTVC: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let presentRandom = arc4random_uniform(5)
-        if presentRandom == UInt32(1) {
+//        let presentRandom = arc4random_uniform(5)
+//        if presentRandom == UInt32(1) {
+        if launchedCounter % 3 == 0 {
         performSegue(withIdentifier: "AboutMe", sender: nil)
         }
     }

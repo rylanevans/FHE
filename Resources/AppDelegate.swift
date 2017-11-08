@@ -14,14 +14,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         if let tabBar = self.window?.rootViewController as? UITabBarController {
             tabBar.selectedIndex = 2
         }
+        
+        increaseCounter()
+        
         return true
+    }
+    
+    func increaseCounter() {
+        // if counter = 0
+        let counter = Counter(context: context)
+        // if counter > 0
+        // counter.launched...
+        counter.launched += 1
+        ad.saveContext()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

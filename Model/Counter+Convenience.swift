@@ -11,10 +11,10 @@ import CoreData
 import UIKit
 
 extension Counter {
-    convenience init(numberOfTimesBeginWasPressed: Int64, in context:NSManagedObjectContext) {
+    convenience init(launched: Int64, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
-        self.numberOfTimesBeginWasPressed = numberOfTimesBeginWasPressed
+        self.launched = launched
     }
 }
