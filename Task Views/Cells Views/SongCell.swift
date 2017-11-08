@@ -7,6 +7,7 @@
 //
 
 import UIKit
+@IBDesignable
 
 class SongCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
@@ -15,9 +16,12 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     
+    var delegate: SongCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,6 +31,11 @@ class SongCell: UITableViewCell {
     }
     
     @IBAction func onDeckButtonPressed(_ sender: Any) {
+        print("Was pressed")
+        
+        if let delegate = delegate {
+            delegate.onDeckCellButtonTapped(self)
+        }
     }
     
     
@@ -42,6 +51,12 @@ class SongCell: UITableViewCell {
         bookLabel.text = book
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
+        } else {
+            onDeckImage.image = #imageLiteral(resourceName: "NotSelected")
         }
     }
+}
+
+protocol SongCellDelegate {
+    func onDeckCellButtonTapped(_ sender: SongCell)
 }

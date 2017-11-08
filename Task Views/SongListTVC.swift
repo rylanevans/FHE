@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
+class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongCellDelegate {
     @IBOutlet weak var songAssigneeMemberImage: UIImageView!
     @IBOutlet weak var songAssigneeLabel: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -27,7 +27,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         memberPicker.dataSource = self
         memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        generatedTestSong()
+//        generatedTestSong()
         attemptFetch()
         tableView.reloadData()
     }
@@ -115,6 +115,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         playClick()
     }
     
+    
+    
     // MARK: UIImagePickerControllerDelegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -141,6 +143,27 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         tableView.reloadData()
     }
     
+    func onDeckCellButtonTapped(_ sender: SongCell) {
+        guard let indexPath = tableView.indexPath(for: sender),
+            let song = songController.object(at: indexPath) as? Song else {return}
+        print("Button was pressed \(song)")
+        
+        if let objects = songController.fetchedObjects, objects.count > 0 {
+            let song = objects[indexPath.row]
+        onDeckToggle(song)
+        }
+        
+        attemptFetch()
+        tableView.reloadData()
+    }
+
+    func onDeckToggle(_ song: Song) {
+        song.selected = !song.selected
+        ad.saveContext()
+        attemptFetch()
+        tableView.reloadData()
+    }
+
     // MARK: - Boiler Code for Core Data
     
     var songController: NSFetchedResultsController<Song>!

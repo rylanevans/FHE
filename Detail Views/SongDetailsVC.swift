@@ -146,7 +146,11 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     @IBAction func songOnDeckPressed(_ sender: Any) {
-        playClick()
+        if songOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
+            songOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
+        } else {
+            songOnDeckImage.image = #imageLiteral(resourceName: "Selected")
+        }
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -181,6 +185,13 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             song.url = URL
         }
         
+        if songOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
+            removePreviouslySelected()
+            song.selected = true
+        } else {
+            song.selected = false
+        }
+        
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
@@ -193,14 +204,22 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             songBookTextField.text = song.book
             songNumberTextField.text = song.number
             songURLTextField.text = song.url
-
             let onDeck = song.selected
             if onDeck == true {
                 songOnDeckImage.image = #imageLiteral(resourceName: "Selected")
-            }
+            } else {
+            songOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
+        }
             
             textFieldDidEndEditing(songTitleTextField)
         }
+    }
+    
+    func removePreviouslySelected() {
+        // 1) loop through all song entities and 2) make attribute "selected" = false
+        // for eachIndex in Songs {
+        //      eachIndex.selected = false
+        //}
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
