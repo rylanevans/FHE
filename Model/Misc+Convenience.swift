@@ -10,10 +10,11 @@ import CoreData
 import UIKit
 
 extension Misc {
-    convenience init(title: String, detail: String, in context:NSManagedObjectContext) {
+    convenience init(title: String, detail: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.url = url
         self.title = title
         self.detail = detail
     }
