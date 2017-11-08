@@ -14,11 +14,12 @@ class GameVC: UIViewController {
     @IBOutlet weak var gameMemberPhotoImage: UIImageView!
     @IBOutlet weak var gameMemberNameLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
-    @IBOutlet weak var gameDetailLabel: UILabel!
+    @IBOutlet weak var gameImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {

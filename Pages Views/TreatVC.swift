@@ -13,11 +13,10 @@ class TreatVC: UIViewController {
     @IBOutlet weak var treatMemberPhotoImage: UIImageView!
     @IBOutlet weak var treatMemberNameLabel: UILabel!
     @IBOutlet weak var treatTitleLabel: UILabel!
-    @IBOutlet weak var treatDetailLabel: UILabel!
+    @IBOutlet weak var treatImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func closedButtonPressed(_ sender: Any) {
