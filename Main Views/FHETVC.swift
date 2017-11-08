@@ -34,9 +34,9 @@ class FHETVC: UIViewController {
         playClick()
 //        let appReviewPresentedRandom = arc4random_uniform(4)
 //        if appReviewPresentedRandom == UInt32(1) {
-        if launchedCounter % 2 == 0 {
-            SKStoreReviewController.requestReview()
-        }
+//        if launchedCounter % 2 == 0 {
+//            SKStoreReviewController.requestReview()
+//        }
     }
     
     

@@ -12,11 +12,12 @@ import UIKit
 
 extension Task {
     
-    convenience init(sort: String, enabled: Bool, name: String, order: Int64, defaultNumber: Int64, assigned: Bool, in context:NSManagedObjectContext) {
+    convenience init(segment: Int64, enabled: Bool, name: String, order: Int64, defaultNumber: Int64, assigned: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.enabled = enabled
+        self.segment = segment
         self.assigned = assigned
         self.name = name
         self.order = order

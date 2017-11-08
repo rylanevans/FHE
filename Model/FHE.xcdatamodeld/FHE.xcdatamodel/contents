@@ -85,7 +85,7 @@
         <attribute name="enabled" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="sort" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="segment" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="toTask" inverseEntity="Member" syncable="YES"/>
     </entity>
     <entity name="Testimony" representedClassName="Testimony" syncable="YES" codeGenerationType="class">

@@ -144,17 +144,18 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func onDeckCellButtonTapped(_ sender: SongCell) {
-        guard let indexPath = tableView.indexPath(for: sender),
-            let song = songController.object(at: indexPath) as? Song else {return}
-        print("Button was pressed \(song)")
-
-        if let objects = songController.fetchedObjects, objects.count > 0 {
-            let song = objects[indexPath.row]
-        onDeckToggle(song)
-        }
-
-        attemptFetch()
-        tableView.reloadData()
+        print("Testing ButtonTapped")
+//        guard let indexPath = tableView.indexPath(for: sender),
+//            let song = songController.object(at: indexPath) as? Song else {return}
+//        print("Button was pressed \(song)")
+//
+//        if let objects = songController.fetchedObjects, objects.count > 0 {
+//            let song = objects[indexPath.row]
+//        onDeckToggle(song)
+//        }
+//
+//        attemptFetch()
+//        tableView.reloadData()
     }
 
 //    func onDeckToggle(_ song: Song) {
