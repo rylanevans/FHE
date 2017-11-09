@@ -43,7 +43,7 @@
                                     </constraints>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-4T-Nj7">
-                                    <rect key="frame" x="10" y="154.5" width="355" height="35"/>
+                                    <rect key="frame" x="11" y="155" width="353.5" height="35"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -62,6 +62,8 @@ To Always Lead Songs
                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-uJ-I57">
                                             <rect key="frame" x="0.0" y="113" width="355" height="32"/>
@@ -116,11 +118,12 @@ To Always Lead Songs
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
-                                            <rect key="frame" x="5" y="70" width="60" height="17.5"/>
+                                            <rect key="frame" x="4.5" y="70" width="61" height="17.5"/>
                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
                                 </stackView>
@@ -149,7 +152,7 @@ To Always Lead Songs
                                 <constraint firstItem="guJ-4T-Nj7" firstAttribute="height" secondItem="2oz-zX-0f7" secondAttribute="height" id="3QZ-Oy-ztl"/>
                                 <constraint firstItem="yfU-Rq-ez6" firstAttribute="height" secondItem="dMu-2M-dV2" secondAttribute="height" id="7Cv-WM-Wjq"/>
                                 <constraint firstItem="yfU-Rq-ez6" firstAttribute="width" secondItem="dMu-2M-dV2" secondAttribute="width" id="7LL-BQ-UVf"/>
-                                <constraint firstItem="guJ-4T-Nj7" firstAttribute="width" secondItem="2oz-zX-0f7" secondAttribute="width" id="FKR-b3-oJ1"/>
+                                <constraint firstItem="guJ-4T-Nj7" firstAttribute="width" secondItem="2oz-zX-0f7" secondAttribute="width" multiplier="0.995" id="FKR-b3-oJ1"/>
                                 <constraint firstAttribute="height" secondItem="3RM-9M-vut" secondAttribute="height" id="KIb-Kd-ieE"/>
                                 <constraint firstItem="guJ-4T-Nj7" firstAttribute="centerY" secondItem="2oz-zX-0f7" secondAttribute="centerY" id="MaZ-Ch-eaB"/>
                                 <constraint firstAttribute="bottom" secondItem="XQ2-4F-HDV" secondAttribute="bottom" constant="10" id="N7p-wp-xoe"/>

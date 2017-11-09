@@ -27,7 +27,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.playClick()
+//        self.playClick()
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0: aboutRylan()

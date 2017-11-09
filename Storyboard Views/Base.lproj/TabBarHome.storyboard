@@ -8,6 +8,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,7 +46,7 @@
                                     </constraints>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-sW-ZuL">
-                                    <rect key="frame" x="10" y="155" width="355" height="35"/>
+                                    <rect key="frame" x="11" y="155" width="353.5" height="35"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -79,6 +80,7 @@ Cgo
                                                 <constraint firstAttribute="height" constant="35" id="bmb-eA-OmB"/>
                                             </constraints>
                                             <segments>
+                                                <segment title="Created"/>
                                                 <segment title="Age"/>
                                                 <segment title="Name"/>
                                                 <segment title="Random"/>
@@ -86,6 +88,9 @@ Cgo
                                                 <segment title="Off"/>
                                             </segments>
                                             <color key="tintColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="segmentChanged:" destination="e7q-Hn-HHg" eventType="valueChanged" id="Xnn-nw-8jy"/>
+                                            </connections>
                                         </segmentedControl>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -102,7 +107,7 @@ Cgo
                                 <constraint firstItem="iuN-sW-ZuL" firstAttribute="centerY" secondItem="qwo-ih-auM" secondAttribute="centerY" id="C4U-fc-xhe"/>
                                 <constraint firstAttribute="trailing" secondItem="Ces-54-Ldu" secondAttribute="trailing" constant="10" id="Lh5-kq-EWD"/>
                                 <constraint firstItem="iuN-sW-ZuL" firstAttribute="centerX" secondItem="qwo-ih-auM" secondAttribute="centerX" id="P8a-ju-NIz"/>
-                                <constraint firstItem="iuN-sW-ZuL" firstAttribute="width" secondItem="qwo-ih-auM" secondAttribute="width" id="SBZ-uR-AeR"/>
+                                <constraint firstItem="iuN-sW-ZuL" firstAttribute="width" secondItem="qwo-ih-auM" secondAttribute="width" multiplier="0.995" id="SBZ-uR-AeR"/>
                                 <constraint firstItem="yit-FP-ZBH" firstAttribute="centerY" secondItem="Dz5-eb-DfC" secondAttribute="centerY" id="Vg8-Dg-6LW"/>
                                 <constraint firstItem="yit-FP-ZBH" firstAttribute="width" secondItem="Dz5-eb-DfC" secondAttribute="width" id="YjW-Cc-7Ch"/>
                                 <constraint firstItem="iuN-sW-ZuL" firstAttribute="height" secondItem="qwo-ih-auM" secondAttribute="height" id="iRR-Od-RYb"/>
@@ -152,8 +157,8 @@ Cgo
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmr-Wy-dHW" userLabel="Name">
-                                                            <rect key="frame" x="62" y="18.5" width="191" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                            <rect key="frame" x="62" y="12" width="191" height="40"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -241,11 +246,18 @@ Cgo
                     </tableView>
                     <navigationItem key="navigationItem" title="Family Members" id="PLg-Z8-Uac">
                         <barButtonItem key="backBarButtonItem" title="Back" id="gGL-Vb-eTp"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="84K-m0-M4n">
-                            <connections>
-                                <segue destination="z09-W1-aaa" kind="show" identifier="MemberDetailsVCNew" id="fh2-ar-ueD"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="84K-m0-M4n">
+                                <connections>
+                                    <segue destination="z09-W1-aaa" kind="show" identifier="MemberDetailsVCNew" id="fh2-ar-ueD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Recycle" image="Recycle-25" id="0Js-GI-jha">
+                                <connections>
+                                    <action selector="recycleButtonPressed:" destination="e7q-Hn-HHg" id="EpA-uy-zsU"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="segment" destination="qwo-ih-auM" id="S1T-o1-Y4V"/>
@@ -2516,7 +2528,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutRylan" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-00-VEE">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutRylan" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-00-VEE">
                                                             <rect key="frame" x="0.0" y="0.0" width="656" height="401"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="DAR-00-VEE" secondAttribute="height" multiplier="327:200" id="uaT-8I-MJK"/>
@@ -3034,6 +3046,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Profile25" width="26" height="26"/>
         <image name="ProfileFilled25" width="25" height="25"/>
         <image name="Recycle" width="347" height="328"/>
+        <image name="Recycle-25" width="24" height="22"/>
         <image name="ReportBug" width="84" height="76"/>
         <image name="Rule" width="80" height="78"/>
         <image name="RylanEvans.com" width="304" height="141"/>

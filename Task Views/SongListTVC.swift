@@ -116,7 +116,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    // MARK: UIImagePickerControllerDelegate
+    
+    // MARK: Image Picker Controller Delegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
@@ -134,7 +135,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         dismiss(animated: true, completion: nil)
     }
     
-    // MARK: - TitleTableViewCellDelegate
+    
+    // MARK: - Title Table View Cell Delegate
     
     
     @IBAction func segmentChanged(_ sender: Any) {
@@ -145,7 +147,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBAction func recycleButtonPressed(_ sender: Any) {
         playClick()
     }
-    
     
     func onDeckCellButtonTapped(_ sender: SongCell) {
         print("Testing ButtonTapped")
@@ -186,10 +187,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
 
         } else if segment.selectedSegmentIndex == 1 {
             fetchRequest.sortDescriptors = [sortByTitle]
-
         } else if segment.selectedSegmentIndex == 2 {
             fetchRequest.sortDescriptors = [sortByTopic]
-
         } else {
             fetchRequest.sortDescriptors = [sortByOrder]
         }

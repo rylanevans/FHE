@@ -36,44 +36,75 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     
     // MARK: - Table view data source
     
+    // Title for header in section
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let sectionInfo = memberController.sections,
+            let index = Int(sectionInfo[section].name) else {return nil}
+        if index == 0 {
+            return "Not Attending"
+        } else {
+            return "Attending"
+        }
+    }
+    
+    // Number of sections
     override func numberOfSections(in tableView: UITableView) -> Int {
         if let sections = memberController.sections {
             return sections.count
         }
-        return 0
+        return 1
     }
+    
+    // Number of rows in section
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        let attendingSection = memberController.sections![section]
+//        return attendingSection.numberOfObjects
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = memberController.sections {
-            
             let sectionInfo = sections[section]
             return sectionInfo.numberOfObjects
         }
         return 0
     }
     
+    // Height for each row
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
     
+    // Congigure each cell for row at a spesific index
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let detailCell = tableView.dequeueReusableCell(withIdentifier: "FamilyCell", for: indexPath) as! FamilyCell
         configureFamilyCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
         return detailCell
     }
     
+    // Function to configure each cell
     func configureFamilyCell(cell: FamilyCell, indexPath: NSIndexPath) {
         let member = memberController.object(at: indexPath as IndexPath)
         cell.configureFamilyCell(member: member)
     }
     
+    // User did select row at a spesific index
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let objects = memberController.fetchedObjects, objects.count > 0 {
-            let member = objects[indexPath.row]
+            let sections = memberController.sections![indexPath.section]
+//            let members = memberController.fetchedObjects![indexPath.row]
+            let member = sections.objects![indexPath.row]
             performSegue(withIdentifier: "MemberDetailsVCExisting", sender: member)
         }
     }
     
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if let objects = memberController.fetchedObjects, objects.count > 0 {
+//            let member = objects[indexPath.row]
+//            performSegue(withIdentifier: "MemberDetailsVCExisting", sender: member)
+//        }
+//    }
+    
+    // Prepare for segue to another view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemberDetailsVCExisting" {
             if let destination = segue.destination as? FamilyDetailsVC {
@@ -85,15 +116,17 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     
-    // MARK: - TitleTableViewCellDelegate
+    // MARK: - Title Table View Cell Delegate
     
-    func segmentChanged(_ sender: Any) {
-        // Tyring to save to CoreData with this action and fetch it when sorting through memberAttemptFetch()
-        
-        //        let sortBy = Task(context: context)
-        //        sortBy.sort = "order"
-        //        ad.saveContext()
-        //        tableView.reloadData()
+    @IBAction func segmentChanged(_ sender: Any) {
+        memberAttemptFetch()
+        tableView.reloadData()
+        viewDidLoad()
+        viewWillAppear(true)
+    }
+    
+    @IBAction func recycleButtonPressed(_ sender: Any) {
+        playClick()
     }
     
     // MARK: - Boiler Code for Core Data
@@ -104,25 +137,25 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
         
-//        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+        let sortByAge = NSSortDescriptor(key: "age", ascending: true)
+        let sortByName = NSSortDescriptor(key: "name", ascending: true)
+        let sortByAttending = NSSortDescriptor(key: "attending", ascending: false)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
-//        let sortByTitle = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [sortByOrder]
         
-        //        if MemberTitleCell.shared.segment.selectedSegmentIndex == 0 {
-        //            fetchRequest.sortDescriptors = [sortByDate]
-        //            print("Sort by Created")
-        //        } else if MemberTitleCell.shared.segment.selectedSegmentIndex == 1 {
-        //            fetchRequest.sortDescriptors = [sortByTitle]
-        //            print("Sort by Title")
-        //        } else if MemberTitleCell.shared.segment.selectedSegmentIndex == 2 {
-        //            fetchRequest.sortDescriptors = [sortByOrder]
-        //            print("Sort by Order")
-        //        } else {
-        //            fetchRequest.sortDescriptors = [sortByOrder]
-        //        }
+        if segment.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [sortByDate]
+        } else if segment.selectedSegmentIndex == 1 {
+            fetchRequest.sortDescriptors = [sortByAge]
+        } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [sortByName]
+        } else if segment.selectedSegmentIndex == 3 {
+            fetchRequest.sortDescriptors = [sortByAttending]
+        } else {
+            fetchRequest.sortDescriptors = [sortByOrder]
+        }
         
-        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "attending", cacheName: nil)
         
         controller.delegate = self
         
@@ -144,6 +177,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         tableView.endUpdates()
     }
     
+    // Object did change
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         
         switch(type){
@@ -174,6 +208,18 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .fade)
             }
+            break
+        }
+    }
+    
+    // Section did change
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .delete:
+            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
+        case .insert:
+            tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
+        default:
             break
         }
     }
