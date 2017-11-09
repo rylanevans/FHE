@@ -15,6 +15,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var songAssigneeLabel: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var memberPicker: UIPickerView!
+    @IBOutlet weak var songAssigneeText: UITextField!
     
     var memberArray = ["Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
     
@@ -26,6 +27,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         memberPicker.delegate = self
         memberPicker.dataSource = self
         memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        
+        songAssigneeText.inputView = memberPicker
         
 //        generatedTestSong()
         attemptFetch()
@@ -48,7 +51,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //            assigneeText.text = memberArray[row]
+        songAssigneeLabel.text = memberArray[row]
+        songAssigneeMemberImage.image = UIImage(named: "\(memberArray[row])")
+        // save to member relationship to Song task to core data
     }
     
     
@@ -111,12 +116,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    @IBAction func selectMemberToAssign(_ sender: Any) {
-        playClick()
-    }
-    
-    
-    
     // MARK: UIImagePickerControllerDelegate
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -142,6 +141,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         attemptFetch()
         tableView.reloadData()
     }
+    
+    @IBAction func recycleButtonPressed(_ sender: Any) {
+        playClick()
+    }
+    
     
     func onDeckCellButtonTapped(_ sender: SongCell) {
         print("Testing ButtonTapped")

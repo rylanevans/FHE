@@ -30,11 +30,13 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.playClick()
         if indexPath.section == 0 {
             switch indexPath.row {
-            case 0: rylanEvans()
-            case 1: basketballSSTapped()
-            case 2: shareWithNetwork()
-            case 3: twitter()
-            case 4: patreon()
+            case 0: aboutRylan()
+            case 1: rylanEvans()
+            case 2: basketballSSTapped()
+            case 3: shareWithNetwork()
+            case 4: facebook()
+            case 5: twitter()
+            case 6: patreon()
             default:
                 print("Error with MoreTVC index selection")
             }
@@ -46,12 +48,16 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func rylanEvans() {
-        playClick()
+//        playClick()
         let URL = NSURL(string: "https://www.rylanevans.com")!
         let rylanEvansWeb = SFSafariViewController(url: URL as URL)
         rylanEvansWeb.delegate = self
         
         present(rylanEvansWeb, animated: true, completion: nil)
+    }
+    
+    func aboutRylan() {
+//        playClick()
     }
     
     func basketballSSTapped() {
@@ -64,16 +70,25 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func shareWithNetwork() {
-        playClick()
+//        playClick()
         let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
     
+    func facebook() {
+//        playClick()
+        let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
+        let facebookWeb = SFSafariViewController(url: URL as URL)
+        facebookWeb.delegate = self
+        
+        present(facebookWeb, animated: true, completion: nil)
+    }
+    
     // MARK: -  MFMailComposeViewControllerDelegate Method to subscribe
     
     func twitter() {
-        playClick()
+//        playClick()
         let URL = NSURL(string: "https://twitter.com/rylan_evans")!
         let twitterWeb = SFSafariViewController(url: URL as URL)
         twitterWeb.delegate = self
@@ -82,7 +97,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func patreon() {
-        playClick()
+//        playClick()
         let URL = NSURL(string: "https://www.patreon.com/rylanevans")!
         let patreonWeb = SFSafariViewController(url: URL as URL)
         patreonWeb.delegate = self

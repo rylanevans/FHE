@@ -56,8 +56,8 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-eD-umI">
                                             <rect key="frame" x="0.0" y="0.0" width="355" height="113"/>
-                                            <string key="text">Manually Assign
-Family Member
+                                            <string key="text">Manually Assign Family Member
+To Always Lead Songs
 </string>
                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,14 +94,14 @@ Family Member
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCA-CS-c45">
-                                    <rect key="frame" x="295" y="20" width="60" height="66.5"/>
+                                    <rect key="frame" x="285" y="20" width="70" height="87.5"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-2M-dV2">
-                                            <rect key="frame" x="5" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                             <gestureRecognizers/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="3w1-22-geK"/>
-                                                <constraint firstAttribute="width" constant="50" id="XYu-RI-XHK"/>
+                                                <constraint firstAttribute="height" constant="70" id="3w1-22-geK"/>
+                                                <constraint firstAttribute="width" constant="70" id="XYu-RI-XHK"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -111,22 +111,44 @@ Family Member
                                                     <color key="value" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="25"/>
+                                                    <real key="value" value="35"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
-                                            <rect key="frame" x="0.0" y="50" width="60" height="16.5"/>
+                                            <rect key="frame" x="5" y="70" width="60" height="17.5"/>
                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                     </subviews>
                                 </stackView>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfU-Rq-ez6">
+                                    <rect key="frame" x="285" y="20" width="70" height="70"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                            <size key="value" width="1" height="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="guJ-4T-Nj7" firstAttribute="height" secondItem="2oz-zX-0f7" secondAttribute="height" id="3QZ-Oy-ztl"/>
+                                <constraint firstItem="yfU-Rq-ez6" firstAttribute="height" secondItem="dMu-2M-dV2" secondAttribute="height" id="7Cv-WM-Wjq"/>
+                                <constraint firstItem="yfU-Rq-ez6" firstAttribute="width" secondItem="dMu-2M-dV2" secondAttribute="width" id="7LL-BQ-UVf"/>
                                 <constraint firstItem="guJ-4T-Nj7" firstAttribute="width" secondItem="2oz-zX-0f7" secondAttribute="width" id="FKR-b3-oJ1"/>
                                 <constraint firstAttribute="height" secondItem="3RM-9M-vut" secondAttribute="height" id="KIb-Kd-ieE"/>
                                 <constraint firstItem="guJ-4T-Nj7" firstAttribute="centerY" secondItem="2oz-zX-0f7" secondAttribute="centerY" id="MaZ-Ch-eaB"/>
@@ -134,12 +156,14 @@ Family Member
                                 <constraint firstItem="XQ2-4F-HDV" firstAttribute="top" secondItem="ymo-gO-JOG" secondAttribute="top" constant="10" id="Oq3-Sd-elx"/>
                                 <constraint firstItem="3RM-9M-vut" firstAttribute="centerY" secondItem="ymo-gO-JOG" secondAttribute="centerY" id="TQh-ZX-d3e"/>
                                 <constraint firstItem="XQ2-4F-HDV" firstAttribute="leading" secondItem="ymo-gO-JOG" secondAttribute="leading" constant="10" id="TzJ-GW-7SV"/>
+                                <constraint firstItem="yfU-Rq-ez6" firstAttribute="centerY" secondItem="dMu-2M-dV2" secondAttribute="centerY" id="dnK-VL-HrK"/>
                                 <constraint firstItem="3RM-9M-vut" firstAttribute="centerX" secondItem="ymo-gO-JOG" secondAttribute="centerX" id="fxF-eR-EMl"/>
                                 <constraint firstItem="3RM-9M-vut" firstAttribute="width" secondItem="ymo-gO-JOG" secondAttribute="width" id="hHc-hw-eRt"/>
                                 <constraint firstItem="RCA-CS-c45" firstAttribute="trailing" secondItem="XQ2-4F-HDV" secondAttribute="trailing" constant="-10" id="i1h-Ze-8HK"/>
                                 <constraint firstAttribute="trailing" secondItem="XQ2-4F-HDV" secondAttribute="trailing" constant="10" id="iVP-ZK-DgT"/>
                                 <constraint firstItem="RCA-CS-c45" firstAttribute="top" secondItem="XQ2-4F-HDV" secondAttribute="top" constant="10" id="k9o-rB-ejX"/>
                                 <constraint firstItem="guJ-4T-Nj7" firstAttribute="centerX" secondItem="2oz-zX-0f7" secondAttribute="centerX" id="kTv-Is-9lo"/>
+                                <constraint firstItem="yfU-Rq-ez6" firstAttribute="centerX" secondItem="dMu-2M-dV2" secondAttribute="centerX" id="zqT-3M-FDb"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -306,7 +330,11 @@ Family Member
                                     <segue destination="6h5-I3-Zmd" kind="show" identifier="SongDetailsVCNew" id="ihB-K5-KCE"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Refresh" image="Recycle-25" id="upV-z0-yFC"/>
+                            <barButtonItem title="Refresh" image="Recycle-25" id="upV-z0-yFC">
+                                <connections>
+                                    <action selector="recycleButtonPressed:" destination="Vn6-Vj-ADL" id="xhu-ji-1WV"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -314,6 +342,7 @@ Family Member
                         <outlet property="segment" destination="2oz-zX-0f7" id="y7E-2L-TnT"/>
                         <outlet property="songAssigneeLabel" destination="LZT-KK-dO3" id="rfc-fU-ZI1"/>
                         <outlet property="songAssigneeMemberImage" destination="dMu-2M-dV2" id="9q4-CB-zFW"/>
+                        <outlet property="songAssigneeText" destination="yfU-Rq-ez6" id="e7n-0O-MTy"/>
                         <segue destination="6h5-I3-Zmd" kind="show" identifier="SongDetailsVCExisting" id="6XO-GI-9PR"/>
                     </connections>
                 </tableViewController>
@@ -1134,7 +1163,7 @@ Family Member
         <image name="Missing Profile" width="770" height="770"/>
         <image name="MusicBG" width="2188" height="1458"/>
         <image name="NotSelected" width="256" height="256"/>
-        <image name="Recycle-25" width="18" height="17"/>
+        <image name="Recycle-25" width="24" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6XO-GI-9PR"/>
