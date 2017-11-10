@@ -14,8 +14,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var songAssigneeMemberImage: UIImageView!
     @IBOutlet weak var songAssigneeLabel: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
-    @IBOutlet weak var memberPicker: UIPickerView!
     @IBOutlet weak var songAssigneeText: UITextField!
+    
+    let memberPicker = UIPickerView()
     
     var memberArray = ["Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
     
@@ -28,11 +29,25 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         memberPicker.dataSource = self
         memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
         songAssigneeText.inputView = memberPicker
+        songAssigneeText.inputAccessoryView = toolBar
+        
+        
         
 //        generatedTestSong()
         attemptFetch()
         tableView.reloadData()
+    }
+    
+    @objc func donePressedOnKeyboard() {
+        view.endEditing(true)
     }
     
     // MARK: - Picker View Set up
@@ -115,26 +130,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
         }
     }
-    
-    
-    // MARK: Image Picker Controller Delegate
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        // Dismiss the picker if the user canceled.
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        // The info dictionary contains multiple representations of the image, and this uses the original.
-        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        
-        // Set photoImageView to display the selected image.
-        songAssigneeMemberImage.image = selectedImage
-        
-        // Dismiss the picker.
-        dismiss(animated: true, completion: nil)
-    }
-    
     
     // MARK: - Title Table View Cell Delegate
     

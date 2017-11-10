@@ -14,8 +14,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var songTopicPicker: UIPickerView!
-    @IBOutlet weak var songBookPicker: UIPickerView!
     @IBOutlet weak var songTopicTextField: UITextField!
     @IBOutlet weak var songTitleTextField: UITextField!
     @IBOutlet weak var songBookTextField: UITextField!
@@ -27,6 +25,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     var songTopics = topicsArray
     var songToEdit: Song?
     var songAssignment: Task?
+    let songTopicPicker = UIPickerView()
+    let songBookPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +53,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songTopicTextField.delegate = self
         songTopicTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songTopicTextField.inputView = songTopicPicker
-        //        songTopicTextField.inputAccessoryView = toolBar
-        //        songTopicPicker.frame.size.height = 225
+        songTopicTextField.inputAccessoryView = toolBar
         
         songTitleTextField.delegate = self
         songTitleTextField.attributedPlaceholder = NSAttributedString(string: "Love At Home", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
@@ -63,7 +62,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songBookTextField.delegate = self
         songBookTextField.attributedPlaceholder = NSAttributedString(string: "Hymns or Children's", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songBookTextField.inputView = songBookPicker
-//        songBookTextField.inputAccessoryView = toolBar
+        songBookTextField.inputAccessoryView = toolBar
         
         songNumberTextField.delegate = self
         songNumberTextField.attributedPlaceholder = NSAttributedString(string: "294", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])

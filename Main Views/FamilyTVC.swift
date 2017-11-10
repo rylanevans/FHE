@@ -144,13 +144,15 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByDate]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByDate]
         } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByAge]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByAge]
         } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByName]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByName]
         } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByAttending]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByAttending]
+        } else if segment.selectedSegmentIndex == 4 {
+            fetchRequest.sortDescriptors = [sortByAttending, sortByName]
         } else {
             fetchRequest.sortDescriptors = [sortByOrder]
         }
