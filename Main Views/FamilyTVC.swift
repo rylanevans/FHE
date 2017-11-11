@@ -62,7 +62,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         let label = UILabel()
         label.text = title
         label.frame = CGRect(x: 15, y:25, width: 200, height: 25)
-        label.font = UIFont(name: "American Typewriter-Bold", size: 25)
+        label.font = UIFont(name: "American Typewriter", size: 15)!
         view.addSubview(label)
         
         return view
