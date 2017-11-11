@@ -10,11 +10,12 @@ import CoreData
 import UIKit
 
 extension Rule {
-    convenience init(selected: Bool, random: Int64, order: Int64, title: String, detail: String, dateCreated: Date, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, sortingIndex: Int64, random: Int64, order: Int64, title: String, detail: String, dateCreated: Date, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.selected = selected
+        self.sortingIndex = sortingIndex
         self.random = random
         self.order = order
         self.title = title

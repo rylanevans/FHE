@@ -18,6 +18,7 @@
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -27,6 +28,7 @@
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
@@ -58,6 +60,7 @@
         <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
@@ -67,6 +70,7 @@
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="verse" optional="YES" attributeType="String" syncable="YES"/>
@@ -79,6 +83,7 @@
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
@@ -111,6 +116,7 @@
         <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -118,18 +124,18 @@
         <element name="Calendar" positionX="9" positionY="117" width="128" height="75"/>
         <element name="Council" positionX="54" positionY="162" width="128" height="90"/>
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
-        <element name="Game" positionX="9" positionY="108" width="128" height="150"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="165"/>
+        <element name="Game" positionX="9" positionY="108" width="128" height="165"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="180"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>
         <element name="Misc" positionX="36" positionY="144" width="128" height="90"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="75"/>
-        <element name="Rule" positionX="0" positionY="108" width="128" height="150"/>
-        <element name="Scripture" positionX="9" positionY="72" width="128" height="195"/>
-        <element name="Song" positionX="27" positionY="126" width="128" height="180"/>
+        <element name="Rule" positionX="0" positionY="108" width="128" height="165"/>
+        <element name="Scripture" positionX="9" positionY="72" width="128" height="210"/>
+        <element name="Song" positionX="27" positionY="126" width="128" height="195"/>
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="75"/>
         <element name="Task" positionX="9" positionY="153" width="128" height="150"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="75"/>
         <element name="Thought" positionX="45" positionY="153" width="128" height="90"/>
-        <element name="Treat" positionX="18" positionY="117" width="128" height="150"/>
+        <element name="Treat" positionX="18" positionY="117" width="128" height="165"/>
     </elements>
 </model>
