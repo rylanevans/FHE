@@ -134,20 +134,55 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
     
+    // Table view set up
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+
+        var title = ""
+        if section == 0 {
+            title = "DONTATIONS:"
+        } else if section == 1 {
+            title = "FEEDBACK:"
+        } else if section == 2 {
+            title = "INFO:"
+        } else {
+            title = "IDK"
+        }
+
+        let label = UILabel()
+        label.text = title
+        label.frame = CGRect(x: 15, y:5, width: 200, height: 25)
+        label.font = UIFont(name: "American Typewriter", size: 15)!
+        view.addSubview(label)
+
+        return view
+    }
+    
+    // Header height
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
     // MARK: - Did select row at calls certain functions
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             switch indexPath.row {
-            case 1: thankYou()
-            case 2: likeIt()
-            case 3: loveIt()
-            case 4: amazing()
-            case 6: shareWithNetwork()
-            case 7: positiveReview()
-            case 8: reportProblem()
-            case 9: suggestions()
-            case 10: subscribe()
+            case 0: thankYou()
+            case 1: likeIt()
+            case 2: loveIt()
+            case 3: amazing()
+            default:
+                print("Error with MoreTVC index selection")
+            }
+        } else if indexPath.section == 1 {
+            switch indexPath.row {
+            case 0: shareWithNetwork()
+            case 1: positiveReview()
+            case 2: reportProblem()
+            case 3: suggestions()
+            case 4: subscribe()
             default:
                 print("Error with MoreTVC index selection")
             }
