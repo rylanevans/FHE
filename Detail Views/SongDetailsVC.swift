@@ -53,6 +53,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songTopicTextField.delegate = self
         songTopicTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songTopicTextField.inputView = songTopicPicker
+        songTopicPicker.tag = 1
         songTopicTextField.inputAccessoryView = toolBar
         
         songTitleTextField.delegate = self
@@ -62,6 +63,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songBookTextField.delegate = self
         songBookTextField.attributedPlaceholder = NSAttributedString(string: "Hymns or Children's", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
         songBookTextField.inputView = songBookPicker
+        songBookPicker.tag = 2
         songBookTextField.inputAccessoryView = toolBar
         
         songNumberTextField.delegate = self

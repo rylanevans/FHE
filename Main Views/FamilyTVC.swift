@@ -61,7 +61,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         let label = UILabel()
         label.text = title
-        label.frame = CGRect(x: 15, y:25, width: 200, height: 25)
+        label.frame = CGRect(x: 15, y:5, width: 200, height: 25)
         label.font = UIFont(name: "American Typewriter", size: 15)!
         view.addSubview(label)
         
@@ -70,7 +70,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     
     // Header height
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 30
     }
     
     // Number of sections
@@ -160,16 +160,14 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     var memberController: NSFetchedResultsController<Member>!
     
     func memberAttemptFetch() {
-        
         let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
         
         let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByAge = NSSortDescriptor(key: "age", ascending: true)
         let sortByName = NSSortDescriptor(key: "name", ascending: true)
         let sortByAttending = NSSortDescriptor(key: "attending", ascending: false)
-        let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         let sortByRandom = NSSortDescriptor(key: "random", ascending: true)
-        
+        let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
             fetchRequest.sortDescriptors = [sortByAttending, sortByDate]

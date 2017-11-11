@@ -55,19 +55,19 @@
                                     <rect key="frame" x="10" y="10" width="355" height="180"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-eD-umI">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="113"/>
-                                            <string key="text">Manually Assign Family Member
-To Always Lead Songs
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="105"/>
+                                            <string key="text">Permanently Assign
+Family Member To Songs
 </string>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="21"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-uJ-I57">
-                                            <rect key="frame" x="0.0" y="113" width="355" height="32"/>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                            <rect key="frame" x="0.0" y="105" width="355" height="40"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -178,17 +178,17 @@ To Always Lead Songs
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-h6-wex">
-                                            <rect key="frame" x="5" y="2.5" width="365" height="51"/>
+                                            <rect key="frame" x="5" y="2.5" width="365" height="59.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
-                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="5" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="TC3-Qb-2tK"/>
                                                         <constraint firstAttribute="height" constant="40" id="cPe-nE-Jqp"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Topic   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-qd-hDy">
-                                                    <rect key="frame" x="302.5" y="25.5" width="32.5" height="19.5"/>
+                                                    <rect key="frame" x="302.5" y="29" width="32.5" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="J9K-lR-5P7"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="iSs-Qu-Ku6"/>
@@ -210,46 +210,57 @@ To Always Lead Songs
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discloser" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-20-Pc1">
-                                                    <rect key="frame" x="340" y="15" width="15" height="20"/>
+                                                    <rect key="frame" x="340" y="19" width="15" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="6cH-Zk-z7M"/>
                                                         <constraint firstAttribute="width" constant="15" id="jto-Bf-Teh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-dk-Fqu">
-                                                    <rect key="frame" x="50" y="0.0" width="310" height="51"/>
+                                                    <rect key="frame" x="60" y="5" width="300" height="49.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title - Name Of The Object" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-Cq-29i">
-                                                            <rect key="frame" x="0.0" y="0.0" width="310" height="26"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="16"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-9V-n0m">
-                                                            <rect key="frame" x="0.0" y="26" width="310" height="25"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wm-4b-kjb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Book" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-vQ-5q2">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="25"/>
-                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title - Name Of The Object" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-Cq-29i">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="29"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-6g-xtE">
-                                                                    <rect key="frame" x="37" y="0.0" width="47.5" height="25"/>
-                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUN-QV-T7C">
-                                                                    <rect key="frame" x="92.5" y="0.0" width="217.5" height="25"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOX-yN-kK9">
+                                                                    <rect key="frame" x="270" y="0.0" width="30" height="29"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="30" id="eB2-D0-Ebv"/>
+                                                                    </constraints>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="Bs6-I0-laG"/>
-                                                            </constraints>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-9V-n0m">
+                                                            <rect key="frame" x="0.0" y="29" width="300" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Book" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-vQ-5q2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-6g-xtE">
+                                                                    <rect key="frame" x="37" y="0.0" width="47.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUN-QV-T7C">
+                                                                    <rect key="frame" x="92.5" y="0.0" width="207.5" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
@@ -257,7 +268,7 @@ To Always Lead Songs
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-aV-GQl">
-                                                    <rect key="frame" x="5" y="5" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="5" width="40" height="40"/>
                                                     <connections>
                                                         <action selector="onDeckButtonPressed:" destination="nQ5-Q3-NYt" eventType="touchUpInside" id="ebJ-q9-43L"/>
                                                     </connections>
@@ -267,14 +278,14 @@ To Always Lead Songs
                                             <constraints>
                                                 <constraint firstItem="XyE-20-Pc1" firstAttribute="centerY" secondItem="d3h-dk-Fqu" secondAttribute="centerY" id="0vF-Gw-Ta9"/>
                                                 <constraint firstItem="XyE-20-Pc1" firstAttribute="trailing" secondItem="d3h-dk-Fqu" secondAttribute="trailing" constant="-5" id="71j-OC-5gz"/>
-                                                <constraint firstItem="d3h-dk-Fqu" firstAttribute="top" secondItem="ehY-h6-wex" secondAttribute="top" id="AUu-mK-1LV"/>
+                                                <constraint firstItem="d3h-dk-Fqu" firstAttribute="top" secondItem="ehY-h6-wex" secondAttribute="top" constant="5" id="AUu-mK-1LV"/>
                                                 <constraint firstItem="GRT-aV-GQl" firstAttribute="centerX" secondItem="ZCv-oA-AJk" secondAttribute="centerX" id="NF8-wq-GOt"/>
-                                                <constraint firstItem="ZCv-oA-AJk" firstAttribute="leading" secondItem="ehY-h6-wex" secondAttribute="leading" constant="5" id="OxR-rG-GpY"/>
+                                                <constraint firstItem="ZCv-oA-AJk" firstAttribute="leading" secondItem="ehY-h6-wex" secondAttribute="leading" constant="10" id="OxR-rG-GpY"/>
                                                 <constraint firstItem="GRT-aV-GQl" firstAttribute="height" secondItem="ZCv-oA-AJk" secondAttribute="height" id="SHu-hv-6oc"/>
                                                 <constraint firstItem="uh9-qd-hDy" firstAttribute="bottom" secondItem="d3h-dk-Fqu" secondAttribute="bottom" constant="-6" id="V0N-pa-4dm"/>
                                                 <constraint firstItem="ZCv-oA-AJk" firstAttribute="top" secondItem="ehY-h6-wex" secondAttribute="top" constant="5" id="Xjc-pc-OkB"/>
-                                                <constraint firstAttribute="bottom" secondItem="d3h-dk-Fqu" secondAttribute="bottom" id="cNT-Au-LGK"/>
-                                                <constraint firstItem="d3h-dk-Fqu" firstAttribute="leading" secondItem="ZCv-oA-AJk" secondAttribute="trailing" constant="5" id="hqy-Rn-UfA"/>
+                                                <constraint firstAttribute="bottom" secondItem="d3h-dk-Fqu" secondAttribute="bottom" constant="5" id="cNT-Au-LGK"/>
+                                                <constraint firstItem="d3h-dk-Fqu" firstAttribute="leading" secondItem="ZCv-oA-AJk" secondAttribute="trailing" constant="10" id="hqy-Rn-UfA"/>
                                                 <constraint firstItem="uh9-qd-hDy" firstAttribute="trailing" secondItem="XyE-20-Pc1" secondAttribute="leading" constant="-5" id="k3t-Rv-9bp"/>
                                                 <constraint firstAttribute="trailing" secondItem="d3h-dk-Fqu" secondAttribute="trailing" constant="5" id="nne-lv-wfm"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZCv-oA-AJk" secondAttribute="bottom" constant="5" id="pe5-as-F5S"/>

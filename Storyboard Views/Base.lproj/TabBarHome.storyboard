@@ -58,7 +58,7 @@
                                     <rect key="frame" x="10" y="10" width="355" height="180"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-bh-MPT">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="108"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="98"/>
                                             <string key="text" base64-UTF8="YES">
 Cgo
 </string>
@@ -67,8 +67,8 @@ Cgo
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-gX-aFf">
-                                            <rect key="frame" x="0.0" y="110" width="355" height="33"/>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                            <rect key="frame" x="0.0" y="100" width="355" height="43"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -158,7 +158,7 @@ Cgo
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmr-Wy-dHW" userLabel="Name">
                                                             <rect key="frame" x="62" y="12" width="191" height="40"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -3038,7 +3038,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Profile25" width="26" height="26"/>
         <image name="ProfileFilled25" width="25" height="25"/>
         <image name="Recycle" width="347" height="328"/>
-        <image name="Recycle-25" width="24" height="22"/>
+        <image name="Recycle-25" width="21" height="20"/>
         <image name="ReportBug" width="84" height="76"/>
         <image name="Rule" width="80" height="78"/>
         <image name="RylanEvans.com" width="304" height="141"/>
