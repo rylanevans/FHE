@@ -96,7 +96,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // The info dictionary contains multiple representations of the image, and this uses the original.
-        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        if let selectedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
             // Set photoImageView to display the selected image.
             photoMemberImage.image = selectedImage
         }
@@ -121,13 +121,16 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     // MARK: SelectFromPhotoLibrary
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        playClick()
+//        playClick()
         
         // Hide the keyboard.
         memberNameText.resignFirstResponder()
         
         // UIImagePickerController is a view controller that lets a user pick media from their photo library.
         let imagePickerController = UIImagePickerController()
+        
+        // Center Image
+        imagePickerController.allowsEditing = true
         
         // Only allow photos to be picked, not taken.
         imagePickerController.sourceType = .photoLibrary

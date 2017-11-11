@@ -10,13 +10,14 @@ import CoreData
 import UIKit
 
 extension Song {
-    convenience init(selected: Bool, topic: String, dateCreated: Date, order: Int64, number: String, title: String, book: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, topic: String, dateCreated: Date, random: Int64, order: Int64, number: String, title: String, book: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.selected = selected
         self.topic = topic
         self.dateCreated = dateCreated
+        self.random = random
         self.order = order
         self.number = number
         self.title = title

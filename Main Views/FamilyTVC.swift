@@ -37,14 +37,40 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     // MARK: - Table view data source
     
     // Title for header in section
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        guard let sectionInfo = memberController.sections,
-            let index = Int(sectionInfo[section].name) else {return nil}
-        if index == 0 {
-            return "Not Attending"
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        guard let sectionInfo = memberController.sections,
+//            let index = Int(sectionInfo[section].name) else {return nil}
+//        if index == 0 {
+//            return "Not Attending"
+//        } else {
+//            return "Attending"
+//        }
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+        
+        let sectionTitle = memberController.sections
+        var title = ""
+        if Int(sectionTitle![section].name) == 0 {
+            title = "NOT ATTENDING:"
         } else {
-            return "Attending"
+            title = "ATTENDING:"
         }
+        
+        let label = UILabel()
+        label.text = title
+        label.frame = CGRect(x: 15, y:25, width: 200, height: 25)
+        label.font = UIFont(name: "American Typewriter-Bold", size: 25)
+        view.addSubview(label)
+        
+        return view
+    }
+    
+    // Header height
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
     // Number of sections
@@ -142,6 +168,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         let sortByName = NSSortDescriptor(key: "name", ascending: true)
         let sortByAttending = NSSortDescriptor(key: "attending", ascending: false)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
+        let sortByRandom = NSSortDescriptor(key: "random", ascending: true)
+        
         
         if segment.selectedSegmentIndex == 0 {
             fetchRequest.sortDescriptors = [sortByAttending, sortByDate]
@@ -150,11 +178,11 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         } else if segment.selectedSegmentIndex == 2 {
             fetchRequest.sortDescriptors = [sortByAttending, sortByName]
         } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByAttending]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByRandom]
         } else if segment.selectedSegmentIndex == 4 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByName]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByOrder]
         } else {
-            fetchRequest.sortDescriptors = [sortByOrder]
+            fetchRequest.sortDescriptors = [sortByAttending, sortByOrder]
         }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "attending", cacheName: nil)
@@ -227,41 +255,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     func generatedTestMember() {
-        let member1 = Member(context: context)
-        
-        let member0 = Member(context: context)
-        member0.name = "Dad"
-        member0.photo = #imageLiteral(resourceName: "Dad") as UIImage
-        member0.attending = true
-        member0.order = 0
-        member0.age = 38
-        
-        member1.name = "Mom"
-        member1.photo = #imageLiteral(resourceName: "Mom") as UIImage
-        member1.attending = true
-        member1.order = 1
-        member1.age = 35
-        
-        let member2 = Member(context: context)
-        member2.name = "Lilly"
-        member2.photo = #imageLiteral(resourceName: "Lilly") as UIImage
-        member2.attending = true
-        member2.order = 2
-        member2.age = 12
-        
-        let member3 = Member(context: context)
-        member3.name = "Anisten"
-        member3.photo = #imageLiteral(resourceName: "Anisten") as UIImage
-        member3.attending = true
-        member3.order = 3
-        member3.age = 10
-        
-        let member4 = Member(context: context)
-        member4.name = "Reed"
-        member4.photo = #imageLiteral(resourceName: "Reed") as UIImage
-        member4.attending = true
-        member4.order = 4
-        member4.age = 7
         
         let member5 = Member(context: context)
         member5.name = "Claire"
@@ -269,6 +262,47 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         member5.attending = true
         member5.order = 5
         member5.age = 5
+        member5.random = Int64(arc4random_uniform(100))
+        
+        let member4 = Member(context: context)
+        member4.name = "Reed"
+        member4.photo = #imageLiteral(resourceName: "Reed") as UIImage
+        member4.attending = true
+        member4.order = 4
+        member4.age = 7
+        member4.random = Int64(arc4random_uniform(100))
+        
+        let member3 = Member(context: context)
+        member3.name = "Anisten"
+        member3.photo = #imageLiteral(resourceName: "Anisten") as UIImage
+        member3.attending = true
+        member3.order = 3
+        member3.age = 10
+        member3.random = Int64(arc4random_uniform(100))
+        
+        let member2 = Member(context: context)
+        member2.name = "Lilly"
+        member2.photo = #imageLiteral(resourceName: "Lilly") as UIImage
+        member2.attending = true
+        member2.order = 2
+        member2.age = 12
+        member2.random = Int64(arc4random_uniform(100))
+        
+        let member1 = Member(context: context)
+        member1.name = "Mom"
+        member1.photo = #imageLiteral(resourceName: "Mom") as UIImage
+        member1.attending = true
+        member1.order = 1
+        member1.age = 35
+        member1.random = Int64(arc4random_uniform(100))
+        
+        let member0 = Member(context: context)
+        member0.name = "Dad"
+        member0.photo = #imageLiteral(resourceName: "Dad") as UIImage
+        member0.attending = true
+        member0.order = 0
+        member0.age = 38
+        member0.random = Int64(arc4random_uniform(100))
         
         let member6 = Member(context: context)
         member6.name = "Papa"
@@ -276,6 +310,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         member6.attending = false
         member6.order = 6
         member6.age = 50
+        member6.random = Int64(arc4random_uniform(100))
         
         let member7 = Member(context: context)
         member7.name = "Grammy"
@@ -283,6 +318,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         member7.attending = false
         member7.order = 7
         member7.age = 45
+        member7.random = Int64(arc4random_uniform(100))
         
         ad.saveContext()
     }
