@@ -37,8 +37,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             case 4: facebook()
             case 5: twitter()
             case 6: patreon()
-            default:
-                print("Error with MoreTVC index selection")
+            default: print("Error with MoreTVC index selection")
             }
         }
     }

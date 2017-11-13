@@ -82,11 +82,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     // Number of rows in section
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let attendingSection = memberController.sections![section]
-//        return attendingSection.numberOfObjects
-//    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = memberController.sections {
             let sectionInfo = sections[section]
@@ -117,8 +112,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let objects = memberController.fetchedObjects, objects.count > 0 {
             let sections = memberController.sections![indexPath.section]
-//            let members = memberController.fetchedObjects![indexPath.row]
             let member = sections.objects![indexPath.row]
+            //            let members = memberController.fetchedObjects![indexPath.row]
             performSegue(withIdentifier: "MemberDetailsVCExisting", sender: member)
         }
     }
@@ -184,9 +179,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "attending", cacheName: nil)
-        
         controller.delegate = self
-        
         self.memberController = controller
         
         do {
@@ -210,17 +203,17 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         switch(type){
             
-        case.insert:
+        case .insert:
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .fade)
             }
             break
-        case.delete:
+        case .delete:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
             break
-        case.update:
+        case .update:
             if let indexPath = indexPath {
                 let cellDetail = tableView.cellForRow(at: indexPath) as! FamilyCell
                 configureFamilyCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
@@ -229,7 +222,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
                 configureFamilyCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
             }
             break
-        case.move:
+        case .move:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
@@ -317,6 +310,14 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         member7.order = 7
         member7.age = 45
         member7.random = Int64(arc4random_uniform(100))
+        
+        let member8 = Member(context: context)
+        member8.name = "Guest"
+        member8.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
+        member8.attending = false
+        member8.order = 8
+        member8.age = 100
+        member8.random = Int64(arc4random_uniform(100))
         
         ad.saveContext()
     }

@@ -80,7 +80,7 @@ Family Member To Songs
                                                 <segment title="Created"/>
                                                 <segment title="Title"/>
                                                 <segment title="Topic"/>
-                                                <segment title="Random"/>
+                                                <segment title="Book"/>
                                                 <segment title="Manual"/>
                                                 <segment title="Off"/>
                                             </segments>
@@ -178,17 +178,17 @@ Family Member To Songs
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-h6-wex">
-                                            <rect key="frame" x="5" y="2.5" width="365" height="59.5"/>
+                                            <rect key="frame" x="5" y="2.5" width="365" height="125"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
-                                                    <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="5" width="40" height="40.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="TC3-Qb-2tK"/>
                                                         <constraint firstAttribute="height" constant="40" id="cPe-nE-Jqp"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Topic   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-qd-hDy">
-                                                    <rect key="frame" x="302.5" y="29" width="32.5" height="19.5"/>
+                                                    <rect key="frame" x="302.5" y="94.5" width="32.5" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="J9K-lR-5P7"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="iSs-Qu-Ku6"/>
@@ -210,17 +210,23 @@ Family Member To Songs
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discloser" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-20-Pc1">
-                                                    <rect key="frame" x="340" y="19" width="15" height="20"/>
+                                                    <rect key="frame" x="340" y="52" width="15" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="6cH-Zk-z7M"/>
                                                         <constraint firstAttribute="width" constant="15" id="jto-Bf-Teh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-dk-Fqu">
-                                                    <rect key="frame" x="60" y="5" width="300" height="49.5"/>
+                                                    <rect key="frame" x="60" y="5" width="300" height="115"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f20-LA-Oig">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wm-4b-kjb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="300" height="29"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title - Name Of The Object" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-Cq-29i">
                                                                     <rect key="frame" x="0.0" y="0.0" width="270" height="29"/>
@@ -240,22 +246,44 @@ Family Member To Songs
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-9V-n0m">
-                                                            <rect key="frame" x="0.0" y="29" width="300" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="49.5" width="300" height="65.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Book" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-vQ-5q2">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-6g-xtE">
-                                                                    <rect key="frame" x="37" y="0.0" width="47.5" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sui-ci-NN2">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="29" height="65.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Book" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uu-vQ-5q2">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="14"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-KI-etB">
+                                                                            <rect key="frame" x="0.0" y="14" width="29" height="51.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lWq-pm-dy2">
+                                                                    <rect key="frame" x="37" y="0.0" width="47.5" height="65.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-6g-xtE">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="14.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-kT-aNf">
+                                                                            <rect key="frame" x="0.0" y="14.5" width="47.5" height="51"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUN-QV-T7C">
-                                                                    <rect key="frame" x="92.5" y="0.0" width="207.5" height="20.5"/>
+                                                                    <rect key="frame" x="92.5" y="0.0" width="207.5" height="65.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -264,11 +292,13 @@ Family Member To Songs
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="f20-LA-Oig" firstAttribute="height" secondItem="FnI-kT-aNf" secondAttribute="height" multiplier="0.4" id="AxL-mr-6TU"/>
                                                         <constraint firstAttribute="trailing" secondItem="lbk-9V-n0m" secondAttribute="trailing" id="QRP-7t-7OO"/>
+                                                        <constraint firstItem="f20-LA-Oig" firstAttribute="height" secondItem="8Qu-KI-etB" secondAttribute="height" multiplier="0.4" id="RjH-Nc-rvC"/>
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-aV-GQl">
-                                                    <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                                    <rect key="frame" x="10" y="5" width="40" height="40.5"/>
                                                     <connections>
                                                         <action selector="onDeckButtonPressed:" destination="nQ5-Q3-NYt" eventType="touchUpInside" id="ebJ-q9-43L"/>
                                                     </connections>
