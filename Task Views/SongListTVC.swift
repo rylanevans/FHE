@@ -39,7 +39,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         songAssigneeText.inputView = memberPicker
         songAssigneeText.inputAccessoryView = toolBar
         
-//        generateTestSongs()
+        //        generateTestSongs()
         attemptFetch()
     }
     
@@ -69,7 +69,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             songAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
         } else {
             songAssigneeMemberImage.image = UIImage(named: "\(memberArray[row])")
-        // save to member relationship to Song task to core data
+            // save to member relationship to Song task to core data
         }
     }
     
@@ -179,6 +179,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell", for: indexPath) as! SongCell
         configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+        cell.delegate = self
         return cell
     }
     
@@ -221,19 +222,35 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func onDeckCellButtonTapped(_ sender: SongCell) {
-        print("Testing ButtonTapped")
-        //        guard let indexPath = tableView.indexPath(for: sender),
-        //            let song = songController.object(at: indexPath) as? Song else {return}
-        //        print("Button was pressed \(song)")
-        //
-        //        if let objects = songController.fetchedObjects, objects.count > 0 {
-        //            let song = objects[indexPath.row]
-        //        onDeckToggle(song)
-        //        }
-        //
-        //        attemptFetch()
-        //        tableView.reloadData()
+        if let objects = songController.fetchedObjects, objects.count > 0 {
+            let indexPath = tableView.indexPath(for: sender)
+            let sections = songController.sections![(indexPath?.section)!]
+            let song = sections.objects![(indexPath?.row)!]
+            //        guard let indexPath = tableView.indexPath(for: sender),
+            //        let Song = songController?.object(at: indexPath) else { return }
+            isSelectedValueToggle(song as! Song)
+        }
     }
+    
+    func isSelectedValueToggle(_ Song: Song) {
+        Song.selected = !Song.selected
+        ad.saveContext()
+    }
+    
+    //    func onDeckCellButtonTapped(_ sender: SongCell) {
+    //        print("TestingButtonTapped")
+    //    }
+    //        guard let indexPath = tableView.indexPath(for: sender),
+    //            let song = songController.object(at: indexPath) as? Song else {return}
+    //        print("Button was pressed \(song)")
+    //
+    //        if let objects = songController.fetchedObjects, objects.count > 0 {
+    //            let song = objects[indexPath.row]
+    //        onDeckToggle(song)
+    //        }
+    //
+    //        attemptFetch()
+    //        tableView.reloadData()
     
     //    func onDeckToggle(_ song: Song) {
     //        song.selected = !song.selected
@@ -249,7 +266,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
-//        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+        //        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
         let sortByRandom = NSSortDescriptor(key: "random", ascending: true)

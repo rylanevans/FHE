@@ -24,6 +24,11 @@ class FamilyCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func attendingSwitchPressed(_ sender: Any) {
+        print("attendingSwitchPressed")
+    }
+    
+    
     func configureFamilyCell(member: Member) {
         let name = member.name ?? ""
         let photo = member.photo ?? #imageLiteral(resourceName: "NoPhoto")

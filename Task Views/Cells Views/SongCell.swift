@@ -7,7 +7,10 @@
 //
 
 import UIKit
-@IBDesignable
+
+protocol SongCellDelegate {
+    func onDeckCellButtonTapped(_ sender: SongCell)
+}
 
 class SongCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
@@ -15,13 +18,13 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var selectedButton: UIButton!
     
     var delegate: SongCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,12 +33,9 @@ class SongCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func onDeckButtonPressed(_ sender: Any) {        
-        if let delegate = delegate {
-            delegate.onDeckCellButtonTapped(self)
-        }
+    @IBAction func onDeckButtonPressed(_ sender: Any) {
+        delegate?.onDeckCellButtonTapped(self)
     }
-    
     
     func configureCell(song: Song) {
         let topic = song.topic ?? "Topic"
@@ -53,8 +53,4 @@ class SongCell: UITableViewCell {
             onDeckImage.image = #imageLiteral(resourceName: "NotSelected")
         }
     }
-}
-
-protocol SongCellDelegate {
-    func onDeckCellButtonTapped(_ sender: SongCell)
 }
