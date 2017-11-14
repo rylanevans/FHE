@@ -71,7 +71,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songNumberTextField.inputAccessoryView = toolBar
         
         songURLTextField.delegate = self
-        songURLTextField.attributedPlaceholder = NSAttributedString(string: "www.EnterUniqueURLAddressHere.com", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        songURLTextField.attributedPlaceholder = NSAttributedString(string: "Paste a youtube address to override", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
         songURLTextField.inputAccessoryView = toolBar
         
         checkValidTitle()

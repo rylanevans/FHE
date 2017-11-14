@@ -18,7 +18,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let memberPicker = UIPickerView()
     
-    var memberArray = ["Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
+    var memberArray = ["Off", "Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,8 +65,12 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         songAssigneeLabel.text = memberArray[row]
-        songAssigneeMemberImage.image = UIImage(named: "\(memberArray[row])")
+        if memberArray[row] == "Off" {
+            songAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+        } else {
+            songAssigneeMemberImage.image = UIImage(named: "\(memberArray[row])")
         // save to member relationship to Song task to core data
+        }
     }
     
     
