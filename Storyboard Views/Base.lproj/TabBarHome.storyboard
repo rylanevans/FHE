@@ -58,7 +58,7 @@
                                     <rect key="frame" x="10" y="10" width="355" height="180"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-bh-MPT">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="96"/>
                                             <string key="text" base64-UTF8="YES">
 Cgo
 </string>
@@ -67,12 +67,12 @@ Cgo
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-gX-aFf">
-                                            <rect key="frame" x="0.0" y="100" width="355" height="43"/>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
+                                            <rect key="frame" x="0.0" y="98" width="355" height="45"/>
+                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <size key="shadowOffset" width="1" height="1"/>
+                                            <size key="shadowOffset" width="2" height="0.0"/>
                                         </label>
                                         <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qwo-ih-auM" userLabel="Family Rotation">
                                             <rect key="frame" x="0.0" y="145" width="355" height="36"/>

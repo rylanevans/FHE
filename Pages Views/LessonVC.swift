@@ -22,7 +22,7 @@ class LessonVC: UIViewController {
         super.viewDidLoad()
         clickSoundURL()
         
-        let url = URL(string: "https://www.youtube.com/embed/DasSohiV38o?rel=0&amp;controls=0&amp;showinfo=0")
+        let url = URL(string: "https://www.youtube.com/embed/9MiF_HKoFr4?rel=0&amp;controls=0&amp;showinfo=0")
         let request = URLRequest(url: url!)
         
         lessonWebKit.load(request)
