@@ -21,7 +21,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         self.hideKeyboardWhenTappedAround()
         
-//        generatedTestMember()
+//        generateTestMembers()
         memberAttemptFetch()
     }
     
@@ -47,6 +47,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
 //        }
 //    }
     
+    // View for header in section
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
@@ -245,7 +246,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-    func generatedTestMember() {
+    func generateTestMembers() {
         
         let member5 = Member(context: context)
         member5.name = "Claire"

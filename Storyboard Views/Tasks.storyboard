@@ -43,7 +43,7 @@
                                     </constraints>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-4T-Nj7">
-                                    <rect key="frame" x="11" y="155" width="353.5" height="35"/>
+                                    <rect key="frame" x="11" y="154.5" width="353.5" height="35"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -77,10 +77,10 @@ Family Member To Songs
                                                 <constraint firstAttribute="height" constant="35" id="C6C-n3-2O5"/>
                                             </constraints>
                                             <segments>
-                                                <segment title="Created"/>
+                                                <segment title="Book"/>
                                                 <segment title="Title"/>
                                                 <segment title="Topic"/>
-                                                <segment title="Book"/>
+                                                <segment title="Random"/>
                                                 <segment title="Manual"/>
                                                 <segment title="Off"/>
                                             </segments>

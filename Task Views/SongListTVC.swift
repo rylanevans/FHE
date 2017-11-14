@@ -39,13 +39,13 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         songAssigneeText.inputView = memberPicker
         songAssigneeText.inputAccessoryView = toolBar
         
-        //        generatedTestSong()
+//        generateTestSongs()
         attemptFetch()
-        tableView.reloadData()
     }
     
-    @objc func donePressedOnKeyboard() {
-        view.endEditing(true)
+    override func viewDidAppear(_ animated: Bool) {
+        attemptFetch()
+        tableView.reloadData()
     }
     
     // MARK: - Picker View Set up
@@ -72,12 +72,15 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - Text Field Options
     
+    // Hide the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
     
+    @objc func donePressedOnKeyboard() {
+        view.endEditing(true)
+    }
     
     // MARK: - Table view data source
     
@@ -89,7 +92,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let sectionTitle = songController.sections
         
         if segment.selectedSegmentIndex == 0 {
-            title = "SORTED BY DATE:"
+            if sectionTitle![section].name == "Children's" {
+                title = "CHILDREN'S SONG BOOK:"
+            } else {
+                title = "HYMN BOOK:"
+            }
             
         } else if segment.selectedSegmentIndex == 1 {
             title = "SORTED ALPHABETICALLY:"
@@ -112,11 +119,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 3 {
-            if sectionTitle![section].name == "Children's" {
-                title = "CHILDREN'S SONG BOOK:"
-            } else {
-                title = "HYMN BOOK:"
-            }
+            title = "SORTED RANDOMLY:"
             
         } else if segment.selectedSegmentIndex == 4 {
             title = "DRAG & DROP TO SORT:"
@@ -151,7 +154,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         if let sections = songController.sections {
             return sections.count
         }
-        return 1
+        return 0
     }
     
     // Number of rows in section
@@ -242,17 +245,17 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
-        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
+//        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
-//        let sortByRandom = NSSortDescriptor(key: "random", ascending: true)
+        let sortByRandom = NSSortDescriptor(key: "random", ascending: true)
         let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         let sortByBook = NSSortDescriptor(key: "book", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByDate]
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
             
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.songController = controller
             
@@ -291,8 +294,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByRandom]
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
             controller.delegate = self
             self.songController = controller
             
@@ -370,7 +373,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    func generatedTestSong() {
+    func generateTestSongs() {
         let song1 = Song(context: context)
         song1.order = 1
         song1.random = Int64(arc4random_uniform(100))
@@ -400,136 +403,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         song3.title = "High on the Mountain Top"
         song3.topic = "Perfect the Saints"
         song3.selected = false
-        
-        ad.saveContext()
-    }
-    
-    func generatedTask() {
-        let taskOpenPrayer = Task(context: context)
-        taskOpenPrayer.assigned = false
-        //        taskSongs.assignment = Member.Type???
-        taskOpenPrayer.defaultNumber = 1
-        taskOpenPrayer.enabled = true
-        taskOpenPrayer.name = "Opening Prayer"
-        taskOpenPrayer.order = Int64(arc4random_uniform(100))
-        taskOpenPrayer.segment = 1
-        
-        let taskSongs = Task(context: context)
-        taskSongs.assigned = false
-        //        taskSongs.assignment = Member.Type???
-        taskSongs.defaultNumber = 2
-        taskSongs.enabled = true
-        taskSongs.name = "Song"
-        taskSongs.order = Int64(arc4random_uniform(100))
-        taskSongs.segment = 1
-        
-        let taskRule = Task(context: context)
-        taskRule.assigned = false
-        //        taskRule.assignment = Member.Type???
-        taskRule.defaultNumber = 3
-        taskRule.enabled = false
-        taskRule.name = "Rule"
-        taskRule.order = Int64(arc4random_uniform(100))
-        taskRule.segment = 1
-        
-        let taskScripture = Task(context: context)
-        taskScripture.assigned = false
-        //        taskScripture.assignment = Member.Type???
-        taskScripture.defaultNumber = 4
-        taskScripture.enabled = true
-        taskScripture.name = "Scripture"
-        taskScripture.order = Int64(arc4random_uniform(100))
-        taskScripture.segment = 1
-        
-        let taskCalendar = Task(context: context)
-        taskCalendar.assigned = false
-        //        taskCalendar.assignment = Member.Type???
-        taskCalendar.defaultNumber = 5
-        taskCalendar.enabled = false
-        taskCalendar.name = "Calendar"
-        taskCalendar.order = Int64(arc4random_uniform(100))
-        taskCalendar.segment = 1
-        
-        let taskTestimony = Task(context: context)
-        taskTestimony.assigned = false
-        //        taskTestimony.assignment = Member.Type???
-        taskTestimony.defaultNumber = 6
-        taskTestimony.enabled = true
-        taskTestimony.name = "Testimony"
-        taskTestimony.order = Int64(arc4random_uniform(100))
-        taskTestimony.segment = 1
-        
-        let taskSpotlight = Task(context: context)
-        taskSpotlight.assigned = false
-        //        taskSpotlight.assignment = Member.Type???
-        taskSpotlight.defaultNumber = 7
-        taskSpotlight.enabled = false
-        taskSpotlight.name = "Spotlight"
-        taskSpotlight.order = Int64(arc4random_uniform(100))
-        taskSpotlight.segment = 1
-        
-        let taskMisc = Task(context: context)
-        taskMisc.assigned = false
-        //        taskMisc.assignment = Member.Type???
-        taskMisc.defaultNumber = 8
-        taskMisc.enabled = false
-        taskMisc.name = "Misc"
-        taskMisc.order = Int64(arc4random_uniform(100))
-        taskMisc.segment = 1
-        
-        let taskThought = Task(context: context)
-        taskThought.assigned = false
-        //        taskThought.assignment = Member.Type???
-        taskThought.defaultNumber = 9
-        taskThought.enabled = false
-        taskThought.name = "Thought"
-        taskThought.order = Int64(arc4random_uniform(100))
-        taskThought.segment = 1
-        
-        let taskLesson = Task(context: context)
-        taskLesson.assigned = false
-        //        taskLesson.assignment = Member.Type???
-        taskLesson.defaultNumber = 10
-        taskLesson.enabled = true
-        taskLesson.name = "Lesson"
-        taskLesson.order = Int64(arc4random_uniform(100))
-        taskLesson.segment = 1
-        
-        let taskCouncil = Task(context: context)
-        taskCouncil.assigned = false
-        //        taskCouncil.assignment = Member.Type???
-        taskCouncil.defaultNumber = 11
-        taskCouncil.enabled = false
-        taskCouncil.name = "Council"
-        taskCouncil.order = Int64(arc4random_uniform(100))
-        taskCouncil.segment = 1
-        
-        let taskClosePrayer = Task(context: context)
-        taskClosePrayer.assigned = false
-        //        taskClosePrayer.assignment = Member.Type???
-        taskClosePrayer.defaultNumber = 12
-        taskClosePrayer.enabled = true
-        taskClosePrayer.name = "Closing Prayer"
-        taskClosePrayer.order = Int64(arc4random_uniform(100))
-        taskClosePrayer.segment = 1
-        
-        let taskGame = Task(context: context)
-        taskGame.assigned = false
-        //        taskGame.assignment = Member.Type???
-        taskGame.defaultNumber = 13
-        taskGame.enabled = true
-        taskGame.name = "Game"
-        taskGame.order = Int64(arc4random_uniform(100))
-        taskGame.segment = 1
-        
-        let taskTreat = Task(context: context)
-        taskTreat.assigned = false
-        //        taskTreat.assignment = Member.Type???
-        taskTreat.defaultNumber = 14
-        taskTreat.enabled = true
-        taskTreat.name = "Treat"
-        taskTreat.order = Int64(arc4random_uniform(100))
-        taskTreat.segment = 1
         
         ad.saveContext()
     }
