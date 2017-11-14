@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol TaskCellDelegate {
+    func enabledNeedsChanged(_ sender: TaskCell)
+}
+
 class TaskCell: UITableViewCell {
     @IBOutlet weak var taskImage: UIImageView!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var enabledSwitch: UISwitch!
+
+    var delegate: TaskCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +29,11 @@ class TaskCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
+    
+    @IBAction func enabledSwitchPressed(_ sender: Any) {
+        delegate?.enabledNeedsChanged(self)
+    }
+    
     
     func configureTaskCell(task: Task) {
         let name = task.name ?? ""

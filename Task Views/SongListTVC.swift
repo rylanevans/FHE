@@ -73,7 +73,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    
     // MARK: - Text Field Options
     
     // Hide the keyboard
@@ -210,54 +209,34 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    // MARK: - Title Table View Cell Delegate
-    
+    // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         attemptFetch()
         tableView.reloadData()
     }
     
+    // Rotate through songs
     @IBAction func recycleButtonPressed(_ sender: Any) {
         playClick()
     }
     
-    func onDeckCellButtonTapped(_ sender: SongCell) {
+    // MARK: - Song Cell Delegate
+    
+    func songSelectedNeedsChanged(_ sender: SongCell) {
         if let objects = songController.fetchedObjects, objects.count > 0 {
             let indexPath = tableView.indexPath(for: sender)
             let sections = songController.sections![(indexPath?.section)!]
             let song = sections.objects![(indexPath?.row)!]
-            //        guard let indexPath = tableView.indexPath(for: sender),
-            //        let Song = songController?.object(at: indexPath) else { return }
-            isSelectedValueToggle(song as! Song)
+            selectedValueToggle(song as! Song)
         }
     }
     
-    func isSelectedValueToggle(_ Song: Song) {
+    // Change status of selected bool
+    func selectedValueToggle(_ Song: Song) {
         Song.selected = !Song.selected
         ad.saveContext()
+        tableView.reloadData()
     }
-    
-    //    func onDeckCellButtonTapped(_ sender: SongCell) {
-    //        print("TestingButtonTapped")
-    //    }
-    //        guard let indexPath = tableView.indexPath(for: sender),
-    //            let song = songController.object(at: indexPath) as? Song else {return}
-    //        print("Button was pressed \(song)")
-    //
-    //        if let objects = songController.fetchedObjects, objects.count > 0 {
-    //            let song = objects[indexPath.row]
-    //        onDeckToggle(song)
-    //        }
-    //
-    //        attemptFetch()
-    //        tableView.reloadData()
-    
-    //    func onDeckToggle(_ song: Song) {
-    //        song.selected = !song.selected
-    //        ad.saveContext()
-    //        attemptFetch()
-    //        tableView.reloadData()
-    //    }
     
     // MARK: - Boiler Code for Core Data
     

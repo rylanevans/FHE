@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol FamilyCellDelegate {
+    func attendingNeedsChanged(_ sender: FamilyCell)
+}
+
 class FamilyCell: UITableViewCell {
     @IBOutlet weak var memberImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var attendingSwitch: UISwitch!
+    
+    var delegate: FamilyCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +31,7 @@ class FamilyCell: UITableViewCell {
     }
     
     @IBAction func attendingSwitchPressed(_ sender: Any) {
-        print("attendingSwitchPressed")
+        delegate?.attendingNeedsChanged(self)
     }
     
     

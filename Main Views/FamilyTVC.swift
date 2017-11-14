@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate {
+class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, FamilyCellDelegate {
     @IBOutlet weak var segment: UISegmentedControl!
     
     override func viewDidLoad() {
@@ -100,6 +100,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let detailCell = tableView.dequeueReusableCell(withIdentifier: "FamilyCell", for: indexPath) as! FamilyCell
         configureFamilyCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        detailCell.delegate = self
         return detailCell
     }
     
@@ -119,13 +120,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let objects = memberController.fetchedObjects, objects.count > 0 {
-//            let member = objects[indexPath.row]
-//            performSegue(withIdentifier: "MemberDetailsVCExisting", sender: member)
-//        }
-//    }
-    
     // Prepare for segue to another view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MemberDetailsVCExisting" {
@@ -137,9 +131,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-    
-    // MARK: - Title Table View Cell Delegate
-    
+    // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         memberAttemptFetch()
         tableView.reloadData()
@@ -147,8 +139,27 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         viewWillAppear(true)
     }
     
+    // Rotate through songs
     @IBAction func recycleButtonPressed(_ sender: Any) {
         playClick()
+    }
+    
+    // MARK: - Family Cell Delegate
+    
+    func attendingNeedsChanged(_ sender: FamilyCell) {
+        if let objects = memberController.fetchedObjects, objects.count > 0 {
+            let indexPath = tableView.indexPath(for: sender)
+            let sections = memberController.sections![(indexPath?.section)!]
+            let member = sections.objects![(indexPath?.row)!]
+            attendingValueToggle(member as! Member)
+        }
+    }
+    
+    // Change status of attending bool
+    func attendingValueToggle(_ Member: Member) {
+        Member.attending = !Member.attending
+        ad.saveContext()
+        tableView.reloadData()
     }
     
     // MARK: - Boiler Code for Core Data
@@ -206,7 +217,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             
         case .insert:
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         case .delete:
@@ -225,10 +236,10 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             break
         case .move:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         }

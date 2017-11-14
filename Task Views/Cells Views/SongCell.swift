@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SongCellDelegate {
-    func onDeckCellButtonTapped(_ sender: SongCell)
+    func songSelectedNeedsChanged(_ sender: SongCell)
 }
 
 class SongCell: UITableViewCell {
@@ -33,8 +33,8 @@ class SongCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func onDeckButtonPressed(_ sender: Any) {
-        delegate?.onDeckCellButtonTapped(self)
+    @IBAction func selectedButtonPressed(_ sender: Any) {
+        delegate?.songSelectedNeedsChanged(self)
     }
     
     func configureCell(song: Song) {

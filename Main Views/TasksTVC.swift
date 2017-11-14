@@ -10,7 +10,7 @@ import UIKit
 import StoreKit
 import CoreData
 
-class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate {
+class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskCellDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +102,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let detailCell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
         configureTaskCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        detailCell.delegate = self
         return detailCell
     }
     
@@ -130,6 +131,23 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate {
         }
     }
     
+    // MARK: - Task Cell Delegate
+    
+    func enabledNeedsChanged(_ sender: TaskCell) {
+        if let objects = taskController.fetchedObjects, objects.count > 0 {
+            let indexPath = tableView.indexPath(for: sender)
+            let sections = taskController.sections![(indexPath?.section)!]
+            let task = sections.objects![(indexPath?.row)!]
+            selectedValueToggle(task as! Task)
+        }
+    }
+    
+    // Change status of selected bool
+    func selectedValueToggle(_ Task: Task) {
+        Task.enabled = !Task.enabled
+        ad.saveContext()
+        tableView.reloadData()
+    }
     
     // MARK: - Boiler Code for Core Data
     
@@ -169,7 +187,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate {
             
         case .insert:
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         case .delete:
@@ -188,10 +206,10 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate {
             break
         case .move:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         }
