@@ -217,7 +217,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             
         case .insert:
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .automatic)
+                tableView.insertRows(at: [indexPath], with: .fade)
             }
             break
         case .delete:
@@ -236,10 +236,10 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             break
         case .move:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.deleteRows(at: [indexPath], with: .fade)
             }
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .automatic)
+                tableView.insertRows(at: [indexPath], with: .fade)
             }
             break
         }
@@ -249,9 +249,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
         case .delete:
-            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
+            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
         case .insert:
-            tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
+            tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
         default:
             break
         }

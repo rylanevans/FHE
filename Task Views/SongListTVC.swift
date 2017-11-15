@@ -195,7 +195,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // Function to configure each cell
     func configureCell(cell: SongCell, indexPath: NSIndexPath) {
         let song = songController.object(at: indexPath as IndexPath)
-        cell.configureCell(song: song)
+        cell.configureSongCell(song: song)
     }
     
     // Prepare for segue to another view controller

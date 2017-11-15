@@ -34,7 +34,6 @@ class TaskCell: UITableViewCell {
         delegate?.enabledNeedsChanged(self)
     }
     
-    
     func configureTaskCell(task: Task) {
         let name = task.name ?? ""
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")

@@ -37,7 +37,7 @@ class SongCell: UITableViewCell {
         delegate?.songSelectedNeedsChanged(self)
     }
     
-    func configureCell(song: Song) {
+    func configureSongCell(song: Song) {
         let topic = song.topic ?? "Topic"
         let title = song.title
         let number = song.number ?? "NA"
