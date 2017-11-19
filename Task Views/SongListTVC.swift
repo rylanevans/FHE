@@ -97,8 +97,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         if segment.selectedSegmentIndex == 0 {
             if sectionTitle![section].name == "Children's" {
                 title = "CHILDREN'S SONG BOOK:"
-            } else {
+            } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
+            } else {
+                title = "OTHER:"
             }
             
         } else if segment.selectedSegmentIndex == 1 {
@@ -106,14 +108,20 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             
         } else if segment.selectedSegmentIndex == 2 {
             switch sectionTitle![section].name {
-            case "God Head": title = "GOD HEAD:"
+            case "Heavenly Father": title = "HEAVENLY FATHER:"
+            case "Jesus Christ": title = "JESUS CHRIST:"
+            case "Holy Ghost": title = "HOLY GHOST:"
             case "Plan of Salvation": title = "PLAN OF SALVATION:"
+            case "Birth of our Savior": title = "BIRTH OF OUR SAVIOR:"
             case "Atonement": title = "ATONEMENT:"
+            case "Forgiveness": title = "FORGIVENESS:"
+            case "Resurrection": title = "RESURRECTION:"
             case "Christlike Attributes": title = "CHRISTLIKE ATTRIBUTES:"
             case "Commandments": title = "COMMANDMENTS:"
             case "Scriptures": title = "SCRIPTURES:"
             case "Restoration": title = "RESTORATION:"
             case "Principles & Ordinances": title = "PRINCIPLES & ORDINANCES:"
+            case "Endure to the end" : title = "ENDURE TO THE END:"
             case "Perfect the Saints": title = "PERFECT THE SAINTS:"
             case "Proclaim the Gospel": title = "PROCLAIM THE GOSPEL:"
             case "Redeem the Dead": title = "REDEEM THE DEAD:"
@@ -130,8 +138,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         } else if segment.selectedSegmentIndex == 5 {
             if sectionTitle![section].name == "Children's" {
                 title = "CHILDREN'S SONG BOOK:"
-            } else {
+            } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
+            } else {
+                title = "OTHER:"
             }
             
         } else {

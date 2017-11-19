@@ -21,8 +21,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         self.hideKeyboardWhenTappedAround()
         
-//        generateTestMembers()
+//        generateFamilyMembers()
         memberAttemptFetch()
+        tableView.reloadData()
     }
     
     // MARK: - Text Field Options
@@ -257,79 +258,78 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-    func generateTestMembers() {
+    func generateFamilyMembers() {
+        let memberDad = Member(context: context)
+        memberDad.name = "Dad"
+        memberDad.age = 38
+        memberDad.attending = true
+        memberDad.order = 1
+        memberDad.photo = #imageLiteral(resourceName: "Dad") as UIImage
+        memberDad.random = Int64(arc4random_uniform(100))
         
-        let member5 = Member(context: context)
-        member5.name = "Claire"
-        member5.photo = #imageLiteral(resourceName: "Claire") as UIImage
-        member5.attending = true
-        member5.order = 5
-        member5.age = 5
-        member5.random = Int64(arc4random_uniform(100))
+        let memberMom = Member(context: context)
+        memberMom.name = "Dad"
+        memberMom.age = 36
+        memberMom.attending = true
+        memberMom.order = 2
+        memberMom.photo = #imageLiteral(resourceName: "Mom") as UIImage
+        memberMom.random = Int64(arc4random_uniform(100))
         
-        let member4 = Member(context: context)
-        member4.name = "Reed"
-        member4.photo = #imageLiteral(resourceName: "Reed") as UIImage
-        member4.attending = true
-        member4.order = 4
-        member4.age = 7
-        member4.random = Int64(arc4random_uniform(100))
+        let memberLilly = Member(context: context)
+        memberLilly.name = "Lilly"
+        memberLilly.age = 12
+        memberLilly.attending = true
+        memberLilly.order = 3
+        memberLilly.photo = #imageLiteral(resourceName: "Lilly") as UIImage
+        memberLilly.random = Int64(arc4random_uniform(100))
         
-        let member3 = Member(context: context)
-        member3.name = "Anisten"
-        member3.photo = #imageLiteral(resourceName: "Anisten") as UIImage
-        member3.attending = true
-        member3.order = 3
-        member3.age = 10
-        member3.random = Int64(arc4random_uniform(100))
+        let memberAnisten = Member(context: context)
+        memberAnisten.name = "Anisten"
+        memberAnisten.age = 10
+        memberAnisten.attending = true
+        memberAnisten.order = 4
+        memberAnisten.photo = #imageLiteral(resourceName: "Anisten") as UIImage
+        memberAnisten.random = Int64(arc4random_uniform(100))
         
-        let member2 = Member(context: context)
-        member2.name = "Lilly"
-        member2.photo = #imageLiteral(resourceName: "Lilly") as UIImage
-        member2.attending = true
-        member2.order = 2
-        member2.age = 12
-        member2.random = Int64(arc4random_uniform(100))
+        let memberReed = Member(context: context)
+        memberReed.name = "Reed"
+        memberReed.age = 8
+        memberReed.attending = true
+        memberReed.order = 5
+        memberReed.photo = #imageLiteral(resourceName: "Reed") as UIImage
+        memberReed.random = Int64(arc4random_uniform(100))
         
-        let member1 = Member(context: context)
-        member1.name = "Mom"
-        member1.photo = #imageLiteral(resourceName: "Mom") as UIImage
-        member1.attending = true
-        member1.order = 1
-        member1.age = 35
-        member1.random = Int64(arc4random_uniform(100))
+        let memberClaire = Member(context: context)
+        memberClaire.name = "Claire"
+        memberClaire.age = 5
+        memberClaire.attending = true
+        memberClaire.order = 6
+        memberClaire.photo = #imageLiteral(resourceName: "Claire") as UIImage
+        memberClaire.random = Int64(arc4random_uniform(100))
         
-        let member0 = Member(context: context)
-        member0.name = "Dad"
-        member0.photo = #imageLiteral(resourceName: "Dad") as UIImage
-        member0.attending = true
-        member0.order = 0
-        member0.age = 38
-        member0.random = Int64(arc4random_uniform(100))
+        let memberPapa = Member(context: context)
+        memberPapa.name = "Papa"
+        memberPapa.age = 60
+        memberPapa.attending = false
+        memberPapa.order = 7
+        memberPapa.photo = #imageLiteral(resourceName: "Papa") as UIImage
+        memberPapa.random = Int64(arc4random_uniform(100))
         
-        let member6 = Member(context: context)
-        member6.name = "Papa"
-        member6.photo = #imageLiteral(resourceName: "Papa") as UIImage
-        member6.attending = false
-        member6.order = 6
-        member6.age = 50
-        member6.random = Int64(arc4random_uniform(100))
+        let memberGrammy = Member(context: context)
+        memberGrammy.name = "Grammy"
+        memberGrammy.age = 55
+        memberGrammy.attending = false
+        memberGrammy.order = 8
+        memberGrammy.photo = #imageLiteral(resourceName: "Grammy") as UIImage
+        memberGrammy.random = Int64(arc4random_uniform(100))
         
-        let member7 = Member(context: context)
-        member7.name = "Grammy"
-        member7.photo = #imageLiteral(resourceName: "Grammy") as UIImage
-        member7.attending = false
-        member7.order = 7
-        member7.age = 45
-        member7.random = Int64(arc4random_uniform(100))
-        
-        let member8 = Member(context: context)
-        member8.name = "Guest"
-        member8.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
-        member8.attending = false
-        member8.order = 8
-        member8.age = 100
-        member8.random = Int64(arc4random_uniform(100))
+        let memberGuest = Member(context: context)
+        memberGuest.name = "Guest"
+        memberGuest.age = 100
+        memberGuest.attending = false
+        memberGuest.order = 9
+        memberGuest.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
+        memberGuest.random = Int64(arc4random_uniform(100))
         
         ad.saveContext()
     }

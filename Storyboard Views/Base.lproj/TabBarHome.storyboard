@@ -697,25 +697,34 @@ Cgo
                                                                                 <constraint firstAttribute="width" constant="30" id="V6z-kb-43r"/>
                                                                             </constraints>
                                                                         </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS1-7s-hkh">
+                                                                            <rect key="frame" x="30" y="20.5" width="15" height="20.5"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="15" id="nhC-AQ-gAm"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
-                                                                            <rect key="frame" x="30" y="6.5" width="119.5" height="48"/>
+                                                                            <rect key="frame" x="45" y="6.5" width="149" height="48"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opening Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="32"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task to be assigned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="149" height="32"/>
                                                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Opening Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
-                                                                                    <rect key="frame" x="0.0" y="32" width="119.5" height="16"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title of the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
+                                                                                    <rect key="frame" x="0.0" y="32" width="149" height="16"/>
                                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="14"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Dad" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
-                                                                            <rect key="frame" x="149.5" y="14.5" width="135.5" height="32"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assignee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
+                                                                            <rect key="frame" x="194" y="14.5" width="91" height="32"/>
                                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -2403,13 +2412,24 @@ I spent a lot of time and effort building something I thought would be both help
                                         <constraint firstAttribute="width" secondItem="PnK-z0-dAD" secondAttribute="height" multiplier="15:8" id="ndg-a9-ckW"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-px-Y3f">
+                                    <rect key="frame" x="10" y="150" width="355" height="45"/>
+                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
+                                    <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <size key="shadowOffset" width="1" height="0.0"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="centerX" secondItem="PnC-kS-F6c" secondAttribute="centerX" id="8nR-qs-CSX"/>
+                                <constraint firstItem="tNB-px-Y3f" firstAttribute="leading" secondItem="PnC-kS-F6c" secondAttribute="leading" constant="10" id="CHv-PI-6LL"/>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="Okr-Dx-bB8"/>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="centerY" secondItem="PnC-kS-F6c" secondAttribute="centerY" id="S9o-Um-U3U"/>
                                 <constraint firstAttribute="height" secondItem="PnK-z0-dAD" secondAttribute="height" id="Tsf-Lx-3SZ"/>
+                                <constraint firstAttribute="trailing" secondItem="tNB-px-Y3f" secondAttribute="trailing" constant="10" id="yas-Jq-Znq"/>
+                                <constraint firstAttribute="bottom" secondItem="tNB-px-Y3f" secondAttribute="bottom" constant="5" id="ytJ-2f-FjT"/>
                             </constraints>
                         </view>
                         <prototypes>

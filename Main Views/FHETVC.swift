@@ -18,14 +18,12 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     var task: Task?
     var tasks = [Task]()
     
-    let cellID = "cellID"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.clickSoundURL()
-//        assignmentTableView.reloadData()
-        assignmentTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
+        taskAttemptFetch()
+        assignmentTableView.reloadData()
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
@@ -38,7 +36,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     @IBAction func beginButtonPressed(_ sender: Any) {
         playClick()
-        let appReviewPresentedRandom = arc4random_uniform(4)
+        let appReviewPresentedRandom = arc4random_uniform(3)
         if appReviewPresentedRandom == UInt32(1) {
 //        if launchedCounter % 2 == 0 {
             SKStoreReviewController.requestReview()
@@ -47,8 +45,11 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     // Number of rows in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
-        //        return tasks.count
+        if let sections = taskController.sections {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
+        return 0
     }
     
     // Height for each row
@@ -58,21 +59,18 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     // Congigure each cell for row at a spesific index
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = assignmentTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        cell.textLabel?.text = "Something"
-        return cell
-//        let detailCell = assignmentTableView.dequeueReusableCell(withIdentifier: "AssignmentCell", for: indexPath) as! AssignmentCell
-//        configureAssignmentCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
-//        detailCell.delegate = self
-//        return detailCell
+        let detailCell = assignmentTableView.dequeueReusableCell(withIdentifier: "AssignmentCell", for: indexPath) as! AssignmentCell
+        configureAssignmentCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
+        detailCell.delegate = self
+        return detailCell
     }
     
     // Function to configure each cell
-//    func configureAssignmentCell(cell: AssignmentCell, indexPath: NSIndexPath) {
-//        let task = taskController.object(at: indexPath as IndexPath)
+    func configureAssignmentCell(cell: AssignmentCell, indexPath: NSIndexPath) {
+        let task = taskController.object(at: indexPath as IndexPath)
 //        let member = memberController.object(at: indexPath as IndexPath)
-//        cell.configureAssignmentCell(task: task, member: member)
-//    }
+        cell.configureAssignmentCell(task: task)
+    }
     
     // User did select row at a spesific index
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -99,71 +97,69 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     // MARK: - Boiler Code for Core Data
     
-//    var taskController: NSFetchedResultsController<Task>!
-//    var memberController: NSFetchedResultsController<Member>!
-//    
-//    func memberTaskAttemptFetch() {
-//        let taskfetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-////        let memberfetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
-//        
-//        let sortByEnabled = NSSortDescriptor(key: "enabled", ascending: true)
-//        let sortByNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
-//
-//        taskfetchRequest.sortDescriptors = [sortByEnabled, sortByNumber]
-//        
-//        let controller = NSFetchedResultsController(fetchRequest: taskfetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-//        controller.delegate = self
-//        self.taskController = controller
-//        
-//        do {
-//            try controller.performFetch()
-//        } catch {
-//            let error = error as NSError
-//            print("\(error)")
-//        }
-//    }
-//    
-//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        assignmentTableView.beginUpdates()
-//    }
-//    
-//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-//        assignmentTableView.endUpdates()
-//    }
+    var taskController: NSFetchedResultsController<Task>!
+    
+    func taskAttemptFetch() {
+        let taskfetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+
+        let sortByEnabled = NSSortDescriptor(key: "enabled", ascending: false)
+        let sortByNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
+
+        taskfetchRequest.sortDescriptors = [sortByEnabled, sortByNumber]
+
+        let controller = NSFetchedResultsController(fetchRequest: taskfetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
+        self.taskController = controller
+
+        do {
+            try controller.performFetch()
+        } catch {
+            let error = error as NSError
+            print("\(error)")
+        }
+    }
+
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        assignmentTableView.beginUpdates()
+    }
+
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        assignmentTableView.endUpdates()
+    }
     
     // Object did change
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-//
-//        switch(type){
-//
-//        case .insert:
-//            if let indexPath = newIndexPath {
-//                assignmentTableView.insertRows(at: [indexPath], with: .fade)
-//            }
-//            break
-//        case .delete:
-//            if let indexPath = indexPath {
-//                assignmentTableView.deleteRows(at: [indexPath], with: .fade)
-//            }
-//            break
-//        case .update:
-//            if let indexPath = indexPath {
-//                let cellDetail = assignmentTableView.cellForRow(at: indexPath) as! AssignmentCell
-//                configureAssignmentCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
-//
-//                let cellTitle = assignmentTableView.cellForRow(at: indexPath) as! AssignmentCell
-//                configureAssignmentCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
-//            }
-//            break
-//        case .move:
-//            if let indexPath = indexPath {
-//                assignmentTableView.deleteRows(at: [indexPath], with: .fade)
-//            }
-//            if let indexPath = newIndexPath {
-//                assignmentTableView.insertRows(at: [indexPath], with: .fade)
-//            }
-//            break
-//        }
-//    }
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+
+        switch(type){
+
+        case .insert:
+            if let indexPath = newIndexPath {
+                assignmentTableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break
+        case .delete:
+            if let indexPath = indexPath {
+                assignmentTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            break
+        case .update:
+            if let indexPath = indexPath {
+                let cellDetail = assignmentTableView.cellForRow(at: indexPath) as! AssignmentCell
+                configureAssignmentCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+
+                let cellTitle = assignmentTableView.cellForRow(at: indexPath) as! AssignmentCell
+                configureAssignmentCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+            }
+            break
+        case .move:
+            if let indexPath = indexPath {
+                assignmentTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            if let indexPath = newIndexPath {
+                assignmentTableView.insertRows(at: [indexPath], with: .fade)
+            }
+            break
+        }
+    }
 }
 

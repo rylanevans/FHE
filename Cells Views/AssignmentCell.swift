@@ -18,6 +18,7 @@ class AssignmentCell: UITableViewCell { //, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var taskTitleLabel: UILabel!
     @IBOutlet weak var memberNameLabel: UILabel!
     @IBOutlet weak var memberImage: UIImageView!
+    
     @IBOutlet weak var memberAssigneeText: UITextField!
     
     var delegate: AssignmentCellDelegate?
@@ -92,18 +93,22 @@ class AssignmentCell: UITableViewCell { //, UIPickerViewDelegate, UIPickerViewDa
         delegate?.assignmentNeedsChanged(self)
     }
     
-    func configureAssignmentCell(task: Task, member: Member) {
+    func configureAssignmentCell(task: Task) {
         assignmentTask(task: task)
-        assignmentMember(member: member)
+//        assignmentMember(member: member)
     }
     
     func assignmentTask(task: Task) {
-        let name = task.name ?? ""
+        let taskName = task.name ?? ""
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
-        let songSelected = task.songSelected?.title ?? ""
+        let songSelected = task.songSelected?.title ?? "Title of task"
+        let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
+        let name = task.assignment?.name ?? "Assignee"
         taskImage.image = image as? UIImage
-        taskNameLabel.text = name
+        taskNameLabel.text = taskName
         taskTitleLabel.text = songSelected
+        memberNameLabel.text = name
+        memberImage.image = photo as? UIImage
     }
     
     func assignmentMember(member: Member) {

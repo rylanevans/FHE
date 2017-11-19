@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
 //        increaseCounter()
+        checkIfLauncedBefore()
         
         return true
     }

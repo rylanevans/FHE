@@ -25,28 +25,36 @@ let IAPServiceFailureNotification = "IAPServiceFailureNotification"
 // MARK: - Universal Arrays
 
 let topicsArray = [
-                "God Head",
+                "Heavenly Father",
+                "Jesus Christ",
+                "Holy Ghost",
                 "Plan of Salvation",
+                "Birth of our Savior",
                 "Atonement",
+                "Forgiveness",
+                "Resurrection",
                 "Christlike Attributes",
                 "Commandments",
                 "Scriptures",
                 "Restoration",
                 "Principles & Ordinances",
+                "Endure to the end",
                 "Perfect the Saints",
                 "Proclaim the Gospel",
                 "Redeem the Dead",
                 "Care for the Poor & Needy"
 ]
 
-let songBooksArray = ["Children's", "Hymn"]
+let songBooksArray = ["Children's", "Hymn", "Other"]
+
 //["Children's Songbook", "Hymns"]
 
 let scriptureVolumesArray = ["Old Testament",
                              "New Testament",
                              "Book of Mormon",
                              "Doctrine and Covenants",
-                             "Pearl of Great Price"]
+                             "Pearl of Great Price"
+]
 
 let scriptureOTBooksArray = [
                 "1 Chronicles",

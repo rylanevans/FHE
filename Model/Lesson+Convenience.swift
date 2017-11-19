@@ -10,10 +10,11 @@ import CoreData
 import UIKit
 
 extension Lesson {
-    convenience init(selected: Bool, sortingIndex: Int64, random: Int64, order: Int64, dateCreated: Date, topic: String, title: String, detail: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, favorite: Bool, sortingIndex: Int64, random: Int64, order: Int64, dateCreated: Date, topic: String, title: String, detail: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.favorite = favorite
         self.selected = selected
         self.random = random
         self.sortingIndex = sortingIndex

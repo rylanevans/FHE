@@ -23,15 +23,15 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         
         clickSoundURL()
         
-//        generateTasks()
+        //        generateTasks()
         taskAttemptFetch()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let presentRandom = arc4random_uniform(11)
         if presentRandom == UInt32(1) {
-//        if launchedCounter % 3 == 0 {
-        performSegue(withIdentifier: "AboutMe", sender: nil)
+            //        if launchedCounter % 3 == 0 {
+            performSegue(withIdentifier: "AboutMe", sender: nil)
         }
         
         taskAttemptFetch()
@@ -237,7 +237,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskOpenPrayer.order = Int64(arc4random_uniform(100))
         taskOpenPrayer.segment = 1
         taskOpenPrayer.image = #imageLiteral(resourceName: "Prayer")
-        
+        taskOpenPrayer.assignment?.name = "Dad"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Dad") as UIImage
         
         let taskSongs = Task(context: context)
         taskSongs.assigned = false
@@ -248,6 +249,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskSongs.order = Int64(arc4random_uniform(100))
         taskSongs.segment = 1
         taskSongs.image = #imageLiteral(resourceName: "Song")
+        taskOpenPrayer.assignment?.name = "Mom"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Mom") as UIImage
         
         let taskRule = Task(context: context)
         taskRule.assigned = false
@@ -258,6 +261,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskRule.order = Int64(arc4random_uniform(100))
         taskRule.segment = 1
         taskRule.image = #imageLiteral(resourceName: "Rule")
+        taskOpenPrayer.assignment?.name = "Lilly"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Lilly") as UIImage
         
         let taskScripture = Task(context: context)
         taskScripture.assigned = false
@@ -268,6 +273,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskScripture.order = Int64(arc4random_uniform(100))
         taskScripture.segment = 1
         taskScripture.image = #imageLiteral(resourceName: "Scripture")
+        taskOpenPrayer.assignment?.name = "Anisten"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Anisten") as UIImage
         
         let taskCalendar = Task(context: context)
         taskCalendar.assigned = false
@@ -278,6 +285,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskCalendar.order = Int64(arc4random_uniform(100))
         taskCalendar.segment = 1
         taskCalendar.image = #imageLiteral(resourceName: "Calendar")
+        taskOpenPrayer.assignment?.name = "Reed"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Reed") as UIImage
         
         let taskTestimony = Task(context: context)
         taskTestimony.assigned = false
@@ -288,6 +297,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskTestimony.order = Int64(arc4random_uniform(100))
         taskTestimony.segment = 1
         taskTestimony.image = #imageLiteral(resourceName: "Testimony")
+        taskOpenPrayer.assignment?.name = "Claire"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Claire") as UIImage
         
         let taskSpotlight = Task(context: context)
         taskSpotlight.assigned = false
@@ -298,6 +309,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskSpotlight.order = Int64(arc4random_uniform(100))
         taskSpotlight.segment = 1
         taskSpotlight.image = #imageLiteral(resourceName: "Spotlight")
+        taskOpenPrayer.assignment?.name = "Papa"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Papa") as UIImage
         
         let taskMisc = Task(context: context)
         taskMisc.assigned = false
@@ -308,6 +321,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskMisc.order = Int64(arc4random_uniform(100))
         taskMisc.segment = 1
         taskMisc.image = #imageLiteral(resourceName: "Misc")
+        taskOpenPrayer.assignment?.name = "Grammy"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Grammy") as UIImage
         
         let taskThought = Task(context: context)
         taskThought.assigned = false
@@ -318,6 +333,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskThought.order = Int64(arc4random_uniform(100))
         taskThought.segment = 1
         taskThought.image = #imageLiteral(resourceName: "Thought")
+        taskOpenPrayer.assignment?.name = "Dad"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Dad") as UIImage
         
         let taskLesson = Task(context: context)
         taskLesson.assigned = false
@@ -328,6 +345,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskLesson.order = Int64(arc4random_uniform(100))
         taskLesson.segment = 1
         taskLesson.image = #imageLiteral(resourceName: "Lesson")
+        taskOpenPrayer.assignment?.name = "Mom"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Mom") as UIImage
         
         let taskCouncil = Task(context: context)
         taskCouncil.assigned = false
@@ -338,6 +357,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskCouncil.order = Int64(arc4random_uniform(100))
         taskCouncil.segment = 1
         taskCouncil.image = #imageLiteral(resourceName: "Council")
+        taskOpenPrayer.assignment?.name = "Guest"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
         
         let taskClosePrayer = Task(context: context)
         taskClosePrayer.assigned = false
@@ -348,6 +369,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskClosePrayer.order = Int64(arc4random_uniform(100))
         taskClosePrayer.segment = 1
         taskClosePrayer.image = #imageLiteral(resourceName: "Prayer")
+        taskOpenPrayer.assignment?.name = "Lilly"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Lilly") as UIImage
         
         let taskGame = Task(context: context)
         taskGame.assigned = false
@@ -358,6 +381,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskGame.order = Int64(arc4random_uniform(100))
         taskGame.segment = 1
         taskGame.image = #imageLiteral(resourceName: "Game")
+        taskOpenPrayer.assignment?.name = "Anisten"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Anisten") as UIImage
         
         let taskTreat = Task(context: context)
         taskTreat.assigned = false
@@ -368,6 +393,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         taskTreat.order = Int64(arc4random_uniform(100))
         taskTreat.segment = 1
         taskTreat.image = #imageLiteral(resourceName: "Treat")
+        taskOpenPrayer.assignment?.name = "Reed"
+        taskOpenPrayer.assignment?.photo = #imageLiteral(resourceName: "Reed") as UIImage
         
         ad.saveContext()
     }
