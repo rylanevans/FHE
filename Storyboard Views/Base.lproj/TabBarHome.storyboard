@@ -8,7 +8,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,80 +35,31 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BoyBG" translatesAutoresizingMaskIntoConstraints="NO" id="yit-FP-ZBH">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FamilyBG" translatesAutoresizingMaskIntoConstraints="NO" id="yit-FP-ZBH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="yit-FP-ZBH" secondAttribute="height" multiplier="15:8" id="Lyw-ER-PJs"/>
-                                    </constraints>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-sW-ZuL">
-                                    <rect key="frame" x="11" y="155" width="353.5" height="35"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-54-Ldu" userLabel="Header">
-                                    <rect key="frame" x="10" y="10" width="355" height="180"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mv-bh-MPT">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="96"/>
-                                            <string key="text" base64-UTF8="YES">
-Cgo
-</string>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Rotation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-gX-aFf">
-                                            <rect key="frame" x="0.0" y="98" width="355" height="45"/>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
-                                            <color key="textColor" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                            <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="shadowOffset" width="1" height="0.0"/>
-                                        </label>
-                                        <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qwo-ih-auM" userLabel="Family Rotation">
-                                            <rect key="frame" x="0.0" y="145" width="355" height="36"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="bmb-eA-OmB"/>
-                                            </constraints>
-                                            <segments>
-                                                <segment title="Created"/>
-                                                <segment title="Age"/>
-                                                <segment title="Name"/>
-                                                <segment title="Random"/>
-                                                <segment title="Manual"/>
-                                                <segment title="Off"/>
-                                            </segments>
-                                            <color key="tintColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <connections>
-                                                <action selector="segmentChanged:" destination="e7q-Hn-HHg" eventType="valueChanged" id="Xnn-nw-8jy"/>
-                                            </connections>
-                                        </segmentedControl>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtM-Bi-kPZ" userLabel="Blue Line">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
+                                    <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="qwo-ih-auM" firstAttribute="width" secondItem="Ces-54-Ldu" secondAttribute="width" id="rQA-ny-lVi"/>
+                                        <constraint firstAttribute="height" constant="4" id="vSR-Ad-9Nq"/>
                                     </constraints>
-                                </stackView>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <size key="shadowOffset" width="0.0" height="5"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="Ces-54-Ldu" firstAttribute="leading" secondItem="Dz5-eb-DfC" secondAttribute="leading" constant="10" id="9Dd-3Y-06C"/>
                                 <constraint firstAttribute="height" secondItem="yit-FP-ZBH" secondAttribute="height" id="9TM-U4-oLF"/>
-                                <constraint firstAttribute="bottom" secondItem="Ces-54-Ldu" secondAttribute="bottom" constant="10" id="Ad3-Yj-zgW"/>
-                                <constraint firstItem="iuN-sW-ZuL" firstAttribute="centerY" secondItem="qwo-ih-auM" secondAttribute="centerY" id="C4U-fc-xhe"/>
-                                <constraint firstAttribute="trailing" secondItem="Ces-54-Ldu" secondAttribute="trailing" constant="10" id="Lh5-kq-EWD"/>
-                                <constraint firstItem="iuN-sW-ZuL" firstAttribute="centerX" secondItem="qwo-ih-auM" secondAttribute="centerX" id="P8a-ju-NIz"/>
-                                <constraint firstItem="iuN-sW-ZuL" firstAttribute="width" secondItem="qwo-ih-auM" secondAttribute="width" multiplier="0.995" id="SBZ-uR-AeR"/>
                                 <constraint firstItem="yit-FP-ZBH" firstAttribute="centerY" secondItem="Dz5-eb-DfC" secondAttribute="centerY" id="Vg8-Dg-6LW"/>
+                                <constraint firstItem="AtM-Bi-kPZ" firstAttribute="width" secondItem="Dz5-eb-DfC" secondAttribute="width" id="VvV-cK-xx0"/>
                                 <constraint firstItem="yit-FP-ZBH" firstAttribute="width" secondItem="Dz5-eb-DfC" secondAttribute="width" id="YjW-Cc-7Ch"/>
-                                <constraint firstItem="iuN-sW-ZuL" firstAttribute="height" secondItem="qwo-ih-auM" secondAttribute="height" id="iRR-Od-RYb"/>
+                                <constraint firstItem="AtM-Bi-kPZ" firstAttribute="centerX" secondItem="Dz5-eb-DfC" secondAttribute="centerX" id="f05-H6-ssn"/>
                                 <constraint firstItem="yit-FP-ZBH" firstAttribute="centerX" secondItem="Dz5-eb-DfC" secondAttribute="centerX" id="l4Y-hM-Xzh"/>
-                                <constraint firstItem="Ces-54-Ldu" firstAttribute="top" secondItem="Dz5-eb-DfC" secondAttribute="top" constant="10" id="pk6-Pi-IQ1"/>
+                                <constraint firstItem="AtM-Bi-kPZ" firstAttribute="top" secondItem="Dz5-eb-DfC" secondAttribute="top" id="lqz-2D-Hfz"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -246,21 +196,13 @@ Cgo
                     </tableView>
                     <navigationItem key="navigationItem" title="Family Members" id="PLg-Z8-Uac">
                         <barButtonItem key="backBarButtonItem" title="Back" id="gGL-Vb-eTp"/>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="84K-m0-M4n">
-                                <connections>
-                                    <segue destination="z09-W1-aaa" kind="show" identifier="MemberDetailsVCNew" id="fh2-ar-ueD"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Recycle" image="Recycle-25" id="0Js-GI-jha">
-                                <connections>
-                                    <action selector="recycleButtonPressed:" destination="e7q-Hn-HHg" id="EpA-uy-zsU"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="84K-m0-M4n">
+                            <connections>
+                                <segue destination="z09-W1-aaa" kind="show" identifier="MemberDetailsVCNew" id="fh2-ar-ueD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="segment" destination="qwo-ih-auM" id="S1T-o1-Y4V"/>
                         <segue destination="z09-W1-aaa" kind="show" identifier="MemberDetailsVCExisting" id="h4y-nB-v6D"/>
                     </connections>
                 </tableViewController>
@@ -1893,20 +1835,20 @@ I spent a lot of time and effort building something I thought would be both help
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tf2-Ul-FS0">
-                                                    <rect key="frame" x="24" y="12" width="327" height="401"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="533"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1t-TC-kRt" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="656" height="401"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="509" height="533"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -1916,10 +1858,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AboutRylan" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-00-VEE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="656" height="401"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Business Cards" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-00-VEE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="509" height="533"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="DAR-00-VEE" secondAttribute="height" multiplier="327:200" id="uaT-8I-MJK"/>
+                                                                <constraint firstAttribute="width" secondItem="DAR-00-VEE" secondAttribute="height" multiplier="109:114" id="uaT-8I-MJK"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1936,16 +1878,39 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-0s-Gz3">
+                                                            <rect key="frame" x="389" y="493" width="110" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="110" id="MxG-3Z-uxR"/>
+                                                                <constraint firstAttribute="height" constant="30" id="pa7-pi-Vkm"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <state key="normal" title="ABOUT ME"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="DAR-00-VEE" secondAttribute="bottom" id="BwF-d9-4ar"/>
+                                                        <constraint firstItem="V6Q-0s-Gz3" firstAttribute="trailing" secondItem="DAR-00-VEE" secondAttribute="trailing" constant="-10" id="MOP-t3-z6P"/>
                                                         <constraint firstItem="x1t-TC-kRt" firstAttribute="top" secondItem="DAR-00-VEE" secondAttribute="top" id="MZk-cb-naS"/>
                                                         <constraint firstItem="x1t-TC-kRt" firstAttribute="bottom" secondItem="DAR-00-VEE" secondAttribute="bottom" id="QC9-4i-hoo"/>
                                                         <constraint firstItem="x1t-TC-kRt" firstAttribute="leading" secondItem="DAR-00-VEE" secondAttribute="leading" id="h1R-36-4Gl"/>
                                                         <constraint firstItem="x1t-TC-kRt" firstAttribute="trailing" secondItem="DAR-00-VEE" secondAttribute="trailing" id="ieT-2C-Wor"/>
                                                         <constraint firstItem="DAR-00-VEE" firstAttribute="leading" secondItem="tf2-Ul-FS0" secondAttribute="leading" id="lXE-h2-Nq7"/>
                                                         <constraint firstAttribute="trailing" secondItem="DAR-00-VEE" secondAttribute="trailing" id="lap-xb-pgp"/>
+                                                        <constraint firstItem="V6Q-0s-Gz3" firstAttribute="bottom" secondItem="DAR-00-VEE" secondAttribute="bottom" constant="-10" id="uie-jt-agJ"/>
                                                         <constraint firstItem="DAR-00-VEE" firstAttribute="top" secondItem="tf2-Ul-FS0" secondAttribute="top" id="ulr-UU-lPJ"/>
                                                     </constraints>
                                                 </view>
@@ -1971,20 +1936,20 @@ I spent a lot of time and effort building something I thought would be both help
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yis-LW-9iE">
-                                                    <rect key="frame" x="24" y="12" width="327" height="143"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="343"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TS5-Vm-x69" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="143"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="343"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -1994,10 +1959,11 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RylanEvans.com" translatesAutoresizingMaskIntoConstraints="NO" id="axk-2H-13r">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="143"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Website" translatesAutoresizingMaskIntoConstraints="NO" id="axk-2H-13r">
+                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="343"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="axk-2H-13r" secondAttribute="height" multiplier="327:154" id="Gc1-Aa-uuR"/>
+                                                                <constraint firstAttribute="height" constant="342.5" id="AeH-t7-DaL"/>
+                                                                <constraint firstAttribute="width" secondItem="axk-2H-13r" secondAttribute="height" multiplier="109:114" id="Gc1-Aa-uuR"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2014,13 +1980,38 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOQ-09-gQn">
+                                                            <rect key="frame" x="167" y="303" width="150" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="CqN-MP-hJY"/>
+                                                                <constraint firstAttribute="width" constant="150" id="KCv-fT-PA6"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <state key="normal" title="VISIT WEBSITE"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="sOQ-09-gQn" firstAttribute="bottom" secondItem="TS5-Vm-x69" secondAttribute="bottom" constant="-10" id="7Yb-tz-vYg"/>
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="bottom" secondItem="axk-2H-13r" secondAttribute="bottom" id="EZz-Qs-fGM"/>
+                                                        <constraint firstItem="sOQ-09-gQn" firstAttribute="trailing" secondItem="TS5-Vm-x69" secondAttribute="trailing" constant="-10" id="Gkt-4N-Ut6"/>
                                                         <constraint firstItem="axk-2H-13r" firstAttribute="leading" secondItem="yis-LW-9iE" secondAttribute="leading" id="NBs-Gf-ABo"/>
+                                                        <constraint firstItem="axk-2H-13r" firstAttribute="centerX" secondItem="yis-LW-9iE" secondAttribute="centerX" id="Tkq-Uy-kwF"/>
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="trailing" secondItem="axk-2H-13r" secondAttribute="trailing" id="ajw-vq-40U"/>
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="leading" secondItem="axk-2H-13r" secondAttribute="leading" id="bD6-oJ-Gcq"/>
+                                                        <constraint firstItem="axk-2H-13r" firstAttribute="centerY" secondItem="yis-LW-9iE" secondAttribute="centerY" id="iqN-U6-wXo"/>
                                                         <constraint firstItem="axk-2H-13r" firstAttribute="top" secondItem="yis-LW-9iE" secondAttribute="top" id="o3E-8L-pAd"/>
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="top" secondItem="axk-2H-13r" secondAttribute="top" id="pu1-14-anV"/>
                                                         <constraint firstAttribute="bottom" secondItem="axk-2H-13r" secondAttribute="bottom" id="rS8-bo-uxq"/>
@@ -2056,10 +2047,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -2080,15 +2071,38 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-N1-Bq8">
+                                                            <rect key="frame" x="207" y="302.5" width="110" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="1aL-1j-6l5"/>
+                                                                <constraint firstAttribute="width" constant="110" id="VxR-g8-tdv"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <state key="normal" title="DOWNLOAD"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="WTO-N1-Bq8" firstAttribute="trailing" secondItem="uqh-y8-pHW" secondAttribute="trailing" constant="-10" id="4N5-kF-SHW"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="top" secondItem="uqh-y8-pHW" secondAttribute="top" id="9rS-5J-Rao"/>
                                                         <constraint firstItem="uqh-y8-pHW" firstAttribute="leading" secondItem="RfP-8s-CTH" secondAttribute="leading" id="IDa-k2-ghh"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="leading" secondItem="uqh-y8-pHW" secondAttribute="leading" id="WzK-4x-7eJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="uqh-y8-pHW" secondAttribute="trailing" id="bgh-zY-2ls"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="bottom" secondItem="uqh-y8-pHW" secondAttribute="bottom" id="p6j-4i-Ope"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="trailing" secondItem="uqh-y8-pHW" secondAttribute="trailing" id="rdr-1R-2Ox"/>
+                                                        <constraint firstItem="WTO-N1-Bq8" firstAttribute="bottom" secondItem="uqh-y8-pHW" secondAttribute="bottom" constant="-10" id="roQ-FN-RNi"/>
                                                         <constraint firstItem="uqh-y8-pHW" firstAttribute="top" secondItem="RfP-8s-CTH" secondAttribute="top" id="wfq-43-XZu"/>
                                                         <constraint firstAttribute="bottom" secondItem="uqh-y8-pHW" secondAttribute="bottom" id="x8N-Hr-dkD"/>
                                                     </constraints>
@@ -2122,10 +2136,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -2146,6 +2160,27 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQ1-Vq-XoY">
+                                                            <rect key="frame" x="232" y="307.5" width="90" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="4mT-KJ-goN"/>
+                                                                <constraint firstAttribute="width" constant="90" id="LS1-Qu-Fpt"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <state key="normal" title="SHARE"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please share with your family and friends." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xs-r5-T9r">
                                                             <rect key="frame" x="25" y="8" width="277" height="39.5"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
@@ -2159,6 +2194,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="leading" secondItem="3vm-0h-JiV" secondAttribute="leading" id="9hH-pg-Jvy"/>
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="top" secondItem="3vm-0h-JiV" secondAttribute="top" id="AZW-NN-jsi"/>
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="trailing" secondItem="3vm-0h-JiV" secondAttribute="trailing" id="CKK-2n-bye"/>
+                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="trailing" secondItem="ulJ-2x-CkM" secondAttribute="trailing" constant="-5" id="Pwq-MI-nZO"/>
                                                         <constraint firstItem="6Xs-r5-T9r" firstAttribute="leading" secondItem="5Ii-fZ-IVe" secondAttribute="leading" constant="25" id="SdI-S0-djP"/>
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="bottom" secondItem="3vm-0h-JiV" secondAttribute="bottom" id="Ug7-BC-qMT"/>
                                                         <constraint firstItem="3vm-0h-JiV" firstAttribute="top" secondItem="5Ii-fZ-IVe" secondAttribute="top" id="Z5o-2n-G91"/>
@@ -2166,6 +2202,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                         <constraint firstItem="6Xs-r5-T9r" firstAttribute="top" secondItem="5Ii-fZ-IVe" secondAttribute="top" constant="8" id="bSq-Zt-aAE"/>
                                                         <constraint firstAttribute="trailing" secondItem="3vm-0h-JiV" secondAttribute="trailing" id="mUQ-O0-RdW"/>
                                                         <constraint firstAttribute="bottom" secondItem="3vm-0h-JiV" secondAttribute="bottom" id="qyS-gC-g6r"/>
+                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="bottom" secondItem="ulJ-2x-CkM" secondAttribute="bottom" constant="-5" id="sYh-zG-f8s"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -2197,10 +2234,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -2263,10 +2300,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -2329,10 +2366,10 @@ I spent a lot of time and effort building something I thought would be both help
                                                                     <real key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                    <real key="value" value="2"/>
+                                                                    <real key="value" value="6"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                                    <size key="value" width="-1" height="1"/>
+                                                                    <size key="value" width="-2" height="2"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                     <real key="value" value="1"/>
@@ -2406,12 +2443,24 @@ I spent a lot of time and effort building something I thought would be both help
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PrepareBG" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-z0-dAD">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Be" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-z0-dAD">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="PnK-z0-dAD" secondAttribute="height" multiplier="15:8" id="ndg-a9-ckW"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbW-hn-eGM" userLabel="Blue Line">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
+                                    <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="4" id="x4M-tb-52f"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <size key="shadowOffset" width="0.0" height="5"/>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-px-Y3f">
                                     <rect key="frame" x="10" y="150" width="355" height="45"/>
                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="28"/>
@@ -2424,10 +2473,13 @@ I spent a lot of time and effort building something I thought would be both help
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="centerX" secondItem="PnC-kS-F6c" secondAttribute="centerX" id="8nR-qs-CSX"/>
+                                <constraint firstItem="JbW-hn-eGM" firstAttribute="centerX" secondItem="PnC-kS-F6c" secondAttribute="centerX" id="9Up-2D-wwm"/>
                                 <constraint firstItem="tNB-px-Y3f" firstAttribute="leading" secondItem="PnC-kS-F6c" secondAttribute="leading" constant="10" id="CHv-PI-6LL"/>
+                                <constraint firstItem="JbW-hn-eGM" firstAttribute="top" secondItem="PnC-kS-F6c" secondAttribute="top" id="O5J-QO-42g"/>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="Okr-Dx-bB8"/>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="centerY" secondItem="PnC-kS-F6c" secondAttribute="centerY" id="S9o-Um-U3U"/>
                                 <constraint firstAttribute="height" secondItem="PnK-z0-dAD" secondAttribute="height" id="Tsf-Lx-3SZ"/>
+                                <constraint firstItem="JbW-hn-eGM" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="nTN-0e-03X"/>
                                 <constraint firstAttribute="trailing" secondItem="tNB-px-Y3f" secondAttribute="trailing" constant="10" id="yas-Jq-Znq"/>
                                 <constraint firstAttribute="bottom" secondItem="tNB-px-Y3f" secondAttribute="bottom" constant="5" id="ytJ-2f-FjT"/>
                             </constraints>
@@ -2599,10 +2651,10 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="$Large" width="78" height="79"/>
         <image name="$Low" width="74" height="84"/>
         <image name="$Med" width="85" height="80"/>
-        <image name="AboutRylan" width="656" height="381"/>
         <image name="Amazing" width="200" height="200"/>
         <image name="BSS" width="326" height="317"/>
-        <image name="BoyBG" width="6016" height="4016"/>
+        <image name="Be" width="320" height="256"/>
+        <image name="Business Cards" width="509" height="420"/>
         <image name="Close" width="267" height="267"/>
         <image name="Discloser" width="67" height="117"/>
         <image name="Edit" width="498" height="498"/>
@@ -2610,6 +2662,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="FHE Icon" width="341" height="341"/>
         <image name="Facebook" width="1024" height="356"/>
         <image name="Family25" width="26" height="26"/>
+        <image name="FamilyBG" width="225" height="225"/>
         <image name="FamilyFilled25" width="25" height="25"/>
         <image name="Help" width="62" height="62"/>
         <image name="Home25" width="25" height="26"/>
@@ -2624,13 +2677,10 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Patreon" width="500" height="254"/>
         <image name="PositiveFeedback" width="44" height="43"/>
         <image name="Prayer" width="48" height="79"/>
-        <image name="PrepareBG" width="3953" height="2079"/>
         <image name="Profile25" width="26" height="26"/>
         <image name="ProfileFilled25" width="25" height="25"/>
         <image name="Recycle" width="347" height="328"/>
-        <image name="Recycle-25" width="21" height="20"/>
         <image name="ReportBug" width="84" height="76"/>
-        <image name="RylanEvans.com" width="304" height="141"/>
         <image name="Serve" width="333" height="199"/>
         <image name="Share" width="144" height="171"/>
         <image name="Signature" width="98" height="31"/>
@@ -2641,6 +2691,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="TasksFilled25" width="25" height="25"/>
         <image name="Thank you" width="200" height="200"/>
         <image name="Twitter" width="1200" height="628"/>
+        <image name="Website" width="509" height="420"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fh2-ar-ueD"/>

@@ -39,7 +39,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         songAssigneeText.inputView = memberPicker
         songAssigneeText.inputAccessoryView = toolBar
         
-        //        generateTestSongs()
         attemptFetch()
     }
     
@@ -225,11 +224,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         tableView.reloadData()
     }
     
-    // Rotate through songs
-    @IBAction func recycleButtonPressed(_ sender: Any) {
-        playClick()
-    }
-    
     // MARK: - Song Cell Delegate
     
     func songSelectedNeedsChanged(_ sender: SongCell) {
@@ -258,25 +252,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         //        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
-        let sortByRandom = NSSortDescriptor(key: "random", ascending: true)
-        let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
         let sortByBook = NSSortDescriptor(key: "book", ascending: true)
+        let sortByNumber = NSSortDescriptor(key: "number", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-            
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
-            controller.delegate = self
-            self.songController = controller
-            
-            do {
-                try controller.performFetch()
-            } catch {
-                let error = error as NSError
-                print("\(error)")
-            }
-            
-        } else if segment.selectedSegmentIndex == 1 {
             fetchRequest.sortDescriptors = [sortByTitle]
             
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
@@ -290,7 +269,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 print("\(error)")
             }
             
-        } else if segment.selectedSegmentIndex == 2 {
+        } else if segment.selectedSegmentIndex == 1 {
             fetchRequest.sortDescriptors = [sortByTopic, sortByTitle]
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "topic", cacheName: nil)
             controller.delegate = self
@@ -303,9 +282,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 print("\(error)")
             }
             
-        } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByRandom]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.songController = controller
             
@@ -316,8 +296,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 print("\(error)")
             }
             
-        } else if segment.selectedSegmentIndex == 4 {
-            fetchRequest.sortDescriptors = [sortByOrder]
+        } else if segment.selectedSegmentIndex == 3 {
+            fetchRequest.sortDescriptors = [sortByNumber]
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
             controller.delegate = self
             self.songController = controller
@@ -330,8 +310,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByTitle]
+            
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
             controller.delegate = self
             self.songController = controller
             
@@ -381,39 +362,5 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             break
         }
-    }
-    
-    func generateTestSongs() {
-        let song1 = Song(context: context)
-        song1.order = 1
-        song1.random = Int64(arc4random_uniform(100))
-        song1.book = songBooksArray[0]
-        song1.number = "201"
-        song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song1.title = "Nearer My God To Thee"
-        song1.topic = "Atonement"
-        song1.selected = true
-        
-        let song2 = Song(context: context)
-        song2.order = 3
-        song2.random = Int64(arc4random_uniform(100))
-        song2.book = songBooksArray[1]
-        song2.number = "86"
-        song2.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song2.title = "A Poor Wayfaring Man of Grief"
-        song2.topic = "God Head"
-        song2.selected = false
-        
-        let song3 = Song(context: context)
-        song3.order = 2
-        song3.random = Int64(arc4random_uniform(100))
-        song3.book = songBooksArray[0]
-        song3.number = "57"
-        song3.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
-        song3.title = "High on the Mountain Top"
-        song3.topic = "Perfect the Saints"
-        song3.selected = false
-        
-        ad.saveContext()
     }
 }

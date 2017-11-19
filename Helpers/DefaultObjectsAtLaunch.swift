@@ -16,11 +16,19 @@ func checkIfLauncedBefore() {
         print("Not first launch.")
     } else {
         print("First launch, setting UserDefault.")
+        addTickToCounter()
         generateFamilyMembers()
         generateTasks()
         generateTestSongs()
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
+}
+
+func addTickToCounter() {
+    let counter = Counter(context: context)
+    counter.launched = 1
+    
+    ad.saveContext()
 }
 
 func generateFamilyMembers() {
@@ -292,8 +300,8 @@ func generateTestSongs() {
     song2.title = "We Thank Thee, O God, for a Prophet"
     song2.topic = "Restoration"
     song2.selected = false
-    song1.favorite = false
-    
+    song2.favorite = false
+
     let song3 = Song(context: context)
     song3.order = 3
     song3.random = Int64(arc4random_uniform(1000))
@@ -304,7 +312,7 @@ func generateTestSongs() {
     song3.topic = "Restoration"
     song3.selected = false
     song3.favorite = false
-    
+
     let song4 = Song(context: context)
     song4.order = 4
     song4.random = Int64(arc4random_uniform(1000))
@@ -315,7 +323,7 @@ func generateTestSongs() {
     song4.topic = "Care for the Poor & Needy"
     song4.selected = false
     song4.favorite = false
-    
+
     let song5 = Song(context: context)
     song5.order = 5
     song5.random = Int64(arc4random_uniform(1000))
@@ -326,7 +334,7 @@ func generateTestSongs() {
     song5.topic = "Atonement"
     song5.selected = false
     song5.favorite = false
-    
+
     let song6 = Song(context: context)
     song6.order = 6
     song6.random = Int64(arc4random_uniform(1000))
@@ -337,7 +345,7 @@ func generateTestSongs() {
     song6.topic = "Jesus Christ"
     song6.selected = false
     song6.favorite = false
-    
+
     let song7 = Song(context: context)
     song7.order = 7
     song7.random = Int64(arc4random_uniform(1000))
@@ -348,7 +356,7 @@ func generateTestSongs() {
     song7.topic = "Plan of Salvation"
     song7.selected = false
     song7.favorite = false
-    
+
     let song8 = Song(context: context)
     song8.order = 8
     song8.random = Int64(arc4random_uniform(1000))
@@ -359,7 +367,7 @@ func generateTestSongs() {
     song8.topic = "Jesus Christ"
     song8.selected = false
     song8.favorite = true
-    
+
     let song9 = Song(context: context)
     song9.order = 9
     song9.random = Int64(arc4random_uniform(1000))
@@ -370,7 +378,7 @@ func generateTestSongs() {
     song9.topic = "Heavenly Father"
     song9.selected = false
     song9.favorite = true
-    
+
     let song10 = Song(context: context)
     song10.order = 10
     song10.random = Int64(arc4random_uniform(1000))
@@ -381,7 +389,7 @@ func generateTestSongs() {
     song10.topic = "Jesus Christ"
     song10.selected = false
     song10.favorite = false
-    
+
     let song11 = Song(context: context)
     song11.order = 11
     song11.random = Int64(arc4random_uniform(1000))
@@ -392,7 +400,7 @@ func generateTestSongs() {
     song11.topic = "Heavenly Father"
     song11.selected = false
     song11.favorite = false
-    
+
     let song12 = Song(context: context)
     song12.order = 12
     song12.random = Int64(arc4random_uniform(1000))
@@ -403,7 +411,7 @@ func generateTestSongs() {
     song12.topic = "Jesus Christ"
     song12.selected = false
     song12.favorite = false
-    
+
     let song13 = Song(context: context)
     song13.order = 13
     song13.random = Int64(arc4random_uniform(1000))
@@ -414,7 +422,7 @@ func generateTestSongs() {
     song13.topic = "Christlike Attributes"
     song13.selected = false
     song13.favorite = false
-    
+
     let song14 = Song(context: context)
     song14.order = 14
     song14.random = Int64(arc4random_uniform(1000))
@@ -425,7 +433,7 @@ func generateTestSongs() {
     song14.topic = "Commandments"
     song14.selected = false
     song14.favorite = false
-    
+
     let song15 = Song(context: context)
     song15.order = 15
     song15.random = Int64(arc4random_uniform(1000))
@@ -436,7 +444,7 @@ func generateTestSongs() {
     song15.topic = "Christlike Attributes"
     song15.selected = false
     song15.favorite = false
-    
+
     let song16 = Song(context: context)
     song16.order = 16
     song16.random = Int64(arc4random_uniform(1000))
@@ -447,7 +455,7 @@ func generateTestSongs() {
     song16.topic = "Christlike Attributes"
     song16.selected = false
     song16.favorite = false
-    
+
     let song17 = Song(context: context)
     song17.order = 17
     song17.random = Int64(arc4random_uniform(1000))
@@ -458,7 +466,7 @@ func generateTestSongs() {
     song17.topic = "Heavenly Father"
     song17.selected = false
     song17.favorite = false
-    
+
     let song18 = Song(context: context)
     song18.order = 18
     song18.random = Int64(arc4random_uniform(1000))
@@ -469,7 +477,7 @@ func generateTestSongs() {
     song18.topic = "Jesus Christ"
     song18.selected = false
     song18.favorite = false
-    
+
     let song19 = Song(context: context)
     song19.order = 19
     song19.random = Int64(arc4random_uniform(1000))
@@ -480,7 +488,7 @@ func generateTestSongs() {
     song19.topic = "Jesus Christ"
     song19.selected = false
     song19.favorite = false
-    
+
     let song20 = Song(context: context)
     song20.order = 20
     song20.random = Int64(arc4random_uniform(1000))
@@ -491,7 +499,7 @@ func generateTestSongs() {
     song20.topic = "Christlike Attributes"
     song20.selected = false
     song20.favorite = false
-    
+
     let song21 = Song(context: context)
     song21.order = 21
     song21.random = Int64(arc4random_uniform(1000))
@@ -502,7 +510,7 @@ func generateTestSongs() {
     song21.topic = "Commandments"
     song21.selected = false
     song21.favorite = false
-    
+
     let song22 = Song(context: context)
     song22.order = 22
     song22.random = Int64(arc4random_uniform(1000))
@@ -513,7 +521,7 @@ func generateTestSongs() {
     song22.topic = "Commandments"
     song22.selected = false
     song22.favorite = false
-    
+
     let song23 = Song(context: context)
     song23.order = 23
     song23.random = Int64(arc4random_uniform(1000))
@@ -524,7 +532,7 @@ func generateTestSongs() {
     song23.topic = "Plan of Salvation"
     song23.selected = false
     song23.favorite = false
-    
+
     let song24 = Song(context: context)
     song24.order = 24
     song24.random = Int64(arc4random_uniform(1000))
@@ -535,7 +543,7 @@ func generateTestSongs() {
     song24.topic = "Jesus Christ"
     song24.selected = false
     song24.favorite = false
-    
+
     let song25 = Song(context: context)
     song25.order = 25
     song25.random = Int64(arc4random_uniform(1000))
@@ -546,7 +554,7 @@ func generateTestSongs() {
     song25.topic = "Heavenly Father"
     song25.selected = false
     song25.favorite = false
-    
+
     let song26 = Song(context: context)
     song26.order = 26
     song26.random = Int64(arc4random_uniform(1000))
@@ -557,7 +565,7 @@ func generateTestSongs() {
     song26.topic = "Heavenly Father"
     song26.selected = false
     song26.favorite = false
-    
+
     let song27 = Song(context: context)
     song27.order = 27
     song27.random = Int64(arc4random_uniform(1000))
@@ -568,7 +576,7 @@ func generateTestSongs() {
     song27.topic = "Atonement"
     song27.selected = false
     song27.favorite = false
-    
+
     let song28 = Song(context: context)
     song28.order = 28
     song28.random = Int64(arc4random_uniform(1000))
@@ -579,7 +587,7 @@ func generateTestSongs() {
     song28.topic = "Resurrection"
     song28.selected = false
     song28.favorite = false
-    
+
     let song29 = Song(context: context)
     song29.order = 29
     song29.random = Int64(arc4random_uniform(1000))
@@ -590,7 +598,7 @@ func generateTestSongs() {
     song29.topic = "Birth of our Savior"
     song29.selected = false
     song29.favorite = false
-    
+
     let song30 = Song(context: context)
     song30.order = 30
     song30.random = Int64(arc4random_uniform(1000))
@@ -601,7 +609,7 @@ func generateTestSongs() {
     song30.topic = "Birth of our Savior"
     song30.selected = false
     song30.favorite = false
-    
+
     let song31 = Song(context: context)
     song31.order = 31
     song31.random = Int64(arc4random_uniform(1000))
@@ -612,7 +620,7 @@ func generateTestSongs() {
     song31.topic = "Birth of our Savior"
     song31.selected = false
     song31.favorite = false
-    
+
     let song32 = Song(context: context)
     song32.order = 32
     song32.random = Int64(arc4random_uniform(1000))
@@ -623,7 +631,7 @@ func generateTestSongs() {
     song32.topic = "Birth of our Savior"
     song32.selected = false
     song32.favorite = false
-    
+
     let song33 = Song(context: context)
     song33.order = 33
     song33.random = Int64(arc4random_uniform(1000))
@@ -634,7 +642,7 @@ func generateTestSongs() {
     song33.topic = "Care for the Poor & Needy"
     song33.selected = false
     song33.favorite = false
-    
+
     let song34 = Song(context: context)
     song34.order = 34
     song34.random = Int64(arc4random_uniform(1000))
@@ -645,7 +653,7 @@ func generateTestSongs() {
     song34.topic = "Holy Ghost"
     song34.selected = false
     song34.favorite = false
-    
+
     let song35 = Song(context: context)
     song35.order = 35
     song35.random = Int64(arc4random_uniform(1000))
@@ -656,7 +664,7 @@ func generateTestSongs() {
     song35.topic = "Commandments"
     song35.selected = false
     song35.favorite = true
-    
+
     let song36 = Song(context: context)
     song36.order = 36
     song36.random = Int64(arc4random_uniform(1000))
@@ -667,7 +675,7 @@ func generateTestSongs() {
     song36.topic = "Endure to the end"
     song36.selected = false
     song36.favorite = false
-    
+
     let song37 = Song(context: context)
     song37.order = 37
     song37.random = Int64(arc4random_uniform(1000))
@@ -678,7 +686,7 @@ func generateTestSongs() {
     song37.topic = "Perfect the Saints"
     song37.selected = false
     song37.favorite = false
-    
+
     let song38 = Song(context: context)
     song38.order = 38
     song38.random = Int64(arc4random_uniform(1000))
@@ -689,7 +697,7 @@ func generateTestSongs() {
     song38.topic = "Proclaim the Gospel"
     song38.selected = false
     song38.favorite = false
-    
+
     let song39 = Song(context: context)
     song39.order = 39
     song39.random = Int64(arc4random_uniform(1000))
@@ -700,7 +708,7 @@ func generateTestSongs() {
     song39.topic = "Perfect the Saints"
     song39.selected = false
     song39.favorite = false
-    
+
     let song40 = Song(context: context)
     song40.order = 40
     song40.random = Int64(arc4random_uniform(1000))
@@ -711,7 +719,7 @@ func generateTestSongs() {
     song40.topic = "Endure to the end"
     song40.selected = false
     song40.favorite = false
-    
+
     let song41 = Song(context: context)
     song41.order = 41
     song41.random = Int64(arc4random_uniform(1000))
@@ -722,7 +730,7 @@ func generateTestSongs() {
     song41.topic = "Endure to the end"
     song41.selected = false
     song41.favorite = false
-    
+
     let song42 = Song(context: context)
     song42.order = 42
     song42.random = Int64(arc4random_uniform(1000))
@@ -733,7 +741,7 @@ func generateTestSongs() {
     song42.topic = "Perfect the Saints"
     song42.selected = false
     song42.favorite = false
-    
+
     let song43 = Song(context: context)
     song43.order = 43
     song43.random = Int64(arc4random_uniform(1000))
@@ -744,7 +752,7 @@ func generateTestSongs() {
     song43.topic = "Perfect the Saints"
     song43.selected = false
     song43.favorite = false
-    
+
     let song44 = Song(context: context)
     song44.order = 44
     song44.random = Int64(arc4random_uniform(1000))
@@ -755,7 +763,7 @@ func generateTestSongs() {
     song44.topic = "Plan of Salvation"
     song44.selected = false
     song44.favorite = true
-    
+
     let song45 = Song(context: context)
     song45.order = 45
     song45.random = Int64(arc4random_uniform(1000))
@@ -766,7 +774,7 @@ func generateTestSongs() {
     song45.topic = "Plan of Salvation"
     song45.selected = false
     song45.favorite = true
-    
+
     let song46 = Song(context: context)
     song46.order = 46
     song46.random = Int64(arc4random_uniform(1000))
@@ -777,7 +785,7 @@ func generateTestSongs() {
     song46.topic = "Plan of Salvation"
     song46.selected = false
     song46.favorite = true
-    
+
     let song47 = Song(context: context)
     song47.order = 47
     song47.random = Int64(arc4random_uniform(1000))
@@ -788,7 +796,7 @@ func generateTestSongs() {
     song47.topic = "Commandments"
     song47.selected = false
     song47.favorite = true
-    
+
     let song48 = Song(context: context)
     song48.order = 48
     song48.random = Int64(arc4random_uniform(1000))
@@ -799,7 +807,7 @@ func generateTestSongs() {
     song48.topic = "Christlike Attributes"
     song48.selected = false
     song48.favorite = true
-    
+
     let song49 = Song(context: context)
     song49.order = 49
     song49.random = Int64(arc4random_uniform(1000))
@@ -810,7 +818,7 @@ func generateTestSongs() {
     song49.topic = "Plan of Salvation"
     song49.selected = false
     song49.favorite = true
-    
+
     let song50 = Song(context: context)
     song50.order = 50
     song50.random = Int64(arc4random_uniform(100))
@@ -819,9 +827,9 @@ func generateTestSongs() {
     song50.url = "https://www.lds.org/music/library/hymns/i-need-thee-every-hour-mens-choir?lang=eng"
     song50.title = "I Need Thee Every Hour"
     song50.topic = "Holy Ghost"
-    song50.selected = true
+    song50.selected = false
     song50.favorite = true
-    
+
     let song51 = Song(context: context)
     song51.order = 51
     song51.random = Int64(arc4random_uniform(100))
@@ -830,9 +838,9 @@ func generateTestSongs() {
     song51.url = "https://www.lds.org/music/library/childrens-songbook/i-am-a-child-of-god?lang=eng"
     song51.title = "I Am a Child of God"
     song51.topic = "Heavenly Father"
-    song51.selected = true
+    song51.selected = false
     song51.favorite = true
-    
+
     let song52 = Song(context: context)
     song52.order = 52
     song52.random = Int64(arc4random_uniform(1000))
@@ -843,7 +851,7 @@ func generateTestSongs() {
     song52.topic = "Plan of Salvation"
     song52.selected = false
     song52.favorite = false
-    
+
     let song53 = Song(context: context)
     song53.order = 53
     song53.random = Int64(arc4random_uniform(1000))
@@ -854,7 +862,7 @@ func generateTestSongs() {
     song53.topic = "Heavenly Father"
     song53.selected = false
     song53.favorite = false
-    
+
     let song54 = Song(context: context)
     song54.order = 54
     song54.random = Int64(arc4random_uniform(1000))
@@ -865,7 +873,7 @@ func generateTestSongs() {
     song54.topic = "Heavenly Father"
     song54.selected = false
     song54.favorite = false
-    
+
     let song55 = Song(context: context)
     song55.order = 55
     song55.random = Int64(arc4random_uniform(1000))
@@ -876,7 +884,7 @@ func generateTestSongs() {
     song55.topic = "Christlike Attributes"
     song55.selected = false
     song55.favorite = false
-    
+
     let song56 = Song(context: context)
     song56.order = 56
     song56.random = Int64(arc4random_uniform(1000))
@@ -887,7 +895,7 @@ func generateTestSongs() {
     song56.topic = "Heavenly Father"
     song56.selected = false
     song56.favorite = true
-    
+
     let song57 = Song(context: context)
     song57.order = 57
     song57.random = Int64(arc4random_uniform(1000))
@@ -898,7 +906,7 @@ func generateTestSongs() {
     song57.topic = "Plan of Salvation"
     song57.selected = false
     song57.favorite = false
-    
+
     let song58 = Song(context: context)
     song58.order = 58
     song58.random = Int64(arc4random_uniform(1000))
@@ -909,7 +917,7 @@ func generateTestSongs() {
     song58.topic = "Christlike Attributes"
     song58.selected = false
     song58.favorite = false
-    
+
     let song59 = Song(context: context)
     song59.order = 59
     song59.random = Int64(arc4random_uniform(1000))
@@ -920,7 +928,7 @@ func generateTestSongs() {
     song59.topic = "Birth of our Savior"
     song59.selected = false
     song59.favorite = false
-    
+
     let song60 = Song(context: context)
     song60.order = 60
     song60.random = Int64(arc4random_uniform(1000))
@@ -931,7 +939,7 @@ func generateTestSongs() {
     song60.topic = "Birth of our Savior"
     song60.selected = false
     song60.favorite = false
-    
+
     let song61 = Song(context: context)
     song61.order = 61
     song61.random = Int64(arc4random_uniform(1000))
@@ -942,7 +950,7 @@ func generateTestSongs() {
     song61.topic = "Birth of our Savior"
     song61.selected = false
     song61.favorite = false
-    
+
     let song62 = Song(context: context)
     song62.order = 62
     song62.random = Int64(arc4random_uniform(1000))
@@ -953,7 +961,7 @@ func generateTestSongs() {
     song62.topic = "Jesus Christ"
     song62.selected = false
     song62.favorite = false
-    
+
     let song63 = Song(context: context)
     song63.order = 63
     song63.random = Int64(arc4random_uniform(1000))
@@ -964,7 +972,7 @@ func generateTestSongs() {
     song63.topic = "Jesus Christ"
     song63.selected = false
     song63.favorite = false
-    
+
     let song64 = Song(context: context)
     song64.order = 64
     song64.random = Int64(arc4random_uniform(1000))
@@ -975,7 +983,7 @@ func generateTestSongs() {
     song64.topic = "Jesus Christ"
     song64.selected = false
     song64.favorite = false
-    
+
     let song65 = Song(context: context)
     song65.order = 65
     song65.random = Int64(arc4random_uniform(1000))
@@ -986,7 +994,7 @@ func generateTestSongs() {
     song65.topic = "Christlike Attributes"
     song65.selected = false
     song65.favorite = false
-    
+
     let song66 = Song(context: context)
     song66.order = 66
     song66.random = Int64(arc4random_uniform(1000))
@@ -997,7 +1005,7 @@ func generateTestSongs() {
     song66.topic = "Jesus Christ"
     song66.selected = false
     song66.favorite = false
-    
+
     let song67 = Song(context: context)
     song67.order = 67
     song67.random = Int64(arc4random_uniform(1000))
@@ -1008,7 +1016,7 @@ func generateTestSongs() {
     song67.topic = "Jesus Christ"
     song67.selected = false
     song67.favorite = false
-    
+
     let song68 = Song(context: context)
     song68.order = 68
     song68.random = Int64(arc4random_uniform(1000))
@@ -1019,7 +1027,7 @@ func generateTestSongs() {
     song68.topic = "Scriptures"
     song68.selected = false
     song68.favorite = false
-    
+
     let song69 = Song(context: context)
     song69.order = 69
     song69.random = Int64(arc4random_uniform(1000))
@@ -1030,7 +1038,7 @@ func generateTestSongs() {
     song69.topic = "Redeem the Dead"
     song69.selected = false
     song69.favorite = true
-    
+
     let song70 = Song(context: context)
     song70.order = 70
     song70.random = Int64(arc4random_uniform(1000))
@@ -1041,7 +1049,7 @@ func generateTestSongs() {
     song70.topic = "Principles & Ordinances"
     song70.selected = false
     song70.favorite = false
-    
+
     let song71 = Song(context: context)
     song71.order = 71
     song71.random = Int64(arc4random_uniform(1000))
@@ -1052,7 +1060,7 @@ func generateTestSongs() {
     song71.topic = "Principles & Ordinances"
     song71.selected = false
     song71.favorite = false
-    
+
     let song72 = Song(context: context)
     song72.order = 72
     song72.random = Int64(arc4random_uniform(1000))
@@ -1063,7 +1071,7 @@ func generateTestSongs() {
     song72.topic = "Principles & Ordinances"
     song72.selected = false
     song72.favorite = false
-    
+
     let song73 = Song(context: context)
     song73.order = 73
     song73.random = Int64(arc4random_uniform(1000))
@@ -1074,7 +1082,7 @@ func generateTestSongs() {
     song73.topic = "Principles & Ordinances"
     song73.selected = false
     song73.favorite = false
-    
+
     let song74 = Song(context: context)
     song74.order = 74
     song74.random = Int64(arc4random_uniform(1000))
@@ -1085,7 +1093,7 @@ func generateTestSongs() {
     song74.topic = "Principles & Ordinances"
     song74.selected = false
     song74.favorite = false
-    
+
     let song75 = Song(context: context)
     song75.order = 75
     song75.random = Int64(arc4random_uniform(1000))
@@ -1096,7 +1104,7 @@ func generateTestSongs() {
     song75.topic = "Commandments"
     song75.selected = false
     song75.favorite = false
-    
+
     let song76 = Song(context: context)
     song76.order = 76
     song76.random = Int64(arc4random_uniform(1000))
@@ -1107,7 +1115,7 @@ func generateTestSongs() {
     song76.topic = "Restoration"
     song76.selected = false
     song76.favorite = false
-    
+
     let song77 = Song(context: context)
     song77.order = 77
     song77.random = Int64(arc4random_uniform(1000))
@@ -1118,7 +1126,7 @@ func generateTestSongs() {
     song77.topic = "Commandments"
     song77.selected = false
     song77.favorite = false
-    
+
     let song78 = Song(context: context)
     song78.order = 78
     song78.random = Int64(arc4random_uniform(1000))
@@ -1129,7 +1137,7 @@ func generateTestSongs() {
     song78.topic = "Scriptures"
     song78.selected = false
     song78.favorite = false
-    
+
     let song79 = Song(context: context)
     song79.order = 2
     song79.random = Int64(arc4random_uniform(1000))
@@ -1140,18 +1148,18 @@ func generateTestSongs() {
     song79.topic = "Christlike Attributes"
     song79.selected = false
     song79.favorite = false
-    
+
     let song80 = Song(context: context)
     song80.order = 80
     song80.random = Int64(arc4random_uniform(1000))
     song80.book = songBooksArray[0]
     song80.number = "136"
-    song2.url = "https://www.lds.org/music/library/childrens-songbook/love-one-another?lang=eng"
-    song2.title = "Love One Another"
-    song2.topic = "Commandments"
-    song2.selected = false
-    song1.favorite = true
-    
+    song80.url = "https://www.lds.org/music/library/childrens-songbook/love-one-another?lang=eng"
+    song80.title = "Love One Another"
+    song80.topic = "Commandments"
+    song80.selected = false
+    song80.favorite = true
+
     let song81 = Song(context: context)
     song81.order = 81
     song81.random = Int64(arc4random_uniform(1000))
@@ -1162,7 +1170,7 @@ func generateTestSongs() {
     song81.topic = "Commandments"
     song81.selected = false
     song81.favorite = true
-    
+
     let song82 = Song(context: context)
     song82.order = 82
     song82.random = Int64(arc4random_uniform(1000))
@@ -1173,7 +1181,7 @@ func generateTestSongs() {
     song82.topic = "Endure to the end"
     song82.selected = false
     song82.favorite = false
-    
+
     let song83 = Song(context: context)
     song83.order = 83
     song83.random = Int64(arc4random_uniform(1000))
@@ -1184,7 +1192,7 @@ func generateTestSongs() {
     song83.topic = "Commandments"
     song83.selected = false
     song83.favorite = false
-    
+
     let song84 = Song(context: context)
     song84.order = 84
     song84.random = Int64(arc4random_uniform(1000))
@@ -1195,7 +1203,7 @@ func generateTestSongs() {
     song84.topic = "Christlike Attributes"
     song84.selected = false
     song84.favorite = true
-    
+
     let song85 = Song(context: context)
     song85.order = 85
     song85.random = Int64(arc4random_uniform(1000))
@@ -1206,7 +1214,7 @@ func generateTestSongs() {
     song85.topic = "Heavenly Father"
     song85.selected = false
     song85.favorite = false
-    
+
     let song86 = Song(context: context)
     song86.order = 86
     song86.random = Int64(arc4random_uniform(1000))
@@ -1217,7 +1225,7 @@ func generateTestSongs() {
     song86.topic = "Proclaim the Gospel"
     song86.selected = false
     song86.favorite = false
-    
+
     let song87 = Song(context: context)
     song87.order = 87
     song87.random = Int64(arc4random_uniform(1000))
@@ -1228,7 +1236,7 @@ func generateTestSongs() {
     song87.topic = "Proclaim the Gospel"
     song87.selected = false
     song87.favorite = false
-    
+
     let song88 = Song(context: context)
     song88.order = 88
     song88.random = Int64(arc4random_uniform(1000))
@@ -1239,7 +1247,7 @@ func generateTestSongs() {
     song88.topic = "Proclaim the Gospel"
     song88.selected = false
     song88.favorite = false
-    
+
     let song89 = Song(context: context)
     song89.order = 89
     song89.random = Int64(arc4random_uniform(1000))
@@ -1250,7 +1258,7 @@ func generateTestSongs() {
     song89.topic = "Heavenly Father"
     song89.selected = false
     song89.favorite = false
-    
+
     let song90 = Song(context: context)
     song90.order = 90
     song90.random = Int64(arc4random_uniform(1000))
@@ -1261,7 +1269,7 @@ func generateTestSongs() {
     song90.topic = "Christlike Attributes"
     song90.selected = false
     song90.favorite = false
-    
+
     let song91 = Song(context: context)
     song91.order = 91
     song91.random = Int64(arc4random_uniform(1000))
@@ -1272,7 +1280,7 @@ func generateTestSongs() {
     song91.topic = "Christlike Attributes"
     song91.selected = false
     song91.favorite = false
-    
+
     let song92 = Song(context: context)
     song92.order = 92
     song92.random = Int64(arc4random_uniform(1000))
@@ -1283,7 +1291,7 @@ func generateTestSongs() {
     song92.topic = "Plan of Salvation"
     song92.selected = false
     song92.favorite = true
-    
+
     let song93 = Song(context: context)
     song93.order = 93
     song93.random = Int64(arc4random_uniform(1000))
@@ -1294,7 +1302,7 @@ func generateTestSongs() {
     song93.topic = "Christlike Attributes"
     song93.selected = false
     song93.favorite = true
-    
+
     let song94 = Song(context: context)
     song94.order = 94
     song94.random = Int64(arc4random_uniform(1000))
@@ -1305,7 +1313,7 @@ func generateTestSongs() {
     song94.topic = "Jesus Christ"
     song94.selected = false
     song94.favorite = false
-    
+
     let song95 = Song(context: context)
     song95.order = 95
     song95.random = Int64(arc4random_uniform(1000))
@@ -1316,7 +1324,7 @@ func generateTestSongs() {
     song95.topic = "Christlike Attributes"
     song95.selected = false
     song95.favorite = false
-    
+
     let song96 = Song(context: context)
     song96.order = 96
     song96.random = Int64(arc4random_uniform(1000))
@@ -1327,7 +1335,7 @@ func generateTestSongs() {
     song96.topic = "Plan of Salvation"
     song96.selected = false
     song96.favorite = false
-    
+
     let song97 = Song(context: context)
     song97.order = 97
     song97.random = Int64(arc4random_uniform(1000))
@@ -1338,7 +1346,7 @@ func generateTestSongs() {
     song97.topic = "Christlike Attributes"
     song97.selected = false
     song97.favorite = false
-    
+
     let song98 = Song(context: context)
     song98.order = 98
     song98.random = Int64(arc4random_uniform(1000))
@@ -1349,7 +1357,7 @@ func generateTestSongs() {
     song98.topic = "Christlike Attributes"
     song98.selected = false
     song98.favorite = false
-    
+
     let song99 = Song(context: context)
     song99.order = 99
     song99.random = Int64(arc4random_uniform(1000))
@@ -1360,18 +1368,18 @@ func generateTestSongs() {
     song99.topic = "Christlike Attributes"
     song99.selected = false
     song99.favorite = false
-    
+
     let song100 = Song(context: context)
     song100.order = 100
-    song2.random = Int64(arc4random_uniform(1000))
-    song2.book = songBooksArray[0]
-    song2.number = "281"
-    song2.url = "https://www.lds.org/music/library/childrens-songbook/the-wise-man-and-the-foolish-man?lang=eng"
-    song2.title = "The Wise Man and the Foolish Man"
-    song2.topic = "Christlike Attributes"
-    song2.selected = false
-    song1.favorite = true
-    
+    song100.random = Int64(arc4random_uniform(1000))
+    song100.book = songBooksArray[0]
+    song100.number = "281"
+    song100.url = "https://www.lds.org/music/library/childrens-songbook/the-wise-man-and-the-foolish-man?lang=eng"
+    song100.title = "The Wise Man and the Foolish Man"
+    song100.topic = "Christlike Attributes"
+    song100.selected = false
+    song100.favorite = true
+
     let song101 = Song(context: context)
     song101.order = 101
     song101.random = Int64(arc4random_uniform(1000))
@@ -1382,7 +1390,7 @@ func generateTestSongs() {
     song101.topic = "Atonement"
     song101.selected = false
     song101.favorite = true
-    
+
     let song102 = Song(context: context)
     song102.order = 102
     song102.random = Int64(arc4random_uniform(1000))
@@ -1393,7 +1401,7 @@ func generateTestSongs() {
     song102.topic = "Plan of Salvation"
     song102.selected = false
     song102.favorite = true
-    
+
     let song103 = Song(context: context)
     song103.order = 103
     song103.random = Int64(arc4random_uniform(1000))
@@ -1404,7 +1412,7 @@ func generateTestSongs() {
     song103.topic = "Plan of Salvation"
     song103.selected = false
     song103.favorite = true
-    
+
     let song104 = Song(context: context)
     song104.order = 104
     song104.random = Int64(arc4random_uniform(1000))
@@ -1415,7 +1423,7 @@ func generateTestSongs() {
     song104.topic = "Perfect the Saints"
     song104.selected = false
     song104.favorite = false
-    
+
     let song105 = Song(context: context)
     song105.order = 105
     song105.random = Int64(arc4random_uniform(1000))
