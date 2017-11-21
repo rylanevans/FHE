@@ -60,7 +60,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func basketballSSTapped() {
-        playClick()
+//        playClick()
         UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1224378809?")! as URL, options: ["":""], completionHandler: nil)
         
         //        UIApplication.shared.openURL(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?")! as URL)

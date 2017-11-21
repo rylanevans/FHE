@@ -5,7 +5,6 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -32,47 +31,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="ymo-gO-JOG">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MusicBG" translatesAutoresizingMaskIntoConstraints="NO" id="3RM-9M-vut">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="3RM-9M-vut" secondAttribute="height" multiplier="15:8" id="l1K-Ix-5G6"/>
-                                    </constraints>
-                                </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="guJ-4T-Nj7">
-                                    <rect key="frame" x="11" y="154.5" width="353.5" height="35"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                            <real key="value" value="5"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XQ2-4F-HDV" userLabel="Header">
-                                    <rect key="frame" x="10" y="10" width="355" height="180"/>
+                                    <rect key="frame" x="10" y="10" width="355" height="130"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-eD-umI">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="355" height="95"/>
                                             <string key="text">Permanently Assign A
-Family Member To Songs
-</string>
+Family Member To Songs</string>
                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="21"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="shadowOffset" width="1" height="1"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-uJ-I57">
-                                            <rect key="frame" x="0.0" y="105" width="355" height="0.0"/>
-                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
+                                            <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                         <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zX-0f7" userLabel="Song Rotation">
-                                            <rect key="frame" x="0.0" y="145" width="355" height="36"/>
+                                            <rect key="frame" x="0.0" y="95" width="355" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="C6C-n3-2O5"/>
                                             </constraints>
@@ -81,6 +56,7 @@ Family Member To Songs
                                                 <segment title="Topic"/>
                                                 <segment title="Title"/>
                                                 <segment title="Number"/>
+                                                <segment title="Favorite"/>
                                             </segments>
                                             <color key="tintColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
@@ -94,14 +70,14 @@ Family Member To Songs
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RCA-CS-c45">
-                                    <rect key="frame" x="285" y="20" width="70" height="87.5"/>
+                                    <rect key="frame" x="295" y="20" width="60" height="76.5"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-2M-dV2">
-                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <gestureRecognizers/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="70" id="3w1-22-geK"/>
-                                                <constraint firstAttribute="width" constant="70" id="XYu-RI-XHK"/>
+                                                <constraint firstAttribute="height" constant="60" id="3w1-22-geK"/>
+                                                <constraint firstAttribute="width" constant="60" id="XYu-RI-XHK"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -111,22 +87,21 @@ Family Member To Songs
                                                     <color key="value" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="35"/>
+                                                    <real key="value" value="30"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
-                                            <rect key="frame" x="4.5" y="70" width="61" height="17.5"/>
+                                            <rect key="frame" x="0.0" y="60" width="60" height="16.5"/>
                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
-                                            <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
                                 </stackView>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yfU-Rq-ez6">
-                                    <rect key="frame" x="285" y="20" width="70" height="70"/>
+                                    <rect key="frame" x="295" y="20" width="60" height="60"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -147,36 +122,28 @@ Family Member To Songs
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstItem="guJ-4T-Nj7" firstAttribute="height" secondItem="2oz-zX-0f7" secondAttribute="height" id="3QZ-Oy-ztl"/>
                                 <constraint firstItem="yfU-Rq-ez6" firstAttribute="height" secondItem="dMu-2M-dV2" secondAttribute="height" id="7Cv-WM-Wjq"/>
                                 <constraint firstItem="yfU-Rq-ez6" firstAttribute="width" secondItem="dMu-2M-dV2" secondAttribute="width" id="7LL-BQ-UVf"/>
-                                <constraint firstItem="guJ-4T-Nj7" firstAttribute="width" secondItem="2oz-zX-0f7" secondAttribute="width" multiplier="0.995" id="FKR-b3-oJ1"/>
-                                <constraint firstAttribute="height" secondItem="3RM-9M-vut" secondAttribute="height" id="KIb-Kd-ieE"/>
-                                <constraint firstItem="guJ-4T-Nj7" firstAttribute="centerY" secondItem="2oz-zX-0f7" secondAttribute="centerY" id="MaZ-Ch-eaB"/>
                                 <constraint firstAttribute="bottom" secondItem="XQ2-4F-HDV" secondAttribute="bottom" constant="10" id="N7p-wp-xoe"/>
                                 <constraint firstItem="XQ2-4F-HDV" firstAttribute="top" secondItem="ymo-gO-JOG" secondAttribute="top" constant="10" id="Oq3-Sd-elx"/>
-                                <constraint firstItem="3RM-9M-vut" firstAttribute="centerY" secondItem="ymo-gO-JOG" secondAttribute="centerY" id="TQh-ZX-d3e"/>
                                 <constraint firstItem="XQ2-4F-HDV" firstAttribute="leading" secondItem="ymo-gO-JOG" secondAttribute="leading" constant="10" id="TzJ-GW-7SV"/>
                                 <constraint firstItem="yfU-Rq-ez6" firstAttribute="centerY" secondItem="dMu-2M-dV2" secondAttribute="centerY" id="dnK-VL-HrK"/>
-                                <constraint firstItem="3RM-9M-vut" firstAttribute="centerX" secondItem="ymo-gO-JOG" secondAttribute="centerX" id="fxF-eR-EMl"/>
-                                <constraint firstItem="3RM-9M-vut" firstAttribute="width" secondItem="ymo-gO-JOG" secondAttribute="width" id="hHc-hw-eRt"/>
                                 <constraint firstItem="RCA-CS-c45" firstAttribute="trailing" secondItem="XQ2-4F-HDV" secondAttribute="trailing" constant="-10" id="i1h-Ze-8HK"/>
                                 <constraint firstAttribute="trailing" secondItem="XQ2-4F-HDV" secondAttribute="trailing" constant="10" id="iVP-ZK-DgT"/>
                                 <constraint firstItem="RCA-CS-c45" firstAttribute="top" secondItem="XQ2-4F-HDV" secondAttribute="top" constant="10" id="k9o-rB-ejX"/>
-                                <constraint firstItem="guJ-4T-Nj7" firstAttribute="centerX" secondItem="2oz-zX-0f7" secondAttribute="centerX" id="kTv-Is-9lo"/>
                                 <constraint firstItem="yfU-Rq-ez6" firstAttribute="centerX" secondItem="dMu-2M-dV2" secondAttribute="centerX" id="zqT-3M-FDb"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="nQ5-Q3-NYt" customClass="SongCell" customModule="FHE" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="228" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="178" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nQ5-Q3-NYt" id="plH-np-Myr">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-h6-wex">
-                                            <rect key="frame" x="5" y="2.5" width="365" height="125"/>
+                                            <rect key="frame" x="5" y="2.5" width="365" height="126"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
                                                     <rect key="frame" x="10" y="5" width="40" height="40.5"/>
@@ -186,7 +153,7 @@ Family Member To Songs
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Topic   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-qd-hDy">
-                                                    <rect key="frame" x="302.5" y="94.5" width="32.5" height="19.5"/>
+                                                    <rect key="frame" x="302.5" y="95.5" width="32.5" height="19.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="J9K-lR-5P7"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="iSs-Qu-Ku6"/>
@@ -208,14 +175,14 @@ Family Member To Songs
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discloser" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-20-Pc1">
-                                                    <rect key="frame" x="340" y="52" width="15" height="20"/>
+                                                    <rect key="frame" x="340" y="52.5" width="15" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="6cH-Zk-z7M"/>
                                                         <constraint firstAttribute="width" constant="15" id="jto-Bf-Teh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-dk-Fqu">
-                                                    <rect key="frame" x="60" y="5" width="300" height="115"/>
+                                                    <rect key="frame" x="60" y="5" width="300" height="116"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f20-LA-Oig">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
@@ -224,16 +191,43 @@ Family Member To Songs
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wm-4b-kjb">
-                                                            <rect key="frame" x="0.0" y="20.5" width="300" height="29"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="300" height="30"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title - Name Of The Object" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-Cq-29i">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="270" height="29"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="255" height="30"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KRx-2I-iNV">
+                                                                    <rect key="frame" x="255" y="0.0" width="15" height="30"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dl6-CD-KxO">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="15" height="7.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="FavoriteFilled" translatesAutoresizingMaskIntoConstraints="NO" id="qMD-sD-lP4">
+                                                                            <rect key="frame" x="0.0" y="7.5" width="15" height="15"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="15" id="Nxu-kP-WMZ"/>
+                                                                                <constraint firstAttribute="width" constant="15" id="lC0-1e-SBq"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-1O-gTt">
+                                                                            <rect key="frame" x="0.0" y="22.5" width="15" height="7.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="1E5-1O-gTt" firstAttribute="height" secondItem="Dl6-CD-KxO" secondAttribute="height" id="XXV-q1-mQ0"/>
+                                                                    </constraints>
+                                                                </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOX-yN-kK9">
-                                                                    <rect key="frame" x="270" y="0.0" width="30" height="29"/>
+                                                                    <rect key="frame" x="270" y="0.0" width="30" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="eB2-D0-Ebv"/>
                                                                     </constraints>
@@ -242,9 +236,12 @@ Family Member To Songs
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="fT1-B6-AUu"/>
+                                                            </constraints>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-9V-n0m">
-                                                            <rect key="frame" x="0.0" y="49.5" width="300" height="65.5"/>
+                                                            <rect key="frame" x="0.0" y="50.5" width="300" height="65.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sui-ci-NN2">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29" height="65.5"/>
@@ -267,13 +264,13 @@ Family Member To Songs
                                                                     <rect key="frame" x="37" y="0.0" width="47.5" height="65.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUW-6g-xtE">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="14.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="47.5" height="14"/>
                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-kT-aNf">
-                                                                            <rect key="frame" x="0.0" y="14.5" width="47.5" height="51"/>
+                                                                            <rect key="frame" x="0.0" y="14" width="47.5" height="51.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -353,6 +350,7 @@ Family Member To Songs
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="bookLabel" destination="2uu-vQ-5q2" id="cHk-VC-15G"/>
+                                    <outlet property="favoriteImage" destination="qMD-sD-lP4" id="97M-ex-p07"/>
                                     <outlet property="numberLabel" destination="xUW-6g-xtE" id="mNg-SD-JH7"/>
                                     <outlet property="onDeckImage" destination="ZCv-oA-AJk" id="81d-UX-lgD"/>
                                     <outlet property="selectedButton" destination="GRT-aV-GQl" id="Thd-bF-Gbn"/>
@@ -394,13 +392,13 @@ Family Member To Songs
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UK9-aM-eEm">
-                                <rect key="frame" x="19" y="53" width="338" height="582"/>
+                                <rect key="frame" x="19" y="52.5" width="337.5" height="582"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uCh-jb-svO">
-                                        <rect key="frame" x="17" y="29" width="305" height="524"/>
+                                        <rect key="frame" x="17" y="29" width="304" height="524"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Wt-5sc">
-                                                <rect key="frame" x="0.0" y="0.0" width="305" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh2-RW-xz4">
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
@@ -412,7 +410,7 @@ Family Member To Songs
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKs-bG-MYD">
-                                                        <rect key="frame" x="79" y="0.0" width="226" height="35"/>
+                                                        <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
@@ -420,7 +418,7 @@ Family Member To Songs
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="43F-Zd-0Op">
-                                                <rect key="frame" x="0.0" y="43" width="305" height="35"/>
+                                                <rect key="frame" x="0.0" y="43" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b7-tT-OkC">
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
@@ -432,7 +430,7 @@ Family Member To Songs
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Charity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-4h-jE3">
-                                                        <rect key="frame" x="79" y="0.0" width="226" height="35"/>
+                                                        <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -440,7 +438,7 @@ Family Member To Songs
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="28r-k6-xFK">
-                                                <rect key="frame" x="0.0" y="86" width="305" height="35"/>
+                                                <rect key="frame" x="0.0" y="86" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ru-Fd-POI">
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
@@ -452,7 +450,7 @@ Family Member To Songs
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genesis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-lS-kJc">
-                                                        <rect key="frame" x="79" y="0.0" width="226" height="35"/>
+                                                        <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -460,7 +458,7 @@ Family Member To Songs
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d4E-EB-QEg">
-                                                <rect key="frame" x="0.0" y="129" width="305" height="35"/>
+                                                <rect key="frame" x="0.0" y="129" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuF-5Q-njf">
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
@@ -472,7 +470,7 @@ Family Member To Songs
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="201" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-CM-O4s">
-                                                        <rect key="frame" x="79" y="0.0" width="226" height="35"/>
+                                                        <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -480,7 +478,7 @@ Family Member To Songs
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XQh-CE-4hC">
-                                                <rect key="frame" x="0.0" y="172" width="305" height="35"/>
+                                                <rect key="frame" x="0.0" y="172" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTX-oM-d8W">
                                                         <rect key="frame" x="0.0" y="0.0" width="71" height="35"/>
@@ -492,7 +490,7 @@ Family Member To Songs
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste a youtube addess to override." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-xK-p7C">
-                                                        <rect key="frame" x="79" y="0.0" width="226" height="35"/>
+                                                        <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -500,7 +498,7 @@ Family Member To Songs
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vJ-Pn-cr2">
-                                                <rect key="frame" x="0.0" y="215" width="305" height="8"/>
+                                                <rect key="frame" x="0.0" y="215" width="304" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="qIB-kI-jnK"/>
                                                 </constraints>
@@ -508,29 +506,62 @@ Family Member To Songs
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="luj-lt-g2h">
-                                                <rect key="frame" x="0.0" y="231" width="305" height="40"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eZw-80-hvx">
+                                                <rect key="frame" x="0.0" y="231" width="304" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30z-DU-anS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oZ-YR-qc7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Song on deck:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-he-3av">
-                                                        <rect key="frame" x="69.5" y="0.0" width="118.5" height="40"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Favorite:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVC-ZH-chN">
+                                                        <rect key="frame" x="92" y="0.0" width="72.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Favorite" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-f6-sF2">
+                                                        <rect key="frame" x="172.5" y="0.0" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="40" id="Zuz-Eg-e4K"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qm1-rb-cbS">
+                                                        <rect key="frame" x="220.5" y="0.0" width="83.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="GMr-5N-Qy2"/>
+                                                    <constraint firstItem="Qm1-rb-cbS" firstAttribute="width" secondItem="8oZ-YR-qc7" secondAttribute="width" id="d5l-RE-RCX"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="luj-lt-g2h">
+                                                <rect key="frame" x="0.0" y="279" width="304" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30z-DU-anS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Song to sing:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-he-3av">
+                                                        <rect key="frame" x="73.5" y="0.0" width="109.5" height="40"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-Qm-UUX">
-                                                        <rect key="frame" x="196" y="0.0" width="40" height="40"/>
+                                                        <rect key="frame" x="191" y="0.0" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="m60-Vz-SXO"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QTQ-Z8-VTC">
-                                                        <rect key="frame" x="244" y="0.0" width="61" height="40"/>
+                                                        <rect key="frame" x="239" y="0.0" width="65" height="40"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -542,7 +573,7 @@ Family Member To Songs
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r47-4K-0yR">
-                                                <rect key="frame" x="0.0" y="279" width="305" height="8"/>
+                                                <rect key="frame" x="0.0" y="327" width="304" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="aBy-5R-e5w"/>
                                                 </constraints>
@@ -551,7 +582,7 @@ Family Member To Songs
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-lx-vuo" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="295" width="305" height="50"/>
+                                                <rect key="frame" x="0.0" y="343" width="304" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gYp-s6-xdI"/>
@@ -573,7 +604,7 @@ Family Member To Songs
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53l-gi-Vvh">
-                                                <rect key="frame" x="0.0" y="353" width="305" height="171"/>
+                                                <rect key="frame" x="0.0" y="401" width="304" height="123"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -587,13 +618,19 @@ Family Member To Songs
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-1A-B7U" userLabel="Change Selected">
-                                        <rect key="frame" x="213" y="260" width="40" height="40"/>
+                                        <rect key="frame" x="208" y="308" width="40" height="40"/>
                                         <connections>
                                             <action selector="songOnDeckPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="Oza-au-X5l"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-d5-Kmg">
+                                        <rect key="frame" x="189.5" y="260" width="40" height="40"/>
+                                        <connections>
+                                            <action selector="songFavoriteButtonPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="lRu-m1-OPz"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w6t-VD-Iio">
-                                        <rect key="frame" x="17" y="324" width="305" height="50"/>
+                                        <rect key="frame" x="17" y="372" width="304" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -602,7 +639,7 @@ Family Member To Songs
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-L4-dLC">
-                                        <rect key="frame" x="257" y="29" width="55" height="35"/>
+                                        <rect key="frame" x="256" y="29" width="55" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="36Q-gp-yOx"/>
                                         </constraints>
@@ -614,6 +651,7 @@ Family Member To Songs
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="KjM-L4-dLC" firstAttribute="top" secondItem="yKs-bG-MYD" secondAttribute="top" id="1Uo-Ga-5b2"/>
+                                    <constraint firstItem="Fma-d5-Kmg" firstAttribute="width" secondItem="Sed-f6-sF2" secondAttribute="width" id="1z2-Gs-K7n"/>
                                     <constraint firstItem="w6t-VD-Iio" firstAttribute="centerX" secondItem="RRD-lx-vuo" secondAttribute="centerX" id="2Od-WC-64u"/>
                                     <constraint firstItem="KjM-L4-dLC" firstAttribute="centerY" secondItem="yKs-bG-MYD" secondAttribute="centerY" id="2Tu-Wr-b0Y"/>
                                     <constraint firstItem="KjM-L4-dLC" firstAttribute="trailing" secondItem="yKs-bG-MYD" secondAttribute="trailing" constant="-10" id="2nx-7f-8Aa"/>
@@ -625,8 +663,11 @@ Family Member To Songs
                                     <constraint firstItem="w6t-VD-Iio" firstAttribute="centerY" secondItem="RRD-lx-vuo" secondAttribute="centerY" id="VbI-pe-xN9"/>
                                     <constraint firstItem="w6t-VD-Iio" firstAttribute="width" secondItem="RRD-lx-vuo" secondAttribute="width" id="WwO-Zv-0JK"/>
                                     <constraint firstItem="uCh-jb-svO" firstAttribute="width" secondItem="UK9-aM-eEm" secondAttribute="width" multiplier="0.9" id="h2x-dk-IaZ"/>
+                                    <constraint firstItem="Fma-d5-Kmg" firstAttribute="centerX" secondItem="Sed-f6-sF2" secondAttribute="centerX" id="j2E-UW-2Xu"/>
                                     <constraint firstItem="uCh-jb-svO" firstAttribute="height" secondItem="UK9-aM-eEm" secondAttribute="height" multiplier="0.9" id="lQj-B0-uCV"/>
+                                    <constraint firstItem="Fma-d5-Kmg" firstAttribute="height" secondItem="Sed-f6-sF2" secondAttribute="height" id="ul4-3Z-oux"/>
                                     <constraint firstItem="Z6q-1A-B7U" firstAttribute="centerX" secondItem="f4n-Qm-UUX" secondAttribute="centerX" id="wMJ-xk-hwN"/>
+                                    <constraint firstItem="Fma-d5-Kmg" firstAttribute="centerY" secondItem="Sed-f6-sF2" secondAttribute="centerY" id="woI-1W-SbU"/>
                                     <constraint firstItem="Z6q-1A-B7U" firstAttribute="height" secondItem="f4n-Qm-UUX" secondAttribute="height" id="zaJ-UJ-fGX"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -670,6 +711,7 @@ Family Member To Songs
                         <outlet property="hideSaveButton" destination="w6t-VD-Iio" id="WDJ-6l-Qno"/>
                         <outlet property="saveButton" destination="RRD-lx-vuo" id="ngE-t9-zOv"/>
                         <outlet property="songBookTextField" destination="vRN-lS-kJc" id="xli-Dy-cuP"/>
+                        <outlet property="songFavorite" destination="Sed-f6-sF2" id="fIg-91-zDx"/>
                         <outlet property="songNumberTextField" destination="cN2-CM-O4s" id="MtV-2u-MnK"/>
                         <outlet property="songOnDeckImage" destination="f4n-Qm-UUX" id="19e-Gg-2h8"/>
                         <outlet property="songTitleTextField" destination="yKs-bG-MYD" id="CNP-nS-Jgx"/>
@@ -1181,8 +1223,9 @@ Family Member To Songs
     </scenes>
     <resources>
         <image name="Discloser" width="67" height="117"/>
+        <image name="Favorite" width="274" height="267"/>
+        <image name="FavoriteFilled" width="255" height="248"/>
         <image name="Missing Profile" width="770" height="770"/>
-        <image name="MusicBG" width="2188" height="1458"/>
         <image name="NotSelected" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>

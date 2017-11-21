@@ -20,6 +20,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var songNumberTextField: UITextField!
     @IBOutlet weak var songURLTextField: UITextField!
     @IBOutlet weak var songOnDeckImage: UIImageView!
+    @IBOutlet weak var songFavorite: UIImageView!
+    
     
     var songBooks = songBooksArray
     var songTopics = topicsArray
@@ -154,6 +156,14 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         }
     }
     
+    @IBAction func songFavoriteButtonPressed(_ sender: Any) {
+        if songFavorite.image == #imageLiteral(resourceName: "FavoriteFilled") {
+            songFavorite.image = #imageLiteral(resourceName: "Favorite")
+        } else {
+            songFavorite.image = #imageLiteral(resourceName: "FavoriteFilled")
+        }
+    }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         playClick()
@@ -193,6 +203,12 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             song.selected = false
         }
         
+        if songFavorite.image == #imageLiteral(resourceName: "FavoriteFilled") {
+            song.favorite = true
+        } else {
+            song.favorite = false
+        }
+        
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
@@ -206,11 +222,17 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             songNumberTextField.text = song.number
             songURLTextField.text = song.url
             let onDeck = song.selected
+            let favorite = song.favorite
             if onDeck == true {
                 songOnDeckImage.image = #imageLiteral(resourceName: "Selected")
             } else {
             songOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
-        }
+            }
+            if favorite == true {
+                songFavorite.image = #imageLiteral(resourceName: "FavoriteFilled")
+            } else {
+                songFavorite.image = #imageLiteral(resourceName: "Favorite")
+            }
             
             textFieldDidEndEditing(songTitleTextField)
         }

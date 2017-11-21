@@ -19,6 +19,8 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var selectedButton: UIButton!
+    @IBOutlet weak var favoriteImage: UIImageView!
+    
     
     var delegate: SongCellDelegate?
     
@@ -43,6 +45,7 @@ class SongCell: UITableViewCell {
         let number = song.number ?? "NA"
         let book = song.book
         let onDeck = song.selected
+        let favorite = song.favorite
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
         numberLabel.text = "#\(number)"
@@ -51,6 +54,11 @@ class SongCell: UITableViewCell {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {
             onDeckImage.image = #imageLiteral(resourceName: "NotSelected")
+        }
+        if favorite == true {
+            favoriteImage.isHidden = false
+        } else {
+            favoriteImage.isHidden = true
         }
     }
 }

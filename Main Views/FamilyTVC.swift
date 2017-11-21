@@ -21,7 +21,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         self.hideKeyboardWhenTappedAround()
         
-//        generateFamilyMembers()
         memberAttemptFetch()
         tableView.reloadData()
     }

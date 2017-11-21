@@ -1835,10 +1835,10 @@ I spent a lot of time and effort building something I thought would be both help
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tf2-Ul-FS0">
-                                                    <rect key="frame" x="24" y="12" width="327" height="533"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="534"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1t-TC-kRt" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="509" height="533"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="510" height="534"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1859,7 +1859,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Business Cards" translatesAutoresizingMaskIntoConstraints="NO" id="DAR-00-VEE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="509" height="533"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="510" height="534"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="DAR-00-VEE" secondAttribute="height" multiplier="109:114" id="uaT-8I-MJK"/>
                                                             </constraints>
@@ -1879,7 +1879,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-0s-Gz3">
-                                                            <rect key="frame" x="389" y="493" width="110" height="30"/>
+                                                            <rect key="frame" x="390" y="494" width="110" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="110" id="MxG-3Z-uxR"/>
@@ -2653,8 +2653,8 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="$Med" width="85" height="80"/>
         <image name="Amazing" width="200" height="200"/>
         <image name="BSS" width="326" height="317"/>
-        <image name="Be" width="320" height="256"/>
-        <image name="Business Cards" width="509" height="420"/>
+        <image name="Be" width="320" height="255"/>
+        <image name="Business Cards" width="510" height="420"/>
         <image name="Close" width="267" height="267"/>
         <image name="Discloser" width="67" height="117"/>
         <image name="Edit" width="498" height="498"/>

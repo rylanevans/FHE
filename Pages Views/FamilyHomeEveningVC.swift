@@ -42,12 +42,12 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
                 self.instanceVC(name: "Calendar"),
                 self.instanceVC(name: "Testimony"),
                 self.instanceVC(name: "Spotlight"),
-                self.instanceVC(name: "Misc"),
+//                self.instanceVC(name: "Misc"),
 //                self.instanceVC(name: "Thought"),
                 self.instanceVC(name: "Lesson"),
 //                self.instanceVC(name: "Council"),
-                self.instanceVC(name: "ClosingPrayer"),
                 self.instanceVC(name: "Activity"),
+                self.instanceVC(name: "ClosingPrayer"),
                 self.instanceVC(name: "Treat")]
     }()
     

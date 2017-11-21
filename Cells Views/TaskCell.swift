@@ -36,10 +36,21 @@ class TaskCell: UITableViewCell {
     
     func configureTaskCell(task: Task) {
         let name = task.name ?? ""
+        switch task.name {
+        case "Song"?: taskLabel.text = "Songs"
+        case "Rule"?: taskLabel.text = "Rules"
+        case "Scripture"?: taskLabel.text = "Scriptures"
+        case "Lesson"?: taskLabel.text = "Lessons"
+        case "Thought"?: taskLabel.text = "Thoughts"
+        case "Council"?: taskLabel.text = "Councils"
+        case "Activity"?: taskLabel.text = "Activities"
+        case "Treat"?: taskLabel.text = "Treats"
+        default: taskLabel.text = name
+        }
+        
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
         let enabled = task.enabled
         taskImage.image = image as? UIImage
-        taskLabel.text = name
         enabledSwitch.isOn = enabled
     }
 }
