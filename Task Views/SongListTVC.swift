@@ -17,10 +17,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var songAssigneeText: UITextField!
     @IBOutlet weak var searchController: UISearchBar!
     
-    var isSearching = false
-    
     let memberPicker = UIPickerView()
-    
     var memberArray = ["Off", "Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
     
     override func viewDidLoad() {
@@ -49,15 +46,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         searchController.inputAccessoryView = toolBar
         
         attemptFetch()
-        
         searchController.delegate = self
-        searchController.returnKeyType = UIReturnKeyType.done
+//        searchController.returnKeyType = UIReturnKeyType.search
         tableView.reloadData()
-//        searchController.searchResultsUpdater = self
-//        searchController.dimsBackgroundDuringPresentation = false
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        definesPresentationContext = true
-//        tableView.tableHeaderView = searchController.searchBar
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -117,7 +108,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
             } else {
-                title = "OTHER:"
+                title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 1 {
@@ -126,7 +117,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
             } else {
-                title = "OTHER:"
+                title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 2 {
@@ -149,14 +140,16 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             case "Proclaim the Gospel": title = "PROCLAIM THE GOSPEL:"
             case "Redeem the Dead": title = "REDEEM THE DEAD:"
             case "Care for the Poor & Needy": title = "CARE FOR THE POOR & NEEDY:"
-            default: title = "No Topic Selected"
+            default: title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 3 {
             if Int(sectionTitle![section].name) == 1 {
                 title = "FAVORITES:"
-            } else {
+            } else if Int(sectionTitle![section].name) == 0 {
                 title = "NON-FAVORITES:"
+            } else {
+                title = "SEARCH RESULTS:"
             }
             
         } else {
@@ -236,6 +229,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
+        let resetText = searchController
+        resetText?.text = nil
         attemptFetch()
         tableView.reloadData()
     }
@@ -256,6 +251,54 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         Song.selected = !Song.selected
         ad.saveContext()
         tableView.reloadData()
+    }
+    
+    //Hide the searchbar
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchForSongs()
+        searchBar.resignFirstResponder()
+    }
+    
+    //Text did chnage in search bar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard !searchText.isEmpty else {
+            attemptFetch()
+            tableView.reloadData()
+            return
+        }
+        
+        searchForSongs(segment: segment.selectedSegmentIndex, targetText: searchText)
+        tableView.reloadData()
+        print(searchText)
+    }
+    
+    //Fetch filtered song results
+    func searchForSongs(segment: Int?=nil, targetText: String?=nil){
+        let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
+        
+        let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+        
+        if targetText != nil {
+            fetchRequest.sortDescriptors = [sortByTitle]
+            let predicateTitle = NSPredicate(format: "title contains[c] %@", targetText!)
+            let predicateNumber = NSPredicate(format: "number contains[c] %@", targetText!)
+            let predicateTopic = NSPredicate(format: "topic contains[c] %@", targetText!)
+            let predicateFavorite = NSPredicate(format: "favorite contains[c] %@", targetText!)
+            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateNumber, predicateTopic, predicateFavorite])
+
+            fetchRequest.predicate = predicateCompound
+//            fetchRequest.predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            controller.delegate = self
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+        }
     }
     
     // MARK: - Boiler Code for Core Data

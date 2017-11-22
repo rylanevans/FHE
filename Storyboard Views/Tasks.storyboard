@@ -256,7 +256,7 @@ Family Member To Songs</string>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="qUb-yK-g6R"/>
                                             </constraints>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                         </searchBar>
                                     </subviews>
                                     <constraints>
