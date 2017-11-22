@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,11 +56,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-eD-umI">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="q1q-eD-umI">
                                                     <rect key="frame" x="10" y="0.0" width="255" height="76.5"/>
                                                     <string key="text">Permanently Assign A
 Family Member To Songs</string>
-                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -129,17 +130,17 @@ Family Member To Songs</string>
                                                 </label>
                                                 <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zX-0f7" userLabel="Song Rotation">
                                                     <rect key="frame" x="10" y="0.0" width="355" height="36"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="C6C-n3-2O5"/>
                                                     </constraints>
                                                     <segments>
-                                                        <segment title="Book"/>
-                                                        <segment title="Topic"/>
                                                         <segment title="Title"/>
                                                         <segment title="Number"/>
+                                                        <segment title="Topic"/>
                                                         <segment title="Favorite"/>
                                                     </segments>
-                                                    <color key="tintColor" red="0.01173495129" green="0.4730891585" blue="0.99157184359999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="tintColor" name="Accent"/>
                                                     <connections>
                                                         <action selector="segmentChanged:" destination="Vn6-Vj-ADL" eventType="valueChanged" id="uOY-vk-Kf9"/>
                                                     </connections>
@@ -195,7 +196,7 @@ Family Member To Songs</string>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="IFW-LP-mXP" firstAttribute="height" secondItem="ymo-gO-JOG" secondAttribute="height" id="IXC-0W-LCl"/>
                                 <constraint firstItem="IFW-LP-mXP" firstAttribute="width" secondItem="ymo-gO-JOG" secondAttribute="width" id="bbU-a7-HED"/>
@@ -1283,6 +1284,9 @@ Family Member To Songs</string>
         <image name="FavoriteFilled" width="255" height="248"/>
         <image name="Missing Profile" width="770" height="770"/>
         <image name="NotSelected" width="256" height="256"/>
+        <namedColor name="Accent">
+            <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6XO-GI-9PR"/>
