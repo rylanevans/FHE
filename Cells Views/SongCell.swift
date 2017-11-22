@@ -21,7 +21,6 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var selectedButton: UIButton!
     @IBOutlet weak var favoriteImage: UIImageView!
     
-    
     var delegate: SongCellDelegate?
     
     override func awakeFromNib() {
@@ -42,13 +41,17 @@ class SongCell: UITableViewCell {
     func configureSongCell(song: Song) {
         let topic = song.topic ?? "Topic"
         let title = song.title
-        let number = song.number ?? "NA"
+        let number = String(song.number)
         let book = song.book
         let onDeck = song.selected
         let favorite = song.favorite
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
-        numberLabel.text = "#\(number)"
+        if number == "0" {
+            numberLabel.text = "Video"
+        } else {
+            numberLabel.text = "#\(number)"
+        }
         bookLabel.text = book
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")

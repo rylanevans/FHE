@@ -188,7 +188,11 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             song.title = title
         }
         
-        if let number = songNumberTextField.text {
+        if songNumberTextField.text != nil {
+            let number = Int64(songNumberTextField.text!)
+            song.number = number!
+        } else {
+            let number = Int64(0)
             song.number = number
         }
         
@@ -219,7 +223,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             songTopicTextField.text = song.topic
             songTitleTextField.text = song.title
             songBookTextField.text = song.book
-            songNumberTextField.text = song.number
+            songNumberTextField.text = String(song.number)
             songURLTextField.text = song.url
             let onDeck = song.selected
             let favorite = song.favorite
