@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 import CoreData
 
-class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongCellDelegate {
+class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongCellDelegate, UISearchBarDelegate {
     @IBOutlet weak var songAssigneeMemberImage: UIImageView!
     @IBOutlet weak var songAssigneeLabel: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var songAssigneeText: UITextField!
+    @IBOutlet weak var searchController: UISearchBar!
     
+    var isSearching = false
     
     let memberPicker = UIPickerView()
     
@@ -41,6 +43,15 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         songAssigneeText.inputAccessoryView = toolBar
         
         attemptFetch()
+        
+        searchController.delegate = self
+        searchController.returnKeyType = UIReturnKeyType.done
+        tableView.reloadData()
+//        searchController.searchResultsUpdater = self
+//        searchController.dimsBackgroundDuringPresentation = false
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        definesPresentationContext = true
+//        tableView.tableHeaderView = searchController.searchBar
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -205,8 +216,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // Function to configure each cell
     func configureCell(cell: SongCell, indexPath: NSIndexPath) {
-        let song = songController.object(at: indexPath as IndexPath)
-        cell.configureSongCell(song: song)
+            let song = songController.object(at: indexPath as IndexPath)
+            cell.configureSongCell(song: song)
     }
     
     // Prepare for segue to another view controller
@@ -259,7 +270,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let sortByFavorite = NSSortDescriptor(key: "favorite", ascending: false)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            fetchRequest.sortDescriptors = [sortByTitle]
+            fetchRequest.predicate = NSPredicate(format: "book.name == %@", "Hymn")
+            fetchRequest.predicate = NSPredicate(format: "number.name == %@", "29")
+            fetchRequest.fetchLimit = 12
             
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
