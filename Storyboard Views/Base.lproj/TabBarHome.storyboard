@@ -8,6 +8,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -671,6 +672,7 @@
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-b0-MfQ">
                                                                             <rect key="frame" x="0.0" y="15.5" width="30" height="30"/>
+                                                                            <color key="tintColor" name="Accent"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="30" id="29x-uh-edz"/>
                                                                                 <constraint firstAttribute="width" constant="30" id="V6z-kb-43r"/>
@@ -918,6 +920,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$Low" translatesAutoresizingMaskIntoConstraints="NO" id="a5r-10-Euo">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="a5r-10-Euo" secondAttribute="height" multiplier="1:1" id="WWy-I1-J7R"/>
                                                                 <constraint firstAttribute="height" constant="30" id="rkd-4y-ngX"/>
@@ -966,6 +969,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$Med" translatesAutoresizingMaskIntoConstraints="NO" id="m14-iO-JyH">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="m14-iO-JyH" secondAttribute="height" multiplier="1:1" id="aVJ-ji-I2C"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jfq-xQ-B2M"/>
@@ -1014,6 +1018,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$High" translatesAutoresizingMaskIntoConstraints="NO" id="JKK-Pc-igU">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="GoQ-2M-A7R"/>
                                                                 <constraint firstAttribute="width" secondItem="JKK-Pc-igU" secondAttribute="height" multiplier="1:1" id="ZR0-4E-9bB"/>
@@ -1065,6 +1070,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$Large" translatesAutoresizingMaskIntoConstraints="NO" id="yoV-zj-5MS">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="AdA-iS-KeE"/>
                                                                 <constraint firstAttribute="width" secondItem="yoV-zj-5MS" secondAttribute="height" multiplier="1:1" id="SDY-M4-m0k"/>
@@ -1120,6 +1126,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Share" translatesAutoresizingMaskIntoConstraints="NO" id="1wN-7f-Ca7">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="FSg-tW-8bz"/>
                                                                 <constraint firstAttribute="width" secondItem="1wN-7f-Ca7" secondAttribute="height" multiplier="1:1" id="lfR-vP-LVj"/>
@@ -1169,6 +1176,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PositiveFeedback" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-dX-xy5">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Bfa-dX-xy5" secondAttribute="height" multiplier="1:1" id="A5k-Xi-fCk"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="fvK-Ey-NCO"/>
@@ -1215,6 +1223,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReportBug" translatesAutoresizingMaskIntoConstraints="NO" id="Wvx-Lc-xSf">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Wvx-Lc-xSf" secondAttribute="height" multiplier="1:1" id="L7Q-Wi-Bg3"/>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="TZF-wF-e2R"/>
@@ -1257,6 +1266,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Suggestions" translatesAutoresizingMaskIntoConstraints="NO" id="cpo-dl-IPd">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jp8-Mj-4kU"/>
                                                                 <constraint firstAttribute="width" secondItem="cpo-dl-IPd" secondAttribute="height" multiplier="1:1" id="v5w-FY-K6w"/>
@@ -1299,6 +1309,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subscribe" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-F7-xAs">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Ifv-Mb-0Ob"/>
                                                                 <constraint firstAttribute="width" secondItem="wMi-F7-xAs" secondAttribute="height" multiplier="1:1" id="LEm-gm-yXV"/>
@@ -1345,6 +1356,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Help" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-dA-aKj">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="XAs-zH-Mk9"/>
                                                                 <constraint firstAttribute="width" secondItem="BWo-dA-aKj" secondAttribute="height" multiplier="1:1" id="egW-0e-HvR"/>
@@ -1390,6 +1402,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-Pa-RYU">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="oJo-UL-lf4"/>
                                                                 <constraint firstAttribute="width" secondItem="ccw-Pa-RYU" secondAttribute="height" multiplier="1:1" id="pYH-MM-SS1"/>
@@ -2537,6 +2550,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tasks" translatesAutoresizingMaskIntoConstraints="NO" id="SYT-jR-vAN">
                                                             <rect key="frame" x="0.0" y="17" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="diy-UA-OI2"/>
                                                                 <constraint firstAttribute="width" constant="30" id="f1e-jJ-jP0"/>
@@ -3011,6 +3025,9 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Thank you" width="200" height="200"/>
         <image name="Twitter" width="1200" height="628"/>
         <image name="Website" width="509" height="420"/>
+        <namedColor name="Accent">
+            <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fh2-ar-ueD"/>
