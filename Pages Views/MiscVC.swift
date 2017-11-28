@@ -22,7 +22,7 @@ class MisVC: UIViewController {
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
         //        playClick()
-        let URL = NSURL(string: "https://google.com")!
+        let URL = NSURL(string: "https://en.wiktionary.org/wiki/miscellaneous")!
         let miscWebVC = SFSafariViewController(url: URL as URL)
         miscWebVC.delegate = self
         

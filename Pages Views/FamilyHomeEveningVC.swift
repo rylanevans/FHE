@@ -15,14 +15,14 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = #colorLiteral(red: 0.8487482071, green: 0.9164986014, blue: 0.9956217408, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.8451297283, green: 0.9193984866, blue: 0.9954796433, alpha: 1)
         
         self.dataSource = self
         self.delegate = self
         
         let pageControl: UIPageControl = UIPageControl.appearance(whenContainedInInstancesOf: [FamilyHomeEveningVC.self])
         pageControl.pageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.01864526048, green: 0.4776622653, blue: 1, alpha: 1)
+        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.1340000033, green: 0.1679999977, blue: 0.5, alpha: 1)
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
@@ -42,10 +42,10 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
                 self.instanceVC(name: "Calendar"),
                 self.instanceVC(name: "Testimony"),
                 self.instanceVC(name: "Spotlight"),
-//                self.instanceVC(name: "Misc"),
-//                self.instanceVC(name: "Thought"),
+                self.instanceVC(name: "Misc"),
+                self.instanceVC(name: "Thought"),
                 self.instanceVC(name: "Lesson"),
-//                self.instanceVC(name: "Council"),
+                self.instanceVC(name: "Council"),
                 self.instanceVC(name: "Activity"),
                 self.instanceVC(name: "ClosingPrayer"),
                 self.instanceVC(name: "Treat")]

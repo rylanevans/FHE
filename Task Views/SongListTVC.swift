@@ -99,6 +99,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+        
         var title = ""
         let sectionTitle = songController.sections
         
@@ -160,6 +161,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         label.text = title
         label.frame = CGRect(x: 15, y:5, width: 275, height: 25)
         label.font = UIFont(name: "American Typewriter", size: 15)!
+        label.textColor = #colorLiteral(red: 0.1340000033, green: 0.1679999977, blue: 0.5, alpha: 1)
         view.addSubview(label)
         
         return view
