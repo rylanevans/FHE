@@ -17,7 +17,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.1340000033, green: 0.1679999977, blue: 0.5, alpha: 1),
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
             NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
         

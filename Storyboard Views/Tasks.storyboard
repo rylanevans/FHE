@@ -79,7 +79,7 @@
                                                                     <string key="text">Permanently Assign A
 Family Member To Songs</string>
                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                                                    <color key="textColor" name="Accent"/>
+                                                                    <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
@@ -107,7 +107,7 @@ Family Member To Songs</string>
                                                                                     <real key="value" value="3"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" name="Accent"/>
+                                                                                    <color key="value" name="Tint"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                     <real key="value" value="30"/>
@@ -118,7 +118,7 @@ Family Member To Songs</string>
                                                                             <rect key="frame" x="20" y="70" width="60" height="20"/>
                                                                             <color key="tintColor" name="Accent"/>
                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                                            <color key="textColor" name="Accent"/>
+                                                                            <color key="textColor" name="Tint"/>
                                                                             <nil key="highlightedColor"/>
                                                                             <size key="shadowOffset" width="1" height="1"/>
                                                                         </label>
@@ -218,7 +218,7 @@ Family Member To Songs</string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <segmentedControl opaque="NO" alpha="0.90000000000000002" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zX-0f7" userLabel="Song Rotation">
+                                                <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-zX-0f7" userLabel="Song Rotation">
                                                     <rect key="frame" x="10" y="0.0" width="355" height="36"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -230,7 +230,7 @@ Family Member To Songs</string>
                                                         <segment title="Topic"/>
                                                         <segment title="Favorite"/>
                                                     </segments>
-                                                    <color key="tintColor" name="Accent"/>
+                                                    <color key="tintColor" name="Tint"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                             <real key="value" value="1"/>
@@ -321,9 +321,9 @@ Family Member To Songs</string>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-h6-wex">
                                             <rect key="frame" x="5" y="2.5" width="365" height="126"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="ZCv-oA-AJk">
                                                     <rect key="frame" x="10" y="5" width="40" height="40.5"/>
-                                                    <color key="tintColor" name="Accent"/>
+                                                    <color key="tintColor" name="Tint"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="TC3-Qb-2tK"/>
                                                         <constraint firstAttribute="height" constant="40" id="cPe-nE-Jqp"/>
@@ -475,7 +475,6 @@ Family Member To Songs</string>
                                                 </stackView>
                                                 <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-aV-GQl">
                                                     <rect key="frame" x="10" y="5" width="40" height="40.5"/>
-                                                    <color key="tintColor" name="Accent"/>
                                                     <connections>
                                                         <action selector="selectedButtonPressed:" destination="nQ5-Q3-NYt" eventType="touchUpInside" id="ebJ-q9-43L"/>
                                                     </connections>
@@ -1409,14 +1408,17 @@ Family Member To Songs</string>
         <namedColor name="Accent">
             <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20600000020000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98900002241134644" green="0.74000000953674316" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
