@@ -98,7 +98,7 @@
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="songSelected" inverseEntity="Task" syncable="YES"/>
+        <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Spotlight" representedClassName="Spotlight" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
@@ -113,7 +113,6 @@
         <attribute name="order" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="segment" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="assignment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Member" inverseName="toTask" inverseEntity="Member" syncable="YES"/>
-        <relationship name="songSelected" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="selectedOne" inverseEntity="Song" syncable="YES"/>
     </entity>
     <entity name="Testimony" representedClassName="Testimony" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
@@ -148,7 +147,7 @@
         <element name="Scripture" positionX="9" positionY="72" width="128" height="225"/>
         <element name="Song" positionX="27" positionY="126" width="128" height="225"/>
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="75"/>
-        <element name="Task" positionX="9" positionY="153" width="128" height="180"/>
+        <element name="Task" positionX="9" positionY="153" width="128" height="165"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="75"/>
         <element name="Thought" positionX="45" positionY="153" width="128" height="90"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="180"/>

@@ -239,13 +239,22 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // MARK: - Song Cell Delegate
     
+    // What happens when song is selected
     func songSelectedNeedsChanged(_ sender: SongCell) {
         if let objects = songController.fetchedObjects, objects.count > 0 {
             let indexPath = tableView.indexPath(for: sender)
             let sections = songController.sections![(indexPath?.section)!]
             let song = sections.objects![(indexPath?.row)!]
             selectedValueToggle(song as! Song)
+            // loop through and deselect all other objects property
         }
+    }
+    
+    //
+    func assignMemberToSong() {
+        // how do I call this function
+        // assgin task.assignment = member.name
+        // how do I loop through to find that relationship later when I need to change it
     }
     
     // Change status of selected bool
