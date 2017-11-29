@@ -31,12 +31,14 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0: aboutRylan()
-            case 1: rylanEvans()
+            case 1: allApps()
             case 2: basketballSSTapped()
             case 3: shareWithNetwork()
-            case 4: facebook()
-            case 5: twitter()
-            case 6: patreon()
+            case 4: digiLilly()
+            case 5: rylanEvans()
+            case 6: facebook()
+            case 7: twitter()
+            case 8: patreon()
             default: print("Error with MoreTVC index selection")
             }
         }
@@ -46,37 +48,41 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         return UITableViewAutomaticDimension
     }
     
+    
+    func aboutRylan() {
+    }
+    
     func rylanEvans() {
-//        playClick()
         let URL = NSURL(string: "https://www.rylanevans.com")!
         let rylanEvansWeb = SFSafariViewController(url: URL as URL)
         rylanEvansWeb.delegate = self
         
         present(rylanEvansWeb, animated: true, completion: nil)
     }
-    
-    func aboutRylan() {
-//        playClick()
-    }
-    
+
     func basketballSSTapped() {
-//        playClick()
         UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1224378809?")! as URL, options: ["":""], completionHandler: nil)
-        
-        //        UIApplication.shared.openURL(NSURL(string: "https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?")! as URL)
-        
-        //        UIApplication.shared.open(NSURL("https://itunes.apple.com/us/app/basketball-simple-stats/id1224378809?") as URL, options: [:], completionHandler: nil)
     }
     
     func shareWithNetwork() {
-//        playClick()
         let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }
     
+    func allApps() {
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: ["":""], completionHandler: nil)
+    }
+    
+    func digiLilly() {
+        let URL = NSURL(string: "https://sites.google.com/view/digi-lilly/home")!
+        let rylanEvansWeb = SFSafariViewController(url: URL as URL)
+        rylanEvansWeb.delegate = self
+        
+        present(rylanEvansWeb, animated: true, completion: nil)
+    }
+    
     func facebook() {
-//        playClick()
         let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
         let facebookWeb = SFSafariViewController(url: URL as URL)
         facebookWeb.delegate = self
@@ -87,7 +93,6 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     // MARK: -  MFMailComposeViewControllerDelegate Method to subscribe
     
     func twitter() {
-//        playClick()
         let URL = NSURL(string: "https://twitter.com/rylan_evans")!
         let twitterWeb = SFSafariViewController(url: URL as URL)
         twitterWeb.delegate = self
@@ -96,7 +101,6 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func patreon() {
-//        playClick()
         let URL = NSURL(string: "https://www.patreon.com/rylanevans")!
         let patreonWeb = SFSafariViewController(url: URL as URL)
         patreonWeb.delegate = self

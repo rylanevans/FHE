@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -514,21 +515,12 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Evans" translatesAutoresizingMaskIntoConstraints="NO" id="C4V-nJ-Ds0">
-                                                                <rect key="frame" x="110" y="0.0" width="125" height="200"/>
+                                                                <rect key="frame" x="72.5" y="0.0" width="200" height="200"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="200" id="3oK-8K-xTa"/>
-                                                                    <constraint firstAttribute="width" constant="125" id="jfp-CV-7qI"/>
+                                                                    <constraint firstAttribute="width" constant="200" id="jfp-CV-7qI"/>
                                                                 </constraints>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                        <real key="value" value="10"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                        <color key="value" red="0.0" green="0.47554838659999998" blue="0.99112838510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                        <real key="value" value="3"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                                         <real key="value" value="2"/>
                                                                     </userDefinedRuntimeAttribute>
@@ -537,6 +529,9 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                         <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                        <real key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
@@ -625,10 +620,11 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="ije-f1-eJe" secondAttribute="height" multiplier="1:1" id="FNh-GX-txM"/>
                                                                 </constraints>
+                                                                <color key="tintColor" name="Tint"/>
                                                                 <state key="normal" image="Thank you"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                        <real key="value" value="2"/>
+                                                                        <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                         <real key="value" value="1"/>
@@ -650,10 +646,11 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="lkd-9c-okq" secondAttribute="height" multiplier="1:1" id="NJ6-4X-zwa"/>
                                                                 </constraints>
+                                                                <color key="tintColor" name="Tint"/>
                                                                 <state key="normal" image="Like it"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                        <real key="value" value="2"/>
+                                                                        <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                         <real key="value" value="1"/>
@@ -675,10 +672,11 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="oms-PN-0GY" secondAttribute="height" multiplier="1:1" id="XPE-BD-yZ4"/>
                                                                 </constraints>
+                                                                <color key="tintColor" name="Tint"/>
                                                                 <state key="normal" image="Love it"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                        <real key="value" value="2"/>
+                                                                        <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                         <real key="value" value="1"/>
@@ -700,10 +698,11 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="62R-4w-aUj" secondAttribute="height" multiplier="1:1" id="Udb-sW-mkK"/>
                                                                 </constraints>
+                                                                <color key="tintColor" name="Tint"/>
                                                                 <state key="normal" image="Amazing"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                                        <real key="value" value="2"/>
+                                                                        <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                                         <real key="value" value="1"/>
@@ -776,11 +775,14 @@ I spent a lot of time and effort building something I thought would be both help
     <resources>
         <image name="Amazing" width="200" height="200"/>
         <image name="Apple TV" width="299" height="168"/>
-        <image name="Evans" width="684" height="1013"/>
+        <image name="Evans" width="341" height="341"/>
         <image name="Like it" width="200" height="200"/>
         <image name="Love it" width="200" height="200"/>
         <image name="Signature" width="98" height="31"/>
         <image name="Teach" width="1940" height="1600"/>
         <image name="Thank you" width="200" height="200"/>
+        <namedColor name="Tint">
+            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
