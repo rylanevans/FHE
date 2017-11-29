@@ -123,6 +123,7 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7Q-3S-wPi">
                                                                     <rect key="frame" x="0.0" y="16.5" width="64" height="31"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="onTintColor" name="Tint"/>
                                                                     <connections>
                                                                         <action selector="attendingSwitchPressed:" destination="jw9-WN-kNq" eventType="valueChanged" id="1XA-nJ-zTN"/>
@@ -256,7 +257,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zWU-MO-Ojm">
                                                 <rect key="frame" x="0.0" y="0.0" width="67.5" height="40"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Accent"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqt-0k-h90">
@@ -276,7 +277,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJe-Wa-hmH">
                                                 <rect key="frame" x="0.0" y="0.0" width="67.5" height="40"/>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Accent"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="45" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89m-qP-O7B">
@@ -291,12 +292,12 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age is only used for sorting." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-5c-gHk">
-                                        <rect key="frame" x="44.5" y="104" width="211.5" height="30"/>
+                                        <rect key="frame" x="44" y="104" width="212.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="JvC-BH-WS2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                        <color key="textColor" name="Background"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-W7-Z0X">
@@ -308,7 +309,7 @@
                                                     <constraint firstAttribute="height" constant="40" id="wv6-9I-9ji"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="Accent"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NxU-sK-lkQ">
@@ -2619,6 +2620,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ea4-se-KvU">
                                                                     <rect key="frame" x="0.0" y="16.5" width="53.5" height="31"/>
+                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="onTintColor" name="Tint"/>
                                                                     <connections>
                                                                         <action selector="enabledSwitchPressed:" destination="ddg-7b-NCX" eventType="valueChanged" id="5SV-fc-YGY"/>
@@ -3034,7 +3036,7 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="More25" width="26" height="8"/>
         <image name="MoreFilled25" width="25" height="7"/>
         <image name="Patreon" width="500" height="254"/>
-        <image name="PositiveFeedback" width="74" height="43"/>
+        <image name="PositiveFeedback" width="45" height="43"/>
         <image name="Prayer" width="48" height="80"/>
         <image name="Profile25" width="26" height="26"/>
         <image name="ProfileFilled25" width="25" height="25"/>

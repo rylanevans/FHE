@@ -79,7 +79,7 @@
                                                                     <string key="text">Permanently Assign A
 Family Member To Songs</string>
                                                                     <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
-                                                                    <color key="textColor" name="Text"/>
+                                                                    <color key="textColor" name="Accent"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <size key="shadowOffset" width="0.0" height="0.0"/>
                                                                 </label>
@@ -107,18 +107,18 @@ Family Member To Songs</string>
                                                                                     <real key="value" value="3"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" name="Tint"/>
+                                                                                    <color key="value" name="Accent"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                     <real key="value" value="30"/>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Assignee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
-                                                                            <rect key="frame" x="20" y="70" width="60" height="20"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="No One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
+                                                                            <rect key="frame" x="26.5" y="70" width="47" height="20"/>
                                                                             <color key="tintColor" name="Accent"/>
                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                                            <color key="textColor" name="Tint"/>
+                                                                            <color key="textColor" name="Accent"/>
                                                                             <nil key="highlightedColor"/>
                                                                             <size key="shadowOffset" width="1" height="1"/>
                                                                         </label>
@@ -173,7 +173,7 @@ Family Member To Songs</string>
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="0.0"/>
+                                                            <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                             <real key="value" value="1"/>
@@ -186,6 +186,9 @@ Family Member To Songs</string>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                                             <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="Tint"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -331,14 +334,14 @@ Family Member To Songs</string>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Topic   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-qd-hDy">
                                                     <rect key="frame" x="302.5" y="95.5" width="32.5" height="19.5"/>
-                                                    <color key="tintColor" name="Text"/>
+                                                    <color key="tintColor" name="Accent"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="J9K-lR-5P7"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="iSs-Qu-Ku6"/>
                                                         <constraint firstAttribute="width" priority="750" constant="10" id="rfG-aj-Yd0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="12"/>
-                                                    <color key="textColor" name="Text"/>
+                                                    <color key="textColor" name="Accent"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -348,13 +351,13 @@ Family Member To Songs</string>
                                                             <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" name="Text"/>
+                                                            <color key="value" name="Accent"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Discloser" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-20-Pc1">
                                                     <rect key="frame" x="340" y="52.5" width="15" height="20"/>
-                                                    <color key="tintColor" name="Text"/>
+                                                    <color key="tintColor" name="Accent"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="6cH-Zk-z7M"/>
                                                         <constraint firstAttribute="width" constant="15" id="jto-Bf-Teh"/>
@@ -389,7 +392,7 @@ Family Member To Songs</string>
                                                                         </label>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" image="FavoriteFilled" translatesAutoresizingMaskIntoConstraints="NO" id="qMD-sD-lP4">
                                                                             <rect key="frame" x="0.0" y="7.5" width="15" height="15"/>
-                                                                            <color key="tintColor" name="Text"/>
+                                                                            <color key="tintColor" name="Accent"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="15" id="Nxu-kP-WMZ"/>
                                                                                 <constraint firstAttribute="width" constant="15" id="lC0-1e-SBq"/>
@@ -588,7 +591,7 @@ Family Member To Songs</string>
                                                             <constraint firstAttribute="height" constant="35" id="q2x-lf-20d"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Accent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKs-bG-MYD">
@@ -608,7 +611,7 @@ Family Member To Songs</string>
                                                             <constraint firstAttribute="height" constant="35" id="aoM-Wb-I8R"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Accent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Charity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-4h-jE3">
@@ -628,7 +631,7 @@ Family Member To Songs</string>
                                                             <constraint firstAttribute="height" constant="35" id="8sb-3T-Rn9"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Accent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Genesis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-lS-kJc">
@@ -648,7 +651,7 @@ Family Member To Songs</string>
                                                             <constraint firstAttribute="height" constant="35" id="HW3-RW-zP0"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Accent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="201" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-CM-O4s">
@@ -668,7 +671,7 @@ Family Member To Songs</string>
                                                             <constraint firstAttribute="height" constant="35" id="3Ko-BO-HVw"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Accent"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste a youtube addess to override." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-xK-p7C">
@@ -693,6 +696,7 @@ Family Member To Songs</string>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Favorite" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-f6-sF2">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                        <color key="tintColor" name="Tint"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="Zuz-Eg-e4K"/>
                                                         </constraints>
@@ -719,7 +723,7 @@ Family Member To Songs</string>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-Qm-UUX">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                        <color key="tintColor" name="Accent"/>
+                                                        <color key="tintColor" name="Tint"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="40" id="m60-Vz-SXO"/>
                                                         </constraints>
@@ -752,12 +756,11 @@ Family Member To Songs</string>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRD-lx-vuo" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="343" width="304" height="50"/>
-                                                <color key="backgroundColor" name="Accent"/>
+                                                <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gYp-s6-xdI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
-                                                <color key="tintColor" name="Accent"/>
                                                 <state key="normal" title="SAVE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -1406,10 +1409,16 @@ Family Member To Songs</string>
         <image name="Missing Profile" width="770" height="770"/>
         <image name="NotSelected" width="256" height="256"/>
         <namedColor name="Accent">
+            <color red="0.20600000020000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Accent">
             <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Text">
-            <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Accent">
+            <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Accent">
+            <color red="0.20600000020000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

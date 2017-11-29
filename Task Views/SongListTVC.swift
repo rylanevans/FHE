@@ -18,7 +18,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var searchController: UISearchBar!
     
     let memberPicker = UIPickerView()
-    var memberArray = ["Off", "Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
+    var memberArray = ["No One", "Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +44,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         songAssigneeText.inputView = memberPicker
         songAssigneeText.inputAccessoryView = toolBar
         searchController.inputAccessoryView = toolBar
+        
+
+        let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
+        segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
+        
         
         attemptFetch()
         searchController.delegate = self
@@ -73,7 +78,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         songAssigneeLabel.text = memberArray[row]
-        if memberArray[row] == "Off" {
+        if memberArray[row] == "No One" {
             songAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
         } else {
             songAssigneeMemberImage.image = UIImage(named: "\(memberArray[row])")
@@ -161,7 +166,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         label.text = title
         label.frame = CGRect(x: 15, y:5, width: 275, height: 25)
         label.font = UIFont(name: "American Typewriter", size: 15)!
-        label.textColor = #colorLiteral(red: 0.1340000033, green: 0.1679999977, blue: 0.5, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1)
         view.addSubview(label)
         
         return view

@@ -64,7 +64,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         label.text = title
         label.frame = CGRect(x: 15, y:5, width: 200, height: 25)
         label.font = UIFont(name: "American Typewriter", size: 15)!
-        label.textColor = #colorLiteral(red: 0.1340000033, green: 0.1679999977, blue: 0.5, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1)
         view.addSubview(label)
         
         return view

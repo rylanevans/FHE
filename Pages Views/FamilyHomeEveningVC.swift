@@ -22,7 +22,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         
         let pageControl: UIPageControl = UIPageControl.appearance(whenContainedInInstancesOf: [FamilyHomeEveningVC.self])
         pageControl.pageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.1340000033, green: 0.1679999977, blue: 0.5, alpha: 1)
+        pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1)
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
