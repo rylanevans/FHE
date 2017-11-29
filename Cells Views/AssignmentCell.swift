@@ -101,7 +101,7 @@ class AssignmentCell: UITableViewCell { //, UIPickerViewDelegate, UIPickerViewDa
     func assignmentTask(task: Task) {
         let taskName = task.name ?? ""
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
-        let songSelected = task.songSelected?.title ?? "Title of task"
+        let songSelected = task.selected?.title ?? "Title of task"
         let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
         let name = task.assignment?.name ?? "Assignee"
         taskImage.image = image as? UIImage

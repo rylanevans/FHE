@@ -245,16 +245,43 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             let indexPath = tableView.indexPath(for: sender)
             let sections = songController.sections![(indexPath?.section)!]
             let song = sections.objects![(indexPath?.row)!]
+            for song in objects {
+                song.selected = false
+            }
+            ad.saveContext()
+            
             selectedValueToggle(song as! Song)
-            // loop through and deselect all other objects property
         }
     }
     
-    //
+    func searchSongTask(segment: Int?=nil, targetText: String?=nil){
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        
+        let sortByName = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+        
+        if targetText != nil {
+            fetchRequest.sortDescriptors = [sortByName]
+            let predicateName = NSPredicate(format: "name contains[c] %@", targetText!)
+            
+            fetchRequest.predicate = predicateName
+
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            controller.delegate = self
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+        }
+    }
+    
     func assignMemberToSong() {
         // how do I call this function
         // assgin task.assignment = member.name
         // how do I loop through to find that relationship later when I need to change it
+        
     }
     
     // Change status of selected bool
