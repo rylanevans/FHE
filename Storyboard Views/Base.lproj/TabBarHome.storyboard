@@ -123,7 +123,7 @@
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7Q-3S-wPi">
                                                                     <rect key="frame" x="0.0" y="16.5" width="64" height="31"/>
-                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                     <color key="onTintColor" name="Tint"/>
                                                                     <connections>
                                                                         <action selector="attendingSwitchPressed:" destination="jw9-WN-kNq" eventType="valueChanged" id="1XA-nJ-zTN"/>
@@ -809,7 +809,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FpX-2P-h4B" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="9.5" y="554" width="356.5" height="56"/>
-                                <color key="backgroundColor" red="0.98039215686274506" green="0.69019607843137254" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="Tint"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <state key="normal" title="BEGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1948,14 +1948,14 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6Q-0s-Gz3">
                                                             <rect key="frame" x="390" y="494" width="110" height="30"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="Tint"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="110" id="MxG-3Z-uxR"/>
                                                                 <constraint firstAttribute="height" constant="30" id="pa7-pi-Vkm"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="ABOUT ME">
-                                                                <color key="titleColor" name="Tint"/>
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2052,14 +2052,14 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOQ-09-gQn">
                                                             <rect key="frame" x="167" y="303" width="150" height="30"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="Tint"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="CqN-MP-hJY"/>
                                                                 <constraint firstAttribute="width" constant="150" id="KCv-fT-PA6"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="VISIT WEBSITE">
-                                                                <color key="titleColor" name="Tint"/>
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2145,14 +2145,14 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-N1-Bq8">
                                                             <rect key="frame" x="207" y="302.5" width="110" height="30"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" name="Tint"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="1aL-1j-6l5"/>
                                                                 <constraint firstAttribute="width" constant="110" id="VxR-g8-tdv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="DOWNLOAD">
-                                                                <color key="titleColor" name="Tint"/>
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2235,15 +2235,15 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQ1-Vq-XoY">
-                                                            <rect key="frame" x="232" y="307.5" width="90" height="30"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <rect key="frame" x="227" y="302.5" width="90" height="30"/>
+                                                            <color key="backgroundColor" name="Tint"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="4mT-KJ-goN"/>
                                                                 <constraint firstAttribute="width" constant="90" id="LS1-Qu-Fpt"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="SHARE">
-                                                                <color key="titleColor" name="Tint"/>
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2270,7 +2270,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="leading" secondItem="3vm-0h-JiV" secondAttribute="leading" id="9hH-pg-Jvy"/>
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="top" secondItem="3vm-0h-JiV" secondAttribute="top" id="AZW-NN-jsi"/>
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="trailing" secondItem="3vm-0h-JiV" secondAttribute="trailing" id="CKK-2n-bye"/>
-                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="trailing" secondItem="ulJ-2x-CkM" secondAttribute="trailing" constant="-5" id="Pwq-MI-nZO"/>
+                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="trailing" secondItem="ulJ-2x-CkM" secondAttribute="trailing" constant="-10" id="Pwq-MI-nZO"/>
                                                         <constraint firstItem="6Xs-r5-T9r" firstAttribute="leading" secondItem="5Ii-fZ-IVe" secondAttribute="leading" constant="25" id="SdI-S0-djP"/>
                                                         <constraint firstItem="ulJ-2x-CkM" firstAttribute="bottom" secondItem="3vm-0h-JiV" secondAttribute="bottom" id="Ug7-BC-qMT"/>
                                                         <constraint firstItem="3vm-0h-JiV" firstAttribute="top" secondItem="5Ii-fZ-IVe" secondAttribute="top" id="Z5o-2n-G91"/>
@@ -2278,7 +2278,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                         <constraint firstItem="6Xs-r5-T9r" firstAttribute="top" secondItem="5Ii-fZ-IVe" secondAttribute="top" constant="8" id="bSq-Zt-aAE"/>
                                                         <constraint firstAttribute="trailing" secondItem="3vm-0h-JiV" secondAttribute="trailing" id="mUQ-O0-RdW"/>
                                                         <constraint firstAttribute="bottom" secondItem="3vm-0h-JiV" secondAttribute="bottom" id="qyS-gC-g6r"/>
-                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="bottom" secondItem="ulJ-2x-CkM" secondAttribute="bottom" constant="-5" id="sYh-zG-f8s"/>
+                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="bottom" secondItem="ulJ-2x-CkM" secondAttribute="bottom" constant="-10" id="sYh-zG-f8s"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -2620,7 +2620,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                                 </label>
                                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ea4-se-KvU">
                                                                     <rect key="frame" x="0.0" y="16.5" width="53.5" height="31"/>
-                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                                     <color key="onTintColor" name="Tint"/>
                                                                     <connections>
                                                                         <action selector="enabledSwitchPressed:" destination="ddg-7b-NCX" eventType="valueChanged" id="5SV-fc-YGY"/>
@@ -3057,40 +3057,19 @@ I spent a lot of time and effort building something I thought would be both help
             <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Accent">
-            <color red="0.20600000020000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20600000020000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20600000023841858" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.20800000429153442" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Background">
-            <color red="0.85900002717971802" green="0.91699999570846558" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Background">
-            <color red="0.85900002717971802" green="0.91699999570846558" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85900002717971802" green="0.9179999828338623" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98900002241134644" green="0.74000000953674316" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

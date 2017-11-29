@@ -22,6 +22,7 @@ class FamilyCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        attendingSwitch.borderColor = #colorLiteral(red: 1, green: 0.3512835503, blue: 0.1226655617, alpha: 1)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

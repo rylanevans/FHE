@@ -21,7 +21,7 @@ class ScriptureVC: UIViewController {
         super.viewDidLoad()
         clickSoundURL()
         
-        let url = URL(string: "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng")
+        let url = URL(string: "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5")
         let request = URLRequest(url: url!)
         
         scriptureWebKit.load(request)
