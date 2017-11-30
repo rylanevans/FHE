@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol SongCellDelegate {
     func songSelectedNeedsChanged(_ sender: SongCell)
@@ -25,16 +26,36 @@ class SongCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        clickSoundURL()
         // Initialization code
+    }
+    
+    static var clickSound: AVAudioPlayer!
+    
+    func clickSoundURL() {
+        let click = Bundle.main.path(forResource: "Click", ofType: "wav")
+        let clickURL = URL(fileURLWithPath: click!)
+        do {
+            try UIViewController.clickSound = AVAudioPlayer(contentsOf: clickURL)
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func playClick() {
+        if UIViewController.clickSound.isPlaying {
+            UIViewController.clickSound.stop()
+        }
+        UIViewController.clickSound.play()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
     
     @IBAction func selectedButtonPressed(_ sender: Any) {
+        playClick()
         delegate?.songSelectedNeedsChanged(self)
     }
     

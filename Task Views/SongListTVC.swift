@@ -32,6 +32,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         memberPicker.delegate = self
         memberPicker.dataSource = self
+        searchController.delegate = self
+        
         memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
         let toolBar = UIToolbar()
@@ -45,18 +47,19 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         songAssigneeText.inputAccessoryView = toolBar
         searchController.inputAccessoryView = toolBar
         
-
         let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
-        
         attemptFetch()
-        searchController.delegate = self
-//        searchController.returnKeyType = UIReturnKeyType.search
         tableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let resetText = searchController
+        resetText?.text = nil
+        
         attemptFetch()
         tableView.reloadData()
     }
@@ -113,6 +116,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 title = "CHILDREN'S SONG BOOK:"
             } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
+            } else if sectionTitle![section].name == "Other" {
+                title = "OTHER:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -122,6 +127,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 title = "CHILDREN'S SONG BOOK:"
             } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
+            } else if sectionTitle![section].name == "Other" {
+                title = "OTHER:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -246,18 +253,21 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // What happens when song is selected
     func songSelectedNeedsChanged(_ sender: SongCell) {
-        if let objects = songController.fetchedObjects, objects.count > 0 {
+        let objects = songController.fetchedObjects
+        if let objects = objects, objects.count > 0 {
             let indexPath = tableView.indexPath(for: sender)
             let sections = songController.sections![(indexPath?.section)!]
             let song = sections.objects![(indexPath?.row)!]
-            for song in objects {
-                song.selected = false
+            for eachSong in objects {
+                eachSong.selected = false
+                ad.saveContext()
             }
-            ad.saveContext()
             
             selectedValueToggle(song as! Song)
+            
         }
     }
+    
     
     func searchSongTask(segment: Int?=nil, targetText: String?=nil){
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -291,7 +301,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // Change status of selected bool
     func selectedValueToggle(_ Song: Song) {
-        Song.selected = !Song.selected
+        Song.selected = true
         ad.saveContext()
         tableView.reloadData()
     }
@@ -454,8 +464,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             break
         case.update:
             if let indexPath = indexPath {
-                let cell = tableView.cellForRow(at: indexPath) as! SongCell
-                configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+                if let cell = tableView.cellForRow(at: indexPath) as? SongCell {
+                    configureCell(cell: cell, indexPath: indexPath as NSIndexPath)
+                }
             }
             break
         case.move:

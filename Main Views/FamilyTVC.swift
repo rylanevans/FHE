@@ -159,27 +159,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         let sortByAttending = NSSortDescriptor(key: "attending", ascending: false)
         let sortByAge = NSSortDescriptor(key: "age", ascending: true)
         
-        /*
-        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
-        let sortByName = NSSortDescriptor(key: "name", ascending: true)
-        let sortByRandom = NSSortDescriptor(key: "random", ascending: true)
-        let sortByOrder = NSSortDescriptor(key: "order", ascending: true)
-
-        if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByDate]
-        } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByAge]
-        } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByName]
-        } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByRandom]
-        } else if segment.selectedSegmentIndex == 4 {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByOrder]
-        } else {
-            fetchRequest.sortDescriptors = [sortByAttending, sortByOrder]
-        }
-        */
-        
         fetchRequest.sortDescriptors = [sortByAttending, sortByAge]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "attending", cacheName: nil)

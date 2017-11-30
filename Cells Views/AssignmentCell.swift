@@ -109,6 +109,7 @@ class AssignmentCell: UITableViewCell { //, UIPickerViewDelegate, UIPickerViewDa
         taskTitleLabel.text = songSelected
         memberNameLabel.text = name
         memberImage.image = photo as? UIImage
+        
     }
     
     func assignmentMember(member: Member) {

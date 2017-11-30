@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol TaskCellDelegate {
     func enabledNeedsChanged(_ sender: TaskCell)
@@ -24,6 +25,25 @@ class TaskCell: UITableViewCell {
         // Initialization code
     }
     
+    static var clickSound: AVAudioPlayer!
+    
+    func clickSoundURL() {
+        let click = Bundle.main.path(forResource: "Click", ofType: "wav")
+        let clickURL = URL(fileURLWithPath: click!)
+        do {
+            try UIViewController.clickSound = AVAudioPlayer(contentsOf: clickURL)
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func playClick() {
+        if UIViewController.clickSound.isPlaying {
+            UIViewController.clickSound.stop()
+        }
+        UIViewController.clickSound.play()
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
@@ -31,6 +51,7 @@ class TaskCell: UITableViewCell {
     }
     
     @IBAction func enabledSwitchPressed(_ sender: Any) {
+        playClick()
         delegate?.enabledNeedsChanged(self)
     }
     

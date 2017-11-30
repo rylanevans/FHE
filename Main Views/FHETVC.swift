@@ -49,7 +49,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
 //            let sectionInfo = sections[section]
 //            return sectionInfo.numberOfObjects
 //        }
-        return 8
+        return 14
     }
     
     // Height for each row
@@ -105,7 +105,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         let sortByEnabled = NSSortDescriptor(key: "enabled", ascending: false)
         let sortByNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
 
-        taskfetchRequest.sortDescriptors = [sortByEnabled, sortByNumber]
+//        taskfetchRequest.sortDescriptors = [sortByEnabled, sortByNumber]
+        taskfetchRequest.sortDescriptors = [sortByNumber]
 
         let controller = NSFetchedResultsController(fetchRequest: taskfetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self
@@ -144,11 +145,13 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             break
         case .update:
             if let indexPath = indexPath {
-                let cellDetail = assignmentTableView.cellForRow(at: indexPath) as! AssignmentCell
-                configureAssignmentCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                if let cellDetail = assignmentTableView.cellForRow(at: indexPath) as? AssignmentCell {
+                    configureAssignmentCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                }
 
-                let cellTitle = assignmentTableView.cellForRow(at: indexPath) as! AssignmentCell
-                configureAssignmentCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                if let cellTitle = assignmentTableView.cellForRow(at: indexPath) as? AssignmentCell {
+                    configureAssignmentCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                }
             }
             break
         case .move:

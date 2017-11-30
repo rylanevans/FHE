@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol FamilyCellDelegate {
     func attendingNeedsChanged(_ sender: FamilyCell)
@@ -25,6 +26,25 @@ class FamilyCell: UITableViewCell {
         attendingSwitch.borderColor = #colorLiteral(red: 1, green: 0.3512835503, blue: 0.1226655617, alpha: 1)
     }
     
+    static var clickSound: AVAudioPlayer!
+    
+    func clickSoundURL() {
+        let click = Bundle.main.path(forResource: "Click", ofType: "wav")
+        let clickURL = URL(fileURLWithPath: click!)
+        do {
+            try UIViewController.clickSound = AVAudioPlayer(contentsOf: clickURL)
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func playClick() {
+        if UIViewController.clickSound.isPlaying {
+            UIViewController.clickSound.stop()
+        }
+        UIViewController.clickSound.play()
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
@@ -32,6 +52,7 @@ class FamilyCell: UITableViewCell {
     }
     
     @IBAction func attendingSwitchPressed(_ sender: Any) {
+        playClick()
         delegate?.attendingNeedsChanged(self)
     }
     
