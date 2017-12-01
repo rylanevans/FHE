@@ -147,7 +147,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         }
     }
     
-    @IBAction func songOnDeckPressed(_ sender: Any) {
+    @IBAction func songSelectedPressed(_ sender: Any) {
         if songOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             songOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
         } else {
@@ -164,7 +164,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        
         playClick()
         
         var song: Song!
@@ -187,7 +186,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             song.title = title
         }
         
-        if songNumberTextField.text != nil {
+        if songNumberTextField.text != "" {
             let number = Int64(songNumberTextField.text!)
             song.number = number!
         } else {
@@ -200,7 +199,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         }
         
         if songOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
-            removePreviouslySelected()
+            unselectEverything()
             song.selected = true
         } else {
             song.selected = false
@@ -215,6 +214,23 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    func unselectEverything() {
+        let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
+        var songArray = [Song]()
+
+        do {
+            songArray = try context.fetch(fetchRequest)
+        } catch {
+            let error = error as NSError
+            print("\(error)")
+        }
+        
+        for eachSong in songArray {
+            eachSong.selected = false
+            ad.saveContext()
+        }
     }
     
     func loadSongData() {
@@ -239,13 +255,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             
             textFieldDidEndEditing(songTitleTextField)
         }
-    }
-    
-    func removePreviouslySelected() {
-        // 1) loop through all song entities and 2) make attribute "selected" = false
-        // for eachIndex in Songs {
-        //      eachIndex.selected = false
-        //}
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {

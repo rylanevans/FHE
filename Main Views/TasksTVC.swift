@@ -192,7 +192,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             break
         case .delete:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             break
         case .update:

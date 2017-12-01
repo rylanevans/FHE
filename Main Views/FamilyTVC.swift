@@ -188,29 +188,31 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             
         case .insert:
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         case .delete:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             break
         case .update:
             if let indexPath = indexPath {
-                let cellDetail = tableView.cellForRow(at: indexPath) as! FamilyCell
-                configureFamilyCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                if let cellDetail = tableView.cellForRow(at: indexPath) as? FamilyCell {
+                    configureFamilyCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                }
                 
-                let cellTitle = tableView.cellForRow(at: indexPath) as! FamilyCell
-                configureFamilyCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                if let cellTitle = tableView.cellForRow(at: indexPath) as? FamilyCell {
+                    configureFamilyCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                }
             }
             break
         case .move:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         }
@@ -220,9 +222,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
         switch type {
         case .delete:
-            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
+            tableView.deleteSections(IndexSet(integer: sectionIndex), with: .automatic)
         case .insert:
-            tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+            tableView.insertSections(IndexSet(integer: sectionIndex), with: .automatic)
         default:
             break
         }

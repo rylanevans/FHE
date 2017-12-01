@@ -18,7 +18,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var searchController: UISearchBar!
     
     let memberPicker = UIPickerView()
-    var memberArray = ["No One", "Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
+    var memberArray = [Member]()
+    var songTask = [Task]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
+        getTaskSong()
+        getMembers()
+        loadSongAssignmentImage()
         attemptFetch()
         tableView.reloadData()
     }
@@ -60,6 +64,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let resetText = searchController
         resetText?.text = nil
         
+        getTaskSong()
+        getMembers()
+        loadSongAssignmentImage()
         attemptFetch()
         tableView.reloadData()
     }
@@ -68,7 +75,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let assignee = memberArray[row]
-        return assignee
+        return assignee.name
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -80,12 +87,24 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        songAssigneeLabel.text = memberArray[row]
-        if memberArray[row] == "No One" {
-            songAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+        let assignee = memberArray[row]
+        let song = songTask[0]
+        songAssigneeMemberImage.image = assignee.photo as? UIImage
+        songAssigneeLabel.text = assignee.name
+        song.assignment = assignee
+        song.assigned = true
+        ad.saveContext()
+    }
+    
+    func loadSongAssignmentImage() {
+        let song = songTask[0]
+        let assignee = song.assignment
+        if song.assigned == true {
+            songAssigneeMemberImage.image = assignee?.photo as? UIImage
+            songAssigneeLabel.text = assignee?.name
         } else {
-            songAssigneeMemberImage.image = UIImage(named: "\(memberArray[row])")
-            // save to member relationship to Song task to core data
+            songAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+            songAssigneeLabel.text = "Auto-Assigned"
         }
     }
     
@@ -258,16 +277,12 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             let indexPath = tableView.indexPath(for: sender)
             let sections = songController.sections![(indexPath?.section)!]
             let song = sections.objects![(indexPath?.row)!]
-            for eachSong in objects {
-                eachSong.selected = false
-                ad.saveContext()
-            }
             
+            unselectEverything()
             selectedValueToggle(song as! Song)
             
         }
     }
-    
     
     func searchSongTask(segment: Int?=nil, targetText: String?=nil){
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -292,11 +307,14 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    func assignMemberToSong() {
-        // how do I call this function
-        // assgin task.assignment = member.name
-        // how do I loop through to find that relationship later when I need to change it
-        
+    func unselectEverything() {
+        let songs = songController.fetchedObjects
+        if songs?.count != nil {
+            for eachSong in songs! {
+                eachSong.selected = false
+                ad.saveContext()
+            }
+        }
     }
     
     // Change status of selected bool
@@ -325,7 +343,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         print(searchText)
     }
     
-    //Fetch filtered song results
+    // MARK: - Boiler Code for Core Data
+    
+    var songController: NSFetchedResultsController<Song>!
+    
+    // Fetch filtered song results
     func searchForSongs(segment: Int?=nil, targetText: String?=nil){
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
@@ -354,10 +376,38 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    // MARK: - Boiler Code for Core Data
+    // Fetch members and put into an array
+    func getMembers() {
+        let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
+        let predicate = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
+        fetchRequest.predicate = predicate
+        let sortByAge = NSSortDescriptor(key: "age", ascending: true)
+        fetchRequest.sortDescriptors = [sortByAge]
+        
+        do {
+            self.memberArray = try context.fetch(fetchRequest)
+            self.memberPicker.reloadAllComponents()
+        } catch {
+            let error = error as NSError
+            print("\(error)")
+        }
+    }
     
-    var songController: NSFetchedResultsController<Song>!
+    // Fetch task song to assign if needed
+    func getTaskSong() {
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "name == %@", "Song")
+        fetchRequest.predicate = predicate
+        
+        do {
+            self.songTask = try context.fetch(fetchRequest)
+        } catch {
+            let error = error as NSError
+            print("\(error)")
+        }
+    }
     
+    // Fetch all data for table view
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         
@@ -454,12 +504,12 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             
         case.insert:
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         case.delete:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             break
         case.update:
@@ -471,10 +521,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             break
         case.move:
             if let indexPath = indexPath {
-                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             if let indexPath = newIndexPath {
-                tableView.insertRows(at: [indexPath], with: .fade)
+                tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         }

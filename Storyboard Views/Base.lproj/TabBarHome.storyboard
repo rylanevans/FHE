@@ -127,6 +127,7 @@
                                                                     <color key="onTintColor" name="Tint"/>
                                                                     <connections>
                                                                         <action selector="attendingSwitchPressed:" destination="jw9-WN-kNq" eventType="valueChanged" id="1XA-nJ-zTN"/>
+                                                                        <action selector="memberSwitchPressed:" destination="IVm-bw-Lhv" eventType="valueChanged" id="rkF-mv-AkC"/>
                                                                     </connections>
                                                                 </switch>
                                                             </subviews>
@@ -212,6 +213,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUk-z5-EQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="IVm-bw-Lhv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="788" y="1170.7646176911546"/>
         </scene>
@@ -318,6 +320,9 @@
                                                     <constraint firstAttribute="width" constant="49" id="199-fd-Q7d"/>
                                                 </constraints>
                                                 <color key="onTintColor" name="Tint"/>
+                                                <connections>
+                                                    <action selector="attendingSwitchPressed:" destination="z09-W1-aaa" eventType="valueChanged" id="e5E-tX-jF8"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -746,8 +751,9 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-X9-5hA">
-                                                                    <rect key="frame" x="309" y="5.5" width="50" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <textInputTraits key="textInputTraits"/>
@@ -765,14 +771,14 @@
                                                                 </textField>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="lo6-X9-5hA" secondAttribute="bottom" id="29Z-mm-oBd"/>
+                                                                <constraint firstAttribute="trailing" secondItem="lo6-X9-5hA" secondAttribute="trailing" id="Chw-0M-JdA"/>
                                                                 <constraint firstItem="f9a-dc-3qQ" firstAttribute="leading" secondItem="JEp-di-pef" secondAttribute="leading" constant="16" id="F9W-s6-LFZ"/>
                                                                 <constraint firstItem="f9a-dc-3qQ" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="K9m-3k-Zgw"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="width" secondItem="ypC-5u-PsV" secondAttribute="width" id="Kea-23-9yS"/>
                                                                 <constraint firstAttribute="bottom" secondItem="f9a-dc-3qQ" secondAttribute="bottom" id="Wjv-mr-kft"/>
                                                                 <constraint firstAttribute="trailing" secondItem="f9a-dc-3qQ" secondAttribute="trailing" constant="16" id="aOe-Bm-O1s"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="centerX" secondItem="ypC-5u-PsV" secondAttribute="centerX" id="egp-Ci-ItO"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="height" secondItem="ypC-5u-PsV" secondAttribute="height" id="mmb-f3-E4K"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="centerY" secondItem="ypC-5u-PsV" secondAttribute="centerY" id="p1y-8j-Y7s"/>
+                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="leading" secondItem="JEp-di-pef" secondAttribute="leading" id="fxB-VL-FiY"/>
+                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="jgD-Ev-6p4"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>

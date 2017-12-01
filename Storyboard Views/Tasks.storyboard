@@ -87,16 +87,13 @@ Family Member To Songs</string>
                                                                     <rect key="frame" x="250" y="0.0" width="100" height="90"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eO-zk-WhR">
-                                                                            <rect key="frame" x="48" y="0.0" width="4.5" height="10"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="10" id="KPb-ar-NjJ"/>
-                                                                            </constraints>
+                                                                            <rect key="frame" x="48" y="0.0" width="4.5" height="7"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-2M-dV2">
-                                                                            <rect key="frame" x="20" y="10" width="60" height="60"/>
+                                                                            <rect key="frame" x="20" y="7" width="60" height="60"/>
                                                                             <gestureRecognizers/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="60" id="3w1-22-geK"/>
@@ -114,17 +111,24 @@ Family Member To Songs</string>
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="No One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
-                                                                            <rect key="frame" x="26.5" y="70" width="47" height="20"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Auto-Assign" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZT-KK-dO3">
+                                                                            <rect key="frame" x="9.5" y="67" width="81.5" height="16.5"/>
                                                                             <color key="tintColor" name="Accent"/>
                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                             <color key="textColor" name="Accent"/>
                                                                             <nil key="highlightedColor"/>
                                                                             <size key="shadowOffset" width="1" height="1"/>
                                                                         </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dy1-WX-8x2">
+                                                                            <rect key="frame" x="48" y="83.5" width="4.5" height="6.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="100" id="1el-cC-apF"/>
+                                                                        <constraint firstItem="dy1-WX-8x2" firstAttribute="height" secondItem="1eO-zk-WhR" secondAttribute="height" id="DrH-Si-h30"/>
                                                                     </constraints>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTj-GV-sIr">
@@ -288,17 +292,6 @@ Family Member To Songs</string>
                                     <color key="textColor" name="Accent"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                            <size key="value" width="1" height="1"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -476,10 +469,16 @@ Family Member To Songs</string>
                                                         <constraint firstItem="f20-LA-Oig" firstAttribute="height" secondItem="8Qu-KI-etB" secondAttribute="height" multiplier="0.4" id="RjH-Nc-rvC"/>
                                                     </constraints>
                                                 </stackView>
-                                                <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-aV-GQl">
-                                                    <rect key="frame" x="10" y="5" width="40" height="40.5"/>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRT-aV-GQl" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="6" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="VRJ-HG-YmF"/>
+                                                        <constraint firstAttribute="height" constant="40" id="yzU-sR-qLU"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="Tint"/>
+                                                    <state key="normal" image="NotSelected"/>
                                                     <connections>
-                                                        <action selector="selectedButtonPressed:" destination="nQ5-Q3-NYt" eventType="touchUpInside" id="ebJ-q9-43L"/>
+                                                        <action selector="selectedButtonPressed:" destination="nQ5-Q3-NYt" eventType="touchUpInside" id="PZ5-zG-2Bv"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -490,7 +489,6 @@ Family Member To Songs</string>
                                                 <constraint firstItem="d3h-dk-Fqu" firstAttribute="top" secondItem="ehY-h6-wex" secondAttribute="top" constant="5" id="AUu-mK-1LV"/>
                                                 <constraint firstItem="GRT-aV-GQl" firstAttribute="centerX" secondItem="ZCv-oA-AJk" secondAttribute="centerX" id="NF8-wq-GOt"/>
                                                 <constraint firstItem="ZCv-oA-AJk" firstAttribute="leading" secondItem="ehY-h6-wex" secondAttribute="leading" constant="10" id="OxR-rG-GpY"/>
-                                                <constraint firstItem="GRT-aV-GQl" firstAttribute="height" secondItem="ZCv-oA-AJk" secondAttribute="height" id="SHu-hv-6oc"/>
                                                 <constraint firstItem="uh9-qd-hDy" firstAttribute="bottom" secondItem="d3h-dk-Fqu" secondAttribute="bottom" constant="-6" id="V0N-pa-4dm"/>
                                                 <constraint firstItem="ZCv-oA-AJk" firstAttribute="top" secondItem="ehY-h6-wex" secondAttribute="top" constant="5" id="Xjc-pc-OkB"/>
                                                 <constraint firstAttribute="bottom" secondItem="d3h-dk-Fqu" secondAttribute="bottom" constant="5" id="cNT-Au-LGK"/>
@@ -498,7 +496,6 @@ Family Member To Songs</string>
                                                 <constraint firstItem="uh9-qd-hDy" firstAttribute="trailing" secondItem="XyE-20-Pc1" secondAttribute="leading" constant="-5" id="k3t-Rv-9bp"/>
                                                 <constraint firstAttribute="trailing" secondItem="d3h-dk-Fqu" secondAttribute="trailing" constant="5" id="nne-lv-wfm"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZCv-oA-AJk" secondAttribute="bottom" constant="5" id="pe5-as-F5S"/>
-                                                <constraint firstItem="GRT-aV-GQl" firstAttribute="width" secondItem="ZCv-oA-AJk" secondAttribute="width" id="qFz-bg-Ftc"/>
                                                 <constraint firstItem="GRT-aV-GQl" firstAttribute="centerY" secondItem="ZCv-oA-AJk" secondAttribute="centerY" id="xbr-dg-ulc"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
@@ -537,7 +534,6 @@ Family Member To Songs</string>
                                     <outlet property="favoriteImage" destination="qMD-sD-lP4" id="97M-ex-p07"/>
                                     <outlet property="numberLabel" destination="xUW-6g-xtE" id="mNg-SD-JH7"/>
                                     <outlet property="onDeckImage" destination="ZCv-oA-AJk" id="81d-UX-lgD"/>
-                                    <outlet property="selectedButton" destination="GRT-aV-GQl" id="Thd-bF-Gbn"/>
                                     <outlet property="titleLabel" destination="gSI-Cq-29i" id="q4A-cz-IQr"/>
                                     <outlet property="topicLabel" destination="uh9-qd-hDy" id="Az7-uB-C7d"/>
                                 </connections>
@@ -790,19 +786,19 @@ Family Member To Songs</string>
                                             <constraint firstItem="zW1-xK-p7C" firstAttribute="width" secondItem="cN2-CM-O4s" secondAttribute="width" id="jEd-tI-e08"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-1A-B7U" userLabel="Change Selected">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6q-1A-B7U" userLabel="Change Selected">
                                         <rect key="frame" x="17" y="308.5" width="40" height="40"/>
-                                        <color key="tintColor" name="Accent"/>
+                                        <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
                                         </state>
                                         <connections>
-                                            <action selector="songOnDeckPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="Oza-au-X5l"/>
+                                            <action selector="songSelectedPressed:" destination="6h5-I3-Zmd" eventType="touchUpInside" id="Oza-au-X5l"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-d5-Kmg">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-d5-Kmg">
                                         <rect key="frame" x="17.5" y="260.5" width="40" height="40"/>
-                                        <color key="tintColor" name="Accent"/>
+                                        <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
                                         </state>
@@ -1413,6 +1409,9 @@ Family Member To Songs</string>
         </namedColor>
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -135,12 +135,12 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
 
         case .insert:
             if let indexPath = newIndexPath {
-                assignmentTableView.insertRows(at: [indexPath], with: .fade)
+                assignmentTableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         case .delete:
             if let indexPath = indexPath {
-                assignmentTableView.deleteRows(at: [indexPath], with: .fade)
+                assignmentTableView.deleteRows(at: [indexPath], with: .automatic)
             }
             break
         case .update:
@@ -156,10 +156,10 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             break
         case .move:
             if let indexPath = indexPath {
-                assignmentTableView.deleteRows(at: [indexPath], with: .fade)
+                assignmentTableView.deleteRows(at: [indexPath], with: .automatic)
             }
             if let indexPath = newIndexPath {
-                assignmentTableView.insertRows(at: [indexPath], with: .fade)
+                assignmentTableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
         }

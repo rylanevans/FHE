@@ -19,7 +19,6 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
-    @IBOutlet weak var selectedButton: UIButton!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: SongCellDelegate?

@@ -12,7 +12,7 @@ protocol AssignmentCellDelegate {
     func assignmentNeedsChanged(_ sender: AssignmentCell)
 }
 
-class AssignmentCell: UITableViewCell { //, UIPickerViewDelegate, UIPickerViewDataSource {
+class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var taskImage: UIImageView!
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var taskTitleLabel: UILabel!
@@ -23,65 +23,65 @@ class AssignmentCell: UITableViewCell { //, UIPickerViewDelegate, UIPickerViewDa
     
     var delegate: AssignmentCellDelegate?
     
-//    let memberPicker = UIPickerView()
-    
-//    var members = [Member]()
+    let memberPicker = UIPickerView()
+    var memberArray = ["Auto-Assign", "Dad", "Mom", "Lilly", "Anisten", "Reed", "Claire"]
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        
-//        memberPicker.delegate = self
-//        memberPicker.dataSource = self
-//        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-//
-//        let toolBar = UIToolbar()
-//        toolBar.barStyle = UIBarStyle.default
-//        toolBar.sizeToFit()
-//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-//        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
-//        toolBar.setItems([flexibleSpace, doneButton], animated: false)
-//
-//        memberAssigneeText.inputView = memberPicker
-//        memberAssigneeText.inputAccessoryView = toolBar
+       
+        memberPicker.delegate = self
+        memberPicker.dataSource = self
+        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+
+        memberAssigneeText.inputView = memberPicker
+        memberAssigneeText.inputAccessoryView = toolBar
+    }
+
+     // MARK: - Picker View Set up
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        let assignee = memberArray[row]
+        return assignee
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return memberArray.count
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        memberNameLabel.text = memberArray[row]
+        if memberArray[row] == "Auto-Assign" {
+            memberImage.image = #imageLiteral(resourceName: "Missing Profile")
+        } else {
+            memberImage.image = UIImage(named: "\(memberArray[row])")
+            // save to member relationship to Song task to core data
+        }
     }
     
-    // MARK: - Picker View Set up
-//
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        let assignee = members[row]
-//        return assignee
-//    }
-//
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return members.count
-//    }
-//
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        memberNameLabel.text = members[row]
-//        if members[row] == "Off" {
-//            memberImage.image = #imageLiteral(resourceName: "Missing Profile")
-//        } else {
-//            memberImage.image = UIImage(named: "\(members[row])")
-//            // save to member relationship to Song task to core data
-//        }
-//    }
+     // MARK: - Text Field Options
     
-    // MARK: - Text Field Options
+     //Hide the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
-    // Hide the keyboard
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//    
-//    @objc func donePressedOnKeyboard() {
-//        self.endEditing(true)
-//    }
+    @objc func donePressedOnKeyboard() {
+        self.endEditing(true)
+    }
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
