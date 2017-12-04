@@ -18,6 +18,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var taskTitleLabel: UILabel!
     @IBOutlet weak var memberNameLabel: UILabel!
+    @IBOutlet weak var manualOrAutoLabel: UILabel!
     @IBOutlet weak var memberImage: UIImageView!
     
     @IBOutlet weak var memberAssigneeText: UITextField!
@@ -108,15 +109,20 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     
     func configureAssignmentCell(task: Task) {
         assignmentTask(task: task)
-//        assignmentMember(member: member)
     }
     
     func assignmentTask(task: Task) {
         let taskName = task.name ?? ""
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
-        let songSelected = task.selected?.title ?? "Title of task"
+        let songSelected = task.selectedSong?.title ?? "Title of task"
         let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
         let name = task.assignment?.name ?? "Assignee"
+        let autoAssigned = task.assigned
+        if autoAssigned == false {
+            manualOrAutoLabel.text = "Auto"
+        } else {
+            manualOrAutoLabel.text = "Manual"
+        }
         taskImage.image = image as? UIImage
         taskNameLabel.text = taskName
         taskTitleLabel.text = songSelected
@@ -131,14 +137,14 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         memberImage.image = photo as? UIImage
     }
     
-    // Fetch members and put into an array
+    //     Fetch members and put into an array
     func getMembers() {
         let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
         let predicate = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
         fetchRequest.predicate = predicate
         let sortByAge = NSSortDescriptor(key: "age", ascending: true)
         fetchRequest.sortDescriptors = [sortByAge]
-        
+
         do {
             self.memberArray = try context.fetch(fetchRequest)
             self.memberPicker.reloadAllComponents()

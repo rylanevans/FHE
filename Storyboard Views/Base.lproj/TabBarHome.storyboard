@@ -697,29 +697,45 @@
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
-                                                                            <rect key="frame" x="45" y="6.5" width="149" height="48"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gho-GZ-9LU">
+                                                                            <rect key="frame" x="45" y="6.5" width="240" height="48"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task to be assigned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="149" height="32"/>
-                                                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title of the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
-                                                                                    <rect key="frame" x="0.0" y="32" width="149" height="16"/>
-                                                                                    <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="14"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task to be assigned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="164" height="32"/>
+                                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assignee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
+                                                                                            <rect key="frame" x="164" y="0.0" width="76" height="32"/>
+                                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-gk-Zgi">
+                                                                                    <rect key="frame" x="0.0" y="32" width="240" height="16"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title of the task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="102" height="16"/>
+                                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="14"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="Auto" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-dd-jDb">
+                                                                                            <rect key="frame" x="102" y="0.0" width="138" height="16"/>
+                                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="14"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assignee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
-                                                                            <rect key="frame" x="194" y="14.5" width="91" height="32"/>
-                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-KC-AHY" userLabel="Spacer">
                                                                             <rect key="frame" x="285" y="20.5" width="8" height="20.5"/>
                                                                             <constraints>
@@ -751,7 +767,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-X9-5hA">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                                                    <rect key="frame" x="187.5" y="0.0" width="187.5" height="61"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -772,16 +788,17 @@
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="lo6-X9-5hA" secondAttribute="bottom" id="29Z-mm-oBd"/>
+                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="width" secondItem="JEp-di-pef" secondAttribute="width" multiplier="0.5" id="CPh-BY-DyG"/>
                                                                 <constraint firstAttribute="trailing" secondItem="lo6-X9-5hA" secondAttribute="trailing" id="Chw-0M-JdA"/>
                                                                 <constraint firstItem="f9a-dc-3qQ" firstAttribute="leading" secondItem="JEp-di-pef" secondAttribute="leading" constant="16" id="F9W-s6-LFZ"/>
                                                                 <constraint firstItem="f9a-dc-3qQ" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="K9m-3k-Zgw"/>
                                                                 <constraint firstAttribute="bottom" secondItem="f9a-dc-3qQ" secondAttribute="bottom" id="Wjv-mr-kft"/>
                                                                 <constraint firstAttribute="trailing" secondItem="f9a-dc-3qQ" secondAttribute="trailing" constant="16" id="aOe-Bm-O1s"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="leading" secondItem="JEp-di-pef" secondAttribute="leading" id="fxB-VL-FiY"/>
                                                                 <constraint firstItem="lo6-X9-5hA" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="jgD-Ev-6p4"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
+                                                            <outlet property="manualOrAutoLabel" destination="WHS-dd-jDb" id="utK-cr-mEX"/>
                                                             <outlet property="memberAssigneeText" destination="lo6-X9-5hA" id="o5s-Vd-WQs"/>
                                                             <outlet property="memberImage" destination="ypC-5u-PsV" id="pGR-Ke-ouI"/>
                                                             <outlet property="memberNameLabel" destination="iUd-Kh-N35" id="w8z-36-vjh"/>

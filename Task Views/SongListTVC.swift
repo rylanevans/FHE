@@ -341,8 +341,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     // Change status of selected bool
-    func selectedValueToggle(_ Song: Song) {
-        Song.selected = true
+    func selectedValueToggle(_ song: Song) {
+        let task = songTask[0]
+        song.selectedOne = task
+        song.selected = true
         ad.saveContext()
         tableView.reloadData()
     }

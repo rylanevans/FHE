@@ -668,7 +668,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eoO-83-MjU" userLabel="Assignee">
                                 <rect key="frame" x="324" y="259" width="75" height="104"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Reed" translatesAutoresizingMaskIntoConstraints="NO" id="zYr-98-TuW" userLabel="Who">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="zYr-98-TuW" userLabel="Who">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="X61-S9-EHs"/>
@@ -686,7 +686,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9E-WE-xjc">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9E-WE-xjc">
                                         <rect key="frame" x="0.0" y="75" width="75" height="29"/>
                                         <color key="tintColor" name="Text"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="18"/>
@@ -4857,6 +4857,7 @@
         <image name="Mac" width="152" height="167"/>
         <image name="Megan" width="169" height="191"/>
         <image name="Misc" width="70" height="69"/>
+        <image name="Missing Profile" width="770" height="770"/>
         <image name="Mom" width="4546" height="3137"/>
         <image name="MusicalNotes" width="450" height="156"/>
         <image name="OPrayerBG" width="1600" height="1066"/>
