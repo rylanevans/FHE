@@ -158,7 +158,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
         let sortByAttending = NSSortDescriptor(key: "attending", ascending: false)
         let sortByAge = NSSortDescriptor(key: "age", ascending: true)
+        let filterOutAutoAssign = NSPredicate(format: "name != %@", "Auto-Assign")
         
+        fetchRequest.predicate = filterOutAutoAssign
         fetchRequest.sortDescriptors = [sortByAttending, sortByAge]
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "attending", cacheName: nil)

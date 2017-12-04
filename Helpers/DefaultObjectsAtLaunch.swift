@@ -38,6 +38,14 @@ func beginTickCounter(){
 
 
 func generateFamilyMembers() {
+    let memberAuto = Member(context: context)
+    memberAuto.name = "Auto-Assign"
+    memberAuto.age = 0
+    memberAuto.attending = true
+    memberAuto.order = 0
+    memberAuto.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
+    memberAuto.random = Int64(arc4random_uniform(100))
+    
     let memberDad = Member(context: context)
     memberDad.name = "Dad"
     memberDad.age = 38

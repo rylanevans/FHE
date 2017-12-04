@@ -20,6 +20,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     let memberPicker = UIPickerView()
     var memberArray = [Member]()
     var songTask = [Task]()
+    var songArray = [Song]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         getTaskSong()
+        getAllSongs()
         getMembers()
         loadSongAssignmentImage()
         attemptFetch()
@@ -137,6 +139,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 title = "HYMN BOOK:"
             } else if sectionTitle![section].name == "Other" {
                 title = "OTHER:"
+            } else if sectionTitle![section].name == "" {
+                title = "N/A:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -148,6 +152,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 title = "HYMN BOOK:"
             } else if sectionTitle![section].name == "Other" {
                 title = "OTHER:"
+            } else if sectionTitle![section].name == "" {
+                title = "N/A:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -172,6 +178,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             case "Proclaim the Gospel": title = "PROCLAIM THE GOSPEL:"
             case "Redeem the Dead": title = "REDEEM THE DEAD:"
             case "Care for the Poor & Needy": title = "CARE FOR THE POOR & NEEDY:"
+            case "": title = "N/A:"
             default: title = "SEARCH RESULTS:"
             }
             
@@ -307,14 +314,30 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    func unselectEverything() {
-        let songs = songController.fetchedObjects
-        if songs?.count != nil {
-            for eachSong in songs! {
-                eachSong.selected = false
-                ad.saveContext()
-            }
+    func getAllSongs() {
+        let request: NSFetchRequest<Song> = Song.fetchRequest()
+        
+        do {
+            songArray = try context.fetch(request)
+        } catch {
+            let error = error as NSError
+            print("\(error)")
         }
+    }
+    
+    func unselectEverything() {
+        for eachSong in songArray {
+            eachSong.selected = false
+            ad.saveContext()
+        }
+        
+//        let songs = songController.fetchedObjects
+//        if songs?.count != nil {
+//            for eachSong in songs! {
+//                eachSong.selected = false
+//                ad.saveContext()
+//            }
+//        }
     }
     
     // Change status of selected bool
@@ -495,6 +518,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        // Something is broke when I filter with search and try and deselect everything and then save it. There is a conflict when something changed and my filters that contain %@.
         tableView.endUpdates()
     }
     
