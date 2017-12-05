@@ -12,11 +12,12 @@ import WebKit
 import CoreData
 
 class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
-    @IBOutlet weak var songThemeLabel: UILabel!
     @IBOutlet weak var songMemberPhotoImage: UIImageView!
     @IBOutlet weak var songMemberNameLabel: UILabel!
-    @IBOutlet weak var songLocationLabel: UILabel!
-    @IBOutlet weak var songDetailLabel: UILabel!
+    @IBOutlet weak var songTitleLabel: UILabel!
+    @IBOutlet weak var songNumberLabel: UILabel!
+    
+    var songURL = ""
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     }
 
     @IBAction func singSongPressed(_ sender: Any) {
-//        playClick()
-        let URL = NSURL(string: "https://www.lds.org/music/library/childrens-songbook/i-lived-in-heaven?lang=eng")!
+        let URL = NSURL(string: "\(songURL)")!
         let songWebVC = SFSafariViewController(url: URL as URL)
         songWebVC.delegate = self
         
@@ -42,6 +42,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     func getTaskSong() {
         var songTask = [Task]()
         var assignee = Member()
+        var selected = Song()
 
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         let predicate = NSPredicate(format: "name == %@", "Song")
@@ -55,9 +56,20 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         }
 
         let song = songTask[0]
-        assignee = song.assignment!
+        
+        if song.assignment != nil {
+            assignee = song.assignment!
+        }
+        
+        if song.selectedSong != nil {
+            selected = song.selectedSong!
+        }
+
         songMemberNameLabel.text = assignee.name
         songMemberPhotoImage.image = assignee.photo as? UIImage
+        songTitleLabel.text = selected.title
+        songNumberLabel.text = "#\(selected.number)"
+        songURL = selected.url ?? "https://www.lds.org/music?lang=eng"
     }
 }
 

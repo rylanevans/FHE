@@ -507,7 +507,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I Lived In Heaven" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zHA-mF-QbM">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="zHA-mF-QbM">
                                                         <rect key="frame" x="0.0" y="15" width="384" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="p4s-Tx-PjG"/>
@@ -547,7 +547,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#4" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Euy-le-FJP">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Euy-le-FJP">
                                                                 <rect key="frame" x="20" y="0.0" width="344" height="30"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="fex-tx-YZy"/>
@@ -743,11 +743,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="0sr-IN-YrD"/>
                     <connections>
-                        <outlet property="songDetailLabel" destination="Euy-le-FJP" id="KPa-89-aHg"/>
-                        <outlet property="songLocationLabel" destination="zHA-mF-QbM" id="sqJ-kM-4mg"/>
                         <outlet property="songMemberNameLabel" destination="x9E-WE-xjc" id="7e4-lt-SIl"/>
                         <outlet property="songMemberPhotoImage" destination="zYr-98-TuW" id="EEz-8P-raK"/>
-                        <outlet property="songThemeLabel" destination="Ztd-LU-SQb" id="qR6-rB-NA9"/>
+                        <outlet property="songNumberLabel" destination="Euy-le-FJP" id="Rh8-YD-QLP"/>
+                        <outlet property="songTitleLabel" destination="zHA-mF-QbM" id="8sJ-iF-NkG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSD-DG-zxQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1097,7 +1096,6 @@
                         <viewLayoutGuide key="safeArea" id="wJP-O2-E9H"/>
                     </view>
                     <connections>
-                        <outlet property="ruleCategoryLabel" destination="8Ih-hg-Odg" id="LIW-Ld-8Pw"/>
                         <outlet property="ruleDetailLabel" destination="tJq-Pu-4xE" id="BvE-hT-uus"/>
                         <outlet property="ruleMemberNameLabel" destination="MdO-sK-TKS" id="0fo-Ml-Cwa"/>
                         <outlet property="ruleMemberPhotoImage" destination="yF2-5j-xOR" id="sCO-dN-yLC"/>

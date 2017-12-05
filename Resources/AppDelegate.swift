@@ -21,14 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         checkIfLauncedBefore()
         
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
         if launchedBefore == true {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
                 tabBar.selectedIndex = 2
             }
+            addToTickToCounter()
         } else {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
                 tabBar.selectedIndex = 1
             }
+            beginTickCounter()
         }
         
         return true
