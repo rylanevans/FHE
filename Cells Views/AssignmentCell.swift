@@ -26,8 +26,6 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     var delegate: AssignmentCellDelegate?
     
     let memberPicker = UIPickerView()
-    var memberArray = [Member]()
-    var songTask = [Task]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,14 +44,14 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         memberAssigneeText.inputView = memberPicker
         memberAssigneeText.inputAccessoryView = toolBar
         
-        getMembers()
+        getMembersPlusAutoAssigned()
         getTaskSong()
     }
 
      // MARK: - Picker View Set up
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let assignee = memberArray[row]
+        let assignee = membersPickerArray[row]
         return assignee.name
     }
 
@@ -62,26 +60,18 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return memberArray.count
+        return membersPickerArray.count
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        let assignee = memberArray[row]
-        let song = songTask[0]
+        let assignee = membersPickerArray[row]
+        let song = taskSong[0]
         memberImage.image = assignee.photo as? UIImage
         memberNameLabel.text = assignee.name
         song.assignment = assignee
         song.assigned = true
         ad.saveContext()
-        
-//        memberNameLabel.text = memberArray[row]
-//        if memberArray[row] == "Auto-Assign" {
-//            memberImage.image = #imageLiteral(resourceName: "Missing Profile")
-//        } else {
-//            memberImage.image = UIImage(named: "\(memberArray[row])")
-//            // save to member relationship to Song task to core data
-//        }
     }
     
      // MARK: - Text Field Options
@@ -135,37 +125,6 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         let photo = member.photo ?? #imageLiteral(resourceName: "NoPhoto")
         memberNameLabel.text = name
         memberImage.image = photo as? UIImage
-    }
-    
-    //     Fetch members and put into an array
-    func getMembers() {
-        let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
-        let predicate = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
-        fetchRequest.predicate = predicate
-        let sortByAge = NSSortDescriptor(key: "age", ascending: true)
-        fetchRequest.sortDescriptors = [sortByAge]
-
-        do {
-            self.memberArray = try context.fetch(fetchRequest)
-            self.memberPicker.reloadAllComponents()
-        } catch {
-            let error = error as NSError
-            print("\(error)")
-        }
-    }
-    
-    // Fetch task song to assign if needed
-    func getTaskSong() {
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate = NSPredicate(format: "name == %@", "Song")
-        fetchRequest.predicate = predicate
-        
-        do {
-            self.songTask = try context.fetch(fetchRequest)
-        } catch {
-            let error = error as NSError
-            print("\(error)")
-        }
     }
 }
 

@@ -26,12 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
                 tabBar.selectedIndex = 2
             }
-            addToTickToCounter()
         } else {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
                 tabBar.selectedIndex = 1
             }
-            beginTickCounter()
         }
         
         return true

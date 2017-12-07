@@ -14,14 +14,16 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBOutlet weak var christTeachingImage: UIImageView!
     @IBOutlet weak var assignmentTableView: UITableView!
     
-    var member: Member?
-    var task: Task?
-    var tasks = [Task]()
+//    var member: Member?
+//    var task: Task?
+//    var tasks = [Task]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.clickSoundURL()
+        getAttendingMembers()
+        getTasks()
         taskAttemptFetch()
         assignmentTableView.reloadData()
     }
@@ -36,9 +38,10 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     @IBAction func beginButtonPressed(_ sender: Any) {
         playClick()
-        let appReviewPresentedRandom = arc4random_uniform(3)
-        if appReviewPresentedRandom == UInt32(1) {
-//        if launchedCounter % 2 == 0 {
+        print("\(counter)")
+//        let appReviewPresentedRandom = arc4random_uniform(3)
+//        if appReviewPresentedRandom == UInt32(1) {
+        if counter.launched % 2 == 0 {
             SKStoreReviewController.requestReview()
         }
     }
@@ -49,7 +52,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
 //            let sectionInfo = sections[section]
 //            return sectionInfo.numberOfObjects
 //        }
-        return 14
+        return tasksArray.count
     }
     
     // Height for each row
@@ -100,15 +103,13 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     var taskController: NSFetchedResultsController<Task>!
     
     func taskAttemptFetch() {
-        let taskfetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+        let predicate = NSPredicate(format: "enabled == %@", NSNumber(booleanLiteral: true))
+        fetchRequest.predicate = predicate
+        let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
+        fetchRequest.sortDescriptors = [sortByDefaultNumber]
 
-        let sortByEnabled = NSSortDescriptor(key: "enabled", ascending: false)
-        let sortByNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
-
-//        taskfetchRequest.sortDescriptors = [sortByEnabled, sortByNumber]
-        taskfetchRequest.sortDescriptors = [sortByNumber]
-
-        let controller = NSFetchedResultsController(fetchRequest: taskfetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self
         self.taskController = controller
 

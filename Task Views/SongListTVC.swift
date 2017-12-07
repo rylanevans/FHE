@@ -18,9 +18,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var searchController: UISearchBar!
     
     let memberPicker = UIPickerView()
-    var memberArray = [Member]()
-    var songTask = [Task]()
-    var songArray = [Song]()
+    var songsArray = [Song]()
+    let song = taskSong[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +52,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         getTaskSong()
+        segment.selectedSegmentIndex = Int(song.segment)
         getAllSongs()
-        getMembers()
+        getMembersPlusAutoAssigned()
         loadSongAssignmentImage()
         attemptFetch()
         tableView.reloadData()
@@ -67,7 +67,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         resetText?.text = nil
         
         getTaskSong()
-        getMembers()
+        segment.selectedSegmentIndex = Int(song.segment)
+        getAllSongs()
+        getMembersPlusAutoAssigned()
         loadSongAssignmentImage()
         attemptFetch()
         tableView.reloadData()
@@ -76,7 +78,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // MARK: - Picker View Set up
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        let assignee = memberArray[row]
+        let assignee = membersPickerArray[row]
         return assignee.name
     }
     
@@ -85,28 +87,32 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return memberArray.count
+        return membersPickerArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let assignee = memberArray[row]
-        let song = songTask[0]
+        let assignee = membersPickerArray[row]
+        let song = taskSong[0]
         songAssigneeMemberImage.image = assignee.photo as? UIImage
         songAssigneeLabel.text = assignee.name
         song.assignment = assignee
-        song.assigned = true
+        if assignee.name == "Auto-Assign" {
+            song.assigned = false
+        } else {
+            song.assigned = true
+        }
         ad.saveContext()
     }
     
     func loadSongAssignmentImage() {
-        let song = songTask[0]
+        let song = taskSong[0]
         let assignee = song.assignment
         if song.assigned == true {
             songAssigneeMemberImage.image = assignee?.photo as? UIImage
             songAssigneeLabel.text = assignee?.name
         } else {
             songAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
-            songAssigneeLabel.text = "Auto-Assigned"
+            songAssigneeLabel.text = "Auto-Assign"
         }
     }
     
@@ -270,7 +276,12 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
+        let song = taskSong[0]
+        
         resetText?.text = nil
+        song.segment = Int64(segment.selectedSegmentIndex)
+        
+        ad.saveContext()
         attemptFetch()
         tableView.reloadData()
     }
@@ -291,7 +302,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    func searchSongTask(segment: Int?=nil, targetText: String?=nil){
+    func searchSong(segment: Int?=nil, targetText: String?=nil){
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         
         let sortByName = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
@@ -318,7 +329,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let request: NSFetchRequest<Song> = Song.fetchRequest()
         
         do {
-            songArray = try context.fetch(request)
+            songsArray = try context.fetch(request)
         } catch {
             let error = error as NSError
             print("\(error)")
@@ -326,23 +337,15 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func unselectEverything() {
-        for eachSong in songArray {
+        for eachSong in songsArray {
             eachSong.selected = false
             ad.saveContext()
         }
-        
-//        let songs = songController.fetchedObjects
-//        if songs?.count != nil {
-//            for eachSong in songs! {
-//                eachSong.selected = false
-//                ad.saveContext()
-//            }
-//        }
     }
     
     // Change status of selected bool
     func selectedValueToggle(_ song: Song) {
-        let task = songTask[0]
+        let task = taskSong[0]
         song.selectedOne = task
         song.selected = true
         ad.saveContext()
@@ -398,37 +401,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 let error = error as NSError
                 print("\(error)")
             }
-        }
-    }
-    
-    // Fetch members and put into an array
-    func getMembers() {
-        let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
-        let predicate = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
-        fetchRequest.predicate = predicate
-        let sortByAge = NSSortDescriptor(key: "age", ascending: true)
-        fetchRequest.sortDescriptors = [sortByAge]
-        
-        do {
-            self.memberArray = try context.fetch(fetchRequest)
-            self.memberPicker.reloadAllComponents()
-        } catch {
-            let error = error as NSError
-            print("\(error)")
-        }
-    }
-    
-    // Fetch task song to assign if needed
-    func getTaskSong() {
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate = NSPredicate(format: "name == %@", "Song")
-        fetchRequest.predicate = predicate
-        
-        do {
-            self.songTask = try context.fetch(fetchRequest)
-        } catch {
-            let error = error as NSError
-            print("\(error)")
         }
     }
     

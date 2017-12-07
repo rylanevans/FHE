@@ -10,13 +10,14 @@ import CoreData
 import UIKit
 
 extension Council {
-    convenience init(title: String, detail: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(title: String, detail: String, url: String, selected: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.url = url
         self.title = title
         self.detail = detail
+        self.selected = selected
     }
 }
 

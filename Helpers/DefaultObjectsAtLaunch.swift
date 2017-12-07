@@ -10,30 +10,27 @@ import Foundation
 import UIKit
 import CoreData
 
-var counterArray = [Counter]()
-var counter = counterArray[0]
-var memberArray = [Member]()
-var taskArray = [Task]()
-
 func checkIfLauncedBefore() {
     let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
     
     if launchedBefore == true {
         print("Not first launch.")
         addToTickToCounter()
+        getTasks()
+        getAttendingMembers()
     } else {
         print("First launch, setting UserDefault.")
         beginTickCounter()
         generateFamilyMembers()
         generateTasks()
-        generateTestSongs()
+        generateSongs()
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
 }
 
 func addToTickToCounter() {
     let fetchRequest: NSFetchRequest<Counter> = Counter.fetchRequest()
-
+    
     do {
         counterArray = try context.fetch(fetchRequest)
     } catch {
@@ -43,14 +40,23 @@ func addToTickToCounter() {
     
     if counter.launched > 0 {
         counter.launched += 1
+        ad.saveContext()
     }
 }
 
 func beginTickCounter(){
     let counter = Counter(context: context)
     counter.launched = 1
-    
     ad.saveContext()
+    
+    let fetchRequest: NSFetchRequest<Counter> = Counter.fetchRequest()
+    
+    do {
+        counterArray = try context.fetch(fetchRequest)
+    } catch {
+        let error = error as NSError
+        print("\(error)")
+    }
 }
 
 func generateFamilyMembers() {
@@ -126,22 +132,6 @@ func generateFamilyMembers() {
     memberGrammy.photo = #imageLiteral(resourceName: "Grammy") as UIImage
     memberGrammy.random = Int64(arc4random_uniform(100))
     
-    let memberMac = Member(context: context)
-    memberMac.name = "Mac"
-    memberMac.age = 60
-    memberMac.attending = false
-    memberMac.order = 7
-    memberMac.photo = #imageLiteral(resourceName: "Mac") as UIImage
-    memberMac.random = Int64(arc4random_uniform(100))
-    
-    let memberMegan = Member(context: context)
-    memberMegan.name = "Megan"
-    memberMegan.age = 55
-    memberMegan.attending = false
-    memberMegan.order = 8
-    memberMegan.photo = #imageLiteral(resourceName: "Megan") as UIImage
-    memberMegan.random = Int64(arc4random_uniform(100))
-    
     let memberGuest = Member(context: context)
     memberGuest.name = "Guest"
     memberGuest.age = 100
@@ -153,28 +143,11 @@ func generateFamilyMembers() {
     ad.saveContext()
 }
 
-func getMembers() {
-    let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
-    let predicate = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
-//    let filterOutAutoAssigned = NSPredicate(format: "name == %@", "Auto-Assigned")
-    fetchRequest.predicate = predicate
-//    fetchRequest.predicate = filterOutAutoAssigned
-    let sortByAge = NSSortDescriptor(key: "age", ascending: true)
-    fetchRequest.sortDescriptors = [sortByAge]
-    
-    do {
-        memberArray = try context.fetch(fetchRequest)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
-}
-
 func generateTasks() {
-    getMembers()
+    getAttendingMembers()
     let taskOpenPrayer = Task(context: context)
     taskOpenPrayer.assigned = false
-    let assigneetaskOpenPrayer = memberArray[1]
+    let assigneetaskOpenPrayer = membersArray[0]
     taskOpenPrayer.assignment = assigneetaskOpenPrayer
     taskOpenPrayer.defaultNumber = 1
     taskOpenPrayer.enabled = true
@@ -185,7 +158,7 @@ func generateTasks() {
     
     let taskSongs = Task(context: context)
     taskSongs.assigned = false
-    let assigneetaskSongs = memberArray[2]
+    let assigneetaskSongs = membersArray[1]
     taskSongs.assignment = assigneetaskSongs
     taskSongs.defaultNumber = 2
     taskSongs.enabled = true
@@ -196,7 +169,7 @@ func generateTasks() {
     
     let taskRule = Task(context: context)
     taskRule.assigned = false
-    let assigneetaskRule = memberArray[0]
+    let assigneetaskRule = membersArray[0]
     taskRule.assignment = assigneetaskRule
     taskRule.defaultNumber = 3
     taskRule.enabled = false
@@ -207,7 +180,7 @@ func generateTasks() {
     
     let taskScripture = Task(context: context)
     taskScripture.assigned = false
-    let assigneetaskScripture = memberArray[3]
+    let assigneetaskScripture = membersArray[2]
     taskScripture.assignment = assigneetaskScripture
     taskScripture.defaultNumber = 4
     taskScripture.enabled = true
@@ -218,7 +191,7 @@ func generateTasks() {
     
     let taskCalendar = Task(context: context)
     taskCalendar.assigned = false
-    let assigneetaskCalendar = memberArray[0]
+    let assigneetaskCalendar = membersArray[0]
     taskCalendar.assignment = assigneetaskCalendar
     taskCalendar.defaultNumber = 5
     taskCalendar.enabled = false
@@ -229,10 +202,10 @@ func generateTasks() {
     
     let taskTestimony = Task(context: context)
     taskTestimony.assigned = false
-    let assigneetaskTestimony = memberArray[4]
+    let assigneetaskTestimony = membersArray[0]
     taskTestimony.assignment = assigneetaskTestimony
     taskTestimony.defaultNumber = 6
-    taskTestimony.enabled = true
+    taskTestimony.enabled = false
     taskTestimony.name = "Testimony"
     taskTestimony.order = Int64(arc4random_uniform(100))
     taskTestimony.segment = 1
@@ -240,7 +213,7 @@ func generateTasks() {
     
     let taskSpotlight = Task(context: context)
     taskSpotlight.assigned = false
-    let assigneetaskSpotlight = memberArray[0]
+    let assigneetaskSpotlight = membersArray[0]
     taskSpotlight.assignment = assigneetaskSpotlight
     taskSpotlight.defaultNumber = 7
     taskSpotlight.enabled = false
@@ -251,7 +224,7 @@ func generateTasks() {
     
     let taskMisc = Task(context: context)
     taskMisc.assigned = false
-    let assigneetaskMisc = memberArray[0]
+    let assigneetaskMisc = membersArray[0]
     taskMisc.assignment = assigneetaskMisc
     taskMisc.defaultNumber = 8
     taskMisc.enabled = false
@@ -262,7 +235,7 @@ func generateTasks() {
     
     let taskThought = Task(context: context)
     taskThought.assigned = false
-    let assigneetaskThought = memberArray[0]
+    let assigneetaskThought = membersArray[0]
     taskThought.assignment = assigneetaskThought
     taskThought.defaultNumber = 9
     taskThought.enabled = false
@@ -273,7 +246,7 @@ func generateTasks() {
     
     let taskLesson = Task(context: context)
     taskLesson.assigned = false
-    let assigneetaskLesson = memberArray[5]
+    let assigneetaskLesson = membersArray[3]
     taskLesson.assignment = assigneetaskLesson
     taskLesson.defaultNumber = 10
     taskLesson.enabled = true
@@ -284,7 +257,7 @@ func generateTasks() {
     
     let taskCouncil = Task(context: context)
     taskCouncil.assigned = false
-    let assigneetaskCouncil = memberArray[0]
+    let assigneetaskCouncil = membersArray[0]
     taskCouncil.assignment = assigneetaskCouncil
     taskCouncil.defaultNumber = 11
     taskCouncil.enabled = false
@@ -295,7 +268,7 @@ func generateTasks() {
     
     let taskGame = Task(context: context)
     taskGame.assigned = false
-    let assigneetaskGame = memberArray[6]
+    let assigneetaskGame = membersArray[4]
     taskGame.assignment = assigneetaskGame
     taskGame.defaultNumber = 12
     taskGame.enabled = true
@@ -306,7 +279,7 @@ func generateTasks() {
     
     let taskClosePrayer = Task(context: context)
     taskClosePrayer.assigned = false
-    let assigneetaskClosePrayer = memberArray[6]
+    let assigneetaskClosePrayer = membersArray[5]
     taskClosePrayer.assignment = assigneetaskClosePrayer
     taskClosePrayer.defaultNumber = 13
     taskClosePrayer.enabled = true
@@ -317,7 +290,7 @@ func generateTasks() {
     
     let taskTreat = Task(context: context)
     taskTreat.assigned = false
-    let assigneetaskTreat = memberArray[1]
+    let assigneetaskTreat = membersArray[0]
     taskTreat.assignment = assigneetaskTreat
     taskTreat.defaultNumber = 14
     taskTreat.enabled = true
@@ -329,22 +302,18 @@ func generateTasks() {
     ad.saveContext()
 }
 
-func getTasks() {
-    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-    let predicate = NSPredicate(format: "enabled == %@", NSNumber(booleanLiteral: true))
-    fetchRequest.predicate = predicate
-    let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
-    fetchRequest.sortDescriptors = [sortByDefaultNumber]
-    
-    do {
-        taskArray = try context.fetch(fetchRequest)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
+func generatePray() {
+    getTasks()
+    let prayer = Prayer(context: context)
+    prayer.title = "Steps To Prayer"
+    prayer.detail = "1. Address Heavenly Father/n2. Share Gratitude/n3. Ask for needs/n4. Close in Jesus Christ's name"
+    prayer.selected = true
+    let selectedPrayer = tasksArray[0]
+    prayer.selectedOne = selectedPrayer
 }
 
-func generateTestSongs() {
+func generateSongs() {
+    getTasks()
     let song1 = Song(context: context)
     song1.order = 1
     song1.random = Int64(arc4random_uniform(100))
@@ -353,8 +322,9 @@ func generateTestSongs() {
     song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
     song1.title = "The Spirit of God"
     song1.topic = "Holy Ghost"
-    song1.selected = true
+    song1.selected = false
     song1.favorite = false
+    song1.sortingIndex = 0
     
     let song2 = Song(context: context)
     song2.order = 2
@@ -366,6 +336,7 @@ func generateTestSongs() {
     song2.topic = "Restoration"
     song2.selected = false
     song2.favorite = false
+    song2.sortingIndex = 0
     
     let song3 = Song(context: context)
     song3.order = 3
@@ -377,6 +348,7 @@ func generateTestSongs() {
     song3.topic = "Restoration"
     song3.selected = false
     song3.favorite = false
+    song3.sortingIndex = 0
     
     let song4 = Song(context: context)
     song4.order = 4
@@ -388,6 +360,7 @@ func generateTestSongs() {
     song4.topic = "Care for the Poor & Needy"
     song4.selected = false
     song4.favorite = false
+    song4.sortingIndex = 0
     
     let song5 = Song(context: context)
     song5.order = 5
@@ -399,6 +372,7 @@ func generateTestSongs() {
     song5.topic = "Atonement"
     song5.selected = false
     song5.favorite = false
+    song5.sortingIndex = 0
     
     let song6 = Song(context: context)
     song6.order = 6
@@ -410,6 +384,7 @@ func generateTestSongs() {
     song6.topic = "Jesus Christ"
     song6.selected = false
     song6.favorite = false
+    song6.sortingIndex = 0
     
     let song7 = Song(context: context)
     song7.order = 7
@@ -421,6 +396,7 @@ func generateTestSongs() {
     song7.topic = "Plan of Salvation"
     song7.selected = false
     song7.favorite = false
+    song7.sortingIndex = 0
     
     let song8 = Song(context: context)
     song8.order = 8
@@ -432,6 +408,7 @@ func generateTestSongs() {
     song8.topic = "Jesus Christ"
     song8.selected = false
     song8.favorite = true
+    song8.sortingIndex = 0
     
     let song9 = Song(context: context)
     song9.order = 9
@@ -443,6 +420,7 @@ func generateTestSongs() {
     song9.topic = "Heavenly Father"
     song9.selected = false
     song9.favorite = true
+    song9.sortingIndex = 0
     
     let song10 = Song(context: context)
     song10.order = 10
@@ -454,6 +432,7 @@ func generateTestSongs() {
     song10.topic = "Jesus Christ"
     song10.selected = false
     song10.favorite = false
+    song10.sortingIndex = 0
     
     let song11 = Song(context: context)
     song11.order = 11
@@ -465,6 +444,7 @@ func generateTestSongs() {
     song11.topic = "Heavenly Father"
     song11.selected = false
     song11.favorite = false
+    song11.sortingIndex = 0
     
     let song12 = Song(context: context)
     song12.order = 12
@@ -476,6 +456,7 @@ func generateTestSongs() {
     song12.topic = "Jesus Christ"
     song12.selected = false
     song12.favorite = false
+    song12.sortingIndex = 0
     
     let song13 = Song(context: context)
     song13.order = 13
@@ -487,6 +468,7 @@ func generateTestSongs() {
     song13.topic = "Christlike Attributes"
     song13.selected = false
     song13.favorite = false
+    song13.sortingIndex = 0
     
     let song14 = Song(context: context)
     song14.order = 14
@@ -498,6 +480,7 @@ func generateTestSongs() {
     song14.topic = "Commandments"
     song14.selected = false
     song14.favorite = false
+    song14.sortingIndex = 0
     
     let song15 = Song(context: context)
     song15.order = 15
@@ -509,6 +492,7 @@ func generateTestSongs() {
     song15.topic = "Christlike Attributes"
     song15.selected = false
     song15.favorite = false
+    song15.sortingIndex = 0
     
     let song16 = Song(context: context)
     song16.order = 16
@@ -520,6 +504,7 @@ func generateTestSongs() {
     song16.topic = "Christlike Attributes"
     song16.selected = false
     song16.favorite = false
+    song16.sortingIndex = 0
     
     let song17 = Song(context: context)
     song17.order = 17
@@ -531,6 +516,7 @@ func generateTestSongs() {
     song17.topic = "Heavenly Father"
     song17.selected = false
     song17.favorite = false
+    song17.sortingIndex = 0
     
     let song18 = Song(context: context)
     song18.order = 18
@@ -542,6 +528,7 @@ func generateTestSongs() {
     song18.topic = "Jesus Christ"
     song18.selected = false
     song18.favorite = false
+    song18.sortingIndex = 0
     
     let song19 = Song(context: context)
     song19.order = 19
@@ -553,6 +540,7 @@ func generateTestSongs() {
     song19.topic = "Jesus Christ"
     song19.selected = false
     song19.favorite = false
+    song19.sortingIndex = 0
     
     let song20 = Song(context: context)
     song20.order = 20
@@ -564,6 +552,7 @@ func generateTestSongs() {
     song20.topic = "Christlike Attributes"
     song20.selected = false
     song20.favorite = false
+    song20.sortingIndex = 0
     
     let song21 = Song(context: context)
     song21.order = 21
@@ -575,6 +564,7 @@ func generateTestSongs() {
     song21.topic = "Commandments"
     song21.selected = false
     song21.favorite = false
+    song21.sortingIndex = 0
     
     let song22 = Song(context: context)
     song22.order = 22
@@ -586,6 +576,7 @@ func generateTestSongs() {
     song22.topic = "Commandments"
     song22.selected = false
     song22.favorite = false
+    song22.sortingIndex = 0
     
     let song23 = Song(context: context)
     song23.order = 23
@@ -597,6 +588,7 @@ func generateTestSongs() {
     song23.topic = "Plan of Salvation"
     song23.selected = false
     song23.favorite = false
+    song23.sortingIndex = 0
     
     let song24 = Song(context: context)
     song24.order = 24
@@ -608,6 +600,7 @@ func generateTestSongs() {
     song24.topic = "Jesus Christ"
     song24.selected = false
     song24.favorite = false
+    song24.sortingIndex = 0
     
     let song25 = Song(context: context)
     song25.order = 25
@@ -619,6 +612,7 @@ func generateTestSongs() {
     song25.topic = "Heavenly Father"
     song25.selected = false
     song25.favorite = false
+    song25.sortingIndex = 0
     
     let song26 = Song(context: context)
     song26.order = 26
@@ -630,6 +624,7 @@ func generateTestSongs() {
     song26.topic = "Heavenly Father"
     song26.selected = false
     song26.favorite = false
+    song26.sortingIndex = 0
     
     let song27 = Song(context: context)
     song27.order = 27
@@ -641,6 +636,7 @@ func generateTestSongs() {
     song27.topic = "Atonement"
     song27.selected = false
     song27.favorite = false
+    song27.sortingIndex = 0
     
     let song28 = Song(context: context)
     song28.order = 28
@@ -652,6 +648,7 @@ func generateTestSongs() {
     song28.topic = "Resurrection"
     song28.selected = false
     song28.favorite = false
+    song28.sortingIndex = 0
     
     let song29 = Song(context: context)
     song29.order = 29
@@ -663,6 +660,7 @@ func generateTestSongs() {
     song29.topic = "Birth of our Savior"
     song29.selected = false
     song29.favorite = false
+    song29.sortingIndex = 0
     
     let song30 = Song(context: context)
     song30.order = 30
@@ -674,6 +672,7 @@ func generateTestSongs() {
     song30.topic = "Birth of our Savior"
     song30.selected = false
     song30.favorite = false
+    song30.sortingIndex = 0
     
     let song31 = Song(context: context)
     song31.order = 31
@@ -685,6 +684,7 @@ func generateTestSongs() {
     song31.topic = "Birth of our Savior"
     song31.selected = false
     song31.favorite = false
+    song31.sortingIndex = 0
     
     let song32 = Song(context: context)
     song32.order = 32
@@ -696,6 +696,7 @@ func generateTestSongs() {
     song32.topic = "Birth of our Savior"
     song32.selected = false
     song32.favorite = false
+    song32.sortingIndex = 0
     
     let song33 = Song(context: context)
     song33.order = 33
@@ -707,6 +708,7 @@ func generateTestSongs() {
     song33.topic = "Care for the Poor & Needy"
     song33.selected = false
     song33.favorite = false
+    song33.sortingIndex = 0
     
     let song34 = Song(context: context)
     song34.order = 34
@@ -718,6 +720,7 @@ func generateTestSongs() {
     song34.topic = "Holy Ghost"
     song34.selected = false
     song34.favorite = false
+    song34.sortingIndex = 0
     
     let song35 = Song(context: context)
     song35.order = 35
@@ -729,6 +732,7 @@ func generateTestSongs() {
     song35.topic = "Commandments"
     song35.selected = false
     song35.favorite = true
+    song35.sortingIndex = 0
     
     let song36 = Song(context: context)
     song36.order = 36
@@ -740,6 +744,7 @@ func generateTestSongs() {
     song36.topic = "Endure to the end"
     song36.selected = false
     song36.favorite = false
+    song36.sortingIndex = 0
     
     let song37 = Song(context: context)
     song37.order = 37
@@ -751,6 +756,7 @@ func generateTestSongs() {
     song37.topic = "Perfect the Saints"
     song37.selected = false
     song37.favorite = false
+    song37.sortingIndex = 0
     
     let song38 = Song(context: context)
     song38.order = 38
@@ -762,6 +768,7 @@ func generateTestSongs() {
     song38.topic = "Proclaim the Gospel"
     song38.selected = false
     song38.favorite = false
+    song38.sortingIndex = 0
     
     let song39 = Song(context: context)
     song39.order = 39
@@ -773,6 +780,7 @@ func generateTestSongs() {
     song39.topic = "Perfect the Saints"
     song39.selected = false
     song39.favorite = false
+    song39.sortingIndex = 0
     
     let song40 = Song(context: context)
     song40.order = 40
@@ -784,6 +792,7 @@ func generateTestSongs() {
     song40.topic = "Endure to the end"
     song40.selected = false
     song40.favorite = false
+    song40.sortingIndex = 0
     
     let song41 = Song(context: context)
     song41.order = 41
@@ -795,6 +804,7 @@ func generateTestSongs() {
     song41.topic = "Endure to the end"
     song41.selected = false
     song41.favorite = false
+    song41.sortingIndex = 0
     
     let song42 = Song(context: context)
     song42.order = 42
@@ -806,6 +816,7 @@ func generateTestSongs() {
     song42.topic = "Perfect the Saints"
     song42.selected = false
     song42.favorite = false
+    song42.sortingIndex = 0
     
     let song43 = Song(context: context)
     song43.order = 43
@@ -817,6 +828,7 @@ func generateTestSongs() {
     song43.topic = "Perfect the Saints"
     song43.selected = false
     song43.favorite = false
+    song43.sortingIndex = 0
     
     let song51 = Song(context: context)
     song51.order = 51
@@ -828,6 +840,7 @@ func generateTestSongs() {
     song51.topic = "Heavenly Father"
     song51.selected = false
     song51.favorite = true
+    song51.sortingIndex = 0
     
     let song52 = Song(context: context)
     song52.order = 52
@@ -839,6 +852,7 @@ func generateTestSongs() {
     song52.topic = "Plan of Salvation"
     song52.selected = false
     song52.favorite = false
+    song52.sortingIndex = 0
     
     let song53 = Song(context: context)
     song53.order = 53
@@ -850,6 +864,7 @@ func generateTestSongs() {
     song53.topic = "Heavenly Father"
     song53.selected = false
     song53.favorite = false
+    song53.sortingIndex = 0
     
     let song54 = Song(context: context)
     song54.order = 54
@@ -861,6 +876,7 @@ func generateTestSongs() {
     song54.topic = "Heavenly Father"
     song54.selected = false
     song54.favorite = false
+    song54.sortingIndex = 0
     
     let song55 = Song(context: context)
     song55.order = 55
@@ -872,6 +888,7 @@ func generateTestSongs() {
     song55.topic = "Christlike Attributes"
     song55.selected = false
     song55.favorite = false
+    song55.sortingIndex = 0
     
     let song56 = Song(context: context)
     song56.order = 56
@@ -881,8 +898,11 @@ func generateTestSongs() {
     song56.url = "https://www.lds.org/music/library/childrens-songbook/a-childs-prayer?lang=eng"
     song56.title = "A Child’s Prayer"
     song56.topic = "Heavenly Father"
-    song56.selected = false
+    song56.selected = true
     song56.favorite = true
+    let selectedSong = tasksArray[1]
+    song56.selectedOne = selectedSong
+    song56.sortingIndex = 0
     
     let song57 = Song(context: context)
     song57.order = 57
@@ -894,6 +914,7 @@ func generateTestSongs() {
     song57.topic = "Plan of Salvation"
     song57.selected = false
     song57.favorite = false
+    song57.sortingIndex = 0
     
     let song58 = Song(context: context)
     song58.order = 58
@@ -905,6 +926,7 @@ func generateTestSongs() {
     song58.topic = "Christlike Attributes"
     song58.selected = false
     song58.favorite = false
+    song58.sortingIndex = 0
     
     let song59 = Song(context: context)
     song59.order = 59
@@ -916,6 +938,7 @@ func generateTestSongs() {
     song59.topic = "Birth of our Savior"
     song59.selected = false
     song59.favorite = false
+    song59.sortingIndex = 0
     
     let song60 = Song(context: context)
     song60.order = 60
@@ -927,6 +950,7 @@ func generateTestSongs() {
     song60.topic = "Birth of our Savior"
     song60.selected = false
     song60.favorite = false
+    song60.sortingIndex = 0
     
     let song61 = Song(context: context)
     song61.order = 61
@@ -938,6 +962,7 @@ func generateTestSongs() {
     song61.topic = "Birth of our Savior"
     song61.selected = false
     song61.favorite = false
+    song61.sortingIndex = 0
     
     let song62 = Song(context: context)
     song62.order = 62
@@ -949,6 +974,7 @@ func generateTestSongs() {
     song62.topic = "Jesus Christ"
     song62.selected = false
     song62.favorite = false
+    song62.sortingIndex = 0
     
     let song63 = Song(context: context)
     song63.order = 63
@@ -960,6 +986,7 @@ func generateTestSongs() {
     song63.topic = "Jesus Christ"
     song63.selected = false
     song63.favorite = false
+    song63.sortingIndex = 0
     
     let song64 = Song(context: context)
     song64.order = 64
@@ -971,6 +998,7 @@ func generateTestSongs() {
     song64.topic = "Jesus Christ"
     song64.selected = false
     song64.favorite = false
+    song64.sortingIndex = 0
     
     let song65 = Song(context: context)
     song65.order = 65
@@ -982,6 +1010,7 @@ func generateTestSongs() {
     song65.topic = "Christlike Attributes"
     song65.selected = false
     song65.favorite = false
+    song65.sortingIndex = 0
     
     let song66 = Song(context: context)
     song66.order = 66
@@ -993,6 +1022,7 @@ func generateTestSongs() {
     song66.topic = "Jesus Christ"
     song66.selected = false
     song66.favorite = false
+    song66.sortingIndex = 0
     
     let song67 = Song(context: context)
     song67.order = 67
@@ -1004,6 +1034,7 @@ func generateTestSongs() {
     song67.topic = "Jesus Christ"
     song67.selected = false
     song67.favorite = false
+    song67.sortingIndex = 0
     
     let song68 = Song(context: context)
     song68.order = 68
@@ -1015,6 +1046,7 @@ func generateTestSongs() {
     song68.topic = "Scriptures"
     song68.selected = false
     song68.favorite = false
+    song68.sortingIndex = 0
     
     let song69 = Song(context: context)
     song69.order = 69
@@ -1026,6 +1058,7 @@ func generateTestSongs() {
     song69.topic = "Redeem the Dead"
     song69.selected = false
     song69.favorite = true
+    song69.sortingIndex = 0
     
     let song70 = Song(context: context)
     song70.order = 70
@@ -1037,6 +1070,7 @@ func generateTestSongs() {
     song70.topic = "Principles & Ordinances"
     song70.selected = false
     song70.favorite = false
+    song70.sortingIndex = 0
     
     let song71 = Song(context: context)
     song71.order = 71
@@ -1048,6 +1082,7 @@ func generateTestSongs() {
     song71.topic = "Principles & Ordinances"
     song71.selected = false
     song71.favorite = false
+    song71.sortingIndex = 0
     
     let song72 = Song(context: context)
     song72.order = 72
@@ -1059,6 +1094,7 @@ func generateTestSongs() {
     song72.topic = "Principles & Ordinances"
     song72.selected = false
     song72.favorite = false
+    song72.sortingIndex = 0
     
     let song73 = Song(context: context)
     song73.order = 73
@@ -1070,6 +1106,7 @@ func generateTestSongs() {
     song73.topic = "Principles & Ordinances"
     song73.selected = false
     song73.favorite = false
+    song73.sortingIndex = 0
     
     let song74 = Song(context: context)
     song74.order = 74
@@ -1081,6 +1118,7 @@ func generateTestSongs() {
     song74.topic = "Principles & Ordinances"
     song74.selected = false
     song74.favorite = false
+    song74.sortingIndex = 0
     
     let song75 = Song(context: context)
     song75.order = 75
@@ -1092,6 +1130,7 @@ func generateTestSongs() {
     song75.topic = "Commandments"
     song75.selected = false
     song75.favorite = false
+    song75.sortingIndex = 0
     
     let song76 = Song(context: context)
     song76.order = 76
@@ -1103,6 +1142,7 @@ func generateTestSongs() {
     song76.topic = "Restoration"
     song76.selected = false
     song76.favorite = false
+    song76.sortingIndex = 0
     
     let song77 = Song(context: context)
     song77.order = 77
@@ -1114,6 +1154,7 @@ func generateTestSongs() {
     song77.topic = "Commandments"
     song77.selected = false
     song77.favorite = false
+    song77.sortingIndex = 0
     
     let song78 = Song(context: context)
     song78.order = 78
@@ -1125,6 +1166,7 @@ func generateTestSongs() {
     song78.topic = "Scriptures"
     song78.selected = false
     song78.favorite = false
+    song78.sortingIndex = 0
     
     let song79 = Song(context: context)
     song79.order = 2
@@ -1136,6 +1178,7 @@ func generateTestSongs() {
     song79.topic = "Christlike Attributes"
     song79.selected = false
     song79.favorite = false
+    song79.sortingIndex = 0
     
     let song80 = Song(context: context)
     song80.order = 80
@@ -1147,6 +1190,7 @@ func generateTestSongs() {
     song80.topic = "Commandments"
     song80.selected = false
     song80.favorite = true
+    song80.sortingIndex = 0
     
     let song81 = Song(context: context)
     song81.order = 81
@@ -1158,6 +1202,7 @@ func generateTestSongs() {
     song81.topic = "Commandments"
     song81.selected = false
     song81.favorite = true
+    song81.sortingIndex = 0
     
     let song82 = Song(context: context)
     song82.order = 82
@@ -1169,6 +1214,7 @@ func generateTestSongs() {
     song82.topic = "Endure to the end"
     song82.selected = false
     song82.favorite = false
+    song82.sortingIndex = 0
     
     let song83 = Song(context: context)
     song83.order = 83
@@ -1180,6 +1226,7 @@ func generateTestSongs() {
     song83.topic = "Commandments"
     song83.selected = false
     song83.favorite = false
+    song83.sortingIndex = 0
     
     let song84 = Song(context: context)
     song84.order = 84
@@ -1191,6 +1238,7 @@ func generateTestSongs() {
     song84.topic = "Christlike Attributes"
     song84.selected = false
     song84.favorite = true
+    song84.sortingIndex = 0
     
     let song85 = Song(context: context)
     song85.order = 85
@@ -1202,6 +1250,7 @@ func generateTestSongs() {
     song85.topic = "Heavenly Father"
     song85.selected = false
     song85.favorite = false
+    song85.sortingIndex = 0
     
     let song86 = Song(context: context)
     song86.order = 86
@@ -1213,6 +1262,7 @@ func generateTestSongs() {
     song86.topic = "Proclaim the Gospel"
     song86.selected = false
     song86.favorite = false
+    song86.sortingIndex = 0
     
     let song87 = Song(context: context)
     song87.order = 87
@@ -1224,6 +1274,7 @@ func generateTestSongs() {
     song87.topic = "Proclaim the Gospel"
     song87.selected = false
     song87.favorite = false
+    song87.sortingIndex = 0
     
     let song88 = Song(context: context)
     song88.order = 88
@@ -1235,6 +1286,7 @@ func generateTestSongs() {
     song88.topic = "Proclaim the Gospel"
     song88.selected = false
     song88.favorite = false
+    song88.sortingIndex = 0
     
     let song89 = Song(context: context)
     song89.order = 89
@@ -1246,6 +1298,7 @@ func generateTestSongs() {
     song89.topic = "Heavenly Father"
     song89.selected = false
     song89.favorite = false
+    song89.sortingIndex = 0
     
     let song90 = Song(context: context)
     song90.order = 90
@@ -1257,6 +1310,7 @@ func generateTestSongs() {
     song90.topic = "Christlike Attributes"
     song90.selected = false
     song90.favorite = false
+    song90.sortingIndex = 0
     
     let song91 = Song(context: context)
     song91.order = 91
@@ -1268,6 +1322,7 @@ func generateTestSongs() {
     song91.topic = "Christlike Attributes"
     song91.selected = false
     song91.favorite = false
+    song91.sortingIndex = 0
     
     let song92 = Song(context: context)
     song92.order = 92
@@ -1279,6 +1334,7 @@ func generateTestSongs() {
     song92.topic = "Plan of Salvation"
     song92.selected = false
     song92.favorite = true
+    song92.sortingIndex = 0
     
     let song93 = Song(context: context)
     song93.order = 93
@@ -1290,6 +1346,7 @@ func generateTestSongs() {
     song93.topic = "Christlike Attributes"
     song93.selected = false
     song93.favorite = true
+    song93.sortingIndex = 0
     
     let song94 = Song(context: context)
     song94.order = 94
@@ -1301,6 +1358,7 @@ func generateTestSongs() {
     song94.topic = "Jesus Christ"
     song94.selected = false
     song94.favorite = false
+    song94.sortingIndex = 0
     
     let song95 = Song(context: context)
     song95.order = 95
@@ -1312,6 +1370,7 @@ func generateTestSongs() {
     song95.topic = "Christlike Attributes"
     song95.selected = false
     song95.favorite = false
+    song95.sortingIndex = 0
     
     let song96 = Song(context: context)
     song96.order = 96
@@ -1323,6 +1382,7 @@ func generateTestSongs() {
     song96.topic = "Plan of Salvation"
     song96.selected = false
     song96.favorite = false
+    song96.sortingIndex = 0
     
     let song97 = Song(context: context)
     song97.order = 97
@@ -1334,6 +1394,7 @@ func generateTestSongs() {
     song97.topic = "Christlike Attributes"
     song97.selected = false
     song97.favorite = false
+    song97.sortingIndex = 0
     
     let song98 = Song(context: context)
     song98.order = 98
@@ -1345,6 +1406,7 @@ func generateTestSongs() {
     song98.topic = "Christlike Attributes"
     song98.selected = false
     song98.favorite = false
+    song98.sortingIndex = 0
     
     let song99 = Song(context: context)
     song99.order = 99
@@ -1356,6 +1418,7 @@ func generateTestSongs() {
     song99.topic = "Christlike Attributes"
     song99.selected = false
     song99.favorite = false
+    song99.sortingIndex = 0
     
     let song100 = Song(context: context)
     song100.order = 100
@@ -1367,6 +1430,7 @@ func generateTestSongs() {
     song100.topic = "Christlike Attributes"
     song100.selected = false
     song100.favorite = true
+    song100.sortingIndex = 0
     
     let song101 = Song(context: context)
     song101.order = 101
@@ -1378,6 +1442,7 @@ func generateTestSongs() {
     song101.topic = "Atonement"
     song101.selected = false
     song101.favorite = true
+    song101.sortingIndex = 0
     
     let song102 = Song(context: context)
     song102.order = 102
@@ -1389,6 +1454,7 @@ func generateTestSongs() {
     song102.topic = "Plan of Salvation"
     song102.selected = false
     song102.favorite = true
+    song102.sortingIndex = 0
     
     let song103 = Song(context: context)
     song103.order = 103
@@ -1400,6 +1466,7 @@ func generateTestSongs() {
     song103.topic = "Plan of Salvation"
     song103.selected = false
     song103.favorite = false
+    song103.sortingIndex = 0
     
     let song104 = Song(context: context)
     song104.order = 104
@@ -1411,6 +1478,7 @@ func generateTestSongs() {
     song104.topic = "Perfect the Saints"
     song104.selected = false
     song104.favorite = false
+    song104.sortingIndex = 0
     
     let song105 = Song(context: context)
     song105.order = 105
@@ -1422,6 +1490,7 @@ func generateTestSongs() {
     song105.topic = "Perfect the Saints"
     song105.selected = false
     song105.favorite = false
+    song105.sortingIndex = 0
     
     let song106 = Song(context: context)
     song106.order = 106
@@ -1433,6 +1502,124 @@ func generateTestSongs() {
     song106.topic = "Perfect the Saints"
     song106.selected = false
     song106.favorite = false
+    song106.sortingIndex = 0
     
     ad.saveContext()
 }
+
+func generateRules() {
+    getTasks()
+    let rule1 = Rule(context: context)
+    rule1.title = "Media"
+    rule1.detail = "“The media's the most powerful entity on earth. They have the power to make the innocent guilty and to make the guilty innocent, and that's power. Because they control the minds of the masses.”\n- Malcolm X"
+    rule1.url = "https://drive.google.com/file/d/1U6DIUWVNML50SgX4p6mdkBrrKcXpdGIE/view"
+    rule1.order = 1
+    rule1.random = Int64(arc4random_uniform(1000))
+    rule1.selected = true
+    rule1.sortingIndex = 0
+    let selectedRule = tasksArray[2]
+    rule1.selectedOne = selectedRule
+    
+    let rule2 = Rule(context: context)
+    rule2.title = "Respect Others"
+    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.“\n- Matt. 7:12"
+    rule2.url = "https://drive.google.com/file/d/1zuUzKcEdZS7ZjZh5mKhQWWFPPw77_AaV/view"
+    rule2.order = 2
+    rule2.random = Int64(arc4random_uniform(1000))
+    rule2.selected = false
+    rule2.sortingIndex = 0
+    
+    let rule3 = Rule(context: context)
+    rule3.title = "Respect Belongings"
+    rule3.detail = "As you get older you start to see who was raised properly. So many people lack basic respect."
+    rule3.url = "https://drive.google.com/file/d/1BbDSMAKExvlt2o_NoyN81lbD4imwlW5I/view"
+    rule3.order = 3
+    rule3.random = Int64(arc4random_uniform(1000))
+    rule3.selected = false
+    rule3.sortingIndex = 0
+    
+    let rule4 = Rule(context: context)
+    rule4.title = "Table Manners"
+    rule4.detail = "“I profoundly believe it takes a lot of ignorance to become a moral slob.“\n- William Buckley Jr."
+    rule4.url = "https://drive.google.com/file/d/1nwcCCDRogdtmRvmdXAcfYBZFBDcaUgFt/view"
+    rule4.order = 4
+    rule4.random = Int64(arc4random_uniform(1000))
+    rule4.selected = false
+    rule4.sortingIndex = 0
+    
+    let rule5 = Rule(context: context)
+    rule5.title = "Morning Routine"
+    rule5.detail = "Yesterday is gone. Tomorrow is a mystery. Today is a blessing!"
+    rule5.url = "https://drive.google.com/file/d/1US9Zd604Ldqekde1eoQJbwQQji3LDqJM/view"
+    rule5.order = 7
+    rule5.random = Int64(arc4random_uniform(1000))
+    rule5.selected = false
+    rule5.sortingIndex = 0
+    
+    let rule6 = Rule(context: context)
+    rule6.title = "After School Routine"
+    rule6.detail = "Never stop learning, because life never stops teaching."
+    rule6.url = "https://drive.google.com/file/d/1Nb1AUCeZCMt8Em6f2LVSIzTJt776aLQl/view"
+    rule6.order = 5
+    rule6.random = Int64(arc4random_uniform(1000))
+    rule6.selected = false
+    rule6.sortingIndex = 0
+    
+    let rule7 = Rule(context: context)
+    rule7.title = "Bedtime Routine"
+    rule7.detail = "Go to be with dreams. Wake up with plans."
+    rule7.url = "https://drive.google.com/file/d/1VhCDrnKvr_w4nv3tvZQnmXJMtAJzOphd/view"
+    rule7.order = 6
+    rule7.random = Int64(arc4random_uniform(1000))
+    rule7.selected = false
+    rule7.sortingIndex = 0
+    
+    let rule8 = Rule(context: context)
+    rule8.title = "House Chores"
+    rule8.detail = "“May we ever choose the harder right instead of the easier wrong.“\n- Thomas S. Monson"
+    rule8.url = "https://drive.google.com/file/d/1dkwWTrKC88OoZwZ5KOlK-b3TY63gsZDa/view"
+    rule8.order = 8
+    rule8.random = Int64(arc4random_uniform(1000))
+    rule8.selected = false
+    rule8.sortingIndex = 0
+    
+    let rule9 = Rule(context: context)
+    rule9.title = "FHE & HT Expectations"
+    rule9.detail = "Human behavior flows from three main sources: desire (spirit), emotion (body), knowledge (mind)."
+    rule9.url = "https://drive.google.com/file/d/1xJay1xQw_Yaq8mgcGPe4An-p6NC2PsQl/view"
+    rule9.order = 9
+    rule9.random = Int64(arc4random_uniform(1000))
+    rule9.selected = false
+    rule9.sortingIndex = 0
+    
+    let rule10 = Rule(context: context)
+    rule10.title = "Church Guidelines"
+    rule10.detail = "Feed your faith and your fears will starve to death."
+    rule10.url = "https://drive.google.com/file/d/11aT0cKTF2IG9DqIXEpv2m7C6suddK-zE/view"
+    rule10.order = 10
+    rule10.random = Int64(arc4random_uniform(1000))
+    rule10.selected = false
+    rule10.sortingIndex = 0
+    
+    let rule11 = Rule(context: context)
+    rule11.title = "Sunday Behavior"
+    rule11.detail = "“Living in the moment brings you a sense of reverance for all of life's blessings.“\n- Oprah Winfrey"
+    rule11.url = "https://drive.google.com/file/d/1BPMKRTIbwZEqgXvK9CmUMjinBgKLrV2d/view"
+    rule11.order = 10
+    rule11.random = Int64(arc4random_uniform(1000))
+    rule11.selected = false
+    rule11.sortingIndex = 0
+}
+
+
+//var taskScripture = [Task]()
+//var taskCalendar = [Task]()
+//var taskTestimony = [Task]()
+//var taskSpotlight = [Task]()
+//var taskMisc = [Task]()
+//var taskThought = [Task]()
+//var taskLessons = [Task]()
+//var taskCouncil = [Task]()
+//var taskGame = [Task]()
+//var taskTreat = [Task]()
+

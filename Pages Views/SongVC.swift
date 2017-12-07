@@ -23,7 +23,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         super.viewDidLoad()
         clickSoundURL()
         
-        getTaskSong()
+        loadSongPageData()
     }
 
     @IBAction func singSongPressed(_ sender: Any) {
@@ -39,23 +39,11 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    func getTaskSong() {
-        var songTask = [Task]()
+    func loadSongPageData() {
         var assignee = Member()
         var selected = Song()
 
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        let predicate = NSPredicate(format: "name == %@", "Song")
-        fetchRequest.predicate = predicate
-        
-        do {
-            songTask = try context.fetch(fetchRequest)
-        } catch {
-            let error = error as NSError
-            print("\(error)")
-        }
-
-        let song = songTask[0]
+        let song = taskSong[0]
         
         if song.assignment != nil {
             assignee = song.assignment!

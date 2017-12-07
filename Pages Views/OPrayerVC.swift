@@ -16,6 +16,8 @@ class OPrayerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadOpeningPrayerPageData()
     }
     
     @objc func gestureRecognizerAction(_ gesture: UIPanGestureRecognizer) {
@@ -25,5 +27,25 @@ class OPrayerVC: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadOpeningPrayerPageData() {
+        var assignee = Member()
+        var selected = Prayer()
+        
+        let prayer = taskPrayer[0]
+        
+        if prayer.assignment != nil {
+            assignee = prayer.assignment!
+        }
+        
+        if prayer.selectedSong != nil {
+            selected = prayer.selectedSong!
+        }
+        
+        prayerMemberNameLabel.text = assignee.name
+        prayerMemberPhotoImage.image = assignee.photo as? UIImage
+        prayerTitleLabel.text = selected.title
+        prayerDetailLabel
     }
 }

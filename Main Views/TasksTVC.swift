@@ -27,24 +27,18 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let presentRandom = arc4random_uniform(11)
-        if presentRandom == UInt32(1) {
-            //        if launchedCounter % 3 == 0 {
+//        let presentRandom = arc4random_uniform(11)
+//        if presentRandom == UInt32(1) {
+        if counter.launched % 2 == 0 {
+            print("\(counter.launched)")
             performSegue(withIdentifier: "AboutMe", sender: nil)
+            counter.launched += 1
+            ad.saveContext()
         }
         
         taskAttemptFetch()
         tableView.reloadData()
     }
-    
-    //    func toggleSwitch() {
-    //        if (sender.isOn == true) {
-    //            output.text = "Yes! It is on."
-    //        } else {
-    //            output.text = "No. It is off."
-    //        }
-    //    }
-    
     
     // MARK: - Table view data source
     

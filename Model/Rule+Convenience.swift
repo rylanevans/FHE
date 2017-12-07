@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 
 extension Rule {
-    convenience init(selected: Bool, sortingIndex: Int64, random: Int64, order: Int64, title: String, detail: String, dateCreated: Date, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, sortingIndex: Int64, random: Int64, order: Int64, title: String, detail: String, dateCreated: Date, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
@@ -21,5 +21,6 @@ extension Rule {
         self.title = title
         self.detail = detail
         self.dateCreated = dateCreated
+        self.url = url
     }
 }
