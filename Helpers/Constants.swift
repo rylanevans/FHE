@@ -8,6 +8,22 @@
 
 import Foundation
 
+// MARK: - Selected Tasks
+
+let selectedPrayer = tasksArray[0]
+let selectedSong = tasksArray[1]
+let selectedRule = tasksArray[2]
+let selectedScripture = tasksArray[3]
+let selectedCalendar = tasksArray[4]
+let selectedTestimony = tasksArray[5]
+let selectedSpotlight = tasksArray[6]
+let selectedMisc = tasksArray[7]
+let selectedThought = tasksArray[8]
+let selectedLesson = tasksArray[9]
+let selectedCouncil = tasksArray[10]
+let selectedGame = tasksArray[11]
+let selectedTreat = tasksArray[12]
+
 // MARK: - IAP Identifiers
 
 let IAP_FHE_ID_thankYou = "com.FHE.thankYou"
@@ -165,4 +181,32 @@ let dimensionsArray = [
     "Physical",
     "Environmental",
     "Spiritual"
+]
+
+let categoryArray = [
+    "Other",
+    "Classic",
+    "Board Game",
+    "Cards",
+    "Team Sport",
+    "Field Trip",
+    "Outdoor",
+    "Service",
+    "Baking",
+    "Crafts",
+    "Mindfullness"
+]
+
+let treatsArray = [
+    "Other",
+    "Cookie",
+    "Brownie",
+    "Cake",
+    "Pie",
+    "Ice Cream",
+    "Shake",
+    "Popsicle",
+    "Pudding",
+    "Candy",
+    "Snack",
 ]

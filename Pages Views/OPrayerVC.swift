@@ -30,22 +30,22 @@ class OPrayerVC: UIViewController {
     }
     
     func loadOpeningPrayerPageData() {
-        var assignee = Member()
-        var selected = Prayer()
-        
-        let prayer = taskPrayer[0]
-        
-        if prayer.assignment != nil {
-            assignee = prayer.assignment!
-        }
-        
-        if prayer.selectedSong != nil {
-            selected = prayer.selectedSong!
-        }
-        
-        prayerMemberNameLabel.text = assignee.name
-        prayerMemberPhotoImage.image = assignee.photo as? UIImage
-        prayerTitleLabel.text = selected.title
-        prayerDetailLabel
+//        var assignee = Member()
+//        var selected = Prayer()
+//
+//        let prayer = selectedPrayer
+//
+//        if prayer.assignment != nil {
+//            assignee = prayer.assignment!
+//        }
+//
+//        if prayer.selectedSong != nil {
+//            selected = prayer.selectedSong!
+//        }
+//
+//        prayerMemberNameLabel.text = assignee.name
+//        prayerMemberPhotoImage.image = assignee.photo as? UIImage
+//        prayerTitleLabel.text = selected.title
+//        prayerDetailLabel
     }
 }
