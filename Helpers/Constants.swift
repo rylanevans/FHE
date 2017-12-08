@@ -156,3 +156,13 @@ let scripturePGPBooksArray = [
     "Moses"
 ]
 
+let dimensionsArray = [
+    "Emotional",
+    "Financial",
+    "Intellectual",
+    "Social",
+    "Occupational",
+    "Physical",
+    "Environmental",
+    "Spiritual"
+]

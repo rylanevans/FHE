@@ -45,6 +45,7 @@
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="youTubeVideo" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedLesson" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Member" representedClassName="Member" syncable="YES" codeGenerationType="class">
@@ -60,6 +61,7 @@
     </entity>
     <entity name="Misc" representedClassName="Misc" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedMisc" inverseEntity="Task" syncable="YES"/>
@@ -83,7 +85,7 @@
     </entity>
     <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
         <attribute name="book" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="chapter" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chapter" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -92,7 +94,7 @@
         <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="verse" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="verse" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="volume" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedScripture" inverseEntity="Task" syncable="YES"/>
     </entity>
@@ -146,9 +148,15 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedTestimony" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Thought" representedClassName="Thought" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedThought" inverseEntity="Task" syncable="YES"/>
     </entity>
@@ -169,9 +177,9 @@
         <element name="Council" positionX="54" positionY="162" width="128" height="210"/>
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="195"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="210"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="225"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>
-        <element name="Misc" positionX="36" positionY="144" width="128" height="105"/>
+        <element name="Misc" positionX="36" positionY="144" width="128" height="30"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="30"/>
         <element name="Rule" positionX="0" positionY="108" width="128" height="30"/>
         <element name="Scripture" positionX="9" positionY="72" width="128" height="240"/>
@@ -179,7 +187,7 @@
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="30"/>
         <element name="Task" positionX="9" positionY="153" width="128" height="30"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="30"/>
-        <element name="Thought" positionX="45" positionY="153" width="128" height="30"/>
+        <element name="Thought" positionX="45" positionY="153" width="128" height="210"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="195"/>
     </elements>
 </model>

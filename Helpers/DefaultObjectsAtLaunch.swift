@@ -1609,17 +1609,227 @@ func generateRules() {
     rule11.random = Int64(arc4random_uniform(1000))
     rule11.selected = false
     rule11.sortingIndex = 0
+    
+    ad.saveContext()
 }
 
+func generateScripture() {
+    getTasks()
+    let scripture1 = Scripture(context: context)
+    scripture1.topic = topicsArray[0]
+    scripture1.volume = "Book of Mormon"
+    scripture1.book = "1 Nephi"
+    scripture1.chapter = "3"
+    scripture1.verse = "7"
+    scripture1.title = "The Lord prepares a way"
+    scripture1.favorite = true
+    scripture1.order = 1
+    scripture1.random = Int64(arc4random_uniform(1000))
+    scripture1.selected = true
+    scripture1.sortingIndex = 0
+    let selectedScripture = tasksArray[3]
+    scripture1.selectedOne = selectedScripture
+    
+    let scripture2 = Scripture(context: context)
+    scripture2.topic = topicsArray[0]
+    scripture2.volume = "Book of Mormon"
+    scripture2.book = "2 Nephi"
+    scripture2.chapter = "2"
+    scripture2.verse = "22-25"
+    scripture2.title = "Adam fell that men might be."
+    scripture2.favorite = false
+    scripture2.order = 2
+    scripture2.random = Int64(arc4random_uniform(1000))
+    scripture2.selected = false
+    scripture2.sortingIndex = 0
+    
+    ad.saveContext()
+}
 
-//var taskScripture = [Task]()
-//var taskCalendar = [Task]()
-//var taskTestimony = [Task]()
-//var taskSpotlight = [Task]()
-//var taskMisc = [Task]()
-//var taskThought = [Task]()
-//var taskLessons = [Task]()
-//var taskCouncil = [Task]()
-//var taskGame = [Task]()
-//var taskTreat = [Task]()
+func generateCalendar() {
+    getTasks()
+    let calendar = Calendar(context: context)
+    let selectedCalendar = tasksArray[4]
+    calendar.selectedOne = selectedCalendar
+    calendar.title = "Upcoming Events"
+    calendar.detail = "1. Activities\n2. Birthdays / Holidays\n3. Traveling / Vacations\n4. Family dinners"
+    calendar.selected = true
+    
+    ad.saveContext()
+}
+
+func generateTestimony() {
+    getTasks()
+    let testimony = Testimony(context: context)
+    let selectedTestimony = tasksArray[5]
+    testimony.selectedOne = selectedTestimony
+    testimony.title = "I have a testimony that..."
+    testimony.detail = "1. Heavenly Father lives and loves His children. I am a child of God.\n2. Jesus Christ lives, that He is the Son of God, and that He carried out the infinite Atonement.\n3. Joseph Smith is the prophet of God who was called to restore the Gospel.\n4. The Church of Jesus Christ of Latter-day Saints is the Savior's true Church on the earth.\n5. The Church is led by a living prophet today.\n6. The Book of Mormon is another testiment of Jesus Christ.\n7. A testimony is a spiritual witness given by the Holy Ghost.\n8. A testimony grows to include all principles of the Gospel."
+    testimony.selected = true
+    
+    ad.saveContext()
+}
+
+func generateSpotlight() {
+    getTasks()
+    let spotlight = Spotlight(context: context)
+    let selectedSpotlight = tasksArray[6]
+    spotlight.selectedOne = selectedSpotlight
+    spotlight.title = "Affirmations"
+    spotlight.detail = "1. Emotional\n2. Financial\n3. Intellectual\n4. Social\n5. Occupational\n6. Physical\n7. Environmental\n8. Spiritual"
+    spotlight.selected = true
+    
+    ad.saveContext()
+}
+
+func generateMisc() {
+    getTasks()
+    let misc = Misc(context: context)
+    let selectedMisc = tasksArray[7]
+    misc.selectedOne = selectedMisc
+    misc.title = "Tell me something I don't know..."
+    misc.detail = "While knowledge is orderly and cumulative, information is random and miscellaneous."
+    misc.url = "https://www.mormonchannel.org/watch/series/mormon-channel-studio/mormon-channel-studio-nashville-tribute-band"
+    misc.selected = true
+    
+    ad.saveContext()
+}
+
+func generateThoughts() {
+    getTasks()
+    let thought1 = Thought(context: context)
+    let selectedThought = tasksArray[8]
+    thought1.selectedOne = selectedThought
+    thought1.topic = dimensionsArray[0]
+    thought1.title = "Emotional"
+    thought1.detail = "Meditation"
+    thought1.url = "https://www.mormonchannel.org/"
+    thought1.order = 1
+    thought1.favorite = true
+    thought1.random = Int64(arc4random_uniform(1000))
+    thought1.selected = true
+    thought1.sortingIndex = 0
+    
+    let thought2 = Thought(context: context)
+    thought2.topic = dimensionsArray[1]
+    thought2.title = "Financial"
+    thought2.detail = "Baby Steps"
+    thought2.url = "https://www.mormonchannel.org/"
+    thought2.order = 2
+    thought2.favorite = false
+    thought2.random = Int64(arc4random_uniform(1000))
+    thought2.selected = false
+    thought2.sortingIndex = 0
+    
+    let thought3 = Thought(context: context)
+    thought3.topic = dimensionsArray[2]
+    thought3.title = "Intellectual"
+    thought3.detail = "Education"
+    thought3.url = "https://www.mormonchannel.org/"
+    thought3.order = 3
+    thought3.favorite = false
+    thought3.random = Int64(arc4random_uniform(1000))
+    thought3.selected = false
+    thought3.sortingIndex = 0
+    
+    let thought4 = Thought(context: context)
+    thought4.topic = dimensionsArray[3]
+    thought4.title = "Social"
+    thought4.detail = "Networking"
+    thought4.url = "https://www.mormonchannel.org/"
+    thought4.order = 4
+    thought4.favorite = false
+    thought4.random = Int64(arc4random_uniform(1000))
+    thought4.selected = false
+    thought4.sortingIndex = 0
+    
+    let thought5 = Thought(context: context)
+    thought5.topic = dimensionsArray[4]
+    thought5.title = "Occupational"
+    thought5.detail = "Work doesn't define you."
+    thought5.url = "https://www.mormonchannel.org/"
+    thought5.order = 5
+    thought5.favorite = false
+    thought5.random = Int64(arc4random_uniform(1000))
+    thought5.selected = false
+    thought5.sortingIndex = 0
+    
+    let thought6 = Thought(context: context)
+    thought6.topic = dimensionsArray[5]
+    thought6.title = "Physical"
+    thought6.detail = "Input and Output"
+    thought6.url = "https://www.mormonchannel.org/"
+    thought6.order = 6
+    thought6.favorite = false
+    thought6.random = Int64(arc4random_uniform(1000))
+    thought6.selected = false
+    thought6.sortingIndex = 0
+    
+    let thought7 = Thought(context: context)
+    thought7.topic = dimensionsArray[6]
+    thought7.title = "Environmental"
+    thought7.detail = "You can change your environment."
+    thought7.url = "https://www.mormonchannel.org/"
+    thought7.order = 7
+    thought7.favorite = false
+    thought7.random = Int64(arc4random_uniform(1000))
+    thought7.selected = false
+    thought7.sortingIndex = 0
+    
+    let thought8 = Thought(context: context)
+    thought8.topic = dimensionsArray[7]
+    thought8.title = "Spiritual"
+    thought8.detail = ""
+    thought8.url = ""
+    thought8.order = 8
+    thought8.favorite = false
+    thought8.random = Int64(arc4random_uniform(1000))
+    thought8.selected = false
+    thought8.sortingIndex = 0
+    
+    ad.saveContext()
+}
+
+func generateLessons() {
+    getTasks()
+    let lesson1 = Lesson(context: context)
+    let selectedLesson = tasksArray[9]
+    lesson1.selectedOne = selectedLesson
+    lesson1.topic = topicsArray[0]
+    lesson1.title = "FHE Playlist"
+    lesson1.detail = "A collection of my personal favorite and spiritual videos. Pick one from the play list."
+    lesson1.url = "https://www.youtube.com/playlist?list=PLbuu8VeGQ5CN5XZeSk8cUkHUpqKHaKYwP"
+    lesson1.youTubeVideo = false
+    lesson1.order = 1
+    lesson1.favorite = true
+    lesson1.random = Int64(arc4random_uniform(1000))
+    lesson1.selected = true
+    lesson1.sortingIndex = 0
+    
+    ad.saveContext()
+}
+
+func generateCouncils() {
+    getTasks()
+    let council = Council(context: context)
+    let selectedCouncil = tasksArray[10]
+    council.selectedOne = selectedCouncil
+    
+    
+    
+    
+    ad.saveContext()
+}
+
+func generateGames() {
+    getTasks()
+    
+    ad.saveContext()
+}
+
+func generateTreats() {
+    getTasks()
+    
+    ad.saveContext()
+}
 
