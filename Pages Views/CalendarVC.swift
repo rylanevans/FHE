@@ -16,16 +16,15 @@ class CalendarVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clickSoundURL()
+        
+        loadPageData()
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
- 
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func showCalendarButton(_ sender: Any) {
-//        playClick()
         gotoAppleCalendar(date: Date() as NSDate)
     }
     
@@ -33,6 +32,17 @@ class CalendarVC: UIViewController {
         let interval = date.timeIntervalSinceReferenceDate
         let url = NSURL(string: "calshow:\(interval)")!
         UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskCalendar
+        let task = specificTask.selectedCalendar
+        let assignee = specificTask.assignment
+        
+        calendarMemberPhotoImage.image = assignee?.photo as? UIImage
+        calendarMemberNameLabel.text = assignee?.name
+        calendarTitleLabel.text = task?.title
+        calendarDetailLabel.text = task?.detail
     }
 }
 

@@ -19,7 +19,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let memberPicker = UIPickerView()
     var songsArray = [Song]()
-    let song = taskSong[0]
+    let song = taskSongsArray[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         getTaskSong()
         segment.selectedSegmentIndex = Int(song.segment)
         getAllSongs()
-        getMembersPlusAutoAssigned()
+        getMembersForPicker()
         loadSongAssignmentImage()
         attemptFetch()
         tableView.reloadData()
@@ -69,7 +69,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         getTaskSong()
         segment.selectedSegmentIndex = Int(song.segment)
         getAllSongs()
-        getMembersPlusAutoAssigned()
+        getMembersForPicker()
         loadSongAssignmentImage()
         attemptFetch()
         tableView.reloadData()
@@ -92,7 +92,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let song = taskSong[0]
+        let song = taskSongsArray[0]
         songAssigneeMemberImage.image = assignee.photo as? UIImage
         songAssigneeLabel.text = assignee.name
         song.assignment = assignee
@@ -105,7 +105,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func loadSongAssignmentImage() {
-        let song = taskSong[0]
+        let song = taskSongsArray[0]
         let assignee = song.assignment
         if song.assigned == true {
             songAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -276,7 +276,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let song = taskSong[0]
+        let song = taskSongsArray[0]
         
         resetText?.text = nil
         song.segment = Int64(segment.selectedSegmentIndex)
@@ -345,7 +345,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // Change status of selected bool
     func selectedValueToggle(_ song: Song) {
-        let task = taskSong[0]
+        let task = taskSongsArray[0]
         song.selectedOne = task
         song.selected = true
         ad.saveContext()

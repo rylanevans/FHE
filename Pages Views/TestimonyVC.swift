@@ -16,11 +16,22 @@ class TestimonyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadPageData()
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskTestimony
+        let task = specificTask.selectedTestimony
+        let assignee = specificTask.assignment
+        
+        testimonyMemberPhotoImage.image = assignee?.photo as? UIImage
+        testimonyMemberNameLabel.text = assignee?.name
+        testimonyTitleLabel.text = task?.title
+        testimonyDetailLabel.text = task?.detail
     }
 }

@@ -16,11 +16,23 @@ class SpotlightVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadPageData()
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskSpotlight
+        let task = specificTask.selectedSpotlight
+        let assignee = specificTask.assignment
+        
+        spotlightMemberPhotoImage.image = assignee?.photo as? UIImage
+        spotlightMemberNameLabel.text = assignee?.name
+        spotlightTitleLabel.text = task?.title
+        spotlightDetailLabel.text = task?.detail
     }
 }

@@ -23,7 +23,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         super.viewDidLoad()
         clickSoundURL()
         
-        loadSongPageData()
+        loadPageData()
     }
 
     @IBAction func singSongPressed(_ sender: Any) {
@@ -35,29 +35,18 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
     }
     
-    func loadSongPageData() {
-        var assignee = Member()
-        var selected = Song()
-
-        let song = taskSong[0]
+    func loadPageData() {
+        let specificTask = taskSong
+        let task = specificTask.selectedSong
+        let assignee = specificTask.assignment
         
-        if song.assignment != nil {
-            assignee = song.assignment!
-        }
-        
-        if song.selectedSong != nil {
-            selected = song.selectedSong!
-        }
-
-        songMemberNameLabel.text = assignee.name
-        songMemberPhotoImage.image = assignee.photo as? UIImage
-        songTitleLabel.text = selected.title
-        songNumberLabel.text = "#\(selected.number)"
-        songURL = selected.url ?? "https://www.lds.org/music?lang=eng"
+        songMemberPhotoImage.image = assignee?.photo as? UIImage
+        songMemberNameLabel.text = assignee?.name
+        songTitleLabel.text = task?.title
+        songNumberLabel.text = String(describing: task?.number)
     }
 }
 

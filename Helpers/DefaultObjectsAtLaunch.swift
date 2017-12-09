@@ -16,8 +16,8 @@ func checkIfLauncedBefore() {
     if launchedBefore == true {
         print("Not first launch.")
         addToTickToCounter()
-        getTasks()
-        getAttendingMembers()
+        getAllTasks()
+        getMembersAttending()
     } else {
         print("First launch, setting UserDefault.")
         beginTickCounter()
@@ -144,10 +144,10 @@ func generateFamilyMembers() {
 }
 
 func generateTasks() {
-    getAttendingMembers()
+    getMembersAttending()
     let taskOpenPrayer = Task(context: context)
     taskOpenPrayer.assigned = false
-    let assigneetaskOpenPrayer = membersArray[0]
+    let assigneetaskOpenPrayer = membersAttendingArray[0]
     taskOpenPrayer.assignment = assigneetaskOpenPrayer
     taskOpenPrayer.defaultNumber = 1
     taskOpenPrayer.enabled = true
@@ -158,7 +158,7 @@ func generateTasks() {
     
     let taskSongs = Task(context: context)
     taskSongs.assigned = false
-    let assigneetaskSongs = membersArray[1]
+    let assigneetaskSongs = membersAttendingArray[1]
     taskSongs.assignment = assigneetaskSongs
     taskSongs.defaultNumber = 2
     taskSongs.enabled = true
@@ -169,7 +169,7 @@ func generateTasks() {
     
     let taskRule = Task(context: context)
     taskRule.assigned = false
-    let assigneetaskRule = membersArray[0]
+    let assigneetaskRule = membersAttendingArray[0]
     taskRule.assignment = assigneetaskRule
     taskRule.defaultNumber = 3
     taskRule.enabled = false
@@ -180,7 +180,7 @@ func generateTasks() {
     
     let taskScripture = Task(context: context)
     taskScripture.assigned = false
-    let assigneetaskScripture = membersArray[2]
+    let assigneetaskScripture = membersAttendingArray[2]
     taskScripture.assignment = assigneetaskScripture
     taskScripture.defaultNumber = 4
     taskScripture.enabled = true
@@ -191,7 +191,7 @@ func generateTasks() {
     
     let taskCalendar = Task(context: context)
     taskCalendar.assigned = false
-    let assigneetaskCalendar = membersArray[0]
+    let assigneetaskCalendar = membersAttendingArray[0]
     taskCalendar.assignment = assigneetaskCalendar
     taskCalendar.defaultNumber = 5
     taskCalendar.enabled = false
@@ -202,7 +202,7 @@ func generateTasks() {
     
     let taskTestimony = Task(context: context)
     taskTestimony.assigned = false
-    let assigneetaskTestimony = membersArray[0]
+    let assigneetaskTestimony = membersAttendingArray[0]
     taskTestimony.assignment = assigneetaskTestimony
     taskTestimony.defaultNumber = 6
     taskTestimony.enabled = false
@@ -213,7 +213,7 @@ func generateTasks() {
     
     let taskSpotlight = Task(context: context)
     taskSpotlight.assigned = false
-    let assigneetaskSpotlight = membersArray[0]
+    let assigneetaskSpotlight = membersAttendingArray[0]
     taskSpotlight.assignment = assigneetaskSpotlight
     taskSpotlight.defaultNumber = 7
     taskSpotlight.enabled = false
@@ -224,7 +224,7 @@ func generateTasks() {
     
     let taskMisc = Task(context: context)
     taskMisc.assigned = false
-    let assigneetaskMisc = membersArray[0]
+    let assigneetaskMisc = membersAttendingArray[0]
     taskMisc.assignment = assigneetaskMisc
     taskMisc.defaultNumber = 8
     taskMisc.enabled = false
@@ -235,7 +235,7 @@ func generateTasks() {
     
     let taskThought = Task(context: context)
     taskThought.assigned = false
-    let assigneetaskThought = membersArray[0]
+    let assigneetaskThought = membersAttendingArray[0]
     taskThought.assignment = assigneetaskThought
     taskThought.defaultNumber = 9
     taskThought.enabled = false
@@ -246,7 +246,7 @@ func generateTasks() {
     
     let taskLesson = Task(context: context)
     taskLesson.assigned = false
-    let assigneetaskLesson = membersArray[3]
+    let assigneetaskLesson = membersAttendingArray[3]
     taskLesson.assignment = assigneetaskLesson
     taskLesson.defaultNumber = 10
     taskLesson.enabled = true
@@ -257,7 +257,7 @@ func generateTasks() {
     
     let taskCouncil = Task(context: context)
     taskCouncil.assigned = false
-    let assigneetaskCouncil = membersArray[0]
+    let assigneetaskCouncil = membersAttendingArray[0]
     taskCouncil.assignment = assigneetaskCouncil
     taskCouncil.defaultNumber = 11
     taskCouncil.enabled = false
@@ -268,7 +268,7 @@ func generateTasks() {
     
     let taskGame = Task(context: context)
     taskGame.assigned = false
-    let assigneetaskGame = membersArray[4]
+    let assigneetaskGame = membersAttendingArray[4]
     taskGame.assignment = assigneetaskGame
     taskGame.defaultNumber = 12
     taskGame.enabled = true
@@ -279,7 +279,7 @@ func generateTasks() {
     
     let taskClosePrayer = Task(context: context)
     taskClosePrayer.assigned = false
-    let assigneetaskClosePrayer = membersArray[5]
+    let assigneetaskClosePrayer = membersAttendingArray[5]
     taskClosePrayer.assignment = assigneetaskClosePrayer
     taskClosePrayer.defaultNumber = 13
     taskClosePrayer.enabled = true
@@ -290,7 +290,7 @@ func generateTasks() {
     
     let taskTreat = Task(context: context)
     taskTreat.assigned = false
-    let assigneetaskTreat = membersArray[0]
+    let assigneetaskTreat = membersAttendingArray[0]
     taskTreat.assignment = assigneetaskTreat
     taskTreat.defaultNumber = 14
     taskTreat.enabled = true
@@ -303,16 +303,16 @@ func generateTasks() {
 }
 
 func generatePray() {
-    getTasks()
+    getAllTasks()
     let prayer = Prayer(context: context)
-    prayer.title = "Steps to prayer"
+    prayer.title = "Steps To Prayer"
     prayer.detail = "1. Address Heavenly Father/n2. Share Gratitude/n3. Ask for needs/n4. Close in Jesus Christ's name"
     prayer.selected = true
-    prayer.selectedOne = selectedPrayer
+    prayer.selectedOne = taskPrayer
 }
 
 func generateSongs() {
-    getTasks()
+    getAllTasks()
     let song1 = Song(context: context)
     song1.order = 1
     song1.random = Int64(arc4random_uniform(100))
@@ -899,7 +899,7 @@ func generateSongs() {
     song56.topic = "Heavenly Father"
     song56.selected = true
     song56.favorite = true
-    song56.selectedOne = selectedSong
+    song56.selectedOne = taskSong
     song56.sortingIndex = 0
     
     let song57 = Song(context: context)
@@ -1506,7 +1506,7 @@ func generateSongs() {
 }
 
 func generateRules() {
-    getTasks()
+    getAllTasks()
     let rule1 = Rule(context: context)
     rule1.title = "Media"
     rule1.detail = "“The media's the most powerful entity on earth. They have the power to make the innocent guilty and to make the guilty innocent, and that's power. Because they control the minds of the masses.”\n- Malcolm X"
@@ -1515,7 +1515,7 @@ func generateRules() {
     rule1.random = Int64(arc4random_uniform(1000))
     rule1.selected = true
     rule1.sortingIndex = 0
-    rule1.selectedOne = selectedRule
+    rule1.selectedOne = taskRule
     
     let rule2 = Rule(context: context)
     rule2.title = "Respect Others"
@@ -1611,7 +1611,7 @@ func generateRules() {
 }
 
 func generateScripture() {
-    getTasks()
+    getAllTasks()
     let scripture1 = Scripture(context: context)
     scripture1.topic = topicsArray[0]
     scripture1.volume = "Book of Mormon"
@@ -1624,7 +1624,7 @@ func generateScripture() {
     scripture1.random = Int64(arc4random_uniform(1000))
     scripture1.selected = true
     scripture1.sortingIndex = 0
-    scripture1.selectedOne = selectedScripture
+    scripture1.selectedOne = taskScripture
     
     let scripture2 = Scripture(context: context)
     scripture2.topic = topicsArray[0]
@@ -1643,9 +1643,9 @@ func generateScripture() {
 }
 
 func generateCalendar() {
-    getTasks()
+    getAllTasks()
     let calendar = Calendar(context: context)
-    calendar.selectedOne = selectedCalendar
+    calendar.selectedOne = taskCalendar
     calendar.title = "Planning Meeting"
     calendar.detail = "Upcoming events:\n\n1. Activities\n2. Birthdays / Holidays\n3. Traveling / Vacations\n4. Family dinners"
     calendar.selected = true
@@ -1654,9 +1654,9 @@ func generateCalendar() {
 }
 
 func generateTestimony() {
-    getTasks()
+    getAllTasks()
     let testimony = Testimony(context: context)
-    testimony.selectedOne = selectedTestimony
+    testimony.selectedOne = taskTestimony
     testimony.title = "I have a testimony that..."
     testimony.detail = "1. Heavenly Father lives and loves His children. I am a child of God.\n2. Jesus Christ lives, that He is the Son of God, and that He carried out the infinite Atonement.\n3. Joseph Smith is the prophet of God who was called to restore the Gospel.\n4. The Church of Jesus Christ of Latter-day Saints is the Savior's true Church on the earth.\n5. The Church is led by a living prophet today.\n6. The Book of Mormon is another testiment of Jesus Christ.\n7. A testimony is a spiritual witness given by the Holy Ghost.\n8. A testimony grows to include all principles of the Gospel."
     testimony.selected = true
@@ -1665,9 +1665,9 @@ func generateTestimony() {
 }
 
 func generateSpotlight() {
-    getTasks()
+    getAllTasks()
     let spotlight = Spotlight(context: context)
-    spotlight.selectedOne = selectedSpotlight
+    spotlight.selectedOne = taskSpotlight
     spotlight.title = "Affirmations"
     spotlight.detail = "I noticed something you did in one of the following ways of life:\n\n1. Emotional\n2. Financial\n3. Intellectual\n4. Social\n5. Occupational\n6. Physical\n7. Environmental\n8. Spiritual"
     spotlight.selected = true
@@ -1676,9 +1676,9 @@ func generateSpotlight() {
 }
 
 func generateMisc() {
-    getTasks()
+    getAllTasks()
     let misc = Misc(context: context)
-    misc.selectedOne = selectedMisc
+    misc.selectedOne = taskMisc
     misc.title = "Tell me something I don't know..."
     misc.detail = "While knowledge is orderly and cumulative, information is random and miscellaneous."
     misc.url = "https://www.mormonchannel.org/watch/series/mormon-channel-studio/mormon-channel-studio-nashville-tribute-band"
@@ -1688,9 +1688,9 @@ func generateMisc() {
 }
 
 func generateThoughts() {
-    getTasks()
+    getAllTasks()
     let thought1 = Thought(context: context)
-    thought1.selectedOne = selectedThought
+    thought1.selectedOne = taskThought
     thought1.topic = dimensionsArray[0]
     thought1.title = "Emotional"
     thought1.detail = "Meditation"
@@ -1782,9 +1782,9 @@ func generateThoughts() {
 }
 
 func generateLessons() {
-    getTasks()
+    getAllTasks()
     let lesson1 = Lesson(context: context)
-    lesson1.selectedOne = selectedLesson
+    lesson1.selectedOne = taskLesson
     lesson1.topic = topicsArray[0]
     lesson1.title = "FHE Playlist"
     lesson1.detail = "A collection of my personal favorite and spiritual videos. Pick one from the play list."
@@ -1812,9 +1812,9 @@ func generateLessons() {
 }
 
 func generateCouncils() {
-    getTasks()
+    getAllTasks()
     let council = Council(context: context)
-    council.selectedOne = selectedCouncil
+    council.selectedOne = taskCouncil
     council.title = "Family Council Meeting"
     council.detail = "“If people don't weigh in, they can't buy in.“\n- Patrick Lencioni"
     council.url = "https://www.lds.org/blog/bc/images/family-councils-cheat-sheet.pdf"
@@ -1824,7 +1824,7 @@ func generateCouncils() {
 }
 
 func generateGames() {
-    getTasks()
+    getAllTasks()
     let game1 = Game(context: context)
     game1.category = categoryArray[0]
     game1.title = "Surprise!"
@@ -1836,7 +1836,7 @@ func generateGames() {
     game1.sortingIndex = 0
     
     let game2 = Game(context: context)
-    game2.selectedOne = selectedGame
+    game2.selectedOne = taskGame
     game2.category = categoryArray[1]
     game2.title = "Button, Button, Who's Got the Button?"
     game2.url = "http://www.fungameskidsplay.com/buttonbuttongame.htm"
@@ -2960,9 +2960,9 @@ func generateGames() {
 }
 
 func generateTreats() {
-    getTasks()
+    getAllTasks()
     let treat1 = Treat(context: context)
-    treat1.selectedOne = selectedTreat
+    treat1.selectedOne = taskTreat
     treat1.category = treatsArray[0]
     treat1.title = "Surprise!"
     treat1.url = "https://drive.google.com/file/d/1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe/view"

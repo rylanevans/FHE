@@ -17,7 +17,8 @@ class ThoughtVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadPageData()
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
@@ -30,8 +31,18 @@ class ThoughtVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskThought
+        let task = specificTask.selectedThought
+        let assignee = specificTask.assignment
+        
+        thoughtMemberPhotoImage.image = assignee?.photo as? UIImage
+        thoughtMemberNameLabel.text = assignee?.name
+        thoughtTitleLabel.text = task?.title
+        thoughtDetailLabel.text = task?.detail
     }
 }
 

@@ -11,7 +11,6 @@ import SafariServices
 import WebKit
 
 class LessonVC: UIViewController {
-    @IBOutlet weak var lessonThemeLabel: UILabel!
     @IBOutlet weak var lessonMemberPhotoImage: UIImageView!
     @IBOutlet weak var lessonMemberNameLabel: UILabel!
     @IBOutlet weak var lessonTitleLabel: UILabel!
@@ -20,7 +19,8 @@ class LessonVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        clickSoundURL()
+        
+        loadPageData()
         
         let url = URL(string: "https://www.youtube.com/embed/9MiF_HKoFr4?rel=0&amp;controls=0&amp;showinfo=0")
         let request = URLRequest(url: url!)
@@ -29,8 +29,18 @@ class LessonVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskLesson
+        let task = specificTask.selectedLesson
+        let assignee = specificTask.assignment
+        
+        lessonMemberPhotoImage.image = assignee?.photo as? UIImage
+        lessonMemberNameLabel.text = assignee?.name
+        lessonTitleLabel.text = task?.title
+        lessonDetailLabel.text = task?.detail
     }
 }
 

@@ -9,27 +9,45 @@
 import Foundation
 import CoreData
 
-var counterArray = [Counter]()
+// MARK: - Selected Tasks & Counter
+let taskPrayer = tasksAllArray[0]
+let taskSong = tasksAllArray[1]
+let taskRule = tasksAllArray[2]
+let taskScripture = tasksAllArray[3]
+let taskCalendar = tasksAllArray[4]
+let taskTestimony = tasksAllArray[5]
+let taskSpotlight = tasksAllArray[6]
+let taskMisc = tasksAllArray[7]
+let taskThought = tasksAllArray[8]
+let taskLesson = tasksAllArray[9]
+let taskCouncil = tasksAllArray[10]
+let taskGame = tasksAllArray[11]
+let taskTreat = tasksAllArray[12]
 var counter = counterArray[0]
+
+// MARK: - Counters
+var counterArray = [Counter]()
+var membersAllArray = [Member]()
 var membersPickerArray = [Member]()
-var membersArray = [Member]()
-var tasksArray = [Task]()
+var membersAttendingArray = [Member]()
+var tasksAllArray = [Task]()
+var tasksEnabledArray = [Task]()
 
-var taskPrayer = [Task]()
-var taskSong = [Task]()
-var taskRule = [Task]()
-var taskScripture = [Task]()
-var taskCalendar = [Task]()
-var taskTestimony = [Task]()
-var taskSpotlight = [Task]()
-var taskMisc = [Task]()
-var taskThought = [Task]()
-var taskLessons = [Task]()
-var taskCouncil = [Task]()
-var taskGame = [Task]()
-var taskTreat = [Task]()
+var taskPrayersArray = [Task]()
+var taskSongsArray = [Task]()
+var taskRulesArray = [Task]()
+var taskScripturesArray = [Task]()
+var taskCalendarArray = [Task]()
+var taskTestimonyArray = [Task]()
+var taskSpotlightArray = [Task]()
+var taskMiscArray = [Task]()
+var taskThoughtsArray = [Task]()
+var taskLessonsArray = [Task]()
+var taskCouncilArray = [Task]()
+var taskGamesArray = [Task]()
+var taskTreatsArray = [Task]()
 
-func getAttendingMembers() {
+func getMembersAttending() {
     let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
     
     let filterForAttending = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
@@ -41,14 +59,14 @@ func getAttendingMembers() {
     fetchRequest.sortDescriptors = [sortByAge]
     
     do {
-        membersArray = try context.fetch(fetchRequest)
+        membersAttendingArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
 
-func getMembersPlusAutoAssigned() {
+func getMembersForPicker() {
     let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
     
     let filterForAttending = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
@@ -65,7 +83,35 @@ func getMembersPlusAutoAssigned() {
     }
 }
 
-func getTasks() {
+func getAllMembers() {
+    let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
+    
+    let sortByAge = NSSortDescriptor(key: "age", ascending: true)
+    
+    fetchRequest.sortDescriptors = [sortByAge]
+    
+    do {
+        membersAllArray = try context.fetch(fetchRequest)
+    } catch {
+        let error = error as NSError
+        print("\(error)")
+    }
+}
+
+func getAllTasks() {
+    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+    let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
+    fetchRequest.sortDescriptors = [sortByDefaultNumber]
+    
+    do {
+        tasksAllArray = try context.fetch(fetchRequest)
+    } catch {
+        let error = error as NSError
+        print("\(error)")
+    }
+}
+
+func getEnabledTasks() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
     let predicate = NSPredicate(format: "enabled == %@", NSNumber(booleanLiteral: true))
     let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
@@ -73,7 +119,7 @@ func getTasks() {
     fetchRequest.sortDescriptors = [sortByDefaultNumber]
     
     do {
-        tasksArray = try context.fetch(fetchRequest)
+        tasksEnabledArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -86,7 +132,7 @@ func getTaskPrayer() {
     fetchRequest.predicate = predicate
     
     do {
-        taskPrayer = try context.fetch(fetchRequest)
+        taskPrayersArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -99,7 +145,7 @@ func getTaskSong() {
     fetchRequest.predicate = predicate
     
     do {
-        taskSong = try context.fetch(fetchRequest)
+        taskSongsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -112,7 +158,7 @@ func getTaskRule() {
     fetchRequest.predicate = predicate
     
     do {
-        taskRule = try context.fetch(fetchRequest)
+        taskRulesArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -125,13 +171,12 @@ func getTaskScripture() {
     fetchRequest.predicate = predicate
     
     do {
-        taskScripture = try context.fetch(fetchRequest)
+        taskScripturesArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskCalendar() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -139,13 +184,12 @@ func getTaskCalendar() {
     fetchRequest.predicate = predicate
     
     do {
-        taskCalendar = try context.fetch(fetchRequest)
+        taskCalendarArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskTestimony() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -153,13 +197,12 @@ func getTaskTestimony() {
     fetchRequest.predicate = predicate
     
     do {
-        taskTestimony = try context.fetch(fetchRequest)
+        taskTestimonyArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskSpotlight() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -167,13 +210,12 @@ func getTaskSpotlight() {
     fetchRequest.predicate = predicate
     
     do {
-        taskSpotlight = try context.fetch(fetchRequest)
+        taskSpotlightArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskMisc() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -181,13 +223,12 @@ func getTaskMisc() {
     fetchRequest.predicate = predicate
     
     do {
-        taskMisc = try context.fetch(fetchRequest)
+        taskMiscArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskThought() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -195,13 +236,12 @@ func getTaskThought() {
     fetchRequest.predicate = predicate
     
     do {
-        taskThought = try context.fetch(fetchRequest)
+        taskThoughtsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskLessons() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -209,13 +249,12 @@ func getTaskLessons() {
     fetchRequest.predicate = predicate
     
     do {
-        taskLessons = try context.fetch(fetchRequest)
+        taskLessonsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskCouncil() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -223,13 +262,12 @@ func getTaskCouncil() {
     fetchRequest.predicate = predicate
     
     do {
-        taskCouncil = try context.fetch(fetchRequest)
+        taskCouncilArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskGame() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -237,13 +275,12 @@ func getTaskGame() {
     fetchRequest.predicate = predicate
     
     do {
-        taskGame = try context.fetch(fetchRequest)
+        taskGamesArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
     }
 }
-
 
 func getTaskTreat() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
@@ -251,7 +288,7 @@ func getTaskTreat() {
     fetchRequest.predicate = predicate
     
     do {
-        taskTreat = try context.fetch(fetchRequest)
+        taskTreatsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")

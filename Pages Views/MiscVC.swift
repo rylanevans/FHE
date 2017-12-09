@@ -17,7 +17,8 @@ class MisVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadPageData()
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
@@ -30,8 +31,18 @@ class MisVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskMisc
+        let task = specificTask.selectedMisc
+        let assignee = specificTask.assignment
+        
+        miscMemberPhotoImage.image = assignee?.photo as? UIImage
+        miscMemberNameLabel.text = assignee?.name
+        miscTitleLabel.text = task?.title
+        miscDetailLabel.text = task?.detail
     }
 }
 

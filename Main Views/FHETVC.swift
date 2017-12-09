@@ -22,8 +22,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         super.viewDidLoad()
         
         self.clickSoundURL()
-        getAttendingMembers()
-        getTasks()
+        getMembersAttending()
+        getAllTasks()
         taskAttemptFetch()
         assignmentTableView.reloadData()
     }
@@ -52,7 +52,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
 //            let sectionInfo = sections[section]
 //            return sectionInfo.numberOfObjects
 //        }
-        return tasksArray.count
+        return tasksEnabledArray.count
     }
     
     // Height for each row

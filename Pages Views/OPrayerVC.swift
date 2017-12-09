@@ -9,7 +9,7 @@
 import UIKit
 
 class OPrayerVC: UIViewController {
-    @IBOutlet weak var prayerMemberPhotoImage: UIStackView!
+    @IBOutlet weak var prayerMemberPhotoImage: UIImageView!
     @IBOutlet weak var prayerMemberNameLabel: UILabel!
     @IBOutlet weak var prayerTitleLabel: UILabel!
     @IBOutlet weak var prayerDetailLabel: UILabel!
@@ -17,7 +17,7 @@ class OPrayerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadOpeningPrayerPageData()
+        loadPageData()
     }
     
     @objc func gestureRecognizerAction(_ gesture: UIPanGestureRecognizer) {
@@ -25,27 +25,17 @@ class OPrayerVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
     }
     
-    func loadOpeningPrayerPageData() {
-//        var assignee = Member()
-//        var selected = Prayer()
-//
-//        let prayer = selectedPrayer
-//
-//        if prayer.assignment != nil {
-//            assignee = prayer.assignment!
-//        }
-//
-//        if prayer.selectedSong != nil {
-//            selected = prayer.selectedSong!
-//        }
-//
-//        prayerMemberNameLabel.text = assignee.name
-//        prayerMemberPhotoImage.image = assignee.photo as? UIImage
-//        prayerTitleLabel.text = selected.title
-//        prayerDetailLabel
+    func loadPageData() {
+        let specificTask = taskPrayer
+        let task = specificTask.selectedPrayer
+        let assignee = specificTask.assignment
+        
+        prayerMemberPhotoImage.image = assignee?.photo as? UIImage
+        prayerMemberNameLabel.text = assignee?.name
+        prayerTitleLabel.text = task?.title
+        prayerDetailLabel.text = task?.detail
     }
 }

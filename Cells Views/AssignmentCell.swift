@@ -44,7 +44,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         memberAssigneeText.inputView = memberPicker
         memberAssigneeText.inputAccessoryView = toolBar
         
-        getMembersPlusAutoAssigned()
+        getMembersForPicker()
         getTaskSong()
     }
 
@@ -66,7 +66,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         let assignee = membersPickerArray[row]
-        let song = taskSong[0]
+        let song = taskSongsArray[0]
         memberImage.image = assignee.photo as? UIImage
         memberNameLabel.text = assignee.name
         song.assignment = assignee

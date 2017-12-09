@@ -9,7 +9,6 @@
 import UIKit
 
 class TreatVC: UIViewController {
-    @IBOutlet weak var treatCategoryLabel: UILabel!
     @IBOutlet weak var treatMemberPhotoImage: UIImageView!
     @IBOutlet weak var treatMemberNameLabel: UILabel!
     @IBOutlet weak var treatTitleLabel: UILabel!
@@ -17,10 +16,21 @@ class TreatVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadPageData()
     }
     
     @IBAction func closedButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskTreat
+        let task = specificTask.selectedTreat
+        let assignee = specificTask.assignment
+        
+        treatMemberPhotoImage.image = assignee?.photo as? UIImage
+        treatMemberNameLabel.text = assignee?.name
+        treatTitleLabel.text = task?.title
     }
 }

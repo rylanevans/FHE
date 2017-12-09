@@ -10,7 +10,6 @@ import UIKit
 import SafariServices
 
 class GameVC: UIViewController {
-    @IBOutlet weak var gameThemeLabel: UILabel!
     @IBOutlet weak var gameMemberPhotoImage: UIImageView!
     @IBOutlet weak var gameMemberNameLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
@@ -20,10 +19,10 @@ class GameVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loadPageData()
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
-        //        playClick()
         let URL = NSURL(string: "https://pixabay.com/en/halloween-cat-weird-surreal-959006/")!
         let gameWebVC = SFSafariViewController(url: URL as URL)
         gameWebVC.delegate = self
@@ -32,8 +31,17 @@ class GameVC: UIViewController {
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskGame
+        let task = specificTask.selectedGame
+        let assignee = specificTask.assignment
+        
+        gameMemberPhotoImage.image = assignee?.photo as? UIImage
+        gameMemberNameLabel.text = assignee?.name
+        gameTitleLabel.text = task?.title
     }
 }
 

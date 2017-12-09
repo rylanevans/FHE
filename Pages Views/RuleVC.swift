@@ -10,7 +10,6 @@ import UIKit
 import SafariServices
 
 class RuleVC: UIViewController {
-    @IBOutlet weak var ruleCategoryLabel: UILabel!
     @IBOutlet weak var ruleMemberPhotoImage: UIImageView!
     @IBOutlet weak var ruleMemberNameLabel: UILabel!
     @IBOutlet weak var ruleTitleLabel: UILabel!
@@ -18,20 +17,34 @@ class RuleVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadPageData()
     }
     
     @IBAction func ruleDetailsPressed(_ sender: Any) {
-        //        playClick()
-        let URL = NSURL(string: "https://drive.google.com/file/d/0B7Bm33sKVSSqSnBFblFHUGU4NVk/view")!
-        let ruleWebVC = SFSafariViewController(url: URL as URL)
+        let specificTask = taskRule
+        let task = specificTask.selectedRule
+        let url = URL(string: (task?.url)!)
+//        let url = NSURL(string: "https://drive.google.com/file/d/0B7Bm33sKVSSqSnBFblFHUGU4NVk/view")!
+        let ruleWebVC = SFSafariViewController(url: url! as URL)
         ruleWebVC.delegate = self
         
         present(ruleWebVC, animated: true, completion: nil)
     }
 
     @IBAction func closeButtonPressed(_ sender: Any) {
-
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadPageData() {
+        let specificTask = taskRule
+        let task = specificTask.selectedRule
+        let assignee = specificTask.assignment
+        
+        ruleMemberPhotoImage.image = assignee?.photo as? UIImage
+        ruleMemberNameLabel.text = assignee?.name
+        ruleTitleLabel.text = task?.title
+        ruleDetailLabel.text = task?.detail
     }
 }
 
