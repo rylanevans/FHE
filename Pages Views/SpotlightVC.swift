@@ -27,12 +27,14 @@ class SpotlightVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskSpotlight
-        let task = specificTask.selectedSpotlight
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedSpotlight {
+            spotlightTitleLabel.text = task.title
+            spotlightDetailLabel.text = task.detail
+        }
         
-        spotlightMemberPhotoImage.image = assignee?.photo as? UIImage
-        spotlightMemberNameLabel.text = assignee?.name
-        spotlightTitleLabel.text = task?.title
-        spotlightDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            spotlightMemberPhotoImage.image = assignee.photo as? UIImage
+            spotlightMemberNameLabel.text = assignee.name
+        }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17B1003" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Calendar" representedClassName="Calendar" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -29,6 +29,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedGame" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -150,7 +151,6 @@
         <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedThought" inverseEntity="Task" syncable="YES"/>
     </entity>
@@ -171,7 +171,7 @@
         <element name="Council" positionX="54" positionY="162" width="128" height="120"/>
         <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="195"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="225"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="240"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>
         <element name="Misc" positionX="36" positionY="144" width="128" height="30"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="30"/>
@@ -181,7 +181,7 @@
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="30"/>
         <element name="Task" positionX="9" positionY="153" width="128" height="30"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="30"/>
-        <element name="Thought" positionX="45" positionY="153" width="128" height="210"/>
+        <element name="Thought" positionX="45" positionY="153" width="128" height="195"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="195"/>
     </elements>
 </model>

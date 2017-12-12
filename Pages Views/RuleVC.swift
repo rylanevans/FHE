@@ -38,13 +38,15 @@ class RuleVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskRule
-        let task = specificTask.selectedRule
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedRule {
+            ruleTitleLabel.text = task.title
+            ruleDetailLabel.text = task.detail
+        }
         
-        ruleMemberPhotoImage.image = assignee?.photo as? UIImage
-        ruleMemberNameLabel.text = assignee?.name
-        ruleTitleLabel.text = task?.title
-        ruleDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            ruleMemberPhotoImage.image = assignee.photo as? UIImage
+            ruleMemberNameLabel.text = assignee.name
+        }
     }
 }
 

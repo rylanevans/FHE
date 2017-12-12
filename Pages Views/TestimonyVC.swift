@@ -26,12 +26,13 @@ class TestimonyVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskTestimony
-        let task = specificTask.selectedTestimony
-        let assignee = specificTask.assignment
-        
-        testimonyMemberPhotoImage.image = assignee?.photo as? UIImage
-        testimonyMemberNameLabel.text = assignee?.name
-        testimonyTitleLabel.text = task?.title
-        testimonyDetailLabel.text = task?.detail
+        if let task = specificTask.selectedTestimony {
+            testimonyTitleLabel.text = task.title
+            testimonyDetailLabel.text = task.detail
+        }
+        if let assignee = specificTask.assignment {
+            testimonyMemberPhotoImage.image = assignee.photo as? UIImage
+            testimonyMemberNameLabel.text = assignee.name
+        }
     }
 }

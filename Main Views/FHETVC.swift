@@ -48,10 +48,10 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     // Number of rows in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        if let sections = taskController.sections {
-//            let sectionInfo = sections[section]
-//            return sectionInfo.numberOfObjects
-//        }
+        if let sections = taskController.sections {
+            let sectionInfo = sections[section]
+            return sectionInfo.numberOfObjects
+        }
         return tasksEnabledArray.count
     }
     

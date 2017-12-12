@@ -34,13 +34,15 @@ class LessonVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskLesson
-        let task = specificTask.selectedLesson
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedLesson{
+            lessonTitleLabel.text = task.title
+            lessonDetailLabel.text = task.detail
+        }
         
-        lessonMemberPhotoImage.image = assignee?.photo as? UIImage
-        lessonMemberNameLabel.text = assignee?.name
-        lessonTitleLabel.text = task?.title
-        lessonDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            lessonMemberPhotoImage.image = assignee.photo as? UIImage
+            lessonMemberNameLabel.text = assignee.name
+        }
     }
 }
 

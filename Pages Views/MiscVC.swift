@@ -36,13 +36,15 @@ class MisVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskMisc
-        let task = specificTask.selectedMisc
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedMisc {
+            miscTitleLabel.text = task.title
+            miscDetailLabel.text = task.detail
+        }
         
-        miscMemberPhotoImage.image = assignee?.photo as? UIImage
-        miscMemberNameLabel.text = assignee?.name
-        miscTitleLabel.text = task?.title
-        miscDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            miscMemberPhotoImage.image = assignee.photo as? UIImage
+            miscMemberNameLabel.text = assignee.name
+        }
     }
 }
 

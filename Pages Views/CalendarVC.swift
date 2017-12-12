@@ -36,13 +36,15 @@ class CalendarVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskCalendar
-        let task = specificTask.selectedCalendar
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedCalendar {
+            calendarTitleLabel.text = task.title
+            calendarDetailLabel.text = task.detail
+        }
         
-        calendarMemberPhotoImage.image = assignee?.photo as? UIImage
-        calendarMemberNameLabel.text = assignee?.name
-        calendarTitleLabel.text = task?.title
-        calendarDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            calendarMemberPhotoImage.image = assignee.photo as? UIImage
+            calendarMemberNameLabel.text = assignee.name
+        }
     }
 }
 

@@ -17,6 +17,9 @@ class OPrayerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getMembersAttending()
+        getAllTasks()
+        getTaskPrayer()
         loadPageData()
     }
     

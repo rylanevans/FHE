@@ -23,7 +23,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var songFavorite: UIImageView!
     
     var songBooks = songBooksArray
-    var songTopics = topicsArray
+    var songTopics = lessonTopicsArray
     var songToEdit: Song?
     var songAssignment: Task?
     let songTopicPicker = UIPickerView()

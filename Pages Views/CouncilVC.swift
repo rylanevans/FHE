@@ -36,13 +36,15 @@ class CouncilVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskCouncil
-        let task = specificTask.selectedCouncil
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedCouncil {
+            councilTitleLabel.text = task.title
+            councilDetailLabel.text = task.detail
+        }
         
-        councilMemberPhotoImage.image = assignee?.photo as? UIImage
-        councilMemberNameLabel.text = assignee?.name
-        councilTitleLabel.text = task?.title
-        councilDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            councilMemberPhotoImage.image = assignee.photo as? UIImage
+            councilMemberNameLabel.text = assignee.name
+        }
     }
 }
 

@@ -40,13 +40,15 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     
     func loadPageData() {
         let specificTask = taskSong
-        let task = specificTask.selectedSong
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedSong {
+            songTitleLabel.text = task.title
+            songNumberLabel.text = String(describing: task.number)
+        }
         
-        songMemberPhotoImage.image = assignee?.photo as? UIImage
-        songMemberNameLabel.text = assignee?.name
-        songTitleLabel.text = task?.title
-        songNumberLabel.text = String(describing: task?.number)
+        if let assignee = specificTask.assignment{
+            songMemberPhotoImage.image = assignee.photo as? UIImage
+            songMemberNameLabel.text = assignee.name
+        }
     }
 }
 

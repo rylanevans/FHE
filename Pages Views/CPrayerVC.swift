@@ -26,12 +26,14 @@ class CPrayerVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskPrayer
-        let task = specificTask.selectedPrayer
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedPrayer {
+            prayerTitleLabel.text = task.title
+            prayerDetailLabel.text = task.detail
+        }
         
-        prayerMemberPhotoImage.image = assignee?.photo as? UIImage
-        prayerMemberNameLabel.text = assignee?.name
-        prayerTitleLabel.text = task?.title
-        prayerDetailLabel.text = task?.detail
+        if let assignee = specificTask.assignment {
+            prayerMemberPhotoImage.image = assignee.photo as? UIImage
+            prayerMemberNameLabel.text = assignee.name
+        }
     }
 }

@@ -28,13 +28,15 @@ class ScriptureVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskScripture
-        let task = specificTask.selectedScripture
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedScripture {
+            scriptureTitleLabel.text = task.title
+            scriptureDetailLabel.text = "\(task.volume ?? "N/A") \(task.book ?? "N/A") \(task.chapter ?? "N/A") \(task.verse ?? "N/A")"
+        }
         
-        scriptureMemberPhotoImage.image = assignee?.photo as? UIImage
-        scriptureMemberNameLabel.text = assignee?.name
-        scriptureTitleLabel.text = task?.title
-        scriptureDetailLabel.text = "\(task?.volume) \(task?.book) \(task?.chapter) \(task?.verse)"
+        if let assignee = specificTask.assignment {
+            scriptureMemberPhotoImage.image = assignee.photo as? UIImage
+            scriptureMemberNameLabel.text = assignee.name
+        }
         
         //        let url = URL(string: "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5")
         let url = URL(string: "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5")

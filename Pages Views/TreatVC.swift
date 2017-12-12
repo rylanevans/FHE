@@ -26,11 +26,13 @@ class TreatVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskTreat
-        let task = specificTask.selectedTreat
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedTreat {
+            treatTitleLabel.text = task.title
+        }
         
-        treatMemberPhotoImage.image = assignee?.photo as? UIImage
-        treatMemberNameLabel.text = assignee?.name
-        treatTitleLabel.text = task?.title
+        if let assignee = specificTask.assignment {
+            treatMemberPhotoImage.image = assignee.photo as? UIImage
+            treatMemberNameLabel.text = assignee.name
+        }
     }
 }

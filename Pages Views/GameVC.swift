@@ -36,12 +36,14 @@ class GameVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskGame
-        let task = specificTask.selectedGame
-        let assignee = specificTask.assignment
+        if let task = specificTask.selectedGame {
+            gameTitleLabel.text = task.title
+        }
         
-        gameMemberPhotoImage.image = assignee?.photo as? UIImage
-        gameMemberNameLabel.text = assignee?.name
-        gameTitleLabel.text = task?.title
+        if let assignee = specificTask.assignment {
+            gameMemberPhotoImage.image = assignee.photo as? UIImage
+            gameMemberNameLabel.text = assignee.name
+        }
     }
 }
 

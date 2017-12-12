@@ -24,108 +24,131 @@ let IAPServiceFailureNotification = "IAPServiceFailureNotification"
 
 // MARK: - Universal Arrays
 
-let topicsArray = [
-                "Heavenly Father",
-                "Jesus Christ",
-                "Holy Ghost",
-                "Plan of Salvation",
-                "Birth of our Savior",
-                "Atonement",
-                "Forgiveness",
-                "Resurrection",
-                "Christlike Attributes",
-                "Commandments",
-                "Scriptures",
-                "Restoration",
-                "Principles & Ordinances",
-                "Endure to the end",
-                "Perfect the Saints",
-                "Proclaim the Gospel",
-                "Redeem the Dead",
-                "Care for the Poor & Needy"
+let lessonCategoryArray = [
+    "Spiritual",
+    "Temporal"
 ]
 
-let songBooksArray = ["Children's", "Hymn", "Other"]
+let lessonAspectArray = [
+    "Emotional",
+    "Financial",
+    "Intellectual",
+    "Relational/Social",
+    "Occupational",
+    "Physical",
+    "Environmental",
+    "Spiritual"
+]
+
+let lessonTopicsArray = [
+    "Heavenly Father",
+    "Jesus Christ",
+    "Holy Ghost",
+    "Plan of Salvation",
+    "Birth of our Savior",
+    "Atonement",
+    "Forgiveness",
+    "Resurrection",
+    "Christlike Attributes",
+    "Commandments",
+    "Scriptures",
+    "Restoration",
+    "Principles & Ordinances",
+    "Endure to the end",
+    "Perfect the Saints",
+    "Proclaim the Gospel",
+    "Redeem the Dead",
+    "Care for the Poor & Needy",
+    "Spiritual"
+]
+
+let songBooksArray = [
+    "Children's",
+    "Hymn",
+    "Music Video",
+    "Other"
+]
 
 //["Children's Songbook", "Hymns"]
 
-let scriptureVolumesArray = ["Old Testament",
-                             "New Testament",
-                             "Book of Mormon",
-                             "Doctrine and Covenants",
-                             "Pearl of Great Price"
+let scriptureVolumesArray = [
+    "Old Testament",
+    "New Testament",
+    "Book of Mormon",
+    "Doctrine and Covenants",
+    "Pearl of Great Price"
 ]
 
 let scriptureOTBooksArray = [
-                "1 Chronicles",
-                "1 Kings",
-                "1 Samuel",
-                "2 Chronicles",
-                "2 Kings",
-                "2 Samuel",
-                "Amos",
-                "Daniel",
-                "Deuteronomy",
-                "Ecclesiastes",
-                "Esther",
-                "Exodus",
-                "Ezekiel",
-                "Ezra",
-                "Genesis",
-                "Habakkuk",
-                "Haggai",
-                "Hosea",
-                "Isaiah",
-                "Jeremiah",
-                "Job",
-                "Joel",
-                "Jonah",
-                "Joshua",
-                "Judges",
-                "Lamentations",
-                "Leviticus",
-                "Malachi",
-                "Micah",
-                "Nahum",
-                "Nehemiah",
-                "Numbers",
-                "Obadiah",
-                "Proverbs",
-                "Psalms",
-                "Ruth",
-                "Solomon's Song",
-                "Zechariah",
-                "Zephaniah"
+    "1 Chronicles",
+    "1 Kings",
+    "1 Samuel",
+    "2 Chronicles",
+    "2 Kings",
+    "2 Samuel",
+    "Amos",
+    "Daniel",
+    "Deuteronomy",
+    "Ecclesiastes",
+    "Esther",
+    "Exodus",
+    "Ezekiel",
+    "Ezra",
+    "Genesis",
+    "Habakkuk",
+    "Haggai",
+    "Hosea",
+    "Isaiah",
+    "Jeremiah",
+    "Job",
+    "Joel",
+    "Jonah",
+    "Joshua",
+    "Judges",
+    "Lamentations",
+    "Leviticus",
+    "Malachi",
+    "Micah",
+    "Nahum",
+    "Nehemiah",
+    "Numbers",
+    "Obadiah",
+    "Proverbs",
+    "Psalms",
+    "Ruth",
+    "Solomon's Song",
+    "Zechariah",
+    "Zephaniah"
 ]
 
 let scriptureNTBooksArray = [
-                "1 Corinthians",
-                "1 John",
-                "1 Peter",
-                "1 Thessalonians",
-                "1 Timothy",
-                "2 Corinthians",
-                "2 John",
-                "2 Peter",
-                "2 Thessalonians",
-                "2 Timothy",
-                "3 John",
-                "Acts",
-                "Colossians",
-                "Ephesians",
-                "Galatians",
-                "Hebrews",
-                "James",
-                "John",
-                "Jude",
-                "Luke",
-                "Mark",
-                "Matthew",
-                "Philemon",
-                "Philippians",
-                "Revelation",
-                "Romans",
-                "Titus"
+    "1 Corinthians",
+    "1 John",
+    "1 Peter",
+    "1 Thessalonians",
+    "1 Timothy",
+    "2 Corinthians",
+    "2 John",
+    "2 Peter",
+    "2 Thessalonians",
+    "2 Timothy",
+    "3 John",
+    "Acts",
+    "Colossians",
+    "Ephesians",
+    "Galatians",
+    "Hebrews",
+    "James",
+    "John",
+    "Jude",
+    "Luke",
+    "Mark",
+    "Matthew",
+    "Philemon",
+    "Philippians",
+    "Revelation",
+    "Romans",
+    "Titus"
 ]
 
 let scriptureBOMBooksArray = [
@@ -156,18 +179,7 @@ let scripturePGPBooksArray = [
     "Moses"
 ]
 
-let dimensionsArray = [
-    "Emotional",
-    "Financial",
-    "Intellectual",
-    "Social",
-    "Occupational",
-    "Physical",
-    "Environmental",
-    "Spiritual"
-]
-
-let categoryArray = [
+let gameCategoryArray = [
     "Other",
     "Classic",
     "Board Game",
