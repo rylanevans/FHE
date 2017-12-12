@@ -115,34 +115,6 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         taskTitleLabel.text = songSelected
         memberNameLabel.text = name
         memberImage.image = photo as? UIImage
-        
-//        assignmentTask(task: task)
     }
-    
-    func assignmentTask(task: Task) {
-        let taskName = task.name ?? ""
-        let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
-        let songSelected = task.selectedSong?.title ?? "Title of task"
-        let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
-        let name = task.assignment?.name ?? "Assignee"
-        let autoAssigned = task.assigned
-        if autoAssigned == false {
-            manualOrAutoLabel.text = "Auto"
-        } else {
-            manualOrAutoLabel.text = "Manual"
-        }
-        taskImage.image = image as? UIImage
-        taskNameLabel.text = taskName
-        taskTitleLabel.text = songSelected
-        memberNameLabel.text = name
-        memberImage.image = photo as? UIImage
-    }
-    
-//    func assignmentMember(member: Member) {
-//        let name = member.name ?? ""
-//        let photo = member.photo ?? #imageLiteral(resourceName: "NoPhoto")
-//        memberNameLabel.text = name
-//        memberImage.image = photo as? UIImage
-//    }
 }
 

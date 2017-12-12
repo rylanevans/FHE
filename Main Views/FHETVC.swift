@@ -21,11 +21,28 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
+            NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
+        ]
+        
         self.clickSoundURL()
         getMembersAttending()
         getAllTasks()
         taskAttemptFetch()
         assignmentTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
@@ -66,6 +83,20 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         configureAssignmentCell(cell: detailCell, indexPath: indexPath as NSIndexPath)
         detailCell.delegate = self
         return detailCell
+    }
+    
+    // User did select row at a spesific index
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objects = taskController.fetchedObjects, objects.count > 0 {
+            let sections = taskController.sections![indexPath.section]
+            let task = sections.objects![indexPath.row]
+            //            performSegue(withIdentifier: "ShowSongs", sender: task)
+            let segueTask: Task = task as! Task
+            switch segueTask.name {
+            case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
+            default: performSegue(withIdentifier: "ShowSongs", sender: task)
+            }
+        }
     }
     
     // Function to configure each cell
