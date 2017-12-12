@@ -111,8 +111,12 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         if let objects = taskController.fetchedObjects, objects.count > 0 {
             let sections = taskController.sections![indexPath.section]
             let task = sections.objects![indexPath.row]
-            //            let task = taskController.fetchedObjects![indexPath.row]
-            performSegue(withIdentifier: "ShowSongs", sender: task)
+//            performSegue(withIdentifier: "ShowSongs", sender: task)
+            let segueTask: Task = task as! Task
+            switch segueTask.name {
+                case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
+                default: performSegue(withIdentifier: "ShowSongs", sender: task)
+            }
         }
     }
     

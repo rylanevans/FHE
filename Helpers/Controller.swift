@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 // MARK: - Selected Tasks & Counter
 let taskPrayer = tasksAllArray[0]
@@ -25,7 +26,7 @@ let taskGame = tasksAllArray[11]
 let taskTreat = tasksAllArray[12]
 var counter = counterArray[0]
 
-// MARK: - Counters
+// MARK: - Blank Arrays
 var counterArray = [Counter]()
 var membersAllArray = [Member]()
 var membersPickerArray = [Member]()
@@ -46,6 +47,7 @@ var taskLessonsArray = [Task]()
 var taskCouncilArray = [Task]()
 var taskGamesArray = [Task]()
 var taskTreatsArray = [Task]()
+//var scrollPageArray = [UIViewController]()
 
 func getMembersAttending() {
     let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
@@ -294,3 +296,25 @@ func getTaskTreat() {
         print("\(error)")
     }
 }
+
+//var orderedViewControllers: [UIViewController] = {
+//    return [instanceVC(name: "OpeningPrayer"),
+//            instanceVC(name: "Song"),
+//            instanceVC(name: "Rule"),
+//            instanceVC(name: "Scripture"),
+//            instanceVC(name: "Calendar"),
+//            instanceVC(name: "Testimony"),
+//            instanceVC(name: "Spotlight"),
+//            instanceVC(name: "Misc"),
+//            instanceVC(name: "Thought"),
+//            instanceVC(name: "Lesson"),
+//            instanceVC(name: "Council"),
+//            instanceVC(name: "Activity"),
+//            instanceVC(name: "ClosingPrayer"),
+//            instanceVC(name: "Treat")]
+//}()
+//
+//func instanceVC(name: String) -> UIViewController {
+//    return UIStoryboard(name: "FHE", bundle: nil).instantiateViewController(withIdentifier: name)
+//}
+

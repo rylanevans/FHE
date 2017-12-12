@@ -505,6 +505,14 @@
             </objects>
             <point key="canvasLocation" x="-1591" y="1616"/>
         </scene>
+        <!--PrayerDetails-->
+        <scene sceneID="eUD-F7-Ok3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="PrayerDetails" id="1fm-xr-Qgd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c41-2j-ohx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1821" y="1616"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qRB-lA-5hS">
             <objects>
@@ -2982,6 +2990,7 @@ I spent a lot of time and effort building something I thought would be both help
                     <connections>
                         <segue destination="mtq-fi-jtC" kind="presentation" identifier="AboutMe" id="yVT-1n-CAV"/>
                         <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="9jh-Si-QQ7"/>
+                        <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowPrayer" id="EbF-I8-KYK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aH-xI-1kh" userLabel="First Responder" sceneMemberID="firstResponder"/>

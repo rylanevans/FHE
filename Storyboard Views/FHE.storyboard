@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -38,7 +38,7 @@
         <!--Opening Prayer-->
         <scene sceneID="OPb-ao-NGh">
             <objects>
-                <viewController storyboardIdentifier="OpeningPrayer" title="Opening Prayer" id="W2J-kG-43N" customClass="OPrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Opening Prayer" title="Opening Prayer" id="W2J-kG-43N" customClass="OPrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pLB-yk-BQd"/>
                         <viewControllerLayoutGuide type="bottom" id="uSl-VP-1cD"/>
@@ -3827,10 +3827,10 @@
             </objects>
             <point key="canvasLocation" x="12097" y="-1522"/>
         </scene>
-        <!--ClosingPrayer-->
+        <!--Closing Prayer-->
         <scene sceneID="doA-Vv-ITx">
             <objects>
-                <viewController storyboardIdentifier="ClosingPrayer" title="ClosingPrayer" id="oFt-LC-QD1" customClass="CPrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Closing Prayer" title="Closing Prayer" id="oFt-LC-QD1" customClass="CPrayerVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Srf-OQ-sg6"/>
                         <viewControllerLayoutGuide type="bottom" id="dSr-xD-aaL"/>

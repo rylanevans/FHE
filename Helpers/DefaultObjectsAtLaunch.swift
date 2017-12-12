@@ -18,6 +18,20 @@ func checkIfLauncedBefore() {
         addToOpenedCounter()
         getAllTasks()
         getMembersAttending()
+        getEnabledTasks()
+        getTaskPrayer()
+        getTaskSong()
+        getTaskRule()
+        getTaskScripture()
+        getTaskCalendar()
+        getTaskTestimony()
+        getTaskSpotlight()
+        getTaskMisc()
+        getTaskThought()
+        getTaskLessons()
+        getTaskCouncil()
+        getTaskGame()
+        getTaskTreat()
     } else {
         print("First launch, setting UserDefault.")
         beginOpenedCounter()
@@ -1555,7 +1569,7 @@ func generateRules() {
     
     let rule2 = Rule(context: context)
     rule2.title = "Respect Others"
-    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.“\n\n- Matt. 7:12"
+    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.”\n\n- Matt. 7:12"
     rule2.url = "https://drive.google.com/file/d/1zuUzKcEdZS7ZjZh5mKhQWWFPPw77_AaV/view"
     rule2.order = 2
     rule2.random = Int64(arc4random_uniform(1000))
@@ -1573,7 +1587,7 @@ func generateRules() {
     
     let rule4 = Rule(context: context)
     rule4.title = "Table Manners"
-    rule4.detail = "“I profoundly believe it takes a lot of ignorance to become a moral slob.“\n\n- William Buckley Jr."
+    rule4.detail = "“I profoundly believe it takes a lot of ignorance to become a moral slob.”\n\n- William Buckley Jr."
     rule4.url = "https://drive.google.com/file/d/1nwcCCDRogdtmRvmdXAcfYBZFBDcaUgFt/view"
     rule4.order = 4
     rule4.random = Int64(arc4random_uniform(1000))
@@ -1609,7 +1623,7 @@ func generateRules() {
     
     let rule8 = Rule(context: context)
     rule8.title = "House Chores"
-    rule8.detail = "“May we ever choose the harder right instead of the easier wrong.“\n\n- Thomas S. Monson"
+    rule8.detail = "“May we ever choose the harder right instead of the easier wrong.”\n\n- Thomas S. Monson"
     rule8.url = "https://drive.google.com/file/d/1dkwWTrKC88OoZwZ5KOlK-b3TY63gsZDa/view"
     rule8.order = 8
     rule8.random = Int64(arc4random_uniform(1000))
@@ -1636,7 +1650,7 @@ func generateRules() {
     
     let rule11 = Rule(context: context)
     rule11.title = "Sunday Behavior"
-    rule11.detail = "“Living in the moment brings you a sense of reverance for all of life's blessings.“\n\n- Oprah Winfrey"
+    rule11.detail = "“Living in the moment brings you a sense of reverance for all of life's blessings.”\n\n- Oprah Winfrey"
     rule11.url = "https://drive.google.com/file/d/1BPMKRTIbwZEqgXvK9CmUMjinBgKLrV2d/view"
     rule11.order = 10
     rule11.random = Int64(arc4random_uniform(1000))
@@ -1728,7 +1742,7 @@ func generateThoughts() {
     let thought1 = Thought(context: context)
     thought1.selectedOne = taskThought
     thought1.title = "Christlike"
-    thought1.detail = "“If thoughts make us who we are and we are to be like Christ then we must think Christlike thoughts.“\n\n- Ezra Taft Benson"
+    thought1.detail = "“If thoughts make us who we are and we are to be like Christ then we must think Christlike thoughts.”\n\n- Ezra Taft Benson"
     thought1.url = "https://www.mormonchannel.org/"
     thought1.order = 1
     thought1.favorite = false
@@ -1812,7 +1826,7 @@ func generateLessons() {
     lesson7.category = "Temporal"
     lesson7.topic = "Spiritual"
     lesson7.title = "What Matters Most in Life?"
-    lesson7.detail = "Does money, love, work, intelligence, or athleticism define you or make you happy? No.\n\nLiving in a way that is congruent to your core values not only define you but bring you happiness.\n\n- Rylan Evans"
+    lesson7.detail = "Does money, love, work, intelligence, or athleticism define you or make you happy? No.\nLiving in a way that is congruent to your core values not only define you but bring you happiness.\n\n- Rylan Evans"
     lesson7.url = "https://www.youtube.com/watch?v=Lg-wNxJ5XxY&t"
     lesson7.youTubeVideo = true
     lesson7.order = 7
@@ -2397,7 +2411,7 @@ func generateLessons() {
     lesson68.category = "Temporal"
     lesson68.topic = "Relational/Social"
     lesson68.title = "It's Not About The Nail"
-    lesson68.detail = "“Don't try to fix it. I just need you to listen.“ Every man has heard these words. And they are the law of the land. No matter what."
+    lesson68.detail = "“Don't try to fix it. I just need you to listen.” Every man has heard these words. And they are the law of the land. No matter what."
     lesson68.url = "https://www.youtube.com/watch?v=-4EDhdAHrOg"
     lesson68.youTubeVideo = true
     lesson68.order = 9
@@ -2449,7 +2463,7 @@ func generateLessons() {
     lesson75.category = "Temporal"
     lesson75.topic = "Physical"
     lesson75.title = "A Message From Your Body"
-    lesson75.detail = "“Hey you, please take care of me!“"
+    lesson75.detail = "“Hey you, please take care of me!”"
     lesson75.url = "https://www.youtube.com/watch?v=YEP30_iM-ZI"
     lesson75.youTubeVideo = true
     lesson75.order = 9
@@ -2679,6 +2693,19 @@ func generateLessons() {
     lesson93.selected = false
     lesson93.sortingIndex = 0
     
+    let lesson94 = Lesson(context: context)
+    lesson94.category = "Temporal"
+    lesson94.topic = "Emotional"
+    lesson94.title = "Power of Words"
+    lesson94.detail = "Sticks and stones will break my bones, but words will never hurt me. Wrong. Words can break your heart."
+    lesson94.url = "https://www.youtube.com/watch?v=jT6hSFAsrhY"
+    lesson94.youTubeVideo = true
+    lesson94.order = 9
+    lesson94.favorite = false
+    lesson94.random = Int64(arc4random_uniform(1000))
+    lesson94.selected = false
+    lesson94.sortingIndex = 0
+    
     ad.saveContext()
 }
 
@@ -2687,7 +2714,7 @@ func generateCouncils() {
     let council = Council(context: context)
     council.selectedOne = taskCouncil
     council.title = "Family Council Meeting"
-    council.detail = "“If people don't weigh in, they can't buy in.“\n- Patrick Lencioni"
+    council.detail = "“If people don't weigh in, they can't buy in.”\n\n- Patrick Lencioni"
     council.url = "https://www.lds.org/blog/bc/images/family-councils-cheat-sheet.pdf"
     council.selected = true
     

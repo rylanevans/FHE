@@ -20,6 +20,10 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         self.dataSource = self
         self.delegate = self
         
+        getEnabledTasks()
+        loopThroughEnabledTask()
+        createScrollPageViews()
+        
         let pageControl: UIPageControl = UIPageControl.appearance(whenContainedInInstancesOf: [FamilyHomeEveningVC.self])
         pageControl.pageIndicatorTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1)
@@ -34,26 +38,62 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     // MARK: - Ordered Page Views Array
     
-    lazy var orderedViewControllers: [UIViewController] = {
-        return [self.instanceVC(name: "OpeningPrayer"),
-                self.instanceVC(name: "Song"),
-                self.instanceVC(name: "Rule"),
-                self.instanceVC(name: "Scripture"),
-                self.instanceVC(name: "Calendar"),
-                self.instanceVC(name: "Testimony"),
-                self.instanceVC(name: "Spotlight"),
-                self.instanceVC(name: "Misc"),
-                self.instanceVC(name: "Thought"),
-                self.instanceVC(name: "Lesson"),
-                self.instanceVC(name: "Council"),
-                self.instanceVC(name: "Activity"),
-                self.instanceVC(name: "ClosingPrayer"),
-                self.instanceVC(name: "Treat")]
-    }()
+    lazy var orderedViewControllers = [UIViewController]()
     
+    var enabledTasksStringsOnlyArray: [String] = [
+        "Opening Prayer",
+        "Song",
+        "Rule",
+        "Scripture",
+        "Calendar",
+        "Testimony",
+        "Spotlight",
+        "Misc",
+        "Thought",
+        "Lesson",
+        "Council",
+        "Activity",
+        "Closing Prayer",
+        "Treat"
+    ]
+    
+    func loopThroughEnabledTask() {
+        let enabledTasksArray: [Task] = tasksEnabledArray
+        
+        enabledTasksStringsOnlyArray.removeAll()
+        
+        for eachTask in enabledTasksArray {
+            enabledTasksStringsOnlyArray.append("\(eachTask.name ?? "")")
+        }
+    }
+    
+    func createScrollPageViews() {
+        orderedViewControllers.removeAll()
+        for eachTask in enabledTasksStringsOnlyArray {
+            orderedViewControllers.append(self.instanceVC(name: "\(eachTask)"))
+        }
+    }
+        
+//    lazy var orderedViewControllers: [UIViewController] = {
+//        return [self.instanceVC(name: "OpeningPrayer"),
+//                self.instanceVC(name: "Song"),
+//                self.instanceVC(name: "Rule"),
+//                self.instanceVC(name: "Scripture"),
+//                self.instanceVC(name: "Calendar"),
+//                self.instanceVC(name: "Testimony"),
+//                self.instanceVC(name: "Spotlight"),
+//                self.instanceVC(name: "Misc"),
+//                self.instanceVC(name: "Thought"),
+//                self.instanceVC(name: "Lesson"),
+//                self.instanceVC(name: "Council"),
+//                self.instanceVC(name: "Activity"),
+//                self.instanceVC(name: "ClosingPrayer"),
+//                self.instanceVC(name: "Treat")]
+//    }()
+
     
     // MARK: - Instance View Controller
-    
+
     func instanceVC(name: String) -> UIViewController {
         return UIStoryboard(name: "FHE", bundle: nil).instantiateViewController(withIdentifier: name)
     }
