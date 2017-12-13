@@ -101,18 +101,38 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     func configureAssignmentCell(task: Task) {
         let taskName = task.name ?? ""
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
-        let songSelected = task.selectedSong?.title ?? "Title of task"
         let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
         let name = task.assignment?.name ?? "Assignee"
+        var selected = ""
+        
+        switch task.name {
+        case "Opening Prayer"?: selected = (task.selectedPrayer?.title)!
+        case "Song"?: selected = (task.selectedSong?.title)!
+        case "Rule"?: selected = (task.selectedRule?.title)!
+        case "Scripture"?: selected = (task.selectedScripture?.title)!
+        case "Calendar"?: selected = (task.selectedCalendar?.title)!
+        case "Testimony"?: selected = (task.selectedTestimony?.title)!
+        case "Spotlight"?: selected = (task.selectedSpotlight?.title)!
+        case "Misc"?: selected = (task.selectedMisc?.title)!
+        case "Thought"?: selected = (task.selectedThought?.title)!
+        case "Lesson"?: selected = (task.selectedLesson?.title)!
+        case "Counsil"?: selected = (task.selectedCouncil?.title)!
+        case "Activity"?: selected = (task.selectedGame?.title)!
+//        case "Closing Prayer"?: selected = (task.selectedPrayer?.title)!
+//        case "Treat"?: selected = (task.selectedTreat?.title)!
+        default: selected = "Title of task"
+        }
+        
         let autoAssigned = task.assigned
         if autoAssigned == true {
             manualOrAutoLabel.text = "Manual"
         } else {
             manualOrAutoLabel.text = "Auto"
         }
+        
         taskImage.image = image as? UIImage
         taskNameLabel.text = taskName
-        taskTitleLabel.text = songSelected
+        taskTitleLabel.text = selected
         memberNameLabel.text = name
         memberImage.image = photo as? UIImage
     }

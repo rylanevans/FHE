@@ -16,11 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-                
-//        increaseCounter()
-        checkIfLauncedBefore()
         
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+        checkIfLauncedBefore()
         
         if launchedBefore == true {
             if let tabBar = self.window?.rootViewController as? UITabBarController {

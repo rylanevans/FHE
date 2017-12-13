@@ -1759,7 +1759,7 @@ func generateLessons() {
     lesson2.selectedOne = taskLesson
     lesson2.category = "Spiritual"
     lesson2.topic = "Plan of Salvation"
-    lesson2.title = "Our Eternal Life - What Do Mormons Believe?"
+    lesson2.title = "Our Eternal Life"
     lesson2.detail = "Members of The Church of Jesus Christ of Latter-day Saints (Mormons) believe that we are eternal beings, sons and daughters of our Heavenly Father and Jesus Chris is our Savior."
     lesson2.url = "https://www.youtube.com/watch?v=9MiF_HKoFr4"
     lesson2.youTubeVideo = true
@@ -1770,7 +1770,6 @@ func generateLessons() {
     lesson2.sortingIndex = 0
     
     let lesson3 = Lesson(context: context)
-    lesson3.selectedOne = taskThought
     lesson3.category = "Temporal"
     lesson3.topic = "Emotional"
     lesson3.title = "Meditation"
