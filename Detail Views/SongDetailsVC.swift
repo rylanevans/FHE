@@ -216,23 +216,6 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         _ = navigationController?.popViewController(animated: true)
     }
     
-    func unselectEverything() {
-        let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
-        var songArray = [Song]()
-
-        do {
-            songArray = try context.fetch(fetchRequest)
-        } catch {
-            let error = error as NSError
-            print("\(error)")
-        }
-        
-        for eachSong in songArray {
-            eachSong.selected = false
-            ad.saveContext()
-        }
-    }
-    
     func loadSongData() {
         if let song = songToEdit {
             songTopicTextField.text = song.topic
@@ -283,9 +266,21 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func deleteSong() {
         if songToEdit != nil {
+            let song = songToEdit
+            if song?.selected == true {
+                unselectEverything()
+            }
             context.delete(songToEdit!)
             ad.saveContext()
         }
         _ = navigationController?.popViewController(animated: true)
+    }
+    
+    func unselectEverything() {
+        for eachSong in songsArray {
+            eachSong.selected = false
+            eachSong.selectedOne = nil
+            ad.saveContext()
+        }
     }
 }

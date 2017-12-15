@@ -67,8 +67,8 @@ class SongCell: UITableViewCell {
         let favorite = song.favorite
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
-        if number == "0" {
-            numberLabel.text = "Video"
+        if number == "0" || number == "" {
+            numberLabel.text = ""
         } else {
             numberLabel.text = "#\(number)"
         }

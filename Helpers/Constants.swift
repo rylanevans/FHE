@@ -65,7 +65,7 @@ let lessonTopicsArray = [
 let songBooksArray = [
     "Children's",
     "Hymn",
-    "Music Video",
+    "Video",
     "Other"
 ]
 

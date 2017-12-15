@@ -297,24 +297,5 @@ func getTaskTreat() {
     }
 }
 
-//var orderedViewControllers: [UIViewController] = {
-//    return [instanceVC(name: "OpeningPrayer"),
-//            instanceVC(name: "Song"),
-//            instanceVC(name: "Rule"),
-//            instanceVC(name: "Scripture"),
-//            instanceVC(name: "Calendar"),
-//            instanceVC(name: "Testimony"),
-//            instanceVC(name: "Spotlight"),
-//            instanceVC(name: "Misc"),
-//            instanceVC(name: "Thought"),
-//            instanceVC(name: "Lesson"),
-//            instanceVC(name: "Council"),
-//            instanceVC(name: "Activity"),
-//            instanceVC(name: "ClosingPrayer"),
-//            instanceVC(name: "Treat")]
-//}()
-//
-//func instanceVC(name: String) -> UIViewController {
-//    return UIStoryboard(name: "FHE", bundle: nil).instantiateViewController(withIdentifier: name)
-//}
+
 

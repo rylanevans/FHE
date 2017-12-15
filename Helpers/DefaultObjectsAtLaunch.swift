@@ -32,6 +32,7 @@ func checkIfLauncedBefore() {
         getTaskCouncil()
         getTaskGame()
         getTaskTreat()
+        getSongs()
     } else {
         print("First launch, setting UserDefault.")
         beginOpenedCounter()
@@ -66,6 +67,7 @@ func checkIfLauncedBefore() {
         getTaskCouncil()
         getTaskGame()
         getTaskTreat()
+        getSongs()
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
 }

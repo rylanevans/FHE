@@ -18,7 +18,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     @IBOutlet weak var searchController: UISearchBar!
     
     let memberPicker = UIPickerView()
-    var songsArray = [Song]()
+    
     let song = taskSongsArray[0]
     
     override func viewDidLoad() {
@@ -53,10 +53,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         getTaskSong()
         segment.selectedSegmentIndex = Int(song.segment)
-        getAllSongs()
         getMembersForPicker()
         loadSongAssignmentImage()
         attemptFetch()
+        getSongs()
         tableView.reloadData()
     }
     
@@ -68,10 +68,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         getTaskSong()
         segment.selectedSegmentIndex = Int(song.segment)
-        getAllSongs()
         getMembersForPicker()
         loadSongAssignmentImage()
         attemptFetch()
+        getSongs()
         tableView.reloadData()
     }
     
@@ -143,10 +143,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 title = "CHILDREN'S SONG BOOK:"
             } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
+            } else if sectionTitle![section].name == "Video" {
+                title = "MUSIC VIDEO:"
             } else if sectionTitle![section].name == "Other" {
                 title = "OTHER:"
-            } else if sectionTitle![section].name == "" {
-                title = "N/A:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -156,10 +156,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 title = "CHILDREN'S SONG BOOK:"
             } else if sectionTitle![section].name == "Hymn" {
                 title = "HYMN BOOK:"
+            } else if sectionTitle![section].name == "Video" {
+                title = "MUSIC VIDEO:"
             } else if sectionTitle![section].name == "Other" {
                 title = "OTHER:"
-            } else if sectionTitle![section].name == "" {
-                title = "N/A:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -184,7 +184,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             case "Proclaim the Gospel": title = "PROCLAIM THE GOSPEL:"
             case "Redeem the Dead": title = "REDEEM THE DEAD:"
             case "Care for the Poor & Needy": title = "CARE FOR THE POOR & NEEDY:"
-            case "": title = "N/A:"
+            case "Spiritual": title = "SPIRITUAL:"
             default: title = "SEARCH RESULTS:"
             }
             
@@ -196,7 +196,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             } else {
                 title = "SEARCH RESULTS:"
             }
-            
         } else {
             title = "SORTED:"
         }
@@ -298,7 +297,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             
             unselectEverything()
             selectedValueToggle(song as! Song)
-            
         }
     }
     
@@ -325,20 +323,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
-    func getAllSongs() {
-        let request: NSFetchRequest<Song> = Song.fetchRequest()
-        
-        do {
-            songsArray = try context.fetch(request)
-        } catch {
-            let error = error as NSError
-            print("\(error)")
-        }
-    }
-    
     func unselectEverything() {
         for eachSong in songsArray {
             eachSong.selected = false
+            eachSong.selectedOne = nil
             ad.saveContext()
         }
     }
@@ -368,7 +356,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         searchForSongs(segment: segment.selectedSegmentIndex, targetText: searchText)
         tableView.reloadData()
-        print(searchText)
     }
     
     // MARK: - Boiler Code for Core Data
@@ -407,8 +394,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // Fetch all data for table view
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
-        
-        //        let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: false)
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
         let sortByBook = NSSortDescriptor(key: "book", ascending: true)
@@ -417,10 +402,6 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         if segment.selectedSegmentIndex == 0 {
             fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-//            fetchRequest.predicate = NSPredicate(format: "book.name == %@", "Hymn")
-//            fetchRequest.predicate = NSPredicate(format: "number.name == %@", "29")
-//            fetchRequest.fetchLimit = 12
-            
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.songController = controller

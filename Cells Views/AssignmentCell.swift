@@ -106,20 +106,20 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         var selected = ""
         
         switch task.name {
-        case "Opening Prayer"?: selected = (task.selectedPrayer?.title)!
-        case "Song"?: selected = (task.selectedSong?.title)!
-        case "Rule"?: selected = (task.selectedRule?.title)!
-        case "Scripture"?: selected = (task.selectedScripture?.title)!
-        case "Calendar"?: selected = (task.selectedCalendar?.title)!
-        case "Testimony"?: selected = (task.selectedTestimony?.title)!
-        case "Spotlight"?: selected = (task.selectedSpotlight?.title)!
-        case "Misc"?: selected = (task.selectedMisc?.title)!
-        case "Thought"?: selected = (task.selectedThought?.title)!
-        case "Lesson"?: selected = (task.selectedLesson?.title)!
-        case "Counsil"?: selected = (task.selectedCouncil?.title)!
-        case "Activity"?: selected = (task.selectedGame?.title)!
-//        case "Closing Prayer"?: selected = (task.selectedPrayer?.title)!
-//        case "Treat"?: selected = (task.selectedTreat?.title)!
+        case "Opening Prayer"?: selected = (task.selectedPrayer?.title) ?? "No Prayer selected"
+        case "Song"?: selected = (task.selectedSong?.title) ?? "No Song selected"
+        case "Rule"?: selected = (task.selectedRule?.title) ?? "No Rule selected"
+        case "Scripture"?: selected = (task.selectedScripture?.title) ?? "No Scripture selected"
+        case "Calendar"?: selected = (task.selectedCalendar?.title) ?? "No Calendar selected"
+        case "Testimony"?: selected = (task.selectedTestimony?.title) ?? "No Testimony selected"
+        case "Spotlight"?: selected = (task.selectedSpotlight?.title) ?? "No Spotlight selected"
+        case "Misc"?: selected = (task.selectedMisc?.title) ?? "No Misc selected"
+        case "Thought"?: selected = (task.selectedThought?.title) ?? "No Thought selected"
+        case "Lesson"?: selected = (task.selectedLesson?.title) ?? "No Lesson selected"
+        case "Counsil"?: selected = (task.selectedCouncil?.title) ?? "No Counsil selected"
+        case "Activity"?: selected = (task.selectedGame?.title) ?? "No Activity selected"
+        case "Closing Prayer"?: selected = (task.selectedPrayer?.title) ?? "No song selected"
+        case "Treat"?: selected = (task.selectedTreat?.title) ?? "No song selected"
         default: selected = "Title of task"
         }
         
