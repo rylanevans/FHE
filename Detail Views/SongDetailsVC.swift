@@ -258,11 +258,34 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
+        deleteAlertMessage()
+    }
+    
+    func deleteAlertMessage() {
+        let alertController = UIAlertController(title: "⚠️ DELETE WARNING!", message: "Are you sure you want to delete this song?", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "✗ Delete", style: .default, handler: {
+            alert -> Void in
+            
+            self.deleteSong()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(deleteAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func deleteSong() {
         if songToEdit != nil {
             context.delete(songToEdit!)
             ad.saveContext()
         }
-        
         _ = navigationController?.popViewController(animated: true)
     }
 }

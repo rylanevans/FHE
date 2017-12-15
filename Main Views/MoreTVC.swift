@@ -73,13 +73,63 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .amazing)
     }
     
+    func checkPositiveOrNegitiveFeedback() {
+        let alertController = UIAlertController(title: "👍 App Feedback", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Yes", style: .default, handler: {
+            alert -> Void in
+            self.positiveReview()
+        })
+        
+        let dislikeAction = UIAlertAction(title: "✗ No", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            self.suggestions()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(likeAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func positiveReview() {
+        counter.feedbackGiven = true
+        ad.saveContext()
+        
         UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: ["":""], completionHandler: nil)
+    }
+    
+    // MARK: -  MFMailComposeViewControllerDelegate Method to provide suggestions
+    
+    func suggestions() {
+        counter.feedbackGiven = true
+        ad.saveContext()
+        
+        guard MFMailComposeViewController.canSendMail() else {return}
+        let modelName = UIDevice.current.modelName
+        let OSVersion = UIDevice.current.systemVersion
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let mailController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = self
+        mailController.setToRecipients(["customerservice@rylanevans.com"])
+        mailController.setSubject("FHE App Tips")
+        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
+        
+        self.present(mailController, animated: true, completion: nil)
     }
     
     // MARK: - Activity view contorller share options
     
     func shareWithNetwork() {
+        counter.shared = true
+        ad.saveContext()
+        
         let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
@@ -97,22 +147,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         mailController.setToRecipients(["support@rylanevans.com"])
         mailController.setSubject("FHE App Bugs")
         mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
-        
-        self.present(mailController, animated: true, completion: nil)
-    }
-    
-    // MARK: -  MFMailComposeViewControllerDelegate Method to provide suggestions
-    
-    func suggestions() {
-        guard MFMailComposeViewController.canSendMail() else {return}
-        let modelName = UIDevice.current.modelName
-        let OSVersion = UIDevice.current.systemVersion
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let mailController = MFMailComposeViewController()
-        mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["customerservice@rylanevans.com"])
-        mailController.setSubject("FHE App Tips")
-        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
         self.present(mailController, animated: true, completion: nil)
     }
@@ -141,7 +175,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
 
         var title = ""
         if section == 0 {
-            title = "DONTATIONS:"
+            title = "TIP JAR:"
         } else if section == 1 {
             title = "FEEDBACK:"
         } else if section == 2 {
@@ -180,7 +214,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         } else if indexPath.section == 1 {
             switch indexPath.row {
             case 0: shareWithNetwork()
-            case 1: positiveReview()
+            case 1: checkPositiveOrNegitiveFeedback()
             case 2: reportProblem()
             case 3: suggestions()
             case 4: subscribe()

@@ -15,8 +15,8 @@ func checkIfLauncedBefore() {
     
     if launchedBefore == true {
         print("Not first launch.")
-        addToOpenedCounter()
         getAllTasks()
+        addToOpenedCounter()
         getMembersAttending()
         getEnabledTasks()
         getTaskPrayer()
@@ -50,13 +50,29 @@ func checkIfLauncedBefore() {
         generateCouncils()
         generateGames()
         generateTreats()
+        getAllTasks()
+        getMembersAttending()
+        getEnabledTasks()
+        getTaskPrayer()
+        getTaskSong()
+        getTaskRule()
+        getTaskScripture()
+        getTaskCalendar()
+        getTaskTestimony()
+        getTaskSpotlight()
+        getTaskMisc()
+        getTaskThought()
+        getTaskLessons()
+        getTaskCouncil()
+        getTaskGame()
+        getTaskTreat()
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
 }
 
 func addToOpenedCounter() {
     let fetchRequest: NSFetchRequest<Counter> = Counter.fetchRequest()
-    
+
     do {
         counterArray = try context.fetch(fetchRequest)
     } catch {
@@ -66,13 +82,39 @@ func addToOpenedCounter() {
     
     if counter.launched > 0 {
         counter.launched += 1
+        
+        if counter.launched % 4 == 0 {
+            counter.tipGiven = false
+            ad.saveContext()
+        }
+        if counter.launched % 4 == 0 {
+            counter.shared = false
+            ad.saveContext()
+        }
+        if counter.launched % 4 == 0 {
+            counter.feedbackGiven = false
+            ad.saveContext()
+        }
+        
+        counter.hideFeedbackRequest = false
+        counter.hideSharedRequest = false
+        counter.hideAboutMe = false
         ad.saveContext()
+        print("\(counter.launched)")
     }
 }
 
 func beginOpenedCounter(){
     let counter = Counter(context: context)
     counter.launched = 1
+    counter.hideAboutMe = false
+    counter.hideSharedRequest = false
+    counter.hideFeedbackRequest = false
+    
+    counter.feedbackGiven = false
+    counter.shared = false
+    counter.tipGiven = false
+    
     ad.saveContext()
     
     let fetchRequest: NSFetchRequest<Counter> = Counter.fetchRequest()
@@ -1560,7 +1602,7 @@ func generateRules() {
     let rule1 = Rule(context: context)
     rule1.title = "Media"
     rule1.detail = "“The media's the most powerful entity on earth. They have the power to make the innocent guilty and to make the guilty innocent, and that's power. Because they control the minds of the masses.”\n\n- Malcolm X"
-    rule1.url = "https://drive.google.com/file/d/1U6DIUWVNML50SgX4p6mdkBrrKcXpdGIE/view"
+    rule1.url = "https://drive.google.com/open?id=1U6DIUWVNML50SgX4p6mdkBrrKcXpdGIE"
     rule1.order = 1
     rule1.random = Int64(arc4random_uniform(1000))
     rule1.selected = true
@@ -1570,7 +1612,7 @@ func generateRules() {
     let rule2 = Rule(context: context)
     rule2.title = "Respect Others"
     rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.”\n\n- Matt. 7:12"
-    rule2.url = "https://drive.google.com/file/d/1zuUzKcEdZS7ZjZh5mKhQWWFPPw77_AaV/view"
+    rule2.url = "https://drive.google.com/open?id=1zuUzKcEdZS7ZjZh5mKhQWWFPPw77_AaV"
     rule2.order = 2
     rule2.random = Int64(arc4random_uniform(1000))
     rule2.selected = false
@@ -1579,7 +1621,7 @@ func generateRules() {
     let rule3 = Rule(context: context)
     rule3.title = "Respect Belongings"
     rule3.detail = "As you get older you start to see who was raised properly. So many people lack basic respect."
-    rule3.url = "https://drive.google.com/file/d/1BbDSMAKExvlt2o_NoyN81lbD4imwlW5I/view"
+    rule3.url = "https://drive.google.com/open?id=1BbDSMAKExvlt2o_NoyN81lbD4imwlW5I"
     rule3.order = 3
     rule3.random = Int64(arc4random_uniform(1000))
     rule3.selected = false
@@ -1588,7 +1630,7 @@ func generateRules() {
     let rule4 = Rule(context: context)
     rule4.title = "Table Manners"
     rule4.detail = "“I profoundly believe it takes a lot of ignorance to become a moral slob.”\n\n- William Buckley Jr."
-    rule4.url = "https://drive.google.com/file/d/1nwcCCDRogdtmRvmdXAcfYBZFBDcaUgFt/view"
+    rule4.url = "https://drive.google.com/open?id=1nwcCCDRogdtmRvmdXAcfYBZFBDcaUgFt"
     rule4.order = 4
     rule4.random = Int64(arc4random_uniform(1000))
     rule4.selected = false
@@ -1597,7 +1639,7 @@ func generateRules() {
     let rule5 = Rule(context: context)
     rule5.title = "Morning Routine"
     rule5.detail = "Yesterday is gone. Tomorrow is a mystery. Today is a blessing!"
-    rule5.url = "https://drive.google.com/file/d/1US9Zd604Ldqekde1eoQJbwQQji3LDqJM/view"
+    rule5.url = "https://drive.google.com/open?id=1US9Zd604Ldqekde1eoQJbwQQji3LDqJM"
     rule5.order = 7
     rule5.random = Int64(arc4random_uniform(1000))
     rule5.selected = false
@@ -1606,7 +1648,7 @@ func generateRules() {
     let rule6 = Rule(context: context)
     rule6.title = "After School Routine"
     rule6.detail = "Never stop learning, because life never stops teaching."
-    rule6.url = "https://drive.google.com/file/d/1Nb1AUCeZCMt8Em6f2LVSIzTJt776aLQl/view"
+    rule6.url = "https://drive.google.com/open?id=1Nb1AUCeZCMt8Em6f2LVSIzTJt776aLQl"
     rule6.order = 5
     rule6.random = Int64(arc4random_uniform(1000))
     rule6.selected = false
@@ -1615,7 +1657,7 @@ func generateRules() {
     let rule7 = Rule(context: context)
     rule7.title = "Bedtime Routine"
     rule7.detail = "Go to be with dreams. Wake up with plans."
-    rule7.url = "https://drive.google.com/file/d/1VhCDrnKvr_w4nv3tvZQnmXJMtAJzOphd/view"
+    rule7.url = "https://drive.google.com/open?id=1VhCDrnKvr_w4nv3tvZQnmXJMtAJzOphd"
     rule7.order = 6
     rule7.random = Int64(arc4random_uniform(1000))
     rule7.selected = false
@@ -1624,7 +1666,7 @@ func generateRules() {
     let rule8 = Rule(context: context)
     rule8.title = "House Chores"
     rule8.detail = "“May we ever choose the harder right instead of the easier wrong.”\n\n- Thomas S. Monson"
-    rule8.url = "https://drive.google.com/file/d/1dkwWTrKC88OoZwZ5KOlK-b3TY63gsZDa/view"
+    rule8.url = "https://drive.google.com/open?id=1dkwWTrKC88OoZwZ5KOlK-b3TY63gsZDa"
     rule8.order = 8
     rule8.random = Int64(arc4random_uniform(1000))
     rule8.selected = false
@@ -1633,7 +1675,7 @@ func generateRules() {
     let rule9 = Rule(context: context)
     rule9.title = "FHE & HT Expectations"
     rule9.detail = "Human behavior flows from three main sources: desire (spirit), emotion (body), knowledge (mind)."
-    rule9.url = "https://drive.google.com/file/d/1xJay1xQw_Yaq8mgcGPe4An-p6NC2PsQl/view"
+    rule9.url = "https://drive.google.com/open?id=1xJay1xQw_Yaq8mgcGPe4An-p6NC2PsQl"
     rule9.order = 9
     rule9.random = Int64(arc4random_uniform(1000))
     rule9.selected = false
@@ -1642,7 +1684,7 @@ func generateRules() {
     let rule10 = Rule(context: context)
     rule10.title = "Church Guidelines"
     rule10.detail = "Feed your faith and your fears will starve to death."
-    rule10.url = "https://drive.google.com/file/d/11aT0cKTF2IG9DqIXEpv2m7C6suddK-zE/view"
+    rule10.url = "https://drive.google.com/open?id=11aT0cKTF2IG9DqIXEpv2m7C6suddK-zE"
     rule10.order = 10
     rule10.random = Int64(arc4random_uniform(1000))
     rule10.selected = false
@@ -1651,7 +1693,7 @@ func generateRules() {
     let rule11 = Rule(context: context)
     rule11.title = "Sunday Behavior"
     rule11.detail = "“Living in the moment brings you a sense of reverance for all of life's blessings.”\n\n- Oprah Winfrey"
-    rule11.url = "https://drive.google.com/file/d/1BPMKRTIbwZEqgXvK9CmUMjinBgKLrV2d/view"
+    rule11.url = "https://drive.google.com/open?id=1BPMKRTIbwZEqgXvK9CmUMjinBgKLrV2d"
     rule11.order = 10
     rule11.random = Int64(arc4random_uniform(1000))
     rule11.selected = false
@@ -2725,7 +2767,7 @@ func generateGames() {
     let game1 = Game(context: context)
     game1.category = gameCategoryArray[0]
     game1.title = "Surprise!"
-    game1.url = "https://drive.google.com/file/d/1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe/view"
+    game1.url = "https://drive.google.com/open?id=1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe"
     game1.favorite = true
     game1.order = 1
     game1.random = Int64(arc4random_uniform(1000))
@@ -3426,7 +3468,7 @@ func generateGames() {
     let game75 = Game(context: context)
     game75.category = gameCategoryArray[3]
     game75.title = "Five-Card Draw"
-    game75.url = "https://drive.google.com/file/d/1hV7xkGPC8slw6dlWRNlHqbLznyxm9W4q/view"
+    game75.url = "https://drive.google.com/open?id=1hV7xkGPC8slw6dlWRNlHqbLznyxm9W4q"
     game75.favorite = true
     game75.order = 75
     game75.random = Int64(arc4random_uniform(1000))
@@ -3861,7 +3903,7 @@ func generateTreats() {
     let treat1 = Treat(context: context)
     treat1.category = treatsArray[0]
     treat1.title = "Surprise!"
-    treat1.url = "https://drive.google.com/file/d/1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe/view"
+    treat1.url = "https://drive.google.com/open?id=1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe"
     treat1.favorite = true
     treat1.order = 1
     treat1.random = Int64(arc4random_uniform(1000))

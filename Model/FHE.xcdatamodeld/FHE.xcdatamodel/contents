@@ -14,7 +14,13 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedCouncil" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Counter" representedClassName="Counter" syncable="YES" codeGenerationType="class">
+        <attribute name="feedbackGiven" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hideAboutMe" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hideFeedbackRequest" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hideSharedRequest" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="launched" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="shared" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tipGiven" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
@@ -169,7 +175,7 @@
     <elements>
         <element name="Calendar" positionX="9" positionY="117" width="128" height="30"/>
         <element name="Council" positionX="54" positionY="162" width="128" height="120"/>
-        <element name="Counter" positionX="9" positionY="153" width="128" height="60"/>
+        <element name="Counter" positionX="9" positionY="153" width="128" height="150"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="195"/>
         <element name="Lesson" positionX="45" positionY="144" width="128" height="240"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>

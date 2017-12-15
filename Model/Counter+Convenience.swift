@@ -11,10 +11,16 @@ import CoreData
 import UIKit
 
 extension Counter {
-    convenience init(launched: Int64, in context:NSManagedObjectContext) {
+    convenience init(launched: Int64, hideAboutMe: Bool, feedbackGiven: Bool, tipGiven: Bool, shared: Bool, hideFeedbackRequest: Bool, hideSharedRequest: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.feedbackGiven = feedbackGiven
+        self.tipGiven = tipGiven
+        self.hideAboutMe = hideAboutMe
         self.launched = launched
+        self.shared = shared
+        self.hideFeedbackRequest = hideFeedbackRequest
+        self.hideSharedRequest = hideSharedRequest
     }
 }

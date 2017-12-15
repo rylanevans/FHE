@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         } else {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
-                tabBar.selectedIndex = 1
+                tabBar.selectedIndex = 0
             }
         }
         

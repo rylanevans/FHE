@@ -564,10 +564,10 @@ Family Member To Songs</string>
             </objects>
             <point key="canvasLocation" x="5125.6000000000004" y="1984.8575712143929"/>
         </scene>
-        <!--Prayer-->
+        <!--Edit Prayer-->
         <scene sceneID="1ce-zE-oxS">
             <objects>
-                <viewController storyboardIdentifier="PrayerDetails" title="Prayer" id="pLf-j6-Fg1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrayerDetails" title="Edit Prayer" id="pLf-j6-Fg1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cR4-32-hjq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1264,7 +1264,7 @@ Family Member To Prayer</string>
                     </view>
                     <navigationItem key="navigationItem" title="Add Song" id="6lb-bc-UXo">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="BC7-6n-GXp">
-                            <color key="tintColor" red="1" green="0.3301134838" blue="0.32484726899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" name="Tint"/>
                             <connections>
                                 <action selector="deleteButtonPressed:" destination="6h5-I3-Zmd" id="qMU-H5-j39"/>
                             </connections>
@@ -1794,23 +1794,11 @@ Family Member To Prayer</string>
         <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000429153442" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

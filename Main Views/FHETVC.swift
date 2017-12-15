@@ -40,13 +40,21 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if counter.launched % 4 == 0 && counter.tipGiven == false && counter.hideAboutMe == false {
+            counter.hideAboutMe = true
+            ad.saveContext()
+            performSegue(withIdentifier: "AboutMe", sender: nil)
+        }
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
-        self.tabBarController?.selectedIndex = 0
+        self.tabBarController?.selectedIndex = 1
     }
     
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
@@ -58,7 +66,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         print("\(counter)")
 //        let appReviewPresentedRandom = arc4random_uniform(3)
 //        if appReviewPresentedRandom == UInt32(1) {
-        if counter.launched % 2 == 0 {
+        if counter.launched > 3 && counter.launched % 2 == 0 {
             SKStoreReviewController.requestReview()
         }
     }
