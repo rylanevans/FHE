@@ -505,13 +505,21 @@
             </objects>
             <point key="canvasLocation" x="-582" y="2447"/>
         </scene>
+        <!--ScriptureDetails-->
+        <scene sceneID="bAJ-TN-g5c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ScriptureDetails" id="JuR-Q2-URo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LHV-ie-HNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-135" y="2447"/>
+        </scene>
         <!--PrayerDetails-->
         <scene sceneID="eUD-F7-Ok3">
             <objects>
                 <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="PrayerDetails" id="1fm-xr-Qgd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c41-2j-ohx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-890" y="2447"/>
+            <point key="canvasLocation" x="-805" y="2447"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qRB-lA-5hS">
@@ -1617,7 +1625,7 @@
                                         <rect key="frame" x="-0.5" y="0.0" width="375" height="730"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-VD-tBk">
-                                                <rect key="frame" x="15" y="15" width="345" height="585"/>
+                                                <rect key="frame" x="15" y="15" width="345" height="622.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-nK-E0X">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
@@ -1674,27 +1682,24 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKw-g4-CxC">
-                                                        <rect key="frame" x="0.0" y="220" width="345" height="25"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="25" id="DQR-ZK-ysm"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="220" width="345" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
-                                                        <rect key="frame" x="0.0" y="245" width="345" height="152.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
+                                                        <rect key="frame" x="0.0" y="240.5" width="345" height="194"/>
                                                         <string key="text">My name is Rylan Evans. 
 
 I would appreciate your support. 
 
 I spent a lot of time and effort building something I thought would be both helpful and practiacl for parents and children. God has blessed me with many things in my life. Family is my greatest blessing! This is my way of giving back to what I treasure most, family. Please consider a donation.  A little goes a long way. Thank you for downloading the FHE app.</string>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-Yq-ez1">
-                                                        <rect key="frame" x="0.0" y="397.5" width="345" height="20"/>
+                                                        <rect key="frame" x="0.0" y="434.5" width="345" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="8h4-rD-OPh"/>
                                                         </constraints>
@@ -1703,7 +1708,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rL5-cf-jdi">
-                                                        <rect key="frame" x="0.0" y="417.5" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="454.5" width="345" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FZ-bm-sYr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="35"/>
@@ -1721,28 +1726,25 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbY-ji-HoK">
-                                                        <rect key="frame" x="0.0" y="452.5" width="345" height="20"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="20" id="doB-hH-oM2"/>
-                                                        </constraints>
+                                                        <rect key="frame" x="0.0" y="489.5" width="345" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donations..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-zC-OfR">
-                                                        <rect key="frame" x="0.0" y="472.5" width="345" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="510" width="345" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFM-rg-UsV">
-                                                        <rect key="frame" x="0.0" y="500" width="345" height="6"/>
+                                                        <rect key="frame" x="0.0" y="537.5" width="345" height="6"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sun-TH-LXe">
-                                                        <rect key="frame" x="0.0" y="506" width="345" height="79"/>
+                                                        <rect key="frame" x="0.0" y="543.5" width="345" height="79"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyN-bk-XrC" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
@@ -2975,7 +2977,8 @@ I spent a lot of time and effort building something I thought would be both help
                                 <connections>
                                     <outlet property="enabledSwitch" destination="Ea4-se-KvU" id="dbf-Vo-MQI"/>
                                     <outlet property="taskImage" destination="SYT-jR-vAN" id="umE-87-fsM"/>
-                                    <outlet property="taskLabel" destination="GCK-Vs-sLB" id="1c2-jZ-oJx"/>
+                                    <outlet property="taskNameLabel" destination="GCK-Vs-sLB" id="k8g-9d-dXC"/>
+                                    <outlet property="taskTitleLabel" destination="TGP-Wv-Ohn" id="EcH-rj-5gy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -2991,6 +2994,17 @@ I spent a lot of time and effort building something I thought would be both help
                     <connections>
                         <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="9jh-Si-QQ7"/>
                         <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowPrayer" id="EbF-I8-KYK"/>
+                        <segue destination="Rdk-1J-HCu" kind="show" identifier="ShowRules" id="W3l-sh-gFk"/>
+                        <segue destination="JuR-Q2-URo" kind="show" identifier="ShowScriptures" id="fVt-7Q-RzX"/>
+                        <segue destination="OPB-i0-XTf" kind="show" identifier="ShowCalendar" id="4yL-57-dYB"/>
+                        <segue destination="bFm-Lv-Fcd" kind="show" identifier="ShowTestimony" id="9P0-m0-b2K"/>
+                        <segue destination="rUm-v7-8DB" kind="show" identifier="ShowSpotlight" id="64D-36-E2v"/>
+                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowMisc" id="OLX-No-sfi"/>
+                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowThoughts" id="ktT-fE-CXW"/>
+                        <segue destination="DXI-yq-1Wv" kind="show" identifier="ShowLessons" id="1Ip-Qm-3IC"/>
+                        <segue destination="E2P-re-10A" kind="show" identifier="ShowCouncil" id="62d-fj-n5k"/>
+                        <segue destination="Gx3-wC-DpV" kind="show" identifier="ShowGames" id="Hu8-j0-LrC"/>
+                        <segue destination="gPl-Pe-f5w" kind="show" identifier="ShowTreats" id="zo5-HV-Ykr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aH-xI-1kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3324,6 +3338,86 @@ I spent a lot of time and effort building something I thought would be both help
             </objects>
             <point key="canvasLocation" x="1294" y="1136"/>
         </scene>
+        <!--RuleDetails-->
+        <scene sceneID="dm9-TL-f4E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="RuleDetails" id="Rdk-1J-HCu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQH-L9-fNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="2447"/>
+        </scene>
+        <!--CalendarDetails-->
+        <scene sceneID="dhz-wW-NxD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CalendarDetails" id="OPB-i0-XTf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-I9-TZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="2447"/>
+        </scene>
+        <!--TestimonyDetails-->
+        <scene sceneID="7AX-PX-48g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="TestimonyDetails" id="bFm-Lv-Fcd" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jH7-ch-fBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="2447"/>
+        </scene>
+        <!--SpotlightDetails-->
+        <scene sceneID="mii-ez-glH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="SpotlightDetails" id="rUm-v7-8DB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xp3-1r-ljv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="608" y="2447"/>
+        </scene>
+        <!--MiscDetails-->
+        <scene sceneID="chF-JT-6Zd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="MiscDetails" id="5Az-eD-lEO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhJ-k6-hBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="2447"/>
+        </scene>
+        <!--ThoughtDetails-->
+        <scene sceneID="WRm-Hx-iQ2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ThoughtDetails" id="arE-4i-0Zk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5o8-1H-opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="2447"/>
+        </scene>
+        <!--LessonDetails-->
+        <scene sceneID="W4h-bZ-1pH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="LessonDetails" id="DXI-yq-1Wv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hV-AC-7bN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="2447"/>
+        </scene>
+        <!--CouncilDetails-->
+        <scene sceneID="ffO-Yu-psV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CouncilDetails" id="E2P-re-10A" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KK9-PK-7q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="2447"/>
+        </scene>
+        <!--GameDetails-->
+        <scene sceneID="lHR-P3-v3e">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="GameDetails" id="Gx3-wC-DpV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfe-yv-jD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1730" y="2447"/>
+        </scene>
+        <!--TreatDetails-->
+        <scene sceneID="x8G-hA-JwK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="TreatDetails" id="gPl-Pe-f5w" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fna-6y-mjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="2447"/>
+        </scene>
     </scenes>
     <resources>
         <image name="$High" width="72" height="85"/>
@@ -3391,8 +3485,8 @@ I spent a lot of time and effort building something I thought would be both help
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mYt-NC-LVN"/>
-        <segue reference="uzv-ES-xf0"/>
+        <segue reference="EbF-I8-KYK"/>
+        <segue reference="9jh-Si-QQ7"/>
         <segue reference="fh2-ar-ueD"/>
     </inferredMetricsTieBreakers>
 </document>

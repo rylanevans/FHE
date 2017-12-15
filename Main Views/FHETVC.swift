@@ -102,7 +102,19 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             let segueTask: Task = task as! Task
             switch segueTask.name {
             case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
-            default: performSegue(withIdentifier: "ShowSongs", sender: task)
+            case "Song"?: performSegue(withIdentifier: "ShowSongs", sender: task)
+            case "Rule"?: performSegue(withIdentifier: "ShowRules", sender: task)
+            case "Scripture"?: performSegue(withIdentifier: "ShowScriptures", sender: task)
+            case "Calendar"?: performSegue(withIdentifier: "ShowCalendar", sender: task)
+            case "Testimony"?: performSegue(withIdentifier: "ShowTestimony", sender: task)
+            case "Spotlight"?: performSegue(withIdentifier: "ShowSpotlight", sender: task)
+            case "Misc"?: performSegue(withIdentifier: "ShowMisc", sender: task)
+            case "Thought"?: performSegue(withIdentifier: "ShowThoughts", sender: task)
+            case "Lesson"?: performSegue(withIdentifier: "ShowLessons", sender: task)
+            case "Council"?: performSegue(withIdentifier: "ShowCouncil", sender: task)
+            case "Game"?: performSegue(withIdentifier: "ShowGame", sender: task)
+            case "Treat"?: performSegue(withIdentifier: "ShowTreat", sender: task)
+            default: performSegue(withIdentifier: "ShowPrayer", sender: task)
             }
         }
     }

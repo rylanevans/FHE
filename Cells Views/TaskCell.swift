@@ -15,8 +15,10 @@ protocol TaskCellDelegate {
 
 class TaskCell: UITableViewCell {
     @IBOutlet weak var taskImage: UIImageView!
-    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var enabledSwitch: UISwitch!
+    @IBOutlet weak var taskTitleLabel: UILabel!
+    
 
     var delegate: TaskCellDelegate?
     
@@ -56,17 +58,38 @@ class TaskCell: UITableViewCell {
     }
     
     func configureTaskCell(task: Task) {
-        let name = task.name ?? ""
+        let specifictask = task
+        let name = specifictask.name ?? ""
         switch task.name {
-        case "Song"?: taskLabel.text = "Songs"
-        case "Rule"?: taskLabel.text = "Rules"
-        case "Scripture"?: taskLabel.text = "Scriptures"
-        case "Lesson"?: taskLabel.text = "Lessons"
-        case "Thought"?: taskLabel.text = "Thoughts"
-        case "Council"?: taskLabel.text = "Councils"
-        case "Activity"?: taskLabel.text = "Activities"
-        case "Treat"?: taskLabel.text = "Treats"
-        default: taskLabel.text = name
+        case "Opening Prayer"?: taskNameLabel.text = "Opening Prayer";
+        taskTitleLabel.text = specifictask.selectedPrayer?.title ?? "No Prayer selected"
+        case "Song"?: taskNameLabel.text = "Songs";
+        taskTitleLabel.text = specifictask.selectedSong?.title ?? "No Song selected"
+        case "Rule"?: taskNameLabel.text = "Rules";
+        taskTitleLabel.text = specifictask.selectedRule?.title ?? "No Rule selected"
+        case "Scripture"?: taskNameLabel.text = "Scriptures";
+        taskTitleLabel.text = specifictask.selectedScripture?.title ?? "No Scripture selected"
+        case "Calendar"?: taskNameLabel.text = "Calendar";
+        taskTitleLabel.text = specifictask.selectedCalendar?.title ?? "No Calendar selected"
+        case "Testimony"?: taskNameLabel.text = "Testimony";
+        taskTitleLabel.text = specifictask.selectedTestimony?.title ?? "No Testimony selected"
+        case "Spotlight"?: taskNameLabel.text = "Spotlight";
+        taskTitleLabel.text = specifictask.selectedSpotlight?.title ?? "No Spotlight selected"
+        case "Misc"?: taskNameLabel.text = "Misc";
+        taskTitleLabel.text = specifictask.selectedMisc?.title ?? "No Misc selected"
+        case "Thought"?: taskNameLabel.text = "Thoughts";
+        taskTitleLabel.text = specifictask.selectedThought?.title ?? "No Thought selected"
+        case "Lesson"?: taskNameLabel.text = "Lessons";
+        taskTitleLabel.text = specifictask.selectedLesson?.title ?? "No Lesson selected"
+        case "Council"?: taskNameLabel.text = "Council";
+        taskTitleLabel.text = specifictask.selectedCouncil?.title ?? "No Council selected"
+        case "Activity"?: taskNameLabel.text = "Activities";
+        taskTitleLabel.text = specifictask.selectedGame?.title ?? "No Activity selected"
+        case "Closing Prayer"?: taskNameLabel.text = "Closing Prayer";
+        taskTitleLabel.text = specifictask.selectedPrayer?.title ?? "No Prayer selected"
+        case "Treat"?: taskNameLabel.text = "Treats";
+        taskTitleLabel.text = specifictask.selectedTreat?.title ?? "No Treat selected"
+        default: taskNameLabel.text = name
         }
         
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")

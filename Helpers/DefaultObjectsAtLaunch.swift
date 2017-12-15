@@ -379,6 +379,8 @@ func generatePray() {
     prayer.detail = "1. Address Heavenly Father\n2. Share Gratitude\n3. Ask for needs\n4. Close in Jesus Christ's name"
     prayer.selected = true
     prayer.selectedOne = taskPrayer
+    
+    ad.saveContext()
 }
 
 func generateSongs() {
