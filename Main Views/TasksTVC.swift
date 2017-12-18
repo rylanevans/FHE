@@ -104,7 +104,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     func checkIfUserWantsToShare() {
         let alertController = UIAlertController(title: "📣 SHARE APP?", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
         
-        let yesAction = UIAlertAction(title: "✓ Yes, please", style: .default, handler: {
+        let yesAction = UIAlertAction(title: "✓ Yea, sure", style: .default, handler: {
             alert -> Void in
             self.shareWithNetWork()
         })
@@ -201,10 +201,23 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             let sections = taskController.sections![indexPath.section]
             let task = sections.objects![indexPath.row]
 //            performSegue(withIdentifier: "ShowSongs", sender: task)
-            let segueTask: Task = task as! Task
+            let segueTask = task as! Task
             switch segueTask.name {
-                case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
-                default: performSegue(withIdentifier: "ShowSongs", sender: task)
+            case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
+            case "Song"?: performSegue(withIdentifier: "ShowSongs", sender: task)
+            case "Rule"?: performSegue(withIdentifier: "ShowRules", sender: task)
+            case "Scripture"?: performSegue(withIdentifier: "ShowScriptures", sender: task)
+            case "Calendar"?: performSegue(withIdentifier: "ShowCalendar", sender: task)
+            case "Testimony"?: performSegue(withIdentifier: "ShowTestimony", sender: task)
+            case "Spotlight"?: performSegue(withIdentifier: "ShowSpotlight", sender: task)
+            case "Misc"?: performSegue(withIdentifier: "ShowMisc", sender: task)
+            case "Thought"?: performSegue(withIdentifier: "ShowThoughts", sender: task)
+            case "Lesson"?: performSegue(withIdentifier: "ShowLessons", sender: task)
+            case "Council"?: performSegue(withIdentifier: "ShowCouncil", sender: task)
+            case "Game"?: performSegue(withIdentifier: "ShowGames", sender: task)
+            case "Closing Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
+            case "Treat"?: performSegue(withIdentifier: "ShowTreats", sender: task)
+            default: performSegue(withIdentifier: "ShowPrayer", sender: task)
             }
         }
     }

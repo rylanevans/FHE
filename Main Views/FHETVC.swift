@@ -112,8 +112,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             case "Thought"?: performSegue(withIdentifier: "ShowThoughts", sender: task)
             case "Lesson"?: performSegue(withIdentifier: "ShowLessons", sender: task)
             case "Council"?: performSegue(withIdentifier: "ShowCouncil", sender: task)
-            case "Game"?: performSegue(withIdentifier: "ShowGame", sender: task)
-            case "Treat"?: performSegue(withIdentifier: "ShowTreat", sender: task)
+            case "Game"?: performSegue(withIdentifier: "ShowGames", sender: task)
+            case "Treat"?: performSegue(withIdentifier: "ShowTreats", sender: task)
             default: performSegue(withIdentifier: "ShowPrayer", sender: task)
             }
         }

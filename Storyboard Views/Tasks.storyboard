@@ -1666,7 +1666,7 @@ Family Member To Prayer</string>
         <!--Select A Rule-->
         <scene sceneID="bV0-mN-hZE">
             <objects>
-                <tableViewController storyboardIdentifier="RuleDetails" title="Select A Rule" id="REe-de-Iaq" customClass="SongListTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RuleDetails" title="Select A Rule" id="REe-de-Iaq" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Nvz-c3-Zzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1892,9 +1892,6 @@ Family Member To Songs</string>
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="segmentChanged:" destination="REe-de-Iaq" eventType="valueChanged" id="cCw-qd-eN1"/>
-                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMW-42-uYC">
                                                     <rect key="frame" x="365" y="0.0" width="10" height="35"/>
@@ -2184,7 +2181,7 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="REe-de-Iaq" id="BiE-r3-gCY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a song" id="llP-Sg-WZy">
+                    <navigationItem key="navigationItem" title="Select A Rule" id="llP-Sg-WZy">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zMK-XF-WPL">
                             <connections>
                                 <segue destination="ebl-Md-fK1" kind="show" identifier="RuleDetailsVCNew" id="2hD-bb-1eK">
@@ -2194,14 +2191,7 @@ Family Member To Songs</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchController" destination="vf1-Re-g99" id="d3A-m3-kgl"/>
-                        <outlet property="segment" destination="fJu-xb-qPm" id="34Q-tC-EFB"/>
-                        <outlet property="songAssigneeLabel" destination="G2d-0V-RQJ" id="oEo-No-ILJ"/>
-                        <outlet property="songAssigneeMemberImage" destination="Smg-Iz-58K" id="FAE-Cl-CIM"/>
-                        <outlet property="songAssigneeText" destination="6lk-k5-2Kv" id="xd0-0d-4TA"/>
-                        <segue destination="ebl-Md-fK1" kind="show" identifier="RuleDetailsVCExisting" id="YlE-a0-EG4">
-                            <nil key="action"/>
-                        </segue>
+                        <segue destination="ebl-Md-fK1" kind="show" identifier="RuleDetailsVCExisting" id="1mQ-gm-Yn6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amf-ZV-xe8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2211,7 +2201,7 @@ Family Member To Songs</string>
         <!--Add Rule-->
         <scene sceneID="u2L-cO-tQ4">
             <objects>
-                <viewController title="Add Rule" id="ebl-Md-fK1" customClass="SongDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Rule" id="ebl-Md-fK1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J4o-U0-4h9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2547,7 +2537,7 @@ Family Member To Songs</string>
         <!--Select A Scripture-->
         <scene sceneID="Wja-0Q-los">
             <objects>
-                <tableViewController storyboardIdentifier="ScriptureDetails" title="Select A Scripture" id="akJ-OM-9T5" customClass="SongListTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ScriptureDetails" title="Select A Scripture" id="akJ-OM-9T5" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aFc-0S-FVB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2773,9 +2763,6 @@ Family Member To Songs</string>
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="segmentChanged:" destination="akJ-OM-9T5" eventType="valueChanged" id="wzs-2h-Ivp"/>
-                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBC-OG-4Rv">
                                                     <rect key="frame" x="365" y="0.0" width="10" height="35"/>
@@ -3065,7 +3052,7 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="akJ-OM-9T5" id="Jff-Vi-akv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a song" id="jme-EJ-Exm">
+                    <navigationItem key="navigationItem" title="Select A Scripture" id="jme-EJ-Exm">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OhH-dA-xSa">
                             <connections>
                                 <segue destination="37l-gK-2tp" kind="show" identifier="ScriptureDetailsVCNew" id="c7O-gn-fvR">
@@ -3075,11 +3062,6 @@ Family Member To Songs</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchController" destination="Ade-GW-HEt" id="ByO-Un-YOZ"/>
-                        <outlet property="segment" destination="WxU-gx-eq3" id="Uqx-u1-hpN"/>
-                        <outlet property="songAssigneeLabel" destination="XL9-Mm-8OD" id="W0h-vW-1iG"/>
-                        <outlet property="songAssigneeMemberImage" destination="yES-YG-oiI" id="yO5-GJ-lFS"/>
-                        <outlet property="songAssigneeText" destination="YnT-oy-FLz" id="xIx-SC-0WL"/>
                         <segue destination="37l-gK-2tp" kind="show" identifier="ScriptureDetailsVCExisting" id="3su-cB-7Xo">
                             <nil key="action"/>
                         </segue>
@@ -3092,7 +3074,7 @@ Family Member To Songs</string>
         <!--Add Scripture-->
         <scene sceneID="cH4-AI-Yqe">
             <objects>
-                <viewController title="Add Scripture" id="37l-gK-2tp" customClass="SongDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Scripture" id="37l-gK-2tp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IEx-vu-EqM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3428,7 +3410,7 @@ Family Member To Songs</string>
         <!--Select A Thought-->
         <scene sceneID="XDv-K9-SlE">
             <objects>
-                <tableViewController storyboardIdentifier="ThoughtDetails" title="Select A Thought" id="fTi-bi-UdQ" customClass="SongListTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ThoughtDetails" title="Select A Thought" id="fTi-bi-UdQ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="apU-h2-qzZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3654,9 +3636,6 @@ Family Member To Songs</string>
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="segmentChanged:" destination="fTi-bi-UdQ" eventType="valueChanged" id="35E-Eo-q1l"/>
-                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ7-A6-Uzv">
                                                     <rect key="frame" x="365" y="0.0" width="10" height="35"/>
@@ -3946,7 +3925,7 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="fTi-bi-UdQ" id="7ek-LQ-VLe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a song" id="h9v-h8-LX6">
+                    <navigationItem key="navigationItem" title="Select A Thought" id="h9v-h8-LX6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ccA-En-aPq">
                             <connections>
                                 <segue destination="4rG-qu-6BN" kind="show" identifier="ThoughtDetailsVCNew" id="eMU-TI-o1M">
@@ -3956,11 +3935,6 @@ Family Member To Songs</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchController" destination="Sey-I7-ADQ" id="J2y-hR-hmC"/>
-                        <outlet property="segment" destination="rAU-8u-mGd" id="wZ9-F9-I7J"/>
-                        <outlet property="songAssigneeLabel" destination="fjq-Fo-y8M" id="eIj-Bj-qtj"/>
-                        <outlet property="songAssigneeMemberImage" destination="sxp-Tr-keK" id="1S7-1u-HxW"/>
-                        <outlet property="songAssigneeText" destination="G58-kd-FP4" id="zuY-7e-rz1"/>
                         <segue destination="4rG-qu-6BN" kind="show" identifier="ThoughtDetailsVCExisting" id="H26-Ve-aa6">
                             <nil key="action"/>
                         </segue>
@@ -3973,7 +3947,7 @@ Family Member To Songs</string>
         <!--Add Thought-->
         <scene sceneID="Pe7-dV-yJc">
             <objects>
-                <viewController title="Add Thought" id="4rG-qu-6BN" customClass="SongDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Thought" id="4rG-qu-6BN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="chG-Pe-DxB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4309,7 +4283,7 @@ Family Member To Songs</string>
         <!--Select A Lesson-->
         <scene sceneID="XqD-v2-hvo">
             <objects>
-                <tableViewController storyboardIdentifier="LessonDetails" title="Select A Lesson" id="piK-pn-6s9" customClass="SongListTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LessonDetails" title="Select A Lesson" id="piK-pn-6s9" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bUc-yL-8K4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4535,9 +4509,6 @@ Family Member To Songs</string>
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="segmentChanged:" destination="piK-pn-6s9" eventType="valueChanged" id="kgk-XN-kPn"/>
-                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEc-rV-Wnr">
                                                     <rect key="frame" x="365" y="0.0" width="10" height="35"/>
@@ -4827,7 +4798,7 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="piK-pn-6s9" id="rcO-4T-1Ho"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a song" id="RQT-1z-e0d">
+                    <navigationItem key="navigationItem" title="Select A Lesson" id="RQT-1z-e0d">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="apE-z6-PIl">
                             <connections>
                                 <segue destination="dKF-lO-TJs" kind="show" identifier="LessonDetailsVCNew" id="59X-nj-9V4">
@@ -4837,11 +4808,6 @@ Family Member To Songs</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchController" destination="2gM-bU-h5O" id="TRO-cn-0SL"/>
-                        <outlet property="segment" destination="jGI-tx-Mto" id="uvN-6t-UuL"/>
-                        <outlet property="songAssigneeLabel" destination="2bb-Mo-bca" id="NDv-pq-P6b"/>
-                        <outlet property="songAssigneeMemberImage" destination="uj2-dw-rDb" id="h4M-7Q-cpA"/>
-                        <outlet property="songAssigneeText" destination="dQ0-2i-wfn" id="moq-Y2-BP9"/>
                         <segue destination="dKF-lO-TJs" kind="show" identifier="LessonDetailsVCExisting" id="I0n-yv-uAA">
                             <nil key="action"/>
                         </segue>
@@ -4854,7 +4820,7 @@ Family Member To Songs</string>
         <!--Add Lesson-->
         <scene sceneID="3W7-Nb-6XX">
             <objects>
-                <viewController title="Add Lesson" id="dKF-lO-TJs" customClass="SongDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Lesson" id="dKF-lO-TJs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mwG-CE-azG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5190,7 +5156,7 @@ Family Member To Songs</string>
         <!--Select An Activity-->
         <scene sceneID="wgY-DJ-Gej">
             <objects>
-                <tableViewController storyboardIdentifier="GameDetails" title="Select An Activity" id="id5-3K-Hig" customClass="SongListTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GameDetails" title="Select An Activity" id="id5-3K-Hig" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IDg-mh-iiq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -5416,9 +5382,6 @@ Family Member To Songs</string>
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="segmentChanged:" destination="id5-3K-Hig" eventType="valueChanged" id="U5z-b1-NXX"/>
-                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQV-O6-i25">
                                                     <rect key="frame" x="365" y="0.0" width="10" height="35"/>
@@ -5708,7 +5671,7 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="id5-3K-Hig" id="Qu5-yt-ZmV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a song" id="asz-Ut-Byb">
+                    <navigationItem key="navigationItem" title="Select An Activity" id="asz-Ut-Byb">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Exk-AO-1iu">
                             <connections>
                                 <segue destination="Wb7-YV-pbm" kind="show" identifier="GameDetailsVCNew" id="ijP-Wx-7k3">
@@ -5718,11 +5681,6 @@ Family Member To Songs</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchController" destination="o9P-bx-DkP" id="jcc-h2-cQ8"/>
-                        <outlet property="segment" destination="BnV-9D-L8v" id="SzE-9n-Kbc"/>
-                        <outlet property="songAssigneeLabel" destination="L4y-rh-YEY" id="bu8-dv-fO9"/>
-                        <outlet property="songAssigneeMemberImage" destination="fB7-JS-tAQ" id="bNv-L2-Mwo"/>
-                        <outlet property="songAssigneeText" destination="Zvt-VY-O1r" id="Tjp-Q6-ZJq"/>
                         <segue destination="Wb7-YV-pbm" kind="show" identifier="GameDetailsVCExisting" id="E2z-Gc-TmD">
                             <nil key="action"/>
                         </segue>
@@ -5735,7 +5693,7 @@ Family Member To Songs</string>
         <!--Add Activity-->
         <scene sceneID="ZD3-wL-xRJ">
             <objects>
-                <viewController title="Add Activity" id="Wb7-YV-pbm" customClass="SongDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Activity" id="Wb7-YV-pbm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9cE-eH-ixE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7599,7 +7557,7 @@ Family Member To Prayer</string>
         <!--Select A Treat-->
         <scene sceneID="goT-vp-Jvf">
             <objects>
-                <tableViewController storyboardIdentifier="TreatDetails" title="Select A Treat" id="XxZ-ld-PN5" customClass="SongListTVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TreatDetails" title="Select A Treat" id="XxZ-ld-PN5" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UDb-g4-KQ4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -7825,9 +7783,6 @@ Family Member To Songs</string>
                                                             <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="segmentChanged:" destination="XxZ-ld-PN5" eventType="valueChanged" id="EsR-6h-98H"/>
-                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMD-II-7Fi">
                                                     <rect key="frame" x="365" y="0.0" width="10" height="35"/>
@@ -8117,7 +8072,7 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="XxZ-ld-PN5" id="oW8-xS-HTC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select a song" id="JYg-Nv-kvf">
+                    <navigationItem key="navigationItem" title="Select A Treat" id="JYg-Nv-kvf">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z87-ka-fXw">
                             <connections>
                                 <segue destination="xkD-eN-zad" kind="show" identifier="TreatDetailsVCNew" id="VVw-Xy-PGr">
@@ -8127,11 +8082,6 @@ Family Member To Songs</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchController" destination="GWe-7I-d78" id="QOg-Fc-AxV"/>
-                        <outlet property="segment" destination="R3p-W5-Ge2" id="hnf-d3-kSN"/>
-                        <outlet property="songAssigneeLabel" destination="fPJ-f7-mca" id="ABn-kr-cts"/>
-                        <outlet property="songAssigneeMemberImage" destination="wrI-FV-Fzx" id="Kte-Lc-rrG"/>
-                        <outlet property="songAssigneeText" destination="vAf-7R-4Gr" id="oi4-Po-bzx"/>
                         <segue destination="xkD-eN-zad" kind="show" identifier="TreatDetailsVCExisting" id="cMZ-k8-bOB">
                             <nil key="action"/>
                         </segue>
@@ -8144,7 +8094,7 @@ Family Member To Songs</string>
         <!--Add Treat-->
         <scene sceneID="0JU-er-1xc">
             <objects>
-                <viewController title="Add Treat" id="xkD-eN-zad" customClass="SongDetailsVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Treat" id="xkD-eN-zad" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1UT-2b-EJ3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -8487,128 +8437,8 @@ Family Member To Songs</string>
         <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -8616,11 +8446,11 @@ Family Member To Songs</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="cMZ-k8-bOB"/>
-        <segue reference="ijP-Wx-7k3"/>
-        <segue reference="59X-nj-9V4"/>
-        <segue reference="H26-Ve-aa6"/>
+        <segue reference="E2z-Gc-TmD"/>
+        <segue reference="I0n-yv-uAA"/>
+        <segue reference="eMU-TI-o1M"/>
         <segue reference="3su-cB-7Xo"/>
-        <segue reference="YlE-a0-EG4"/>
-        <segue reference="ihB-K5-KCE"/>
+        <segue reference="2hD-bb-1eK"/>
+        <segue reference="6XO-GI-9PR"/>
     </inferredMetricsTieBreakers>
 </document>

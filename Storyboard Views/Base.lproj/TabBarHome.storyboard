@@ -215,7 +215,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUk-z5-EQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="IVm-bw-Lhv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="33" y="1171"/>
+            <point key="canvasLocation" x="-87" y="1137"/>
         </scene>
         <!--New Member-->
         <scene sceneID="nkl-LC-mVo">
@@ -495,7 +495,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="788" y="1946"/>
+            <point key="canvasLocation" x="602" y="1136"/>
         </scene>
         <!--SongDetails-->
         <scene sceneID="AwE-hz-dsU">
@@ -929,9 +929,20 @@
                     <connections>
                         <outlet property="assignmentTableView" destination="Uxw-f8-Nhu" id="tq1-tJ-R11"/>
                         <outlet property="christTeachingImage" destination="Xbf-LN-14A" id="HjA-k1-QtP"/>
-                        <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowPrayer" id="mYt-NC-LVN"/>
-                        <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="uzv-ES-xf0"/>
                         <segue destination="mtq-fi-jtC" kind="presentation" identifier="AboutMe" id="XaN-bW-a2L"/>
+                        <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowPrayer" id="fA6-h3-h7G"/>
+                        <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="8JJ-8f-PXH"/>
+                        <segue destination="Rdk-1J-HCu" kind="show" identifier="ShowRules" id="B76-IG-1fl"/>
+                        <segue destination="JuR-Q2-URo" kind="show" identifier="ShowScriptures" id="CY9-aF-U2H"/>
+                        <segue destination="OPB-i0-XTf" kind="show" identifier="ShowCalendar" id="HRK-vV-oOE"/>
+                        <segue destination="bFm-Lv-Fcd" kind="show" identifier="ShowTestimony" id="geT-Vr-Cb1"/>
+                        <segue destination="rUm-v7-8DB" kind="show" identifier="ShowSpotlight" id="AqR-Cm-zRA"/>
+                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowMisc" id="5Sp-jg-2M1"/>
+                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowThoughts" id="CPb-Ys-WWB"/>
+                        <segue destination="DXI-yq-1Wv" kind="show" identifier="ShowLessons" id="ZyK-vh-hyO"/>
+                        <segue destination="E2P-re-10A" kind="show" identifier="ShowCouncil" id="V5q-lq-RWj"/>
+                        <segue destination="Gx3-wC-DpV" kind="show" identifier="ShowGames" id="6zL-t5-3Ct"/>
+                        <segue destination="gPl-Pe-f5w" kind="show" identifier="ShowTreats" id="jBQ-Ru-iYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOx-IT-pkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -944,7 +955,7 @@
                 <viewControllerPlaceholder storyboardName="FHE" referencedIdentifier="FHE" id="sPM-tt-iak" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RsE-eE-TxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="1616"/>
+            <point key="canvasLocation" x="2120" y="2447"/>
         </scene>
         <!--Settings-->
         <scene sceneID="TXi-2w-V2t">
@@ -1577,7 +1588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4M-k4-NRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-724" y="1171"/>
+            <point key="canvasLocation" x="-820" y="1137"/>
         </scene>
         <!--More-->
         <scene sceneID="m2a-2q-hH7">
@@ -1980,7 +1991,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="ABOUT ME">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2083,7 +2094,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="MY APPS">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2174,7 +2185,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="DOWNLOAD">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2265,7 +2276,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="SHARE">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2365,7 +2376,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="ORDER NOW">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2466,7 +2477,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="VISIT WEBSITE">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2559,7 +2570,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="LIKE ME">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2650,7 +2661,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="FOLLOW ME">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2741,7 +2752,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="SUPPORT ME">
-                                                                <color key="titleColor" name="Accent"/>
+                                                                <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2994,7 +3005,6 @@ I spent a lot of time and effort building something I thought would be both help
                     <connections>
                         <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="9jh-Si-QQ7"/>
                         <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowPrayer" id="EbF-I8-KYK"/>
-                        <segue destination="Rdk-1J-HCu" kind="show" identifier="ShowRules" id="W3l-sh-gFk"/>
                         <segue destination="JuR-Q2-URo" kind="show" identifier="ShowScriptures" id="fVt-7Q-RzX"/>
                         <segue destination="OPB-i0-XTf" kind="show" identifier="ShowCalendar" id="4yL-57-dYB"/>
                         <segue destination="bFm-Lv-Fcd" kind="show" identifier="ShowTestimony" id="9P0-m0-b2K"/>
@@ -3005,11 +3015,12 @@ I spent a lot of time and effort building something I thought would be both help
                         <segue destination="E2P-re-10A" kind="show" identifier="ShowCouncil" id="62d-fj-n5k"/>
                         <segue destination="Gx3-wC-DpV" kind="show" identifier="ShowGames" id="Hu8-j0-LrC"/>
                         <segue destination="gPl-Pe-f5w" kind="show" identifier="ShowTreats" id="zo5-HV-Ykr"/>
+                        <segue destination="Rdk-1J-HCu" kind="show" identifier="ShowRules" id="lqx-jC-3VV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aH-xI-1kh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1591.2" y="1169.865067466267"/>
+            <point key="canvasLocation" x="-1687" y="1136"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="7cf-BZ-S6D">
@@ -3036,7 +3047,7 @@ I spent a lot of time and effort building something I thought would be both help
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mk-XS-qTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2334" y="1170"/>
+            <point key="canvasLocation" x="-2431" y="1136"/>
         </scene>
         <!--FHE-->
         <scene sceneID="mwk-PG-1ij">
@@ -3477,16 +3488,27 @@ I spent a lot of time and effort building something I thought would be both help
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Text">
-            <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Tint">
+            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zo5-HV-Ykr"/>
+        <segue reference="Hu8-j0-LrC"/>
+        <segue reference="62d-fj-n5k"/>
+        <segue reference="1Ip-Qm-3IC"/>
+        <segue reference="ktT-fE-CXW"/>
+        <segue reference="OLX-No-sfi"/>
+        <segue reference="64D-36-E2v"/>
+        <segue reference="9P0-m0-b2K"/>
+        <segue reference="4yL-57-dYB"/>
+        <segue reference="lqx-jC-3VV"/>
         <segue reference="EbF-I8-KYK"/>
+        <segue reference="fVt-7Q-RzX"/>
         <segue reference="9jh-Si-QQ7"/>
-        <segue reference="fh2-ar-ueD"/>
+        <segue reference="h4y-nB-v6D"/>
     </inferredMetricsTieBreakers>
 </document>
