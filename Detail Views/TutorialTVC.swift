@@ -15,6 +15,16 @@ class TutorialTVC: UITableViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func videoTutorialsButtonPressed(_ sender: Any) {
+        let URL = NSURL(string: "https://www.youtube.com/playlist?list=PLbuu8VeGQ5COhd6o3WYSzZ5nO9eBzexQF")!
+        
+        let videoTutorialsWebVC = SFSafariViewController(url: URL as URL)
+        videoTutorialsWebVC.delegate = self
+        
+        present(videoTutorialsWebVC, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func orderButtonPressed(_ sender: Any) {
         let URL = NSURL(string: "https://www.amazon.com/Apple-Lightning-Digital-Adapter-MD826AM/dp/B009WHV3BM/")!
         
@@ -23,20 +33,6 @@ class TutorialTVC: UITableViewController {
         
         present(amazonWebVC, animated: true, completion: nil)
     }
-        
-    // MARK: - Table view data source
-    
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 0
-//    }
-//
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 0
-//    }
-//    
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableViewAutomaticDimension
-//    }
 }
 
 extension TutorialTVC: SFSafariViewControllerDelegate {

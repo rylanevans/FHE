@@ -21,7 +21,8 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        clickSoundURL()
+        
+        offSoundURL()
         
         loadPageData()
     }
@@ -43,6 +44,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         if let task = specificTask.selectedSong {
             songTitleLabel.text = task.title
             songNumberLabel.text = String(describing: task.number)
+            songURL = task.url ?? "https://www.lds.org/music/library?lang=eng"
         }
         
         if let assignee = specificTask.assignment{
@@ -54,6 +56,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
 
 extension SongVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
 }

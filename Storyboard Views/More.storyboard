@@ -79,7 +79,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-FB-Lts">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqm-RX-9dP">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqm-RX-9dP">
                                                                     <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
@@ -90,7 +90,7 @@
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-dN-0oD" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
-                                                                            <state key="normal" title="HDMI Cable">
+                                                                            <state key="normal" title="Videos">
                                                                                 <color key="titleColor" name="Tint"/>
                                                                             </state>
                                                                             <userDefinedRuntimeAttributes>
@@ -105,7 +105,7 @@
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                             <connections>
-                                                                                <action selector="orderButtonPressed:" destination="U1u-eF-GtX" eventType="touchUpInside" id="Ojt-gT-YuJ"/>
+                                                                                <action selector="videoTutorialsButtonPressed:" destination="U1u-eF-GtX" eventType="touchUpInside" id="HJR-tO-KyD"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
@@ -120,7 +120,7 @@
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Best used when paired with your Apple TV or HDMI Cable to be displayed on your family room television." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5i-hW-hJg">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Click on the video link provided to watch a full play-list with how-to guides on set-up and best practices." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5i-hW-hJg">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -137,8 +137,79 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ra5-5s-JO2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="3je-KE-y81">
                                         <rect key="frame" x="0.0" y="254" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3je-KE-y81" id="OjG-Sq-M1a">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vKc-mM-fIb">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXY-kW-7U3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSj-mo-PdM">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-Jb-QQM">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-vO-Tma" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <state key="normal" title="HDMI Cable">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="orderButtonPressed:" destination="U1u-eF-GtX" eventType="touchUpInside" id="tPE-M4-N1M"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="mlw-vO-Tma" secondAttribute="trailing" id="Kxj-aP-fx3"/>
+                                                                        <constraint firstItem="mlw-vO-Tma" firstAttribute="leading" secondItem="lnb-Jb-QQM" secondAttribute="leading" id="O5o-J3-MwY"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="mlw-vO-Tma" secondAttribute="bottom" constant="5" id="aie-MQ-jSC"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="nl8-5K-F0w"/>
+                                                                        <constraint firstItem="mlw-vO-Tma" firstAttribute="top" secondItem="lnb-Jb-QQM" secondAttribute="top" id="o0y-NJ-7eq"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Best used when paired with your Apple TV or HDMI Cable to be displayed on your family room television." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-Ed-qKe">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vKc-mM-fIb" secondAttribute="trailing" constant="8" id="3Kg-89-4CO"/>
+                                                <constraint firstItem="vKc-mM-fIb" firstAttribute="leading" secondItem="OjG-Sq-M1a" secondAttribute="leading" constant="8" id="Fsu-hf-Xs1"/>
+                                                <constraint firstAttribute="bottom" secondItem="vKc-mM-fIb" secondAttribute="bottom" constant="8" id="sB6-zH-HfP"/>
+                                                <constraint firstItem="vKc-mM-fIb" firstAttribute="top" secondItem="OjG-Sq-M1a" secondAttribute="top" constant="8" id="sQT-x1-PpX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ra5-5s-JO2">
+                                        <rect key="frame" x="0.0" y="298" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ra5-5s-JO2" id="WN9-6b-lT9">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -171,7 +242,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="bkg-rd-Dn7">
-                                        <rect key="frame" x="0.0" y="298" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="342" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bkg-rd-Dn7" id="yj0-Bx-o0d">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -204,7 +275,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Tem-c2-1GJ">
-                                        <rect key="frame" x="0.0" y="342" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="386" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tem-c2-1GJ" id="xAh-2y-HuO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -822,8 +893,14 @@ I spent a lot of time and effort building something I thought would be both help
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

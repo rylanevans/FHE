@@ -30,6 +30,25 @@ extension UIViewController {
         }
         UIViewController.clickSound.play()
     }
+    
+    static var offSound: AVAudioPlayer!
+    
+    func offSoundURL() {
+        let off = Bundle.main.path(forResource: "No Sound", ofType: "m4a")
+        let offURL = URL(fileURLWithPath: off!)
+        do {
+            try UIPageViewController.offSound = AVAudioPlayer(contentsOf: offURL)
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
+    func turnOffAudio() {
+        if UIPageViewController.offSound.isPlaying {
+            UIPageViewController.offSound.stop()
+        }
+        UIPageViewController.offSound.play()
+    }
 }
 
 extension UIPageViewController {
