@@ -1,5 +1,5 @@
 //
-//  Misc+Convenience.swift
+//  Thought+Convenience.swift
 //  FHE
 //
 //  Created by Rylan Evans on 9/23/17.
@@ -9,7 +9,7 @@
 import CoreData
 import UIKit
 
-extension Misc {
+extension Thought {
     convenience init(title: String, detail: String, url: String, selected: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)

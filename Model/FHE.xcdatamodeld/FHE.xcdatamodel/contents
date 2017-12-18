@@ -60,18 +60,23 @@
         <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="toTask" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Task" inverseName="assignment" inverseEntity="Task" syncable="YES"/>
     </entity>
-    <entity name="Misc" representedClassName="Misc" syncable="YES" codeGenerationType="class">
-        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="title" attributeType="String" syncable="YES"/>
-        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedMisc" inverseEntity="Task" syncable="YES"/>
-    </entity>
     <entity name="Prayer" representedClassName="Prayer" syncable="YES" codeGenerationType="class">
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedPrayer" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Quote" representedClassName="Quote" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedQuote" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Rule" representedClassName="Rule" syncable="YES" codeGenerationType="class">
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -132,8 +137,8 @@
         <relationship name="selectedCouncil" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Council" inverseName="selectedOne" inverseEntity="Council" syncable="YES"/>
         <relationship name="selectedGame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="selectedOne" inverseEntity="Game" syncable="YES"/>
         <relationship name="selectedLesson" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Lesson" inverseName="selectedOne" inverseEntity="Lesson" syncable="YES"/>
-        <relationship name="selectedMisc" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Misc" inverseName="selectedOne" inverseEntity="Misc" syncable="YES"/>
         <relationship name="selectedPrayer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Prayer" inverseName="selectedOne" inverseEntity="Prayer" syncable="YES"/>
+        <relationship name="selectedQuote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quote" inverseName="selectedOne" inverseEntity="Quote" syncable="YES"/>
         <relationship name="selectedRule" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Rule" inverseName="selectedOne" inverseEntity="Rule" syncable="YES"/>
         <relationship name="selectedScripture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Scripture" inverseName="selectedOne" inverseEntity="Scripture" syncable="YES"/>
         <relationship name="selectedSong" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Song" inverseName="selectedOne" inverseEntity="Song" syncable="YES"/>
@@ -149,14 +154,9 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedTestimony" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Thought" representedClassName="Thought" syncable="YES" codeGenerationType="class">
-        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="random" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="sortingIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedThought" inverseEntity="Task" syncable="YES"/>
     </entity>
@@ -179,7 +179,7 @@
         <element name="Game" positionX="9" positionY="108" width="128" height="195"/>
         <element name="Lesson" positionX="45" positionY="144" width="128" height="240"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>
-        <element name="Misc" positionX="36" positionY="144" width="128" height="30"/>
+        <element name="Thought" positionX="36" positionY="144" width="128" height="120"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="105"/>
         <element name="Rule" positionX="0" positionY="108" width="128" height="30"/>
         <element name="Scripture" positionX="9" positionY="72" width="128" height="240"/>
@@ -187,7 +187,7 @@
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="30"/>
         <element name="Task" positionX="9" positionY="153" width="128" height="360"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="30"/>
-        <element name="Thought" positionX="45" positionY="153" width="128" height="195"/>
+        <element name="Quote" positionX="45" positionY="153" width="128" height="195"/>
         <element name="Treat" positionX="18" positionY="117" width="128" height="195"/>
     </elements>
 </model>

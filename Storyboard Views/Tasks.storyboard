@@ -3407,10 +3407,10 @@ Family Member To Songs</string>
             </objects>
             <point key="canvasLocation" x="6078" y="3600"/>
         </scene>
-        <!--Select A Thought-->
+        <!--Select A Quote-->
         <scene sceneID="XDv-K9-SlE">
             <objects>
-                <tableViewController storyboardIdentifier="ThoughtDetails" title="Select A Thought" id="fTi-bi-UdQ" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="QuoteDetails" title="Select A Quote" id="fTi-bi-UdQ" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="apU-h2-qzZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3925,17 +3925,17 @@ Family Member To Songs</string>
                             <outlet property="delegate" destination="fTi-bi-UdQ" id="7ek-LQ-VLe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select A Thought" id="h9v-h8-LX6">
+                    <navigationItem key="navigationItem" title="Select A Quote" id="h9v-h8-LX6">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ccA-En-aPq">
                             <connections>
-                                <segue destination="4rG-qu-6BN" kind="show" identifier="ThoughtDetailsVCNew" id="eMU-TI-o1M">
+                                <segue destination="4rG-qu-6BN" kind="show" identifier="QuoteDetailsVCNew" id="eMU-TI-o1M">
                                     <nil key="action"/>
                                 </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="4rG-qu-6BN" kind="show" identifier="ThoughtDetailsVCExisting" id="H26-Ve-aa6">
+                        <segue destination="4rG-qu-6BN" kind="show" identifier="QuoteDetailsVCExisting" id="H26-Ve-aa6">
                             <nil key="action"/>
                         </segue>
                     </connections>
@@ -3944,10 +3944,10 @@ Family Member To Songs</string>
             </objects>
             <point key="canvasLocation" x="5126" y="7603"/>
         </scene>
-        <!--Add Thought-->
+        <!--Add Quote-->
         <scene sceneID="Pe7-dV-yJc">
             <objects>
-                <viewController title="Add Thought" id="4rG-qu-6BN" sceneMemberID="viewController">
+                <viewController title="Add Quote" id="4rG-qu-6BN" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="chG-Pe-DxB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -6790,10 +6790,10 @@ Family Member To Prayer</string>
             </objects>
             <point key="canvasLocation" x="5126" y="6063"/>
         </scene>
-        <!--Edit Misc-->
+        <!--Edit Thought-->
         <scene sceneID="AF6-uB-gMC">
             <objects>
-                <viewController storyboardIdentifier="MiscDetails" title="Edit Misc" id="FvF-Vw-O37" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThoughtDetails" title="Edit Thought" id="FvF-Vw-O37" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YKG-gI-iF8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

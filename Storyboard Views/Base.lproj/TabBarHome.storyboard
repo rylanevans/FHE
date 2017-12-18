@@ -937,8 +937,8 @@
                         <segue destination="OPB-i0-XTf" kind="show" identifier="ShowCalendar" id="HRK-vV-oOE"/>
                         <segue destination="bFm-Lv-Fcd" kind="show" identifier="ShowTestimony" id="geT-Vr-Cb1"/>
                         <segue destination="rUm-v7-8DB" kind="show" identifier="ShowSpotlight" id="AqR-Cm-zRA"/>
-                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowMisc" id="5Sp-jg-2M1"/>
-                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowThoughts" id="CPb-Ys-WWB"/>
+                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowThought" id="5Sp-jg-2M1"/>
+                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowQuotes" id="CPb-Ys-WWB"/>
                         <segue destination="DXI-yq-1Wv" kind="show" identifier="ShowLessons" id="ZyK-vh-hyO"/>
                         <segue destination="E2P-re-10A" kind="show" identifier="ShowCouncil" id="V5q-lq-RWj"/>
                         <segue destination="Gx3-wC-DpV" kind="show" identifier="ShowGames" id="6zL-t5-3Ct"/>
@@ -3009,8 +3009,8 @@ I spent a lot of time and effort building something I thought would be both help
                         <segue destination="OPB-i0-XTf" kind="show" identifier="ShowCalendar" id="4yL-57-dYB"/>
                         <segue destination="bFm-Lv-Fcd" kind="show" identifier="ShowTestimony" id="9P0-m0-b2K"/>
                         <segue destination="rUm-v7-8DB" kind="show" identifier="ShowSpotlight" id="64D-36-E2v"/>
-                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowMisc" id="OLX-No-sfi"/>
-                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowThoughts" id="ktT-fE-CXW"/>
+                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowThought" id="OLX-No-sfi"/>
+                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowQuotes" id="ktT-fE-CXW"/>
                         <segue destination="DXI-yq-1Wv" kind="show" identifier="ShowLessons" id="1Ip-Qm-3IC"/>
                         <segue destination="E2P-re-10A" kind="show" identifier="ShowCouncil" id="62d-fj-n5k"/>
                         <segue destination="Gx3-wC-DpV" kind="show" identifier="ShowGames" id="Hu8-j0-LrC"/>
@@ -3381,18 +3381,18 @@ I spent a lot of time and effort building something I thought would be both help
             </objects>
             <point key="canvasLocation" x="608" y="2447"/>
         </scene>
-        <!--MiscDetails-->
+        <!--ThoughtDetails-->
         <scene sceneID="chF-JT-6Zd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="MiscDetails" id="5Az-eD-lEO" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ThoughtDetails" id="5Az-eD-lEO" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhJ-k6-hBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="2447"/>
         </scene>
-        <!--ThoughtDetails-->
+        <!--QuoteDetails-->
         <scene sceneID="WRm-Hx-iQ2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ThoughtDetails" id="arE-4i-0Zk" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="QuoteDetails" id="arE-4i-0Zk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5o8-1H-opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1033" y="2447"/>

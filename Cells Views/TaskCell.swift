@@ -75,10 +75,10 @@ class TaskCell: UITableViewCell {
         taskTitleLabel.text = specifictask.selectedTestimony?.title ?? "No Testimony selected"
         case "Spotlight"?: taskNameLabel.text = "Spotlight";
         taskTitleLabel.text = specifictask.selectedSpotlight?.title ?? "No Spotlight selected"
-        case "Misc"?: taskNameLabel.text = "Misc";
-        taskTitleLabel.text = specifictask.selectedMisc?.title ?? "No Misc selected"
-        case "Thought"?: taskNameLabel.text = "Thoughts";
+        case "Thought"?: taskNameLabel.text = "Thought";
         taskTitleLabel.text = specifictask.selectedThought?.title ?? "No Thought selected"
+        case "Quote"?: taskNameLabel.text = "Quotes";
+        taskTitleLabel.text = specifictask.selectedQuote?.title ?? "No Quote selected"
         case "Lesson"?: taskNameLabel.text = "Lessons";
         taskTitleLabel.text = specifictask.selectedLesson?.title ?? "No Lesson selected"
         case "Council"?: taskNameLabel.text = "Council";

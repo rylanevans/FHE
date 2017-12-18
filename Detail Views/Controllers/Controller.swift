@@ -18,8 +18,8 @@ let taskScripture = tasksAllArray[3]
 let taskCalendar = tasksAllArray[4]
 let taskTestimony = tasksAllArray[5]
 let taskSpotlight = tasksAllArray[6]
-let taskMisc = tasksAllArray[7]
-let taskThought = tasksAllArray[8]
+let taskThought = tasksAllArray[7]
+let taskQuote = tasksAllArray[8]
 let taskLesson = tasksAllArray[9]
 let taskCouncil = tasksAllArray[10]
 let taskGame = tasksAllArray[11]
@@ -41,8 +41,8 @@ var taskScripturesArray = [Task]()
 var taskCalendarArray = [Task]()
 var taskTestimonyArray = [Task]()
 var taskSpotlightArray = [Task]()
-var taskMiscArray = [Task]()
-var taskThoughtsArray = [Task]()
+var taskThoughtArray = [Task]()
+var taskQuotesArray = [Task]()
 var taskLessonsArray = [Task]()
 var taskCouncilArray = [Task]()
 var taskGamesArray = [Task]()
@@ -219,26 +219,26 @@ func getTaskSpotlight() {
     }
 }
 
-func getTaskMisc() {
-    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-    let predicate = NSPredicate(format: "name == %@", "Misc")
-    fetchRequest.predicate = predicate
-    
-    do {
-        taskMiscArray = try context.fetch(fetchRequest)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
-}
-
 func getTaskThought() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
     let predicate = NSPredicate(format: "name == %@", "Thought")
     fetchRequest.predicate = predicate
     
     do {
-        taskThoughtsArray = try context.fetch(fetchRequest)
+        taskThoughtArray = try context.fetch(fetchRequest)
+    } catch {
+        let error = error as NSError
+        print("\(error)")
+    }
+}
+
+func getTaskQuote() {
+    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+    let predicate = NSPredicate(format: "name == %@", "Quote")
+    fetchRequest.predicate = predicate
+    
+    do {
+        taskQuotesArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")

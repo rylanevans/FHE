@@ -40,7 +40,7 @@ class ThoughtVC: UIViewController {
         if let task = specificTask.selectedThought {
             thoughtTitleLabel.text = task.title
             thoughtDetailLabel.text = task.detail
-            thoughtURL = task.url ?? "https://www.pinterest.com/pin/42221315236979309/?lp=true"
+            thoughtURL = task.url ?? "https://en.wiktionary.org/"
         }
         
         if let assignee = specificTask.assignment {
@@ -55,3 +55,4 @@ extension ThoughtVC: SFSafariViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
