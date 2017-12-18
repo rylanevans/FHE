@@ -15,6 +15,8 @@ class ThoughtVC: UIViewController {
     @IBOutlet weak var thoughtTitleLabel: UILabel!
     @IBOutlet weak var thoughtDetailLabel: UILabel!
     
+    var thoughtURL = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +24,7 @@ class ThoughtVC: UIViewController {
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
-        //        playClick()
-        let URL = NSURL(string: "https://media.giphy.com/media/3o85xsGXVuYh8lM3EQ/giphy.gif")!
+        let URL = NSURL(string: "\(thoughtURL)")!
         let thoughtWebVC = SFSafariViewController(url: URL as URL)
         thoughtWebVC.delegate = self
         
@@ -39,6 +40,7 @@ class ThoughtVC: UIViewController {
         if let task = specificTask.selectedThought {
             thoughtTitleLabel.text = task.title
             thoughtDetailLabel.text = task.detail
+            thoughtURL = task.url ?? "https://www.pinterest.com/pin/42221315236979309/?lp=true"
         }
         
         if let assignee = specificTask.assignment {

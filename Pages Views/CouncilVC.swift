@@ -15,6 +15,8 @@ class CouncilVC: UIViewController {
     @IBOutlet weak var councilTitleLabel: UILabel!
     @IBOutlet weak var councilDetailLabel: UILabel!
     
+    var councilURL = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +24,7 @@ class CouncilVC: UIViewController {
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
-        //        playClick()
-        let URL = NSURL(string: "https://www.ready.gov/build-a-kit")!
+        let URL = NSURL(string: "\(councilURL)")!
         let councilWebVC = SFSafariViewController(url: URL as URL)
         councilWebVC.delegate = self
         
@@ -39,6 +40,7 @@ class CouncilVC: UIViewController {
         if let task = specificTask.selectedCouncil {
             councilTitleLabel.text = task.title
             councilDetailLabel.text = task.detail
+            councilURL = task.url ?? "https://www.lds.org/blog/the-beginners-guide-to-family-councils?lang=eng"
         }
         
         if let assignee = specificTask.assignment {

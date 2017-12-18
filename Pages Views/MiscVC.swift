@@ -15,6 +15,8 @@ class MisVC: UIViewController {
     @IBOutlet weak var miscTitleLabel: UILabel!
     @IBOutlet weak var miscDetailLabel: UILabel!
     
+    var miscURL = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +24,7 @@ class MisVC: UIViewController {
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
-        let URL = NSURL(string: "https://en.wiktionary.org/wiki/miscellaneous")!
-
+        let URL = NSURL(string: "\(miscURL)")!
         let miscWebVC = SFSafariViewController(url: URL as URL)
         miscWebVC.delegate = self
         
@@ -39,6 +40,7 @@ class MisVC: UIViewController {
         if let task = specificTask.selectedMisc {
             miscTitleLabel.text = task.title
             miscDetailLabel.text = task.detail
+            miscURL = task.url ?? "https://en.wiktionary.org/wiki/miscellaneous"
         }
         
         if let assignee = specificTask.assignment {

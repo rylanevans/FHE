@@ -15,6 +15,8 @@ class RuleVC: UIViewController {
     @IBOutlet weak var ruleTitleLabel: UILabel!
     @IBOutlet weak var ruleDetailLabel: UILabel!
     
+    var ruleURL = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,11 +24,8 @@ class RuleVC: UIViewController {
     }
     
     @IBAction func ruleDetailsPressed(_ sender: Any) {
-        let specificTask = taskRule
-        let task = specificTask.selectedRule
-        let url = URL(string: (task?.url)!)
-//        let url = NSURL(string: "https://drive.google.com/file/d/0B7Bm33sKVSSqSnBFblFHUGU4NVk/view")!
-        let ruleWebVC = SFSafariViewController(url: url! as URL)
+        let URL = NSURL(string: "\(ruleURL)")!
+        let ruleWebVC = SFSafariViewController(url: URL as URL)
         ruleWebVC.delegate = self
         
         present(ruleWebVC, animated: true, completion: nil)
@@ -41,6 +40,7 @@ class RuleVC: UIViewController {
         if let task = specificTask.selectedRule {
             ruleTitleLabel.text = task.title
             ruleDetailLabel.text = task.detail
+            ruleURL = task.url ?? "https://drive.google.com/drive/my-drive"
         }
         
         if let assignee = specificTask.assignment {

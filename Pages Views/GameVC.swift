@@ -15,6 +15,7 @@ class GameVC: UIViewController {
     @IBOutlet weak var gameTitleLabel: UILabel!
     @IBOutlet weak var gameImage: UIImageView!
     
+    var gameURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +24,7 @@ class GameVC: UIViewController {
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
-        let URL = NSURL(string: "https://pixabay.com/en/halloween-cat-weird-surreal-959006/")!
+        let URL = NSURL(string: "\(gameURL)")!
         let gameWebVC = SFSafariViewController(url: URL as URL)
         gameWebVC.delegate = self
         
@@ -38,6 +39,7 @@ class GameVC: UIViewController {
         let specificTask = taskGame
         if let task = specificTask.selectedGame {
             gameTitleLabel.text = task.title
+            gameURL = task.url ?? "https://www.wikihow.com/Main-Page"
         }
         
         if let assignee = specificTask.assignment {

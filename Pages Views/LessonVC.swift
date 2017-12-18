@@ -16,16 +16,32 @@ class LessonVC: UIViewController {
     @IBOutlet weak var lessonTitleLabel: UILabel!
     @IBOutlet weak var lessonDetailLabel: UILabel!
     @IBOutlet weak var lessonWebKit: WKWebView!
+    @IBOutlet weak var youTubeView: UIView!
+    @IBOutlet weak var lessonDetailsView: UIStackView!
+    @IBOutlet weak var buttonDetailsView: UIStackView!
+    
+    var lessonURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadPageData()
         
-        let url = URL(string: "https://www.youtube.com/embed/9MiF_HKoFr4?rel=0&amp;controls=0&amp;showinfo=0")
-        let request = URLRequest(url: url!)
+        let task = taskLesson
+        if task.selectedLesson?.youTubeVideo == false {
+            youTubeView.isHidden = true
+            lessonDetailLabel.isHidden = false
+            buttonDetailsView.isHidden = false
+        }
+    }
+    
+    
+    @IBAction func detailsButtonPressed(_ sender: Any) {
+        let URL = NSURL(string: "\(lessonURL)")!
+        let treatWebVC = SFSafariViewController(url: URL as URL)
+        treatWebVC.delegate = self
         
-        lessonWebKit.load(request)
+        present(treatWebVC, animated: true, completion: nil)
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
@@ -37,12 +53,25 @@ class LessonVC: UIViewController {
         if let task = specificTask.selectedLesson{
             lessonTitleLabel.text = task.title
             lessonDetailLabel.text = task.detail
+            let number = "9MiF_HKoFr4"
+            lessonURL = "https://www.youtube.com/embed/\(number)?rel=0&amp;controls=0&amp;showinfo=0" ?? "https://www.lds.org/?lang=eng"
         }
         
         if let assignee = specificTask.assignment {
             lessonMemberPhotoImage.image = assignee.photo as? UIImage
             lessonMemberNameLabel.text = assignee.name
         }
+        
+        let URL = NSURL(string: "\(lessonURL)")!
+        let request = URLRequest(url: URL as URL)
+        
+        lessonWebKit.load(request)
+    }
+}
+
+extension LessonVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 

@@ -16,6 +16,8 @@ class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureDetailLabel: UILabel!
     @IBOutlet weak var scriptureWebKit: WKWebView!
     
+    var scriptureURL = "https://www.lds.org/scriptures?lang=eng"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +32,11 @@ class ScriptureVC: UIViewController {
         let specificTask = taskScripture
         if let task = specificTask.selectedScripture {
             scriptureTitleLabel.text = task.title
-            scriptureDetailLabel.text = "\(task.volume ?? "N/A") \(task.book ?? "N/A") \(task.chapter ?? "N/A") \(task.verse ?? "N/A")"
+            scriptureDetailLabel.text = "\(task.volume ?? "N/A") \(task.book ?? "N/A") \(task.chapter ?? "N/A"):\(task.verse ?? "N/A")"
+            if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
+                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(task.verse!)"
+                // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"
+            }
         }
         
         if let assignee = specificTask.assignment {
@@ -38,9 +44,8 @@ class ScriptureVC: UIViewController {
             scriptureMemberNameLabel.text = assignee.name
         }
         
-        //        let url = URL(string: "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5")
-        let url = URL(string: "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5")
-        let request = URLRequest(url: url!)
+        let URL = NSURL(string: "\(scriptureURL)") ?? NSURL(string: "https://www.lds.org/scriptures?lang=eng")
+        let request = URLRequest(url: URL! as URL)
         
         scriptureWebKit.load(request)
     }

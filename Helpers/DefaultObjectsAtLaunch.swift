@@ -1710,11 +1710,11 @@ func generateScripture() {
     getAllTasks()
     let scripture1 = Scripture(context: context)
     scripture1.topic = lessonTopicsArray[0]
-    scripture1.volume = "Book of Mormon"
-    scripture1.book = "1 Nephi"
+    scripture1.volume = "bofm"
+    scripture1.book = "1-ne"
     scripture1.chapter = "3"
     scripture1.verse = "7"
-    scripture1.title = "The Lord prepares a way"
+    scripture1.title = "The Lord Prepares A Way"
     scripture1.favorite = true
     scripture1.order = 1
     scripture1.random = Int64(arc4random_uniform(1000))
@@ -1724,11 +1724,11 @@ func generateScripture() {
     
     let scripture2 = Scripture(context: context)
     scripture2.topic = lessonTopicsArray[0]
-    scripture2.volume = "Book of Mormon"
-    scripture2.book = "2 Nephi"
+    scripture2.volume = "bofm"
+    scripture2.book = "2-ne"
     scripture2.chapter = "2"
     scripture2.verse = "22-25"
-    scripture2.title = "Adam fell that men might be."
+    scripture2.title = "Adam Fell That Men Might Be"
     scripture2.favorite = false
     scripture2.order = 2
     scripture2.random = Int64(arc4random_uniform(1000))
@@ -1765,7 +1765,7 @@ func generateSpotlight() {
     let spotlight = Spotlight(context: context)
     spotlight.selectedOne = taskSpotlight
     spotlight.title = "Affirmations"
-    spotlight.detail = "I noticed something you did in one of the following ways of life:\n\n1. Emotional\n2. Financial\n3. Intellectual\n4. Social\n5. Occupational\n6. Physical\n7. Environmental\n8. Spiritual"
+    spotlight.detail = "We've noticed something you did in one of the following ways of life:\n\n1. Emotional\n2. Financial\n3. Intellectual\n4. Social\n5. Occupational\n6. Physical\n7. Environmental\n8. Spiritual"
     spotlight.selected = true
     
     ad.saveContext()
@@ -2751,6 +2751,19 @@ func generateLessons() {
     lesson94.selected = false
     lesson94.sortingIndex = 0
     
+    let lesson95 = Lesson(context: context)
+    lesson95.category = "Temporal"
+    lesson95.topic = "Intellectual"
+    lesson95.title = "Hollywood Media vs. Your Mind"
+    lesson95.detail = "Imagine a group so powerful they could beam ideas directly into your head. Well, you don't have to imagine -- it's Hollywood. "
+    lesson95.url = "https://www.youtube.com/watch?v=vjMYCnI5kz0"
+    lesson95.youTubeVideo = true
+    lesson95.order = 9
+    lesson95.favorite = true
+    lesson95.random = Int64(arc4random_uniform(1000))
+    lesson95.selected = false
+    lesson95.sortingIndex = 0
+    
     ad.saveContext()
 }
 
@@ -2758,7 +2771,7 @@ func generateCouncils() {
     getAllTasks()
     let council = Council(context: context)
     council.selectedOne = taskCouncil
-    council.title = "Family Council Meeting"
+    council.title = "Family Meeting"
     council.detail = "“If people don't weigh in, they can't buy in.”\n\n- Patrick Lencioni"
     council.url = "https://www.lds.org/blog/bc/images/family-councils-cheat-sheet.pdf"
     council.selected = true
@@ -3292,7 +3305,7 @@ func generateGames() {
     let game57 = Game(context: context)
     game57.category = gameCategoryArray[7]
     game57.title = "72 Hour Kit"
-    game57.url = "https://www.wikihow.com/Build-Your-Own-Emergency-Disaster-Kit"
+    game57.url = "https://www.ready.gov/build-a-kit"
     game57.favorite = false
     game57.order = 57
     game57.random = Int64(arc4random_uniform(1000))
