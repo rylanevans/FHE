@@ -722,7 +722,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="ivS-E9-Po5" eventType="touchUpInside" id="cMB-wH-bqd"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="c3w-71-7EB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1085,7 +1084,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="RFP-iF-3XJ" eventType="touchUpInside" id="FKM-YU-l17"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="Zb5-BM-aqa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1441,7 +1439,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="0aA-xK-YGk" eventType="touchUpInside" id="a13-IK-93X"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="atr-tz-nmr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1817,7 +1814,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="ZFw-sH-GMu" eventType="touchUpInside" id="Vii-NO-OwN"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="Sj5-xI-cPd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2120,7 +2116,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="fLO-R1-Ws9" eventType="touchUpInside" id="tAM-cq-pS9"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="sO3-uI-ZeO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2445,7 +2440,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="Enk-5M-ZvE" eventType="touchUpInside" id="IFP-Xb-RiC"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="eYu-mR-cMr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2478,7 +2472,7 @@
         <!--Thought-->
         <scene sceneID="YFm-wo-u7O">
             <objects>
-                <viewController storyboardIdentifier="Thought" title="Thought" id="eWq-pv-eEs" customClass="ThoughtVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Thought" title="Thought" id="eWq-pv-eEs" customClass="ThoughtVC" customModule="FHE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Eq-Xv-ktD"/>
                         <viewControllerLayoutGuide type="bottom" id="BVt-fe-XXe"/>
@@ -2806,8 +2800,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeButtonPressed:" destination="eWq-pv-eEs" eventType="touchUpInside" id="nyn-pt-d3n"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="5Lf-21-HXW"/>
+                                    <action selector="closeButtonPressed:" destination="eWq-pv-eEs" eventType="touchUpInside" id="FvO-DA-Vhr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2826,6 +2819,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2ek-ox-Lub"/>
                     </view>
+                    <connections>
+                        <outlet property="thoughtDetailLabel" destination="MYU-N7-LUl" id="Gob-6M-v7U"/>
+                        <outlet property="thoughtMemberNameLabel" destination="TDe-PN-M3A" id="Dgy-9V-JRU"/>
+                        <outlet property="thoughtMemberPhotoImage" destination="J8o-01-iTF" id="hFr-P9-vRZ"/>
+                        <outlet property="thoughtTitleLabel" destination="WKi-K1-EJm" id="6SG-Rc-a1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ydr-kU-ns4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3162,8 +3161,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeButtonPressed:" destination="eAf-bf-f3B" eventType="touchUpInside" id="D2i-xk-ZbZ"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="yaN-I2-RhQ"/>
+                                    <action selector="closeButtonPressed:" destination="eAf-bf-f3B" eventType="touchUpInside" id="emy-vt-1NR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3544,8 +3542,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeButtonPressed:" destination="qwK-Ja-Lqd" eventType="touchUpInside" id="9hd-Vz-Gy6"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="rTB-iA-WKb"/>
+                                    <action selector="closeButtonPressed:" destination="qwK-Ja-Lqd" eventType="touchUpInside" id="20W-9X-HUl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3911,7 +3908,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="Hc4-GV-zQc" eventType="touchUpInside" id="bEo-lz-RyQ"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="SIZ-Lp-YkF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4249,7 +4245,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="oFt-LC-QD1" eventType="touchUpInside" id="tnt-4m-mXY"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="tjM-n3-LcQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4581,7 +4576,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeButtonPressed:" destination="xAK-06-azI" eventType="touchUpInside" id="L6W-XV-POz"/>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="MAZ-qw-4nf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -4912,7 +4906,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeButtonTapped:" destination="W2J-kG-43N" eventType="touchUpInside" id="c9g-aU-Nbs"/>
                                     <action selector="closedButtonPressed:" destination="X55-qV-eYU" eventType="touchUpInside" id="vFd-me-Piw"/>
                                 </connections>
                             </button>

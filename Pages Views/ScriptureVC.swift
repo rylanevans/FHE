@@ -31,8 +31,9 @@ class ScriptureVC: UIViewController {
     func loadPageData() {
         let specificTask = taskScripture
         if let task = specificTask.selectedScripture {
-            scriptureTitleLabel.text = task.title
-            scriptureDetailLabel.text = "\(task.volume ?? "N/A") \(task.book ?? "N/A") \(task.chapter ?? "N/A"):\(task.verse ?? "N/A")"
+            scriptureTitleLabel.text = task.title?.capitalized
+            scriptureDetailLabel.text = "\(task.volume?.uppercased() ?? "") \(task.book?.uppercased() ?? "") \(task.chapter ?? ""):\(task.verse ?? "")"
+            
             if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
                 scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(task.verse!)"
                 // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"

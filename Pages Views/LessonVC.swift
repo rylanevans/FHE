@@ -20,7 +20,7 @@ class LessonVC: UIViewController {
     @IBOutlet weak var lessonDetailsView: UIStackView!
     @IBOutlet weak var buttonDetailsView: UIStackView!
     
-    var lessonURL = ""
+    var lessonURL = "https://www.lds.org/?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,11 +50,15 @@ class LessonVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskLesson
-        if let task = specificTask.selectedLesson{
+        if let task = specificTask.selectedLesson {
             lessonTitleLabel.text = task.title
             lessonDetailLabel.text = task.detail
-            let number = "9MiF_HKoFr4"
-            lessonURL = "https://www.youtube.com/embed/\(number)?rel=0&amp;controls=0&amp;showinfo=0" ?? "https://www.lds.org/?lang=eng"
+            let url = task.url?.suffix(11)
+            if task.url != nil && task.youTubeVideo == true {
+                lessonURL = "https://www.youtube.com/embed/\(url!)?rel=0&amp;controls=0&amp;showinfo=0"
+            } else if task.url != nil {
+                lessonURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {
