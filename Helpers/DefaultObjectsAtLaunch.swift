@@ -4038,7 +4038,7 @@ func generateGames() {
 func generateTreats() {
     getAllTasks()
     let treat1 = Treat(context: context)
-    treat1.category = treatsArray[0]
+    treat1.category = treatsCategoryArray[0]
     treat1.title = "Surprise!"
     treat1.url = "https://drive.google.com/open?id=1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe"
     treat1.favorite = true
@@ -4048,7 +4048,7 @@ func generateTreats() {
     treat1.sortingIndex = 0
     
     let treat2 = Treat(context: context)
-    treat2.category = treatsArray[1]
+    treat2.category = treatsCategoryArray[1]
     treat2.selectedOne = taskTreat
     treat2.title = "Chocolate Chip Cookies"
     treat2.url = "https://pin.it/digy53rpktcbza"
@@ -4059,7 +4059,7 @@ func generateTreats() {
     treat2.sortingIndex = 0
     
     let treat3 = Treat(context: context)
-    treat3.category = treatsArray[0]
+    treat3.category = treatsCategoryArray[0]
     treat3.title = "S'mores"
     treat3.url = "https://pin.it/k2wn4tvrckyfh4"
     treat3.favorite = true
@@ -4069,7 +4069,7 @@ func generateTreats() {
     treat3.sortingIndex = 0
     
     let treat4 = Treat(context: context)
-    treat4.category = treatsArray[2]
+    treat4.category = treatsCategoryArray[2]
     treat4.title = "Brownies"
     treat4.url = "https://pin.it/lrk44ktgy5juab"
     treat4.favorite = true
@@ -4079,7 +4079,7 @@ func generateTreats() {
     treat4.sortingIndex = 0
     
     let treat5 = Treat(context: context)
-    treat5.category = treatsArray[3]
+    treat5.category = treatsCategoryArray[3]
     treat5.title = "Chocolate Cake"
     treat5.url = "https://pin.it/flg2akxci43cu3"
     treat5.favorite = false
@@ -4089,7 +4089,7 @@ func generateTreats() {
     treat5.sortingIndex = 0
     
     let treat6 = Treat(context: context)
-    treat6.category = treatsArray[3]
+    treat6.category = treatsCategoryArray[3]
     treat6.title = "Cookies & Cream Cupcakes"
     treat6.url = "https://pin.it/g2rouxg72kxakd"
     treat6.favorite = false
@@ -4099,7 +4099,7 @@ func generateTreats() {
     treat6.sortingIndex = 0
     
     let treat7 = Treat(context: context)
-    treat7.category = treatsArray[4]
+    treat7.category = treatsCategoryArray[4]
     treat7.title = "Apple Pie"
     treat7.url = "https://pin.it/h3tqjhnddu2zfx"
     treat7.favorite = false
@@ -4109,7 +4109,7 @@ func generateTreats() {
     treat7.sortingIndex = 0
     
     let treat8 = Treat(context: context)
-    treat8.category = treatsArray[5]
+    treat8.category = treatsCategoryArray[5]
     treat8.title = "Strawberry Ice Cream"
     treat8.url = "https://pin.it/4j3vfkisqwevkh"
     treat8.favorite = false
@@ -4119,7 +4119,7 @@ func generateTreats() {
     treat8.sortingIndex = 0
     
     let treat9 = Treat(context: context)
-    treat9.category = treatsArray[6]
+    treat9.category = treatsCategoryArray[6]
     treat9.title = "Strawberry Coconut Shake"
     treat9.url = "https://pin.it/gn5hg2zde2cws5"
     treat9.favorite = false
@@ -4129,7 +4129,7 @@ func generateTreats() {
     treat9.sortingIndex = 0
     
     let treat10 = Treat(context: context)
-    treat10.category = treatsArray[7]
+    treat10.category = treatsCategoryArray[7]
     treat10.title = "Popsicles"
     treat10.url = "https://pin.it/52rngnfkjyh56l"
     treat10.favorite = false
@@ -4139,7 +4139,7 @@ func generateTreats() {
     treat10.sortingIndex = 0
     
     let treat11 = Treat(context: context)
-    treat11.category = treatsArray[8]
+    treat11.category = treatsCategoryArray[8]
     treat11.title = "Chocolate Pudding"
     treat11.url = "https://pin.it/ohboixv2afu3xf"
     treat11.favorite = false
@@ -4149,7 +4149,7 @@ func generateTreats() {
     treat11.sortingIndex = 0
     
     let treat12 = Treat(context: context)
-    treat12.category = treatsArray[9]
+    treat12.category = treatsCategoryArray[9]
     treat12.title = "Butterfinders"
     treat12.url = "https://pin.it/3ikto7zqomaxtl"
     treat12.favorite = false
@@ -4159,7 +4159,7 @@ func generateTreats() {
     treat12.sortingIndex = 0
     
     let treat13 = Treat(context: context)
-    treat13.category = treatsArray[10]
+    treat13.category = treatsCategoryArray[10]
     treat13.title = "Popcorn"
     treat13.url = "https://pin.it/ucx26xitl5tpvt"
     treat13.favorite = true

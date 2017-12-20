@@ -193,7 +193,7 @@ let gameCategoryArray = [
     "Mindfullness"
 ]
 
-let treatsArray = [
+let treatsCategoryArray = [
     "Other",
     "Cookie",
     "Brownie",
