@@ -51,29 +51,29 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songBookPicker.dataSource = self
         songBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        songTopicTextField.delegate = self
-        songTopicTextField.attributedPlaceholder = NSAttributedString(string: "Commandments", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
-        songTopicTextField.inputView = songTopicPicker
-        songTopicPicker.tag = 1
-        songTopicTextField.inputAccessoryView = toolBar
-        
-        songTitleTextField.delegate = self
-        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "Love At Home", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
-        songTitleTextField.inputAccessoryView = toolBar
-        
-        songBookTextField.delegate = self
-        songBookTextField.attributedPlaceholder = NSAttributedString(string: "Hymns or Children's", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
-        songBookTextField.inputView = songBookPicker
-        songBookPicker.tag = 2
-        songBookTextField.inputAccessoryView = toolBar
-        
-        songNumberTextField.delegate = self
-        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "294", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)])
-        songNumberTextField.inputAccessoryView = toolBar
-        
-        songURLTextField.delegate = self
-        songURLTextField.attributedPlaceholder = NSAttributedString(string: "Paste a youtube address to override", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        songURLTextField.inputAccessoryView = toolBar
+//        songTopicTextField.delegate = self
+//        songTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+//        songTopicTextField.inputView = songTopicPicker
+//        songTopicPicker.tag = 1
+//        songTopicTextField.inputAccessoryView = toolBar
+//
+//        songTitleTextField.delegate = self
+//        songTitleTextField.attributedPlaceholder = NSAttributedString(string: "Type Title", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+//        songTitleTextField.inputAccessoryView = toolBar
+//
+//        songBookTextField.delegate = self
+//        songBookTextField.attributedPlaceholder = NSAttributedString(string: "Select Book", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+//        songBookTextField.inputView = songBookPicker
+//        songBookPicker.tag = 2
+//        songBookTextField.inputAccessoryView = toolBar
+//
+//        songNumberTextField.delegate = self
+//        songNumberTextField.attributedPlaceholder = NSAttributedString(string: "Leave blank or enter #", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+//        songNumberTextField.inputAccessoryView = toolBar
+//
+//        songURLTextField.delegate = self
+//        songURLTextField.attributedPlaceholder = NSAttributedString(string: "Paste URL of song (lds.org or youtube)", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+//        songURLTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         

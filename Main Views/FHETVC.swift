@@ -29,6 +29,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         ]
         
         self.clickSoundURL()
+        getMembersForPicker()
         getMembersAttending()
         getAllTasks()
         taskAttemptFetch()
@@ -41,6 +42,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        getMembersForPicker()
+        getMembersAttending()
+        getAllTasks()
         if counter.launched % 4 == 0 && counter.tipGiven == false && counter.hideAboutMe == false {
             counter.hideAboutMe = true
             ad.saveContext()

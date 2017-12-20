@@ -1316,7 +1316,7 @@ func generateSongs() {
     song85.book = songBooksArray[0]
     song85.number = 163
     song85.url = "https://www.lds.org/music/library/childrens-songbook/i-am-like-a-star?lang=eng"
-    song85.title = "I Am like a Star"
+    song85.title = "I Am Like a Star"
     song85.topic = "Heavenly Father"
     song85.selected = false
     song85.favorite = false

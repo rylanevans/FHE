@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 import CoreData
+import SafariServices
 
 class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SongCellDelegate, UISearchBarDelegate {
+    
     @IBOutlet weak var songAssigneeMemberImage: UIImageView!
     @IBOutlet weak var songAssigneeLabel: UILabel!
     @IBOutlet weak var segment: UISegmentedControl!
@@ -20,6 +22,8 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     let memberPicker = UIPickerView()
     
     let song = taskSongsArray[0]
+    
+    var songURL = "https://www.lds.org/music/library?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +55,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
+        offSoundURL()
         getTaskSong()
         segment.selectedSegmentIndex = Int(song.segment)
         getMembersForPicker()
@@ -300,6 +305,29 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         }
     }
     
+    func songPreview(_ sender: SongCell) {
+        let objects = songController.fetchedObjects
+        if let objects = objects, objects.count > 0 {
+            let indexPath = tableView.indexPath(for: sender)
+            let sections = songController.sections![(indexPath?.section)!]
+            let song = sections.objects![(indexPath?.row)!]
+            
+            previewSong(song as! Song)
+        }
+    }
+    
+    func previewSong(_ song: Song) {
+        if let song = song.url {
+            songURL = song
+        }
+        
+        let URL = NSURL(string: "\(songURL)")!
+        let songWebVC = SFSafariViewController(url: URL as URL)
+        songWebVC.delegate = self
+        
+        present(songWebVC, animated: true, completion: nil)
+    }
+    
     func searchSong(segment: Int?=nil, targetText: String?=nil){
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         
@@ -507,5 +535,12 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             break
         }
+    }
+}
+
+extension SongListTVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        turnOffAudio()
+        controller.dismiss(animated: true, completion: nil)
     }
 }

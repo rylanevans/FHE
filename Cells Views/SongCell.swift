@@ -11,6 +11,7 @@ import AVFoundation
 
 protocol SongCellDelegate {
     func songSelectedNeedsChanged(_ sender: SongCell)
+    func songPreview(_ sender: SongCell)
 }
 
 class SongCell: UITableViewCell {
@@ -57,6 +58,11 @@ class SongCell: UITableViewCell {
         playClick()
         delegate?.songSelectedNeedsChanged(self)
     }
+    
+    @IBAction func previewButtonPressed(_ sender: Any) {
+        delegate?.songPreview(self)
+    }
+    
     
     func configureSongCell(song: Song) {
         let topic = song.topic ?? "Topic"
