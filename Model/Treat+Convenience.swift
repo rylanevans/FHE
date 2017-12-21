@@ -10,12 +10,13 @@ import CoreData
 import UIKit
 
 extension Treat {
-    convenience init(selected: Bool, favorite: Bool, sortingIndex: Int64, random: Int64, order: Int64, dateCreated: Date, category: String, title: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, favorite: Bool, sortingIndex: Int64, alphabet: String, random: Int64, order: Int64, dateCreated: Date, category: String, title: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.favorite = favorite
         self.selected = selected
+        self.alphabet = alphabet
         self.sortingIndex = sortingIndex
         self.random = random
         self.order = order
@@ -29,5 +30,10 @@ extension Treat {
         super.awakeFromInsert()
         
         self.dateCreated = NSDate() as Date
+        if self.title != nil {
+            self.alphabet = String(describing: self.title?[(self.title?.startIndex)!])
+        } else {
+            self.alphabet = ""
+        }
     }
 }

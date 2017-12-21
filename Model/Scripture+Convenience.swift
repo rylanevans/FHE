@@ -10,12 +10,13 @@ import CoreData
 import UIKit
 
 extension Scripture {
-    convenience init(selected: Bool, favorite: Bool, sortingIndex: Int64, random: Int64, order: Int64, topic: String, volume: String, book: String, chapter: String, verse: String, title: String, dateCreated: Date, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, favorite: Bool, alphabet: String, sortingIndex: Int64, random: Int64, order: Int64, topic: String, volume: String, book: String, chapter: String, verse: String, title: String, dateCreated: Date, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.favorite = favorite
         self.selected = selected
+        self.alphabet = alphabet
         self.sortingIndex = sortingIndex
         self.random = random
         self.order = order
@@ -26,6 +27,17 @@ extension Scripture {
         self.chapter = chapter
         self.verse = verse
         self.dateCreated = dateCreated
+    }
+    
+    public override func awakeFromInsert() {
+        super.awakeFromInsert()
+        
+        self.dateCreated = NSDate() as Date
+        if self.title != nil {
+            self.alphabet = String(describing: self.title?[(self.title?.startIndex)!])
+        } else {
+            self.alphabet = ""
+        }
     }
 }
 

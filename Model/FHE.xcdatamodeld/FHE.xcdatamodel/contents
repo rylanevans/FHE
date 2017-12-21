@@ -23,6 +23,7 @@
         <attribute name="tipGiven" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Game" representedClassName="Game" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -35,6 +36,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedGame" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Lesson" representedClassName="Lesson" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
@@ -67,6 +69,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedPrayer" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Quote" representedClassName="Quote" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -79,6 +82,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedQuote" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Rule" representedClassName="Rule" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -91,6 +95,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedRule" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="book" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="chapter" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -106,6 +111,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedScripture" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Song" representedClassName="Song" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="book" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -162,6 +168,7 @@
         <relationship name="selectedOne" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="selectedThought" inverseEntity="Task" syncable="YES"/>
     </entity>
     <entity name="Treat" representedClassName="Treat" syncable="YES" codeGenerationType="class">
+        <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -177,18 +184,18 @@
         <element name="Calendar" positionX="9" positionY="117" width="128" height="30"/>
         <element name="Council" positionX="54" positionY="162" width="128" height="120"/>
         <element name="Counter" positionX="9" positionY="153" width="128" height="150"/>
-        <element name="Game" positionX="9" positionY="108" width="128" height="195"/>
-        <element name="Lesson" positionX="45" positionY="144" width="128" height="240"/>
+        <element name="Game" positionX="9" positionY="108" width="128" height="210"/>
+        <element name="Lesson" positionX="45" positionY="144" width="128" height="255"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>
         <element name="Prayer" positionX="9" positionY="144" width="128" height="105"/>
-        <element name="Quote" positionX="45" positionY="153" width="128" height="195"/>
-        <element name="Rule" positionX="0" positionY="108" width="128" height="195"/>
-        <element name="Scripture" positionX="9" positionY="72" width="128" height="240"/>
-        <element name="Song" positionX="27" positionY="126" width="128" height="225"/>
+        <element name="Quote" positionX="45" positionY="153" width="128" height="210"/>
+        <element name="Rule" positionX="0" positionY="108" width="128" height="210"/>
+        <element name="Scripture" positionX="9" positionY="72" width="128" height="255"/>
+        <element name="Song" positionX="27" positionY="126" width="128" height="240"/>
         <element name="Spotlight" positionX="27" positionY="135" width="128" height="30"/>
         <element name="Task" positionX="9" positionY="153" width="128" height="360"/>
         <element name="Testimony" positionX="18" positionY="126" width="128" height="30"/>
         <element name="Thought" positionX="36" positionY="144" width="128" height="120"/>
-        <element name="Treat" positionX="18" positionY="117" width="128" height="195"/>
+        <element name="Treat" positionX="18" positionY="117" width="128" height="210"/>
     </elements>
 </model>

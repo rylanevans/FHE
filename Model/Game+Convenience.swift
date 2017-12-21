@@ -10,12 +10,13 @@ import CoreData
 import UIKit
 
 extension Game {
-    convenience init(selected: Bool, favorite: Bool, random: Int64, sortingIndex: Int64, order: Int64, dateCreated: Date, category: String, title: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, favorite: Bool, random: Int64, alphabet: String, sortingIndex: Int64, order: Int64, dateCreated: Date, category: String, title: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.favorite = favorite
         self.selected = selected
+        self.alphabet = alphabet
         self.random = random
         self.sortingIndex = sortingIndex
         self.order = order
@@ -29,5 +30,10 @@ extension Game {
         super.awakeFromInsert()
         
         self.dateCreated = NSDate() as Date
+        if self.title != nil {
+            self.alphabet = String(describing: self.title?[(self.title?.startIndex)!])
+        } else {
+            self.alphabet = ""
+        }
     }
 }

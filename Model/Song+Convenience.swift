@@ -10,12 +10,13 @@ import CoreData
 import UIKit
 
 extension Song {
-    convenience init(selected: Bool, favorite: Bool, sortingIndex: Int64, topic: String, dateCreated: Date, random: Int64, order: Int64, number: Int64, title: String, book: String, url: String, in context:NSManagedObjectContext) {
+    convenience init(selected: Bool, favorite: Bool, alphabet: String, sortingIndex: Int64, topic: String, dateCreated: Date, random: Int64, order: Int64, number: Int64, title: String, book: String, url: String, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
         self.favorite = favorite
         self.selected = selected
+        self.alphabet = alphabet
         self.sortingIndex = sortingIndex
         self.topic = topic
         self.dateCreated = dateCreated
@@ -31,6 +32,11 @@ extension Song {
         super.awakeFromInsert()
         
         self.dateCreated = NSDate() as Date
+        if self.title != nil {
+            self.alphabet = String(describing: self.title?[(self.title?.startIndex)!])
+        } else {
+            self.alphabet = ""
+        }
     }
 }
 
