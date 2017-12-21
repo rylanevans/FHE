@@ -11,30 +11,22 @@ import CoreData
 
 class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet weak var saveButton: BounceButton!
-    @IBOutlet weak var deleteButton: UIBarButtonItem!
-    @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var spotlightTopicTextField: UITextField!
     @IBOutlet weak var spotlightTitleTextField: UITextField!
-    @IBOutlet weak var spotlightBookTextField: UITextField!
-    @IBOutlet weak var spotlightNumberTextField: UITextField!
-    @IBOutlet weak var spotlightURLTextField: UITextField!
-    @IBOutlet weak var spotlightOnDeckImage: UIImageView!
-    @IBOutlet weak var spotlightFavorite: UIImageView!
+    @IBOutlet weak var spotlightDetailsTextField: UITextField!
+    @IBOutlet weak var spotlightAssigneeMemberImage: UIImageView!
+    @IBOutlet weak var spotlightAssigneeLabel: UILabel!
+    @IBOutlet weak var spotlightAssigneeText: UITextField!
     
-    var spotlightBooks = spotlightBooksArray
-    var spotlightTopics = lessonTopicsArray
-    var spotlightToEdit: Spotlight?
-    var spotlightAssignment: Task?
-    let spotlightTopicPicker = UIPickerView()
-    let spotlightBookPicker = UIPickerView()
+    let memberPicker = UIPickerView()
+    
+    let spotlight = taskSpotlight
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.clickSoundURL()
-        
-        self.hideKeyboardWhenTappedAround()
+        memberPicker.delegate = self
+        memberPicker.dataSource = self
+        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -43,154 +35,89 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        spotlightTopicPicker.delegate = self
-        spotlightTopicPicker.dataSource = self
-        spotlightTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        spotlightAssigneeText.inputView = memberPicker
+        spotlightAssigneeText.inputAccessoryView = toolBar
         
-        spotlightBookPicker.delegate = self
-        spotlightBookPicker.dataSource = self
-        spotlightBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        spotlightDetailsTextField.delegate = self
+        spotlightDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
         
-        //        spotlightTopicTextField.delegate = self
-        //        spotlightTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        spotlightTopicTextField.inputView = spotlightTopicPicker
-        //        spotlightTopicPicker.tag = 1
-        //        spotlightTopicTextField.inputAccessoryView = toolBar
+        self.clickSoundURL()
         
-        checkValidTitle()
+        self.hideKeyboardWhenTappedAround()
         
-        if spotlightToEdit != nil {
+        getTaskSpotlight()
+        getSpotlights()
+        getMembersForPicker()
+        loadSpotlightData()
+        loadSpotlightAssignmentImage()
+        
+        if spotlight.selectedSpotlight != nil {
             loadSpotlightData()
         }
     }
     
-    // MARK: UITextFieldDelegate
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        getTaskSpotlight()
+        getSpotlights()
+        getMembersForPicker()
+        loadSpotlightData()
+        loadSpotlightAssignmentImage()
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        checkValidTitle()
-        switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
-        }
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        saveButton.isEnabled = false
-    }
-    
-    func checkValidTitle() {
-        let text = spotlightTitleTextField.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
-        if text.isEmpty != true {
-            hideSaveButton.isHidden = true
-        }
-    }
-    
-    @objc func donePressedOnKeyboard() {
-        view.endEditing(true)
-    }
+    // MARK: - Picker View Set up
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            let spotlightTopic = spotlightTopics[row]
-            return spotlightTopic
-        } else {
-            let spotlightSource = spotlightBooks[row]
-            return spotlightSource
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return spotlightTopics.count
-        } else {
-            return spotlightBooks.count
-        }
+        let assignee = membersPickerArray[row]
+        return assignee.name
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return membersPickerArray.count
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let spotlightTopic = spotlightTopics[row]
-            spotlightTopicTextField.text = spotlightTopic
+        let assignee = membersPickerArray[row]
+        let spotlight = taskSpotlightsArray[0]
+        spotlightAssigneeMemberImage.image = assignee.photo as? UIImage
+        spotlightAssigneeLabel.text = assignee.name
+        spotlight.assignment = assignee
+        if assignee.name == "Auto-Assign" {
+            spotlight.assigned = false
         } else {
-            spotlightBookTextField.text = spotlightBooks[row]
+            spotlight.assigned = true
         }
+        ad.saveContext()
     }
     
-    @IBAction func spotlightSelectedPressed(_ sender: Any) {
-        if spotlightOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
-            spotlightOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
-        } else {
-            spotlightOnDeckImage.image = #imageLiteral(resourceName: "Selected")
-        }
+    // MARK: - Text Field Options
+    
+    // Hide the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
-    @IBAction func spotlightFavoriteButtonPressed(_ sender: Any) {
-        if spotlightFavorite.image == #imageLiteral(resourceName: "FavoriteFilled") {
-            spotlightFavorite.image = #imageLiteral(resourceName: "Favorite")
-        } else {
-            spotlightFavorite.image = #imageLiteral(resourceName: "FavoriteFilled")
-        }
+    @objc func donePressedOnKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
-        var spotlight: Spotlight!
-        
-        if spotlightToEdit == nil {
-            spotlight = Spotlight(context: context)
-        } else {
-            spotlight = spotlightToEdit
-        }
-        
-        if let topic = spotlightTopicTextField.text {
-            spotlight.topic = topic
-        }
-        
-        if let book = spotlightBookTextField.text {
-            spotlight.book = book
-        }
+        let spotlightToSave = spotlight.selectedSpotlight
         
         if let title = spotlightTitleTextField.text {
-            spotlight.title = title
+            spotlightToSave?.title = title
         }
         
-        if spotlightNumberTextField.text != "" {
-            let number = Int64(spotlightNumberTextField.text!)
-            spotlight.number = number!
-        } else {
-            let number = Int64(0)
-            spotlight.number = number
-        }
-        
-        if let URL = spotlightURLTextField.text {
-            spotlight.url = URL
-        }
-        
-        if spotlightOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
-            unselectEverything()
-            spotlight.selected = true
-        } else {
-            spotlight.selected = false
-        }
-        
-        if spotlightFavorite.image == #imageLiteral(resourceName: "FavoriteFilled") {
-            spotlight.favorite = true
-        } else {
-            spotlight.favorite = false
+        if let details = spotlightDetailsTextField.text {
+            spotlightToSave?.detail = details
         }
         
         ad.saveContext()
@@ -199,70 +126,20 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func loadSpotlightData() {
-        if let spotlight = spotlightToEdit {
-            spotlightTopicTextField.text = spotlight.topic
-            spotlightTitleTextField.text = spotlight.title
-            spotlightBookTextField.text = spotlight.book
-            spotlightNumberTextField.text = String(spotlight.number)
-            spotlightURLTextField.text = spotlight.url
-            let onDeck = spotlight.selected
-            let favorite = spotlight.favorite
-            if onDeck == true {
-                spotlightOnDeckImage.image = #imageLiteral(resourceName: "Selected")
-            } else {
-                spotlightOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
-            }
-            if favorite == true {
-                spotlightFavorite.image = #imageLiteral(resourceName: "FavoriteFilled")
-            } else {
-                spotlightFavorite.image = #imageLiteral(resourceName: "Favorite")
-            }
-            
-            textFieldDidEndEditing(spotlightTitleTextField)
+        if let spotlightToEdit = spotlight.selectedSpotlight {
+            spotlightTitleTextField.text = spotlightToEdit.title
+            spotlightDetailsTextField.text = spotlightToEdit.detail
         }
     }
     
-    @IBAction func deleteButtonPressed(_ sender: Any) {
-        deleteAlertMessage()
-    }
-    
-    func deleteAlertMessage() {
-        let alertController = UIAlertController(title: "⚠️ DELETE WARNING!", message: "Are you sure you want to delete this spotlight?", preferredStyle: .alert)
-        
-        let deleteAction = UIAlertAction(title: "✗ Delete", style: .default, handler: {
-            alert -> Void in
-            
-            self.deleteSpotlight()
-        })
-        
-        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-        })
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(deleteAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func deleteSpotlight() {
-        if spotlightToEdit != nil {
-            let spotlight = spotlightToEdit
-            if spotlight?.selected == true {
-                unselectEverything()
-            }
-            context.delete(spotlightToEdit!)
-            ad.saveContext()
-        }
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
-    func unselectEverything() {
-        for eachSpotlight in spotlightsArray {
-            eachSpotlight.selected = false
-            eachSpotlight.selectedOne = nil
-            ad.saveContext()
+    func loadSpotlightAssignmentImage() {
+        let assignee = spotlight.assignment
+        if assignee != nil {
+            spotlightAssigneeMemberImage.image = assignee?.photo as? UIImage
+            spotlightAssigneeLabel.text = assignee?.name
+        } else {
+            spotlightAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+            spotlightAssigneeLabel.text = "Auto-Assign"
         }
     }
 }

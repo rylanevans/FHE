@@ -16,10 +16,8 @@ protocol QuoteCellDelegate {
 
 class QuoteCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
-    @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: QuoteCellDelegate?
@@ -65,20 +63,12 @@ class QuoteCell: UITableViewCell {
     
     
     func configureQuoteCell(quote: Quote) {
-        let topic = quote.topic ?? "Topic"
         let title = quote.title
-        let number = String(quote.number)
-        let book = quote.book
+        let detail = quote.detail
         let onDeck = quote.selected
         let favorite = quote.favorite
-        topicLabel.text = "\(topic)   "
+        detailsLabel.text = detail
         titleLabel.text = title
-        if number == "0" || number == "" {
-            numberLabel.text = ""
-        } else {
-            numberLabel.text = "#\(number)"
-        }
-        bookLabel.text = book
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

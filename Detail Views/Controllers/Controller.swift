@@ -38,13 +38,13 @@ var taskPrayersArray = [Task]()
 var taskSongsArray = [Task]()
 var taskRulesArray = [Task]()
 var taskScripturesArray = [Task]()
-var taskCalendarArray = [Task]()
-var taskTestimonyArray = [Task]()
-var taskSpotlightArray = [Task]()
-var taskThoughtArray = [Task]()
+var taskCalendarsArray = [Task]()
+var taskTestimoniesArray = [Task]()
+var taskSpotlightsArray = [Task]()
+var taskThoughtsArray = [Task]()
 var taskQuotesArray = [Task]()
 var taskLessonsArray = [Task]()
-var taskCouncilArray = [Task]()
+var taskCouncilsArray = [Task]()
 var taskGamesArray = [Task]()
 var taskTreatsArray = [Task]()
 //var scrollPageArray = [UIViewController]()
@@ -186,7 +186,7 @@ func getTaskCalendar() {
     fetchRequest.predicate = predicate
     
     do {
-        taskCalendarArray = try context.fetch(fetchRequest)
+        taskCalendarsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -199,7 +199,7 @@ func getTaskTestimony() {
     fetchRequest.predicate = predicate
     
     do {
-        taskTestimonyArray = try context.fetch(fetchRequest)
+        taskTestimoniesArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -212,7 +212,7 @@ func getTaskSpotlight() {
     fetchRequest.predicate = predicate
     
     do {
-        taskSpotlightArray = try context.fetch(fetchRequest)
+        taskSpotlightsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -225,7 +225,7 @@ func getTaskThought() {
     fetchRequest.predicate = predicate
     
     do {
-        taskThoughtArray = try context.fetch(fetchRequest)
+        taskThoughtsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")
@@ -264,7 +264,7 @@ func getTaskCouncil() {
     fetchRequest.predicate = predicate
     
     do {
-        taskCouncilArray = try context.fetch(fetchRequest)
+        taskCouncilsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")

@@ -21,7 +21,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let memberPicker = UIPickerView()
     
-    let song = taskSongsArray[0]
+    let song = taskSong
     
     var songURL = "https://www.lds.org/music/library?lang=eng"
     
@@ -144,6 +144,19 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let sectionTitle = songController.sections
         
         if segment.selectedSegmentIndex == 0 {
+            if sectionTitle![section].name == "Children's" {
+                title = "CHILDREN'S SONG BOOK:"
+            } else if sectionTitle![section].name == "Hymn" {
+                title = "HYMN BOOK:"
+            } else if sectionTitle![section].name == "Video" {
+                title = "MUSIC VIDEO:"
+            } else if sectionTitle![section].name == "Other" {
+                title = "OTHER:"
+            } else {
+                title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 1 {
             if sectionTitle![section].name == "Children's" {
                 title = "CHILDREN'S SONG BOOK:"
             } else if sectionTitle![section].name == "Hymn" {
@@ -327,29 +340,30 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         present(songWebVC, animated: true, completion: nil)
     }
-    
-    func searchSong(segment: Int?=nil, targetText: String?=nil){
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        
-        let sortByName = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
-        
-        if targetText != nil {
-            fetchRequest.sortDescriptors = [sortByName]
-            let predicateName = NSPredicate(format: "name contains[c] %@", targetText!)
-            
-            fetchRequest.predicate = predicateName
-
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            controller.delegate = self
-            
-            do {
-                try controller.performFetch()
-            } catch {
-                let error = error as NSError
-                print("\(error)")
-            }
-        }
-    }
+   
+//      Not sure I need this anymore...
+//    func searchSong(segment: Int?=nil, targetText: String?=nil){
+//        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+//
+//        let sortByName = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+//
+//        if targetText != nil {
+//            fetchRequest.sortDescriptors = [sortByName]
+//            let predicateName = NSPredicate(format: "name contains[c] %@", targetText!)
+//
+//            fetchRequest.predicate = predicateName
+//
+//            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+//            controller.delegate = self
+//
+//            do {
+//                try controller.performFetch()
+//            } catch {
+//                let error = error as NSError
+//                print("\(error)")
+//            }
+//        }
+//    }
     
     func unselectEverything() {
         for eachSong in songsArray {

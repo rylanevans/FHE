@@ -16,10 +16,8 @@ protocol RuleCellDelegate {
 
 class RuleCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
-    @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: RuleCellDelegate?
@@ -65,20 +63,12 @@ class RuleCell: UITableViewCell {
     
     
     func configureRuleCell(rule: Rule) {
-        let topic = rule.topic ?? "Topic"
         let title = rule.title
-        let number = String(rule.number)
-        let book = rule.book
+        let detail = rule.detail
         let onDeck = rule.selected
         let favorite = rule.favorite
-        topicLabel.text = "\(topic)   "
+        detailsLabel.text = "\(detail)"
         titleLabel.text = title
-        if number == "0" || number == "" {
-            numberLabel.text = ""
-        } else {
-            numberLabel.text = "#\(number)"
-        }
-        bookLabel.text = book
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

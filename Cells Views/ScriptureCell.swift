@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-protocol scriptureCellDelegate {
+protocol ScriptureCellDelegate {
     func scriptureSelectedNeedsChanged(_ sender: ScriptureCell)
     func scripturePreview(_ sender: ScriptureCell)
 }
@@ -18,8 +18,7 @@ class ScriptureCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var scriptureLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: ScriptureCellDelegate?
@@ -67,18 +66,15 @@ class ScriptureCell: UITableViewCell {
     func configureScriptureCell(scripture: Scripture) {
         let topic = scripture.topic ?? "Topic"
         let title = scripture.title
-        let number = String(scripture.number)
+        let volume = scripture.volume
         let book = scripture.book
+        let chapter = scripture.chapter
+        let verse = scripture.verse
         let onDeck = scripture.selected
         let favorite = scripture.favorite
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
-        if number == "0" || number == "" {
-            numberLabel.text = ""
-        } else {
-            numberLabel.text = "#\(number)"
-        }
-        bookLabel.text = book
+        scriptureLabel.text = "\(volume?.capitalized ?? "") \(book?.capitalized ?? "") \(chapter ?? ""):\(verse ?? "")"
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

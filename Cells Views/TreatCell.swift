@@ -16,10 +16,8 @@ protocol TreatCellDelegate {
 
 class TreatCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
-    @IBOutlet weak var topicLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: TreatCellDelegate?
@@ -65,20 +63,12 @@ class TreatCell: UITableViewCell {
     
     
     func configureTreatCell(treat: Treat) {
-        let topic = treat.topic ?? "Topic"
         let title = treat.title
-        let number = String(treat.number)
-        let book = treat.book
+        let category = treat.category
         let onDeck = treat.selected
         let favorite = treat.favorite
-        topicLabel.text = "\(topic)   "
+        categoryLabel.text = category
         titleLabel.text = title
-        if number == "0" || number == "" {
-            numberLabel.text = ""
-        } else {
-            numberLabel.text = "#\(number)"
-        }
-        bookLabel.text = book
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

@@ -9,25 +9,19 @@
 import UIKit
 import CoreData
 
-class QuoteDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var quoteTopicTextField: UITextField!
     @IBOutlet weak var quoteTitleTextField: UITextField!
-    @IBOutlet weak var quoteBookTextField: UITextField!
-    @IBOutlet weak var quoteNumberTextField: UITextField!
+    @IBOutlet weak var quoteDetailsTextField: UITextField!
     @IBOutlet weak var quoteURLTextField: UITextField!
     @IBOutlet weak var quoteOnDeckImage: UIImageView!
     @IBOutlet weak var quoteFavorite: UIImageView!
     
-    var quoteBooks = quoteBooksArray
-    var quoteTopics = lessonTopicsArray
     var quoteToEdit: Quote?
     var quoteAssignment: Task?
-    let quoteTopicPicker = UIPickerView()
-    let quoteBookPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,27 +29,6 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
-        
-        let toolBar = UIToolbar()
-        toolBar.barStyle = UIBarStyle.default
-        toolBar.sizeToFit()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
-        toolBar.setItems([flexibleSpace, doneButton], animated: false)
-        
-        quoteTopicPicker.delegate = self
-        quoteTopicPicker.dataSource = self
-        quoteTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        quoteBookPicker.delegate = self
-        quoteBookPicker.dataSource = self
-        quoteBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        //        quoteTopicTextField.delegate = self
-        //        quoteTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        quoteTopicTextField.inputView = quoteTopicPicker
-        //        quoteTopicPicker.tag = 1
-        //        quoteTopicTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         
@@ -98,37 +71,6 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         view.endEditing(true)
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            let quoteTopic = quoteTopics[row]
-            return quoteTopic
-        } else {
-            let quoteSource = quoteBooks[row]
-            return quoteSource
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return quoteTopics.count
-        } else {
-            return quoteBooks.count
-        }
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let quoteTopic = quoteTopics[row]
-            quoteTopicTextField.text = quoteTopic
-        } else {
-            quoteBookTextField.text = quoteBooks[row]
-        }
-    }
-    
     @IBAction func quoteSelectedPressed(_ sender: Any) {
         if quoteOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             quoteOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
@@ -156,24 +98,12 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
             quote = quoteToEdit
         }
         
-        if let topic = quoteTopicTextField.text {
-            quote.topic = topic
-        }
-        
-        if let book = quoteBookTextField.text {
-            quote.book = book
+        if let detail = quoteDetailsTextField.text {
+            quote.detail = detail
         }
         
         if let title = quoteTitleTextField.text {
             quote.title = title
-        }
-        
-        if quoteNumberTextField.text != "" {
-            let number = Int64(quoteNumberTextField.text!)
-            quote.number = number!
-        } else {
-            let number = Int64(0)
-            quote.number = number
         }
         
         if let URL = quoteURLTextField.text {
@@ -200,10 +130,8 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     func loadQuoteData() {
         if let quote = quoteToEdit {
-            quoteTopicTextField.text = quote.topic
             quoteTitleTextField.text = quote.title
-            quoteBookTextField.text = quote.book
-            quoteNumberTextField.text = String(quote.number)
+            quoteDetailsTextField.text = quote.detail
             quoteURLTextField.text = quote.url
             let onDeck = quote.selected
             let favorite = quote.favorite

@@ -18,8 +18,8 @@ class LessonCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: LessonCellDelegate?
@@ -67,18 +67,14 @@ class LessonCell: UITableViewCell {
     func configureLessonCell(lesson: Lesson) {
         let topic = lesson.topic ?? "Topic"
         let title = lesson.title
-        let number = String(lesson.number)
-        let book = lesson.book
+        let detail = lesson.detail
+        let category = lesson.category
         let onDeck = lesson.selected
         let favorite = lesson.favorite
-        topicLabel.text = "\(topic)   "
+        topicLabel.text = topic
         titleLabel.text = title
-        if number == "0" || number == "" {
-            numberLabel.text = ""
-        } else {
-            numberLabel.text = "#\(number)"
-        }
-        bookLabel.text = book
+        categoryLabel.text = category
+        detailsLabel.text = detail
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

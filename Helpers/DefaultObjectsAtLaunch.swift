@@ -1610,6 +1610,7 @@ func generateRules() {
     rule1.order = 1
     rule1.random = Int64(arc4random_uniform(1000))
     rule1.selected = true
+    rule1.favorite = true
     rule1.sortingIndex = 0
     rule1.selectedOne = taskRule
     
@@ -1620,6 +1621,7 @@ func generateRules() {
     rule2.order = 2
     rule2.random = Int64(arc4random_uniform(1000))
     rule2.selected = false
+    rule2.favorite = true
     rule2.sortingIndex = 0
     
     let rule3 = Rule(context: context)
@@ -1629,6 +1631,7 @@ func generateRules() {
     rule3.order = 3
     rule3.random = Int64(arc4random_uniform(1000))
     rule3.selected = false
+    rule3.favorite = false
     rule3.sortingIndex = 0
     
     let rule4 = Rule(context: context)
@@ -1638,6 +1641,7 @@ func generateRules() {
     rule4.order = 4
     rule4.random = Int64(arc4random_uniform(1000))
     rule4.selected = false
+    rule4.favorite = false
     rule4.sortingIndex = 0
     
     let rule5 = Rule(context: context)
@@ -1647,6 +1651,7 @@ func generateRules() {
     rule5.order = 7
     rule5.random = Int64(arc4random_uniform(1000))
     rule5.selected = false
+    rule5.favorite = false
     rule5.sortingIndex = 0
     
     let rule6 = Rule(context: context)
@@ -1656,6 +1661,7 @@ func generateRules() {
     rule6.order = 5
     rule6.random = Int64(arc4random_uniform(1000))
     rule6.selected = false
+    rule6.favorite = false
     rule6.sortingIndex = 0
     
     let rule7 = Rule(context: context)
@@ -1665,6 +1671,7 @@ func generateRules() {
     rule7.order = 6
     rule7.random = Int64(arc4random_uniform(1000))
     rule7.selected = false
+    rule7.favorite = true
     rule7.sortingIndex = 0
     
     let rule8 = Rule(context: context)
@@ -1674,6 +1681,7 @@ func generateRules() {
     rule8.order = 8
     rule8.random = Int64(arc4random_uniform(1000))
     rule8.selected = false
+    rule8.favorite = false
     rule8.sortingIndex = 0
     
     let rule9 = Rule(context: context)
@@ -1683,6 +1691,7 @@ func generateRules() {
     rule9.order = 9
     rule9.random = Int64(arc4random_uniform(1000))
     rule9.selected = false
+    rule9.favorite = false
     rule9.sortingIndex = 0
     
     let rule10 = Rule(context: context)
@@ -1692,6 +1701,7 @@ func generateRules() {
     rule10.order = 10
     rule10.random = Int64(arc4random_uniform(1000))
     rule10.selected = false
+    rule10.favorite = false
     rule10.sortingIndex = 0
     
     let rule11 = Rule(context: context)
@@ -1701,6 +1711,7 @@ func generateRules() {
     rule11.order = 10
     rule11.random = Int64(arc4random_uniform(1000))
     rule11.selected = false
+    rule11.favorite = false
     rule11.sortingIndex = 0
     
     ad.saveContext()

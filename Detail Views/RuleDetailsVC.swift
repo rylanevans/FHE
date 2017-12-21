@@ -9,25 +9,19 @@
 import UIKit
 import CoreData
 
-class RuleDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class RuleDetailsVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var ruleTopicTextField: UITextField!
     @IBOutlet weak var ruleTitleTextField: UITextField!
-    @IBOutlet weak var ruleBookTextField: UITextField!
-    @IBOutlet weak var ruleNumberTextField: UITextField!
+    @IBOutlet weak var ruleDetailsTextField: UITextField!
     @IBOutlet weak var ruleURLTextField: UITextField!
     @IBOutlet weak var ruleOnDeckImage: UIImageView!
     @IBOutlet weak var ruleFavorite: UIImageView!
     
-    var ruleBooks = ruleBooksArray
-    var ruleTopics = lessonTopicsArray
     var ruleToEdit: Rule?
     var ruleAssignment: Task?
-    let ruleTopicPicker = UIPickerView()
-    let ruleBookPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,20 +36,6 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
-        
-        ruleTopicPicker.delegate = self
-        ruleTopicPicker.dataSource = self
-        ruleTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        ruleBookPicker.delegate = self
-        ruleBookPicker.dataSource = self
-        ruleBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        //        ruleTopicTextField.delegate = self
-        //        ruleTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        ruleTopicTextField.inputView = ruleTopicPicker
-        //        ruleTopicPicker.tag = 1
-        //        ruleTopicTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         
@@ -98,37 +78,6 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         view.endEditing(true)
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            let ruleTopic = ruleTopics[row]
-            return ruleTopic
-        } else {
-            let ruleSource = ruleBooks[row]
-            return ruleSource
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return ruleTopics.count
-        } else {
-            return ruleBooks.count
-        }
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let ruleTopic = ruleTopics[row]
-            ruleTopicTextField.text = ruleTopic
-        } else {
-            ruleBookTextField.text = ruleBooks[row]
-        }
-    }
-    
     @IBAction func ruleSelectedPressed(_ sender: Any) {
         if ruleOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             ruleOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
@@ -156,24 +105,12 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             rule = ruleToEdit
         }
         
-        if let topic = ruleTopicTextField.text {
-            rule.topic = topic
-        }
-        
-        if let book = ruleBookTextField.text {
-            rule.book = book
-        }
-        
         if let title = ruleTitleTextField.text {
             rule.title = title
         }
         
-        if ruleNumberTextField.text != "" {
-            let number = Int64(ruleNumberTextField.text!)
-            rule.number = number!
-        } else {
-            let number = Int64(0)
-            rule.number = number
+        if let detail = ruleDetailsTextField.text {
+            rule.detail = detail
         }
         
         if let URL = ruleURLTextField.text {
@@ -200,10 +137,8 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func loadRuleData() {
         if let rule = ruleToEdit {
-            ruleTopicTextField.text = rule.topic
             ruleTitleTextField.text = rule.title
-            ruleBookTextField.text = rule.book
-            ruleNumberTextField.text = String(rule.number)
+            ruleDetailsTextField.text = rule.detail
             ruleURLTextField.text = rule.url
             let onDeck = rule.selected
             let favorite = rule.favorite

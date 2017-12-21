@@ -21,7 +21,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
     
     let memberPicker = UIPickerView()
     
-    let lesson = taskLessonsArray[0]
+    let lesson = taskLesson
     
     var lessonURL = "https://www.lds.org/music/library?lang=eng"
     

@@ -21,7 +21,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     let memberPicker = UIPickerView()
     
-    let quote = taskQuotesArray[0]
+    let quote = taskQuote
     
     var quoteURL = "https://www.lds.org/music/library?lang=eng"
     

@@ -14,20 +14,21 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
+    @IBOutlet weak var lessonCategoryTextField: UITextField!
     @IBOutlet weak var lessonTopicTextField: UITextField!
     @IBOutlet weak var lessonTitleTextField: UITextField!
-    @IBOutlet weak var lessonBookTextField: UITextField!
-    @IBOutlet weak var lessonNumberTextField: UITextField!
+    @IBOutlet weak var lessonDetailsTextField: UITextField!
     @IBOutlet weak var lessonURLTextField: UITextField!
     @IBOutlet weak var lessonOnDeckImage: UIImageView!
     @IBOutlet weak var lessonFavorite: UIImageView!
+    @IBOutlet weak var lessonYouTubeImage: UIImageView!
     
-    var lessonBooks = lessonBooksArray
+    var lessonCategory = lessonCategoryArray
     var lessonTopics = lessonTopicsArray
     var lessonToEdit: Lesson?
     var lessonAssignment: Task?
     let lessonTopicPicker = UIPickerView()
-    let lessonBookPicker = UIPickerView()
+    let lessonCategoryPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +48,18 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         lessonTopicPicker.dataSource = self
         lessonTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        lessonBookPicker.delegate = self
-        lessonBookPicker.dataSource = self
-        lessonBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        lessonCategoryPicker.delegate = self
+        lessonCategoryPicker.dataSource = self
+        lessonCategoryPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        //        lessonTopicTextField.delegate = self
-        //        lessonTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        lessonTopicTextField.inputView = lessonTopicPicker
-        //        lessonTopicPicker.tag = 1
-        //        lessonTopicTextField.inputAccessoryView = toolBar
+        lessonCategoryTextField.delegate = self
+        lessonCategoryTextField.inputView = lessonCategoryPicker
+        lessonCategoryTextField.inputAccessoryView = toolBar
+        
+        lessonTopicTextField.delegate = self
+        lessonTopicTextField.inputView = lessonTopicPicker
+        lessonTopicTextField.tag = 1
+        lessonTopicTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         
@@ -103,7 +107,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
             let lessonTopic = lessonTopics[row]
             return lessonTopic
         } else {
-            let lessonSource = lessonBooks[row]
+            let lessonSource = lessonCategory[row]
             return lessonSource
         }
     }
@@ -112,7 +116,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if pickerView.tag == 1 {
             return lessonTopics.count
         } else {
-            return lessonBooks.count
+            return lessonCategory.count
         }
     }
     
@@ -125,7 +129,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
             let lessonTopic = lessonTopics[row]
             lessonTopicTextField.text = lessonTopic
         } else {
-            lessonBookTextField.text = lessonBooks[row]
+            lessonCategoryTextField.text = lessonCategory[row]
         }
     }
     
@@ -145,6 +149,14 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         }
     }
     
+    @IBAction func lessonYouTubeButtonPressed(_ sender: Any) {
+        if lessonYouTubeImage.image == #imageLiteral(resourceName: "Selected") {
+            lessonYouTubeImage.image = #imageLiteral(resourceName: "NotSelected")
+        } else {
+            lessonFavorite.image = #imageLiteral(resourceName: "Selected")
+        }
+    }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
@@ -156,28 +168,30 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
             lesson = lessonToEdit
         }
         
-        if let topic = lessonTopicTextField.text {
-            lesson.topic = topic
-        }
-        
-        if let book = lessonBookTextField.text {
-            lesson.book = book
-        }
-        
         if let title = lessonTitleTextField.text {
             lesson.title = title
         }
         
-        if lessonNumberTextField.text != "" {
-            let number = Int64(lessonNumberTextField.text!)
-            lesson.number = number!
-        } else {
-            let number = Int64(0)
-            lesson.number = number
+        if let category = lessonCategoryTextField.text {
+            lesson.category = category
+        }
+        
+        if let topic = lessonTopicTextField.text {
+            lesson.topic = topic
+        }
+        
+        if let detail = lessonDetailsTextField.text {
+            lesson.detail = detail
         }
         
         if let URL = lessonURLTextField.text {
             lesson.url = URL
+        }
+        
+        if lessonYouTubeImage.image == #imageLiteral(resourceName: "Selected") {
+            lesson.youTubeVideo = true
+        } else {
+            lesson.youTubeVideo = false
         }
         
         if lessonOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
@@ -202,11 +216,17 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if let lesson = lessonToEdit {
             lessonTopicTextField.text = lesson.topic
             lessonTitleTextField.text = lesson.title
-            lessonBookTextField.text = lesson.book
-            lessonNumberTextField.text = String(lesson.number)
+            lessonCategoryTextField.text = lesson.category
+            lessonDetailsTextField.text = lesson.detail
             lessonURLTextField.text = lesson.url
+            let youTube = lesson.youTubeVideo
             let onDeck = lesson.selected
             let favorite = lesson.favorite
+            if youTube == true {
+                lessonYouTubeImage.image = #imageLiteral(resourceName: "Selected")
+            } else {
+                lessonYouTubeImage.image = #imageLiteral(resourceName: "NotSelected")
+            }
             if onDeck == true {
                 lessonOnDeckImage.image = #imageLiteral(resourceName: "Selected")
             } else {

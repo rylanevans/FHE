@@ -16,10 +16,8 @@ protocol GameCellDelegate {
 
 class GameCell: UITableViewCell {
     @IBOutlet weak var onDeckImage: UIImageView!
-    @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var bookLabel: UILabel!
-    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     
     var delegate: GameCellDelegate?
@@ -65,20 +63,12 @@ class GameCell: UITableViewCell {
     
     
     func configureGameCell(game: Game) {
-        let topic = game.topic ?? "Topic"
         let title = game.title
-        let number = String(game.number)
-        let book = game.book
+        let category = game.category
         let onDeck = game.selected
         let favorite = game.favorite
-        topicLabel.text = "\(topic)   "
+        categoryLabel.text = category
         titleLabel.text = title
-        if number == "0" || number == "" {
-            numberLabel.text = ""
-        } else {
-            numberLabel.text = "#\(number)"
-        }
-        bookLabel.text = book
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

@@ -21,9 +21,9 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     
     let memberPicker = UIPickerView()
     
-    let scripture = taskScripturesArray[0]
+    let scripture = taskScripture
     
-    var scriptureURL = "https://www.lds.org/music/library?lang=eng"
+    var scriptureURL = "https://www.lds.org/scriptures?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,6 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
-        offSoundURL()
         getTaskScripture()
         segment.selectedSegmentIndex = Int(scripture.segment)
         getMembersForPicker()
@@ -144,14 +143,16 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let sectionTitle = scriptureController.sections
         
         if segment.selectedSegmentIndex == 0 {
-            if sectionTitle![section].name == "Children's" {
-                title = "CHILDREN'S SONG BOOK:"
-            } else if sectionTitle![section].name == "Hymn" {
-                title = "HYMN BOOK:"
-            } else if sectionTitle![section].name == "Video" {
-                title = "MUSIC VIDEO:"
-            } else if sectionTitle![section].name == "Other" {
-                title = "OTHER:"
+            if sectionTitle![section].name == "ot" {
+                title = "OLD TESTAMENT:"
+            } else if sectionTitle![section].name == "nt" {
+                title = "NEW TESTAMENT:"
+            } else if sectionTitle![section].name == "bofm" {
+                title = "BOOK OF MORMON:"
+            } else if sectionTitle![section].name == "dc" {
+                title = "DOCTRINE & COVENANTS:"
+            } else if sectionTitle![section].name == "pgp" {
+                title = "PEARL OF GREAT PRICE:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -317,8 +318,8 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func previewScripture(_ scripture: Scripture) {
-        if let scripture = scripture.url {
-            scriptureURL = scripture
+//        if let scripture = scripture.url {
+//            scriptureURL = scripture
         }
         
         let URL = NSURL(string: "\(scriptureURL)")!
@@ -540,7 +541,6 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
 
 extension ScriptureListTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
 }

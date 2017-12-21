@@ -151,7 +151,7 @@ let scriptureNTBooksArray = [
     "Titus"
 ]
 
-let scriptureBOMBooksArray = [
+let scriptureBofMBooksArray = [
     "1 Nephi",
     "2 Nephi",
     "3 Nephi",

@@ -22,8 +22,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var songOnDeckImage: UIImageView!
     @IBOutlet weak var songFavorite: UIImageView!
     
-    var songBooks = songBooksArray
-    var songTopics = lessonTopicsArray
+    let songBooks = songBooksArray
+    let songTopics = lessonTopicsArray
     var songToEdit: Song?
     var songAssignment: Task?
     let songTopicPicker = UIPickerView()
@@ -51,11 +51,16 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songBookPicker.dataSource = self
         songBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-//        songTopicTextField.delegate = self
+        songTopicTextField.delegate = self
 //        songTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-//        songTopicTextField.inputView = songTopicPicker
-//        songTopicPicker.tag = 1
-//        songTopicTextField.inputAccessoryView = toolBar
+        songTopicTextField.inputView = songTopicPicker
+        songTopicPicker.tag = 1
+        songTopicTextField.inputAccessoryView = toolBar
+        
+        songBookTextField.delegate = self
+//        songBookTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        songBookTextField.inputView = songBookPicker
+        songBookTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         

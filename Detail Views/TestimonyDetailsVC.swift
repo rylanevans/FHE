@@ -11,30 +11,22 @@ import CoreData
 
 class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet weak var saveButton: BounceButton!
-    @IBOutlet weak var deleteButton: UIBarButtonItem!
-    @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var testimonyTopicTextField: UITextField!
     @IBOutlet weak var testimonyTitleTextField: UITextField!
-    @IBOutlet weak var testimonyBookTextField: UITextField!
-    @IBOutlet weak var testimonyNumberTextField: UITextField!
-    @IBOutlet weak var testimonyURLTextField: UITextField!
-    @IBOutlet weak var testimonyOnDeckImage: UIImageView!
-    @IBOutlet weak var testimonyFavorite: UIImageView!
+    @IBOutlet weak var testimonyDetailsTextField: UITextField!
+    @IBOutlet weak var testimonyAssigneeMemberImage: UIImageView!
+    @IBOutlet weak var testimonyAssigneeLabel: UILabel!
+    @IBOutlet weak var testimonyAssigneeText: UITextField!
     
-    var testimonyBooks = testimonyBooksArray
-    var testimonyTopics = lessonTopicsArray
-    var testimonyToEdit: Testimony?
-    var testimonyAssignment: Task?
-    let testimonyTopicPicker = UIPickerView()
-    let testimonyBookPicker = UIPickerView()
+    let memberPicker = UIPickerView()
+    
+    let testimony = taskTestimony
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.clickSoundURL()
-        
-        self.hideKeyboardWhenTappedAround()
+        memberPicker.delegate = self
+        memberPicker.dataSource = self
+        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -43,154 +35,89 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        testimonyTopicPicker.delegate = self
-        testimonyTopicPicker.dataSource = self
-        testimonyTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        testimonyAssigneeText.inputView = memberPicker
+        testimonyAssigneeText.inputAccessoryView = toolBar
         
-        testimonyBookPicker.delegate = self
-        testimonyBookPicker.dataSource = self
-        testimonyBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        testimonyDetailsTextField.delegate = self
+        testimonyDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
         
-        //        testimonyTopicTextField.delegate = self
-        //        testimonyTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        testimonyTopicTextField.inputView = testimonyTopicPicker
-        //        testimonyTopicPicker.tag = 1
-        //        testimonyTopicTextField.inputAccessoryView = toolBar
+        self.clickSoundURL()
         
-        checkValidTitle()
+        self.hideKeyboardWhenTappedAround()
         
-        if testimonyToEdit != nil {
+        getTaskTestimony()
+        getTestimonys()
+        getMembersForPicker()
+        loadTestimonyData()
+        loadTestimonyAssignmentImage()
+        
+        if testimony.selectedTestimony != nil {
             loadTestimonyData()
         }
     }
     
-    // MARK: UITextFieldDelegate
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        getTaskTestimony()
+        getTestimonys()
+        getMembersForPicker()
+        loadTestimonyData()
+        loadTestimonyAssignmentImage()
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        checkValidTitle()
-        switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
-        }
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        saveButton.isEnabled = false
-    }
-    
-    func checkValidTitle() {
-        let text = testimonyTitleTextField.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
-        if text.isEmpty != true {
-            hideSaveButton.isHidden = true
-        }
-    }
-    
-    @objc func donePressedOnKeyboard() {
-        view.endEditing(true)
-    }
+    // MARK: - Picker View Set up
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            let testimonyTopic = testimonyTopics[row]
-            return testimonyTopic
-        } else {
-            let testimonySource = testimonyBooks[row]
-            return testimonySource
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return testimonyTopics.count
-        } else {
-            return testimonyBooks.count
-        }
+        let assignee = membersPickerArray[row]
+        return assignee.name
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return membersPickerArray.count
+    }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let testimonyTopic = testimonyTopics[row]
-            testimonyTopicTextField.text = testimonyTopic
+        let assignee = membersPickerArray[row]
+        let testimony = taskTestimoniesArray[0]
+        testimonyAssigneeMemberImage.image = assignee.photo as? UIImage
+        testimonyAssigneeLabel.text = assignee.name
+        testimony.assignment = assignee
+        if assignee.name == "Auto-Assign" {
+            testimony.assigned = false
         } else {
-            testimonyBookTextField.text = testimonyBooks[row]
+            testimony.assigned = true
         }
+        ad.saveContext()
     }
     
-    @IBAction func testimonySelectedPressed(_ sender: Any) {
-        if testimonyOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
-            testimonyOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
-        } else {
-            testimonyOnDeckImage.image = #imageLiteral(resourceName: "Selected")
-        }
+    // MARK: - Text Field Options
+    
+    // Hide the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
-    @IBAction func testimonyFavoriteButtonPressed(_ sender: Any) {
-        if testimonyFavorite.image == #imageLiteral(resourceName: "FavoriteFilled") {
-            testimonyFavorite.image = #imageLiteral(resourceName: "Favorite")
-        } else {
-            testimonyFavorite.image = #imageLiteral(resourceName: "FavoriteFilled")
-        }
+    @objc func donePressedOnKeyboard() {
+        view.endEditing(true)
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
-        var testimony: Testimony!
-        
-        if testimonyToEdit == nil {
-            testimony = Testimony(context: context)
-        } else {
-            testimony = testimonyToEdit
-        }
-        
-        if let topic = testimonyTopicTextField.text {
-            testimony.topic = topic
-        }
-        
-        if let book = testimonyBookTextField.text {
-            testimony.book = book
-        }
+        let testimonyToSave = testimony.selectedTestimony
         
         if let title = testimonyTitleTextField.text {
-            testimony.title = title
+            testimonyToSave?.title = title
         }
         
-        if testimonyNumberTextField.text != "" {
-            let number = Int64(testimonyNumberTextField.text!)
-            testimony.number = number!
-        } else {
-            let number = Int64(0)
-            testimony.number = number
-        }
-        
-        if let URL = testimonyURLTextField.text {
-            testimony.url = URL
-        }
-        
-        if testimonyOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
-            unselectEverything()
-            testimony.selected = true
-        } else {
-            testimony.selected = false
-        }
-        
-        if testimonyFavorite.image == #imageLiteral(resourceName: "FavoriteFilled") {
-            testimony.favorite = true
-        } else {
-            testimony.favorite = false
+        if let details = testimonyDetailsTextField.text {
+            testimonyToSave?.detail = details
         }
         
         ad.saveContext()
@@ -199,70 +126,20 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func loadTestimonyData() {
-        if let testimony = testimonyToEdit {
-            testimonyTopicTextField.text = testimony.topic
-            testimonyTitleTextField.text = testimony.title
-            testimonyBookTextField.text = testimony.book
-            testimonyNumberTextField.text = String(testimony.number)
-            testimonyURLTextField.text = testimony.url
-            let onDeck = testimony.selected
-            let favorite = testimony.favorite
-            if onDeck == true {
-                testimonyOnDeckImage.image = #imageLiteral(resourceName: "Selected")
-            } else {
-                testimonyOnDeckImage.image = #imageLiteral(resourceName: "NotSelected")
-            }
-            if favorite == true {
-                testimonyFavorite.image = #imageLiteral(resourceName: "FavoriteFilled")
-            } else {
-                testimonyFavorite.image = #imageLiteral(resourceName: "Favorite")
-            }
-            
-            textFieldDidEndEditing(testimonyTitleTextField)
+        if let testimonyToEdit = testimony.selectedTestimony {
+            testimonyTitleTextField.text = testimonyToEdit.title
+            testimonyDetailsTextField.text = testimonyToEdit.detail
         }
     }
     
-    @IBAction func deleteButtonPressed(_ sender: Any) {
-        deleteAlertMessage()
-    }
-    
-    func deleteAlertMessage() {
-        let alertController = UIAlertController(title: "⚠️ DELETE WARNING!", message: "Are you sure you want to delete this testimony?", preferredStyle: .alert)
-        
-        let deleteAction = UIAlertAction(title: "✗ Delete", style: .default, handler: {
-            alert -> Void in
-            
-            self.deleteTestimony()
-        })
-        
-        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-        })
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(deleteAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func deleteTestimony() {
-        if testimonyToEdit != nil {
-            let testimony = testimonyToEdit
-            if testimony?.selected == true {
-                unselectEverything()
-            }
-            context.delete(testimonyToEdit!)
-            ad.saveContext()
-        }
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
-    func unselectEverything() {
-        for eachTestimony in testimonysArray {
-            eachTestimony.selected = false
-            eachTestimony.selectedOne = nil
-            ad.saveContext()
+    func loadTestimonyAssignmentImage() {
+        let assignee = testimony.assignment
+        if assignee != nil {
+            testimonyAssigneeMemberImage.image = assignee?.photo as? UIImage
+            testimonyAssigneeLabel.text = assignee?.name
+        } else {
+            testimonyAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+            testimonyAssigneeLabel.text = "Auto-Assign"
         }
     }
 }

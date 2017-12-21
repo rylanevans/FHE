@@ -14,20 +14,16 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var gameTopicTextField: UITextField!
+    @IBOutlet weak var gameCategoryTextField: UITextField!
     @IBOutlet weak var gameTitleTextField: UITextField!
-    @IBOutlet weak var gameBookTextField: UITextField!
-    @IBOutlet weak var gameNumberTextField: UITextField!
     @IBOutlet weak var gameURLTextField: UITextField!
     @IBOutlet weak var gameOnDeckImage: UIImageView!
     @IBOutlet weak var gameFavorite: UIImageView!
     
-    var gameBooks = gameBooksArray
-    var gameTopics = lessonTopicsArray
+    var gameCategory = gameCategoryArray
     var gameToEdit: Game?
     var gameAssignment: Task?
-    let gameTopicPicker = UIPickerView()
-    let gameBookPicker = UIPickerView()
+    let gameCategoryPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +39,13 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        gameTopicPicker.delegate = self
-        gameTopicPicker.dataSource = self
-        gameTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        gameCategoryPicker.delegate = self
+        gameCategoryPicker.dataSource = self
+        gameCategoryPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        gameBookPicker.delegate = self
-        gameBookPicker.dataSource = self
-        gameBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        //        gameTopicTextField.delegate = self
-        //        gameTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        gameTopicTextField.inputView = gameTopicPicker
-        //        gameTopicPicker.tag = 1
-        //        gameTopicTextField.inputAccessoryView = toolBar
+        gameCategoryTextField.delegate = self
+        gameCategoryTextField.inputView = gameCategoryPicker
+        gameCategoryTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         
@@ -73,13 +63,8 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidTitle()
-        switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
-        }
+        navigationItem.title = textField.text
+        return
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -99,21 +84,12 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            let gameTopic = gameTopics[row]
-            return gameTopic
-        } else {
-            let gameSource = gameBooks[row]
-            return gameSource
-        }
+        let gameTopic = gameCategory[row]
+        return gameTopic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return gameTopics.count
-        } else {
-            return gameBooks.count
-        }
+        return gameCategory.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -121,12 +97,8 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let gameTopic = gameTopics[row]
-            gameTopicTextField.text = gameTopic
-        } else {
-            gameBookTextField.text = gameBooks[row]
-        }
+            let gameTopic = gameCategory[row]
+            gameCategoryTextField.text = gameTopic
     }
     
     @IBAction func gameSelectedPressed(_ sender: Any) {
@@ -156,24 +128,12 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             game = gameToEdit
         }
         
-        if let topic = gameTopicTextField.text {
-            game.topic = topic
-        }
-        
-        if let book = gameBookTextField.text {
-            game.book = book
+        if let category = gameCategoryTextField.text {
+            game.category = category
         }
         
         if let title = gameTitleTextField.text {
             game.title = title
-        }
-        
-        if gameNumberTextField.text != "" {
-            let number = Int64(gameNumberTextField.text!)
-            game.number = number!
-        } else {
-            let number = Int64(0)
-            game.number = number
         }
         
         if let URL = gameURLTextField.text {
@@ -200,10 +160,8 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func loadGameData() {
         if let game = gameToEdit {
-            gameTopicTextField.text = game.topic
+            gameCategoryTextField.text = game.category
             gameTitleTextField.text = game.title
-            gameBookTextField.text = game.book
-            gameNumberTextField.text = String(game.number)
             gameURLTextField.text = game.url
             let onDeck = game.selected
             let favorite = game.favorite

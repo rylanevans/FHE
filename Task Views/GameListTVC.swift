@@ -21,7 +21,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let memberPicker = UIPickerView()
     
-    let game = taskGamesArray[0]
+    let game = taskGame
     
     var gameURL = "https://www.lds.org/music/library?lang=eng"
     

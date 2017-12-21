@@ -16,17 +16,24 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     @IBOutlet weak var hideSaveButton: UIImageView!
     @IBOutlet weak var scriptureTopicTextField: UITextField!
     @IBOutlet weak var scriptureTitleTextField: UITextField!
+    @IBOutlet weak var scriptureVolumeTextField: UITextField!
     @IBOutlet weak var scriptureBookTextField: UITextField!
-    @IBOutlet weak var scriptureNumberTextField: UITextField!
-    @IBOutlet weak var scriptureURLTextField: UITextField!
+    @IBOutlet weak var scriptureChapterTextField: UITextField!
+    @IBOutlet weak var scriptureVerseTextField: UITextField!
     @IBOutlet weak var scriptureOnDeckImage: UIImageView!
     @IBOutlet weak var scriptureFavorite: UIImageView!
     
-    var scriptureBooks = scriptureBooksArray
-    var scriptureTopics = lessonTopicsArray
+    let topics = lessonTopicsArray
+    let volumes = scriptureVolumesArray
+    let otBooks = scriptureOTBooksArray
+    let ntBooks = scriptureNTBooksArray
+    let bofmBooks = scriptureBofMBooksArray
+    let pgpBooks = scripturePGPBooksArray
+    let dcBooks = scriptureDCBooksArray
     var scriptureToEdit: Scripture?
     var scriptureAssignment: Task?
     let scriptureTopicPicker = UIPickerView()
+    let scriptureVolumePicker = UIPickerView()
     let scriptureBookPicker = UIPickerView()
     
     override func viewDidLoad() {
@@ -47,15 +54,24 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         scriptureTopicPicker.dataSource = self
         scriptureTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        scriptureBookPicker.delegate = self
-        scriptureBookPicker.dataSource = self
-        scriptureBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        scriptureVolumePicker.delegate = self
+        scriptureVolumePicker.dataSource = self
+        scriptureVolumePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        //        scriptureTopicTextField.delegate = self
-        //        scriptureTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        scriptureTopicTextField.inputView = scriptureTopicPicker
-        //        scriptureTopicPicker.tag = 1
-        //        scriptureTopicTextField.inputAccessoryView = toolBar
+        scriptureTopicTextField.delegate = self
+        scriptureTopicTextField.inputView = scriptureTopicPicker
+        scriptureTopicTextField.tag = 1
+        scriptureTopicTextField.inputAccessoryView = toolBar
+        
+        scriptureVolumeTextField.delegate = self
+        scriptureVolumeTextField.inputView = scriptureVolumePicker
+        scriptureVolumeTextField.tag = 2
+        scriptureVolumeTextField.inputAccessoryView = toolBar
+        
+        scriptureBookTextField.delegate = self
+        scriptureBookTextField.inputView = scriptureBookPicker
+        scriptureBookTextField.tag = 3
+        scriptureBookTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         
@@ -74,11 +90,8 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidTitle()
         switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
+        case 1: navigationItem.title = textField.text
+        default: return
         }
     }
     
@@ -100,19 +113,28 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1 {
-            let scriptureTopic = scriptureTopics[row]
+            let scriptureTopic = topics[row]
             return scriptureTopic
         } else {
-            let scriptureSource = scriptureBooks[row]
+            let scriptureSource = volumes[row]
             return scriptureSource
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return scriptureTopics.count
-        } else {
-            return scriptureBooks.count
+        switch pickerView.tag {
+        case 1: return topics.count
+        case 2: return volumes.count
+        case 3:
+            switch scriptureVolumeTextField.text {
+            case "Old Testament"?: return otBooks.count
+            case "New Testament"?: return ntBooks.count
+            case "Book of Mormon"?: return bofmBooks.count
+            case "Doctrine and Covenants"?: return dcBooks.count
+            case "Pearl of Great Price"?: return pgpBooks.count
+            default: return 1
+            }
+        default: return 0
         }
     }
     
@@ -121,11 +143,27 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let scriptureTopic = scriptureTopics[row]
-            scriptureTopicTextField.text = scriptureTopic
-        } else {
-            scriptureBookTextField.text = scriptureBooks[row]
+        let scriptureTopic = topics[row]
+        let scriptureVolume = volumes[row]
+        let scriptureNT = ntBooks[row]
+        let scriptureOT = otBooks[row]
+        let scriptureBofM = bofmBooks[row]
+        let scriptureDC = dcBooks[row]
+        let scripturePGP = pgpBooks[row]
+        
+        switch pickerView.tag {
+        case 1: scriptureTopicTextField.text = scriptureTopic
+        case 2: scriptureVolumeTextField.text = scriptureVolume
+        case 3:
+            switch scriptureVolumeTextField.text {
+            case "Old Testament"?: scriptureBookTextField.text = scriptureOT
+            case "New Testament"?: scriptureBookTextField.text = scriptureNT
+            case "Book of Mormon"?: scriptureBookTextField.text = scriptureBofM
+            case "Doctrine and Covenants"?: scriptureBookTextField.text = scriptureDC
+            case "Pearl of Great Price"?: scriptureBookTextField.text = scripturePGP
+            default: scriptureBookTextField.text = "Select Scripture Volume First"
+            }
+        default: return
         }
     }
     
@@ -156,28 +194,28 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
             scripture = scriptureToEdit
         }
         
+        if let title = scriptureTitleTextField.text {
+            scripture.title = title
+        }
+        
         if let topic = scriptureTopicTextField.text {
             scripture.topic = topic
+        }
+        
+        if let volume = scriptureVolumeTextField.text {
+            scripture.volume = volume
         }
         
         if let book = scriptureBookTextField.text {
             scripture.book = book
         }
         
-        if let title = scriptureTitleTextField.text {
-            scripture.title = title
+        if let chapter = scriptureChapterTextField.text {
+            scripture.chapter = chapter
         }
         
-        if scriptureNumberTextField.text != "" {
-            let number = Int64(scriptureNumberTextField.text!)
-            scripture.number = number!
-        } else {
-            let number = Int64(0)
-            scripture.number = number
-        }
-        
-        if let URL = scriptureURLTextField.text {
-            scripture.url = URL
+        if let verse = scriptureVerseTextField.text {
+            scripture.verse = verse
         }
         
         if scriptureOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
@@ -202,9 +240,10 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         if let scripture = scriptureToEdit {
             scriptureTopicTextField.text = scripture.topic
             scriptureTitleTextField.text = scripture.title
+            scriptureVolumeTextField.text = scripture.volume
             scriptureBookTextField.text = scripture.book
-            scriptureNumberTextField.text = String(scripture.number)
-            scriptureURLTextField.text = scripture.url
+            scriptureChapterTextField.text = scripture.chapter
+            scriptureVerseTextField.text = scripture.verse
             let onDeck = scripture.selected
             let favorite = scripture.favorite
             if onDeck == true {

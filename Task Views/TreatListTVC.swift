@@ -21,7 +21,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     let memberPicker = UIPickerView()
     
-    let treat = taskTreatsArray[0]
+    let treat = taskTreat
     
     var treatURL = "https://www.lds.org/music/library?lang=eng"
     

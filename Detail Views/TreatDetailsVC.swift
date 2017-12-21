@@ -14,20 +14,16 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
-    @IBOutlet weak var treatTopicTextField: UITextField!
+    @IBOutlet weak var treatCategoryTextField: UITextField!
     @IBOutlet weak var treatTitleTextField: UITextField!
-    @IBOutlet weak var treatBookTextField: UITextField!
-    @IBOutlet weak var treatNumberTextField: UITextField!
     @IBOutlet weak var treatURLTextField: UITextField!
     @IBOutlet weak var treatOnDeckImage: UIImageView!
     @IBOutlet weak var treatFavorite: UIImageView!
     
-    var treatBooks = treatBooksArray
-    var treatTopics = lessonTopicsArray
+    var treatCategory = treatsCategoryArray
     var treatToEdit: Treat?
     var treatAssignment: Task?
-    let treatTopicPicker = UIPickerView()
-    let treatBookPicker = UIPickerView()
+    let treatCategoryPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +39,13 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        treatTopicPicker.delegate = self
-        treatTopicPicker.dataSource = self
-        treatTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        treatCategoryPicker.delegate = self
+        treatCategoryPicker.dataSource = self
+        treatCategoryPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        treatBookPicker.delegate = self
-        treatBookPicker.dataSource = self
-        treatBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        //        treatTopicTextField.delegate = self
-        //        treatTopicTextField.attributedPlaceholder = NSAttributedString(string: "Select Topic", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        //        treatTopicTextField.inputView = treatTopicPicker
-        //        treatTopicPicker.tag = 1
-        //        treatTopicTextField.inputAccessoryView = toolBar
+        treatCategoryTextField.delegate = self
+        treatCategoryTextField.inputView = treatCategoryPicker
+        treatCategoryTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         
@@ -73,13 +63,8 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidTitle()
-        switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
-        }
+        navigationItem.title = textField.text
+        return
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -99,21 +84,12 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
-            let treatTopic = treatTopics[row]
-            return treatTopic
-        } else {
-            let treatSource = treatBooks[row]
-            return treatSource
-        }
+        let treat = treatCategory[row]
+        return treat
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView.tag == 1 {
-            return treatTopics.count
-        } else {
-            return treatBooks.count
-        }
+        return treatCategory.count
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -121,12 +97,8 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 1 {
-            let treatTopic = treatTopics[row]
-            treatTopicTextField.text = treatTopic
-        } else {
-            treatBookTextField.text = treatBooks[row]
-        }
+        let treat = treatCategory[row]
+        treatCategoryTextField.text = treat
     }
     
     @IBAction func treatSelectedPressed(_ sender: Any) {
@@ -156,24 +128,12 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
             treat = treatToEdit
         }
         
-        if let topic = treatTopicTextField.text {
-            treat.topic = topic
-        }
-        
-        if let book = treatBookTextField.text {
-            treat.book = book
+        if let category = treatCategoryTextField.text {
+            treat.category = category
         }
         
         if let title = treatTitleTextField.text {
             treat.title = title
-        }
-        
-        if treatNumberTextField.text != "" {
-            let number = Int64(treatNumberTextField.text!)
-            treat.number = number!
-        } else {
-            let number = Int64(0)
-            treat.number = number
         }
         
         if let URL = treatURLTextField.text {
@@ -200,10 +160,8 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     func loadTreatData() {
         if let treat = treatToEdit {
-            treatTopicTextField.text = treat.topic
+            treatCategoryTextField.text = treat.category
             treatTitleTextField.text = treat.title
-            treatBookTextField.text = treat.book
-            treatNumberTextField.text = String(treat.number)
             treatURLTextField.text = treat.url
             let onDeck = treat.selected
             let favorite = treat.favorite
@@ -259,7 +217,7 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     }
     
     func unselectEverything() {
-        for eachTreat in treatsCategoryArray {
+        for eachTreat in treatsArray {
             eachTreat.selected = false
             eachTreat.selectedOne = nil
             ad.saveContext()
