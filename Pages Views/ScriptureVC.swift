@@ -35,7 +35,8 @@ class ScriptureVC: UIViewController {
             scriptureDetailLabel.text = "\(task.volume?.uppercased() ?? "") \(task.book?.uppercased() ?? "") \(task.chapter ?? ""):\(task.verse ?? "")"
             
             if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
-                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(task.verse!)"
+                let firstVerse = String(describing: task.verse?[(task.verse?.startIndex)!])
+                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(firstVerse)"
                 // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"
             }
         }

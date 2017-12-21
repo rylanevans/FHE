@@ -142,28 +142,39 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         var title = ""
         let sectionTitle = ruleController.sections
         
-        if segment.selectedSegmentIndex == 0 {
-            if sectionTitle![section].name == "" {
-                title = "SORTED ALPHABETICALLY:"
-            } else {
-                title = "SEARCH RESULTS:"
+        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 2 {
+            switch sectionTitle![section].name {
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
+            default: title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            if sectionTitle![section].name == "" {
-                title = "SORTED BY DATE ADDED:"
-            } else {
-                title = "SEARCH RESULTS:"
-            }
-
-        } else if segment.selectedSegmentIndex == 2 {
-            if Int(sectionTitle![section].name) == 1 {
-                title = "FAVORITES:"
-            } else if Int(sectionTitle![section].name) == 0 {
-                title = "NON-FAVORITES:"
-            } else {
-                title = "SEARCH RESULTS:"
-            }
+            title = "SORTED BY DATE ADDED:"
             
         } else {
             title = "SORTED:"
@@ -341,8 +352,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             fetchRequest.sortDescriptors = [sortByTitle]
             let predicateTitle = NSPredicate(format: "title contains[c] %@", targetText!)
             let predicateDetail = NSPredicate(format: "detail contains[c] %@", targetText!)
-            let predicateFavorite = NSPredicate(format: "favorite contains[c] %@", targetText!)
-            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateDetail, predicateFavorite])
+            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateDetail])
             
             fetchRequest.predicate = predicateCompound
             //            fetchRequest.predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)
@@ -364,11 +374,11 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let fetchRequest: NSFetchRequest<Rule> = Rule.fetchRequest()
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByDate = NSSortDescriptor(key: "dateCreated", ascending: true)
-        let sortByFavorite = NSSortDescriptor(key: "favorite", ascending: false)
+        let sortByAlphabet = NSSortDescriptor(key: "alphabet", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.ruleController = controller
             
@@ -393,8 +403,10 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByFavorite, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "favorite", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let predicate = NSPredicate(format: "favorite == %@", NSNumber(booleanLiteral: true))
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.ruleController = controller
             

@@ -142,35 +142,38 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         var title = ""
         let sectionTitle = scriptureController.sections
         
-        if segment.selectedSegmentIndex == 0 {
-            if sectionTitle![section].name == "ot" {
-                title = "OLD TESTAMENT:"
-            } else if sectionTitle![section].name == "nt" {
-                title = "NEW TESTAMENT:"
-            } else if sectionTitle![section].name == "bofm" {
-                title = "BOOK OF MORMON:"
-            } else if sectionTitle![section].name == "dc" {
-                title = "DOCTRINE & COVENANTS:"
-            } else if sectionTitle![section].name == "pgp" {
-                title = "PEARL OF GREAT PRICE:"
-            } else {
-                title = "SEARCH RESULTS:"
+        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 || segment.selectedSegmentIndex == 3 || segment.selectedSegmentIndex == 5 {
+            switch sectionTitle![section].name {
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
+            default: title = "SEARCH RESULTS:"
             }
             
-        } else if segment.selectedSegmentIndex == 1 {
-            if sectionTitle![section].name == "Children's" {
-                title = "CHILDREN'S SONG BOOK:"
-            } else if sectionTitle![section].name == "Hymn" {
-                title = "HYMN BOOK:"
-            } else if sectionTitle![section].name == "Video" {
-                title = "MUSIC VIDEO:"
-            } else if sectionTitle![section].name == "Other" {
-                title = "OTHER:"
-            } else {
-                title = "SEARCH RESULTS:"
-            }
-            
-        } else if segment.selectedSegmentIndex == 2 {
+        } else if segment.selectedSegmentIndex == 4 {
             switch sectionTitle![section].name {
             case "Heavenly Father": title = "HEAVENLY FATHER:"
             case "Jesus Christ": title = "JESUS CHRIST:"
@@ -194,14 +197,6 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             default: title = "SEARCH RESULTS:"
             }
             
-        } else if segment.selectedSegmentIndex == 3 {
-            if Int(sectionTitle![section].name) == 1 {
-                title = "FAVORITES:"
-            } else if Int(sectionTitle![section].name) == 0 {
-                title = "NON-FAVORITES:"
-            } else {
-                title = "SEARCH RESULTS:"
-            }
         } else {
             title = "SORTED:"
         }
@@ -318,8 +313,11 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func previewScripture(_ scripture: Scripture) {
-//        if let scripture = scripture.url {
-//            scriptureURL = scripture
+        let firstVerse = String(describing: scripture.verse?[(scripture.verse?.startIndex)!])
+        
+        if scripture.volume != nil && scripture.book != nil && scripture.chapter != nil && scripture.verse != nil {
+            let scripture = "https://www.lds.org/scriptures/\(scripture.volume!)/\(scripture.book!)/\(scripture.chapter!).\(scripture.verse!)?lang=eng#\(firstVerse)"
+            scriptureURL = scripture
         }
         
         let URL = NSURL(string: "\(scriptureURL)")!
