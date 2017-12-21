@@ -145,38 +145,57 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         
         if segment.selectedSegmentIndex == 0 {
             switch sectionTitle![section].name {
-                case "A": title = "A:"
-                case "B": title = "B:"
-                default: title = "SEARCH RESULTS:"
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
+            default: title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 1 {
             if sectionTitle![section].name == "Children's" {
                 title = "CHILDREN'S SONG BOOK:"
-            } else if sectionTitle![section].name == "Hymn" {
-                title = "HYMN BOOK:"
-            } else if sectionTitle![section].name == "Video" {
-                title = "MUSIC VIDEO:"
-            } else if sectionTitle![section].name == "Other" {
-                title = "OTHER:"
-            } else {
-                title = "SEARCH RESULTS:"
-            }
-            
-        } else if segment.selectedSegmentIndex == 1 {
-            if sectionTitle![section].name == "Children's" {
-                title = "CHILDREN'S SONG BOOK:"
-            } else if sectionTitle![section].name == "Hymn" {
-                title = "HYMN BOOK:"
-            } else if sectionTitle![section].name == "Video" {
-                title = "MUSIC VIDEO:"
-            } else if sectionTitle![section].name == "Other" {
-                title = "OTHER:"
             } else {
                 title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 2 {
+            if sectionTitle![section].name == "Hymn" {
+                title = "HYMN BOOK:"
+            } else {
+                title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 3 {
+            if sectionTitle![section].name == "Video" {
+                title = "MUSIC VIDEO:"
+            } else {
+                title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 4 {
             switch sectionTitle![section].name {
             case "Heavenly Father": title = "HEAVENLY FATHER:"
             case "Jesus Christ": title = "JESUS CHRIST:"
@@ -200,11 +219,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             default: title = "SEARCH RESULTS:"
             }
             
-        } else if segment.selectedSegmentIndex == 3 {
+        } else if segment.selectedSegmentIndex == 5 {
             if Int(sectionTitle![section].name) == 1 {
                 title = "FAVORITES:"
-            } else if Int(sectionTitle![section].name) == 0 {
-                title = "NON-FAVORITES:"
             } else {
                 title = "SEARCH RESULTS:"
             }
@@ -432,13 +449,11 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let fetchRequest: NSFetchRequest<Song> = Song.fetchRequest()
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
-        let sortByBook = NSSortDescriptor(key: "book", ascending: true)
-        let sortByNumber = NSSortDescriptor(key: "number", ascending: true)
-        let sortByFavorite = NSSortDescriptor(key: "favorite", ascending: false)
+        let sortByAlphabet = NSSortDescriptor(key: "alphabet", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.songController = controller
             
@@ -450,7 +465,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByNumber]
+            fetchRequest.sortDescriptors = [sortByTitle]
+            let predicate = NSPredicate(format: "book == %@", "Children's")
+            fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.songController = controller
@@ -463,6 +480,36 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [sortByTitle]
+            let predicate = NSPredicate(format: "book == %@", "Hymn")
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            controller.delegate = self
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 3 {
+            fetchRequest.sortDescriptors = [sortByTitle]
+            let predicate = NSPredicate(format: "book == %@", "Video")
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            controller.delegate = self
+            self.songController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 4 {
             fetchRequest.sortDescriptors = [sortByTopic, sortByTitle]
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "topic", cacheName: nil)
             controller.delegate = self
@@ -475,8 +522,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 print("\(error)")
             }
             
-        } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByFavorite, sortByTitle]
+        } else if segment.selectedSegmentIndex == 5 {
+            fetchRequest.sortDescriptors = [sortByTitle]
+            let predicate = NSPredicate(format: "favorite == %@", NSNumber(booleanLiteral: true))
+            fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "favorite", cacheName: nil)
             controller.delegate = self
             self.songController = controller
