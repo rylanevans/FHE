@@ -142,7 +142,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         var title = ""
         let sectionTitle = scriptureController.sections
         
-        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 || segment.selectedSegmentIndex == 3 || segment.selectedSegmentIndex == 5 {
+        if segment.selectedSegmentIndex == 0 {
             switch sectionTitle![section].name {
             case "A": title = "A:"
             case "B": title = "B:"
@@ -173,7 +173,119 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             default: title = "SEARCH RESULTS:"
             }
             
+        } else if segment.selectedSegmentIndex == 1 {
+            switch sectionTitle![section].name {
+            case "1 Chronicles": title = "1 CHRONICLES:"
+            case "1 Kings": title = "1 KINGS:"
+            case "1 Samuel": title = "1 SAMUEL:"
+            case "2 Chronicles": title = "2 CHRONICLES:"
+            case "2 Kings": title = "2 KINGS:"
+            case "2 Samuel": title = "2 SAMUEL:"
+            case "Amos": title = "AMOS:"
+            case "Daniel": title = "DANIEL:"
+            case "Deuteronomy": title = "DEUTERONOMY:"
+            case "Ecclesiastes": title = "ECCLESIASTES:"
+            case "Esther": title = "ESTHER:"
+            case "Exodus": title = "EXODUS:"
+            case "Ezekiel": title = "EZEKIEL:"
+            case "Ezra": title = "EZRA:"
+            case "Genesis": title = "GENESIS:"
+            case "Habakkuk": title = "HABAKKUK:"
+            case "Haggai": title = "HAGGAI:"
+            case "Hosea": title = "HOSEA:"
+            case "Isaiah": title = "ISAIAH:"
+            case "Jeremiah": title = "JEREMIAH:"
+            case "Job": title = "JOB:"
+            case "Joel": title = "JOEL:"
+            case "Jonah": title = "JONEAH:"
+            case "Joshua": title = "JOSHUA:"
+            case "Judges": title = "JUDGES:"
+            case "Lamentations": title = "LAMENTATIONS:"
+            case "Leviticus": title = "LEVITICUS:"
+            case "Malachi": title = "MALACHI:"
+            case "Micah": title = "MICAH:"
+            case "Nahum": title = "NAHUM:"
+            case "Nehemiah": title = "NEHEMIAH:"
+            case "Numbers": title = "NUMBERS:"
+            case "Obadiah": title = "OBADIAH:"
+            case "Proverbs": title = "PROVERBS:"
+            case "Psalms": title = "PSALMS:"
+            case "Ruth": title = "RUTH:"
+            case "Solomon's Song": title = "SOLOMAN'S SONG:"
+            case "Zechariah": title = "ZECHARIAH:"
+            case "Zephaniah": title = "ZEPHANIAH:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 2 {
+            switch sectionTitle![section].name {
+            case "1 Corinthians": title = "1 CORINTHIANS:"
+            case "1 John": title = "1 JOHN:"
+            case "1 Peter": title = "1 PETER:"
+            case "1 Thessalonians": title = "1 THESSALONIANS:"
+            case "1 Timothy": title = "1 TIMOTHY:"
+            case "2 Corinthians": title = "2 CORINTHIANS:"
+            case "2 John": title = "2 JOHN:"
+            case "2 Peter": title = "2 PETER:"
+            case "2 Thessalonians": title = "2 THESSALONIANS:"
+            case "2 Timothy": title = "2 TIMOTHY:"
+            case "3 John": title = "3 JOHN:"
+            case "Acts": title = "ACTS:"
+            case "Colossians": title = "COLOSSIANS:"
+            case "Ephesians": title = "EPHESIANS:"
+            case "Galatians": title = "GALATIANS:"
+            case "Hebrews": title = "HEBREWS:"
+            case "James": title = "JAMES:"
+            case "John": title = "JOHN:"
+            case "Jude": title = "JUDE:"
+            case "Luke": title = "LUKE:"
+            case "Mark": title = "MARK:"
+            case "Matthew": title = "MATTHEW:"
+            case "Philemon": title = "PHILEMON:"
+            case "Philippians": title = "PHILIPPIANS:"
+            case "Revelation": title = "REVELATION:"
+            case "Romans": title = "ROMANS:"
+            case "Titus": title = "TITUS:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 3 {
+            switch sectionTitle![section].name {
+            case "1 Nephi": title = "1 NEPHI:"
+            case "2 Nephi": title = "2 NEPHI:"
+            case "3 Nephi": title = "3 NEPHI:"
+            case "4 Nephi": title = "4 NEPHI:"
+            case "Alma": title = "ALMA:"
+            case "Enos": title = "ENOS:"
+            case "Ether": title = "ETHER:"
+            case "Helaman": title = "HELAMAN:"
+            case "Jacob": title = "JACOB:"
+            case "Jarom": title = "JAROM:"
+            case "Mormon": title = "MORMON:"
+            case "Moroni": title = "MORONI:"
+            case "Mosiah": title = "MOSIAH:"
+            case "Omni": title = "OMNI:"
+            case "Words of Mormon": title = "WORDS OF MORMON:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
         } else if segment.selectedSegmentIndex == 4 {
+            switch sectionTitle![section].name {
+            case "Doctrine and Covenants": title = "DOCTRINE AND COVENANTS:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 5 {
+            switch sectionTitle![section].name {
+            case "Abraham": title = "DOCTRINE AND COVENANTS:"
+            case "Articles of Faith": title = "ARTICLES OF FAITH:"
+            case "Joseph Smith--History": title = "JOSEPH SMITH HISTORY:"
+            case "Joseph Smith--Matthew": title = "JS - MATTHEW:"
+            case "Moses": title = "MOSES:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 6 {
             switch sectionTitle![section].name {
             case "Heavenly Father": title = "HEAVENLY FATHER:"
             case "Jesus Christ": title = "JESUS CHRIST:"
@@ -194,6 +306,37 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             case "Redeem the Dead": title = "REDEEM THE DEAD:"
             case "Care for the Poor & Needy": title = "CARE FOR THE POOR & NEEDY:"
             case "Spiritual": title = "SPIRITUAL:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 7 {
+            switch sectionTitle![section].name {
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
             default: title = "SEARCH RESULTS:"
             }
             
@@ -327,29 +470,6 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         present(scriptureWebVC, animated: true, completion: nil)
     }
     
-    func searchScripture(segment: Int?=nil, targetText: String?=nil){
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        
-        let sortByName = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
-        
-        if targetText != nil {
-            fetchRequest.sortDescriptors = [sortByName]
-            let predicateName = NSPredicate(format: "name contains[c] %@", targetText!)
-            
-            fetchRequest.predicate = predicateName
-            
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            controller.delegate = self
-            
-            do {
-                try controller.performFetch()
-            } catch {
-                let error = error as NSError
-                print("\(error)")
-            }
-        }
-    }
-    
     func unselectEverything() {
         for eachScripture in scripturesArray {
             eachScripture.selected = false
@@ -398,10 +518,12 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         if targetText != nil {
             fetchRequest.sortDescriptors = [sortByTitle]
             let predicateTitle = NSPredicate(format: "title contains[c] %@", targetText!)
-            let predicateNumber = NSPredicate(format: "number contains[c] %@", targetText!)
+            let predicateVolume = NSPredicate(format: "volume contains[c] %@", targetText!)
+            let predicateBook = NSPredicate(format: "book contains[c] %@", targetText!)
+            let predicateChapter = NSPredicate(format: "chapter contains[c] %@", targetText!)
+            let predicateVerse = NSPredicate(format: "verse contains[c] %@", targetText!)
             let predicateTopic = NSPredicate(format: "topic contains[c] %@", targetText!)
-            let predicateFavorite = NSPredicate(format: "favorite contains[c] %@", targetText!)
-            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateNumber, predicateTopic, predicateFavorite])
+            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateTopic, predicateVolume, predicateBook, predicateChapter, predicateVerse])
             
             fetchRequest.predicate = predicateCompound
             //            fetchRequest.predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)
@@ -423,13 +545,12 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let fetchRequest: NSFetchRequest<Scripture> = Scripture.fetchRequest()
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
-        let sortByBook = NSSortDescriptor(key: "book", ascending: true)
-        let sortByNumber = NSSortDescriptor(key: "number", ascending: true)
-        let sortByFavorite = NSSortDescriptor(key: "favorite", ascending: false)
+        let sortByAlphabet = NSSortDescriptor(key: "alphabet", ascending: true)
+        let sortByBook = NSSortDescriptor(key: "order", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             
@@ -441,7 +562,9 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByNumber]
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            let predicate = NSPredicate(format: "volume == %@", "Old Testament")
+            fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
@@ -454,6 +577,66 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             }
             
         } else if segment.selectedSegmentIndex == 2 {
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            let predicate = NSPredicate(format: "volume == %@", "New Testament")
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            controller.delegate = self
+            self.scriptureController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 3 {
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            let predicate = NSPredicate(format: "volume == %@", "Book of Mormon")
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            controller.delegate = self
+            self.scriptureController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 4 {
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            let predicate = NSPredicate(format: "volume == %@", "Doctrine and Covenants")
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            controller.delegate = self
+            self.scriptureController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 5 {
+            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            let predicate = NSPredicate(format: "volume == %@", "Pearl of Great Price")
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            controller.delegate = self
+            self.scriptureController = controller
+            
+            do {
+                try controller.performFetch()
+            } catch {
+                let error = error as NSError
+                print("\(error)")
+            }
+            
+        } else if segment.selectedSegmentIndex == 6 {
             fetchRequest.sortDescriptors = [sortByTopic, sortByTitle]
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "topic", cacheName: nil)
             controller.delegate = self
@@ -466,9 +649,11 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
                 print("\(error)")
             }
             
-        } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByFavorite, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "favorite", cacheName: nil)
+        } else if segment.selectedSegmentIndex == 7 {
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let predicate = NSPredicate(format: "favorite == %@", NSNumber(booleanLiteral: true))
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             

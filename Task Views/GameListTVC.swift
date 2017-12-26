@@ -143,64 +143,84 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         var title = ""
         let sectionTitle = gameController.sections
         
-        if segment.selectedSegmentIndex == 0 {
-            if sectionTitle![section].name == "Children's" {
-                title = "CHILDREN'S SONG BOOK:"
-            } else if sectionTitle![section].name == "Hymn" {
-                title = "HYMN BOOK:"
-            } else if sectionTitle![section].name == "Video" {
-                title = "MUSIC VIDEO:"
-            } else if sectionTitle![section].name == "Other" {
-                title = "OTHER:"
-            } else {
-                title = "SEARCH RESULTS:"
+        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 2 {
+            switch sectionTitle![section].name {
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
+            default: title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            if sectionTitle![section].name == "Children's" {
-                title = "CHILDREN'S SONG BOOK:"
-            } else if sectionTitle![section].name == "Hymn" {
-                title = "HYMN BOOK:"
-            } else if sectionTitle![section].name == "Video" {
-                title = "MUSIC VIDEO:"
-            } else if sectionTitle![section].name == "Other" {
-                title = "OTHER:"
-            } else {
-                title = "SEARCH RESULTS:"
+            switch sectionTitle![section].name {
+            case "Other": title = "OTHER:"
+            case "Classic": title = "CLASSIC:"
+            case "Board Game": title = "BOARD GAME:"
+            case "Cards": title = "CARDS:"
+            case "Team Sport": title = "TEAM SPORTS:"
+            case "Field Trip": title = "FIELD TRIP:"
+            case "Outdoor": title = "OUTDOOR:"
+            case "Service": title = "SERVICE:"
+            case "Baking": title = "BAKING:"
+            case "Crafts": title = "CRAFTS:"
+            case "Mindfullness": title = "MINDFULNESS:"
+            default: title = "SEARCH RESULTS:"
             }
             
         } else if segment.selectedSegmentIndex == 2 {
             switch sectionTitle![section].name {
-            case "Heavenly Father": title = "HEAVENLY FATHER:"
-            case "Jesus Christ": title = "JESUS CHRIST:"
-            case "Holy Ghost": title = "HOLY GHOST:"
-            case "Plan of Salvation": title = "PLAN OF SALVATION:"
-            case "Birth of our Savior": title = "BIRTH OF OUR SAVIOR:"
-            case "Atonement": title = "ATONEMENT:"
-            case "Forgiveness": title = "FORGIVENESS:"
-            case "Resurrection": title = "RESURRECTION:"
-            case "Christlike Attributes": title = "CHRISTLIKE ATTRIBUTES:"
-            case "Commandments": title = "COMMANDMENTS:"
-            case "Scriptures": title = "SCRIPTURES:"
-            case "Restoration": title = "RESTORATION:"
-            case "Principles & Ordinances": title = "PRINCIPLES & ORDINANCES:"
-            case "Endure to the end" : title = "ENDURE TO THE END:"
-            case "Perfect the Saints": title = "PERFECT THE SAINTS:"
-            case "Proclaim the Gospel": title = "PROCLAIM THE GOSPEL:"
-            case "Redeem the Dead": title = "REDEEM THE DEAD:"
-            case "Care for the Poor & Needy": title = "CARE FOR THE POOR & NEEDY:"
-            case "Spiritual": title = "SPIRITUAL:"
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
             default: title = "SEARCH RESULTS:"
             }
             
-        } else if segment.selectedSegmentIndex == 3 {
-            if Int(sectionTitle![section].name) == 1 {
-                title = "FAVORITES:"
-            } else if Int(sectionTitle![section].name) == 0 {
-                title = "NON-FAVORITES:"
-            } else {
-                title = "SEARCH RESULTS:"
-            }
         } else {
             title = "SORTED:"
         }
@@ -328,29 +348,6 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         present(gameWebVC, animated: true, completion: nil)
     }
     
-    func searchGame(segment: Int?=nil, targetText: String?=nil){
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        
-        let sortByName = NSSortDescriptor(key: "name", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
-        
-        if targetText != nil {
-            fetchRequest.sortDescriptors = [sortByName]
-            let predicateName = NSPredicate(format: "name contains[c] %@", targetText!)
-            
-            fetchRequest.predicate = predicateName
-            
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            controller.delegate = self
-            
-            do {
-                try controller.performFetch()
-            } catch {
-                let error = error as NSError
-                print("\(error)")
-            }
-        }
-    }
-    
     func unselectEverything() {
         for eachGame in gamesArray {
             eachGame.selected = false
@@ -399,10 +396,8 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         if targetText != nil {
             fetchRequest.sortDescriptors = [sortByTitle]
             let predicateTitle = NSPredicate(format: "title contains[c] %@", targetText!)
-            let predicateNumber = NSPredicate(format: "number contains[c] %@", targetText!)
-            let predicateTopic = NSPredicate(format: "topic contains[c] %@", targetText!)
-            let predicateFavorite = NSPredicate(format: "favorite contains[c] %@", targetText!)
-            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateNumber, predicateTopic, predicateFavorite])
+            let predicateCategory = NSPredicate(format: "category contains[c] %@", targetText!)
+            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateCategory])
             
             fetchRequest.predicate = predicateCompound
             //            fetchRequest.predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)
@@ -423,14 +418,12 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Game> = Game.fetchRequest()
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
-        let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
-        let sortByBook = NSSortDescriptor(key: "book", ascending: true)
-        let sortByNumber = NSSortDescriptor(key: "number", ascending: true)
-        let sortByFavorite = NSSortDescriptor(key: "favorite", ascending: false)
+        let sortByCategory = NSSortDescriptor(key: "category", ascending: true)
+        let sortByAlphabet = NSSortDescriptor(key: "alphabet", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.gameController = controller
             
@@ -442,7 +435,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByNumber]
+            fetchRequest.sortDescriptors = [sortByCategory, sortByTitle]
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.gameController = controller
@@ -455,21 +448,10 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByTopic, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "topic", cacheName: nil)
-            controller.delegate = self
-            self.gameController = controller
-            
-            do {
-                try controller.performFetch()
-            } catch {
-                let error = error as NSError
-                print("\(error)")
-            }
-            
-        } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByFavorite, sortByTitle]
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "favorite", cacheName: nil)
+            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            let predicate = NSPredicate(format: "favorite == %@", NSNumber(booleanLiteral: true))
+            fetchRequest.predicate = predicate
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
             controller.delegate = self
             self.gameController = controller
             

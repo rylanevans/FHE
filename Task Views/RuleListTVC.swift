@@ -176,6 +176,37 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         } else if segment.selectedSegmentIndex == 1 {
             title = "SORTED BY DATE ADDED:"
             
+        } else if segment.selectedSegmentIndex == 2 {
+            switch sectionTitle![section].name {
+            case "A": title = "A:"
+            case "B": title = "B:"
+            case "C": title = "C:"
+            case "D": title = "D:"
+            case "E": title = "E:"
+            case "F": title = "F:"
+            case "G": title = "G:"
+            case "H": title = "H:"
+            case "I": title = "I:"
+            case "J": title = "J:"
+            case "K": title = "K:"
+            case "L": title = "L:"
+            case "M": title = "M:"
+            case "N": title = "N:"
+            case "O": title = "O:"
+            case "P": title = "P:"
+            case "Q": title = "Q:"
+            case "R": title = "R:"
+            case "S": title = "S:"
+            case "T": title = "T:"
+            case "U": title = "U:"
+            case "V": title = "V:"
+            case "W": title = "W:"
+            case "X": title = "X:"
+            case "Y": title = "Y:"
+            case "Z": title = "Z:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
         } else {
             title = "SORTED:"
         }

@@ -10,4 +10,3 @@ import UIKit
 
 let defaultPrice = 1.99
 
-
