@@ -42,7 +42,7 @@ extension Scripture {
         
         if self.volume != nil {
             let number = defaultScriptureDictionary["\(volume ?? "gen")"]
-            self.order = Int64(number)
+            self.order = Int64(number!)
         }
     }
 }

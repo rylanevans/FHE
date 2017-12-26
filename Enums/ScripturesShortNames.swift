@@ -1,5 +1,5 @@
 //
-//  Scriptures.swift
+//  ScripturesShortNames.swift
 //  FHE
 //
 //  Created by Rylan Evans on 10/12/17.

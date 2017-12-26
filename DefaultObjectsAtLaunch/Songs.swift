@@ -95,7 +95,6 @@ func generateSongs() {
     song7.selected = false
     song7.favorite = false
     song7.sortingIndex = 0
-    if song1.title != nil {
     
     let song8 = Song(context: context)
     song8.order = 8

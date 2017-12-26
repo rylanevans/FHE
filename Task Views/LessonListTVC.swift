@@ -56,7 +56,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         offSoundURL()
-        getTaskLesson()
+        getTaskLessons()
         segment.selectedSegmentIndex = Int(lesson.segment)
         getMembersForPicker()
         loadLessonAssignmentImage()
@@ -71,7 +71,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskLesson()
+        getTaskLessons()
         segment.selectedSegmentIndex = Int(lesson.segment)
         getMembersForPicker()
         loadLessonAssignmentImage()
