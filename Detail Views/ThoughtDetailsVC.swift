@@ -12,7 +12,7 @@ import CoreData
 class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var thoughtTitleTextField: UITextField!
-    @IBOutlet weak var thoughtDetailsTextField: UITextField!
+    @IBOutlet weak var thoughtDetailsTextField: UITextView!
     @IBOutlet weak var thoughtAssigneeMemberImage: UIImageView!
     @IBOutlet weak var thoughtAssigneeLabel: UILabel!
     @IBOutlet weak var thoughtAssigneeText: UITextField!
@@ -37,15 +37,14 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         
         thoughtAssigneeText.inputView = memberPicker
         thoughtAssigneeText.inputAccessoryView = toolBar
-        
-        thoughtDetailsTextField.delegate = self
-        thoughtDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        thoughtTitleTextField.inputAccessoryView = toolBar
+        thoughtDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
         
-        getTaskThought()
+        getAllTasks()
         getThoughts()
         getMembersForPicker()
         loadThoughtData()
@@ -59,7 +58,7 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        getTaskThought()
+        getAllTasks()
         getThoughts()
         getMembersForPicker()
         loadThoughtData()
@@ -83,7 +82,7 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let thought = taskThoughtsArray[0]
+        let thought = taskThought
         thoughtAssigneeMemberImage.image = assignee.photo as? UIImage
         thoughtAssigneeLabel.text = assignee.name
         thought.assignment = assignee

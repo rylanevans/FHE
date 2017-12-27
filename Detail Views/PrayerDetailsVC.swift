@@ -12,7 +12,7 @@ import CoreData
 class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var prayerTitleTextField: UITextField!
-    @IBOutlet weak var prayerDetailsTextField: UITextField!
+    @IBOutlet weak var prayerDetailsTextField: UITextView!
     @IBOutlet weak var prayerAssigneeMemberImage: UIImageView!
     @IBOutlet weak var prayerAssigneeLabel: UILabel!
     @IBOutlet weak var prayerAssigneeText: UITextField!
@@ -37,15 +37,14 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         
         prayerAssigneeText.inputView = memberPicker
         prayerAssigneeText.inputAccessoryView = toolBar
-        
-        prayerDetailsTextField.delegate = self
-        prayerDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        prayerTitleTextField.inputAccessoryView = toolBar
+        prayerDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
         
-        getTaskPrayer()
+        getAllTasks()
         getPrayers()
         getMembersForPicker()
         loadPrayerData()
@@ -59,7 +58,7 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        getTaskPrayer()
+        getAllTasks()
         getPrayers()
         getMembersForPicker()
         loadPrayerData()
@@ -83,7 +82,7 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let prayer = taskPrayersArray[0]
+        let prayer = taskPrayer
         prayerAssigneeMemberImage.image = assignee.photo as? UIImage
         prayerAssigneeLabel.text = assignee.name
         prayer.assignment = assignee

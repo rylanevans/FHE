@@ -13,7 +13,7 @@
     <customFonts key="customFonts">
         <array key="AmericanTypewriter.ttc">
             <string>AmericanTypewriter</string>
-            <string>AmericanTypewriter-CondensedLight</string>
+            <string>AmericanTypewriter-Condensed</string>
             <string>AmericanTypewriter-Light</string>
         </array>
         <array key="Noteworthy.ttc">
@@ -855,7 +855,7 @@
                                                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvz-SQ-dp6">
                                                                         <rect key="frame" x="60" y="0.0" width="280" height="40"/>
                                                                         <color key="textColor" name="Text"/>
-                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                                     </textField>
                                                                 </subviews>
@@ -884,7 +884,7 @@
                                                                 </constraints>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
                                                             </textField>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sx-R7-3jH" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="366" width="340" height="50"/>
@@ -966,11 +966,11 @@
                                     <constraint firstAttribute="trailing" secondItem="2sf-Vq-ppG" secondAttribute="trailing" id="wmJ-r8-Ckx"/>
                                 </constraints>
                             </stackView>
-                            <textView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Details..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ywb-o6-ujI">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Details..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ywb-o6-ujI">
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                             </textView>
                         </subviews>
@@ -991,7 +991,7 @@
                         <outlet property="prayerAssigneeLabel" destination="ppW-db-6VL" id="nhl-d0-iTl"/>
                         <outlet property="prayerAssigneeMemberImage" destination="4tR-it-qOV" id="VXl-Qd-mlA"/>
                         <outlet property="prayerAssigneeText" destination="rkf-4f-Zan" id="l3z-jD-fNg"/>
-                        <outlet property="prayerDetailsTextField" destination="Enb-3l-yZy" id="QoT-uK-EsE"/>
+                        <outlet property="prayerDetailsTextField" destination="ywb-o6-ujI" id="Aep-Az-98I"/>
                         <outlet property="prayerTitleTextField" destination="xvz-SQ-dp6" id="xIL-Hr-8k5"/>
                     </connections>
                 </viewController>
@@ -1028,7 +1028,7 @@
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKs-bG-MYD">
                                                         <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
                                                 </subviews>
@@ -1048,7 +1048,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nr7-4h-jE3">
                                                         <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1068,7 +1068,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Book" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRN-lS-kJc">
                                                         <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -1088,7 +1088,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Number i.e.  201" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-CM-O4s">
                                                         <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
@@ -1108,7 +1108,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste URL of song (lds.org or youtube)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-xK-p7C">
                                                         <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
@@ -1578,7 +1578,7 @@
                                                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PIu-oQ-yKX">
                                                                         <rect key="frame" x="60" y="0.0" width="280" height="40"/>
                                                                         <color key="textColor" name="Text"/>
-                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                                     </textField>
                                                                 </subviews>
@@ -1693,7 +1693,7 @@
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -1714,7 +1714,7 @@
                         <outlet property="calendarAssigneeLabel" destination="Ncn-qM-REe" id="Txp-DD-E7c"/>
                         <outlet property="calendarAssigneeMemberImage" destination="rhM-Ws-OlE" id="TfQ-zH-OFk"/>
                         <outlet property="calendarAssigneeText" destination="pbS-EE-LLZ" id="wc9-oH-160"/>
-                        <outlet property="calendarDetailsTextField" destination="ciR-zT-ayZ" id="aYg-i3-fCs"/>
+                        <outlet property="calendarDetailsTextField" destination="PA0-xl-Tah" id="1jV-w7-uph"/>
                         <outlet property="calendarTitleTextField" destination="PIu-oQ-yKX" id="UUB-cm-YAA"/>
                     </connections>
                 </viewController>
@@ -2003,7 +2003,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="Q6b-D3-lgW" userLabel="RuleCell" customClass="RuleCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RuleCell" rowHeight="75" id="Q6b-D3-lgW" userLabel="RuleCell" customClass="RuleCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q6b-D3-lgW" id="aBx-Eb-nS5">
@@ -2240,8 +2240,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="REe-de-Iaq" id="ykD-3g-mc2"/>
-                            <outlet property="delegate" destination="REe-de-Iaq" id="BiE-r3-gCY"/>
+                            <outlet property="dataSource" destination="REe-de-Iaq" id="xbA-cc-tSg"/>
+                            <outlet property="delegate" destination="REe-de-Iaq" id="rQa-sS-24M"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Rule" id="llP-Sg-WZy">
@@ -2275,16 +2275,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-x5-6h7">
-                                <rect key="frame" x="19" y="52.5" width="337.5" height="582"/>
+                                <rect key="frame" x="19" y="56.5" width="337.5" height="656"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FtQ-go-gOX">
-                                        <rect key="frame" x="17" y="29" width="304" height="524.5"/>
+                                        <rect key="frame" x="17" y="33" width="304" height="590.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-we-fQM">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MG1-6s-9QS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="dWJ-Js-4pO"/>
                                                         </constraints>
@@ -2293,15 +2293,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-a7-cMk">
-                                                        <rect key="frame" x="49.5" y="0.0" width="254.5" height="14"/>
+                                                        <rect key="frame" x="49.5" y="0.0" width="254.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="umw-Kv-w3l">
-                                                <rect key="frame" x="0.0" y="22" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="43" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrF-gy-WTy">
                                                         <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
@@ -2315,7 +2315,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8T-vV-ISr">
-                                                <rect key="frame" x="0.0" y="65" width="304" height="250"/>
+                                                <rect key="frame" x="0.0" y="86" width="304" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="Xio-HO-gaf"/>
                                                 </constraints>
@@ -2324,10 +2324,10 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-fS-u1z">
-                                                <rect key="frame" x="0.0" y="323" width="304" height="7.5"/>
+                                                <rect key="frame" x="0.0" y="344" width="304" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-Wk-a0h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="7.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="zqp-7K-Rfr"/>
                                                         </constraints>
@@ -2336,15 +2336,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste URL to public Google Doc link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0Y-MI-Gms">
-                                                        <rect key="frame" x="53" y="0.0" width="251" height="7.5"/>
+                                                        <rect key="frame" x="53" y="0.0" width="251" height="32"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BB-4c-wD5">
-                                                <rect key="frame" x="0.0" y="338.5" width="304" height="8"/>
+                                                <rect key="frame" x="0.0" y="384" width="304" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="uZQ-wq-JsC"/>
                                                 </constraints>
@@ -2353,7 +2353,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nBI-7F-qQf">
-                                                <rect key="frame" x="0.0" y="354.5" width="304" height="40"/>
+                                                <rect key="frame" x="0.0" y="400" width="304" height="40"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Favorite" translatesAutoresizingMaskIntoConstraints="NO" id="dYg-aT-5IO">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -2380,7 +2380,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-XJ-4kY">
-                                                <rect key="frame" x="0.0" y="402.5" width="304" height="40"/>
+                                                <rect key="frame" x="0.0" y="448" width="304" height="40"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-GE-X36">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -2407,7 +2407,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-Jf-jDG">
-                                                <rect key="frame" x="0.0" y="450.5" width="304" height="8"/>
+                                                <rect key="frame" x="0.0" y="496" width="304" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="ftW-Bf-cRj"/>
                                                 </constraints>
@@ -2416,7 +2416,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0C9-Rl-bS8" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="466.5" width="304" height="50"/>
+                                                <rect key="frame" x="0.0" y="512" width="304" height="50"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="K3P-A5-sd8"/>
@@ -2438,7 +2438,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcT-WD-FcV">
-                                                <rect key="frame" x="0.0" y="524.5" width="304" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="570" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2446,7 +2446,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbm-r5-6yt" userLabel="Change Selected">
-                                        <rect key="frame" x="17" y="431.5" width="40" height="40"/>
+                                        <rect key="frame" x="17" y="481" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -2456,7 +2456,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAv-WF-8Oq">
-                                        <rect key="frame" x="17.5" y="383.5" width="40" height="40"/>
+                                        <rect key="frame" x="17.5" y="433" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -2466,7 +2466,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tn8-eR-3cs">
-                                        <rect key="frame" x="17" y="495.5" width="304" height="50"/>
+                                        <rect key="frame" x="17" y="545" width="304" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2475,14 +2475,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter rule details..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hx8-Sk-iTG">
-                                        <rect key="frame" x="17" y="94" width="304" height="250"/>
+                                        <rect key="frame" x="17" y="119" width="304" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="Text"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xec-H6-gU2">
-                                        <rect key="frame" x="256" y="29" width="55" height="14"/>
+                                        <rect key="frame" x="256" y="33" width="55" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="X3R-32-KKP"/>
                                         </constraints>
@@ -2854,7 +2854,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="UBt-bn-Q3q" userLabel="ScriptureCell" customClass="ScriptureCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ScriptureCell" rowHeight="75" id="UBt-bn-Q3q" userLabel="ScriptureCell" customClass="ScriptureCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UBt-bn-Q3q" id="4jj-yk-NE0">
@@ -3117,8 +3117,8 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="akJ-OM-9T5" id="vf0-RM-MsC"/>
-                            <outlet property="delegate" destination="akJ-OM-9T5" id="Jff-Vi-akv"/>
+                            <outlet property="dataSource" destination="akJ-OM-9T5" id="8nw-nG-30S"/>
+                            <outlet property="delegate" destination="akJ-OM-9T5" id="hsQ-LE-Jaz"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Scripture" id="jme-EJ-Exm">
@@ -3174,7 +3174,7 @@
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zcv-im-gro">
                                                         <rect key="frame" x="83.5" y="0.0" width="220.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
                                                 </subviews>
@@ -3194,7 +3194,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kh9-GZ-5xs">
                                                         <rect key="frame" x="83.5" y="0.0" width="220.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -3214,7 +3214,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Volume" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o2b-dQ-ZSf">
                                                         <rect key="frame" x="83.5" y="0.0" width="220.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -3234,7 +3234,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Book" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HaF-E7-dHa">
                                                         <rect key="frame" x="83.5" y="0.0" width="220.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -3254,7 +3254,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Chapter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="821-mt-hko">
                                                         <rect key="frame" x="83.5" y="0.0" width="220.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
@@ -3274,7 +3274,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Verse(s) i.e.  4-7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFu-vc-AXY">
                                                         <rect key="frame" x="83.5" y="0.0" width="220.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                     </textField>
                                                 </subviews>
@@ -3784,7 +3784,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="3Mg-f8-bEN" userLabel="QuoteCell" customClass="QuoteCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="QuoteCell" rowHeight="75" id="3Mg-f8-bEN" userLabel="QuoteCell" customClass="QuoteCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Mg-f8-bEN" id="Z6z-UK-h0k">
@@ -4327,7 +4327,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="r7A-Kn-CaN" userLabel="LessonCell" customClass="LessonCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="LessonCell" rowHeight="75" id="r7A-Kn-CaN" userLabel="LessonCell" customClass="LessonCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r7A-Kn-CaN" id="Eq6-BM-vev">
@@ -4623,6 +4623,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="lessonAssigneeLabel" destination="2bb-Mo-bca" id="6xb-a7-emY"/>
+                        <outlet property="lessonAssigneeMemberImage" destination="uj2-dw-rDb" id="H45-EU-hMg"/>
+                        <outlet property="lessonAssigneeText" destination="dQ0-2i-wfn" id="Mlt-m9-lBM"/>
+                        <outlet property="searchController" destination="2gM-bU-h5O" id="dyd-XJ-OKJ"/>
+                        <outlet property="segment" destination="jGI-tx-Mto" id="KsG-HS-ovB"/>
                         <segue destination="dKF-lO-TJs" kind="show" identifier="LessonDetailsVCExisting" id="I0n-yv-uAA">
                             <nil key="action"/>
                         </segue>
@@ -4641,16 +4646,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Z6-J7-RMj">
-                                <rect key="frame" x="19" y="65" width="337.5" height="804"/>
+                                <rect key="frame" x="19" y="64.5" width="337.5" height="805"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wdS-GW-0GI">
-                                        <rect key="frame" x="17" y="39.5" width="304" height="725"/>
+                                        <rect key="frame" x="17" y="40" width="304" height="725"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s47-Y1-Vkq">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="32.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="35.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9D-By-MnK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="32.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="35.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="Esp-SQ-vJj"/>
                                                         </constraints>
@@ -4659,15 +4664,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rfs-7w-aj4">
-                                                        <rect key="frame" x="92" y="0.0" width="212" height="32.5"/>
+                                                        <rect key="frame" x="92" y="0.0" width="212" height="35.5"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="n8r-cC-hkN">
-                                                <rect key="frame" x="0.0" y="40.5" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="43.5" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfG-Wm-sA9">
                                                         <rect key="frame" x="0.0" y="0.0" width="84" height="35"/>
@@ -4681,13 +4686,13 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjA-LO-0uF">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L6p-f3-tno">
-                                                <rect key="frame" x="0.0" y="83.5" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="86.5" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48x-Aa-Kev">
                                                         <rect key="frame" x="0.0" y="0.0" width="84" height="35"/>
@@ -4701,13 +4706,13 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERp-l6-nCZ">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3u-G1-J5d">
-                                                <rect key="frame" x="0.0" y="126.5" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="129.5" width="304" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="m1d-af-Tm9"/>
                                                 </constraints>
@@ -4716,7 +4721,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YL5-QI-uRO">
-                                                <rect key="frame" x="0.0" y="169.5" width="304" height="250"/>
+                                                <rect key="frame" x="0.0" y="172.5" width="304" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="Jw6-Bv-gS2"/>
                                                 </constraints>
@@ -4725,10 +4730,10 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-WT-MWo">
-                                                <rect key="frame" x="0.0" y="427.5" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="430.5" width="304" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-PT-lya">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="EuZ-4U-gS5"/>
                                                         </constraints>
@@ -4737,9 +4742,9 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste a YouTube or other URL addess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-Q0-aJT">
-                                                        <rect key="frame" x="53" y="0.0" width="251" height="35"/>
+                                                        <rect key="frame" x="53" y="0.0" width="251" height="32"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
@@ -4878,7 +4883,7 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08B-VV-gJY" userLabel="Change Selected">
-                                        <rect key="frame" x="17" y="622.5" width="40" height="40"/>
+                                        <rect key="frame" x="17" y="623" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -4888,7 +4893,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSF-d1-Knq">
-                                        <rect key="frame" x="17.5" y="526.5" width="40" height="40"/>
+                                        <rect key="frame" x="17.5" y="527" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal" image="Selected">
                                             <color key="titleColor" name="Accent"/>
@@ -4898,7 +4903,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo6-1t-qja">
-                                        <rect key="frame" x="17" y="574" width="40" height="40"/>
+                                        <rect key="frame" x="17" y="574.5" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -4908,7 +4913,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zr8-lO-THu">
-                                        <rect key="frame" x="17" y="686" width="304" height="50"/>
+                                        <rect key="frame" x="17" y="686.5" width="304" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -4917,14 +4922,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter lesson details..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HZz-bQ-xKk">
-                                        <rect key="frame" x="17" y="209" width="304" height="250"/>
+                                        <rect key="frame" x="17" y="212.5" width="304" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="Text"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfg-40-CDs">
-                                        <rect key="frame" x="256" y="39.5" width="55" height="32.5"/>
+                                        <rect key="frame" x="256" y="40" width="55" height="35.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="uhx-rQ-iT4"/>
                                         </constraints>
@@ -5298,7 +5303,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="w0G-1p-nP9" userLabel="GameCell" customClass="GameCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="75" id="w0G-1p-nP9" userLabel="GameCell" customClass="GameCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w0G-1p-nP9" id="VVx-rF-YaD">
@@ -5632,7 +5637,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste a URL with how-to steps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZz-re-1K8">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
@@ -6098,7 +6103,7 @@
                                                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-dF-S7s">
                                                                         <rect key="frame" x="60" y="0.0" width="280" height="40"/>
                                                                         <color key="textColor" name="Text"/>
-                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                                     </textField>
                                                                 </subviews>
@@ -6213,7 +6218,7 @@
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -6234,7 +6239,7 @@
                         <outlet property="testimonyAssigneeLabel" destination="D9H-2b-Q6L" id="yXg-qA-XaW"/>
                         <outlet property="testimonyAssigneeMemberImage" destination="azS-zu-pDi" id="DNS-3H-gge"/>
                         <outlet property="testimonyAssigneeText" destination="vFZ-lj-1LW" id="Z8H-mA-9cg"/>
-                        <outlet property="testimonyDetailsTextField" destination="PUV-BB-ojs" id="QT4-AD-KjS"/>
+                        <outlet property="testimonyDetailsTextField" destination="9xs-se-iO5" id="T6H-p9-Z6g"/>
                         <outlet property="testimonyTitleTextField" destination="dgf-dF-S7s" id="jSf-b5-uTk"/>
                     </connections>
                 </viewController>
@@ -6485,7 +6490,7 @@
                                                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5T9-ha-cir">
                                                                         <rect key="frame" x="60" y="0.0" width="280" height="40"/>
                                                                         <color key="textColor" name="Text"/>
-                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                                     </textField>
                                                                 </subviews>
@@ -6600,7 +6605,7 @@
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -6621,7 +6626,7 @@
                         <outlet property="spotlightAssigneeLabel" destination="bk0-2Z-QbE" id="Hzb-0v-htR"/>
                         <outlet property="spotlightAssigneeMemberImage" destination="cld-og-trs" id="8Bp-kZ-ZoK"/>
                         <outlet property="spotlightAssigneeText" destination="o4H-MG-P3I" id="EmO-h7-eug"/>
-                        <outlet property="spotlightDetailsTextField" destination="syF-OA-YGY" id="gEK-Jf-rwV"/>
+                        <outlet property="spotlightDetailsTextField" destination="F12-37-Wzb" id="129-nW-7Is"/>
                         <outlet property="spotlightTitleTextField" destination="5T9-ha-cir" id="0PW-qN-vBG"/>
                     </connections>
                 </viewController>
@@ -6872,7 +6877,7 @@
                                                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tFe-KJ-FcL">
                                                                         <rect key="frame" x="60" y="0.0" width="280" height="40"/>
                                                                         <color key="textColor" name="Text"/>
-                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                                     </textField>
                                                                 </subviews>
@@ -6987,7 +6992,7 @@
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -7008,7 +7013,7 @@
                         <outlet property="thoughtAssigneeLabel" destination="uEx-6A-6p6" id="XRL-h8-kx8"/>
                         <outlet property="thoughtAssigneeMemberImage" destination="Wic-Yn-XPj" id="ZNk-0g-wj3"/>
                         <outlet property="thoughtAssigneeText" destination="wek-3d-vl8" id="Ii6-LE-DPN"/>
-                        <outlet property="thoughtDetailsTextField" destination="1TZ-Aj-wTG" id="LTk-G1-pj2"/>
+                        <outlet property="thoughtDetailsTextField" destination="6Ma-XJ-E68" id="v1a-th-chZ"/>
                         <outlet property="thoughtTitleTextField" destination="tFe-KJ-FcL" id="mUC-Dq-hd0"/>
                     </connections>
                 </viewController>
@@ -7259,7 +7264,7 @@
                                                                     <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ql-nn-ftN">
                                                                         <rect key="frame" x="60" y="0.0" width="280" height="40"/>
                                                                         <color key="textColor" name="Text"/>
-                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                                     </textField>
                                                                 </subviews>
@@ -7374,7 +7379,7 @@
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -7395,7 +7400,7 @@
                         <outlet property="councilAssigneeLabel" destination="scu-aX-i7S" id="BfW-bB-0V1"/>
                         <outlet property="councilAssigneeMemberImage" destination="i8W-tI-uvF" id="5jz-Yd-cSS"/>
                         <outlet property="councilAssigneeText" destination="vto-mX-8Qo" id="1Az-MI-5Ga"/>
-                        <outlet property="councilDetailsTextField" destination="bkr-WW-kaj" id="6XB-Xp-6uD"/>
+                        <outlet property="councilDetailsTextField" destination="0SS-pQ-YbW" id="hda-m4-ssd"/>
                         <outlet property="councilTitleTextField" destination="6ql-nn-ftN" id="suf-Oz-TxZ"/>
                     </connections>
                 </viewController>
@@ -7684,7 +7689,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="75" id="LSK-Pl-xUE" userLabel="TreatCell" customClass="TreatCell" customModule="FHE" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TreatCell" rowHeight="75" id="LSK-Pl-xUE" userLabel="TreatCell" customClass="TreatCell" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="228" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LSK-Pl-xUE" id="oF7-Ez-KQZ">
@@ -8018,7 +8023,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste URL with recipe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1U-QG-BXl">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
@@ -8250,16 +8255,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuO-Yg-R9S">
-                                <rect key="frame" x="19" y="52.5" width="337.5" height="582"/>
+                                <rect key="frame" x="19" y="56.5" width="337.5" height="656"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h3Q-XF-ybB">
-                                        <rect key="frame" x="17" y="29" width="304" height="524.5"/>
+                                        <rect key="frame" x="17" y="33" width="304" height="590.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-Pn-2Ca">
-                                                <rect key="frame" x="0.0" y="0.0" width="304" height="14"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7w-b0-e5E">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="SaU-7W-GoQ"/>
                                                         </constraints>
@@ -8268,15 +8273,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PuY-pV-QI3">
-                                                        <rect key="frame" x="49.5" y="0.0" width="254.5" height="14"/>
+                                                        <rect key="frame" x="49.5" y="0.0" width="254.5" height="35"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K60-F6-Cno">
-                                                <rect key="frame" x="0.0" y="22" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="43" width="304" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="KRX-VH-Owf"/>
                                                 </constraints>
@@ -8285,7 +8290,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-Qg-t8h">
-                                                <rect key="frame" x="0.0" y="65" width="304" height="250"/>
+                                                <rect key="frame" x="0.0" y="86" width="304" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="1iK-2c-V94"/>
                                                 </constraints>
@@ -8294,10 +8299,10 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7x6-s2-dXi">
-                                                <rect key="frame" x="0.0" y="323" width="304" height="7.5"/>
+                                                <rect key="frame" x="0.0" y="344" width="304" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-vT-eNg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="7.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="F8U-Gc-FxY"/>
                                                         </constraints>
@@ -8306,15 +8311,15 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste URL to public Google Doc link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACW-vE-53h">
-                                                        <rect key="frame" x="53" y="0.0" width="251" height="7.5"/>
+                                                        <rect key="frame" x="53" y="0.0" width="251" height="32"/>
                                                         <color key="textColor" name="Text"/>
-                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEL-p3-7gr">
-                                                <rect key="frame" x="0.0" y="338.5" width="304" height="8"/>
+                                                <rect key="frame" x="0.0" y="384" width="304" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="gRa-3w-VdX"/>
                                                 </constraints>
@@ -8323,7 +8328,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YpX-qO-IvI">
-                                                <rect key="frame" x="0.0" y="354.5" width="304" height="40"/>
+                                                <rect key="frame" x="0.0" y="400" width="304" height="40"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Favorite" translatesAutoresizingMaskIntoConstraints="NO" id="apg-DG-7lC">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -8350,7 +8355,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qeh-BQ-8yt">
-                                                <rect key="frame" x="0.0" y="402.5" width="304" height="40"/>
+                                                <rect key="frame" x="0.0" y="448" width="304" height="40"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="NotSelected" translatesAutoresizingMaskIntoConstraints="NO" id="qh7-Vp-DK0">
                                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -8377,7 +8382,7 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzK-YW-cVM">
-                                                <rect key="frame" x="0.0" y="450.5" width="304" height="8"/>
+                                                <rect key="frame" x="0.0" y="496" width="304" height="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="8" id="jLD-py-vC3"/>
                                                 </constraints>
@@ -8386,7 +8391,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ker-hc-8wK" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="466.5" width="304" height="50"/>
+                                                <rect key="frame" x="0.0" y="512" width="304" height="50"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="kge-3U-nAn"/>
@@ -8408,7 +8413,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L36-Ka-mIh">
-                                                <rect key="frame" x="0.0" y="524.5" width="304" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="570" width="304" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -8416,7 +8421,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so4-fO-g4b" userLabel="Change Selected">
-                                        <rect key="frame" x="17" y="431.5" width="40" height="40"/>
+                                        <rect key="frame" x="17" y="481" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -8426,7 +8431,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-pp-RvG">
-                                        <rect key="frame" x="17.5" y="383.5" width="40" height="40"/>
+                                        <rect key="frame" x="17.5" y="433" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -8436,7 +8441,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgQ-Xm-jE2">
-                                        <rect key="frame" x="17" y="495.5" width="304" height="50"/>
+                                        <rect key="frame" x="17" y="545" width="304" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -8445,14 +8450,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter quote..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0as-CA-K5T">
-                                        <rect key="frame" x="17" y="94" width="304" height="250"/>
+                                        <rect key="frame" x="17" y="119" width="304" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="Text"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29j-hX-hqs">
-                                        <rect key="frame" x="256" y="29" width="55" height="14"/>
+                                        <rect key="frame" x="256" y="33" width="55" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="Zqa-mO-a8f"/>
                                         </constraints>

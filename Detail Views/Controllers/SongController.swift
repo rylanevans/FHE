@@ -11,26 +11,12 @@ import CoreData
 import UIKit
 
 var songsArray = [Song]()
-var taskSongsArray = [Task]()
 let taskSong = tasksAllArray[1]
 
 func getSongs() {
     let request: NSFetchRequest<Song> = Song.fetchRequest()
     do {
         songsArray = try context.fetch(request)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
-}
-
-func getTaskSong() {
-    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-    let predicate = NSPredicate(format: "name == %@", "Song")
-    fetchRequest.predicate = predicate
-    
-    do {
-        taskSongsArray = try context.fetch(fetchRequest)
     } catch {
         let error = error as NSError
         print("\(error)")

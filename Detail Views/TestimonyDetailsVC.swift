@@ -12,7 +12,7 @@ import CoreData
 class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var testimonyTitleTextField: UITextField!
-    @IBOutlet weak var testimonyDetailsTextField: UITextField!
+    @IBOutlet weak var testimonyDetailsTextField: UITextView!
     @IBOutlet weak var testimonyAssigneeMemberImage: UIImageView!
     @IBOutlet weak var testimonyAssigneeLabel: UILabel!
     @IBOutlet weak var testimonyAssigneeText: UITextField!
@@ -37,15 +37,14 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         testimonyAssigneeText.inputView = memberPicker
         testimonyAssigneeText.inputAccessoryView = toolBar
-        
-        testimonyDetailsTextField.delegate = self
-        testimonyDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        testimonyTitleTextField.inputAccessoryView = toolBar
+        testimonyDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
         
-        getTaskTestimony()
+        getAllTasks()
         getTestimonys()
         getMembersForPicker()
         loadTestimonyData()
@@ -59,7 +58,7 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        getTaskTestimony()
+        getAllTasks()
         getTestimonys()
         getMembersForPicker()
         loadTestimonyData()
@@ -83,7 +82,7 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let testimony = taskTestimoniesArray[0]
+        let testimony = taskTestimony
         testimonyAssigneeMemberImage.image = assignee.photo as? UIImage
         testimonyAssigneeLabel.text = assignee.name
         testimony.assignment = assignee

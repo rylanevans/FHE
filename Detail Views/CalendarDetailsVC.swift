@@ -12,7 +12,7 @@ import CoreData
 class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var calendarTitleTextField: UITextField!
-    @IBOutlet weak var calendarDetailsTextField: UITextField!
+    @IBOutlet weak var calendarDetailsTextField: UITextView!
     @IBOutlet weak var calendarAssigneeMemberImage: UIImageView!
     @IBOutlet weak var calendarAssigneeLabel: UILabel!
     @IBOutlet weak var calendarAssigneeText: UITextField!
@@ -37,15 +37,14 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         
         calendarAssigneeText.inputView = memberPicker
         calendarAssigneeText.inputAccessoryView = toolBar
-        
-        calendarDetailsTextField.delegate = self
-        calendarDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        calendarTitleTextField.inputAccessoryView = toolBar
+        calendarDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
         
-        getTaskCalendar()
+        getAllTasks()
         getCalendars()
         getMembersForPicker()
         loadCalendarData()
@@ -59,7 +58,7 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        getTaskCalendar()
+        getAllTasks()
         getCalendars()
         getMembersForPicker()
         loadCalendarData()
@@ -83,7 +82,7 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let calendar = taskCalendarsArray[0]
+        let calendar = taskCalendar
         calendarAssigneeMemberImage.image = assignee.photo as? UIImage
         calendarAssigneeLabel.text = assignee.name
         calendar.assignment = assignee

@@ -67,7 +67,7 @@ class RuleCell: UITableViewCell {
         let detail = rule.detail
         let onDeck = rule.selected
         let favorite = rule.favorite
-        detailsLabel.text = "\(detail)"
+        detailsLabel.text = "\(detail ?? "")"
         titleLabel.text = title
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")

@@ -56,7 +56,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         offSoundURL()
-        getTaskTreat()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(treat.segment)
         getMembersForPicker()
         loadTreatAssignmentImage()
@@ -71,7 +71,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskTreat()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(treat.segment)
         getMembersForPicker()
         loadTreatAssignmentImage()
@@ -97,7 +97,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let treat = taskTreatsArray[0]
+        let treat = taskTreat
         treatAssigneeMemberImage.image = assignee.photo as? UIImage
         treatAssigneeLabel.text = assignee.name
         treat.assignment = assignee
@@ -110,7 +110,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     func loadTreatAssignmentImage() {
-        let treat = taskTreatsArray[0]
+        let treat = taskTreat
         let assignee = treat.assignment
         if treat.assigned == true {
             treatAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -300,7 +300,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let treat = taskTreatsArray[0]
+        let treat = taskTreat
         
         resetText?.text = nil
         treat.segment = Int64(segment.selectedSegmentIndex)
@@ -358,7 +358,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     // Change status of selected bool
     func selectedValueToggle(_ treat: Treat) {
-        let task = taskTreatsArray[0]
+        let task = taskTreat
         treat.selectedOne = task
         treat.selected = true
         ad.saveContext()

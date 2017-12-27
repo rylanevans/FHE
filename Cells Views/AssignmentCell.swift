@@ -46,8 +46,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         getMembersForPicker()
         getAllTasks()
         getMembersAttending()
-        getTaskPrayer()
-        getTaskSong()
+        getAllTasks()
     }
 
      // MARK: - Picker View Set up

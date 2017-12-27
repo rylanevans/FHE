@@ -12,7 +12,7 @@ import CoreData
 class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var spotlightTitleTextField: UITextField!
-    @IBOutlet weak var spotlightDetailsTextField: UITextField!
+    @IBOutlet weak var spotlightDetailsTextField: UITextView!
     @IBOutlet weak var spotlightAssigneeMemberImage: UIImageView!
     @IBOutlet weak var spotlightAssigneeLabel: UILabel!
     @IBOutlet weak var spotlightAssigneeText: UITextField!
@@ -37,15 +37,14 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         spotlightAssigneeText.inputView = memberPicker
         spotlightAssigneeText.inputAccessoryView = toolBar
-        
-        spotlightDetailsTextField.delegate = self
-        spotlightDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        spotlightTitleTextField.inputAccessoryView = toolBar
+        spotlightDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
         
-        getTaskSpotlight()
+        getAllTasks()
         getSpotlights()
         getMembersForPicker()
         loadSpotlightData()
@@ -59,7 +58,7 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        getTaskSpotlight()
+        getAllTasks()
         getSpotlights()
         getMembersForPicker()
         loadSpotlightData()
@@ -83,7 +82,7 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let spotlight = taskSpotlightsArray[0]
+        let spotlight = taskSpotlight
         spotlightAssigneeMemberImage.image = assignee.photo as? UIImage
         spotlightAssigneeLabel.text = assignee.name
         spotlight.assignment = assignee

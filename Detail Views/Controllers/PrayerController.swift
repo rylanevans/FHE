@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 
 var prayersArray = [Prayer]()
-var taskPrayersArray = [Task]()
+//var taskPrayersArray = [Task]()
 let taskPrayer = tasksAllArray[0]
 
 func getPrayers() {
@@ -24,15 +24,16 @@ func getPrayers() {
     }
 }
 
-func getTaskPrayer() {
-    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-    let predicate = NSPredicate(format: "name == %@", "Prayer")
-    fetchRequest.predicate = predicate
-    
-    do {
-        taskPrayersArray = try context.fetch(fetchRequest)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
-}
+//func getTaskPrayer() {
+//    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
+//    let predicate = NSPredicate(format: "name == %@", "Prayer")
+//    fetchRequest.predicate = predicate
+//    
+//    do {
+//        taskPrayersArray = try context.fetch(fetchRequest)
+//    } catch {
+//        let error = error as NSError
+//        print("\(error)")
+//    }
+//}
+

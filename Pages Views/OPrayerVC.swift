@@ -19,7 +19,6 @@ class OPrayerVC: UIViewController {
         
         getMembersAttending()
         getAllTasks()
-        getTaskPrayer()
         loadPageData()
     }
     

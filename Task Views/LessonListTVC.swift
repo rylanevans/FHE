@@ -56,7 +56,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         offSoundURL()
-        getTaskLessons()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(lesson.segment)
         getMembersForPicker()
         loadLessonAssignmentImage()
@@ -71,7 +71,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskLessons()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(lesson.segment)
         getMembersForPicker()
         loadLessonAssignmentImage()
@@ -97,7 +97,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let lesson = taskLessonsArray[0]
+        let lesson = taskLesson
         lessonAssigneeMemberImage.image = assignee.photo as? UIImage
         lessonAssigneeLabel.text = assignee.name
         lesson.assignment = assignee
@@ -110,7 +110,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
     }
     
     func loadLessonAssignmentImage() {
-        let lesson = taskLessonsArray[0]
+        let lesson = taskLesson
         let assignee = lesson.assignment
         if lesson.assigned == true {
             lessonAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -346,7 +346,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let lesson = taskLessonsArray[0]
+        let lesson = taskLesson
         
         resetText?.text = nil
         lesson.segment = Int64(segment.selectedSegmentIndex)
@@ -404,7 +404,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
     
     // Change status of selected bool
     func selectedValueToggle(_ lesson: Lesson) {
-        let task = taskLessonsArray[0]
+        let task = taskLesson
         lesson.selectedOne = task
         lesson.selected = true
         ad.saveContext()

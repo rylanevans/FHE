@@ -56,7 +56,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         offSoundURL()
-        getTaskGame()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(game.segment)
         getMembersForPicker()
         loadGameAssignmentImage()
@@ -71,7 +71,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskGame()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(game.segment)
         getMembersForPicker()
         loadGameAssignmentImage()
@@ -97,7 +97,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let game = taskGamesArray[0]
+        let game = taskGame
         gameAssigneeMemberImage.image = assignee.photo as? UIImage
         gameAssigneeLabel.text = assignee.name
         game.assignment = assignee
@@ -110,7 +110,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func loadGameAssignmentImage() {
-        let game = taskGamesArray[0]
+        let game = taskGame
         let assignee = game.assignment
         if game.assigned == true {
             gameAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -300,7 +300,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let game = taskGamesArray[0]
+        let game = taskGame
         
         resetText?.text = nil
         game.segment = Int64(segment.selectedSegmentIndex)
@@ -358,7 +358,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // Change status of selected bool
     func selectedValueToggle(_ game: Game) {
-        let task = taskGamesArray[0]
+        let task = taskGame
         game.selectedOne = task
         game.selected = true
         ad.saveContext()

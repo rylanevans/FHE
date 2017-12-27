@@ -56,7 +56,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
         offSoundURL()
-        getTaskQuote()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(quote.segment)
         getMembersForPicker()
         loadQuoteAssignmentImage()
@@ -71,7 +71,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskQuote()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(quote.segment)
         getMembersForPicker()
         loadQuoteAssignmentImage()
@@ -97,7 +97,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let quote = taskQuotesArray[0]
+        let quote = taskQuote
         quoteAssigneeMemberImage.image = assignee.photo as? UIImage
         quoteAssigneeLabel.text = assignee.name
         quote.assignment = assignee
@@ -110,7 +110,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     }
     
     func loadQuoteAssignmentImage() {
-        let quote = taskQuotesArray[0]
+        let quote = taskQuote
         let assignee = quote.assignment
         if quote.assigned == true {
             quoteAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -287,7 +287,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let quote = taskQuotesArray[0]
+        let quote = taskQuote
         
         resetText?.text = nil
         quote.segment = Int64(segment.selectedSegmentIndex)
@@ -345,7 +345,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     // Change status of selected bool
     func selectedValueToggle(_ quote: Quote) {
-        let task = taskQuotesArray[0]
+        let task = taskQuote
         quote.selectedOne = task
         quote.selected = true
         ad.saveContext()

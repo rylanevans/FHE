@@ -12,7 +12,7 @@ import CoreData
 class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var councilTitleTextField: UITextField!
-    @IBOutlet weak var councilDetailsTextField: UITextField!
+    @IBOutlet weak var councilDetailsTextField: UITextView!
     @IBOutlet weak var councilAssigneeMemberImage: UIImageView!
     @IBOutlet weak var councilAssigneeLabel: UILabel!
     @IBOutlet weak var councilAssigneeText: UITextField!
@@ -37,15 +37,14 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         
         councilAssigneeText.inputView = memberPicker
         councilAssigneeText.inputAccessoryView = toolBar
-        
-        councilDetailsTextField.delegate = self
-        councilDetailsTextField.attributedPlaceholder = NSAttributedString(string: "Enter Details...", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        councilTitleTextField.inputAccessoryView = toolBar
+        councilDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
         
-        getTaskCouncil()
+        getAllTasks()
         getCouncils()
         getMembersForPicker()
         loadCouncilData()
@@ -59,7 +58,7 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        getTaskCouncil()
+        getAllTasks()
         getCouncils()
         getMembersForPicker()
         loadCouncilData()
@@ -83,7 +82,7 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let council = taskCouncilsArray[0]
+        let council = taskCouncil
         councilAssigneeMemberImage.image = assignee.photo as? UIImage
         councilAssigneeLabel.text = assignee.name
         council.assignment = assignee

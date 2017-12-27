@@ -55,7 +55,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
-        getTaskRule()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(rule.segment)
         getMembersForPicker()
         loadRuleAssignmentImage()
@@ -70,7 +70,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskRule()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(rule.segment)
         getMembersForPicker()
         loadRuleAssignmentImage()
@@ -96,7 +96,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let rule = taskRulesArray[0]
+        let rule = taskRule
         ruleAssigneeMemberImage.image = assignee.photo as? UIImage
         ruleAssigneeLabel.text = assignee.name
         rule.assignment = assignee
@@ -109,7 +109,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     
     func loadRuleAssignmentImage() {
-        let rule = taskRulesArray[0]
+        let rule = taskRule
         let assignee = rule.assignment
         if rule.assigned == true {
             ruleAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -286,7 +286,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let rule = taskRulesArray[0]
+        let rule = taskRule
         
         resetText?.text = nil
         rule.segment = Int64(segment.selectedSegmentIndex)
@@ -344,7 +344,7 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     // Change status of selected bool
     func selectedValueToggle(_ rule: Rule) {
-        let task = taskRulesArray[0]
+        let task = taskRule
         rule.selectedOne = task
         rule.selected = true
         ad.saveContext()

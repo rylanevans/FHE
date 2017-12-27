@@ -297,11 +297,13 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             break
         case .update:
             if let indexPath = indexPath {
-                let cellDetail = tableView.cellForRow(at: indexPath) as! TaskCell
-                configureTaskCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                if let cellDetail = tableView.cellForRow(at: indexPath) as? TaskCell {
+                   configureTaskCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
+                }
                 
-                let cellTitle = tableView.cellForRow(at: indexPath) as! TaskCell
-                configureTaskCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                if let cellTitle = tableView.cellForRow(at: indexPath) as? TaskCell {
+                   configureTaskCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
+                }
             }
             break
         case .move:

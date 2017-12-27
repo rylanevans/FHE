@@ -55,7 +55,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
         segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
         
-        getTaskScripture()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(scripture.segment)
         getMembersForPicker()
         loadScriptureAssignmentImage()
@@ -70,7 +70,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let resetText = searchController
         resetText?.text = nil
         
-        getTaskScripture()
+        getAllTasks()
         segment.selectedSegmentIndex = Int(scripture.segment)
         getMembersForPicker()
         loadScriptureAssignmentImage()
@@ -96,7 +96,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let scripture = taskScripturesArray[0]
+        let scripture = taskScripture
         scriptureAssigneeMemberImage.image = assignee.photo as? UIImage
         scriptureAssigneeLabel.text = assignee.name
         scripture.assignment = assignee
@@ -109,7 +109,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func loadScriptureAssignmentImage() {
-        let scripture = taskScripturesArray[0]
+        let scripture = taskScripture
         let assignee = scripture.assignment
         if scripture.assigned == true {
             scriptureAssigneeMemberImage.image = assignee?.photo as? UIImage
@@ -419,7 +419,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     // Segment changed in header
     @IBAction func segmentChanged(_ sender: Any) {
         let resetText = searchController
-        let scripture = taskScripturesArray[0]
+        let scripture = taskScripture
         
         resetText?.text = nil
         scripture.segment = Int64(segment.selectedSegmentIndex)
@@ -480,7 +480,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     
     // Change status of selected bool
     func selectedValueToggle(_ scripture: Scripture) {
-        let task = taskScripturesArray[0]
+        let task = taskScripture
         scripture.selectedOne = task
         scripture.selected = true
         ad.saveContext()
