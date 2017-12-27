@@ -74,7 +74,7 @@ class ScriptureCell: UITableViewCell {
         let favorite = scripture.favorite
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
-        scriptureLabel.text = "\(volume?.capitalized ?? "") \(book?.capitalized ?? "") \(chapter ?? ""):\(verse ?? "")"
+        scriptureLabel.text = "\(volume?.uppercased() ?? "") \(book?.capitalized ?? "") \(chapter ?? ""):\(verse ?? "")"
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

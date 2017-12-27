@@ -35,5 +35,6 @@ extension Rule {
         } else {
             self.alphabet = ""
         }
+//        ad.saveContext()
     }
 }

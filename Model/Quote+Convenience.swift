@@ -35,5 +35,6 @@ extension Quote {
         } else {
             self.alphabet = ""
         }
+//        ad.saveContext()
     }
 }

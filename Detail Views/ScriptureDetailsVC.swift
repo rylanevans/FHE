@@ -73,6 +73,10 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         scriptureBookTextField.tag = 3
         scriptureBookTextField.inputAccessoryView = toolBar
         
+        scriptureTitleTextField.inputAccessoryView = toolBar
+        scriptureChapterTextField.inputAccessoryView = toolBar
+        scriptureVerseTextField.inputAccessoryView = toolBar
+        
         checkValidTitle()
         
         if scriptureToEdit != nil {

@@ -30,25 +30,25 @@ class ScriptureVC: UIViewController {
     
     func loadPageData() {
         let specificTask = taskScripture
-        if let task = specificTask.selectedScripture {
-            scriptureTitleLabel.text = task.title?.capitalized
-            scriptureDetailLabel.text = "\(task.volume?.uppercased() ?? "") \(task.book?.uppercased() ?? "") \(task.chapter ?? ""):\(task.verse ?? "")"
-            
-            if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
-                let firstVerse = String(describing: task.verse?[(task.verse?.startIndex)!])
-                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(firstVerse)"
-                // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"
-            }
-        }
         
         if let assignee = specificTask.assignment {
             scriptureMemberPhotoImage.image = assignee.photo as? UIImage
             scriptureMemberNameLabel.text = assignee.name
         }
         
-        let URL = NSURL(string: "\(scriptureURL)") ?? NSURL(string: "https://www.lds.org/scriptures?lang=eng")
-        let request = URLRequest(url: URL! as URL)
-        
-        scriptureWebKit.load(request)
+        if let task = specificTask.selectedScripture {
+            scriptureTitleLabel.text = task.title?.capitalized
+            scriptureDetailLabel.text = "\(task.volume?.uppercased() ?? "") \(task.book?.capitalized ?? "") \(task.chapter ?? ""):\(task.verse ?? "")"
+            
+            if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
+                let firstVerse = (task.verse?.components(separatedBy: "-")[0])!
+                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(firstVerse)"
+                // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"
+            }
+            
+            let URL = NSURL(string: scriptureURL)
+            let request = URLRequest(url: URL! as URL)
+            scriptureWebKit.load(request)
+        }
     }
 }

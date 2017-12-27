@@ -37,6 +37,7 @@ extension Song {
         } else {
             self.alphabet = ""
         }
+//        ad.saveContext()
     }
 }
 

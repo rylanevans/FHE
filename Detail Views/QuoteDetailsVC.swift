@@ -15,7 +15,7 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
     @IBOutlet weak var quoteTitleTextField: UITextField!
-    @IBOutlet weak var quoteDetailsTextField: UITextField!
+    @IBOutlet weak var quoteDetailsTextField: UITextView!
     @IBOutlet weak var quoteURLTextField: UITextField!
     @IBOutlet weak var quoteOnDeckImage: UIImageView!
     @IBOutlet weak var quoteFavorite: UIImageView!
@@ -29,6 +29,17 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
         self.clickSoundURL()
         
         self.hideKeyboardWhenTappedAround()
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        quoteTitleTextField.inputAccessoryView = toolBar
+        quoteDetailsTextField.inputAccessoryView = toolBar
+        quoteURLTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         

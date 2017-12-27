@@ -44,6 +44,7 @@ extension Scripture {
             let number = defaultScriptureDictionary["\(volume ?? "gen")"]
             self.order = Int64(number!)
         }
+//        ad.saveContext()
     }
 }
 

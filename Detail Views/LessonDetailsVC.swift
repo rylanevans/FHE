@@ -17,7 +17,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     @IBOutlet weak var lessonCategoryTextField: UITextField!
     @IBOutlet weak var lessonTopicTextField: UITextField!
     @IBOutlet weak var lessonTitleTextField: UITextField!
-    @IBOutlet weak var lessonDetailsTextField: UITextField!
+    @IBOutlet weak var lessonDetailsTextField: UITextView!
     @IBOutlet weak var lessonURLTextField: UITextField!
     @IBOutlet weak var lessonOnDeckImage: UIImageView!
     @IBOutlet weak var lessonFavorite: UIImageView!
@@ -60,6 +60,10 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         lessonTopicTextField.inputView = lessonTopicPicker
         lessonTopicTextField.tag = 1
         lessonTopicTextField.inputAccessoryView = toolBar
+        
+        lessonTitleTextField.inputAccessoryView = toolBar
+        lessonDetailsTextField.inputAccessoryView = toolBar
+        lessonURLTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         

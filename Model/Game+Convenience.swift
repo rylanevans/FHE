@@ -35,5 +35,6 @@ extension Game {
         } else {
             self.alphabet = ""
         }
+//        ad.saveContext()
     }
 }

@@ -47,6 +47,9 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         treatCategoryTextField.inputView = treatCategoryPicker
         treatCategoryTextField.inputAccessoryView = toolBar
         
+        treatTitleTextField.inputAccessoryView = toolBar
+        treatURLTextField.inputAccessoryView = toolBar
+        
         checkValidTitle()
         
         if treatToEdit != nil {

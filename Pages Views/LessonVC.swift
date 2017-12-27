@@ -53,9 +53,9 @@ class LessonVC: UIViewController {
         if let task = specificTask.selectedLesson {
             lessonTitleLabel.text = task.title
             lessonDetailLabel.text = task.detail
-            let url = task.url?.suffix(11)
             if task.url != nil && task.youTubeVideo == true {
-                lessonURL = "https://www.youtube.com/embed/\(url!)?rel=0&amp;controls=0&amp;showinfo=0"
+                let url = (task.url?.components(separatedBy: "=")[1])!
+                lessonURL = "https://www.youtube.com/embed/\(url)?rel=0&amp;controls=0&amp;showinfo=0"
             } else if task.url != nil {
                 lessonURL = task.url!
             }

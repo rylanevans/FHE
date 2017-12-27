@@ -966,7 +966,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2sf-Vq-ppG" secondAttribute="trailing" id="wmJ-r8-Ckx"/>
                                 </constraints>
                             </stackView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Details..." textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ywb-o6-ujI">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" text="Details..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ywb-o6-ujI">
                                 <rect key="frame" x="17.5" y="239" width="340" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" name="Text"/>
@@ -2326,7 +2326,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-fS-u1z">
                                                 <rect key="frame" x="0.0" y="344" width="304" height="32"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-Wk-a0h">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-Wk-a0h">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="zqp-7K-Rfr"/>
@@ -2556,7 +2556,7 @@
                     <connections>
                         <outlet property="deleteButton" destination="ofI-kv-dd1" id="JFW-zH-6IK"/>
                         <outlet property="hideSaveButton" destination="Tn8-eR-3cs" id="wQc-pb-FEr"/>
-                        <outlet property="ruleDetailsTextField" destination="e8T-vV-ISr" id="gX2-oG-MIp"/>
+                        <outlet property="ruleDetailsTextField" destination="hx8-Sk-iTG" id="ZNj-wq-XkE"/>
                         <outlet property="ruleFavorite" destination="dYg-aT-5IO" id="lfU-c3-meO"/>
                         <outlet property="ruleOnDeckImage" destination="v9o-GE-X36" id="OyQ-th-e6k"/>
                         <outlet property="ruleTitleTextField" destination="iPM-a7-cMk" id="maq-Ad-dSN"/>
@@ -4493,25 +4493,8 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xSn-tX-kwW">
-                                                                    <rect key="frame" x="59.5" y="0.0" width="39.5" height="65.5"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8c-xf-Qj3">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="39.5" height="14"/>
-                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
-                                                                            <color key="textColor" name="Text"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWc-eK-D1i">
-                                                                            <rect key="frame" x="0.0" y="14" width="39.5" height="51.5"/>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqM-PX-wPQ">
-                                                                    <rect key="frame" x="107" y="0.0" width="193" height="65.5"/>
+                                                                    <rect key="frame" x="59.5" y="0.0" width="240.5" height="65.5"/>
                                                                     <color key="tintColor" name="Text"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -4523,7 +4506,6 @@
                                                     <constraints>
                                                         <constraint firstItem="AIC-QF-jQ4" firstAttribute="height" secondItem="wXw-Y0-1d2" secondAttribute="height" multiplier="0.4" id="G3r-gR-Ixo"/>
                                                         <constraint firstAttribute="trailing" secondItem="kXM-OY-3Gb" secondAttribute="trailing" id="qzJ-7n-ylr"/>
-                                                        <constraint firstItem="AIC-QF-jQ4" firstAttribute="height" secondItem="PWc-eK-D1i" secondAttribute="height" multiplier="0.4" id="yBX-zn-Icx"/>
                                                     </constraints>
                                                 </stackView>
                                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgQ-9J-pKa" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
@@ -4600,7 +4582,6 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="categoryLabel" destination="ql0-Td-IzW" id="LA0-hq-4TZ"/>
-                                    <outlet property="detailsLabel" destination="a8c-xf-Qj3" id="k2E-Fh-47M"/>
                                     <outlet property="favoriteImage" destination="l4a-Mg-ZyU" id="CFE-gA-crC"/>
                                     <outlet property="onDeckImage" destination="9BE-0u-h0N" id="4Ox-5u-iFP"/>
                                     <outlet property="titleLabel" destination="CfK-ET-l8a" id="e4G-Yk-QZ5"/>
@@ -4732,7 +4713,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-WT-MWo">
                                                 <rect key="frame" x="0.0" y="430.5" width="304" height="32"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-PT-lya">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddk-PT-lya">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="EuZ-4U-gS5"/>
@@ -5008,7 +4989,7 @@
                         <outlet property="deleteButton" destination="H96-7v-GJO" id="KYd-T6-Z6P"/>
                         <outlet property="hideSaveButton" destination="zr8-lO-THu" id="Pc8-lZ-Hx7"/>
                         <outlet property="lessonCategoryTextField" destination="tjA-LO-0uF" id="Xu4-IM-wuk"/>
-                        <outlet property="lessonDetailsTextField" destination="YL5-QI-uRO" id="yLU-Pc-tEC"/>
+                        <outlet property="lessonDetailsTextField" destination="HZz-bQ-xKk" id="bIx-he-q5O"/>
                         <outlet property="lessonFavorite" destination="0kK-Af-QCY" id="872-eB-nZv"/>
                         <outlet property="lessonOnDeckImage" destination="CdF-0N-CPK" id="vLs-Nk-jt0"/>
                         <outlet property="lessonTitleTextField" destination="rfs-7w-aj4" id="jQI-Me-Gf0"/>
@@ -5596,7 +5577,7 @@
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2UU-Ms-4fl">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
@@ -5616,7 +5597,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEA-qE-Yf6">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -5636,7 +5617,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste a URL with how-to steps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZz-re-1K8">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
@@ -7982,7 +7963,7 @@
                                                     </label>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HYV-nF-Vvh">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
                                                     </textField>
@@ -8002,7 +7983,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K99-uF-BT5">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -8022,7 +8003,7 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste URL with recipe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1U-QG-BXl">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
                                                     </textField>
@@ -8301,7 +8282,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7x6-s2-dXi">
                                                 <rect key="frame" x="0.0" y="344" width="304" height="32"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-vT-eNg">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crm-vT-eNg">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="F8U-Gc-FxY"/>
@@ -8531,7 +8512,7 @@
                     <connections>
                         <outlet property="deleteButton" destination="DN0-FB-rcS" id="wne-5o-SXK"/>
                         <outlet property="hideSaveButton" destination="vgQ-Xm-jE2" id="n92-8v-4nJ"/>
-                        <outlet property="quoteDetailsTextField" destination="xeS-Qg-t8h" id="kqC-vh-O6K"/>
+                        <outlet property="quoteDetailsTextField" destination="0as-CA-K5T" id="pML-cO-paa"/>
                         <outlet property="quoteFavorite" destination="apg-DG-7lC" id="ide-Og-aM2"/>
                         <outlet property="quoteOnDeckImage" destination="qh7-Vp-DK0" id="aa7-5F-srp"/>
                         <outlet property="quoteTitleTextField" destination="PuY-pV-QI3" id="Bz0-Ok-GUo"/>

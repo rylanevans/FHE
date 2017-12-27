@@ -38,5 +38,6 @@ extension Lesson {
         } else {
             self.alphabet = ""
         }
+//        ad.saveContext()
     }
 }

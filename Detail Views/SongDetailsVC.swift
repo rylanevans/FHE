@@ -62,6 +62,10 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songBookTextField.inputView = songBookPicker
         songBookTextField.inputAccessoryView = toolBar
         
+        songTitleTextField.inputAccessoryView = toolBar
+        songNumberTextField.inputAccessoryView = toolBar
+        songURLTextField.inputAccessoryView = toolBar
+        
         checkValidTitle()
         
         if songToEdit != nil {

@@ -15,7 +15,7 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var hideSaveButton: UIImageView!
     @IBOutlet weak var ruleTitleTextField: UITextField!
-    @IBOutlet weak var ruleDetailsTextField: UITextField!
+    @IBOutlet weak var ruleDetailsTextField: UITextView!
     @IBOutlet weak var ruleURLTextField: UITextField!
     @IBOutlet weak var ruleOnDeckImage: UIImageView!
     @IBOutlet weak var ruleFavorite: UIImageView!
@@ -36,6 +36,10 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate {
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
+        
+        ruleTitleTextField.inputAccessoryView = toolBar
+        ruleDetailsTextField.inputAccessoryView = toolBar
+        ruleURLTextField.inputAccessoryView = toolBar
         
         checkValidTitle()
         

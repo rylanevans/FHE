@@ -47,6 +47,9 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         gameCategoryTextField.inputView = gameCategoryPicker
         gameCategoryTextField.inputAccessoryView = toolBar
         
+        gameTitleTextField.inputAccessoryView = toolBar
+        gameURLTextField.inputAccessoryView = toolBar
+        
         checkValidTitle()
         
         if gameToEdit != nil {
