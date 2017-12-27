@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 import UIKit
 
-//var taskPrayersArray = [Task]()
 let taskPrayerClosing = tasksAllArray[12]
 
 

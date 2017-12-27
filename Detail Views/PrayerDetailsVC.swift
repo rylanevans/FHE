@@ -45,7 +45,6 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         self.hideKeyboardWhenTappedAround()
         
         getAllTasks()
-        getPrayers()
         getMembersForPicker()
         loadPrayerData()
         loadPrayerAssignmentImage()
@@ -59,7 +58,6 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         super.viewDidAppear(true)
         
         getAllTasks()
-        getPrayers()
         getMembersForPicker()
         loadPrayerData()
         loadPrayerAssignmentImage()

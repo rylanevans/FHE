@@ -45,7 +45,6 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         self.hideKeyboardWhenTappedAround()
         
         getAllTasks()
-        getSpotlights()
         getMembersForPicker()
         loadSpotlightData()
         loadSpotlightAssignmentImage()
@@ -59,7 +58,6 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         super.viewDidAppear(true)
         
         getAllTasks()
-        getSpotlights()
         getMembersForPicker()
         loadSpotlightData()
         loadSpotlightAssignmentImage()

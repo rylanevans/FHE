@@ -45,7 +45,6 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         self.hideKeyboardWhenTappedAround()
         
         getAllTasks()
-        getCouncils()
         getMembersForPicker()
         loadCouncilData()
         loadCouncilAssignmentImage()
@@ -59,7 +58,6 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         super.viewDidAppear(true)
         
         getAllTasks()
-        getCouncils()
         getMembersForPicker()
         loadCouncilData()
         loadCouncilAssignmentImage()

@@ -10,15 +10,4 @@ import Foundation
 import CoreData
 import UIKit
 
-var spotlightsArray = [Spotlight]()
 let taskSpotlight = tasksAllArray[6]
-
-func getSpotlights() {
-    let request: NSFetchRequest<Spotlight> = Spotlight.fetchRequest()
-    do {
-        spotlightsArray = try context.fetch(request)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
-}

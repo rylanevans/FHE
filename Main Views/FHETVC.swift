@@ -102,7 +102,6 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         if let objects = taskController.fetchedObjects, objects.count > 0 {
             let sections = taskController.sections![indexPath.section]
             let task = sections.objects![indexPath.row]
-            //            performSegue(withIdentifier: "ShowSongs", sender: task)
             let segueTask: Task = task as! Task
             switch segueTask.name {
             case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)

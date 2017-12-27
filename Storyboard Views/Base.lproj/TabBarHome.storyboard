@@ -834,13 +834,13 @@
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
-                                                            <outlet property="manualOrAutoLabel" destination="WHS-dd-jDb" id="utK-cr-mEX"/>
-                                                            <outlet property="memberAssigneeText" destination="lo6-X9-5hA" id="o5s-Vd-WQs"/>
-                                                            <outlet property="memberImage" destination="ypC-5u-PsV" id="pGR-Ke-ouI"/>
-                                                            <outlet property="memberNameLabel" destination="iUd-Kh-N35" id="w8z-36-vjh"/>
-                                                            <outlet property="taskImage" destination="UYC-b0-MfQ" id="fyR-o9-TJA"/>
-                                                            <outlet property="taskNameLabel" destination="g5b-fX-lol" id="NsF-Jv-wmw"/>
-                                                            <outlet property="taskTitleLabel" destination="kuf-Tw-Z7V" id="gvp-Jf-kfv"/>
+                                                            <outlet property="manualOrAutoLabel" destination="WHS-dd-jDb" id="wek-Bz-oBt"/>
+                                                            <outlet property="memberAssigneeText" destination="lo6-X9-5hA" id="avY-uw-JYG"/>
+                                                            <outlet property="memberImage" destination="ypC-5u-PsV" id="r89-kP-4wJ"/>
+                                                            <outlet property="memberNameLabel" destination="iUd-Kh-N35" id="6lF-cL-PTQ"/>
+                                                            <outlet property="taskImage" destination="UYC-b0-MfQ" id="VL5-eL-Rd2"/>
+                                                            <outlet property="taskNameLabel" destination="g5b-fX-lol" id="Qvz-Tk-o11"/>
+                                                            <outlet property="taskTitleLabel" destination="kuf-Tw-Z7V" id="t3G-Cj-oqw"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -947,7 +947,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CpR-VD-ekg"/>
                     <connections>
-                        <outlet property="assignmentTableView" destination="Uxw-f8-Nhu" id="tq1-tJ-R11"/>
+                        <outlet property="assignmentTableView" destination="Uxw-f8-Nhu" id="sCn-sT-VvM"/>
                         <outlet property="christTeachingImage" destination="Xbf-LN-14A" id="HjA-k1-QtP"/>
                         <segue destination="mtq-fi-jtC" kind="presentation" identifier="AboutMe" id="XaN-bW-a2L"/>
                         <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowPrayer" id="fA6-h3-h7G"/>

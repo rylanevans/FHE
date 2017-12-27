@@ -10,15 +10,4 @@ import Foundation
 import CoreData
 import UIKit
 
-var councilsArray = [Council]()
 let taskCouncil = tasksAllArray[10]
-
-func getCouncils() {
-    let request: NSFetchRequest<Council> = Council.fetchRequest()
-    do {
-        councilsArray = try context.fetch(request)
-    } catch {
-        let error = error as NSError
-        print("\(error)")
-    }
-}

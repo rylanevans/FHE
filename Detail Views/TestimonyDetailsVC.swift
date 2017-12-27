@@ -45,7 +45,6 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         self.hideKeyboardWhenTappedAround()
         
         getAllTasks()
-        getTestimonys()
         getMembersForPicker()
         loadTestimonyData()
         loadTestimonyAssignmentImage()
@@ -59,7 +58,6 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         super.viewDidAppear(true)
         
         getAllTasks()
-        getTestimonys()
         getMembersForPicker()
         loadTestimonyData()
         loadTestimonyAssignmentImage()

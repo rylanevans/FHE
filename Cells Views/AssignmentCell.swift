@@ -105,20 +105,20 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         var selectedName = ""
         
         switch taskName {
-        case "Opening Prayer": selectedName = (task.selectedPrayer?.title) ?? "No Prayer selected"
-        case "Song": selectedName = (task.selectedSong?.title) ?? "No Song selected"
-        case "Rule": selectedName = (task.selectedRule?.title) ?? "No Rule selected"
-        case "Scripture": selectedName = (task.selectedScripture?.title) ?? "No Scripture selected"
+        case "Opening Prayer": selectedName = task.selectedPrayer?.title ?? "No Prayer selected"
+        case "Song": selectedName = "✓\(task.selectedSong?.title ?? "No Song selected")"
+        case "Rule": selectedName = "✓\(task.selectedRule?.title ?? "No Rule selected")"
+        case "Scripture": selectedName = "✓\(task.selectedScripture?.title ?? "No Scripture selected")"
         case "Calendar": selectedName = (task.selectedCalendar?.title) ?? "No Calendar selected"
         case "Testimony": selectedName = (task.selectedTestimony?.title) ?? "No Testimony selected"
         case "Spotlight": selectedName = (task.selectedSpotlight?.title) ?? "No Spotlight selected"
         case "Thought": selectedName = (task.selectedThought?.title) ?? "No Thought selected"
-        case "Quote": selectedName = (task.selectedQuote?.title) ?? "No Quote selected"
-        case "Lesson": selectedName = (task.selectedLesson?.title) ?? "No Lesson selected"
+        case "Quote": selectedName = "✓\(task.selectedQuote?.title ?? "No Quote selected")"
+        case "Lesson": selectedName = "✓\(task.selectedLesson?.title ?? "No Lesson selected")"
         case "Counsil": selectedName = (task.selectedCouncil?.title) ?? "No Counsil selected"
-        case "Activity": selectedName = (task.selectedGame?.title) ?? "No Activity selected"
-        case "Closing Prayer": selectedName = (task.selectedPrayer?.title)!
-        case "Treat": selectedName = (task.selectedTreat?.title)!
+        case "Activity": selectedName = "✓\(task.selectedGame?.title ?? "No Activity selected")"
+        case "Closing Prayer": selectedName = (task.selectedClosing?.title) ?? "No Prayer selected"
+        case "Treat": selectedName = "✓\(task.selectedTreat?.title ?? "No Treat selected")"
         default: selectedName = "No Task Selected"
         }
         

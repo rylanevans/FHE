@@ -45,7 +45,6 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         self.hideKeyboardWhenTappedAround()
         
         getAllTasks()
-        getCalendars()
         getMembersForPicker()
         loadCalendarData()
         loadCalendarAssignmentImage()
@@ -59,7 +58,6 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         super.viewDidAppear(true)
         
         getAllTasks()
-        getCalendars()
         getMembersForPicker()
         loadCalendarData()
         loadCalendarAssignmentImage()

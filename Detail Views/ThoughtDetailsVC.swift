@@ -45,7 +45,6 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         self.hideKeyboardWhenTappedAround()
         
         getAllTasks()
-        getThoughts()
         getMembersForPicker()
         loadThoughtData()
         loadThoughtAssignmentImage()
@@ -59,7 +58,6 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         super.viewDidAppear(true)
         
         getAllTasks()
-        getThoughts()
         getMembersForPicker()
         loadThoughtData()
         loadThoughtAssignmentImage()
