@@ -146,6 +146,7 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         if gameOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             game.selected = true
+            taskGame.selectedGame = game
         } else {
             game.selected = false
         }

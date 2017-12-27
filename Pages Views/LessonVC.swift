@@ -19,6 +19,7 @@ class LessonVC: UIViewController {
     @IBOutlet weak var youTubeView: UIView!
     @IBOutlet weak var lessonDetailsView: UIStackView!
     @IBOutlet weak var buttonDetailsView: UIStackView!
+    @IBOutlet weak var buttonSpacer: UILabel!
     
     var lessonURL = "https://www.lds.org/?lang=eng"
     
@@ -32,9 +33,14 @@ class LessonVC: UIViewController {
             youTubeView.isHidden = true
             lessonDetailLabel.isHidden = false
             buttonDetailsView.isHidden = false
+            buttonSpacer.isHidden = false
+        } else {
+            youTubeView.isHidden = false
+            lessonDetailLabel.isHidden = true
+            buttonDetailsView.isHidden = true
+            buttonSpacer.isHidden = true
         }
     }
-    
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
         let URL = NSURL(string: "\(lessonURL)")!
@@ -52,7 +58,9 @@ class LessonVC: UIViewController {
         let specificTask = taskLesson
         if let task = specificTask.selectedLesson {
             lessonTitleLabel.text = task.title
-            lessonDetailLabel.text = task.detail
+            if task.detail != nil {
+                lessonDetailLabel.text = task.detail
+            }
             if task.url != nil && task.youTubeVideo == true {
                 let url = (task.url?.components(separatedBy: "=")[1])!
                 lessonURL = "https://www.youtube.com/embed/\(url)?rel=0&amp;controls=0&amp;showinfo=0"

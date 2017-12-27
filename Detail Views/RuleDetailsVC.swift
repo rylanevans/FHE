@@ -124,6 +124,7 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate {
         if ruleOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             rule.selected = true
+            taskRule.selectedRule = rule
         } else {
             rule.selected = false
         }

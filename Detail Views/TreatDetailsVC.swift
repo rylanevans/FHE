@@ -146,6 +146,7 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         if treatOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             treat.selected = true
+            taskTreat.selectedTreat = treat
         } else {
             treat.selected = false
         }

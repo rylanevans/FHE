@@ -225,6 +225,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         if scriptureOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             scripture.selected = true
+            taskScripture.selectedScripture = scripture
         } else {
             scripture.selected = false
         }

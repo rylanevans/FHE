@@ -192,6 +192,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         if songOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             song.selected = true
+            taskSong.selectedSong = song
         } else {
             song.selected = false
         }

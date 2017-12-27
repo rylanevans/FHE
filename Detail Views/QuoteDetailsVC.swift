@@ -124,6 +124,7 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
         if quoteOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             quote.selected = true
+            taskQuote.selectedQuote = quote
         } else {
             quote.selected = false
         }

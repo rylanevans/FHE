@@ -17,7 +17,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     @IBOutlet weak var lessonCategoryTextField: UITextField!
     @IBOutlet weak var lessonTopicTextField: UITextField!
     @IBOutlet weak var lessonTitleTextField: UITextField!
-    @IBOutlet weak var lessonDetailsTextField: UITextView!
+    @IBOutlet weak var lessonDetailsTextField: UITextField!
     @IBOutlet weak var lessonURLTextField: UITextField!
     @IBOutlet weak var lessonOnDeckImage: UIImageView!
     @IBOutlet weak var lessonFavorite: UIImageView!
@@ -43,7 +43,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
-        
+ 
         lessonTopicPicker.delegate = self
         lessonTopicPicker.dataSource = self
         lessonTopicPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
@@ -157,7 +157,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if lessonYouTubeImage.image == #imageLiteral(resourceName: "Selected") {
             lessonYouTubeImage.image = #imageLiteral(resourceName: "NotSelected")
         } else {
-            lessonFavorite.image = #imageLiteral(resourceName: "Selected")
+            lessonYouTubeImage.image = #imageLiteral(resourceName: "Selected")
         }
     }
     
@@ -201,6 +201,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if lessonOnDeckImage.image == #imageLiteral(resourceName: "Selected") {
             unselectEverything()
             lesson.selected = true
+            taskLesson.selectedLesson = lesson
         } else {
             lesson.selected = false
         }

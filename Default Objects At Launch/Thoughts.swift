@@ -15,7 +15,7 @@ func generateThought() {
     getAllTasks()
     let thought = Thought(context: context)
     thought.selectedOne = taskThought
-    thought.title = "Tell me something I don't know..."
+    thought.title = "I've been thinking..."
     thought.detail = "While knowledge is orderly and cumulative, information is random and miscellaneous."
     thought.url = "https://www.mormonchannel.org/watch/series/mormon-channel-studio/mormon-channel-studio-nashville-tribute-band"
     thought.selected = true
