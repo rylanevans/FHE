@@ -1,5 +1,5 @@
 //
-//  PrayerController.swift
+//  OpeningPrayerController.swift
 //  FHE
 //
 //  Created by Rylan Evans on 12/19/17.
@@ -23,6 +23,8 @@ func getPrayers() {
         print("\(error)")
     }
 }
+
+
 
 //func getTaskPrayer() {
 //    let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()

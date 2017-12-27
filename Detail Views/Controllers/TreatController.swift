@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 
 var treatsArray = [Treat]()
-let taskTreat = tasksAllArray[12]
+let taskTreat = tasksAllArray[13]
 
 func getTreats() {
     let request: NSFetchRequest<Treat> = Treat.fetchRequest()

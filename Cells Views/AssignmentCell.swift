@@ -102,24 +102,24 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
         let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
         let name = task.assignment?.name ?? "Assignee"
-        var selected = ""
+        var selectedName = ""
         
-        switch task.name {
-        case "Opening Prayer"?: selected = (task.selectedPrayer?.title) ?? "No Prayer selected"
-        case "Song"?: selected = (task.selectedSong?.title) ?? "No Song selected"
-        case "Rule"?: selected = (task.selectedRule?.title) ?? "No Rule selected"
-        case "Scripture"?: selected = (task.selectedScripture?.title) ?? "No Scripture selected"
-        case "Calendar"?: selected = (task.selectedCalendar?.title) ?? "No Calendar selected"
-        case "Testimony"?: selected = (task.selectedTestimony?.title) ?? "No Testimony selected"
-        case "Spotlight"?: selected = (task.selectedSpotlight?.title) ?? "No Spotlight selected"
-        case "Thought"?: selected = (task.selectedThought?.title) ?? "No Thought selected"
-        case "Quote"?: selected = (task.selectedQuote?.title) ?? "No Quote selected"
-        case "Lesson"?: selected = (task.selectedLesson?.title) ?? "No Lesson selected"
-        case "Counsil"?: selected = (task.selectedCouncil?.title) ?? "No Counsil selected"
-        case "Activity"?: selected = (task.selectedGame?.title) ?? "No Activity selected"
-        case "Closing Prayer"?: selected = (task.selectedPrayer?.title) ?? "No song selected"
-        case "Treat"?: selected = (task.selectedTreat?.title) ?? "No song selected"
-        default: selected = "Title of task"
+        switch taskName {
+        case "Opening Prayer": selectedName = (task.selectedPrayer?.title) ?? "No Prayer selected"
+        case "Song": selectedName = (task.selectedSong?.title) ?? "No Song selected"
+        case "Rule": selectedName = (task.selectedRule?.title) ?? "No Rule selected"
+        case "Scripture": selectedName = (task.selectedScripture?.title) ?? "No Scripture selected"
+        case "Calendar": selectedName = (task.selectedCalendar?.title) ?? "No Calendar selected"
+        case "Testimony": selectedName = (task.selectedTestimony?.title) ?? "No Testimony selected"
+        case "Spotlight": selectedName = (task.selectedSpotlight?.title) ?? "No Spotlight selected"
+        case "Thought": selectedName = (task.selectedThought?.title) ?? "No Thought selected"
+        case "Quote": selectedName = (task.selectedQuote?.title) ?? "No Quote selected"
+        case "Lesson": selectedName = (task.selectedLesson?.title) ?? "No Lesson selected"
+        case "Counsil": selectedName = (task.selectedCouncil?.title) ?? "No Counsil selected"
+        case "Activity": selectedName = (task.selectedGame?.title) ?? "No Activity selected"
+        case "Closing Prayer": selectedName = (task.selectedPrayer?.title)!
+        case "Treat": selectedName = (task.selectedTreat?.title)!
+        default: selectedName = "No Task Selected"
         }
         
         let autoAssigned = task.assigned
@@ -131,7 +131,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         
         taskImage.image = image as? UIImage
         taskNameLabel.text = taskName
-        taskTitleLabel.text = selected
+        taskTitleLabel.text = selectedName
         memberNameLabel.text = name
         memberImage.image = photo as? UIImage
     }
