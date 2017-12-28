@@ -522,7 +522,6 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
 
 extension GameListTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
 }

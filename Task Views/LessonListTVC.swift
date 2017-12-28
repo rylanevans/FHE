@@ -589,7 +589,6 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
 
 extension LessonListTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
 }

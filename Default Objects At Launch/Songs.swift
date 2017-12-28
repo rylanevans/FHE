@@ -23,6 +23,7 @@ func generateSongs() {
     song1.selected = false
     song1.favorite = false
     song1.sortingIndex = 0
+    song1.alphabet = String(describing: song1.title?[(song1.title?.startIndex)!])
     
     let song2 = Song(context: context)
     song2.order = 2

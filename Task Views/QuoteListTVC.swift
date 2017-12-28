@@ -175,9 +175,6 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            title = "SORTED BY DATE ADDED:"
-            
-        } else if segment.selectedSegmentIndex == 2 {
             switch sectionTitle![section].name {
             case "A": title = "A:"
             case "B": title = "B:"
@@ -509,7 +506,6 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
 
 extension QuoteListTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 protocol AssignmentCellDelegate {
-    func assignmentNeedsChanged(_ sender: AssignmentCell)
+    func assignmentNeedsChanged(_ sender: AssignmentCell, _ assignee: Member)
 }
 
 class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource, NSFetchedResultsControllerDelegate {
@@ -28,7 +28,10 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
+        taskTitleLabel.setBottomBorder()
+        manualOrAutoLabel.setBottomBorder()
+        
         memberPicker.delegate = self
         memberPicker.dataSource = self
         memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
@@ -67,7 +70,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         let assignee = membersPickerArray[row]
         memberImage.image = assignee.photo as? UIImage
         memberNameLabel.text = assignee.name
-        delegate?.assignmentNeedsChanged(self)
+        delegate?.assignmentNeedsChanged(self, assignee)
     }
     
      // MARK: - Text Field Options
@@ -83,11 +86,11 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
     
     func configureAssignmentCell(task: Task) {
         let taskName = task.name ?? ""

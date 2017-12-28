@@ -174,9 +174,6 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 1 {
-            title = "SORTED BY DATE ADDED:"
-            
-        } else if segment.selectedSegmentIndex == 2 {
             switch sectionTitle![section].name {
             case "A": title = "A:"
             case "B": title = "B:"

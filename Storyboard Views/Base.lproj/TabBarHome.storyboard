@@ -695,6 +695,7 @@
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-vK-HJm">
                                                                     <rect key="frame" x="6" y="5.5" width="50" height="50"/>
+                                                                    <color key="backgroundColor" name="Background"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="50" id="0CK-om-1fH"/>
                                                                         <constraint firstAttribute="width" constant="50" id="1Op-Qy-p10"/>
@@ -732,7 +733,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gho-GZ-9LU">
-                                                                            <rect key="frame" x="45" y="6.5" width="240" height="48.5"/>
+                                                                            <rect key="frame" x="45" y="4.5" width="240" height="52.5"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
@@ -752,16 +753,25 @@
                                                                                     </subviews>
                                                                                 </stackView>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-gk-Zgi">
-                                                                                    <rect key="frame" x="0.0" y="32" width="240" height="16.5"/>
+                                                                                    <rect key="frame" x="0.0" y="32" width="240" height="20.5"/>
                                                                                     <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title of the task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="16.5"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Title of the task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="20.5"/>
                                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                                             <color key="textColor" name="Tint"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" ambiguous="YES" text="Auto" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-dd-jDb">
-                                                                                            <rect key="frame" x="105" y="0.0" width="135" height="16.5"/>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-1x-N9m">
+                                                                                            <rect key="frame" x="105" y="0.0" width="103" height="20.5"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="gs1-rc-mUe"/>
+                                                                                            </constraints>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="752" text="Auto" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-dd-jDb">
+                                                                                            <rect key="frame" x="208" y="0.0" width="32" height="20.5"/>
                                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                                             <color key="textColor" name="Tint"/>
                                                                                             <nil key="highlightedColor"/>
@@ -2896,6 +2906,7 @@ I spent a lot of time and effort building something I thought would be both help
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Jf-vk-Z1s">
                                                     <rect key="frame" x="7.5" y="9.5" width="50" height="50"/>
+                                                    <color key="backgroundColor" name="Background"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="JdE-Ni-cTr"/>
                                                         <constraint firstAttribute="width" constant="50" id="LNb-bi-ZCF"/>
@@ -3529,10 +3540,22 @@ I spent a lot of time and effort building something I thought would be both help
         <image name="Twitter" width="341" height="166"/>
         <image name="Website" width="509" height="420"/>
         <namedColor name="Accent">
+            <color red="0.20800000429153442" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Background">
             <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Background">
+            <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Background">
+            <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Background">
+            <color red="0.85900002717971802" green="0.9179999828338623" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

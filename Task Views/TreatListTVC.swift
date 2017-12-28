@@ -522,7 +522,6 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
 
 extension TreatListTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
 }

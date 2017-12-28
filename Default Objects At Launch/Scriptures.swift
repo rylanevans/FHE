@@ -24,6 +24,8 @@ func generateScripture() {
     scripture1.random = Int64(arc4random_uniform(1000))
     scripture1.selected = false
     scripture1.sortingIndex = 0
+    scripture1.alphabet = String(describing: scripture1.title?[(scripture1.title?.startIndex)!])
+    scripture1.order = Int64(defaultScriptureDictionary["\(scripture1.volume ?? "gen")"]!)
     
     let scripture2 = Scripture(context: context)
     scripture2.topic = lessonTopicsArray[0]
