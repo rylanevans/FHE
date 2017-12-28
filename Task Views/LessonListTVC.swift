@@ -467,8 +467,6 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
-        let sortByBook = NSSortDescriptor(key: "book", ascending: true)
-        let sortByNumber = NSSortDescriptor(key: "number", ascending: true)
         let sortByAlphabet = NSSortDescriptor(key: "alphabet", ascending: true)
         
         if segment.selectedSegmentIndex == 0 {

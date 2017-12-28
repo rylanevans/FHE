@@ -24,8 +24,8 @@ func generateScripture() {
     scripture1.random = Int64(arc4random_uniform(1000))
     scripture1.selected = false
     scripture1.sortingIndex = 0
-    scripture1.alphabet = String(describing: scripture1.title?[(scripture1.title?.startIndex)!])
-    scripture1.order = Int64(defaultScriptureDictionary["\(scripture1.volume ?? "gen")"]!)
+    scripture1.alphabet = String(describing: scripture1.title![(scripture1.title!.startIndex)])
+    scripture1.order = Int64(defaultScriptureDictionary["\(scripture1.book ?? "gen")"]!)
     
     let scripture2 = Scripture(context: context)
     scripture2.topic = lessonTopicsArray[0]
@@ -39,6 +39,8 @@ func generateScripture() {
     scripture2.random = Int64(arc4random_uniform(1000))
     scripture2.selected = false
     scripture2.sortingIndex = 0
+    scripture2.alphabet = String(describing: scripture2.title![(scripture2.title!.startIndex)])
+    scripture2.order = Int64(defaultScriptureDictionary["\(scripture2.book ?? "gen")"]!)
     
     let scripture3 = Scripture(context: context)
     scripture3.topic = lessonTopicsArray[0]
@@ -52,6 +54,8 @@ func generateScripture() {
     scripture3.random = Int64(arc4random_uniform(1000))
     scripture3.selected = true
     scripture3.sortingIndex = 0
+    scripture3.alphabet = String(describing: scripture3.title![(scripture3.title!.startIndex)])
+    scripture3.order = Int64(defaultScriptureDictionary["\(scripture3.book ?? "gen")"]!)
     scripture3.selectedOne = taskScripture
     
     let scripture4 = Scripture(context: context)
@@ -66,6 +70,8 @@ func generateScripture() {
     scripture4.random = Int64(arc4random_uniform(1000))
     scripture4.selected = false
     scripture4.sortingIndex = 0
+    scripture4.alphabet = String(describing: scripture4.title![(scripture4.title!.startIndex)])
+    scripture4.order = Int64(defaultScriptureDictionary["\(scripture4.book ?? "gen")"]!)
     
     let scripture5 = Scripture(context: context)
     scripture5.topic = lessonTopicsArray[0]
@@ -79,6 +85,8 @@ func generateScripture() {
     scripture5.random = Int64(arc4random_uniform(1000))
     scripture5.selected = false
     scripture5.sortingIndex = 0
+    scripture5.alphabet = String(describing: scripture5.title![(scripture5.title!.startIndex)])
+    scripture5.order = Int64(defaultScriptureDictionary["\(scripture5.book ?? "gen")"]!)
     
     ad.saveContext()
 }

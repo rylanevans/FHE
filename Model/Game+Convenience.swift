@@ -27,14 +27,7 @@ extension Game {
     }
     
     public override func awakeFromInsert() {
-        super.awakeFromInsert()
-        
+        super.awakeFromInsert()        
         self.dateCreated = NSDate() as Date
-        if self.title != nil {
-            self.alphabet = String(describing: self.title?[(self.title?.startIndex)!])
-        } else {
-            self.alphabet = ""
-        }
-//        ad.saveContext()
     }
 }

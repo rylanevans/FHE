@@ -31,20 +31,7 @@ extension Scripture {
     
     public override func awakeFromInsert() {
         super.awakeFromInsert()
-        
         self.dateCreated = NSDate() as Date
-        
-        if self.title != nil {
-            self.alphabet = String(describing: self.title?[(self.title?.startIndex)!])
-        } else {
-            self.alphabet = ""
-        }
-        
-        if self.volume != nil {
-            let number = defaultScriptureDictionary["\(volume ?? "gen")"]
-            self.order = Int64(number!)
-        }
-//        ad.saveContext()
     }
 }
 
