@@ -50,6 +50,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             ad.saveContext()
             performSegue(withIdentifier: "AboutMe", sender: nil)
         }
+        assignmentTableView.reloadData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -143,13 +144,25 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     func assignmentNeedsChanged(_ sender: AssignmentCell) {
         print("Assignment Needs Changed")
-        
-//        if let objects = memberController.fetchedObjects, objects.count > 0 {
-//            let indexPath = tableView.indexPath(for: sender)
-//            let sections = memberController.sections![(indexPath?.section)!]
-//            let member = sections.objects![(indexPath?.row)!]
-//            attendingValueToggle(member as! Member)
-//        }
+        if let objects = taskController.fetchedObjects, objects.count > 0 {
+            let indexPath = assignmentTableView.indexPath(for: sender)
+            let sections = taskController.sections![(indexPath?.section)!]
+            let task = sections.objects![(indexPath?.row)!]
+            assignedMemberChanged(task as! Task)
+        }
+    }
+    
+    func assignedMemberChanged(_ task: Task) {
+        let specificTask = task
+        if specificTask.assignment?.name == "Auto-Assign" {
+            task.assigned = false
+        } else {
+            task.assigned = true
+            task.assignment = specificTask.assignment
+        }
+
+        ad.saveContext()
+        assignmentTableView.reloadData()
     }
     
     // MARK: - Boiler Code for Core Data
@@ -192,11 +205,13 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             if let indexPath = newIndexPath {
                 assignmentTableView.insertRows(at: [indexPath], with: .automatic)
             }
+            assignmentTableView.reloadData()
             break
         case .delete:
             if let indexPath = indexPath {
                 assignmentTableView.deleteRows(at: [indexPath], with: .automatic)
             }
+            assignmentTableView.reloadData()
             break
         case .update:
             if let indexPath = indexPath {
@@ -208,6 +223,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
                     configureAssignmentCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
                 }
             }
+            assignmentTableView.reloadData()
             break
         case .move:
             if let indexPath = indexPath {
@@ -216,6 +232,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             if let indexPath = newIndexPath {
                 assignmentTableView.insertRows(at: [indexPath], with: .automatic)
             }
+            assignmentTableView.reloadData()
             break
         }
     }

@@ -44,7 +44,6 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         memberAssigneeText.inputAccessoryView = toolBar
         
         getMembersForPicker()
-        getAllTasks()
         getMembersAttending()
         getAllTasks()
     }
@@ -66,12 +65,9 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let song = taskSong
         memberImage.image = assignee.photo as? UIImage
         memberNameLabel.text = assignee.name
-        song.assignment = assignee
-        song.assigned = true
-        ad.saveContext()
+        delegate?.assignmentNeedsChanged(self)
     }
     
      // MARK: - Text Field Options
@@ -89,12 +85,8 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
-    }
-    
-    @IBAction func assignmentImagePressed(_ sender: Any) {
-        delegate?.assignmentNeedsChanged(self)
     }
     
     func configureAssignmentCell(task: Task) {

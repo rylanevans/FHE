@@ -24,8 +24,16 @@ class TutorialTVC: UITableViewController {
         present(videoTutorialsWebVC, animated: true, completion: nil)
     }
     
+    @IBAction func orderAppleTVButtonPressed(_ sender: Any) {
+        let URL = NSURL(string: "https://www.amazon.com/Apple-MQD22LL-A-TV-4K/dp/B075NCMLYL/")!
+        
+        let amazonWebVC = SFSafariViewController(url: URL as URL)
+        amazonWebVC.delegate = self
+        
+        present(amazonWebVC, animated: true, completion: nil)
+    }
     
-    @IBAction func orderButtonPressed(_ sender: Any) {
+    @IBAction func orderHDMIButtonPressed(_ sender: Any) {
         let URL = NSURL(string: "https://www.amazon.com/Apple-Lightning-Digital-Adapter-MD826AM/dp/B009WHV3BM/")!
         
         let amazonWebVC = SFSafariViewController(url: URL as URL)

@@ -25,6 +25,12 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         tableView.reloadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        tableView.reloadData()
+    }
+    
     // MARK: - Text Field Options
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -192,11 +198,13 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
+            tableView.reloadData()
             break
         case .delete:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             }
+            tableView.reloadData()
             break
         case .update:
             if let indexPath = indexPath {
@@ -208,6 +216,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
                     configureFamilyCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
                 }
             }
+            tableView.reloadData()
             break
         case .move:
             if let indexPath = indexPath {
@@ -216,6 +225,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
+            tableView.reloadData()
             break
         }
     }

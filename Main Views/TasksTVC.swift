@@ -289,11 +289,13 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
+            tableView.reloadData()
             break
         case .delete:
             if let indexPath = indexPath {
                 tableView.deleteRows(at: [indexPath], with: .automatic)
             }
+            tableView.reloadData()
             break
         case .update:
             if let indexPath = indexPath {
@@ -305,6 +307,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
                    configureTaskCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
                 }
             }
+            tableView.reloadData()
             break
         case .move:
             if let indexPath = indexPath {
@@ -313,6 +316,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             if let indexPath = newIndexPath {
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
+            tableView.reloadData()
             break
         }
     }
