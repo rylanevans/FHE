@@ -23,7 +23,7 @@ func generateSongs() {
     song1.selected = false
     song1.favorite = false
     song1.sortingIndex = 0
-    song1.alphabet = String(describing: song1.title?[(song1.title?.startIndex)!])
+    song1.alphabet = String(describing: song1.title![(song1.title!.startIndex)])
     
     let song2 = Song(context: context)
     song2.order = 2
@@ -36,6 +36,7 @@ func generateSongs() {
     song2.selected = false
     song2.favorite = false
     song2.sortingIndex = 0
+    song2.alphabet = String(describing: song2.title![(song2.title!.startIndex)])
     
     let song3 = Song(context: context)
     song3.order = 3
@@ -48,6 +49,7 @@ func generateSongs() {
     song3.selected = false
     song3.favorite = false
     song3.sortingIndex = 0
+    song3.alphabet = String(describing: song3.title![(song3.title!.startIndex)])
     
     let song4 = Song(context: context)
     song4.order = 4
@@ -60,6 +62,7 @@ func generateSongs() {
     song4.selected = false
     song4.favorite = false
     song4.sortingIndex = 0
+    song4.alphabet = String(describing: song4.title![(song4.title!.startIndex)])
     
     let song5 = Song(context: context)
     song5.order = 5
@@ -72,6 +75,7 @@ func generateSongs() {
     song5.selected = false
     song5.favorite = false
     song5.sortingIndex = 0
+    song5.alphabet = String(describing: song5.title![(song5.title!.startIndex)])
     
     let song6 = Song(context: context)
     song6.order = 6
@@ -84,6 +88,7 @@ func generateSongs() {
     song6.selected = false
     song6.favorite = false
     song6.sortingIndex = 0
+    song6.alphabet = String(describing: song6.title![(song6.title!.startIndex)])
     
     let song7 = Song(context: context)
     song7.order = 7
@@ -96,6 +101,7 @@ func generateSongs() {
     song7.selected = false
     song7.favorite = false
     song7.sortingIndex = 0
+    song7.alphabet = String(describing: song7.title![(song7.title!.startIndex)])
     
     let song8 = Song(context: context)
     song8.order = 8
@@ -108,6 +114,7 @@ func generateSongs() {
     song8.selected = false
     song8.favorite = true
     song8.sortingIndex = 0
+    song8.alphabet = String(describing: song8.title![(song8.title!.startIndex)])
     
     let song9 = Song(context: context)
     song9.order = 9
@@ -120,6 +127,7 @@ func generateSongs() {
     song9.selected = false
     song9.favorite = true
     song9.sortingIndex = 0
+    song9.alphabet = String(describing: song9.title![(song9.title!.startIndex)])
     
     let song10 = Song(context: context)
     song10.order = 10
@@ -132,6 +140,7 @@ func generateSongs() {
     song10.selected = false
     song10.favorite = false
     song10.sortingIndex = 0
+    song10.alphabet = String(describing: song10.title![(song10.title!.startIndex)])
     
     let song11 = Song(context: context)
     song11.order = 11
@@ -144,6 +153,7 @@ func generateSongs() {
     song11.selected = false
     song11.favorite = false
     song11.sortingIndex = 0
+    song11.alphabet = String(describing: song11.title![(song11.title!.startIndex)])
     
     let song12 = Song(context: context)
     song12.order = 12
@@ -156,6 +166,7 @@ func generateSongs() {
     song12.selected = false
     song12.favorite = false
     song12.sortingIndex = 0
+    song12.alphabet = String(describing: song12.title![(song1.title!.startIndex)])
     
     let song13 = Song(context: context)
     song13.order = 13
@@ -168,6 +179,7 @@ func generateSongs() {
     song13.selected = false
     song13.favorite = false
     song13.sortingIndex = 0
+    song13.alphabet = String(describing: song13.title![(song13.title!.startIndex)])
     
     let song14 = Song(context: context)
     song14.order = 14
@@ -180,6 +192,7 @@ func generateSongs() {
     song14.selected = false
     song14.favorite = false
     song14.sortingIndex = 0
+    song14.alphabet = String(describing: song14.title![(song14.title!.startIndex)])
     
     let song15 = Song(context: context)
     song15.order = 15
@@ -192,6 +205,7 @@ func generateSongs() {
     song15.selected = false
     song15.favorite = false
     song15.sortingIndex = 0
+    song15.alphabet = String(describing: song15.title![(song15.title!.startIndex)])
     
     let song16 = Song(context: context)
     song16.order = 16
@@ -204,6 +218,7 @@ func generateSongs() {
     song16.selected = false
     song16.favorite = false
     song16.sortingIndex = 0
+    song16.alphabet = String(describing: song16.title![(song16.title!.startIndex)])
     
     let song17 = Song(context: context)
     song17.order = 17
@@ -216,6 +231,7 @@ func generateSongs() {
     song17.selected = false
     song17.favorite = false
     song17.sortingIndex = 0
+    song17.alphabet = String(describing: song17.title![(song17.title!.startIndex)])
     
     let song18 = Song(context: context)
     song18.order = 18
@@ -228,6 +244,7 @@ func generateSongs() {
     song18.selected = false
     song18.favorite = false
     song18.sortingIndex = 0
+    song18.alphabet = String(describing: song18.title![(song18.title!.startIndex)])
     
     let song19 = Song(context: context)
     song19.order = 19
@@ -240,6 +257,7 @@ func generateSongs() {
     song19.selected = false
     song19.favorite = false
     song19.sortingIndex = 0
+    song19.alphabet = String(describing: song19.title![(song19.title!.startIndex)])
     
     let song20 = Song(context: context)
     song20.order = 20
@@ -252,6 +270,7 @@ func generateSongs() {
     song20.selected = false
     song20.favorite = false
     song20.sortingIndex = 0
+    song20.alphabet = String(describing: song20.title![(song20.title!.startIndex)])
     
     let song21 = Song(context: context)
     song21.order = 21
@@ -264,6 +283,7 @@ func generateSongs() {
     song21.selected = false
     song21.favorite = false
     song21.sortingIndex = 0
+    song21.alphabet = String(describing: song21.title![(song21.title!.startIndex)])
     
     let song22 = Song(context: context)
     song22.order = 22
@@ -276,6 +296,7 @@ func generateSongs() {
     song22.selected = false
     song22.favorite = false
     song22.sortingIndex = 0
+    song22.alphabet = String(describing: song22.title![(song22.title!.startIndex)])
     
     let song23 = Song(context: context)
     song23.order = 23
@@ -288,6 +309,7 @@ func generateSongs() {
     song23.selected = false
     song23.favorite = false
     song23.sortingIndex = 0
+    song23.alphabet = String(describing: song23.title![(song23.title!.startIndex)])
     
     let song24 = Song(context: context)
     song24.order = 24
@@ -300,6 +322,7 @@ func generateSongs() {
     song24.selected = false
     song24.favorite = false
     song24.sortingIndex = 0
+    song24.alphabet = String(describing: song24.title![(song24.title!.startIndex)])
     
     let song25 = Song(context: context)
     song25.order = 25
@@ -312,6 +335,7 @@ func generateSongs() {
     song25.selected = false
     song25.favorite = false
     song25.sortingIndex = 0
+    song25.alphabet = String(describing: song25.title![(song25.title!.startIndex)])
 
     let song26 = Song(context: context)
     song26.order = 26
@@ -324,6 +348,7 @@ func generateSongs() {
     song26.selected = false
     song26.favorite = false
     song26.sortingIndex = 0
+    song26.alphabet = String(describing: song26.title![(song26.title!.startIndex)])
 
     let song27 = Song(context: context)
     song27.order = 27
@@ -336,6 +361,7 @@ func generateSongs() {
     song27.selected = false
     song27.favorite = false
     song27.sortingIndex = 0
+    song27.alphabet = String(describing: song27.title![(song27.title!.startIndex)])
 
     let song28 = Song(context: context)
     song28.order = 28
@@ -348,6 +374,7 @@ func generateSongs() {
     song28.selected = false
     song28.favorite = false
     song28.sortingIndex = 0
+    song28.alphabet = String(describing: song28.title![(song28.title!.startIndex)])
 
     let song29 = Song(context: context)
     song29.order = 29
@@ -360,6 +387,7 @@ func generateSongs() {
     song29.selected = false
     song29.favorite = false
     song29.sortingIndex = 0
+    song29.alphabet = String(describing: song29.title![(song29.title!.startIndex)])
 
     let song30 = Song(context: context)
     song30.order = 30
@@ -372,6 +400,7 @@ func generateSongs() {
     song30.selected = false
     song30.favorite = false
     song30.sortingIndex = 0
+    song30.alphabet = String(describing: song30.title![(song30.title!.startIndex)])
 
     let song31 = Song(context: context)
     song31.order = 31
@@ -384,6 +413,7 @@ func generateSongs() {
     song31.selected = false
     song31.favorite = false
     song31.sortingIndex = 0
+    song31.alphabet = String(describing: song31.title![(song31.title!.startIndex)])
 
     let song32 = Song(context: context)
     song32.order = 32
@@ -396,6 +426,7 @@ func generateSongs() {
     song32.selected = false
     song32.favorite = false
     song32.sortingIndex = 0
+    song32.alphabet = String(describing: song32.title![(song32.title!.startIndex)])
 
     let song33 = Song(context: context)
     song33.order = 33
@@ -408,6 +439,7 @@ func generateSongs() {
     song33.selected = false
     song33.favorite = false
     song33.sortingIndex = 0
+    song33.alphabet = String(describing: song33.title![(song33.title!.startIndex)])
 
     let song34 = Song(context: context)
     song34.order = 34
@@ -420,6 +452,7 @@ func generateSongs() {
     song34.selected = false
     song34.favorite = false
     song34.sortingIndex = 0
+    song34.alphabet = String(describing: song34.title![(song34.title!.startIndex)])
 
     let song35 = Song(context: context)
     song35.order = 35
@@ -432,6 +465,7 @@ func generateSongs() {
     song35.selected = false
     song35.favorite = true
     song35.sortingIndex = 0
+    song35.alphabet = String(describing: song35.title![(song35.title!.startIndex)])
     
     let song36 = Song(context: context)
     song36.order = 36
@@ -444,6 +478,7 @@ func generateSongs() {
     song36.selected = false
     song36.favorite = false
     song36.sortingIndex = 0
+    song36.alphabet = String(describing: song36.title![(song36.title!.startIndex)])
     
     let song37 = Song(context: context)
     song37.order = 37
@@ -456,6 +491,7 @@ func generateSongs() {
     song37.selected = false
     song37.favorite = false
     song37.sortingIndex = 0
+    song37.alphabet = String(describing: song37.title![(song37.title!.startIndex)])
     
     let song38 = Song(context: context)
     song38.order = 38
@@ -468,6 +504,7 @@ func generateSongs() {
     song38.selected = false
     song38.favorite = false
     song38.sortingIndex = 0
+    song38.alphabet = String(describing: song38.title![(song38.title!.startIndex)])
     
     let song39 = Song(context: context)
     song39.order = 39
@@ -480,6 +517,7 @@ func generateSongs() {
     song39.selected = false
     song39.favorite = false
     song39.sortingIndex = 0
+    song39.alphabet = String(describing: song39.title![(song39.title!.startIndex)])
     
     let song40 = Song(context: context)
     song40.order = 40
@@ -492,6 +530,7 @@ func generateSongs() {
     song40.selected = false
     song40.favorite = false
     song40.sortingIndex = 0
+    song40.alphabet = String(describing: song40.title![(song40.title!.startIndex)])
     
     let song41 = Song(context: context)
     song41.order = 41
@@ -504,6 +543,7 @@ func generateSongs() {
     song41.selected = false
     song41.favorite = false
     song41.sortingIndex = 0
+    song41.alphabet = String(describing: song41.title![(song41.title!.startIndex)])
     
     let song42 = Song(context: context)
     song42.order = 42
@@ -516,6 +556,7 @@ func generateSongs() {
     song42.selected = false
     song42.favorite = false
     song42.sortingIndex = 0
+    song42.alphabet = String(describing: song42.title![(song42.title!.startIndex)])
     
     let song43 = Song(context: context)
     song43.order = 43
@@ -528,6 +569,7 @@ func generateSongs() {
     song43.selected = false
     song43.favorite = false
     song43.sortingIndex = 0
+    song43.alphabet = String(describing: song43.title![(song43.title!.startIndex)])
     
     let song51 = Song(context: context)
     song51.order = 51
@@ -540,6 +582,7 @@ func generateSongs() {
     song51.selected = false
     song51.favorite = true
     song51.sortingIndex = 0
+    song51.alphabet = String(describing: song51.title![(song51.title!.startIndex)])
     
     let song52 = Song(context: context)
     song52.order = 52
@@ -552,6 +595,7 @@ func generateSongs() {
     song52.selected = false
     song52.favorite = false
     song52.sortingIndex = 0
+    song52.alphabet = String(describing: song52.title![(song52.title!.startIndex)])
     
     let song53 = Song(context: context)
     song53.order = 53
@@ -564,6 +608,7 @@ func generateSongs() {
     song53.selected = false
     song53.favorite = false
     song53.sortingIndex = 0
+    song53.alphabet = String(describing: song53.title![(song53.title!.startIndex)])
     
     let song54 = Song(context: context)
     song54.order = 54
@@ -576,6 +621,7 @@ func generateSongs() {
     song54.selected = false
     song54.favorite = false
     song54.sortingIndex = 0
+    song54.alphabet = String(describing: song54.title![(song54.title!.startIndex)])
     
     let song55 = Song(context: context)
     song55.order = 55
@@ -588,6 +634,7 @@ func generateSongs() {
     song55.selected = false
     song55.favorite = false
     song55.sortingIndex = 0
+    song55.alphabet = String(describing: song55.title![(song55.title!.startIndex)])
     
     let song56 = Song(context: context)
     song56.order = 56
@@ -601,6 +648,7 @@ func generateSongs() {
     song56.favorite = true
     song56.selectedOne = taskSong
     song56.sortingIndex = 0
+    song56.alphabet = String(describing: song56.title![(song56.title!.startIndex)])
     
     let song57 = Song(context: context)
     song57.order = 57
@@ -613,6 +661,7 @@ func generateSongs() {
     song57.selected = false
     song57.favorite = false
     song57.sortingIndex = 0
+    song57.alphabet = String(describing: song57.title![(song57.title!.startIndex)])
     
     let song58 = Song(context: context)
     song58.order = 58
@@ -625,6 +674,7 @@ func generateSongs() {
     song58.selected = false
     song58.favorite = false
     song58.sortingIndex = 0
+    song58.alphabet = String(describing: song58.title![(song58.title!.startIndex)])
     
     let song59 = Song(context: context)
     song59.order = 59
@@ -637,6 +687,7 @@ func generateSongs() {
     song59.selected = false
     song59.favorite = false
     song59.sortingIndex = 0
+    song59.alphabet = String(describing: song59.title![(song59.title!.startIndex)])
     
     let song60 = Song(context: context)
     song60.order = 60
@@ -649,6 +700,7 @@ func generateSongs() {
     song60.selected = false
     song60.favorite = false
     song60.sortingIndex = 0
+    song60.alphabet = String(describing: song1.title![(song1.title!.startIndex)])
     
     let song61 = Song(context: context)
     song61.order = 61
@@ -661,6 +713,7 @@ func generateSongs() {
     song61.selected = false
     song61.favorite = false
     song61.sortingIndex = 0
+    song61.alphabet = String(describing: song61.title![(song61.title!.startIndex)])
     
     let song62 = Song(context: context)
     song62.order = 62
@@ -673,6 +726,7 @@ func generateSongs() {
     song62.selected = false
     song62.favorite = false
     song62.sortingIndex = 0
+    song62.alphabet = String(describing: song62.title![(song62.title!.startIndex)])
     
     let song63 = Song(context: context)
     song63.order = 63
@@ -685,6 +739,7 @@ func generateSongs() {
     song63.selected = false
     song63.favorite = false
     song63.sortingIndex = 0
+    song63.alphabet = String(describing: song63.title![(song63.title!.startIndex)])
     
     let song64 = Song(context: context)
     song64.order = 64
@@ -697,6 +752,7 @@ func generateSongs() {
     song64.selected = false
     song64.favorite = false
     song64.sortingIndex = 0
+    song64.alphabet = String(describing: song64.title![(song64.title!.startIndex)])
     
     let song65 = Song(context: context)
     song65.order = 65
@@ -709,6 +765,7 @@ func generateSongs() {
     song65.selected = false
     song65.favorite = false
     song65.sortingIndex = 0
+    song65.alphabet = String(describing: song65.title![(song65.title!.startIndex)])
     
     let song66 = Song(context: context)
     song66.order = 66
@@ -721,6 +778,7 @@ func generateSongs() {
     song66.selected = false
     song66.favorite = false
     song66.sortingIndex = 0
+    song66.alphabet = String(describing: song66.title![(song66.title!.startIndex)])
     
     let song67 = Song(context: context)
     song67.order = 67
@@ -733,6 +791,7 @@ func generateSongs() {
     song67.selected = false
     song67.favorite = false
     song67.sortingIndex = 0
+    song67.alphabet = String(describing: song67.title![(song67.title!.startIndex)])
     
     let song68 = Song(context: context)
     song68.order = 68
@@ -745,6 +804,7 @@ func generateSongs() {
     song68.selected = false
     song68.favorite = false
     song68.sortingIndex = 0
+    song68.alphabet = String(describing: song68.title![(song68.title!.startIndex)])
     
     let song69 = Song(context: context)
     song69.order = 69
@@ -757,6 +817,7 @@ func generateSongs() {
     song69.selected = false
     song69.favorite = true
     song69.sortingIndex = 0
+    song69.alphabet = String(describing: song69.title![(song69.title!.startIndex)])
     
     let song70 = Song(context: context)
     song70.order = 70
@@ -769,6 +830,7 @@ func generateSongs() {
     song70.selected = false
     song70.favorite = false
     song70.sortingIndex = 0
+    song70.alphabet = String(describing: song70.title![(song70.title!.startIndex)])
     
     let song71 = Song(context: context)
     song71.order = 71
@@ -781,6 +843,7 @@ func generateSongs() {
     song71.selected = false
     song71.favorite = false
     song71.sortingIndex = 0
+    song71.alphabet = String(describing: song71.title![(song71.title!.startIndex)])
     
     let song72 = Song(context: context)
     song72.order = 72
@@ -793,6 +856,7 @@ func generateSongs() {
     song72.selected = false
     song72.favorite = false
     song72.sortingIndex = 0
+    song72.alphabet = String(describing: song72.title![(song72.title!.startIndex)])
     
     let song73 = Song(context: context)
     song73.order = 73
@@ -805,6 +869,7 @@ func generateSongs() {
     song73.selected = false
     song73.favorite = false
     song73.sortingIndex = 0
+    song73.alphabet = String(describing: song73.title![(song73.title!.startIndex)])
     
     let song74 = Song(context: context)
     song74.order = 74
@@ -817,6 +882,7 @@ func generateSongs() {
     song74.selected = false
     song74.favorite = false
     song74.sortingIndex = 0
+    song74.alphabet = String(describing: song74.title![(song74.title!.startIndex)])
     
     let song75 = Song(context: context)
     song75.order = 75
@@ -829,6 +895,7 @@ func generateSongs() {
     song75.selected = false
     song75.favorite = false
     song75.sortingIndex = 0
+    song75.alphabet = String(describing: song75.title![(song75.title!.startIndex)])
     
     let song76 = Song(context: context)
     song76.order = 76
@@ -841,6 +908,7 @@ func generateSongs() {
     song76.selected = false
     song76.favorite = false
     song76.sortingIndex = 0
+    song76.alphabet = String(describing: song76.title![(song76.title!.startIndex)])
     
     let song77 = Song(context: context)
     song77.order = 77
@@ -853,6 +921,7 @@ func generateSongs() {
     song77.selected = false
     song77.favorite = false
     song77.sortingIndex = 0
+    song77.alphabet = String(describing: song77.title![(song77.title!.startIndex)])
     
     let song78 = Song(context: context)
     song78.order = 78
@@ -865,6 +934,7 @@ func generateSongs() {
     song78.selected = false
     song78.favorite = false
     song78.sortingIndex = 0
+    song78.alphabet = String(describing: song78.title![(song78.title!.startIndex)])
     
     let song79 = Song(context: context)
     song79.order = 2
@@ -877,6 +947,7 @@ func generateSongs() {
     song79.selected = false
     song79.favorite = false
     song79.sortingIndex = 0
+    song79.alphabet = String(describing: song79.title![(song79.title!.startIndex)])
     
     let song80 = Song(context: context)
     song80.order = 80
@@ -889,6 +960,7 @@ func generateSongs() {
     song80.selected = false
     song80.favorite = true
     song80.sortingIndex = 0
+    song80.alphabet = String(describing: song80.title![(song80.title!.startIndex)])
     
     let song81 = Song(context: context)
     song81.order = 81
@@ -901,6 +973,7 @@ func generateSongs() {
     song81.selected = false
     song81.favorite = true
     song81.sortingIndex = 0
+    song81.alphabet = String(describing: song81.title![(song81.title!.startIndex)])
     
     let song82 = Song(context: context)
     song82.order = 82
@@ -913,6 +986,7 @@ func generateSongs() {
     song82.selected = false
     song82.favorite = false
     song82.sortingIndex = 0
+    song82.alphabet = String(describing: song82.title![(song82.title!.startIndex)])
     
     let song83 = Song(context: context)
     song83.order = 83
@@ -925,6 +999,7 @@ func generateSongs() {
     song83.selected = false
     song83.favorite = false
     song83.sortingIndex = 0
+    song83.alphabet = String(describing: song83.title![(song83.title!.startIndex)])
     
     let song84 = Song(context: context)
     song84.order = 84
@@ -937,6 +1012,7 @@ func generateSongs() {
     song84.selected = false
     song84.favorite = true
     song84.sortingIndex = 0
+    song84.alphabet = String(describing: song84.title![(song84.title!.startIndex)])
     
     let song85 = Song(context: context)
     song85.order = 85
@@ -949,6 +1025,7 @@ func generateSongs() {
     song85.selected = false
     song85.favorite = false
     song85.sortingIndex = 0
+    song85.alphabet = String(describing: song85.title![(song85.title!.startIndex)])
     
     let song86 = Song(context: context)
     song86.order = 86
@@ -961,6 +1038,7 @@ func generateSongs() {
     song86.selected = false
     song86.favorite = false
     song86.sortingIndex = 0
+    song86.alphabet = String(describing: song86.title![(song86.title!.startIndex)])
     
     let song87 = Song(context: context)
     song87.order = 87
@@ -973,6 +1051,7 @@ func generateSongs() {
     song87.selected = false
     song87.favorite = false
     song87.sortingIndex = 0
+    song87.alphabet = String(describing: song87.title![(song87.title!.startIndex)])
     
     let song88 = Song(context: context)
     song88.order = 88
@@ -985,6 +1064,7 @@ func generateSongs() {
     song88.selected = false
     song88.favorite = false
     song88.sortingIndex = 0
+    song88.alphabet = String(describing: song88.title![(song88.title!.startIndex)])
     
     let song89 = Song(context: context)
     song89.order = 89
@@ -997,6 +1077,7 @@ func generateSongs() {
     song89.selected = false
     song89.favorite = false
     song89.sortingIndex = 0
+    song89.alphabet = String(describing: song89.title![(song89.title!.startIndex)])
     
     let song90 = Song(context: context)
     song90.order = 90
@@ -1009,6 +1090,7 @@ func generateSongs() {
     song90.selected = false
     song90.favorite = false
     song90.sortingIndex = 0
+    song90.alphabet = String(describing: song90.title![(song90.title!.startIndex)])
     
     let song91 = Song(context: context)
     song91.order = 91
@@ -1021,6 +1103,7 @@ func generateSongs() {
     song91.selected = false
     song91.favorite = false
     song91.sortingIndex = 0
+    song91.alphabet = String(describing: song91.title![(song91.title!.startIndex)])
     
     let song92 = Song(context: context)
     song92.order = 92
@@ -1033,6 +1116,7 @@ func generateSongs() {
     song92.selected = false
     song92.favorite = true
     song92.sortingIndex = 0
+    song92.alphabet = String(describing: song92.title![(song92.title!.startIndex)])
     
     let song93 = Song(context: context)
     song93.order = 93
@@ -1045,6 +1129,7 @@ func generateSongs() {
     song93.selected = false
     song93.favorite = true
     song93.sortingIndex = 0
+    song93.alphabet = String(describing: song93.title![(song93.title!.startIndex)])
     
     let song94 = Song(context: context)
     song94.order = 94
@@ -1057,6 +1142,7 @@ func generateSongs() {
     song94.selected = false
     song94.favorite = false
     song94.sortingIndex = 0
+    song94.alphabet = String(describing: song94.title![(song94.title!.startIndex)])
     
     let song95 = Song(context: context)
     song95.order = 95
@@ -1069,6 +1155,7 @@ func generateSongs() {
     song95.selected = false
     song95.favorite = false
     song95.sortingIndex = 0
+    song95.alphabet = String(describing: song95.title![(song95.title!.startIndex)])
     
     let song96 = Song(context: context)
     song96.order = 96
@@ -1081,6 +1168,7 @@ func generateSongs() {
     song96.selected = false
     song96.favorite = false
     song96.sortingIndex = 0
+    song96.alphabet = String(describing: song96.title![(song96.title!.startIndex)])
     
     let song97 = Song(context: context)
     song97.order = 97
@@ -1093,6 +1181,7 @@ func generateSongs() {
     song97.selected = false
     song97.favorite = false
     song97.sortingIndex = 0
+    song97.alphabet = String(describing: song97.title![(song97.title!.startIndex)])
     
     let song98 = Song(context: context)
     song98.order = 98
@@ -1105,6 +1194,7 @@ func generateSongs() {
     song98.selected = false
     song98.favorite = false
     song98.sortingIndex = 0
+    song98.alphabet = String(describing: song98.title![(song98.title!.startIndex)])
     
     let song99 = Song(context: context)
     song99.order = 99
@@ -1117,6 +1207,7 @@ func generateSongs() {
     song99.selected = false
     song99.favorite = false
     song99.sortingIndex = 0
+    song99.alphabet = String(describing: song99.title![(song99.title!.startIndex)])
     
     let song100 = Song(context: context)
     song100.order = 100
@@ -1129,6 +1220,7 @@ func generateSongs() {
     song100.selected = false
     song100.favorite = true
     song100.sortingIndex = 0
+    song100.alphabet = String(describing: song100.title![(song100.title!.startIndex)])
     
     let song101 = Song(context: context)
     song101.order = 101
@@ -1141,6 +1233,7 @@ func generateSongs() {
     song101.selected = false
     song101.favorite = true
     song101.sortingIndex = 0
+    song101.alphabet = String(describing: song101.title![(song101.title!.startIndex)])
     
     let song102 = Song(context: context)
     song102.order = 102
@@ -1153,6 +1246,7 @@ func generateSongs() {
     song102.selected = false
     song102.favorite = true
     song102.sortingIndex = 0
+    song102.alphabet = String(describing: song102.title![(song102.title!.startIndex)])
     
     let song103 = Song(context: context)
     song103.order = 103
@@ -1165,6 +1259,7 @@ func generateSongs() {
     song103.selected = false
     song103.favorite = false
     song103.sortingIndex = 0
+    song103.alphabet = String(describing: song103.title![(song103.title!.startIndex)])
     
     let song104 = Song(context: context)
     song104.order = 104
@@ -1177,6 +1272,7 @@ func generateSongs() {
     song104.selected = false
     song104.favorite = false
     song104.sortingIndex = 0
+    song104.alphabet = String(describing: song104.title![(song104.title!.startIndex)])
     
     let song105 = Song(context: context)
     song105.order = 105
@@ -1189,6 +1285,7 @@ func generateSongs() {
     song105.selected = false
     song105.favorite = false
     song105.sortingIndex = 0
+    song105.alphabet = String(describing: song105.title![(song105.title!.startIndex)])
     
     let song106 = Song(context: context)
     song106.order = 106
@@ -1201,6 +1298,7 @@ func generateSongs() {
     song106.selected = false
     song106.favorite = true
     song106.sortingIndex = 0
+    song106.alphabet = String(describing: song106.title![(song106.title!.startIndex)])
     
     let song107 = Song(context: context)
     song107.order = 107
@@ -1213,6 +1311,7 @@ func generateSongs() {
     song107.selected = false
     song107.favorite = true
     song107.sortingIndex = 0
+    song107.alphabet = String(describing: song107.title![(song107.title!.startIndex)])
     
     let song108 = Song(context: context)
     song108.order = 108
@@ -1225,6 +1324,7 @@ func generateSongs() {
     song108.selected = false
     song108.favorite = true
     song108.sortingIndex = 0
+    song108.alphabet = String(describing: song108.title![(song108.title!.startIndex)])
     
     ad.saveContext()
 }

@@ -23,6 +23,7 @@ func generateQuotes() {
     quote1.random = Int64(arc4random_uniform(1000))
     quote1.selected = true
     quote1.sortingIndex = 0
+    quote1.alphabet = String(describing: quote1.title![(quote1.title!.startIndex)])
     
     let quote2 = Quote(context: context)
     quote2.title = "Faith vs. Fear"
@@ -33,6 +34,7 @@ func generateQuotes() {
     quote2.random = Int64(arc4random_uniform(1000))
     quote2.selected = false
     quote2.sortingIndex = 0
+    quote2.alphabet = String(describing: quote2.title![(quote2.title!.startIndex)])
     
     let quote3 = Quote(context: context)
     quote3.title = "A Pattern in All Things"
@@ -43,6 +45,7 @@ func generateQuotes() {
     quote3.random = Int64(arc4random_uniform(1000))
     quote3.selected = false
     quote3.sortingIndex = 0
+    quote3.alphabet = String(describing: quote3.title![(quote3.title!.startIndex)])
     
     let quote4 = Quote(context: context)
     quote4.title = "An Attitude of Gratitude"
@@ -53,6 +56,7 @@ func generateQuotes() {
     quote4.random = Int64(arc4random_uniform(1000))
     quote4.selected = false
     quote4.sortingIndex = 0
+    quote4.alphabet = String(describing: quote4.title![(quote4.title!.startIndex)])
     
     let quote5 = Quote(context: context)
     quote5.title = "Prayer"
@@ -63,6 +67,7 @@ func generateQuotes() {
     quote5.random = Int64(arc4random_uniform(1000))
     quote5.selected = false
     quote5.sortingIndex = 0
+    quote5.alphabet = String(describing: quote5.title![(quote5.title!.startIndex)])
     
     let quote6 = Quote(context: context)
     quote6.title = "Live Up to Your Inheritance"
@@ -73,6 +78,7 @@ func generateQuotes() {
     quote6.random = Int64(arc4random_uniform(1000))
     quote6.selected = false
     quote6.sortingIndex = 0
+    quote6.alphabet = String(describing: quote6.title![(quote6.title!.startIndex)])
     
     let quote7 = Quote(context: context)
     quote7.title = "Come, Join with Us"
@@ -83,6 +89,7 @@ func generateQuotes() {
     quote7.random = Int64(arc4random_uniform(1000))
     quote7.selected = false
     quote7.sortingIndex = 0
+    quote7.alphabet = String(describing: quote7.title![(quote7.title!.startIndex)])
     
     let quote8 = Quote(context: context)
     quote8.title = "Choices"
@@ -93,6 +100,7 @@ func generateQuotes() {
     quote8.random = Int64(arc4random_uniform(1000))
     quote8.selected = false
     quote8.sortingIndex = 0
+    quote8.alphabet = String(describing: quote8.title![(quote8.title!.startIndex)])
     
     let quote9 = Quote(context: context)
     quote9.title = "Lest Ye Be Wearied and Faint in Your Minds"
@@ -103,6 +111,7 @@ func generateQuotes() {
     quote9.random = Int64(arc4random_uniform(1000))
     quote9.selected = false
     quote9.sortingIndex = 0
+    quote9.alphabet = String(describing: quote9.title![(quote9.title!.startIndex)])
     
     let quote10 = Quote(context: context)
     quote10.title = "Your Happily Ever After"
@@ -113,6 +122,7 @@ func generateQuotes() {
     quote10.random = Int64(arc4random_uniform(1000))
     quote10.selected = false
     quote10.sortingIndex = 0
+    quote10.alphabet = String(describing: quote10.title![(quote10.title!.startIndex)])
     
     let quote11 = Quote(context: context)
     quote11.title = "Within the Clasp of Your Arms"
@@ -123,6 +133,7 @@ func generateQuotes() {
     quote11.random = Int64(arc4random_uniform(1000))
     quote11.selected = false
     quote11.sortingIndex = 0
+    quote11.alphabet = String(describing: quote11.title![(quote11.title!.startIndex)])
     
     let quote12 = Quote(context: context)
     quote12.title = "Lord, I Believe"
@@ -133,6 +144,7 @@ func generateQuotes() {
     quote12.random = Int64(arc4random_uniform(1000))
     quote12.selected = false
     quote12.sortingIndex = 0
+    quote12.alphabet = String(describing: quote12.title![(quote12.title!.startIndex)])
     
     let quote13 = Quote(context: context)
     quote13.title = "Preserving the Heart’s Mighty Change"
@@ -143,6 +155,7 @@ func generateQuotes() {
     quote13.random = Int64(arc4random_uniform(1000))
     quote13.selected = false
     quote13.sortingIndex = 0
+    quote13.alphabet = String(describing: quote13.title![(quote13.title!.startIndex)])
     
     ad.saveContext()
 }

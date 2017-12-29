@@ -21,6 +21,7 @@ func generateTreats() {
     treat1.random = Int64(arc4random_uniform(1000))
     treat1.selected = false
     treat1.sortingIndex = 0
+    treat1.alphabet = String(describing: treat1.title![(treat1.title!.startIndex)])
     
     let treat2 = Treat(context: context)
     treat2.category = treatsCategoryArray[1]
@@ -32,6 +33,7 @@ func generateTreats() {
     treat2.random = Int64(arc4random_uniform(1000))
     treat2.selected = true
     treat2.sortingIndex = 0
+    treat2.alphabet = String(describing: treat2.title![(treat2.title!.startIndex)])
     
     let treat3 = Treat(context: context)
     treat3.category = treatsCategoryArray[0]
@@ -42,6 +44,7 @@ func generateTreats() {
     treat3.random = Int64(arc4random_uniform(1000))
     treat3.selected = false
     treat3.sortingIndex = 0
+    treat3.alphabet = String(describing: treat3.title![(treat3.title!.startIndex)])
     
     let treat4 = Treat(context: context)
     treat4.category = treatsCategoryArray[2]
@@ -52,6 +55,7 @@ func generateTreats() {
     treat4.random = Int64(arc4random_uniform(1000))
     treat4.selected = false
     treat4.sortingIndex = 0
+    treat4.alphabet = String(describing: treat4.title![(treat4.title!.startIndex)])
     
     let treat5 = Treat(context: context)
     treat5.category = treatsCategoryArray[3]
@@ -62,6 +66,7 @@ func generateTreats() {
     treat5.random = Int64(arc4random_uniform(1000))
     treat5.selected = false
     treat5.sortingIndex = 0
+    treat5.alphabet = String(describing: treat5.title![(treat5.title!.startIndex)])
     
     let treat6 = Treat(context: context)
     treat6.category = treatsCategoryArray[3]
@@ -72,6 +77,7 @@ func generateTreats() {
     treat6.random = Int64(arc4random_uniform(1000))
     treat6.selected = false
     treat6.sortingIndex = 0
+    treat6.alphabet = String(describing: treat6.title![(treat6.title!.startIndex)])
     
     let treat7 = Treat(context: context)
     treat7.category = treatsCategoryArray[4]
@@ -82,6 +88,7 @@ func generateTreats() {
     treat7.random = Int64(arc4random_uniform(1000))
     treat7.selected = false
     treat7.sortingIndex = 0
+    treat7.alphabet = String(describing: treat7.title![(treat7.title!.startIndex)])
     
     let treat8 = Treat(context: context)
     treat8.category = treatsCategoryArray[5]
@@ -92,6 +99,7 @@ func generateTreats() {
     treat8.random = Int64(arc4random_uniform(1000))
     treat8.selected = false
     treat8.sortingIndex = 0
+    treat8.alphabet = String(describing: treat8.title![(treat8.title!.startIndex)])
     
     let treat9 = Treat(context: context)
     treat9.category = treatsCategoryArray[6]
@@ -102,6 +110,7 @@ func generateTreats() {
     treat9.random = Int64(arc4random_uniform(1000))
     treat9.selected = false
     treat9.sortingIndex = 0
+    treat9.alphabet = String(describing: treat9.title![(treat9.title!.startIndex)])
     
     let treat10 = Treat(context: context)
     treat10.category = treatsCategoryArray[7]
@@ -112,6 +121,7 @@ func generateTreats() {
     treat10.random = Int64(arc4random_uniform(1000))
     treat10.selected = false
     treat10.sortingIndex = 0
+    treat10.alphabet = String(describing: treat10.title![(treat10.title!.startIndex)])
     
     let treat11 = Treat(context: context)
     treat11.category = treatsCategoryArray[8]
@@ -122,6 +132,7 @@ func generateTreats() {
     treat11.random = Int64(arc4random_uniform(1000))
     treat11.selected = false
     treat11.sortingIndex = 0
+    treat11.alphabet = String(describing: treat11.title![(treat11.title!.startIndex)])
     
     let treat12 = Treat(context: context)
     treat12.category = treatsCategoryArray[9]
@@ -132,6 +143,7 @@ func generateTreats() {
     treat12.random = Int64(arc4random_uniform(1000))
     treat12.selected = false
     treat12.sortingIndex = 0
+    treat12.alphabet = String(describing: treat12.title![(treat12.title!.startIndex)])
     
     let treat13 = Treat(context: context)
     treat13.category = treatsCategoryArray[10]
@@ -142,6 +154,7 @@ func generateTreats() {
     treat13.random = Int64(arc4random_uniform(1000))
     treat13.selected = false
     treat13.sortingIndex = 0
+    treat13.alphabet = String(describing: treat13.title![(treat13.title!.startIndex)])
     
     ad.saveContext()
 }

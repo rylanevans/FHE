@@ -37,8 +37,30 @@ class ScriptureVC: UIViewController {
         }
         
         if let task = specificTask.selectedScripture {
+            
+            var volume = ""
+            if task.volume == "dc-testament" {
+                volume = "DC"
+            } else if task.volume != nil {
+                volume = task.volume!
+            }
+            
+            var book = ""
+            if task.book == "dc" {
+                book = ""
+            } else if task.book != nil {
+                book = task.book!
+            }
+            
+            var chapterVerse = ""
+            if task.verse == nil || task.verse == "" {
+                chapterVerse = ""
+            } else {
+                chapterVerse = "\(task.chapter ?? "") : \(task.verse ?? "")"
+            }
+            
             scriptureTitleLabel.text = task.title?.capitalized
-            scriptureDetailLabel.text = "\(task.volume?.uppercased() ?? "") \(task.book?.capitalized ?? "") \(task.chapter ?? ""):\(task.verse ?? "")"
+            scriptureDetailLabel.text = "\(volume.uppercased()) \(book.capitalized) \(chapterVerse)"
             
             if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
                 let firstVerse = (task.verse?.components(separatedBy: "-")[0])!

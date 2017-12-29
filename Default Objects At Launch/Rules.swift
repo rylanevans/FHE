@@ -22,6 +22,7 @@ func generateRules() {
     rule1.selected = true
     rule1.favorite = true
     rule1.sortingIndex = 0
+    rule1.alphabet = String(describing: rule1.title![(rule1.title!.startIndex)])
     rule1.selectedOne = taskRule
     
     let rule2 = Rule(context: context)
@@ -33,6 +34,7 @@ func generateRules() {
     rule2.selected = false
     rule2.favorite = true
     rule2.sortingIndex = 0
+    rule2.alphabet = String(describing: rule2.title![(rule2.title!.startIndex)])
     
     let rule3 = Rule(context: context)
     rule3.title = "Respect Belongings"
@@ -43,6 +45,7 @@ func generateRules() {
     rule3.selected = false
     rule3.favorite = false
     rule3.sortingIndex = 0
+    rule3.alphabet = String(describing: rule3.title![(rule3.title!.startIndex)])
     
     let rule4 = Rule(context: context)
     rule4.title = "Table Manners"
@@ -53,6 +56,7 @@ func generateRules() {
     rule4.selected = false
     rule4.favorite = false
     rule4.sortingIndex = 0
+    rule4.alphabet = String(describing: rule4.title![(rule4.title!.startIndex)])
     
     let rule5 = Rule(context: context)
     rule5.title = "Morning Routine"
@@ -63,6 +67,7 @@ func generateRules() {
     rule5.selected = false
     rule5.favorite = false
     rule5.sortingIndex = 0
+    rule5.alphabet = String(describing: rule5.title![(rule5.title!.startIndex)])
     
     let rule6 = Rule(context: context)
     rule6.title = "After School Routine"
@@ -73,6 +78,7 @@ func generateRules() {
     rule6.selected = false
     rule6.favorite = false
     rule6.sortingIndex = 0
+    rule6.alphabet = String(describing: rule6.title![(rule6.title!.startIndex)])
     
     let rule7 = Rule(context: context)
     rule7.title = "Bedtime Routine"
@@ -83,6 +89,7 @@ func generateRules() {
     rule7.selected = false
     rule7.favorite = true
     rule7.sortingIndex = 0
+    rule7.alphabet = String(describing: rule7.title![(rule7.title!.startIndex)])
     
     let rule8 = Rule(context: context)
     rule8.title = "House Chores"
@@ -93,6 +100,7 @@ func generateRules() {
     rule8.selected = false
     rule8.favorite = false
     rule8.sortingIndex = 0
+    rule8.alphabet = String(describing: rule8.title![(rule8.title!.startIndex)])
     
     let rule9 = Rule(context: context)
     rule9.title = "FHE & HT Expectations"
@@ -103,6 +111,7 @@ func generateRules() {
     rule9.selected = false
     rule9.favorite = false
     rule9.sortingIndex = 0
+    rule9.alphabet = String(describing: rule9.title![(rule9.title!.startIndex)])
     
     let rule10 = Rule(context: context)
     rule10.title = "Church Guidelines"
@@ -113,6 +122,7 @@ func generateRules() {
     rule10.selected = false
     rule10.favorite = false
     rule10.sortingIndex = 0
+    rule10.alphabet = String(describing: rule10.title![(rule10.title!.startIndex)])
     
     let rule11 = Rule(context: context)
     rule11.title = "Sunday Behavior"
@@ -123,6 +133,7 @@ func generateRules() {
     rule11.selected = false
     rule11.favorite = false
     rule11.sortingIndex = 0
+    rule11.alphabet = String(describing: rule11.title![(rule11.title!.startIndex)])
     
     ad.saveContext()
 }

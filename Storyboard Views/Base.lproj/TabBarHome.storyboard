@@ -1666,7 +1666,7 @@
                                         <rect key="frame" x="-0.5" y="0.0" width="375" height="730"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-VD-tBk">
-                                                <rect key="frame" x="15" y="15" width="345" height="622.5"/>
+                                                <rect key="frame" x="15" y="15" width="345" height="606.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBo-nK-E0X">
                                                         <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
@@ -1729,18 +1729,18 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
-                                                        <rect key="frame" x="0.0" y="240.5" width="345" height="194"/>
+                                                        <rect key="frame" x="0.0" y="240.5" width="345" height="178"/>
                                                         <string key="text">My name is Rylan Evans. 
 
-I would appreciate your support. 
+I am an independent app developer.  I would appreciate your support.
 
-I spent a lot of time and effort building something I thought would be both helpful and practiacl for parents and children. God has blessed me with many things in my life. Family is my greatest blessing! This is my way of giving back to what I treasure most, family. Please consider a donation.  A little goes a long way. Thank you for downloading the FHE app.</string>
+I have a passion for faith, family, and technology.  The FHE app combines all three passions.  I have spent a lot of time building this app with the hope it can be a useful tool to help bring God's spirit into your home.  Please consider a donation.  Thank you for dowloading the FHE app.  </string>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-Yq-ez1">
-                                                        <rect key="frame" x="0.0" y="434.5" width="345" height="20"/>
+                                                        <rect key="frame" x="0.0" y="418.5" width="345" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="8h4-rD-OPh"/>
                                                         </constraints>
@@ -1749,7 +1749,7 @@ I spent a lot of time and effort building something I thought would be both help
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rL5-cf-jdi">
-                                                        <rect key="frame" x="0.0" y="454.5" width="345" height="35"/>
+                                                        <rect key="frame" x="0.0" y="438.5" width="345" height="35"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8FZ-bm-sYr">
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="35"/>
@@ -1767,25 +1767,25 @@ I spent a lot of time and effort building something I thought would be both help
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbY-ji-HoK">
-                                                        <rect key="frame" x="0.0" y="489.5" width="345" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="473.5" width="345" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donations..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-zC-OfR">
-                                                        <rect key="frame" x="0.0" y="510" width="345" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="494" width="345" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFM-rg-UsV">
-                                                        <rect key="frame" x="0.0" y="537.5" width="345" height="6"/>
+                                                        <rect key="frame" x="0.0" y="521.5" width="345" height="6"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sun-TH-LXe">
-                                                        <rect key="frame" x="0.0" y="543.5" width="345" height="79"/>
+                                                        <rect key="frame" x="0.0" y="527.5" width="345" height="79"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyN-bk-XrC" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>

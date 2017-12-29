@@ -1,5 +1,5 @@
 //
-//  Thoughts.swift
+//  Thought.swift
 //  FHE
 //
 //  Created by Rylan Evans on 12/21/17.

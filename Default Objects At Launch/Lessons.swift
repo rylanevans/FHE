@@ -25,6 +25,7 @@ func generateLessons() {
     lesson2.random = Int64(arc4random_uniform(1000))
     lesson2.selected = true
     lesson2.sortingIndex = 0
+    lesson2.alphabet = String(describing: lesson2.title![(lesson2.title!.startIndex)])
     
     let lesson3 = Lesson(context: context)
     lesson3.category = "Temporal"
@@ -38,6 +39,7 @@ func generateLessons() {
     lesson3.random = Int64(arc4random_uniform(1000))
     lesson3.selected = false
     lesson3.sortingIndex = 0
+    lesson3.alphabet = String(describing: lesson3.title![(lesson3.title!.startIndex)])
     
     let lesson4 = Lesson(context: context)
     lesson4.category = "Temporal"
@@ -51,6 +53,7 @@ func generateLessons() {
     lesson4.random = Int64(arc4random_uniform(1000))
     lesson4.selected = false
     lesson4.sortingIndex = 0
+    lesson4.alphabet = String(describing: lesson4.title![(lesson4.title!.startIndex)])
     
     let lesson5 = Lesson(context: context)
     lesson5.category = "Temporal"
@@ -64,6 +67,7 @@ func generateLessons() {
     lesson5.random = Int64(arc4random_uniform(1000))
     lesson5.selected = false
     lesson5.sortingIndex = 0
+    lesson5.alphabet = String(describing: lesson5.title![(lesson5.title!.startIndex)])
     
     let lesson6 = Lesson(context: context)
     lesson6.category = "Temporal"
@@ -77,6 +81,7 @@ func generateLessons() {
     lesson6.random = Int64(arc4random_uniform(1000))
     lesson6.selected = false
     lesson6.sortingIndex = 0
+    lesson6.alphabet = String(describing: lesson6.title![(lesson6.title!.startIndex)])
     
     let lesson7 = Lesson(context: context)
     lesson7.category = "Temporal"
@@ -90,6 +95,7 @@ func generateLessons() {
     lesson7.random = Int64(arc4random_uniform(1000))
     lesson7.selected = false
     lesson7.sortingIndex = 0
+    lesson7.alphabet = String(describing: lesson7.title![(lesson7.title!.startIndex)])
     
     let lesson8 = Lesson(context: context)
     lesson8.category = "Temporal"
@@ -103,6 +109,7 @@ func generateLessons() {
     lesson8.random = Int64(arc4random_uniform(1000))
     lesson8.selected = false
     lesson8.sortingIndex = 0
+    lesson8.alphabet = String(describing: lesson8.title![(lesson8.title!.startIndex)])
     
     let lesson9 = Lesson(context: context)
     lesson9.category = "Temporal"
@@ -116,6 +123,7 @@ func generateLessons() {
     lesson9.random = Int64(arc4random_uniform(1000))
     lesson9.selected = false
     lesson9.sortingIndex = 0
+    lesson9.alphabet = String(describing: lesson9.title![(lesson9.title!.startIndex)])
     
     let lesson10 = Lesson(context: context)
     lesson10.category = "Spiritual"
@@ -129,6 +137,7 @@ func generateLessons() {
     lesson10.random = Int64(arc4random_uniform(1000))
     lesson10.selected = false
     lesson10.sortingIndex = 0
+    lesson10.alphabet = String(describing: lesson10.title![(lesson10.title!.startIndex)])
     
     let lesson11 = Lesson(context: context)
     lesson11.category = "Temporal"
@@ -142,6 +151,7 @@ func generateLessons() {
     lesson11.random = Int64(arc4random_uniform(1000))
     lesson11.selected = false
     lesson11.sortingIndex = 0
+    lesson11.alphabet = String(describing: lesson11.title![(lesson11.title!.startIndex)])
     
     let lesson12 = Lesson(context: context)
     lesson12.category = "Spiritual"
@@ -155,6 +165,7 @@ func generateLessons() {
     lesson12.random = Int64(arc4random_uniform(1000))
     lesson12.selected = false
     lesson12.sortingIndex = 0
+    lesson12.alphabet = String(describing: lesson12.title![(lesson12.title!.startIndex)])
     
     let lesson13 = Lesson(context: context)
     lesson13.category = "Temporal"
@@ -168,6 +179,7 @@ func generateLessons() {
     lesson13.random = Int64(arc4random_uniform(1000))
     lesson13.selected = false
     lesson13.sortingIndex = 0
+    lesson13.alphabet = String(describing: lesson13.title![(lesson13.title!.startIndex)])
     
     let lesson14 = Lesson(context: context)
     lesson14.category = "Temporal"
@@ -181,6 +193,7 @@ func generateLessons() {
     lesson14.random = Int64(arc4random_uniform(1000))
     lesson14.selected = false
     lesson14.sortingIndex = 0
+    lesson14.alphabet = String(describing: lesson14.title![(lesson14.title!.startIndex)])
     
     let lesson15 = Lesson(context: context)
     lesson15.category = "Temporal"
@@ -194,6 +207,7 @@ func generateLessons() {
     lesson15.random = Int64(arc4random_uniform(1000))
     lesson15.selected = false
     lesson15.sortingIndex = 0
+    lesson15.alphabet = String(describing: lesson15.title![(lesson15.title!.startIndex)])
     
     let lesson16 = Lesson(context: context)
     lesson16.category = "Temporal"
@@ -207,6 +221,7 @@ func generateLessons() {
     lesson16.random = Int64(arc4random_uniform(1000))
     lesson16.selected = false
     lesson16.sortingIndex = 0
+    lesson16.alphabet = String(describing: lesson16.title![(lesson16.title!.startIndex)])
     
     let lesson17 = Lesson(context: context)
     lesson17.category = "Temporal"
@@ -220,6 +235,7 @@ func generateLessons() {
     lesson17.random = Int64(arc4random_uniform(1000))
     lesson17.selected = false
     lesson17.sortingIndex = 0
+    lesson17.alphabet = String(describing: lesson17.title![(lesson17.title!.startIndex)])
     
     let lesson18 = Lesson(context: context)
     lesson18.category = "Spiritual"
@@ -233,6 +249,7 @@ func generateLessons() {
     lesson18.random = Int64(arc4random_uniform(1000))
     lesson18.selected = false
     lesson18.sortingIndex = 0
+    lesson18.alphabet = String(describing: lesson18.title![(lesson18.title!.startIndex)])
     
     let lesson19 = Lesson(context: context)
     lesson19.category = lessonCategoryArray[0]
@@ -246,6 +263,7 @@ func generateLessons() {
     lesson19.random = Int64(arc4random_uniform(1000))
     lesson19.selected = false
     lesson19.sortingIndex = 0
+    lesson19.alphabet = String(describing: lesson19.title![(lesson19.title!.startIndex)])
     
     let lesson20 = Lesson(context: context)
     lesson20.category = lessonCategoryArray[0]
@@ -259,6 +277,7 @@ func generateLessons() {
     lesson20.random = Int64(arc4random_uniform(1000))
     lesson20.selected = false
     lesson20.sortingIndex = 0
+    lesson20.alphabet = String(describing: lesson20.title![(lesson20.title!.startIndex)])
     
     let lesson21 = Lesson(context: context)
     lesson21.category = "Temporal"
@@ -272,6 +291,7 @@ func generateLessons() {
     lesson21.random = Int64(arc4random_uniform(1000))
     lesson21.selected = false
     lesson21.sortingIndex = 0
+    lesson21.alphabet = String(describing: lesson21.title![(lesson21.title!.startIndex)])
     
     let lesson22 = Lesson(context: context)
     lesson22.category = lessonCategoryArray[0]
@@ -285,6 +305,7 @@ func generateLessons() {
     lesson22.random = Int64(arc4random_uniform(1000))
     lesson22.selected = false
     lesson22.sortingIndex = 0
+    lesson22.alphabet = String(describing: lesson22.title![(lesson22.title!.startIndex)])
     
     let lesson23 = Lesson(context: context)
     lesson23.category = lessonCategoryArray[0]
@@ -298,6 +319,7 @@ func generateLessons() {
     lesson23.random = Int64(arc4random_uniform(1000))
     lesson23.selected = false
     lesson23.sortingIndex = 0
+    lesson23.alphabet = String(describing: lesson23.title![(lesson23.title!.startIndex)])
     
     let lesson24 = Lesson(context: context)
     lesson24.category = lessonCategoryArray[0]
@@ -311,6 +333,7 @@ func generateLessons() {
     lesson24.random = Int64(arc4random_uniform(1000))
     lesson24.selected = false
     lesson24.sortingIndex = 0
+    lesson24.alphabet = String(describing: lesson24.title![(lesson24.title!.startIndex)])
     
     let lesson25 = Lesson(context: context)
     lesson25.category = lessonCategoryArray[0]
@@ -324,6 +347,7 @@ func generateLessons() {
     lesson25.random = Int64(arc4random_uniform(1000))
     lesson25.selected = false
     lesson25.sortingIndex = 0
+    lesson25.alphabet = String(describing: lesson25.title![(lesson25.title!.startIndex)])
     
     let lesson26 = Lesson(context: context)
     lesson26.category = lessonCategoryArray[0]
@@ -337,6 +361,7 @@ func generateLessons() {
     lesson26.random = Int64(arc4random_uniform(1000))
     lesson26.selected = false
     lesson26.sortingIndex = 0
+    lesson26.alphabet = String(describing: lesson26.title![(lesson26.title!.startIndex)])
     
     let lesson28 = Lesson(context: context)
     lesson28.category = "Temporal"
@@ -350,6 +375,7 @@ func generateLessons() {
     lesson28.random = Int64(arc4random_uniform(1000))
     lesson28.selected = false
     lesson28.sortingIndex = 0
+    lesson28.alphabet = String(describing: lesson28.title![(lesson28.title!.startIndex)])
     
     let lesson29 = Lesson(context: context)
     lesson29.category = lessonCategoryArray[0]
@@ -363,6 +389,7 @@ func generateLessons() {
     lesson29.random = Int64(arc4random_uniform(1000))
     lesson29.selected = false
     lesson29.sortingIndex = 0
+    lesson29.alphabet = String(describing: lesson29.title![(lesson29.title!.startIndex)])
     
     let lesson30 = Lesson(context: context)
     lesson30.category = lessonCategoryArray[0]
@@ -376,6 +403,7 @@ func generateLessons() {
     lesson30.random = Int64(arc4random_uniform(1000))
     lesson30.selected = false
     lesson30.sortingIndex = 0
+    lesson30.alphabet = String(describing: lesson30.title![(lesson30.title!.startIndex)])
     
     let lesson31 = Lesson(context: context)
     lesson31.category = "Temporal"
@@ -389,6 +417,7 @@ func generateLessons() {
     lesson31.random = Int64(arc4random_uniform(1000))
     lesson31.selected = false
     lesson31.sortingIndex = 0
+    lesson31.alphabet = String(describing: lesson31.title![(lesson31.title!.startIndex)])
     
     let lesson32 = Lesson(context: context)
     lesson32.category = "Temporal"
@@ -402,6 +431,7 @@ func generateLessons() {
     lesson32.random = Int64(arc4random_uniform(1000))
     lesson32.selected = false
     lesson32.sortingIndex = 0
+    lesson32.alphabet = String(describing: lesson32.title![(lesson32.title!.startIndex)])
     
     let lesson33 = Lesson(context: context)
     lesson33.category = "Temporal"
@@ -415,6 +445,7 @@ func generateLessons() {
     lesson33.random = Int64(arc4random_uniform(1000))
     lesson33.selected = false
     lesson33.sortingIndex = 0
+    lesson33.alphabet = String(describing: lesson33.title![(lesson33.title!.startIndex)])
     
     let lesson34 = Lesson(context: context)
     lesson34.category = "Temporal"
@@ -428,6 +459,7 @@ func generateLessons() {
     lesson34.random = Int64(arc4random_uniform(1000))
     lesson34.selected = false
     lesson34.sortingIndex = 0
+    lesson34.alphabet = String(describing: lesson34.title![(lesson34.title!.startIndex)])
     
     let lesson35 = Lesson(context: context)
     lesson35.category = lessonCategoryArray[0]
@@ -441,6 +473,7 @@ func generateLessons() {
     lesson35.random = Int64(arc4random_uniform(1000))
     lesson35.selected = false
     lesson35.sortingIndex = 0
+    lesson35.alphabet = String(describing: lesson35.title![(lesson35.title!.startIndex)])
     
     let lesson37 = Lesson(context: context)
     lesson37.category = lessonCategoryArray[0]
@@ -454,6 +487,7 @@ func generateLessons() {
     lesson37.random = Int64(arc4random_uniform(1000))
     lesson37.selected = false
     lesson37.sortingIndex = 0
+    lesson37.alphabet = String(describing: lesson37.title![(lesson37.title!.startIndex)])
     
     let lesson44 = Lesson(context: context)
     lesson44.category = lessonCategoryArray[0]
@@ -467,6 +501,7 @@ func generateLessons() {
     lesson44.random = Int64(arc4random_uniform(1000))
     lesson44.selected = false
     lesson44.sortingIndex = 0
+    lesson44.alphabet = String(describing: lesson44.title![(lesson44.title!.startIndex)])
     
     let lesson47 = Lesson(context: context)
     lesson47.category = lessonCategoryArray[0]
@@ -480,6 +515,7 @@ func generateLessons() {
     lesson47.random = Int64(arc4random_uniform(1000))
     lesson47.selected = false
     lesson47.sortingIndex = 0
+    lesson47.alphabet = String(describing: lesson47.title![(lesson47.title!.startIndex)])
     
     let lesson50 = Lesson(context: context)
     lesson50.category = lessonCategoryArray[0]
@@ -493,6 +529,7 @@ func generateLessons() {
     lesson50.random = Int64(arc4random_uniform(1000))
     lesson50.selected = false
     lesson50.sortingIndex = 0
+    lesson50.alphabet = String(describing: lesson50.title![(lesson50.title!.startIndex)])
     
     let lesson51 = Lesson(context: context)
     lesson51.category = lessonCategoryArray[0]
@@ -506,6 +543,7 @@ func generateLessons() {
     lesson51.random = Int64(arc4random_uniform(1000))
     lesson51.selected = false
     lesson51.sortingIndex = 0
+    lesson51.alphabet = String(describing: lesson51.title![(lesson51.title!.startIndex)])
     
     let lesson52 = Lesson(context: context)
     lesson52.category = lessonCategoryArray[0]
@@ -519,6 +557,7 @@ func generateLessons() {
     lesson52.random = Int64(arc4random_uniform(1000))
     lesson52.selected = false
     lesson52.sortingIndex = 0
+    lesson52.alphabet = String(describing: lesson52.title![(lesson52.title!.startIndex)])
     
     let lesson53 = Lesson(context: context)
     lesson53.category = lessonCategoryArray[0]
@@ -532,6 +571,7 @@ func generateLessons() {
     lesson53.random = Int64(arc4random_uniform(1000))
     lesson53.selected = false
     lesson53.sortingIndex = 0
+    lesson53.alphabet = String(describing: lesson53.title![(lesson53.title!.startIndex)])
     
     let lesson54 = Lesson(context: context)
     lesson54.category = lessonCategoryArray[0]
@@ -545,6 +585,7 @@ func generateLessons() {
     lesson54.random = Int64(arc4random_uniform(1000))
     lesson54.selected = false
     lesson54.sortingIndex = 0
+    lesson54.alphabet = String(describing: lesson54.title![(lesson54.title!.startIndex)])
     
     let lesson55 = Lesson(context: context)
     lesson55.category = lessonCategoryArray[0]
@@ -558,6 +599,7 @@ func generateLessons() {
     lesson55.random = Int64(arc4random_uniform(1000))
     lesson55.selected = false
     lesson55.sortingIndex = 0
+    lesson55.alphabet = String(describing: lesson55.title![(lesson55.title!.startIndex)])
     
     let lesson56 = Lesson(context: context)
     lesson56.category = lessonCategoryArray[0]
@@ -571,6 +613,7 @@ func generateLessons() {
     lesson56.random = Int64(arc4random_uniform(1000))
     lesson56.selected = false
     lesson56.sortingIndex = 0
+    lesson56.alphabet = String(describing: lesson56.title![(lesson56.title!.startIndex)])
     
     let lesson57 = Lesson(context: context)
     lesson57.category = lessonCategoryArray[0]
@@ -584,6 +627,7 @@ func generateLessons() {
     lesson57.random = Int64(arc4random_uniform(1000))
     lesson57.selected = false
     lesson57.sortingIndex = 0
+    lesson57.alphabet = String(describing: lesson57.title![(lesson57.title!.startIndex)])
     
     let lesson58 = Lesson(context: context)
     lesson58.category = lessonCategoryArray[0]
@@ -597,6 +641,7 @@ func generateLessons() {
     lesson58.random = Int64(arc4random_uniform(1000))
     lesson58.selected = false
     lesson58.sortingIndex = 0
+    lesson58.alphabet = String(describing: lesson58.title![(lesson58.title!.startIndex)])
     
     let lesson59 = Lesson(context: context)
     lesson59.category = lessonCategoryArray[0]
@@ -610,6 +655,7 @@ func generateLessons() {
     lesson59.random = Int64(arc4random_uniform(1000))
     lesson59.selected = false
     lesson59.sortingIndex = 0
+    lesson59.alphabet = String(describing: lesson59.title![(lesson59.title!.startIndex)])
     
     let lesson60 = Lesson(context: context)
     lesson60.category = lessonCategoryArray[0]
@@ -623,6 +669,7 @@ func generateLessons() {
     lesson60.random = Int64(arc4random_uniform(1000))
     lesson60.selected = false
     lesson60.sortingIndex = 0
+    lesson60.alphabet = String(describing: lesson60.title![(lesson60.title!.startIndex)])
     
     let lesson64 = Lesson(context: context)
     lesson64.category = "Temporal"
@@ -636,6 +683,7 @@ func generateLessons() {
     lesson64.random = Int64(arc4random_uniform(1000))
     lesson64.selected = false
     lesson64.sortingIndex = 0
+    lesson64.alphabet = String(describing: lesson64.title![(lesson64.title!.startIndex)])
     
     let lesson66 = Lesson(context: context)
     lesson66.category = "Temporal"
@@ -649,6 +697,7 @@ func generateLessons() {
     lesson66.random = Int64(arc4random_uniform(1000))
     lesson66.selected = false
     lesson66.sortingIndex = 0
+    lesson66.alphabet = String(describing: lesson66.title![(lesson66.title!.startIndex)])
     
     let lesson67 = Lesson(context: context)
     lesson67.category = "Temporal"
@@ -662,6 +711,7 @@ func generateLessons() {
     lesson67.random = Int64(arc4random_uniform(1000))
     lesson67.selected = false
     lesson67.sortingIndex = 0
+    lesson67.alphabet = String(describing: lesson67.title![(lesson67.title!.startIndex)])
     
     let lesson68 = Lesson(context: context)
     lesson68.category = "Temporal"
@@ -675,6 +725,7 @@ func generateLessons() {
     lesson68.random = Int64(arc4random_uniform(1000))
     lesson68.selected = false
     lesson68.sortingIndex = 0
+    lesson68.alphabet = String(describing: lesson68.title![(lesson68.title!.startIndex)])
     
     let lesson69 = Lesson(context: context)
     lesson69.category = lessonCategoryArray[0]
@@ -688,6 +739,7 @@ func generateLessons() {
     lesson69.random = Int64(arc4random_uniform(1000))
     lesson69.selected = false
     lesson69.sortingIndex = 0
+    lesson69.alphabet = String(describing: lesson69.title![(lesson69.title!.startIndex)])
     
     let lesson70 = Lesson(context: context)
     lesson70.category = "Temporal"
@@ -701,6 +753,7 @@ func generateLessons() {
     lesson70.random = Int64(arc4random_uniform(1000))
     lesson70.selected = false
     lesson70.sortingIndex = 0
+    lesson70.alphabet = String(describing: lesson70.title![(lesson70.title!.startIndex)])
     
     let lesson71 = Lesson(context: context)
     lesson71.category = lessonCategoryArray[0]
@@ -714,6 +767,7 @@ func generateLessons() {
     lesson71.random = Int64(arc4random_uniform(1000))
     lesson71.selected = false
     lesson71.sortingIndex = 0
+    lesson71.alphabet = String(describing: lesson71.title![(lesson71.title!.startIndex)])
     
     let lesson75 = Lesson(context: context)
     lesson75.category = "Temporal"
@@ -727,6 +781,7 @@ func generateLessons() {
     lesson75.random = Int64(arc4random_uniform(1000))
     lesson75.selected = false
     lesson75.sortingIndex = 0
+    lesson75.alphabet = String(describing: lesson75.title![(lesson75.title!.startIndex)])
     
     let lesson76 = Lesson(context: context)
     lesson76.category = lessonCategoryArray[0]
@@ -740,6 +795,7 @@ func generateLessons() {
     lesson76.random = Int64(arc4random_uniform(1000))
     lesson76.selected = false
     lesson76.sortingIndex = 0
+    lesson76.alphabet = String(describing: lesson76.title![(lesson76.title!.startIndex)])
     
     let lesson77 = Lesson(context: context)
     lesson77.category = lessonCategoryArray[0]
@@ -753,6 +809,7 @@ func generateLessons() {
     lesson77.random = Int64(arc4random_uniform(1000))
     lesson77.selected = false
     lesson77.sortingIndex = 0
+    lesson77.alphabet = String(describing: lesson77.title![(lesson77.title!.startIndex)])
     
     let lesson78 = Lesson(context: context)
     lesson78.category = lessonCategoryArray[0]
@@ -766,6 +823,7 @@ func generateLessons() {
     lesson78.random = Int64(arc4random_uniform(1000))
     lesson78.selected = false
     lesson78.sortingIndex = 0
+    lesson78.alphabet = String(describing: lesson78.title![(lesson78.title!.startIndex)])
     
     let lesson79 = Lesson(context: context)
     lesson79.category = lessonCategoryArray[0]
@@ -779,6 +837,7 @@ func generateLessons() {
     lesson79.random = Int64(arc4random_uniform(1000))
     lesson79.selected = false
     lesson79.sortingIndex = 0
+    lesson79.alphabet = String(describing: lesson79.title![(lesson79.title!.startIndex)])
     
     let lesson80 = Lesson(context: context)
     lesson80.category = lessonCategoryArray[0]
@@ -792,6 +851,7 @@ func generateLessons() {
     lesson80.random = Int64(arc4random_uniform(1000))
     lesson80.selected = false
     lesson80.sortingIndex = 0
+    lesson80.alphabet = String(describing: lesson80.title![(lesson80.title!.startIndex)])
     
     let lesson81 = Lesson(context: context)
     lesson81.category = lessonCategoryArray[0]
@@ -805,6 +865,7 @@ func generateLessons() {
     lesson81.random = Int64(arc4random_uniform(1000))
     lesson81.selected = false
     lesson81.sortingIndex = 0
+    lesson81.alphabet = String(describing: lesson81.title![(lesson81.title!.startIndex)])
     
     let lesson83 = Lesson(context: context)
     lesson83.category = "Temporal"
@@ -818,6 +879,7 @@ func generateLessons() {
     lesson83.random = Int64(arc4random_uniform(1000))
     lesson83.selected = false
     lesson83.sortingIndex = 0
+    lesson83.alphabet = String(describing: lesson83.title![(lesson83.title!.startIndex)])
     
     let lesson84 = Lesson(context: context)
     lesson84.category = lessonCategoryArray[0]
@@ -831,6 +893,7 @@ func generateLessons() {
     lesson84.random = Int64(arc4random_uniform(1000))
     lesson84.selected = false
     lesson84.sortingIndex = 0
+    lesson84.alphabet = String(describing: lesson84.title![(lesson84.title!.startIndex)])
     
     let lesson85 = Lesson(context: context)
     lesson85.category = lessonCategoryArray[0]
@@ -844,6 +907,7 @@ func generateLessons() {
     lesson85.random = Int64(arc4random_uniform(1000))
     lesson85.selected = false
     lesson85.sortingIndex = 0
+    lesson85.alphabet = String(describing: lesson85.title![(lesson85.title!.startIndex)])
     
     let lesson86 = Lesson(context: context)
     lesson86.category = lessonCategoryArray[0]
@@ -857,6 +921,7 @@ func generateLessons() {
     lesson86.random = Int64(arc4random_uniform(1000))
     lesson86.selected = false
     lesson86.sortingIndex = 0
+    lesson86.alphabet = String(describing: lesson86.title![(lesson86.title!.startIndex)])
     
     let lesson87 = Lesson(context: context)
     lesson87.category = lessonCategoryArray[0]
@@ -870,6 +935,7 @@ func generateLessons() {
     lesson87.random = Int64(arc4random_uniform(1000))
     lesson87.selected = false
     lesson87.sortingIndex = 0
+    lesson87.alphabet = String(describing: lesson87.title![(lesson87.title!.startIndex)])
     
     let lesson88 = Lesson(context: context)
     lesson88.category = lessonCategoryArray[0]
@@ -883,6 +949,7 @@ func generateLessons() {
     lesson88.random = Int64(arc4random_uniform(1000))
     lesson88.selected = false
     lesson88.sortingIndex = 0
+    lesson88.alphabet = String(describing: lesson88.title![(lesson88.title!.startIndex)])
     
     let lesson89 = Lesson(context: context)
     lesson89.category = lessonCategoryArray[0]
@@ -896,6 +963,7 @@ func generateLessons() {
     lesson89.random = Int64(arc4random_uniform(1000))
     lesson89.selected = false
     lesson89.sortingIndex = 0
+    lesson89.alphabet = String(describing: lesson89.title![(lesson89.title!.startIndex)])
     
     let lesson90 = Lesson(context: context)
     lesson90.category = "Spiritual"
@@ -909,6 +977,7 @@ func generateLessons() {
     lesson90.random = Int64(arc4random_uniform(1000))
     lesson90.selected = false
     lesson90.sortingIndex = 0
+    lesson90.alphabet = String(describing: lesson90.title![(lesson90.title!.startIndex)])
     
     let lesson91 = Lesson(context: context)
     lesson91.category = lessonCategoryArray[0]
@@ -922,6 +991,7 @@ func generateLessons() {
     lesson91.random = Int64(arc4random_uniform(1000))
     lesson91.selected = false
     lesson91.sortingIndex = 0
+    lesson91.alphabet = String(describing: lesson91.title![(lesson91.title!.startIndex)])
     
     let lesson92 = Lesson(context: context)
     lesson92.category = lessonCategoryArray[0]
@@ -935,6 +1005,7 @@ func generateLessons() {
     lesson92.random = Int64(arc4random_uniform(1000))
     lesson92.selected = false
     lesson92.sortingIndex = 0
+    lesson92.alphabet = String(describing: lesson92.title![(lesson92.title!.startIndex)])
     
     let lesson93 = Lesson(context: context)
     lesson93.category = "Temporal"
@@ -948,6 +1019,7 @@ func generateLessons() {
     lesson93.random = Int64(arc4random_uniform(1000))
     lesson93.selected = false
     lesson93.sortingIndex = 0
+    lesson93.alphabet = String(describing: lesson93.title![(lesson93.title!.startIndex)])
     
     let lesson94 = Lesson(context: context)
     lesson94.category = "Temporal"
@@ -961,6 +1033,7 @@ func generateLessons() {
     lesson94.random = Int64(arc4random_uniform(1000))
     lesson94.selected = false
     lesson94.sortingIndex = 0
+    lesson94.alphabet = String(describing: lesson94.title![(lesson94.title!.startIndex)])
     
     let lesson95 = Lesson(context: context)
     lesson95.category = "Temporal"
@@ -974,6 +1047,7 @@ func generateLessons() {
     lesson95.random = Int64(arc4random_uniform(1000))
     lesson95.selected = false
     lesson95.sortingIndex = 0
+    lesson95.alphabet = String(describing: lesson95.title![(lesson95.title!.startIndex)])
     
     ad.saveContext()
 }

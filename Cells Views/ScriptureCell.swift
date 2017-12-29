@@ -66,15 +66,35 @@ class ScriptureCell: UITableViewCell {
     func configureScriptureCell(scripture: Scripture) {
         let topic = scripture.topic ?? "Topic"
         let title = scripture.title
-        let volume = scripture.volume
-        let book = scripture.book
+        
+        var volume = ""
+        if scripture.volume == "dc-testament" {
+            volume = "DC"
+        } else if scripture.volume != nil {
+            volume = scripture.volume!
+        }
+        
+        var book = ""
+        if scripture.book == "dc" {
+            book = ""
+        } else if scripture.book != nil {
+            book = scripture.book!
+        }
+        
         let chapter = scripture.chapter
-        let verse = scripture.verse
+        
+        var chapterVerse = ""
+        if scripture.verse == nil || scripture.verse == "" {
+            chapterVerse = ""
+        } else {
+            chapterVerse = "\(chapter ?? "") : \(scripture.verse ?? "")"
+        }
+        
         let onDeck = scripture.selected
         let favorite = scripture.favorite
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
-        scriptureLabel.text = "\(volume?.uppercased() ?? "") \(book?.capitalized ?? "") \(chapter ?? ""):\(verse ?? "")"
+        scriptureLabel.text = "\(volume.uppercased()) \(book.capitalized) \(chapterVerse)"
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {
