@@ -23,6 +23,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         memberAttemptFetch()
         tableView.reloadData()
+        
+        runTutorial()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,19 +41,34 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         return true
     }
     
+    func runTutorial() {
+        if counter.launched == 1 {
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "Hi and welcome to the FHE app! 👨‍👩‍👧‍👦/n/nSince this is your first time here, I will help guide you with TIPS & TRICKS alerts.\n\nTIP - Press the + icon in the top right corner to get started or edit the existing example family.\nTIP - Select any row with a family member to edit or delete them.\nTRICK - Flip the switch ON for any family member or guest attending your family meeting.\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     
     // MARK: - Table view data source
     
     // Title for header in section
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        guard let sectionInfo = memberController.sections,
-//            let index = Int(sectionInfo[section].name) else {return nil}
-//        if index == 0 {
-//            return "Not Attending"
-//        } else {
-//            return "Attending"
-//        }
-//    }
+    //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    //        guard let sectionInfo = memberController.sections,
+    //            let index = Int(sectionInfo[section].name) else {return nil}
+    //        if index == 0 {
+    //            return "Not Attending"
+    //        } else {
+    //            return "Attending"
+    //        }
+    //    }
     
     // View for header in section
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

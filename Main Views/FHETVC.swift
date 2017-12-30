@@ -14,9 +14,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBOutlet weak var christTeachingImage: UIImageView!
     @IBOutlet weak var assignmentTableView: UITableView!
     
-//    var member: Member?
-//    var task: Task?
-//    var tasks = [Task]()
+    //    var member: Member?
+    //    var task: Task?
+    //    var tasks = [Task]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         getAllTasks()
         taskAttemptFetch()
         assignmentTableView.reloadData()
+        runTutorial()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,21 +59,58 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         self.navigationController?.isNavigationBarHidden = false
     }
     
+    func runTutorial() {
+        if counter.launched == 1 {
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "TIP - Press the recycle button to auto-rotate your family assignments.\nTRICK - Tap on a family members picture to manually assign them to a specific task.\nTRICK - Tap on the task Title or picture to make quick edits a new selection for the spesific song, scripture, lesson, etc that you would like to host.\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func editButtonPressed(_ sender: Any) {
         self.tabBarController?.selectedIndex = 1
     }
     
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
         playClick()
+        
+        let alertController = UIAlertController(title: "⚠️ INACTIVE BUTTON", message: "This button will cycle through auto-assignments but I don't have it working yet.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func beginButtonPressed(_ sender: Any) {
         playClick()
         print("\(counter)")
-//        let appReviewPresentedRandom = arc4random_uniform(3)
-//        if appReviewPresentedRandom == UInt32(1) {
+        //        let appReviewPresentedRandom = arc4random_uniform(3)
+        //        if appReviewPresentedRandom == UInt32(1) {
         if counter.launched > 3 && counter.launched % 2 == 0 {
             SKStoreReviewController.requestReview()
+        } else if counter.launched < 3 && counter.launched % 2 != 0 {
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "TIP - Turn your phone sideways to view in landscape mode./nTRICK - Pair your phone to your family room TV for all to see. See tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -126,19 +164,19 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     // Function to configure each cell
     func configureAssignmentCell(cell: AssignmentCell, indexPath: NSIndexPath) {
         let task = taskController.object(at: indexPath as IndexPath)
-//        let member = memberController.object(at: indexPath as IndexPath)
+        //        let member = memberController.object(at: indexPath as IndexPath)
         cell.configureAssignmentCell(task: task)
     }
     
     // User did select row at a spesific index
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let objects = taskController.fetchedObjects, objects.count > 0 {
-//            let sections = taskController.sections![indexPath.section]
-//            let member = sections.objects![indexPath.row]
-//            //            let members = memberController.fetchedObjects![indexPath.row]
-//            performSegue(withIdentifier: "MemberDetailsVCExisting", sender: member)
-//        }
-//    }
+    //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    //        if let objects = taskController.fetchedObjects, objects.count > 0 {
+    //            let sections = taskController.sections![indexPath.section]
+    //            let member = sections.objects![indexPath.row]
+    //            //            let members = memberController.fetchedObjects![indexPath.row]
+    //            performSegue(withIdentifier: "MemberDetailsVCExisting", sender: member)
+    //        }
+    //    }
     
     // MARK: - Assignment Cell Delegate
     
@@ -175,11 +213,11 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         fetchRequest.predicate = predicate
         let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
         fetchRequest.sortDescriptors = [sortByDefaultNumber]
-
+        
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self
         self.taskController = controller
-
+        
         do {
             try controller.performFetch()
         } catch {
@@ -187,20 +225,20 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             print("\(error)")
         }
     }
-
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         assignmentTableView.beginUpdates()
     }
-
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         assignmentTableView.endUpdates()
     }
     
     // Object did change
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-
+        
         switch(type){
-
+            
         case .insert:
             if let indexPath = newIndexPath {
                 assignmentTableView.insertRows(at: [indexPath], with: .automatic)
@@ -216,7 +254,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
                 if let cellDetail = assignmentTableView.cellForRow(at: indexPath) as? AssignmentCell {
                     configureAssignmentCell(cell: cellDetail, indexPath: indexPath as NSIndexPath)
                 }
-
+                
                 if let cellTitle = assignmentTableView.cellForRow(at: indexPath) as? AssignmentCell {
                     configureAssignmentCell(cell: cellTitle, indexPath: indexPath as NSIndexPath)
                 }

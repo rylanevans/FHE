@@ -25,6 +25,9 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         clickSoundURL()
         
         taskAttemptFetch()
+        tableView.reloadData()
+        
+        runTutorial()
     }
     
     override func viewDidAppear(_ animated: Bool) {        
@@ -43,6 +46,21 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             ad.saveContext()
             
             checkIfUserWantsToShare()
+        }
+    }
+    
+    func runTutorial() {
+        if counter.launched == 1 {
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "TIP - Select a task from the table below to make edits or select which song, scripture, lesson, etc that you would like to host for your family night.\nTRICK - Flip the switch ON for any task to enable it for your family meeting. Turn it OFF if you don't want it to appear as a task to be assigned.\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
