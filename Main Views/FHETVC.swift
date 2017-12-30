@@ -61,7 +61,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     func runTutorial() {
         if counter.launched == 1 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "TIP - Press the recycle button to auto-rotate your family assignments.\nTRICK - Tap on a family members picture to manually assign them to a specific task.\nTRICK - Tap on the task Title or picture to make quick edits a new selection for the spesific song, scripture, lesson, etc that you would like to host.\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "/nTIP - Press the recycle button to auto-rotate your family assignments.\n\nTRICK - Tap on a family members picture to manually assign them to a specific task.\n\nTRICK - Tap on the task Title or picture to make quick edits a new selection for the spesific song, scripture, lesson, etc that you would like to host.\n\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
@@ -100,17 +100,6 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         //        if appReviewPresentedRandom == UInt32(1) {
         if counter.launched > 3 && counter.launched % 2 == 0 {
             SKStoreReviewController.requestReview()
-        } else if counter.launched < 3 && counter.launched % 2 != 0 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "TIP - Turn your phone sideways to view in landscape mode./nTRICK - Pair your phone to your family room TV for all to see. See tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
-                (action : UIAlertAction!) -> Void in
-            })
-            
-            alertController.addAction(okAction)
-            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-            
-            self.present(alertController, animated: true, completion: nil)
         }
     }
     

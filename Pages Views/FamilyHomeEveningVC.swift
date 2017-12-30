@@ -34,6 +34,8 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
                                animated: true,
                                completion: nil)
         }
+        
+        
     }
     
     // MARK: - Ordered Page Views Array

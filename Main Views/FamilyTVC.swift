@@ -43,7 +43,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     
     func runTutorial() {
         if counter.launched == 1 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "Hi and welcome to the FHE app! 👨‍👩‍👧‍👦/n/nSince this is your first time here, I will help guide you with TIPS & TRICKS alerts.\n\nTIP - Press the + icon in the top right corner to get started or edit the existing example family.\nTIP - Select any row with a family member to edit or delete them.\nTRICK - Flip the switch ON for any family member or guest attending your family meeting.\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nHi and welcome to the FHE app! 👨‍👩‍👧‍👦\n\nSince this is your first time here, I will help guide you with TIPS & TRICKS alerts for each main page.\n\nTIP - Press the + icon in the top right corner to get started or edit the existing example family.\n\nTIP - Select any row with a family member to edit or delete them.\n\nTRICK - Flip the switch ON for any family member or guest attending your family meeting.\n\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
