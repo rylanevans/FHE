@@ -547,7 +547,8 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let sortByTitle = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
         let sortByTopic = NSSortDescriptor(key: "topic", ascending: true)
         let sortByAlphabet = NSSortDescriptor(key: "alphabet", ascending: true)
-        let sortByBook = NSSortDescriptor(key: "order", ascending: true)
+        let sortByOrderNumber = NSSortDescriptor(key: "order", ascending: true)
+        let sortByChapter = NSSortDescriptor(key: "chapter", ascending: true)
         
         // no filters sort alphabeticly
         if segment.selectedSegmentIndex == 0 {
@@ -565,7 +566,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             
         // filter by OT
         } else if segment.selectedSegmentIndex == 1 {
-            fetchRequest.sortDescriptors = [sortByBook]
+            fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "ot")
             fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
@@ -581,7 +582,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         
         // filter by NT
         } else if segment.selectedSegmentIndex == 2 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "nt")
             fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
@@ -597,7 +598,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         
         // filter by BOFM
         } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "bofm")
             fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
@@ -613,7 +614,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             
         // filter by DC
         } else if segment.selectedSegmentIndex == 4 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "dc-testament")
             fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
@@ -629,7 +630,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             
         // filter by PGP
         } else if segment.selectedSegmentIndex == 5 {
-            fetchRequest.sortDescriptors = [sortByBook, sortByTitle]
+            fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "pgp")
             fetchRequest.predicate = predicate
             let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)

@@ -705,10 +705,10 @@
                                                                             <real key="value" value="25"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="3"/>
+                                                                            <real key="value" value="1"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                            <color key="value" name="Background"/>
+                                                                            <color key="value" name="Accent"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
@@ -2916,10 +2916,10 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <real key="value" value="25"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                            <real key="value" value="3"/>
+                                                            <real key="value" value="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                            <color key="value" name="Background"/>
+                                                            <color key="value" name="Accent"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
@@ -3540,16 +3540,16 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Twitter" width="341" height="166"/>
         <image name="Website" width="509" height="420"/>
         <namedColor name="Accent">
-            <color red="0.20800000429153442" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Background">
-            <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="Accent">
+            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Background">
-            <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="Accent">
+            <color red="0.20800000429153442" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Background">
             <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -3565,19 +3565,19 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jBQ-Ru-iYP"/>
-        <segue reference="6zL-t5-3Ct"/>
-        <segue reference="V5q-lq-RWj"/>
-        <segue reference="ZyK-vh-hyO"/>
-        <segue reference="CPb-Ys-WWB"/>
-        <segue reference="5Sp-jg-2M1"/>
-        <segue reference="AqR-Cm-zRA"/>
-        <segue reference="geT-Vr-Cb1"/>
-        <segue reference="HRK-vV-oOE"/>
-        <segue reference="B76-IG-1fl"/>
-        <segue reference="fA6-h3-h7G"/>
-        <segue reference="CY9-aF-U2H"/>
-        <segue reference="8JJ-8f-PXH"/>
+        <segue reference="zo5-HV-Ykr"/>
+        <segue reference="Hu8-j0-LrC"/>
+        <segue reference="62d-fj-n5k"/>
+        <segue reference="1Ip-Qm-3IC"/>
+        <segue reference="ktT-fE-CXW"/>
+        <segue reference="OLX-No-sfi"/>
+        <segue reference="64D-36-E2v"/>
+        <segue reference="9P0-m0-b2K"/>
+        <segue reference="4yL-57-dYB"/>
+        <segue reference="lqx-jC-3VV"/>
+        <segue reference="EbF-I8-KYK"/>
+        <segue reference="fVt-7Q-RzX"/>
+        <segue reference="9jh-Si-QQ7"/>
         <segue reference="h4y-nB-v6D"/>
     </inferredMetricsTieBreakers>
 </document>

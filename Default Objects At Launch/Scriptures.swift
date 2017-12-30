@@ -24,7 +24,7 @@ func generateScripture() {
     scripture1.selected = true
     scripture1.sortingIndex = 0
     scripture1.alphabet = String(describing: scripture1.title![(scripture1.title!.startIndex)])
-    scripture1.order = Int64(defaultScriptureDictionary["\(scripture1.book ?? "gen")"]!)
+    scripture1.order = Int64(defaultScriptureDictionary["\(scripture1.book!)"]!)
     scripture1.selectedOne = taskScripture
     
     let scripture2 = Scripture(context: context)
@@ -39,7 +39,7 @@ func generateScripture() {
     scripture2.selected = false
     scripture2.sortingIndex = 0
     scripture2.alphabet = String(describing: scripture2.title![(scripture2.title!.startIndex)])
-    scripture2.order = Int64(defaultScriptureDictionary["\(scripture2.book ?? "gen")"]!)
+    scripture2.order = Int64(defaultScriptureDictionary["\(scripture2.book!)"]!)
     
     let scripture3 = Scripture(context: context)
     scripture3.topic = "Plan of Salvation"
@@ -53,7 +53,7 @@ func generateScripture() {
     scripture3.selected = false
     scripture3.sortingIndex = 0
     scripture3.alphabet = String(describing: scripture3.title![(scripture3.title!.startIndex)])
-    scripture3.order = Int64(defaultScriptureDictionary["\(scripture3.book ?? "gen")"]!)
+    scripture3.order = Int64(defaultScriptureDictionary["\(scripture3.book!)"]!)
     
     let scripture4 = Scripture(context: context)
     scripture4.topic = "Commandments"
@@ -67,7 +67,7 @@ func generateScripture() {
     scripture4.selected = false
     scripture4.sortingIndex = 0
     scripture4.alphabet = String(describing: scripture4.title![(scripture4.title!.startIndex)])
-    scripture4.order = Int64(defaultScriptureDictionary["\(scripture4.book ?? "gen")"]!)
+    scripture4.order = Int64(defaultScriptureDictionary["\(scripture4.book!)"]!)
     
     let scripture5 = Scripture(context: context)
     scripture5.topic = "Commandments"
@@ -81,7 +81,7 @@ func generateScripture() {
     scripture5.selected = false
     scripture5.sortingIndex = 0
     scripture5.alphabet = String(describing: scripture5.title![(scripture5.title!.startIndex)])
-    scripture5.order = Int64(defaultScriptureDictionary["\(scripture5.book ?? "gen")"]!)
+    scripture5.order = Int64(defaultScriptureDictionary["\(scripture5.book!)"]!)
     
     let scripture6 = Scripture(context: context)
     scripture6.topic = "Redeem the Dead"
@@ -95,7 +95,7 @@ func generateScripture() {
     scripture6.selected = false
     scripture6.sortingIndex = 0
     scripture6.alphabet = String(describing: scripture6.title![(scripture6.title!.startIndex)])
-    scripture6.order = Int64(defaultScriptureDictionary["\(scripture6.book ?? "gen")"]!)
+    scripture6.order = Int64(defaultScriptureDictionary["\(scripture6.book!)"]!)
     
     let scripture7 = Scripture(context: context)
     scripture7.topic = "Christlike Attributes"
@@ -109,7 +109,7 @@ func generateScripture() {
     scripture7.selected = false
     scripture7.sortingIndex = 0
     scripture7.alphabet = String(describing: scripture7.title![(scripture7.title!.startIndex)])
-    scripture7.order = Int64(defaultScriptureDictionary["\(scripture7.book ?? "gen")"]!)
+    scripture7.order = Int64(defaultScriptureDictionary["\(scripture7.book!)"]!)
     
     let scripture8 = Scripture(context: context)
     scripture8.topic = "Plan of Salvation"
@@ -123,7 +123,7 @@ func generateScripture() {
     scripture8.selected = false
     scripture8.sortingIndex = 0
     scripture8.alphabet = String(describing: scripture8.title![(scripture8.title!.startIndex)])
-    scripture8.order = Int64(defaultScriptureDictionary["\(scripture8.book ?? "gen")"]!)
+    scripture8.order = Int64(defaultScriptureDictionary["\(scripture8.book!)"]!)
     
     let scripture9 = Scripture(context: context)
     scripture9.topic = "Plan of Salvation"
@@ -137,7 +137,7 @@ func generateScripture() {
     scripture9.selected = false
     scripture9.sortingIndex = 0
     scripture9.alphabet = String(describing: scripture9.title![(scripture9.title!.startIndex)])
-    scripture9.order = Int64(defaultScriptureDictionary["\(scripture9.book ?? "gen")"]!)
+    scripture9.order = Int64(defaultScriptureDictionary["\(scripture9.book!)"]!)
     
     let scripture10 = Scripture(context: context)
     scripture10.topic = "Atonement"
@@ -151,7 +151,7 @@ func generateScripture() {
     scripture10.selected = false
     scripture10.sortingIndex = 0
     scripture10.alphabet = String(describing: scripture10.title![(scripture10.title!.startIndex)])
-    scripture10.order = Int64(defaultScriptureDictionary["\(scripture10.book ?? "gen")"]!)
+    scripture10.order = Int64(defaultScriptureDictionary["\(scripture10.book!)"]!)
     
     let scripture11 = Scripture(context: context)
     scripture11.topic = "Scriptures"
@@ -165,7 +165,7 @@ func generateScripture() {
     scripture11.selected = false
     scripture11.sortingIndex = 0
     scripture11.alphabet = String(describing: scripture11.title![(scripture11.title!.startIndex)])
-    scripture11.order = Int64(defaultScriptureDictionary["\(scripture11.book ?? "gen")"]!)
+    scripture11.order = Int64(defaultScriptureDictionary["\(scripture11.book!)"]!)
     
     let scripture12 = Scripture(context: context)
     scripture12.topic = "Endure to the end"
@@ -179,7 +179,7 @@ func generateScripture() {
     scripture12.selected = false
     scripture12.sortingIndex = 0
     scripture12.alphabet = String(describing: scripture12.title![(scripture12.title!.startIndex)])
-    scripture12.order = Int64(defaultScriptureDictionary["\(scripture12.book ?? "gen")"]!)
+    scripture12.order = Int64(defaultScriptureDictionary["\(scripture12.book!)"]!)
     
     let scripture13 = Scripture(context: context)
     scripture13.topic = "Scriptures"
@@ -193,7 +193,7 @@ func generateScripture() {
     scripture13.selected = false
     scripture13.sortingIndex = 0
     scripture13.alphabet = String(describing: scripture13.title![(scripture13.title!.startIndex)])
-    scripture13.order = Int64(defaultScriptureDictionary["\(scripture13.book ?? "gen")"]!)
+    scripture13.order = Int64(defaultScriptureDictionary["\(scripture13.book!)"]!)
     
     let scripture14 = Scripture(context: context)
     scripture14.topic = "Holy Ghost"
@@ -207,7 +207,7 @@ func generateScripture() {
     scripture14.selected = false
     scripture14.sortingIndex = 0
     scripture14.alphabet = String(describing: scripture14.title![(scripture14.title!.startIndex)])
-    scripture14.order = Int64(defaultScriptureDictionary["\(scripture14.book ?? "gen")"]!)
+    scripture14.order = Int64(defaultScriptureDictionary["\(scripture14.book!)"]!)
     
     let scripture15 = Scripture(context: context)
     scripture15.topic = "Christlike Attributes"
@@ -221,7 +221,7 @@ func generateScripture() {
     scripture15.selected = false
     scripture15.sortingIndex = 0
     scripture15.alphabet = String(describing: scripture15.title![(scripture15.title!.startIndex)])
-    scripture15.order = Int64(defaultScriptureDictionary["\(scripture15.book ?? "gen")"]!)
+    scripture15.order = Int64(defaultScriptureDictionary["\(scripture15.book!)"]!)
     
     let scripture16 = Scripture(context: context)
     scripture16.topic = "Restoration"
@@ -235,7 +235,7 @@ func generateScripture() {
     scripture16.selected = false
     scripture16.sortingIndex = 0
     scripture16.alphabet = String(describing: scripture16.title![(scripture16.title!.startIndex)])
-    scripture16.order = Int64(defaultScriptureDictionary["\(scripture16.book ?? "gen")"]!)
+    scripture16.order = Int64(defaultScriptureDictionary["\(scripture16.book!)"]!)
     
     let scripture17 = Scripture(context: context)
     scripture17.topic = "Scriptures"
@@ -249,7 +249,7 @@ func generateScripture() {
     scripture17.selected = false
     scripture17.sortingIndex = 0
     scripture17.alphabet = String(describing: scripture17.title![(scripture17.title!.startIndex)])
-    scripture17.order = Int64(defaultScriptureDictionary["\(scripture17.book ?? "gen")"]!)
+    scripture17.order = Int64(defaultScriptureDictionary["\(scripture17.book!)"]!)
     
     let scripture18 = Scripture(context: context)
     scripture18.topic = "Jesus Christ"
@@ -263,7 +263,7 @@ func generateScripture() {
     scripture18.selected = false
     scripture18.sortingIndex = 0
     scripture18.alphabet = String(describing: scripture18.title![(scripture18.title!.startIndex)])
-    scripture18.order = Int64(defaultScriptureDictionary["\(scripture18.book ?? "gen")"]!)
+    scripture18.order = Int64(defaultScriptureDictionary["\(scripture18.book!)"]!)
     
     let scripture19 = Scripture(context: context)
     scripture19.topic = "Endure to the end"
@@ -277,7 +277,7 @@ func generateScripture() {
     scripture19.selected = false
     scripture19.sortingIndex = 0
     scripture19.alphabet = String(describing: scripture19.title![(scripture19.title!.startIndex)])
-    scripture19.order = Int64(defaultScriptureDictionary["\(scripture19.book ?? "gen")"]!)
+    scripture19.order = Int64(defaultScriptureDictionary["\(scripture19.book!)"]!)
     
     let scripture20 = Scripture(context: context)
     scripture20.topic = "Plan of Salvation"
@@ -291,7 +291,7 @@ func generateScripture() {
     scripture20.selected = false
     scripture20.sortingIndex = 0
     scripture20.alphabet = String(describing: scripture20.title![(scripture20.title!.startIndex)])
-    scripture20.order = Int64(defaultScriptureDictionary["\(scripture20.book ?? "gen")"]!)
+    scripture20.order = Int64(defaultScriptureDictionary["\(scripture20.book!)"]!)
     
     let scripture21 = Scripture(context: context)
     scripture21.topic = "Principles & Ordinances"
@@ -305,7 +305,7 @@ func generateScripture() {
     scripture21.selected = false
     scripture21.sortingIndex = 0
     scripture21.alphabet = String(describing: scripture21.title![(scripture21.title!.startIndex)])
-    scripture21.order = Int64(defaultScriptureDictionary["\(scripture21.book ?? "gen")"]!)
+    scripture21.order = Int64(defaultScriptureDictionary["\(scripture21.book!)"]!)
     
     let scripture22 = Scripture(context: context)
     scripture22.topic = "Restoration"
@@ -319,7 +319,7 @@ func generateScripture() {
     scripture22.selected = false
     scripture22.sortingIndex = 0
     scripture22.alphabet = String(describing: scripture22.title![(scripture22.title!.startIndex)])
-    scripture22.order = Int64(defaultScriptureDictionary["\(scripture22.book ?? "gen")"]!)
+    scripture22.order = Int64(defaultScriptureDictionary["\(scripture22.book!)"]!)
     
     let scripture23 = Scripture(context: context)
     scripture23.topic = "Principles & Ordinances"
@@ -333,7 +333,7 @@ func generateScripture() {
     scripture23.selected = false
     scripture23.sortingIndex = 0
     scripture23.alphabet = String(describing: scripture23.title![(scripture23.title!.startIndex)])
-    scripture23.order = Int64(defaultScriptureDictionary["\(scripture23.book ?? "gen")"]!)
+    scripture23.order = Int64(defaultScriptureDictionary["\(scripture23.book!)"]!)
     
     let scripture24 = Scripture(context: context)
     scripture24.topic = "Commandments"
@@ -347,7 +347,7 @@ func generateScripture() {
     scripture24.selected = false
     scripture24.sortingIndex = 0
     scripture24.alphabet = String(describing: scripture24.title![(scripture24.title!.startIndex)])
-    scripture24.order = Int64(defaultScriptureDictionary["\(scripture24.book ?? "gen")"]!)
+    scripture24.order = Int64(defaultScriptureDictionary["\(scripture24.book!)"]!)
     
     let scripture25 = Scripture(context: context)
     scripture25.topic = "Commandments"
@@ -361,7 +361,7 @@ func generateScripture() {
     scripture25.selected = false
     scripture25.sortingIndex = 0
     scripture25.alphabet = String(describing: scripture25.title![(scripture25.title!.startIndex)])
-    scripture25.order = Int64(defaultScriptureDictionary["\(scripture25.book ?? "gen")"]!)
+    scripture25.order = Int64(defaultScriptureDictionary["\(scripture25.book!)"]!)
     
     let scripture26 = Scripture(context: context)
     scripture26.topic = "Endure to the end"
@@ -375,7 +375,7 @@ func generateScripture() {
     scripture26.selected = false
     scripture26.sortingIndex = 0
     scripture26.alphabet = String(describing: scripture26.title![(scripture26.title!.startIndex)])
-    scripture26.order = Int64(defaultScriptureDictionary["\(scripture26.book ?? "gen")"]!)
+    scripture26.order = Int64(defaultScriptureDictionary["\(scripture26.book!)"]!)
     
     let scripture27 = Scripture(context: context)
     scripture27.topic = "Atonement"
@@ -389,7 +389,7 @@ func generateScripture() {
     scripture27.selected = false
     scripture27.sortingIndex = 0
     scripture27.alphabet = String(describing: scripture27.title![(scripture27.title!.startIndex)])
-    scripture27.order = Int64(defaultScriptureDictionary["\(scripture27.book ?? "gen")"]!)
+    scripture27.order = Int64(defaultScriptureDictionary["\(scripture27.book!)"]!)
     
     let scripture28 = Scripture(context: context)
     scripture28.topic = "Restoration"
@@ -403,7 +403,7 @@ func generateScripture() {
     scripture28.selected = false
     scripture28.sortingIndex = 0
     scripture28.alphabet = String(describing: scripture28.title![(scripture28.title!.startIndex)])
-    scripture28.order = Int64(defaultScriptureDictionary["\(scripture28.book ?? "gen")"]!)
+    scripture28.order = Int64(defaultScriptureDictionary["\(scripture28.book!)"]!)
     
     let scripture29 = Scripture(context: context)
     scripture29.topic = "Scriptures"
@@ -417,7 +417,7 @@ func generateScripture() {
     scripture29.selected = false
     scripture29.sortingIndex = 0
     scripture29.alphabet = String(describing: scripture29.title![(scripture29.title!.startIndex)])
-    scripture29.order = Int64(defaultScriptureDictionary["\(scripture29.book ?? "gen")"]!)
+    scripture29.order = Int64(defaultScriptureDictionary["\(scripture29.book!)"]!)
     
     let scripture30 = Scripture(context: context)
     scripture30.topic = "Endure to the end"
@@ -431,7 +431,7 @@ func generateScripture() {
     scripture30.selected = false
     scripture30.sortingIndex = 0
     scripture30.alphabet = String(describing: scripture30.title![(scripture30.title!.startIndex)])
-    scripture30.order = Int64(defaultScriptureDictionary["\(scripture30.book ?? "gen")"]!)
+    scripture30.order = Int64(defaultScriptureDictionary["\(scripture30.book!)"]!)
     
     let scripture31 = Scripture(context: context)
     scripture31.topic = "Restoration"
@@ -445,7 +445,7 @@ func generateScripture() {
     scripture31.selected = false
     scripture31.sortingIndex = 0
     scripture31.alphabet = String(describing: scripture31.title![(scripture31.title!.startIndex)])
-    scripture31.order = Int64(defaultScriptureDictionary["\(scripture31.book ?? "gen")"]!)
+    scripture31.order = Int64(defaultScriptureDictionary["\(scripture31.book!)"]!)
     
     let scripture32 = Scripture(context: context)
     scripture32.topic = "Restoration"
@@ -459,7 +459,7 @@ func generateScripture() {
     scripture32.selected = false
     scripture32.sortingIndex = 0
     scripture32.alphabet = String(describing: scripture32.title![(scripture32.title!.startIndex)])
-    scripture32.order = Int64(defaultScriptureDictionary["\(scripture32.book ?? "gen")"]!)
+    scripture32.order = Int64(defaultScriptureDictionary["\(scripture32.book!)"]!)
     
     let scripture33 = Scripture(context: context)
     scripture33.topic = "Restoration"
@@ -473,7 +473,7 @@ func generateScripture() {
     scripture33.selected = false
     scripture33.sortingIndex = 0
     scripture33.alphabet = String(describing: scripture33.title![(scripture33.title!.startIndex)])
-    scripture33.order = Int64(defaultScriptureDictionary["\(scripture33.book ?? "gen")"]!)
+    scripture33.order = Int64(defaultScriptureDictionary["\(scripture33.book!)"]!)
     
     let scripture34 = Scripture(context: context)
     scripture34.topic = "Plan of Salvation"
@@ -487,7 +487,7 @@ func generateScripture() {
     scripture34.selected = false
     scripture34.sortingIndex = 0
     scripture34.alphabet = String(describing: scripture34.title![(scripture34.title!.startIndex)])
-    scripture34.order = Int64(defaultScriptureDictionary["\(scripture34.book ?? "gen")"]!)
+    scripture34.order = Int64(defaultScriptureDictionary["\(scripture34.book!)"]!)
     
     let scripture35 = Scripture(context: context)
     scripture35.topic = "Plan of Salvation"
@@ -501,7 +501,7 @@ func generateScripture() {
     scripture35.selected = false
     scripture35.sortingIndex = 0
     scripture35.alphabet = String(describing: scripture35.title![(scripture35.title!.startIndex)])
-    scripture35.order = Int64(defaultScriptureDictionary["\(scripture35.book ?? "gen")"]!)
+    scripture35.order = Int64(defaultScriptureDictionary["\(scripture35.book!)"]!)
     
     let scripture36 = Scripture(context: context)
     scripture36.topic = "Heavenly Father"
@@ -515,7 +515,7 @@ func generateScripture() {
     scripture36.selected = false
     scripture36.sortingIndex = 0
     scripture36.alphabet = String(describing: scripture36.title![(scripture36.title!.startIndex)])
-    scripture36.order = Int64(defaultScriptureDictionary["\(scripture36.book ?? "gen")"]!)
+    scripture36.order = Int64(defaultScriptureDictionary["\(scripture36.book!)"]!)
     
     let scripture37 = Scripture(context: context)
     scripture37.topic = "Proclaim the Gospel"
@@ -529,7 +529,7 @@ func generateScripture() {
     scripture37.selected = false
     scripture37.sortingIndex = 0
     scripture37.alphabet = String(describing: scripture37.title![(scripture37.title!.startIndex)])
-    scripture37.order = Int64(defaultScriptureDictionary["\(scripture37.book ?? "gen")"]!)
+    scripture37.order = Int64(defaultScriptureDictionary["\(scripture37.book!)"]!)
     
     let scripture38 = Scripture(context: context)
     scripture38.topic = "Atonement"
@@ -543,7 +543,7 @@ func generateScripture() {
     scripture38.selected = false
     scripture38.sortingIndex = 0
     scripture38.alphabet = String(describing: scripture38.title![(scripture38.title!.startIndex)])
-    scripture38.order = Int64(defaultScriptureDictionary["\(scripture38.book ?? "gen")"]!)
+    scripture38.order = Int64(defaultScriptureDictionary["\(scripture38.book!)"]!)
     
     let scripture39 = Scripture(context: context)
     scripture39.topic = "Jesus Christ"
@@ -557,7 +557,7 @@ func generateScripture() {
     scripture39.selected = false
     scripture39.sortingIndex = 0
     scripture39.alphabet = String(describing: scripture39.title![(scripture39.title!.startIndex)])
-    scripture39.order = Int64(defaultScriptureDictionary["\(scripture39.book ?? "gen")"]!)
+    scripture39.order = Int64(defaultScriptureDictionary["\(scripture39.book!)"]!)
     
     let scripture40 = Scripture(context: context)
     scripture40.topic = "Commandments"
@@ -571,7 +571,7 @@ func generateScripture() {
     scripture40.selected = false
     scripture40.sortingIndex = 0
     scripture40.alphabet = String(describing: scripture40.title![(scripture40.title!.startIndex)])
-    scripture40.order = Int64(defaultScriptureDictionary["\(scripture40.book ?? "gen")"]!)
+    scripture40.order = Int64(defaultScriptureDictionary["\(scripture40.book!)"]!)
     
     let scripture41 = Scripture(context: context)
     scripture41.topic = "Christlike Attributes"
@@ -585,7 +585,7 @@ func generateScripture() {
     scripture41.selected = false
     scripture41.sortingIndex = 0
     scripture41.alphabet = String(describing: scripture41.title![(scripture41.title!.startIndex)])
-    scripture41.order = Int64(defaultScriptureDictionary["\(scripture41.book ?? "gen")"]!)
+    scripture41.order = Int64(defaultScriptureDictionary["\(scripture41.book!)"]!)
     
     let scripture42 = Scripture(context: context)
     scripture42.topic = "Christlike Attributes"
@@ -599,7 +599,7 @@ func generateScripture() {
     scripture42.selected = false
     scripture42.sortingIndex = 0
     scripture42.alphabet = String(describing: scripture42.title![(scripture42.title!.startIndex)])
-    scripture42.order = Int64(defaultScriptureDictionary["\(scripture42.book ?? "gen")"]!)
+    scripture42.order = Int64(defaultScriptureDictionary["\(scripture42.book!)"]!)
     
     let scripture43 = Scripture(context: context)
     scripture43.topic = "Principles & Ordinances"
@@ -613,7 +613,7 @@ func generateScripture() {
     scripture43.selected = false
     scripture43.sortingIndex = 0
     scripture43.alphabet = String(describing: scripture43.title![(scripture43.title!.startIndex)])
-    scripture43.order = Int64(defaultScriptureDictionary["\(scripture43.book ?? "gen")"]!)
+    scripture43.order = Int64(defaultScriptureDictionary["\(scripture43.book!)"]!)
     
     let scripture44 = Scripture(context: context)
     scripture44.topic = "Jesus Christ"
@@ -627,7 +627,7 @@ func generateScripture() {
     scripture44.selected = false
     scripture44.sortingIndex = 0
     scripture44.alphabet = String(describing: scripture44.title![(scripture44.title!.startIndex)])
-    scripture44.order = Int64(defaultScriptureDictionary["\(scripture44.book ?? "gen")"]!)
+    scripture44.order = Int64(defaultScriptureDictionary["\(scripture44.book!)"]!)
     
     let scripture45 = Scripture(context: context)
     scripture45.topic = "Forgiveness"
@@ -641,7 +641,7 @@ func generateScripture() {
     scripture45.selected = false
     scripture45.sortingIndex = 0
     scripture45.alphabet = String(describing: scripture45.title![(scripture45.title!.startIndex)])
-    scripture45.order = Int64(defaultScriptureDictionary["\(scripture45.book ?? "gen")"]!)
+    scripture45.order = Int64(defaultScriptureDictionary["\(scripture45.book!)"]!)
     
     let scripture46 = Scripture(context: context)
     scripture46.topic = "Jesus Christ"
@@ -655,7 +655,7 @@ func generateScripture() {
     scripture46.selected = false
     scripture46.sortingIndex = 0
     scripture46.alphabet = String(describing: scripture46.title![(scripture46.title!.startIndex)])
-    scripture46.order = Int64(defaultScriptureDictionary["\(scripture46.book ?? "gen")"]!)
+    scripture46.order = Int64(defaultScriptureDictionary["\(scripture46.book!)"]!)
     
     let scripture47 = Scripture(context: context)
     scripture47.topic = "Atonement"
@@ -669,7 +669,7 @@ func generateScripture() {
     scripture47.selected = false
     scripture47.sortingIndex = 0
     scripture47.alphabet = String(describing: scripture47.title![(scripture47.title!.startIndex)])
-    scripture47.order = Int64(defaultScriptureDictionary["\(scripture47.book ?? "gen")"]!)
+    scripture47.order = Int64(defaultScriptureDictionary["\(scripture47.book!)"]!)
     
     let scripture48 = Scripture(context: context)
     scripture48.topic = "Christlike Attributes"
@@ -683,7 +683,7 @@ func generateScripture() {
     scripture48.selected = false
     scripture48.sortingIndex = 0
     scripture48.alphabet = String(describing: scripture48.title![(scripture48.title!.startIndex)])
-    scripture48.order = Int64(defaultScriptureDictionary["\(scripture48.book ?? "gen")"]!)
+    scripture48.order = Int64(defaultScriptureDictionary["\(scripture48.book!)"]!)
     
     let scripture49 = Scripture(context: context)
     scripture49.topic = "Holy Ghost"
@@ -697,7 +697,7 @@ func generateScripture() {
     scripture49.selected = false
     scripture49.sortingIndex = 0
     scripture49.alphabet = String(describing: scripture49.title![(scripture49.title!.startIndex)])
-    scripture49.order = Int64(defaultScriptureDictionary["\(scripture49.book ?? "gen")"]!)
+    scripture49.order = Int64(defaultScriptureDictionary["\(scripture49.book!)"]!)
     
     let scripture50 = Scripture(context: context)
     scripture50.topic = "Christlike Attributes"
@@ -711,7 +711,7 @@ func generateScripture() {
     scripture50.selected = false
     scripture50.sortingIndex = 0
     scripture50.alphabet = String(describing: scripture50.title![(scripture50.title!.startIndex)])
-    scripture50.order = Int64(defaultScriptureDictionary["\(scripture50.book ?? "gen")"]!)
+    scripture50.order = Int64(defaultScriptureDictionary["\(scripture50.book!)"]!)
     
     let scripture51 = Scripture(context: context)
     scripture51.topic = "Christlike Attributes"
@@ -725,7 +725,7 @@ func generateScripture() {
     scripture51.selected = false
     scripture51.sortingIndex = 0
     scripture51.alphabet = String(describing: scripture51.title![(scripture51.title!.startIndex)])
-    scripture51.order = Int64(defaultScriptureDictionary["\(scripture51.book ?? "gen")"]!)
+    scripture51.order = Int64(defaultScriptureDictionary["\(scripture51.book!)"]!)
     
     let scripture52 = Scripture(context: context)
     scripture52.topic = "Commandments"
@@ -739,7 +739,7 @@ func generateScripture() {
     scripture52.selected = false
     scripture52.sortingIndex = 0
     scripture52.alphabet = String(describing: scripture52.title![(scripture52.title!.startIndex)])
-    scripture52.order = Int64(defaultScriptureDictionary["\(scripture52.book ?? "gen")"]!)
+    scripture52.order = Int64(defaultScriptureDictionary["\(scripture52.book!)"]!)
     
     let scripture53 = Scripture(context: context)
     scripture53.topic = "Restoration"
@@ -753,7 +753,7 @@ func generateScripture() {
     scripture53.selected = false
     scripture53.sortingIndex = 0
     scripture53.alphabet = String(describing: scripture53.title![(scripture53.title!.startIndex)])
-    scripture53.order = Int64(defaultScriptureDictionary["\(scripture53.book ?? "gen")"]!)
+    scripture53.order = Int64(defaultScriptureDictionary["\(scripture53.book!)"]!)
     
     let scripture54 = Scripture(context: context)
     scripture54.topic = "Jesus Christ"
@@ -767,7 +767,7 @@ func generateScripture() {
     scripture54.selected = false
     scripture54.sortingIndex = 0
     scripture54.alphabet = String(describing: scripture54.title![(scripture54.title!.startIndex)])
-    scripture54.order = Int64(defaultScriptureDictionary["\(scripture54.book ?? "gen")"]!)
+    scripture54.order = Int64(defaultScriptureDictionary["\(scripture54.book!)"]!)
     
     let scripture55 = Scripture(context: context)
     scripture55.topic = "Endure to the end"
@@ -781,7 +781,7 @@ func generateScripture() {
     scripture55.selected = false
     scripture55.sortingIndex = 0
     scripture55.alphabet = String(describing: scripture55.title![(scripture55.title!.startIndex)])
-    scripture55.order = Int64(defaultScriptureDictionary["\(scripture55.book ?? "gen")"]!)
+    scripture55.order = Int64(defaultScriptureDictionary["\(scripture55.book!)"]!)
     
     let scripture56 = Scripture(context: context)
     scripture56.topic = "Commandments"
@@ -795,7 +795,7 @@ func generateScripture() {
     scripture56.selected = false
     scripture56.sortingIndex = 0
     scripture56.alphabet = String(describing: scripture56.title![(scripture56.title!.startIndex)])
-    scripture56.order = Int64(defaultScriptureDictionary["\(scripture56.book ?? "gen")"]!)
+    scripture56.order = Int64(defaultScriptureDictionary["\(scripture56.book!)"]!)
     
     let scripture57 = Scripture(context: context)
     scripture57.topic = "Commandments"
@@ -809,7 +809,7 @@ func generateScripture() {
     scripture57.selected = false
     scripture57.sortingIndex = 0
     scripture57.alphabet = String(describing: scripture57.title![(scripture57.title!.startIndex)])
-    scripture57.order = Int64(defaultScriptureDictionary["\(scripture57.book ?? "gen")"]!)
+    scripture57.order = Int64(defaultScriptureDictionary["\(scripture57.book!)"]!)
     
     let scripture58 = Scripture(context: context)
     scripture58.topic = "Restoration"
@@ -823,7 +823,7 @@ func generateScripture() {
     scripture58.selected = false
     scripture58.sortingIndex = 0
     scripture58.alphabet = String(describing: scripture58.title![(scripture58.title!.startIndex)])
-    scripture58.order = Int64(defaultScriptureDictionary["\(scripture58.book ?? "gen")"]!)
+    scripture58.order = Int64(defaultScriptureDictionary["\(scripture58.book!)"]!)
     
     let scripture59 = Scripture(context: context)
     scripture59.topic = "Holy Ghost"
@@ -837,7 +837,7 @@ func generateScripture() {
     scripture59.selected = false
     scripture59.sortingIndex = 0
     scripture59.alphabet = String(describing: scripture59.title![(scripture59.title!.startIndex)])
-    scripture59.order = Int64(defaultScriptureDictionary["\(scripture59.book ?? "gen")"]!)
+    scripture59.order = Int64(defaultScriptureDictionary["\(scripture59.book!)"]!)
     
     let scripture60 = Scripture(context: context)
     scripture60.topic = "Heavenly Father"
@@ -851,7 +851,7 @@ func generateScripture() {
     scripture60.selected = false
     scripture60.sortingIndex = 0
     scripture60.alphabet = String(describing: scripture60.title![(scripture60.title!.startIndex)])
-    scripture60.order = Int64(defaultScriptureDictionary["\(scripture60.book ?? "gen")"]!)
+    scripture60.order = Int64(defaultScriptureDictionary["\(scripture60.book!)"]!)
     
     let scripture61 = Scripture(context: context)
     scripture61.topic = "Plan of Salvation"
@@ -865,7 +865,7 @@ func generateScripture() {
     scripture61.selected = false
     scripture61.sortingIndex = 0
     scripture61.alphabet = String(describing: scripture61.title![(scripture61.title!.startIndex)])
-    scripture61.order = Int64(defaultScriptureDictionary["\(scripture61.book ?? "gen")"]!)
+    scripture61.order = Int64(defaultScriptureDictionary["\(scripture61.book!)"]!)
     
     let scripture62 = Scripture(context: context)
     scripture62.topic = "Commandments"
@@ -879,7 +879,7 @@ func generateScripture() {
     scripture62.selected = false
     scripture62.sortingIndex = 0
     scripture62.alphabet = String(describing: scripture62.title![(scripture62.title!.startIndex)])
-    scripture62.order = Int64(defaultScriptureDictionary["\(scripture62.book ?? "gen")"]!)
+    scripture62.order = Int64(defaultScriptureDictionary["\(scripture62.book!)"]!)
     
     let scripture63 = Scripture(context: context)
     scripture63.topic = "Heavenly Father"
@@ -893,7 +893,7 @@ func generateScripture() {
     scripture63.selected = false
     scripture63.sortingIndex = 0
     scripture63.alphabet = String(describing: scripture63.title![(scripture63.title!.startIndex)])
-    scripture63.order = Int64(defaultScriptureDictionary["\(scripture63.book ?? "gen")"]!)
+    scripture63.order = Int64(defaultScriptureDictionary["\(scripture63.book!)"]!)
     
     let scripture64 = Scripture(context: context)
     scripture64.topic = "Jesus Christ"
@@ -907,7 +907,7 @@ func generateScripture() {
     scripture64.selected = false
     scripture64.sortingIndex = 0
     scripture64.alphabet = String(describing: scripture64.title![(scripture64.title!.startIndex)])
-    scripture64.order = Int64(defaultScriptureDictionary["\(scripture64.book ?? "gen")"]!)
+    scripture64.order = Int64(defaultScriptureDictionary["\(scripture64.book!)"]!)
     
     let scripture65 = Scripture(context: context)
     scripture65.topic = "Atonement"
@@ -921,7 +921,7 @@ func generateScripture() {
     scripture65.selected = false
     scripture65.sortingIndex = 0
     scripture65.alphabet = String(describing: scripture65.title![(scripture65.title!.startIndex)])
-    scripture65.order = Int64(defaultScriptureDictionary["\(scripture65.book ?? "gen")"]!)
+    scripture65.order = Int64(defaultScriptureDictionary["\(scripture65.book!)"]!)
     
     let scripture66 = Scripture(context: context)
     scripture66.topic = "Restoration"
@@ -935,7 +935,7 @@ func generateScripture() {
     scripture66.selected = false
     scripture66.sortingIndex = 0
     scripture66.alphabet = String(describing: scripture66.title![(scripture66.title!.startIndex)])
-    scripture66.order = Int64(defaultScriptureDictionary["\(scripture66.book ?? "gen")"]!)
+    scripture66.order = Int64(defaultScriptureDictionary["\(scripture66.book!)"]!)
     
     let scripture67 = Scripture(context: context)
     scripture67.topic = "Endure to the end"
@@ -949,7 +949,7 @@ func generateScripture() {
     scripture67.selected = false
     scripture67.sortingIndex = 0
     scripture67.alphabet = String(describing: scripture67.title![(scripture67.title!.startIndex)])
-    scripture67.order = Int64(defaultScriptureDictionary["\(scripture67.book ?? "gen")"]!)
+    scripture67.order = Int64(defaultScriptureDictionary["\(scripture67.book!)"]!)
     
     let scripture68 = Scripture(context: context)
     scripture68.topic = "Atonement"
@@ -963,7 +963,7 @@ func generateScripture() {
     scripture68.selected = false
     scripture68.sortingIndex = 0
     scripture68.alphabet = String(describing: scripture68.title![(scripture68.title!.startIndex)])
-    scripture68.order = Int64(defaultScriptureDictionary["\(scripture68.book ?? "gen")"]!)
+    scripture68.order = Int64(defaultScriptureDictionary["\(scripture68.book!)"]!)
     
     let scripture69 = Scripture(context: context)
     scripture69.topic = "Commandments"
@@ -977,7 +977,7 @@ func generateScripture() {
     scripture69.selected = false
     scripture69.sortingIndex = 0
     scripture69.alphabet = String(describing: scripture69.title![(scripture69.title!.startIndex)])
-    scripture69.order = Int64(defaultScriptureDictionary["\(scripture69.book ?? "gen")"]!)
+    scripture69.order = Int64(defaultScriptureDictionary["\(scripture69.book!)"]!)
     
     let scripture70 = Scripture(context: context)
     scripture70.topic = "Principles & Ordinances"
@@ -991,7 +991,7 @@ func generateScripture() {
     scripture70.selected = false
     scripture70.sortingIndex = 0
     scripture70.alphabet = String(describing: scripture70.title![(scripture70.title!.startIndex)])
-    scripture70.order = Int64(defaultScriptureDictionary["\(scripture70.book ?? "gen")"]!)
+    scripture70.order = Int64(defaultScriptureDictionary["\(scripture70.book!)"]!)
     
     let scripture71 = Scripture(context: context)
     scripture71.topic = "Heavenly Father"
@@ -1005,7 +1005,7 @@ func generateScripture() {
     scripture71.selected = false
     scripture71.sortingIndex = 0
     scripture71.alphabet = String(describing: scripture71.title![(scripture71.title!.startIndex)])
-    scripture71.order = Int64(defaultScriptureDictionary["\(scripture71.book ?? "gen")"]!)
+    scripture71.order = Int64(defaultScriptureDictionary["\(scripture71.book!)"]!)
     
     let scripture72 = Scripture(context: context)
     scripture72.topic = "Principles & Ordinances"
@@ -1019,7 +1019,7 @@ func generateScripture() {
     scripture72.selected = false
     scripture72.sortingIndex = 0
     scripture72.alphabet = String(describing: scripture72.title![(scripture72.title!.startIndex)])
-    scripture72.order = Int64(defaultScriptureDictionary["\(scripture72.book ?? "gen")"]!)
+    scripture72.order = Int64(defaultScriptureDictionary["\(scripture72.book!)"]!)
     
     let scripture73 = Scripture(context: context)
     scripture73.topic = "Plan of Salvation"
@@ -1033,7 +1033,7 @@ func generateScripture() {
     scripture73.selected = false
     scripture73.sortingIndex = 0
     scripture73.alphabet = String(describing: scripture73.title![(scripture73.title!.startIndex)])
-    scripture73.order = Int64(defaultScriptureDictionary["\(scripture73.book ?? "gen")"]!)
+    scripture73.order = Int64(defaultScriptureDictionary["\(scripture73.book!)"]!)
     
     let scripture74 = Scripture(context: context)
     scripture74.topic = "Commandments"
@@ -1047,7 +1047,7 @@ func generateScripture() {
     scripture74.selected = false
     scripture74.sortingIndex = 0
     scripture74.alphabet = String(describing: scripture74.title![(scripture74.title!.startIndex)])
-    scripture74.order = Int64(defaultScriptureDictionary["\(scripture74.book ?? "gen")"]!)
+    scripture74.order = Int64(defaultScriptureDictionary["\(scripture74.book!)"]!)
     
     let scripture75 = Scripture(context: context)
     scripture75.topic = "Jesus Christ"
@@ -1061,7 +1061,7 @@ func generateScripture() {
     scripture75.selected = false
     scripture75.sortingIndex = 0
     scripture75.alphabet = String(describing: scripture75.title![(scripture75.title!.startIndex)])
-    scripture75.order = Int64(defaultScriptureDictionary["\(scripture75.book ?? "gen")"]!)
+    scripture75.order = Int64(defaultScriptureDictionary["\(scripture75.book!)"]!)
     
     let scripture76 = Scripture(context: context)
     scripture76.topic = "Plan of Salvation"
@@ -1075,7 +1075,7 @@ func generateScripture() {
     scripture76.selected = false
     scripture76.sortingIndex = 0
     scripture76.alphabet = String(describing: scripture76.title![(scripture76.title!.startIndex)])
-    scripture76.order = Int64(defaultScriptureDictionary["\(scripture76.book ?? "gen")"]!)
+    scripture76.order = Int64(defaultScriptureDictionary["\(scripture76.book!)"]!)
     
     let scripture77 = Scripture(context: context)
     scripture77.topic = "Principles & Ordinances"
@@ -1089,7 +1089,7 @@ func generateScripture() {
     scripture77.selected = false
     scripture77.sortingIndex = 0
     scripture77.alphabet = String(describing: scripture77.title![(scripture77.title!.startIndex)])
-    scripture77.order = Int64(defaultScriptureDictionary["\(scripture77.book ?? "gen")"]!)
+    scripture77.order = Int64(defaultScriptureDictionary["\(scripture77.book!)"]!)
     
     let scripture78 = Scripture(context: context)
     scripture78.topic = "Christlike Attributes"
@@ -1103,7 +1103,7 @@ func generateScripture() {
     scripture78.selected = false
     scripture78.sortingIndex = 0
     scripture78.alphabet = String(describing: scripture78.title![(scripture78.title!.startIndex)])
-    scripture78.order = Int64(defaultScriptureDictionary["\(scripture78.book ?? "gen")"]!)
+    scripture78.order = Int64(defaultScriptureDictionary["\(scripture78.book!)"]!)
     
     let scripture79 = Scripture(context: context)
     scripture79.topic = "Jesus Christ"
@@ -1117,7 +1117,7 @@ func generateScripture() {
     scripture79.selected = false
     scripture79.sortingIndex = 0
     scripture79.alphabet = String(describing: scripture79.title![(scripture79.title!.startIndex)])
-    scripture79.order = Int64(defaultScriptureDictionary["\(scripture79.book ?? "gen")"]!)
+    scripture79.order = Int64(defaultScriptureDictionary["\(scripture79.book!)"]!)
     
     let scripture80 = Scripture(context: context)
     scripture80.topic = "Plan of Salvation"
@@ -1131,7 +1131,7 @@ func generateScripture() {
     scripture80.selected = false
     scripture80.sortingIndex = 0
     scripture80.alphabet = String(describing: scripture80.title![(scripture80.title!.startIndex)])
-    scripture80.order = Int64(defaultScriptureDictionary["\(scripture80.book ?? "gen")"]!)
+    scripture80.order = Int64(defaultScriptureDictionary["\(scripture80.book!)"]!)
     
     let scripture81 = Scripture(context: context)
     scripture81.topic = "Commandments"
@@ -1145,7 +1145,7 @@ func generateScripture() {
     scripture81.selected = false
     scripture81.sortingIndex = 0
     scripture81.alphabet = String(describing: scripture81.title![(scripture81.title!.startIndex)])
-    scripture81.order = Int64(defaultScriptureDictionary["\(scripture81.book ?? "gen")"]!)
+    scripture81.order = Int64(defaultScriptureDictionary["\(scripture81.book!)"]!)
     
     let scripture82 = Scripture(context: context)
     scripture82.topic = "Redeem the Dead"
@@ -1159,7 +1159,7 @@ func generateScripture() {
     scripture82.selected = false
     scripture82.sortingIndex = 0
     scripture82.alphabet = String(describing: scripture82.title![(scripture82.title!.startIndex)])
-    scripture82.order = Int64(defaultScriptureDictionary["\(scripture82.book ?? "gen")"]!)
+    scripture82.order = Int64(defaultScriptureDictionary["\(scripture82.book!)"]!)
 
     let scripture83 = Scripture(context: context)
     scripture83.topic = "Jesus Christ"
@@ -1173,7 +1173,7 @@ func generateScripture() {
     scripture83.selected = false
     scripture83.sortingIndex = 0
     scripture83.alphabet = String(describing: scripture83.title![(scripture83.title!.startIndex)])
-    scripture83.order = Int64(defaultScriptureDictionary["\(scripture83.book ?? "gen")"]!)
+    scripture83.order = Int64(defaultScriptureDictionary["\(scripture83.book!)"]!)
 
     let scripture84 = Scripture(context: context)
     scripture84.topic = "Restoration"
@@ -1187,7 +1187,7 @@ func generateScripture() {
     scripture84.selected = false
     scripture84.sortingIndex = 0
     scripture84.alphabet = String(describing: scripture84.title![(scripture84.title!.startIndex)])
-    scripture84.order = Int64(defaultScriptureDictionary["\(scripture84.book ?? "gen")"]!)
+    scripture84.order = Int64(defaultScriptureDictionary["\(scripture84.book!)"]!)
 
     let scripture85 = Scripture(context: context)
     scripture85.topic = "Commandments"
@@ -1201,7 +1201,7 @@ func generateScripture() {
     scripture85.selected = false
     scripture85.sortingIndex = 0
     scripture85.alphabet = String(describing: scripture85.title![(scripture85.title!.startIndex)])
-    scripture85.order = Int64(defaultScriptureDictionary["\(scripture85.book ?? "gen")"]!)
+    scripture85.order = Int64(defaultScriptureDictionary["\(scripture85.book!)"]!)
 
     let scripture86 = Scripture(context: context)
     scripture86.topic = "Proclaim the Gospel"
@@ -1215,7 +1215,7 @@ func generateScripture() {
     scripture86.selected = false
     scripture86.sortingIndex = 0
     scripture86.alphabet = String(describing: scripture86.title![(scripture86.title!.startIndex)])
-    scripture86.order = Int64(defaultScriptureDictionary["\(scripture86.book ?? "gen")"]!)
+    scripture86.order = Int64(defaultScriptureDictionary["\(scripture86.book!)"]!)
     
     let scripture87 = Scripture(context: context)
     scripture87.topic = "Care for the Poor & Needy"
@@ -1229,7 +1229,7 @@ func generateScripture() {
     scripture87.selected = false
     scripture87.sortingIndex = 0
     scripture87.alphabet = String(describing: scripture87.title![(scripture87.title!.startIndex)])
-    scripture87.order = Int64(defaultScriptureDictionary["\(scripture87.book ?? "gen")"]!)
+    scripture87.order = Int64(defaultScriptureDictionary["\(scripture87.book!)"]!)
 
     let scripture88 = Scripture(context: context)
     scripture88.topic = "Holy Ghost"
@@ -1243,7 +1243,7 @@ func generateScripture() {
     scripture88.selected = false
     scripture88.sortingIndex = 0
     scripture88.alphabet = String(describing: scripture88.title![(scripture88.title!.startIndex)])
-    scripture88.order = Int64(defaultScriptureDictionary["\(scripture88.book ?? "gen")"]!)
+    scripture88.order = Int64(defaultScriptureDictionary["\(scripture88.book!)"]!)
 
     let scripture89 = Scripture(context: context)
     scripture89.topic = "Atonement"
@@ -1257,7 +1257,7 @@ func generateScripture() {
     scripture89.selected = false
     scripture89.sortingIndex = 0
     scripture89.alphabet = String(describing: scripture89.title![(scripture89.title!.startIndex)])
-    scripture89.order = Int64(defaultScriptureDictionary["\(scripture89.book ?? "gen")"]!)
+    scripture89.order = Int64(defaultScriptureDictionary["\(scripture89.book!)"]!)
 
     let scripture90 = Scripture(context: context)
     scripture90.topic = "Christlike Attributes"
@@ -1271,7 +1271,7 @@ func generateScripture() {
     scripture90.selected = false
     scripture90.sortingIndex = 0
     scripture90.alphabet = String(describing: scripture90.title![(scripture90.title!.startIndex)])
-    scripture90.order = Int64(defaultScriptureDictionary["\(scripture90.book ?? "gen")"]!)
+    scripture90.order = Int64(defaultScriptureDictionary["\(scripture90.book!)"]!)
 
     let scripture91 = Scripture(context: context)
     scripture91.topic = "Heavenly Father"
@@ -1285,7 +1285,7 @@ func generateScripture() {
     scripture91.selected = false
     scripture91.sortingIndex = 0
     scripture91.alphabet = String(describing: scripture91.title![(scripture91.title!.startIndex)])
-    scripture91.order = Int64(defaultScriptureDictionary["\(scripture91.book ?? "gen")"]!)
+    scripture91.order = Int64(defaultScriptureDictionary["\(scripture91.book!)"]!)
 
     let scripture92 = Scripture(context: context)
     scripture92.topic = "Restoration"
@@ -1299,7 +1299,7 @@ func generateScripture() {
     scripture92.selected = false
     scripture92.sortingIndex = 0
     scripture92.alphabet = String(describing: scripture92.title![(scripture92.title!.startIndex)])
-    scripture92.order = Int64(defaultScriptureDictionary["\(scripture92.book ?? "gen")"]!)
+    scripture92.order = Int64(defaultScriptureDictionary["\(scripture92.book!)"]!)
 
     let scripture93 = Scripture(context: context)
     scripture93.topic = "Care for the Poor & Needy"
@@ -1313,7 +1313,7 @@ func generateScripture() {
     scripture93.selected = false
     scripture93.sortingIndex = 0
     scripture93.alphabet = String(describing: scripture93.title![(scripture93.title!.startIndex)])
-    scripture93.order = Int64(defaultScriptureDictionary["\(scripture93.book ?? "gen")"]!)
+    scripture93.order = Int64(defaultScriptureDictionary["\(scripture93.book!)"]!)
 
     let scripture94 = Scripture(context: context)
     scripture94.topic = "Endure to the end"
@@ -1327,7 +1327,7 @@ func generateScripture() {
     scripture94.selected = false
     scripture94.sortingIndex = 0
     scripture94.alphabet = String(describing: scripture94.title![(scripture94.title!.startIndex)])
-    scripture94.order = Int64(defaultScriptureDictionary["\(scripture94.book ?? "gen")"]!)
+    scripture94.order = Int64(defaultScriptureDictionary["\(scripture94.book!)"]!)
 
     let scripture95 = Scripture(context: context)
     scripture95.topic = "Christlike Attributes"
@@ -1341,7 +1341,7 @@ func generateScripture() {
     scripture95.selected = false
     scripture95.sortingIndex = 0
     scripture95.alphabet = String(describing: scripture95.title![(scripture95.title!.startIndex)])
-    scripture95.order = Int64(defaultScriptureDictionary["\(scripture95.book ?? "gen")"]!)
+    scripture95.order = Int64(defaultScriptureDictionary["\(scripture95.book!)"]!)
 
     let scripture96 = Scripture(context: context)
     scripture96.topic = "Jesus Christ"
@@ -1355,7 +1355,7 @@ func generateScripture() {
     scripture96.selected = false
     scripture96.sortingIndex = 0
     scripture96.alphabet = String(describing: scripture96.title![(scripture96.title!.startIndex)])
-    scripture96.order = Int64(defaultScriptureDictionary["\(scripture96.book ?? "gen")"]!)
+    scripture96.order = Int64(defaultScriptureDictionary["\(scripture96.book!)"]!)
 
     let scripture97 = Scripture(context: context)
     scripture97.topic = "Christlike Attributes"
@@ -1369,7 +1369,7 @@ func generateScripture() {
     scripture97.selected = false
     scripture97.sortingIndex = 0
     scripture97.alphabet = String(describing: scripture97.title![(scripture97.title!.startIndex)])
-    scripture97.order = Int64(defaultScriptureDictionary["\(scripture97.book ?? "gen")"]!)
+    scripture97.order = Int64(defaultScriptureDictionary["\(scripture97.book!)"]!)
 
     let scripture98 = Scripture(context: context)
     scripture98.topic = "Heavenly Father"
@@ -1383,7 +1383,7 @@ func generateScripture() {
     scripture98.selected = false
     scripture98.sortingIndex = 0
     scripture98.alphabet = String(describing: scripture98.title![(scripture98.title!.startIndex)])
-    scripture98.order = Int64(defaultScriptureDictionary["\(scripture98.book ?? "gen")"]!)
+    scripture98.order = Int64(defaultScriptureDictionary["\(scripture98.book!)"]!)
     
     let scripture99 = Scripture(context: context)
     scripture99.topic = "Heavenly Father"
@@ -1397,7 +1397,7 @@ func generateScripture() {
     scripture99.selected = false
     scripture99.sortingIndex = 0
     scripture99.alphabet = String(describing: scripture99.title![(scripture99.title!.startIndex)])
-    scripture99.order = Int64(defaultScriptureDictionary["\(scripture99.book ?? "gen")"]!)
+    scripture99.order = Int64(defaultScriptureDictionary["\(scripture99.book!)"]!)
 
     let scripture100 = Scripture(context: context)
     scripture100.topic = "Christlike Attributes"
@@ -1411,7 +1411,7 @@ func generateScripture() {
     scripture100.selected = false
     scripture100.sortingIndex = 0
     scripture100.alphabet = String(describing: scripture100.title![(scripture100.title!.startIndex)])
-    scripture100.order = Int64(defaultScriptureDictionary["\(scripture100.book ?? "gen")"]!)
+    scripture100.order = Int64(defaultScriptureDictionary["\(scripture100.book!)"]!)
 
     let scripture101 = Scripture(context: context)
     scripture101.topic = "Scriptures"
@@ -1425,7 +1425,7 @@ func generateScripture() {
     scripture101.selected = false
     scripture101.sortingIndex = 0
     scripture101.alphabet = String(describing: scripture101.title![(scripture101.title!.startIndex)])
-    scripture101.order = Int64(defaultScriptureDictionary["\(scripture101.book ?? "gen")"]!)
+    scripture101.order = Int64(defaultScriptureDictionary["\(scripture101.book!)"]!)
 
     ad.saveContext()
 }
