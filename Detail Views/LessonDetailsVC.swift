@@ -174,6 +174,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         
         if let title = lessonTitleTextField.text {
             lesson.title = title
+            lesson.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if let category = lessonCategoryTextField.text {

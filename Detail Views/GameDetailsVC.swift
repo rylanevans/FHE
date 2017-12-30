@@ -137,6 +137,7 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         if let title = gameTitleTextField.text {
             game.title = title
+            game.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if let URL = gameURLTextField.text {

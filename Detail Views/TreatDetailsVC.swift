@@ -137,6 +137,7 @@ class TreatDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         
         if let title = treatTitleTextField.text {
             treat.title = title
+            treat.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if let URL = treatURLTextField.text {

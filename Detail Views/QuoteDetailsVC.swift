@@ -115,6 +115,7 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
         
         if let title = quoteTitleTextField.text {
             quote.title = title
+            quote.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if let URL = quoteURLTextField.text {
