@@ -200,6 +200,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         if let title = scriptureTitleTextField.text {
             scripture.title = title
+            scripture.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if let topic = scriptureTopicTextField.text {
@@ -212,6 +213,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         if let book = scriptureBookTextField.text {
             scripture.book = book
+            scripture.order = Int64(defaultScriptureDictionary["\(book)"]!)
         }
         
         if let chapter = scriptureChapterTextField.text {

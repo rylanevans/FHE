@@ -175,6 +175,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         
         if let title = songTitleTextField.text {
             song.title = title
+            song.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if songNumberTextField.text != "" {
