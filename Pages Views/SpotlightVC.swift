@@ -20,6 +20,27 @@ class SpotlightVC: UIViewController {
         loadPageData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.launched < 3 && counter.launched % 2 != 0 {
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Spotlight is designed to be opposite of the other tasks. Instead of the assignee leading, they stand in the spotlight and everyone else gives that person meaningful compliments.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
 
         dismiss(animated: true, completion: nil)

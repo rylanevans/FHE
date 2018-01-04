@@ -36,10 +36,10 @@ func generateTasks() {
     
     let taskRule = Task(context: context)
     taskRule.assigned = false
-    let assigneetaskRule = membersAttendingArray[0]
+    let assigneetaskRule = membersAttendingArray[2]
     taskRule.assignment = assigneetaskRule
     taskRule.defaultNumber = 3
-    taskRule.enabled = false
+    taskRule.enabled = true
     taskRule.name = "Rule"
     taskRule.order = Int64(arc4random_uniform(100))
     taskRule.segment = 0
@@ -47,7 +47,7 @@ func generateTasks() {
     
     let taskScripture = Task(context: context)
     taskScripture.assigned = false
-    let assigneetaskScripture = membersAttendingArray[2]
+    let assigneetaskScripture = membersAttendingArray[3]
     taskScripture.assignment = assigneetaskScripture
     taskScripture.defaultNumber = 4
     taskScripture.enabled = true
@@ -61,7 +61,7 @@ func generateTasks() {
     let assigneetaskCalendar = membersAttendingArray[0]
     taskCalendar.assignment = assigneetaskCalendar
     taskCalendar.defaultNumber = 5
-    taskCalendar.enabled = false
+    taskCalendar.enabled = true
     taskCalendar.name = "Calendar"
     taskCalendar.order = Int64(arc4random_uniform(100))
     taskCalendar.segment = 0
@@ -69,10 +69,10 @@ func generateTasks() {
     
     let taskTestimony = Task(context: context)
     taskTestimony.assigned = false
-    let assigneetaskTestimony = membersAttendingArray[0]
+    let assigneetaskTestimony = membersAttendingArray[1]
     taskTestimony.assignment = assigneetaskTestimony
     taskTestimony.defaultNumber = 6
-    taskTestimony.enabled = false
+    taskTestimony.enabled = true
     taskTestimony.name = "Testimony"
     taskTestimony.order = Int64(arc4random_uniform(100))
     taskTestimony.segment = 0
@@ -80,10 +80,10 @@ func generateTasks() {
     
     let taskSpotlight = Task(context: context)
     taskSpotlight.assigned = false
-    let assigneetaskSpotlight = membersAttendingArray[0]
+    let assigneetaskSpotlight = membersAttendingArray[2]
     taskSpotlight.assignment = assigneetaskSpotlight
     taskSpotlight.defaultNumber = 7
-    taskSpotlight.enabled = false
+    taskSpotlight.enabled = true
     taskSpotlight.name = "Spotlight"
     taskSpotlight.order = Int64(arc4random_uniform(100))
     taskSpotlight.segment = 0
@@ -102,7 +102,7 @@ func generateTasks() {
     
     let taskQuote = Task(context: context)
     taskQuote.assigned = false
-    let assigneetaskQuote = membersAttendingArray[0]
+    let assigneetaskQuote = membersAttendingArray[1]
     taskQuote.assignment = assigneetaskQuote
     taskQuote.defaultNumber = 9
     taskQuote.enabled = false
@@ -124,7 +124,7 @@ func generateTasks() {
     
     let taskCouncil = Task(context: context)
     taskCouncil.assigned = false
-    let assigneetaskCouncil = membersAttendingArray[0]
+    let assigneetaskCouncil = membersAttendingArray[2]
     taskCouncil.assignment = assigneetaskCouncil
     taskCouncil.defaultNumber = 11
     taskCouncil.enabled = false
@@ -135,7 +135,7 @@ func generateTasks() {
     
     let taskGame = Task(context: context)
     taskGame.assigned = false
-    let assigneetaskGame = membersAttendingArray[4]
+    let assigneetaskGame = membersAttendingArray[0]
     taskGame.assignment = assigneetaskGame
     taskGame.defaultNumber = 12
     taskGame.enabled = true
@@ -146,7 +146,7 @@ func generateTasks() {
     
     let taskClosePrayer = Task(context: context)
     taskClosePrayer.assigned = false
-    let assigneetaskClosePrayer = membersAttendingArray[5]
+    let assigneetaskClosePrayer = membersAttendingArray[1]
     taskClosePrayer.assignment = assigneetaskClosePrayer
     taskClosePrayer.defaultNumber = 13
     taskClosePrayer.enabled = true
@@ -157,7 +157,7 @@ func generateTasks() {
     
     let taskTreat = Task(context: context)
     taskTreat.assigned = false
-    let assigneetaskTreat = membersAttendingArray[0]
+    let assigneetaskTreat = membersAttendingArray[2]
     taskTreat.assignment = assigneetaskTreat
     taskTreat.defaultNumber = 14
     taskTreat.enabled = true

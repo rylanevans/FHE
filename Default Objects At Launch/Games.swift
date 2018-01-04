@@ -15,7 +15,7 @@ func generateGames() {
     let game1 = Game(context: context)
     game1.category = gameCategoryArray[0]
     game1.title = "Surprise!"
-    game1.url = "https://drive.google.com/open?id=1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe"
+    game1.url = "https://drive.google.com/file/d/1vdnjN6aNW4iRC1ljf79MBELI2-eW0BHe/view?usp=sharing"
     game1.favorite = true
     game1.order = 1
     game1.random = Int64(arc4random_uniform(1000))

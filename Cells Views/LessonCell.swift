@@ -20,6 +20,7 @@ class LessonCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var youTubeStackView: UIStackView!
     
     var delegate: LessonCellDelegate?
     
@@ -69,9 +70,15 @@ class LessonCell: UITableViewCell {
         let category = lesson.category
         let onDeck = lesson.selected
         let favorite = lesson.favorite
+        let youTube = lesson.youTubeVideo
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
         categoryLabel.text = category
+        if youTube == true {
+            youTubeStackView.isHidden = false
+        } else {
+            youTubeStackView.isHidden = true
+        }
         if onDeck == true {
             onDeckImage.image = #imageLiteral(resourceName: "Selected")
         } else {

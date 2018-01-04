@@ -61,7 +61,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     func runTutorial() {
         if counter.launched == 1 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "/nTIP - Press the recycle button to auto-rotate your family assignments.\n\nTRICK - Tap on a family members picture to manually assign them to a specific task.\n\nTRICK - Tap on the task Title or picture to make quick edits a new selection for the spesific song, scripture, lesson, etc that you would like to host.\n\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTRICK - Press the “♲” (recycle) button to auto-rotate your family assignments.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.\n\nTRICK - Tap on the task Title to make quick edits or make a selection for the specific song, scripture, lesson, etc.\n\nTRICK -  The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTIP - Press the “BEGIN” button to display and swipe through your all enabled tasks and their assignments one-by-one.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

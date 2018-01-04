@@ -26,6 +26,27 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         clickSoundURL()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.launched == 1 || counter.launched % 5 == 0 {
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - This is a marketing page for app users to show their support for my work. Donations are appreciated, but not required. Please show your support with a 💰 tip, or a 👍 on any of my social media platforms. Thank you!", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "😃 Happy to help!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        self.playClick()
         if indexPath.section == 0 {

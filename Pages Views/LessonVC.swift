@@ -40,23 +40,6 @@ class LessonVC: UIViewController {
             buttonDetailsView.isHidden = true
             buttonSpacer.isHidden = true
         }
-        
-        runTutorial()
-    }
-    
-    func runTutorial() {
-        if counter.launched < 3 && counter.launched % 2 != 0 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Turn your phone sideways to view in landscape mode.\n\nTRICK - Pair your phone to your family room TV for all to see.\n\n\nSee tutorials in the MORE tab for further instructions.", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
-                (action : UIAlertAction!) -> Void in
-            })
-            
-            alertController.addAction(okAction)
-            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-            
-            self.present(alertController, animated: true, completion: nil)
-        }
     }
     
     @IBAction func detailsButtonPressed(_ sender: Any) {
