@@ -2214,7 +2214,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                                 <constraint firstAttribute="width" constant="110" id="VxR-g8-tdv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                                            <state key="normal" title="DOWNLOAD">
+                                                            <state key="normal" title="INSTALL">
                                                                 <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -2731,18 +2731,18 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="IeE-rX-NmX" userLabel="Patreon">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="Lwp-Bo-0jq" userLabel="Linkedin">
                                         <rect key="frame" x="0.0" y="1818" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IeE-rX-NmX" id="deE-wR-CJ2">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lwp-Bo-0jq" id="eVQ-eq-5Y2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-Ke-WNz">
-                                                    <rect key="frame" x="24" y="12" width="327" height="166"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-iR-BLh">
+                                                    <rect key="frame" x="24" y="12" width="327" height="500"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-0e-Qoe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJv-YI-bHS" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2762,8 +2762,99 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-qq-gbr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="YDW-tV-iac">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="YDW-tV-iac" secondAttribute="height" multiplier="327:150" id="art-RI-T1e"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-6O-OFH">
+                                                            <rect key="frame" x="955" y="460" width="125" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="125" id="YI9-Rx-n3P"/>
+                                                                <constraint firstAttribute="height" constant="30" id="th0-N0-vSI"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <state key="normal" title="CONNECT">
+                                                                <color key="titleColor" name="Tint"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="Tint"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="xJv-YI-bHS" firstAttribute="top" secondItem="YDW-tV-iac" secondAttribute="top" id="MQ4-Nd-rRk"/>
+                                                        <constraint firstItem="xJv-YI-bHS" firstAttribute="bottom" secondItem="YDW-tV-iac" secondAttribute="bottom" id="S0g-3G-Q3I"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YDW-tV-iac" secondAttribute="trailing" id="UNb-Vc-c2Y"/>
+                                                        <constraint firstItem="xJv-YI-bHS" firstAttribute="leading" secondItem="YDW-tV-iac" secondAttribute="leading" id="f4Z-e2-72y"/>
+                                                        <constraint firstItem="xJv-YI-bHS" firstAttribute="trailing" secondItem="YDW-tV-iac" secondAttribute="trailing" id="gDJ-qn-Qf2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YDW-tV-iac" secondAttribute="bottom" id="kXk-YA-0Vx"/>
+                                                        <constraint firstItem="YDW-tV-iac" firstAttribute="leading" secondItem="Nqt-iR-BLh" secondAttribute="leading" id="kqX-vO-veR"/>
+                                                        <constraint firstItem="YDW-tV-iac" firstAttribute="top" secondItem="Nqt-iR-BLh" secondAttribute="top" id="lAe-T9-Frw"/>
+                                                        <constraint firstItem="Jz0-6O-OFH" firstAttribute="trailing" secondItem="YDW-tV-iac" secondAttribute="trailing" constant="-10" id="mYA-hc-ZLJ"/>
+                                                        <constraint firstItem="Jz0-6O-OFH" firstAttribute="bottom" secondItem="YDW-tV-iac" secondAttribute="bottom" constant="-10" id="wSb-Kd-3k2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Nqt-iR-BLh" secondAttribute="bottom" constant="12" id="4Ya-16-XEQ"/>
+                                                <constraint firstItem="Nqt-iR-BLh" firstAttribute="leading" secondItem="eVQ-eq-5Y2" secondAttribute="leading" constant="24" id="Bde-8Q-5tH"/>
+                                                <constraint firstAttribute="trailing" secondItem="Nqt-iR-BLh" secondAttribute="trailing" constant="24" id="RDQ-sF-jPL"/>
+                                                <constraint firstItem="Nqt-iR-BLh" firstAttribute="top" secondItem="eVQ-eq-5Y2" secondAttribute="top" constant="12" id="YDq-wT-34p"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="IeE-rX-NmX" userLabel="Yelp">
+                                        <rect key="frame" x="0.0" y="1949" width="375" height="131"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IeE-rX-NmX" id="deE-wR-CJ2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJI-Ke-WNz">
+                                                    <rect key="frame" x="24" y="12" width="327" height="500"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-0e-Qoe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="6"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                    <size key="value" width="-2" height="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yelp" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-qq-gbr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Nye-qq-gbr" secondAttribute="height" multiplier="327:150" id="XVw-Sc-itt"/>
                                                             </constraints>
@@ -2774,14 +2865,14 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqn-KA-WRh">
-                                                            <rect key="frame" x="227" y="126" width="125" height="30"/>
+                                                            <rect key="frame" x="955" y="460" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Wam-61-wsL"/>
                                                                 <constraint firstAttribute="width" constant="125" id="zsG-iP-cSa"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                                            <state key="normal" title="SUPPORT ME">
+                                                            <state key="normal" title="REVIEW ME">
                                                                 <color key="titleColor" name="Tint"/>
                                                             </state>
                                                             <userDefinedRuntimeAttributes>
@@ -2818,6 +2909,97 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                 <constraint firstItem="fJI-Ke-WNz" firstAttribute="leading" secondItem="deE-wR-CJ2" secondAttribute="leading" constant="24" id="MSw-NN-NFw"/>
                                                 <constraint firstAttribute="trailing" secondItem="fJI-Ke-WNz" secondAttribute="trailing" constant="24" id="TrG-Gr-NrX"/>
                                                 <constraint firstAttribute="bottom" secondItem="fJI-Ke-WNz" secondAttribute="bottom" constant="12" id="f9b-Df-mSh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="2xH-fd-4HH" userLabel="Patreon">
+                                        <rect key="frame" x="0.0" y="2080" width="375" height="131"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2xH-fd-4HH" id="uvc-ZC-3VR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HX2-Af-TeO">
+                                                    <rect key="frame" x="24" y="12" width="327" height="166"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-fL-eYq" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                                    <real key="value" value="6"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                                    <size key="value" width="-2" height="2"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-h6-BKu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="Mj4-h6-BKu" secondAttribute="height" multiplier="327:150" id="i4A-sV-vWx"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcy-78-PlS">
+                                                            <rect key="frame" x="227" y="126" width="125" height="30"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="97n-Uj-tVW"/>
+                                                                <constraint firstAttribute="width" constant="125" id="iWS-P2-0bJ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
+                                                            <state key="normal" title="SUPPORT ME">
+                                                                <color key="titleColor" name="Tint"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="5"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="Tint"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Tba-fL-eYq" firstAttribute="top" secondItem="Mj4-h6-BKu" secondAttribute="top" id="1G0-we-vc5"/>
+                                                        <constraint firstItem="Mj4-h6-BKu" firstAttribute="top" secondItem="HX2-Af-TeO" secondAttribute="top" id="H34-aI-Bjx"/>
+                                                        <constraint firstItem="Mj4-h6-BKu" firstAttribute="leading" secondItem="HX2-Af-TeO" secondAttribute="leading" id="Yjc-uH-k9g"/>
+                                                        <constraint firstItem="dcy-78-PlS" firstAttribute="trailing" secondItem="Mj4-h6-BKu" secondAttribute="trailing" constant="-10" id="c7b-YP-aNL"/>
+                                                        <constraint firstItem="Tba-fL-eYq" firstAttribute="leading" secondItem="Mj4-h6-BKu" secondAttribute="leading" id="hOU-PH-ObP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Mj4-h6-BKu" secondAttribute="bottom" id="mdS-Ba-dp8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Mj4-h6-BKu" secondAttribute="trailing" id="ntE-kV-4FX"/>
+                                                        <constraint firstItem="Tba-fL-eYq" firstAttribute="trailing" secondItem="Mj4-h6-BKu" secondAttribute="trailing" id="sFz-qy-Vvm"/>
+                                                        <constraint firstItem="Tba-fL-eYq" firstAttribute="bottom" secondItem="Mj4-h6-BKu" secondAttribute="bottom" id="saB-zN-VaF"/>
+                                                        <constraint firstItem="dcy-78-PlS" firstAttribute="bottom" secondItem="Mj4-h6-BKu" secondAttribute="bottom" constant="-10" id="v4M-kN-MYa"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="HX2-Af-TeO" firstAttribute="leading" secondItem="uvc-ZC-3VR" secondAttribute="leading" constant="24" id="RJU-PU-OEC"/>
+                                                <constraint firstAttribute="trailing" secondItem="HX2-Af-TeO" secondAttribute="trailing" constant="24" id="Toz-OY-vcs"/>
+                                                <constraint firstItem="HX2-Af-TeO" firstAttribute="top" secondItem="uvc-ZC-3VR" secondAttribute="top" constant="12" id="X08-Zm-ntX"/>
+                                                <constraint firstAttribute="bottom" secondItem="HX2-Af-TeO" secondAttribute="bottom" constant="12" id="czg-Tn-gbD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -3388,7 +3570,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6b6-Wk-pd2">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="105"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Tint"/>
                         <color key="barTintColor" name="Background"/>
@@ -3516,6 +3698,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Info" width="64" height="64"/>
         <image name="JesusChrist" width="800" height="533"/>
         <image name="Like it" width="200" height="200"/>
+        <image name="Linkedin" width="1024" height="500"/>
         <image name="Love it" width="200" height="200"/>
         <image name="Missing Profile" width="770" height="770"/>
         <image name="More25" width="26" height="8"/>
@@ -3539,6 +3722,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Thank you" width="200" height="200"/>
         <image name="Twitter" width="341" height="166"/>
         <image name="Website" width="509" height="420"/>
+        <image name="Yelp" width="1024" height="500"/>
         <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -3550,6 +3734,12 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

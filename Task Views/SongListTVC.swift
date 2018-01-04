@@ -143,8 +143,17 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         var title = ""
         let sectionTitle = songController.sections
         
-        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 || segment.selectedSegmentIndex == 3 || segment.selectedSegmentIndex == 5 {
+        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 || segment.selectedSegmentIndex == 3 {
             switch sectionTitle![section].name {
+            case "1": title = "1:"
+            case "2": title = "2:"
+            case "3": title = "3:"
+            case "4": title = "4:"
+            case "5": title = "5:"
+            case "6": title = "6:"
+            case "7": title = "7:"
+            case "8": title = "8:"
+            case "9": title = "9:"
             case "A": title = "A:"
             case "B": title = "B:"
             case "C": title = "C:"
@@ -200,35 +209,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             
         } else if segment.selectedSegmentIndex == 5 {
             switch sectionTitle![section].name {
-            case "A": title = "A:"
-            case "B": title = "B:"
-            case "C": title = "C:"
-            case "D": title = "D:"
-            case "E": title = "E:"
-            case "F": title = "F:"
-            case "G": title = "G:"
-            case "H": title = "H:"
-            case "I": title = "I:"
-            case "J": title = "J:"
-            case "K": title = "K:"
-            case "L": title = "L:"
-            case "M": title = "M:"
-            case "N": title = "N:"
-            case "O": title = "O:"
-            case "P": title = "P:"
-            case "Q": title = "Q:"
-            case "R": title = "R:"
-            case "S": title = "S:"
-            case "T": title = "T:"
-            case "U": title = "U:"
-            case "V": title = "V:"
-            case "W": title = "W:"
-            case "X": title = "X:"
-            case "Y": title = "Y:"
-            case "Z": title = "Z:"
+            case "1": title = "FAVORITES:"
             default: title = "SEARCH RESULTS:"
             }
-
             
         } else {
             title = "SORTED:"
@@ -527,10 +510,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 5 {
-            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
+            fetchRequest.sortDescriptors = [sortByTitle]
             let predicate = NSPredicate(format: "favorite == %@", NSNumber(booleanLiteral: true))
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "favorite", cacheName: nil)
             controller.delegate = self
             self.songController = controller
             

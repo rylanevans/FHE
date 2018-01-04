@@ -27,7 +27,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.playClick()
+        //        self.playClick()
         if indexPath.section == 0 {
             switch indexPath.row {
             case 0: aboutRylan()
@@ -38,7 +38,9 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             case 5: rylanEvans()
             case 6: facebook()
             case 7: twitter()
-            case 8: patreon()
+            case 8: linkedin()
+            case 9: yelp()
+            case 10: patreon()
             default: print("Error with MoreTVC index selection")
             }
         }
@@ -59,7 +61,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         
         present(rylanEvansWeb, animated: true, completion: nil)
     }
-
+    
     func basketballSSTapped() {
         UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1224378809?")! as URL, options: ["":""], completionHandler: nil)
     }
@@ -83,29 +85,82 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func facebook() {
-        let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
-        let facebookWeb = SFSafariViewController(url: URL as URL)
-        facebookWeb.delegate = self
+        let id = 660877290751092
+        let url = NSURL(string: "fb://profile/\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
+            let facebookWeb = SFSafariViewController(url: URL as URL)
+            facebookWeb.delegate = self
+            
+            present(facebookWeb, animated: true, completion: nil)
+        }
         
-        present(facebookWeb, animated: true, completion: nil)
+        //        UIApplication.shared.open(NSURL(string:"https://www.facebook.com/rylanevans.apps/")! as URL)
     }
     
     // MARK: -  MFMailComposeViewControllerDelegate Method to subscribe
     
     func twitter() {
-        let URL = NSURL(string: "https://twitter.com/rylan_evans")!
-        let twitterWeb = SFSafariViewController(url: URL as URL)
-        twitterWeb.delegate = self
+        let id = "rylan_evans"
+        //        156383146
+        let url = NSURL(string: "twitter://user?screen_name=\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://twitter.com/rylan_evans")!
+            let twitterWeb = SFSafariViewController(url: URL as URL)
+            twitterWeb.delegate = self
+            
+            present(twitterWeb, animated: true, completion: nil)
+        }
+    }
+    
+    func linkedin() {
+        let id = "rylanevans"
+        let url = NSURL(string: "voyager://in/\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.linkedin.com/in/rylanevans/")!
+            let linkedinWeb = SFSafariViewController(url: URL as URL)
+            linkedinWeb.delegate = self
+            
+            present(linkedinWeb, animated: true, completion: nil)
+        }
+    }
+    
+    func yelp() {
+        let id = "rylan-evans-apps-pleasant-grove-2"
+        let url = NSURL(string: "yelp:///biz/\(id)")!
         
-        present(twitterWeb, animated: true, completion: nil)
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.yelp.com/biz/rylan-evans-apps-pleasant-grove-2")!
+            
+            let yelpWebVC = SFSafariViewController(url: URL as URL)
+            yelpWebVC.delegate = self
+            
+            present(yelpWebVC, animated: true, completion: nil)
+        }
     }
     
     func patreon() {
-        let URL = NSURL(string: "https://www.patreon.com/rylanevans")!
-        let patreonWeb = SFSafariViewController(url: URL as URL)
-        patreonWeb.delegate = self
+        let id = "rylanevans"
+        let url = NSURL(string: "https://www.patreon.com/\(id)")!
         
-        present(patreonWeb, animated: true, completion: nil)
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.patreon.com/rylanevans")!
+            
+            let patreonWebVC = SFSafariViewController(url: URL as URL)
+            patreonWebVC.delegate = self
+            
+            present(patreonWebVC, animated: true, completion: nil)
+        }
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

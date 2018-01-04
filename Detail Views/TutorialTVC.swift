@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 class TutorialTVC: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,21 +25,33 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func orderAppleTVButtonPressed(_ sender: Any) {
-        let URL = NSURL(string: "https://www.amazon.com/Apple-MQD22LL-A-TV-4K/dp/B075NCMLYL/")!
-        
-        let amazonWebVC = SFSafariViewController(url: URL as URL)
-        amazonWebVC.delegate = self
-        
-        present(amazonWebVC, animated: true, completion: nil)
+        let id = "B075NCMLYL"
+        let url = NSURL(string: "com.amazon.mobile.shopping.web://amazon.com/gp/product/\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.amazon.com/gp/product/B075NCMLYL")!
+            
+            let amazonWebVC = SFSafariViewController(url: URL as URL)
+            amazonWebVC.delegate = self
+            
+            present(amazonWebVC, animated: true, completion: nil)
+        }
     }
     
     @IBAction func orderHDMIButtonPressed(_ sender: Any) {
-        let URL = NSURL(string: "https://www.amazon.com/Apple-Lightning-Digital-Adapter-MD826AM/dp/B009WHV3BM/")!
-        
-        let amazonWebVC = SFSafariViewController(url: URL as URL)
-        amazonWebVC.delegate = self
-        
-        present(amazonWebVC, animated: true, completion: nil)
+        let id = "B009WHV3BM"
+        let url = NSURL(string: "com.amazon.mobile.shopping.web://amazon.com/gp/product/\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.amazon.com/gp/product/B009WHV3BM")!
+            
+            let amazonWebVC = SFSafariViewController(url: URL as URL)
+            amazonWebVC.delegate = self
+            
+            present(amazonWebVC, animated: true, completion: nil)
+        }
     }
 }
 
