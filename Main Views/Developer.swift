@@ -34,7 +34,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     func runTutorial() {
         if counter.launched == 1 || counter.launched % 5 == 0 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - This is a marketing page for app users to show their support for my work. Donations are appreciated, but not required. Please show your support with a 💰 tip, or a 👍 on any of my social media platforms. Thank you!", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - This is my marketing page for all app users to share their appreciation for my work. Donations and/or any social followings are appreciated. Please show your support with a 💰 tip, or a 👍 like on any of my social media platforms. Thank you!", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "😃 Happy to help!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

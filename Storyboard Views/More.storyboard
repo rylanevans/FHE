@@ -85,11 +85,12 @@
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9Q-CM-Hw5">
+                                                                <view contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="t9Q-CM-Hw5">
                                                                     <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-dN-0oD" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                             <state key="normal" title="Videos">
                                                                                 <color key="titleColor" name="Tint"/>
                                                                             </state>
@@ -159,8 +160,9 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-Jb-QQM">
                                                                     <rect key="frame" x="151" y="0.0" width="100" height="27.5"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-vO-Tma" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlw-vO-Tma" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                             <state key="normal" title="Apple TV">
                                                                                 <color key="titleColor" name="Tint"/>
                                                                             </state>
@@ -201,8 +203,9 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="whC-vE-v1Z">
                                                                     <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoL-lH-cB0" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoL-lH-cB0" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                             <state key="normal" title="HDMI Cable">
                                                                                 <color key="titleColor" name="Tint"/>
                                                                             </state>
@@ -260,15 +263,55 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nsq-s1-dJj">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-Vi-hAP">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LA0-b4-KHv">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                            <color key="textColor" name="Text"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krJ-Vi-hAP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ha-f7-CO6">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz9-sQ-xsk" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="homeTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="8Hh-28-baG"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="PFm-JJ-AAg"/>
+                                                                        <constraint firstItem="Mz9-sQ-xsk" firstAttribute="top" secondItem="0ha-f7-CO6" secondAttribute="top" id="UeS-dW-V3y"/>
+                                                                        <constraint firstItem="Mz9-sQ-xsk" firstAttribute="leading" secondItem="0ha-f7-CO6" secondAttribute="leading" id="dkG-70-0NM"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Mz9-sQ-xsk" secondAttribute="bottom" constant="5" id="fO8-bI-3bK"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Mz9-sQ-xsk" secondAttribute="trailing" id="t3c-5m-AlY"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mB-tq-ntD">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <string key="text">Everything that is orange text or image is user interactive. It's either a button or a link to something. Try it out. Touch anything orange and see what happens!</string>
+                                                            <string key="text">- Everything that is orange text or an orange image is user interactive. It's either a button or a link to something. Touch anything orange and see what happens!
+- Turn the phone sideways to view in landscape mode.</string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -294,12 +337,51 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5vR-vC-sKf">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixh-kj-pJN">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZ7-Li-Veq">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                            <color key="textColor" name="Text"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixh-kj-pJN">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM2-Et-PbK">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGp-rh-xyS" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="familyTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="URZ-AT-3uy"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="8eB-gX-knt"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="xGp-rh-xyS" secondAttribute="trailing" id="G5z-ER-K59"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="xGp-rh-xyS" secondAttribute="bottom" constant="5" id="e1L-uf-52b"/>
+                                                                        <constraint firstItem="xGp-rh-xyS" firstAttribute="top" secondItem="OM2-Et-PbK" secondAttribute="top" id="ixA-XR-6kb"/>
+                                                                        <constraint firstItem="xGp-rh-xyS" firstAttribute="leading" secondItem="OM2-Et-PbK" secondAttribute="leading" id="zDe-0Y-AYe"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-xj-I6R">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <string key="text">- Add. You can add new family memebrs or guest. 
@@ -331,19 +413,58 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dqn-p3-hGj">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-UF-60o">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heG-pu-VY1">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                            <color key="textColor" name="Text"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj9-UF-60o">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEr-Hi-Prd">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qg-iX-yus" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="tasksTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="Ujz-FZ-WiP"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="2qg-iX-yus" firstAttribute="leading" secondItem="fEr-Hi-Prd" secondAttribute="leading" id="27E-Mz-Ela"/>
+                                                                        <constraint firstItem="2qg-iX-yus" firstAttribute="top" secondItem="fEr-Hi-Prd" secondAttribute="top" id="QhX-Km-tJp"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="2qg-iX-yus" secondAttribute="bottom" constant="5" id="Wa7-bX-haK"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="aOl-nI-Ihg"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="2qg-iX-yus" secondAttribute="trailing" id="kJs-Yy-N5F"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58F-uL-fVt">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <string key="text">- Add. You can not create a new task, but you can add your own unique: Songs, Rules, Scriptures, Quotes, Lessons, Activites, and Treats.
+                                                            <mutableString key="text">- Add. You can not create a new task, but you can add your own unique: Songs, Rules, Scriptures, Quotes, Lessons, Activites, and Treats.
 - Edit. You can edit any task in the details page view.
 - Enabled. Toggle the enabled switch to reflect what tasks you want to have active for your family home evening meeting.
 - Delete. You can not delete a task, but you delete any of the following: Songs, Rules, Scriptures, Quotes, Lessons, Activites, and Treats.
-- 👁 Preview icon, in task lists, is a link. Tap on it to review the content before selecting it.</string>
+- Preview icon, in task lists, is a link. Tap on it to review the content before selecting it.</mutableString>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -369,12 +490,51 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HPu-J8-AlF">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-no-VsC">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8z-pH-Ajj">
                                                             <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                                            <color key="textColor" name="Text"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aI-no-VsC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKj-JY-p0p">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZD2-lZ-Mq3" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="assignmentTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="hqm-3N-HI6"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="ZD2-lZ-Mq3" secondAttribute="bottom" constant="5" id="HCq-Qq-6hX"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="ZD2-lZ-Mq3" secondAttribute="trailing" id="OJZ-cg-Yo6"/>
+                                                                        <constraint firstItem="ZD2-lZ-Mq3" firstAttribute="top" secondItem="OKj-JY-p0p" secondAttribute="top" id="ReL-U1-RRy"/>
+                                                                        <constraint firstItem="ZD2-lZ-Mq3" firstAttribute="leading" secondItem="OKj-JY-p0p" secondAttribute="leading" id="Yyv-9I-xep"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="hnr-KA-QDo"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vci-o1-md8">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <string key="text">- Assigned. Each enabled tasks has a family member assignment. 
@@ -1023,7 +1183,19 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
