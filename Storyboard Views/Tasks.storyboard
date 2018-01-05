@@ -3338,7 +3338,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qWs-2h-nhN">
                                         <rect key="frame" x="17" y="29" width="304" height="524"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-yx-Vyx">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jqP-yx-Vyx">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Bb-oc-Unc">
@@ -3358,7 +3358,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-Rf-M4C">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-Rf-M4C">
                                                 <rect key="frame" x="0.0" y="43" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79X-eb-hTR">
@@ -3378,7 +3378,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-P4-jvU">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-P4-jvU">
                                                 <rect key="frame" x="0.0" y="86" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r08-fX-PwK">
@@ -3398,7 +3398,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="20F-X9-9J9">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="20F-X9-9J9">
                                                 <rect key="frame" x="0.0" y="129" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFz-zR-ASR">
@@ -3418,7 +3418,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nXi-2l-tCW">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nXi-2l-tCW">
                                                 <rect key="frame" x="0.0" y="172" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Chapter:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBp-y7-Gpb">
@@ -3438,7 +3438,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-6h-Eil">
+                                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-6h-Eil">
                                                 <rect key="frame" x="0.0" y="215" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Verse(s):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbZ-8Q-7P6">
@@ -3557,8 +3557,13 @@
                                             <constraint firstItem="CFu-vc-AXY" firstAttribute="width" secondItem="o2b-dQ-ZSf" secondAttribute="width" id="5G0-DI-mCF"/>
                                             <constraint firstItem="kh9-GZ-5xs" firstAttribute="width" secondItem="821-mt-hko" secondAttribute="width" id="9qI-vG-1JB"/>
                                             <constraint firstItem="HaF-E7-dHa" firstAttribute="width" secondItem="o2b-dQ-ZSf" secondAttribute="width" id="Buo-wz-A6E"/>
+                                            <constraint firstItem="nXi-2l-tCW" firstAttribute="height" secondItem="jqP-yx-Vyx" secondAttribute="height" id="JhG-v4-r4h"/>
                                             <constraint firstItem="zcv-im-gro" firstAttribute="width" secondItem="821-mt-hko" secondAttribute="width" id="Q6h-f4-CXx"/>
+                                            <constraint firstItem="v6o-6h-Eil" firstAttribute="height" secondItem="jqP-yx-Vyx" secondAttribute="height" id="ShI-0V-H8P"/>
                                             <constraint firstItem="o2b-dQ-ZSf" firstAttribute="width" secondItem="821-mt-hko" secondAttribute="width" id="Xl9-BI-h73"/>
+                                            <constraint firstItem="20F-X9-9J9" firstAttribute="height" secondItem="jqP-yx-Vyx" secondAttribute="height" id="heD-Yy-zYf"/>
+                                            <constraint firstItem="Zcf-Rf-M4C" firstAttribute="height" secondItem="jqP-yx-Vyx" secondAttribute="height" id="iE5-Sj-87E"/>
+                                            <constraint firstItem="w6Y-P4-jvU" firstAttribute="height" secondItem="jqP-yx-Vyx" secondAttribute="height" id="sXS-fz-40h"/>
                                             <constraint firstItem="VJX-KX-x9k" firstAttribute="height" secondItem="cD3-Xi-jW6" secondAttribute="height" id="wlQ-tU-egK"/>
                                         </constraints>
                                     </stackView>
@@ -5054,7 +5059,11 @@
                                             <constraint firstItem="rfs-7w-aj4" firstAttribute="width" secondItem="tjA-LO-0uF" secondAttribute="width" id="4lg-xB-DAv"/>
                                             <constraint firstItem="UhI-1R-q4b" firstAttribute="height" secondItem="9us-UG-5P2" secondAttribute="height" id="EPc-yg-orp"/>
                                             <constraint firstItem="1Io-vk-o3j" firstAttribute="width" secondItem="tjA-LO-0uF" secondAttribute="width" id="Hvm-8k-uXn"/>
+                                            <constraint firstItem="n8r-cC-hkN" firstAttribute="height" secondItem="s47-Y1-Vkq" secondAttribute="height" id="Ktw-vg-bE8"/>
+                                            <constraint firstItem="j0d-lo-qlO" firstAttribute="height" secondItem="s47-Y1-Vkq" secondAttribute="height" id="SQQ-sr-aVu"/>
+                                            <constraint firstItem="dw5-WT-MWo" firstAttribute="height" secondItem="s47-Y1-Vkq" secondAttribute="height" id="bUd-wi-3FM"/>
                                             <constraint firstItem="ERp-l6-nCZ" firstAttribute="width" secondItem="tjA-LO-0uF" secondAttribute="width" id="rjm-ed-mYH"/>
+                                            <constraint firstItem="L6p-f3-tno" firstAttribute="height" secondItem="s47-Y1-Vkq" secondAttribute="height" id="uj0-E4-tJN"/>
                                             <constraint firstItem="vgt-Q0-aJT" firstAttribute="width" secondItem="tjA-LO-0uF" secondAttribute="width" id="vE0-P6-6sV"/>
                                         </constraints>
                                     </stackView>
@@ -5910,6 +5919,8 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="2UU-Ms-4fl" firstAttribute="width" secondItem="XEA-qE-Yf6" secondAttribute="width" id="9Wz-lE-17W"/>
+                                            <constraint firstItem="sXw-ZW-YbH" firstAttribute="height" secondItem="QTz-XW-1OI" secondAttribute="height" id="Bbq-oS-aZf"/>
+                                            <constraint firstItem="nya-IK-xuD" firstAttribute="height" secondItem="QTz-XW-1OI" secondAttribute="height" id="QUj-Rv-hdt"/>
                                             <constraint firstItem="AZz-re-1K8" firstAttribute="width" secondItem="XEA-qE-Yf6" secondAttribute="width" id="nwY-nv-iXl"/>
                                         </constraints>
                                     </stackView>
@@ -8297,6 +8308,8 @@
                                         <constraints>
                                             <constraint firstItem="f1U-QG-BXl" firstAttribute="width" secondItem="K99-uF-BT5" secondAttribute="width" id="GoH-8W-laW"/>
                                             <constraint firstItem="HYV-nF-Vvh" firstAttribute="width" secondItem="K99-uF-BT5" secondAttribute="width" id="a5f-jD-fru"/>
+                                            <constraint firstItem="Loe-M8-jZb" firstAttribute="height" secondItem="2q9-cF-syq" secondAttribute="height" id="b93-jw-TPR"/>
+                                            <constraint firstItem="Ew6-w1-ucu" firstAttribute="height" secondItem="2q9-cF-syq" secondAttribute="height" id="btq-SV-Y7l"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOg-eD-YTo" userLabel="Change Selected">

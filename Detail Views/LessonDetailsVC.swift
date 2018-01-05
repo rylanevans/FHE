@@ -25,6 +25,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     
     var lessonCategory = lessonCategoryArray
     var lessonTopics = lessonTopicsArray
+    var lessonAspects = lessonAspectArray
     var lessonToEdit: Lesson?
     var lessonAssignment: Task?
     let lessonTopicPicker = UIPickerView()
@@ -51,6 +52,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         lessonCategoryPicker.delegate = self
         lessonCategoryPicker.dataSource = self
         lessonCategoryPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        lessonCategoryPicker.tag = 1
         
         lessonCategoryTextField.delegate = self
         lessonCategoryTextField.inputView = lessonCategoryPicker
@@ -58,7 +60,6 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         
         lessonTopicTextField.delegate = self
         lessonTopicTextField.inputView = lessonTopicPicker
-        lessonTopicTextField.tag = 1
         lessonTopicTextField.inputAccessoryView = toolBar
         
         lessonTitleTextField.inputAccessoryView = toolBar
@@ -108,19 +109,28 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 1 {
-            let lessonTopic = lessonTopics[row]
-            return lessonTopic
+            let category = lessonCategory[row]
+            return category
         } else {
-            let lessonSource = lessonCategory[row]
-            return lessonSource
+            if lessonCategoryTextField.text == "Temporal" {
+                let topic = lessonAspects[row]
+                return topic
+            } else {
+                let topic = lessonTopics[row]
+                return topic
+            }
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView.tag == 1 {
-            return lessonTopics.count
-        } else {
             return lessonCategory.count
+        } else {
+            if lessonCategoryTextField.text == "Temporal" {
+                return lessonAspects.count
+            } else {
+                return lessonTopics.count
+            }
         }
     }
     
@@ -130,10 +140,16 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-            let lessonTopic = lessonTopics[row]
-            lessonTopicTextField.text = lessonTopic
+            let lessonCategory = self.lessonCategory[row]
+            lessonCategoryTextField.text = lessonCategory
         } else {
-            lessonCategoryTextField.text = lessonCategory[row]
+            if lessonCategoryTextField.text == "Temporal" {
+                let topic = self.lessonAspects[row]
+                lessonTopicTextField.text = topic
+            } else {
+                let topic = self.lessonTopics[row]
+                lessonTopicTextField.text = topic
+            }
         }
     }
     
