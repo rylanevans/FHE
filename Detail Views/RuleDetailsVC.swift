@@ -111,6 +111,7 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate {
         
         if let title = ruleTitleTextField.text {
             rule.title = title
+            rule.alphabet = String(describing: title[(title.startIndex)])
         }
         
         if let detail = ruleDetailsTextField.text {
