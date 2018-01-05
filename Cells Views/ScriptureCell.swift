@@ -81,13 +81,13 @@ class ScriptureCell: UITableViewCell {
             book = scripture.book!
         }
         
-        let chapter = scripture.chapter
+        let chapter = String(scripture.chapter)
         
         var chapterVerse = ""
         if scripture.verse == nil || scripture.verse == "" {
             chapterVerse = ""
         } else {
-            chapterVerse = "\(chapter ?? "") : \(scripture.verse ?? "")"
+            chapterVerse = "\(chapter) : \(scripture.verse ?? "")"
         }
         
         let onDeck = scripture.selected

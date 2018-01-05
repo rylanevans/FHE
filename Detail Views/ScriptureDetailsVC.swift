@@ -264,7 +264,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         }
         
         if let chapter = scriptureChapterTextField.text {
-            scripture.chapter = chapter
+            scripture.chapter = Int64(chapter)!
         }
         
         if let verse = scriptureVerseTextField.text {
@@ -296,7 +296,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
             scriptureTitleTextField.text = scripture.title
             scriptureVolumeTextField.text = scripture.volume
             scriptureBookTextField.text = scripture.book
-            scriptureChapterTextField.text = scripture.chapter
+            scriptureChapterTextField.text = String(scripture.chapter)
             scriptureVerseTextField.text = scripture.verse
             let onDeck = scripture.selected
             let favorite = scripture.favorite

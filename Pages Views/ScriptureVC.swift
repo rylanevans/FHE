@@ -53,18 +53,21 @@ class ScriptureVC: UIViewController {
             }
             
             var chapterVerse = ""
+            let chapter = String(task.chapter)
+            
             if task.verse == nil || task.verse == "" {
                 chapterVerse = ""
             } else {
-                chapterVerse = "\(task.chapter ?? "") : \(task.verse ?? "")"
+                chapterVerse = "\(chapter) : \(task.verse ?? "")"
             }
             
             scriptureTitleLabel.text = task.title?.capitalized
             scriptureDetailLabel.text = "\(volume.uppercased()) \(book.capitalized) \(chapterVerse)"
             
-            if task.volume != nil && task.book != nil && task.chapter != nil && task.verse != nil {
+            if task.volume != nil && task.book != nil && task.verse != nil {
                 let firstVerse = (task.verse?.components(separatedBy: "-")[0])!
-                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(task.chapter!).\(task.verse!)?lang=eng#\(firstVerse)"
+                let chapter = String(task.chapter)
+                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(chapter).\(task.verse!)?lang=eng#\(firstVerse)"
                 // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"
             }
             

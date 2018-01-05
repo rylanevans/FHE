@@ -98,7 +98,7 @@
     <entity name="Scripture" representedClassName="Scripture" syncable="YES" codeGenerationType="class">
         <attribute name="alphabet" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="book" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="chapter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="chapter" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="favorite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>

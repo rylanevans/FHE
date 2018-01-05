@@ -452,8 +452,9 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     func previewScripture(_ scripture: Scripture) {
         let firstVerse = (scripture.verse?.components(separatedBy: "-")[0])!
         
-        if scripture.volume != nil && scripture.book != nil && scripture.chapter != nil && scripture.verse != nil {
-            let scripture = "https://www.lds.org/scriptures/\(scripture.volume!)/\(scripture.book!)/\(scripture.chapter!).\(scripture.verse!)?lang=eng#\(firstVerse)"
+        if scripture.volume != nil && scripture.book != nil && scripture.verse != nil {
+            let chapter = String(scripture.chapter)
+            let scripture = "https://www.lds.org/scriptures/\(scripture.volume!)/\(scripture.book!)/\(chapter).\(scripture.verse!)?lang=eng#\(firstVerse)"
             scriptureURL = scripture
         }
         

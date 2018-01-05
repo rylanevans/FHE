@@ -17,7 +17,7 @@ func generateScripture() {
     scripture1.title = "Articles of Faith"
     scripture1.volume = "pgp"
     scripture1.book = "a-of-f"
-    scripture1.chapter = "1"
+    scripture1.chapter = 1
     scripture1.verse = ""
     scripture1.favorite = true
     scripture1.random = Int64(arc4random_uniform(1000))
@@ -31,7 +31,7 @@ func generateScripture() {
     scripture2.title = "Resurrection through Christ"
     scripture2.volume = "nt"
     scripture2.book = "1-cor"
-    scripture2.chapter = "15"
+    scripture2.chapter = 15
     scripture2.verse = "20-22"
     scripture2.favorite = false
     scripture2.random = Int64(arc4random_uniform(1000))
@@ -45,7 +45,7 @@ func generateScripture() {
     scripture3.title = "Degrees of Heaven"
     scripture3.volume = "nt"
     scripture3.book = "1-cor"
-    scripture3.chapter = "15"
+    scripture3.chapter = 15
     scripture3.verse = "40-42"
     scripture3.favorite = false
     scripture3.random = Int64(arc4random_uniform(1000))
@@ -59,7 +59,7 @@ func generateScripture() {
     scripture4.title = "Your body is a temple"
     scripture4.volume = "nt"
     scripture4.book = "1-cor"
-    scripture4.chapter = "6"
+    scripture4.chapter = 6
     scripture4.verse = "19-20"
     scripture4.favorite = false
     scripture4.random = Int64(arc4random_uniform(1000))
@@ -73,7 +73,7 @@ func generateScripture() {
     scripture5.title = "Faith to do what is commanded"
     scripture5.volume = "bofm"
     scripture5.book = "1-ne"
-    scripture5.chapter = "3"
+    scripture5.chapter = 3
     scripture5.verse = "7"
     scripture5.favorite = true
     scripture5.random = Int64(arc4random_uniform(1000))
@@ -87,7 +87,7 @@ func generateScripture() {
     scripture6.title = "Preached to the dead"
     scripture6.volume = "nt"
     scripture6.book = "1-pet"
-    scripture6.chapter = "4"
+    scripture6.chapter = 4
     scripture6.verse = "6"
     scripture6.favorite = false
     scripture6.random = Int64(arc4random_uniform(1000))
@@ -101,7 +101,7 @@ func generateScripture() {
     scripture7.title = "Lord looketh on the heart"
     scripture7.volume = "ot"
     scripture7.book = "1-sam"
-    scripture7.chapter = "16"
+    scripture7.chapter = 16
     scripture7.verse = "7"
     scripture7.favorite = true
     scripture7.random = Int64(arc4random_uniform(1000))
@@ -115,7 +115,7 @@ func generateScripture() {
     scripture8.title = "Men might be"
     scripture8.volume = "bofm"
     scripture8.book = "2-ne"
-    scripture8.chapter = "2"
+    scripture8.chapter = 2
     scripture8.verse = "25"
     scripture8.favorite = false
     scripture8.random = Int64(arc4random_uniform(1000))
@@ -129,7 +129,7 @@ func generateScripture() {
     scripture9.title = "Free to choose"
     scripture9.volume = "bofm"
     scripture9.book = "2-ne"
-    scripture9.chapter = "2"
+    scripture9.chapter = 2
     scripture9.verse = "27"
     scripture9.favorite = true
     scripture9.random = Int64(arc4random_uniform(1000))
@@ -143,7 +143,7 @@ func generateScripture() {
     scripture10.title = "Grace that we are saved"
     scripture10.volume = "bofm"
     scripture10.book = "2-ne"
-    scripture10.chapter = "25"
+    scripture10.chapter = 25
     scripture10.verse = "23-26"
     scripture10.favorite = true
     scripture10.random = Int64(arc4random_uniform(1000))
@@ -157,7 +157,7 @@ func generateScripture() {
     scripture11.title = "False, vain, and foolish doctrines"
     scripture11.volume = "bofm"
     scripture11.book = "2-ne"
-    scripture11.chapter = "28"
+    scripture11.chapter = 28
     scripture11.verse = "7-9"
     scripture11.favorite = false
     scripture11.random = Int64(arc4random_uniform(1000))
@@ -171,7 +171,7 @@ func generateScripture() {
     scripture12.title = "Endure to the End"
     scripture12.volume = "bofm"
     scripture12.book = "2-ne"
-    scripture12.chapter = "31"
+    scripture12.chapter = 31
     scripture12.verse = "19-20"
     scripture12.favorite = false
     scripture12.random = Int64(arc4random_uniform(1000))
@@ -185,7 +185,7 @@ func generateScripture() {
     scripture13.title = "Words of Christ"
     scripture13.volume = "bofm"
     scripture13.book = "2-ne"
-    scripture13.chapter = "32"
+    scripture13.chapter = 32
     scripture13.verse = "3"
     scripture13.favorite = false
     scripture13.random = Int64(arc4random_uniform(1000))
@@ -199,7 +199,7 @@ func generateScripture() {
     scripture14.title = "Spirit teaches us to pray"
     scripture14.volume = "bofm"
     scripture14.book = "2-ne"
-    scripture14.chapter = "32"
+    scripture14.chapter = 32
     scripture14.verse = "8-9"
     scripture14.favorite = false
     scripture14.random = Int64(arc4random_uniform(1000))
@@ -213,7 +213,7 @@ func generateScripture() {
     scripture15.title = "Hearken to the counsels of God"
     scripture15.volume = "bofm"
     scripture15.book = "2-ne"
-    scripture15.chapter = "9"
+    scripture15.chapter = 9
     scripture15.verse = "28-29"
     scripture15.favorite = false
     scripture15.random = Int64(arc4random_uniform(1000))
@@ -227,7 +227,7 @@ func generateScripture() {
     scripture16.title = "Falling away"
     scripture16.volume = "nt"
     scripture16.book = "2-thes"
-    scripture16.chapter = "2"
+    scripture16.chapter = 2
     scripture16.verse = "1-3"
     scripture16.favorite = false
     scripture16.random = Int64(arc4random_uniform(1000))
@@ -241,7 +241,7 @@ func generateScripture() {
     scripture17.title = "Scripture is given by God"
     scripture17.volume = "nt"
     scripture17.book = "2-tim"
-    scripture17.chapter = "3"
+    scripture17.chapter = 3
     scripture17.verse = "15-17"
     scripture17.favorite = false
     scripture17.random = Int64(arc4random_uniform(1000))
@@ -255,7 +255,7 @@ func generateScripture() {
     scripture18.title = "Be perfect even as I"
     scripture18.volume = "bofm"
     scripture18.book = "3-ne"
-    scripture18.chapter = "12"
+    scripture18.chapter = 12
     scripture18.verse = "48"
     scripture18.favorite = false
     scripture18.random = Int64(arc4random_uniform(1000))
@@ -269,7 +269,7 @@ func generateScripture() {
     scripture19.title = "Pray always"
     scripture19.volume = "bofm"
     scripture19.book = "3-ne"
-    scripture19.chapter = "18"
+    scripture19.chapter = 18
     scripture19.verse = "15-21"
     scripture19.favorite = false
     scripture19.random = Int64(arc4random_uniform(1000))
@@ -283,7 +283,7 @@ func generateScripture() {
     scripture20.title = "Noble and great spirits"
     scripture20.volume = "pgp"
     scripture20.book = "abr"
-    scripture20.chapter = "3"
+    scripture20.chapter = 3
     scripture20.verse = "22-23"
     scripture20.favorite = false
     scripture20.random = Int64(arc4random_uniform(1000))
@@ -297,7 +297,7 @@ func generateScripture() {
     scripture21.title = "Repent, be baptized, and receive the gift of the Holy Ghost"
     scripture21.volume = "nt"
     scripture21.book = "acts"
-    scripture21.chapter = "2"
+    scripture21.chapter = 2
     scripture21.verse = "36-38"
     scripture21.favorite = false
     scripture21.random = Int64(arc4random_uniform(1000))
@@ -311,7 +311,7 @@ func generateScripture() {
     scripture22.title = "Restitution of all things"
     scripture22.volume = "nt"
     scripture22.book = "acts"
-    scripture22.chapter = "3"
+    scripture22.chapter = 3
     scripture22.verse = "19-21"
     scripture22.favorite = false
     scripture22.random = Int64(arc4random_uniform(1000))
@@ -325,7 +325,7 @@ func generateScripture() {
     scripture23.title = "Faith"
     scripture23.volume = "bofm"
     scripture23.book = "alma"
-    scripture23.chapter = "32"
+    scripture23.chapter = 32
     scripture23.verse = "21"
     scripture23.favorite = false
     scripture23.random = Int64(arc4random_uniform(1000))
@@ -339,7 +339,7 @@ func generateScripture() {
     scripture24.title = "Learn in thy youth"
     scripture24.volume = "bofm"
     scripture24.book = "alma"
-    scripture24.chapter = "37"
+    scripture24.chapter = 37
     scripture24.verse = "35"
     scripture24.favorite = false
     scripture24.random = Int64(arc4random_uniform(1000))
@@ -353,7 +353,7 @@ func generateScripture() {
     scripture25.title = "Lust"
     scripture25.volume = "bofm"
     scripture25.book = "alma"
-    scripture25.chapter = "39"
+    scripture25.chapter = 39
     scripture25.verse = "9"
     scripture25.favorite = false
     scripture25.random = Int64(arc4random_uniform(1000))
@@ -367,7 +367,7 @@ func generateScripture() {
     scripture26.title = "Wickedness never was happiness"
     scripture26.volume = "bofm"
     scripture26.book = "alma"
-    scripture26.chapter = "41"
+    scripture26.chapter = 41
     scripture26.verse = "10"
     scripture26.favorite = false
     scripture26.random = Int64(arc4random_uniform(1000))
@@ -381,7 +381,7 @@ func generateScripture() {
     scripture27.title = "Overcame sin and death"
     scripture27.volume = "bofm"
     scripture27.book = "alma"
-    scripture27.chapter = "7"
+    scripture27.chapter = 7
     scripture27.verse = "11-13"
     scripture27.favorite = false
     scripture27.random = Int64(arc4random_uniform(1000))
@@ -395,7 +395,7 @@ func generateScripture() {
     scripture28.title = "God reveals His secrets"
     scripture28.volume = "ot"
     scripture28.book = "amos"
-    scripture28.chapter = "3"
+    scripture28.chapter = 3
     scripture28.verse = "7"
     scripture28.favorite = false
     scripture28.random = Int64(arc4random_uniform(1000))
@@ -409,7 +409,7 @@ func generateScripture() {
     scripture29.title = "Christ’s words shall all be fulfilled"
     scripture29.volume = "dc-testament"
     scripture29.book = "dc"
-    scripture29.chapter = "1"
+    scripture29.chapter = 1
     scripture29.verse = "37-38"
     scripture29.favorite = false
     scripture29.random = Int64(arc4random_uniform(1000))
@@ -423,7 +423,7 @@ func generateScripture() {
     scripture30.title = "Pray always"
     scripture30.volume = "dc-testament"
     scripture30.book = "dc"
-    scripture30.chapter = "10"
+    scripture30.chapter = 10
     scripture30.verse = "5"
     scripture30.favorite = false
     scripture30.random = Int64(arc4random_uniform(1000))
@@ -437,7 +437,7 @@ func generateScripture() {
     scripture31.title = "Melchizedek Priesthood"
     scripture31.volume = "dc-testament"
     scripture31.book = "dc"
-    scripture31.chapter = "107"
+    scripture31.chapter = 107
     scripture31.verse = "8"
     scripture31.favorite = false
     scripture31.random = Int64(arc4random_uniform(1000))
@@ -451,7 +451,7 @@ func generateScripture() {
     scripture32.title = "Rights of the priesthood"
     scripture32.volume = "dc-testament"
     scripture32.book = "dc"
-    scripture32.chapter = "121"
+    scripture32.chapter = 121
     scripture32.verse = "36-42"
     scripture32.favorite = false
     scripture32.random = Int64(arc4random_uniform(1000))
@@ -465,7 +465,7 @@ func generateScripture() {
     scripture33.title = "The Aaronic Priesthood Keys"
     scripture33.volume = "dc-testament"
     scripture33.book = "dc"
-    scripture33.chapter = "13"
+    scripture33.chapter = 13
     scripture33.verse = "1"
     scripture33.favorite = false
     scripture33.random = Int64(arc4random_uniform(1000))
@@ -479,7 +479,7 @@ func generateScripture() {
     scripture34.title = "God, Jesus, and Holy Ghost Souls"
     scripture34.volume = "dc-testament"
     scripture34.book = "dc"
-    scripture34.chapter = "130"
+    scripture34.chapter = 130
     scripture34.verse = "22-23"
     scripture34.favorite = false
     scripture34.random = Int64(arc4random_uniform(1000))
@@ -493,7 +493,7 @@ func generateScripture() {
     scripture35.title = "Everlasting covenant of marriage"
     scripture35.volume = "dc-testament"
     scripture35.book = "dc"
-    scripture35.chapter = "131"
+    scripture35.chapter = 131
     scripture35.verse = "1-4"
     scripture35.favorite = false
     scripture35.random = Int64(arc4random_uniform(1000))
@@ -507,7 +507,7 @@ func generateScripture() {
     scripture36.title = "Worth of souls is great"
     scripture36.volume = "dc-testament"
     scripture36.book = "dc"
-    scripture36.chapter = "18"
+    scripture36.chapter = 18
     scripture36.verse = "10-11"
     scripture36.favorite = false
     scripture36.random = Int64(arc4random_uniform(1000))
@@ -521,7 +521,7 @@ func generateScripture() {
     scripture37.title = "Bring souls unto Jesus Christ"
     scripture37.volume = "dc-testament"
     scripture37.book = "dc"
-    scripture37.chapter = "18"
+    scripture37.chapter = 18
     scripture37.verse = "15-16"
     scripture37.favorite = false
     scripture37.random = Int64(arc4random_uniform(1000))
@@ -535,7 +535,7 @@ func generateScripture() {
     scripture38.title = "Jesus Christ suffered for all"
     scripture38.volume = "dc-testament"
     scripture38.book = "dc"
-    scripture38.chapter = "19"
+    scripture38.chapter = 19
     scripture38.verse = "16-19"
     scripture38.favorite = false
     scripture38.random = Int64(arc4random_uniform(1000))
@@ -549,7 +549,7 @@ func generateScripture() {
     scripture39.title = "You shall have peace in Him"
     scripture39.volume = "dc-testament"
     scripture39.book = "dc"
-    scripture39.chapter = "19"
+    scripture39.chapter = 19
     scripture39.verse = "23"
     scripture39.favorite = false
     scripture39.random = Int64(arc4random_uniform(1000))
@@ -563,7 +563,7 @@ func generateScripture() {
     scripture40.title = "Cleave unto the covenants"
     scripture40.volume = "dc-testament"
     scripture40.book = "dc"
-    scripture40.chapter = "25"
+    scripture40.chapter = 25
     scripture40.verse = "13"
     scripture40.favorite = false
     scripture40.random = Int64(arc4random_uniform(1000))
@@ -577,7 +577,7 @@ func generateScripture() {
     scripture41.title = "Practice virtue and holiness"
     scripture41.volume = "dc-testament"
     scripture41.book = "dc"
-    scripture41.chapter = "46"
+    scripture41.chapter = 46
     scripture41.verse = "33"
     scripture41.favorite = true
     scripture41.random = Int64(arc4random_uniform(1000))
@@ -591,7 +591,7 @@ func generateScripture() {
     scripture42.title = "Engaged in a good cause"
     scripture42.volume = "dc-testament"
     scripture42.book = "dc"
-    scripture42.chapter = "58"
+    scripture42.chapter = 58
     scripture42.verse = "27"
     scripture42.favorite = true
     scripture42.random = Int64(arc4random_uniform(1000))
@@ -605,7 +605,7 @@ func generateScripture() {
     scripture43.title = "Repent of sins"
     scripture43.volume = "dc-testament"
     scripture43.book = "dc"
-    scripture43.chapter = "58"
+    scripture43.chapter = 58
     scripture43.verse = "42-43"
     scripture43.favorite = false
     scripture43.random = Int64(arc4random_uniform(1000))
@@ -619,7 +619,7 @@ func generateScripture() {
     scripture44.title = "Doubt not, fear not"
     scripture44.volume = "dc-testament"
     scripture44.book = "dc"
-    scripture44.chapter = "6"
+    scripture44.chapter = 6
     scripture44.verse = "36"
     scripture44.favorite = false
     scripture44.random = Int64(arc4random_uniform(1000))
@@ -633,7 +633,7 @@ func generateScripture() {
     scripture45.title = "Forgive all men"
     scripture45.volume = "dc-testament"
     scripture45.book = "dc"
-    scripture45.chapter = "64"
+    scripture45.chapter = 64
     scripture45.verse = "9-11"
     scripture45.favorite = false
     scripture45.random = Int64(arc4random_uniform(1000))
@@ -647,7 +647,7 @@ func generateScripture() {
     scripture46.title = "Testified that He lives"
     scripture46.volume = "dc-testament"
     scripture46.book = "dc"
-    scripture46.chapter = "76"
+    scripture46.chapter = 76
     scripture46.verse = "22-24"
     scripture46.favorite = false
     scripture46.random = Int64(arc4random_uniform(1000))
@@ -661,7 +661,7 @@ func generateScripture() {
     scripture47.title = "Cleanse the world"
     scripture47.volume = "dc-testament"
     scripture47.book = "dc"
-    scripture47.chapter = "76"
+    scripture47.chapter = 76
     scripture47.verse = "40-41"
     scripture47.favorite = false
     scripture47.random = Int64(arc4random_uniform(1000))
@@ -675,7 +675,7 @@ func generateScripture() {
     scripture48.title = "Thankfulness will be blessed"
     scripture48.volume = "dc-testament"
     scripture48.book = "dc"
-    scripture48.chapter = "78"
+    scripture48.chapter = 78
     scripture48.verse = "19"
     scripture48.favorite = true
     scripture48.random = Int64(arc4random_uniform(1000))
@@ -689,7 +689,7 @@ func generateScripture() {
     scripture49.title = "Holy Ghost reveals truth"
     scripture49.volume = "dc-testament"
     scripture49.book = "dc"
-    scripture49.chapter = "8"
+    scripture49.chapter = 8
     scripture49.verse = "2-3"
     scripture49.favorite = false
     scripture49.random = Int64(arc4random_uniform(1000))
@@ -703,7 +703,7 @@ func generateScripture() {
     scripture50.title = "Obedience"
     scripture50.volume = "dc-testament"
     scripture50.book = "dc"
-    scripture50.chapter = "82"
+    scripture50.chapter = 82
     scripture50.verse = "10"
     scripture50.favorite = true
     scripture50.random = Int64(arc4random_uniform(1000))
@@ -717,7 +717,7 @@ func generateScripture() {
     scripture51.title = "Cease to be idle"
     scripture51.volume = "dc-testament"
     scripture51.book = "dc"
-    scripture51.chapter = "88"
+    scripture51.chapter = 88
     scripture51.verse = "124"
     scripture51.favorite = false
     scripture51.random = Int64(arc4random_uniform(1000))
@@ -731,7 +731,7 @@ func generateScripture() {
     scripture52.title = "Word of Wisdom"
     scripture52.volume = "dc-testament"
     scripture52.book = "dc"
-    scripture52.chapter = "89"
+    scripture52.chapter = 89
     scripture52.verse = "18-21"
     scripture52.favorite = false
     scripture52.random = Int64(arc4random_uniform(1000))
@@ -745,7 +745,7 @@ func generateScripture() {
     scripture53.title = "Prophets & Apostles"
     scripture53.volume = "nt"
     scripture53.book = "eph"
-    scripture53.chapter = "4"
+    scripture53.chapter = 4
     scripture53.verse = "11-14"
     scripture53.favorite = false
     scripture53.random = Int64(arc4random_uniform(1000))
@@ -759,7 +759,7 @@ func generateScripture() {
     scripture54.title = "Weak things become strong"
     scripture54.volume = "bofm"
     scripture54.book = "ether"
-    scripture54.chapter = "12"
+    scripture54.chapter = 12
     scripture54.verse = "27"
     scripture54.favorite = true
     scripture54.random = Int64(arc4random_uniform(1000))
@@ -773,7 +773,7 @@ func generateScripture() {
     scripture55.title = "No witness until after"
     scripture55.volume = "bofm"
     scripture55.book = "ether"
-    scripture55.chapter = "12"
+    scripture55.chapter = 12
     scripture55.verse = "6"
     scripture55.favorite = false
     scripture55.random = Int64(arc4random_uniform(1000))
@@ -787,7 +787,7 @@ func generateScripture() {
     scripture56.title = "Keep my covenant"
     scripture56.volume = "ot"
     scripture56.book = "ex"
-    scripture56.chapter = "19"
+    scripture56.chapter = 19
     scripture56.verse = "5-6"
     scripture56.favorite = false
     scripture56.random = Int64(arc4random_uniform(1000))
@@ -801,7 +801,7 @@ func generateScripture() {
     scripture57.title = "The Ten Commandments"
     scripture57.volume = "ot"
     scripture57.book = "ex"
-    scripture57.chapter = "20"
+    scripture57.chapter = 20
     scripture57.verse = "3-17"
     scripture57.favorite = false
     scripture57.random = Int64(arc4random_uniform(1000))
@@ -815,7 +815,7 @@ func generateScripture() {
     scripture58.title = "The stick of Judah"
     scripture58.volume = "ot"
     scripture58.book = "ezek"
-    scripture58.chapter = "37"
+    scripture58.chapter = 37
     scripture58.verse = "15-17"
     scripture58.favorite = false
     scripture58.random = Int64(arc4random_uniform(1000))
@@ -829,7 +829,7 @@ func generateScripture() {
     scripture59.title = "Fruit of the Spirit"
     scripture59.volume = "nt"
     scripture59.book = "gal"
-    scripture59.chapter = "5"
+    scripture59.chapter = 5
     scripture59.verse = "22-23"
     scripture59.favorite = true
     scripture59.random = Int64(arc4random_uniform(1000))
@@ -843,7 +843,7 @@ func generateScripture() {
     scripture60.title = "His own image"
     scripture60.volume = "ot"
     scripture60.book = "gen"
-    scripture60.chapter = "1"
+    scripture60.chapter = 1
     scripture60.verse = "26-27"
     scripture60.favorite = false
     scripture60.random = Int64(arc4random_uniform(1000))
@@ -857,7 +857,7 @@ func generateScripture() {
     scripture61.title = "Husbands and wives are one"
     scripture61.volume = "ot"
     scripture61.book = "gen"
-    scripture61.chapter = "2"
+    scripture61.chapter = 2
     scripture61.verse = "24"
     scripture61.favorite = false
     scripture61.random = Int64(arc4random_uniform(1000))
@@ -871,7 +871,7 @@ func generateScripture() {
     scripture62.title = "Resist temptation"
     scripture62.volume = "ot"
     scripture62.book = "gen"
-    scripture62.chapter = "39"
+    scripture62.chapter = 39
     scripture62.verse = "9"
     scripture62.favorite = false
     scripture62.random = Int64(arc4random_uniform(1000))
@@ -885,7 +885,7 @@ func generateScripture() {
     scripture63.title = "Subjection unto the Father"
     scripture63.volume = "nt"
     scripture63.book = "heb"
-    scripture63.chapter = "12"
+    scripture63.chapter = 12
     scripture63.verse = "9"
     scripture63.favorite = false
     scripture63.random = Int64(arc4random_uniform(1000))
@@ -899,7 +899,7 @@ func generateScripture() {
     scripture64.title = "Rock of our Redeemer"
     scripture64.volume = "bofm"
     scripture64.book = "hel"
-    scripture64.chapter = "5"
+    scripture64.chapter = 5
     scripture64.verse = "12"
     scripture64.favorite = false
     scripture64.random = Int64(arc4random_uniform(1000))
@@ -913,7 +913,7 @@ func generateScripture() {
     scripture65.title = "Sins white as snow"
     scripture65.volume = "ot"
     scripture65.book = "isa"
-    scripture65.chapter = "1"
+    scripture65.chapter = 1
     scripture65.verse = "18"
     scripture65.favorite = true
     scripture65.random = Int64(arc4random_uniform(1000))
@@ -927,7 +927,7 @@ func generateScripture() {
     scripture66.title = "Marvelous work and a wonder"
     scripture66.volume = "ot"
     scripture66.book = "isa"
-    scripture66.chapter = "29"
+    scripture66.chapter = 29
     scripture66.verse = "13-14"
     scripture66.favorite = false
     scripture66.random = Int64(arc4random_uniform(1000))
@@ -941,7 +941,7 @@ func generateScripture() {
     scripture67.title = "Evil good, and good evil"
     scripture67.volume = "ot"
     scripture67.book = "isa"
-    scripture67.chapter = "5"
+    scripture67.chapter = 5
     scripture67.verse = "20"
     scripture67.favorite = false
     scripture67.random = Int64(arc4random_uniform(1000))
@@ -955,7 +955,7 @@ func generateScripture() {
     scripture68.title = "Griefs, sorrows, and transgressions"
     scripture68.volume = "ot"
     scripture68.book = "isa"
-    scripture68.chapter = "53"
+    scripture68.chapter = 53
     scripture68.verse = "3-5"
     scripture68.favorite = false
     scripture68.random = Int64(arc4random_uniform(1000))
@@ -969,7 +969,7 @@ func generateScripture() {
     scripture69.title = "Sabbath day"
     scripture69.volume = "ot"
     scripture69.book = "isa"
-    scripture69.chapter = "58"
+    scripture69.chapter = 58
     scripture69.verse = "13-14"
     scripture69.favorite = false
     scripture69.random = Int64(arc4random_uniform(1000))
@@ -983,7 +983,7 @@ func generateScripture() {
     scripture70.title = "Fasting"
     scripture70.volume = "ot"
     scripture70.book = "isa"
-    scripture70.chapter = "58"
+    scripture70.chapter = 58
     scripture70.verse = "6-7"
     scripture70.favorite = false
     scripture70.random = Int64(arc4random_uniform(1000))
@@ -997,7 +997,7 @@ func generateScripture() {
     scripture71.title = "Ask of God"
     scripture71.volume = "nt"
     scripture71.book = "james"
-    scripture71.chapter = "1"
+    scripture71.chapter = 1
     scripture71.verse = "5-6"
     scripture71.favorite = false
     scripture71.random = Int64(arc4random_uniform(1000))
@@ -1011,7 +1011,7 @@ func generateScripture() {
     scripture72.title = "Faith without works"
     scripture72.volume = "nt"
     scripture72.book = "james"
-    scripture72.chapter = "2"
+    scripture72.chapter = 2
     scripture72.verse = "17-18"
     scripture72.favorite = false
     scripture72.random = Int64(arc4random_uniform(1000))
@@ -1025,7 +1025,7 @@ func generateScripture() {
     scripture73.title = "God knew us before birth"
     scripture73.volume = "ot"
     scripture73.book = "jer"
-    scripture73.chapter = "1"
+    scripture73.chapter = 1
     scripture73.verse = "4-5"
     scripture73.favorite = false
     scripture73.random = Int64(arc4random_uniform(1000))
@@ -1039,7 +1039,7 @@ func generateScripture() {
     scripture74.title = "Keep my commandments"
     scripture74.volume = "nt"
     scripture74.book = "john"
-    scripture74.chapter = "14"
+    scripture74.chapter = 14
     scripture74.verse = "15"
     scripture74.favorite = false
     scripture74.random = Int64(arc4random_uniform(1000))
@@ -1053,7 +1053,7 @@ func generateScripture() {
     scripture102.title = "God so loved the world!"
     scripture102.volume = "nt"
     scripture102.book = "john"
-    scripture102.chapter = "3"
+    scripture102.chapter = 3
     scripture102.verse = "16"
     scripture102.favorite = true
     scripture102.random = Int64(arc4random_uniform(1000))
@@ -1068,7 +1068,7 @@ func generateScripture() {
     scripture75.title = "The way, the truth, and the life"
     scripture75.volume = "nt"
     scripture75.book = "john"
-    scripture75.chapter = "14"
+    scripture75.chapter = 14
     scripture75.verse = "6"
     scripture75.favorite = false
     scripture75.random = Int64(arc4random_uniform(1000))
@@ -1082,7 +1082,7 @@ func generateScripture() {
     scripture76.title = "Know God and Jesus Christ"
     scripture76.volume = "nt"
     scripture76.book = "john"
-    scripture76.chapter = "17"
+    scripture76.chapter = 17
     scripture76.verse = "3"
     scripture76.favorite = false
     scripture76.random = Int64(arc4random_uniform(1000))
@@ -1096,7 +1096,7 @@ func generateScripture() {
     scripture77.title = "Baptism"
     scripture77.volume = "nt"
     scripture77.book = "john"
-    scripture77.chapter = "3"
+    scripture77.chapter = 3
     scripture77.verse = "5"
     scripture77.favorite = false
     scripture77.random = Int64(arc4random_uniform(1000))
@@ -1110,7 +1110,7 @@ func generateScripture() {
     scripture78.title = "Serve the Lord"
     scripture78.volume = "ot"
     scripture78.book = "josh"
-    scripture78.chapter = "24"
+    scripture78.chapter = 24
     scripture78.verse = "15"
     scripture78.favorite = false
     scripture78.random = Int64(arc4random_uniform(1000))
@@ -1124,7 +1124,7 @@ func generateScripture() {
     scripture79.title = "The First Vision"
     scripture79.volume = "pgp"
     scripture79.book = "js-h"
-    scripture79.chapter = "1"
+    scripture79.chapter = 1
     scripture79.verse = "15-20"
     scripture79.favorite = false
     scripture79.random = Int64(arc4random_uniform(1000))
@@ -1138,7 +1138,7 @@ func generateScripture() {
     scripture80.title = "Spirit hath not flesh and bones"
     scripture80.volume = "nt"
     scripture80.book = "luke"
-    scripture80.chapter = "24"
+    scripture80.chapter = 24
     scripture80.verse = "36-39"
     scripture80.favorite = false
     scripture80.random = Int64(arc4random_uniform(1000))
@@ -1152,7 +1152,7 @@ func generateScripture() {
     scripture81.title = "Tithes and offerings"
     scripture81.volume = "ot"
     scripture81.book = "mal"
-    scripture81.chapter = "3"
+    scripture81.chapter = 3
     scripture81.verse = "8-10"
     scripture81.favorite = false
     scripture81.random = Int64(arc4random_uniform(1000))
@@ -1166,7 +1166,7 @@ func generateScripture() {
     scripture82.title = "Spirit of Elijah"
     scripture82.volume = "ot"
     scripture82.book = "mal"
-    scripture82.chapter = "4"
+    scripture82.chapter = 4
     scripture82.verse = "5-6"
     scripture82.favorite = false
     scripture82.random = Int64(arc4random_uniform(1000))
@@ -1180,7 +1180,7 @@ func generateScripture() {
     scripture83.title = "I will give you rest"
     scripture83.volume = "nt"
     scripture83.book = "matt"
-    scripture83.chapter = "11"
+    scripture83.chapter = 11
     scripture83.verse = "28-30"
     scripture83.favorite = true
     scripture83.random = Int64(arc4random_uniform(1000))
@@ -1194,7 +1194,7 @@ func generateScripture() {
     scripture84.title = "Keys to bind in heaven"
     scripture84.volume = "nt"
     scripture84.book = "matt"
-    scripture84.chapter = "16"
+    scripture84.chapter = 16
     scripture84.verse = "15-19"
     scripture84.favorite = false
     scripture84.random = Int64(arc4random_uniform(1000))
@@ -1208,7 +1208,7 @@ func generateScripture() {
     scripture85.title = "Love God and neighbor"
     scripture85.volume = "nt"
     scripture85.book = "matt"
-    scripture85.chapter = "22"
+    scripture85.chapter = 22
     scripture85.verse = "36-39"
     scripture85.favorite = true
     scripture85.random = Int64(arc4random_uniform(1000))
@@ -1222,7 +1222,7 @@ func generateScripture() {
     scripture86.title = "Teach all nations"
     scripture86.volume = "nt"
     scripture86.book = "matt"
-    scripture86.chapter = "28"
+    scripture86.chapter = 28
     scripture86.verse = "19-20"
     scripture86.favorite = false
     scripture86.random = Int64(arc4random_uniform(1000))
@@ -1236,7 +1236,7 @@ func generateScripture() {
     scripture87.title = "Let your light so shine"
     scripture87.volume = "nt"
     scripture87.book = "matt"
-    scripture87.chapter = "5"
+    scripture87.chapter = 5
     scripture87.verse = "14-16"
     scripture87.favorite = false
     scripture87.random = Int64(arc4random_uniform(1000))
@@ -1250,7 +1250,7 @@ func generateScripture() {
     scripture88.title = "Truth of all things"
     scripture88.volume = "bofm"
     scripture88.book = "moro"
-    scripture88.chapter = "10"
+    scripture88.chapter = 10
     scripture88.verse = "4-5"
     scripture88.favorite = true
     scripture88.random = Int64(arc4random_uniform(1000))
@@ -1264,7 +1264,7 @@ func generateScripture() {
     scripture89.title = "Raised unto life eternal"
     scripture89.volume = "bofm"
     scripture89.book = "moro"
-    scripture89.chapter = "7"
+    scripture89.chapter = 7
     scripture89.verse = "41"
     scripture89.favorite = false
     scripture89.random = Int64(arc4random_uniform(1000))
@@ -1278,7 +1278,7 @@ func generateScripture() {
     scripture90.title = "Charity"
     scripture90.volume = "bofm"
     scripture90.book = "moro"
-    scripture90.chapter = "7"
+    scripture90.chapter = 7
     scripture90.verse = "45-48"
     scripture90.favorite = true
     scripture90.random = Int64(arc4random_uniform(1000))
@@ -1292,7 +1292,7 @@ func generateScripture() {
     scripture91.title = "God’s work and glory"
     scripture91.volume = "pgp"
     scripture91.book = "moses"
-    scripture91.chapter = "1"
+    scripture91.chapter = 1
     scripture91.verse = "39"
     scripture91.favorite = false
     scripture91.random = Int64(arc4random_uniform(1000))
@@ -1306,7 +1306,7 @@ func generateScripture() {
     scripture92.title = "Zion"
     scripture92.volume = "pgp"
     scripture92.book = "moses"
-    scripture92.chapter = "7"
+    scripture92.chapter = 7
     scripture92.verse = "18"
     scripture92.favorite = false
     scripture92.random = Int64(arc4random_uniform(1000))
@@ -1320,7 +1320,7 @@ func generateScripture() {
     scripture93.title = "Service of your fellow beings"
     scripture93.volume = "bofm"
     scripture93.book = "mosiah"
-    scripture93.chapter = "2"
+    scripture93.chapter = 2
     scripture93.verse = "17"
     scripture93.favorite = false
     scripture93.random = Int64(arc4random_uniform(1000))
@@ -1334,7 +1334,7 @@ func generateScripture() {
     scripture94.title = "Natural man"
     scripture94.volume = "bofm"
     scripture94.book = "mosiah"
-    scripture94.chapter = "3"
+    scripture94.chapter = 3
     scripture94.verse = "19"
     scripture94.favorite = true
     scripture94.random = Int64(arc4random_uniform(1000))
@@ -1348,7 +1348,7 @@ func generateScripture() {
     scripture95.title = "Thoughts, words, and deeds"
     scripture95.volume = "bofm"
     scripture95.book = "mosiah"
-    scripture95.chapter = "4"
+    scripture95.chapter = 4
     scripture95.verse = "30"
     scripture95.favorite = false
     scripture95.random = Int64(arc4random_uniform(1000))
@@ -1362,7 +1362,7 @@ func generateScripture() {
     scripture96.title = "All things through Christ"
     scripture96.volume = "nt"
     scripture96.book = "philip"
-    scripture96.chapter = "4"
+    scripture96.chapter = 4
     scripture96.verse = "13"
     scripture96.favorite = false
     scripture96.random = Int64(arc4random_uniform(1000))
@@ -1376,7 +1376,7 @@ func generateScripture() {
     scripture97.title = "Trust in the Lord"
     scripture97.volume = "ot"
     scripture97.book = "prov"
-    scripture97.chapter = "3"
+    scripture97.chapter = 3
     scripture97.verse = "5-6"
     scripture97.favorite = false
     scripture97.random = Int64(arc4random_uniform(1000))
@@ -1390,7 +1390,7 @@ func generateScripture() {
     scripture98.title = "God’s word"
     scripture98.volume = "ot"
     scripture98.book = "ps"
-    scripture98.chapter = "119"
+    scripture98.chapter = 119
     scripture98.verse = "105"
     scripture98.favorite = false
     scripture98.random = Int64(arc4random_uniform(1000))
@@ -1404,7 +1404,7 @@ func generateScripture() {
     scripture99.title = "Heritage of the Lord"
     scripture99.volume = "ot"
     scripture99.book = "ps"
-    scripture99.chapter = "127"
+    scripture99.chapter = 127
     scripture99.verse = "3"
     scripture99.favorite = false
     scripture99.random = Int64(arc4random_uniform(1000))
@@ -1418,7 +1418,7 @@ func generateScripture() {
     scripture100.title = "Clean hands and a pure heart"
     scripture100.volume = "ot"
     scripture100.book = "ps"
-    scripture100.chapter = "24"
+    scripture100.chapter = 24
     scripture100.verse = "3-4"
     scripture100.favorite = false
     scripture100.random = Int64(arc4random_uniform(1000))
@@ -1432,7 +1432,7 @@ func generateScripture() {
     scripture101.title = "Judged from scriptures"
     scripture101.volume = "nt"
     scripture101.book = "rev"
-    scripture101.chapter = "20"
+    scripture101.chapter = 20
     scripture101.verse = "12"
     scripture101.favorite = false
     scripture101.random = Int64(arc4random_uniform(1000))
