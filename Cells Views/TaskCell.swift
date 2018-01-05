@@ -86,7 +86,7 @@ class TaskCell: UITableViewCell {
         case "Activity"?: taskNameLabel.text = "Activities";
         taskTitleLabel.text = specifictask.selectedGame?.title ?? "No Activity selected"
         case "Closing Prayer"?: taskNameLabel.text = "Closing Prayer";
-        taskTitleLabel.text = specifictask.selectedPrayer?.title ?? "No Prayer selected"
+        taskTitleLabel.text = specifictask.selectedClosing?.title ?? "No Prayer selected"
         case "Treat"?: taskNameLabel.text = "Treats";
         taskTitleLabel.text = specifictask.selectedTreat?.title ?? "No Treat selected"
         default: taskNameLabel.text = name

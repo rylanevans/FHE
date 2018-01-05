@@ -170,7 +170,6 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     // MARK: - Assignment Cell Delegate
     
     func assignmentNeedsChanged(_ sender: AssignmentCell, _ assignee: Member) {
-        print("Assignment Needs Changed")
         if let objects = taskController.fetchedObjects, objects.count > 0 {
             let indexPath = assignmentTableView.indexPath(for: sender)
             let sections = taskController.sections![(indexPath?.section)!]
@@ -180,7 +179,6 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     }
     
     func assignedMemberChanged(_ task: Task, _ assignee: Member) {
-        print("Trying To Changed")
         let specificTask = task
         let specificMember = assignee
         if assignee.name == "Auto-Assign" {
@@ -188,8 +186,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         } else {
             specificTask.assigned = true
             specificTask.assignment = specificMember
+            
+            ad.saveContext()
         }
-        ad.saveContext()
     }
     
     // MARK: - Boiler Code for Core Data

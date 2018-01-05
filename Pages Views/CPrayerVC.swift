@@ -25,8 +25,8 @@ class CPrayerVC: UIViewController {
     }
     
     func loadPageData() {
-        let specificTask = taskPrayer
-        if let task = specificTask.selectedPrayer {
+        let specificTask = taskPrayerClosing
+        if let task = specificTask.selectedClosing {
             prayerTitleLabel.text = task.title
             prayerDetailLabel.text = task.detail
         }

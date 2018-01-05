@@ -16,17 +16,28 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     @IBOutlet weak var prayerAssigneeMemberImage: UIImageView!
     @IBOutlet weak var prayerAssigneeLabel: UILabel!
     @IBOutlet weak var prayerAssigneeText: UITextField!
+    @IBOutlet weak var closingAssigneeMemberImage: UIImageView!
+    @IBOutlet weak var closingAssigneeLabel: UILabel!
+    @IBOutlet weak var closingAssigneeText: UITextField!
     
-    let memberPicker = UIPickerView()
+    let openingPicker = UIPickerView()
+    let closingPicker = UIPickerView()
     
-    let prayer = taskPrayer
+    let openingPrayer = taskPrayer
+    let closingPrayer = taskPrayerClosing
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        memberPicker.delegate = self
-        memberPicker.dataSource = self
-        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        openingPicker.delegate = self
+        openingPicker.dataSource = self
+        openingPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        openingPicker.tag = 1
+        
+        closingPicker.delegate = self
+        closingPicker.dataSource = self
+        closingPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        closingPicker.tag = 2
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -35,10 +46,13 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        prayerAssigneeText.inputView = memberPicker
+        prayerAssigneeText.inputView = openingPicker
         prayerAssigneeText.inputAccessoryView = toolBar
         prayerTitleTextField.inputAccessoryView = toolBar
         prayerDetailsTextField.inputAccessoryView = toolBar
+        
+        closingAssigneeText.inputView = closingPicker
+        closingAssigneeText.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
@@ -49,7 +63,7 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         loadPrayerData()
         loadPrayerAssignmentImage()
         
-        if prayer.selectedPrayer != nil {
+        if openingPrayer.selectedPrayer != nil || closingPrayer.selectedPrayer != nil{
             loadPrayerData()
         }
     }
@@ -80,16 +94,24 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let prayer = taskPrayer
-        prayerAssigneeMemberImage.image = assignee.photo as? UIImage
-        prayerAssigneeLabel.text = assignee.name
-        prayer.assignment = assignee
-        if assignee.name == "Auto-Assign" {
-            prayer.assigned = false
-        } else {
-            prayer.assigned = true
+        
+        if pickerView.tag == 1 {
+            prayerAssigneeMemberImage.image = assignee.photo as? UIImage
+            prayerAssigneeLabel.text = assignee.name
+            openingPrayer.assignment = assignee
+            if assignee.name == "Auto-Assign" {
+                openingPrayer.assigned = false
+            } else {
+                openingPrayer.assigned = true
+            }
+            ad.saveContext()
+        } else if pickerView.tag == 2 {
+            closingAssigneeMemberImage.image = assignee.photo as? UIImage
+            closingAssigneeLabel.text = assignee.name
+            closingPrayer.assignment = assignee
+            ad.saveContext()
         }
-        ad.saveContext()
+
     }
     
     // MARK: - Text Field Options
@@ -107,7 +129,7 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
-        let prayerToSave = prayer.selectedPrayer
+        let prayerToSave = openingPrayer.selectedPrayer
         
         if let title = prayerTitleTextField.text {
             prayerToSave?.title = title
@@ -123,20 +145,31 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     }
     
     func loadPrayerData() {
-        if let prayerToEdit = prayer.selectedPrayer {
+        if let prayerToEdit = openingPrayer.selectedPrayer {
             prayerTitleTextField.text = prayerToEdit.title
             prayerDetailsTextField.text = prayerToEdit.detail
         }
     }
     
     func loadPrayerAssignmentImage() {
-        let assignee = prayer.assignment
-        if assignee != nil {
-            prayerAssigneeMemberImage.image = assignee?.photo as? UIImage
-            prayerAssigneeLabel.text = assignee?.name
+        let openingAssignee = openingPrayer.assignment
+        
+        let closingAssignee = closingPrayer.assignment
+        
+        if openingAssignee != nil {
+            prayerAssigneeMemberImage.image = openingAssignee?.photo as? UIImage
+            prayerAssigneeLabel.text = openingAssignee?.name
         } else {
             prayerAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
             prayerAssigneeLabel.text = "Auto-Assign"
+        }
+        
+        if closingAssignee != nil {
+            closingAssigneeMemberImage.image = closingAssignee?.photo as? UIImage
+            closingAssigneeLabel.text = closingAssignee?.name
+        } else {
+            closingAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+            closingAssigneeLabel.text = "Auto-Assign"
         }
     }
 }
