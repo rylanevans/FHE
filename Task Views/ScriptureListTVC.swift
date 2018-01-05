@@ -182,117 +182,126 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             default: title = "SEARCH RESULTS:"
             }
             
-        } else if segment.selectedSegmentIndex == 1 {
-            switch sectionTitle![section].name {
-            case "1-chr": title = "1 CHRONICLES:"
-            case "1-kgs": title = "1 KINGS:"
-            case "1 Samuel": title = "1 SAMUEL:"
-            case "1-sam": title = "2 CHRONICLES:"
-            case "2-kgs": title = "2 KINGS:"
-            case "2-sam": title = "2 SAMUEL:"
-            case "amos": title = "AMOS:"
-            case "dan": title = "DANIEL:"
-            case "deut": title = "DEUTERONOMY:"
-            case "eccl": title = "ECCLESIASTES:"
-            case "esth": title = "ESTHER:"
-            case "ex": title = "EXODUS:"
-            case "ezek": title = "EZEKIEL:"
-            case "ezra": title = "EZRA:"
-            case "gen": title = "GENESIS:"
-            case "hab": title = "HABAKKUK:"
-            case "hag": title = "HAGGAI:"
-            case "hosea": title = "HOSEA:"
-            case "isa": title = "ISAIAH:"
-            case "jer": title = "JEREMIAH:"
-            case "job": title = "JOB:"
-            case "joel": title = "JOEL:"
-            case "jonah": title = "JONEAH:"
-            case "josh": title = "JOSHUA:"
-            case "judg": title = "JUDGES:"
-            case "lam": title = "LAMENTATIONS:"
-            case "lev": title = "LEVITICUS:"
-            case "mal": title = "MALACHI:"
-            case "micah": title = "MICAH:"
-            case "nahum": title = "NAHUM:"
-            case "neh": title = "NEHEMIAH:"
-            case "num": title = "NUMBERS:"
-            case "obad": title = "OBADIAH:"
-            case "prov": title = "PROVERBS:"
-            case "ps": title = "PSALMS:"
-            case "ruth": title = "RUTH:"
-            case "song": title = "SOLOMAN'S SONG:"
-            case "zech": title = "ZECHARIAH:"
-            case "zeph": title = "ZEPHANIAH:"
-            default: title = "SEARCH RESULTS:"
+        } else if segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 || segment.selectedSegmentIndex == 3 || segment.selectedSegmentIndex == 4 || segment.selectedSegmentIndex == 5 {
+            if sectionTitle![section].name != "" {
+                let number = Int(sectionTitle![section].name)
+                let bookName = scriptureOrderDictionary[number!]
+                title = bookName!
+            } else {
+                title = "SEARCH RESULTS:"
             }
             
-        } else if segment.selectedSegmentIndex == 2 {
-            switch sectionTitle![section].name {
-            case "1-cor": title = "1 CORINTHIANS:"
-            case "1-jn": title = "1 JOHN:"
-            case "1-pet": title = "1 PETER:"
-            case "1-thes": title = "1 THESSALONIANS:"
-            case "1-tim": title = "1 TIMOTHY:"
-            case "2-cor": title = "2 CORINTHIANS:"
-            case "2-jn": title = "2 JOHN:"
-            case "2-pet": title = "2 PETER:"
-            case "2-thes": title = "2 THESSALONIANS:"
-            case "2 Timothy": title = "2 TIMOTHY:"
-            case "3-jn": title = "3 JOHN:"
-            case "acts": title = "ACTS:"
-            case "col": title = "COLOSSIANS:"
-            case "eph": title = "EPHESIANS:"
-            case "gal": title = "GALATIANS:"
-            case "heb": title = "HEBREWS:"
-            case "james": title = "JAMES:"
-            case "john": title = "JOHN:"
-            case "jude": title = "JUDE:"
-            case "luke": title = "LUKE:"
-            case "mark": title = "MARK:"
-            case "matt": title = "MATTHEW:"
-            case "philem": title = "PHILEMON:"
-            case "philip": title = "PHILIPPIANS:"
-            case "rev": title = "REVELATION:"
-            case "rom": title = "ROMANS:"
-            case "titus": title = "TITUS:"
-            default: title = "SEARCH RESULTS:"
-            }
-            
-        } else if segment.selectedSegmentIndex == 3 {
-            switch sectionTitle![section].name {
-            case "1-ne": title = "1 NEPHI:"
-            case "2-ne": title = "2 NEPHI:"
-            case "3-ne": title = "3 NEPHI:"
-            case "4-ne": title = "4 NEPHI:"
-            case "alma": title = "ALMA:"
-            case "enos": title = "ENOS:"
-            case "ether": title = "ETHER:"
-            case "hel": title = "HELAMAN:"
-            case "jacob": title = "JACOB:"
-            case "jarom": title = "JAROM:"
-            case "morm": title = "MORMON:"
-            case "moro": title = "MORONI:"
-            case "mosiah": title = "MOSIAH:"
-            case "omni": title = "OMNI:"
-            case "w-of-m": title = "WORDS OF MORMON:"
-            default: title = "SEARCH RESULTS:"
-            }
-            
-        } else if segment.selectedSegmentIndex == 4 {
-            switch sectionTitle![section].name {
-            case "dc": title = "DOCTRINE AND COVENANTS:"
-            default: title = "SEARCH RESULTS:"
-            }
-            
-        } else if segment.selectedSegmentIndex == 5 {
-            switch sectionTitle![section].name {
-            case "abr": title = "DOCTRINE AND COVENANTS:"
-            case "a-of-f": title = "ARTICLES OF FAITH:"
-            case "js-h": title = "JOSEPH SMITH HISTORY:"
-            case "js-m": title = "JS - MATTHEW:"
-            case "moses": title = "MOSES:"
-            default: title = "SEARCH RESULTS:"
-            }
+//        } else if segment.selectedSegmentIndex == 1 {
+//            switch sectionTitle![section].name {
+//            case "1-chr": title = "1 CHRONICLES:"
+//            case "1-kgs": title = "1 KINGS:"
+//            case "1 Samuel": title = "1 SAMUEL:"
+//            case "1-sam": title = "2 CHRONICLES:"
+//            case "2-kgs": title = "2 KINGS:"
+//            case "2-sam": title = "2 SAMUEL:"
+//            case "amos": title = "AMOS:"
+//            case "dan": title = "DANIEL:"
+//            case "deut": title = "DEUTERONOMY:"
+//            case "eccl": title = "ECCLESIASTES:"
+//            case "esth": title = "ESTHER:"
+//            case "ex": title = "EXODUS:"
+//            case "ezek": title = "EZEKIEL:"
+//            case "ezra": title = "EZRA:"
+//            case "gen": title = "GENESIS:"
+//            case "hab": title = "HABAKKUK:"
+//            case "hag": title = "HAGGAI:"
+//            case "hosea": title = "HOSEA:"
+//            case "isa": title = "ISAIAH:"
+//            case "jer": title = "JEREMIAH:"
+//            case "job": title = "JOB:"
+//            case "joel": title = "JOEL:"
+//            case "jonah": title = "JONEAH:"
+//            case "josh": title = "JOSHUA:"
+//            case "judg": title = "JUDGES:"
+//            case "lam": title = "LAMENTATIONS:"
+//            case "lev": title = "LEVITICUS:"
+//            case "mal": title = "MALACHI:"
+//            case "micah": title = "MICAH:"
+//            case "nahum": title = "NAHUM:"
+//            case "neh": title = "NEHEMIAH:"
+//            case "num": title = "NUMBERS:"
+//            case "obad": title = "OBADIAH:"
+//            case "prov": title = "PROVERBS:"
+//            case "ps": title = "PSALMS:"
+//            case "ruth": title = "RUTH:"
+//            case "song": title = "SOLOMAN'S SONG:"
+//            case "zech": title = "ZECHARIAH:"
+//            case "zeph": title = "ZEPHANIAH:"
+//            default: title = "SEARCH RESULTS:"
+//            }
+//
+//        } else if segment.selectedSegmentIndex == 2 {
+//            switch sectionTitle![section].name {
+//            case "1-cor": title = "1 CORINTHIANS:"
+//            case "1-jn": title = "1 JOHN:"
+//            case "1-pet": title = "1 PETER:"
+//            case "1-thes": title = "1 THESSALONIANS:"
+//            case "1-tim": title = "1 TIMOTHY:"
+//            case "2-cor": title = "2 CORINTHIANS:"
+//            case "2-jn": title = "2 JOHN:"
+//            case "2-pet": title = "2 PETER:"
+//            case "2-thes": title = "2 THESSALONIANS:"
+//            case "2 Timothy": title = "2 TIMOTHY:"
+//            case "3-jn": title = "3 JOHN:"
+//            case "acts": title = "ACTS:"
+//            case "col": title = "COLOSSIANS:"
+//            case "eph": title = "EPHESIANS:"
+//            case "gal": title = "GALATIANS:"
+//            case "heb": title = "HEBREWS:"
+//            case "james": title = "JAMES:"
+//            case "john": title = "JOHN:"
+//            case "jude": title = "JUDE:"
+//            case "luke": title = "LUKE:"
+//            case "mark": title = "MARK:"
+//            case "matt": title = "MATTHEW:"
+//            case "philem": title = "PHILEMON:"
+//            case "philip": title = "PHILIPPIANS:"
+//            case "rev": title = "REVELATION:"
+//            case "rom": title = "ROMANS:"
+//            case "titus": title = "TITUS:"
+//            default: title = "SEARCH RESULTS:"
+//            }
+//
+//        } else if segment.selectedSegmentIndex == 3 {
+//            switch sectionTitle![section].name {
+//            case "1-ne": title = "1 NEPHI:"
+//            case "2-ne": title = "2 NEPHI:"
+//            case "3-ne": title = "3 NEPHI:"
+//            case "4-ne": title = "4 NEPHI:"
+//            case "alma": title = "ALMA:"
+//            case "enos": title = "ENOS:"
+//            case "ether": title = "ETHER:"
+//            case "hel": title = "HELAMAN:"
+//            case "jacob": title = "JACOB:"
+//            case "jarom": title = "JAROM:"
+//            case "morm": title = "MORMON:"
+//            case "moro": title = "MORONI:"
+//            case "mosiah": title = "MOSIAH:"
+//            case "omni": title = "OMNI:"
+//            case "w-of-m": title = "WORDS OF MORMON:"
+//            default: title = "SEARCH RESULTS:"
+//            }
+//
+//        } else if segment.selectedSegmentIndex == 4 {
+//            switch sectionTitle![section].name {
+//            case "dc": title = "DOCTRINE AND COVENANTS:"
+//            default: title = "SEARCH RESULTS:"
+//            }
+//
+//        } else if segment.selectedSegmentIndex == 5 {
+//            switch sectionTitle![section].name {
+//            case "abr": title = "DOCTRINE AND COVENANTS:"
+//            case "a-of-f": title = "ARTICLES OF FAITH:"
+//            case "js-h": title = "JOSEPH SMITH HISTORY:"
+//            case "js-m": title = "JS - MATTHEW:"
+//            case "moses": title = "MOSES:"
+//            default: title = "SEARCH RESULTS:"
+//            }
             
         } else if segment.selectedSegmentIndex == 6 {
             switch sectionTitle![section].name {
@@ -553,7 +562,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "ot")
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             
@@ -569,7 +578,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "nt")
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             
@@ -585,7 +594,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "bofm")
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             
@@ -601,7 +610,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "dc-testament")
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             
@@ -617,7 +626,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             fetchRequest.sortDescriptors = [sortByOrderNumber, sortByChapter]
             let predicate = NSPredicate(format: "volume == %@", "pgp")
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "order", cacheName: nil)
             controller.delegate = self
             self.scriptureController = controller
             

@@ -35,7 +35,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     
     func runTutorial() {
         if counter.launched < 3 && counter.launched % 2 != 0 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Turn your phone sideways to view in landscape mode.\n\nTRICK - Pair your phone to your family room TV for all to see. There is suggested hardware in the “More” tab under “Tutorials” if you don't know to get.\n\nTRICK - Press on the orange “🏠” (home) button in the top left corner to return to the home screen.\n\nPress any of the orange “Details” buttons in the center bottom of the screen to open the link for more info.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Turn your phone sideways to view in landscape mode.\n\nTRICK - Pair your phone to your family room TV for all to see. There is suggested hardware in the “More” tab under “Tutorials” if you don't know what you would need.\n\nTRICK - Press on the orange “🏠” (home) button in the top left corner to return to the home screen.\n\nPress any of the orange “Details” buttons in the center bottom of the screen to open the link for more info.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

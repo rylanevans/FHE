@@ -30,6 +30,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     let bofmBooks = scriptureBofMBooksArray
     let pgpBooks = scripturePGPBooksArray
     let dcBooks = scriptureDCBooksArray
+    let allBooks = scriptureAllBooksArray
     var scriptureToEdit: Scripture?
     var scriptureAssignment: Task?
     let scriptureTopicPicker = UIPickerView()
@@ -58,19 +59,23 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         scriptureVolumePicker.dataSource = self
         scriptureVolumePicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
+        scriptureBookPicker.delegate = self
+        scriptureBookPicker.dataSource = self
+        scriptureBookPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        
         scriptureTopicTextField.delegate = self
         scriptureTopicTextField.inputView = scriptureTopicPicker
-        scriptureTopicTextField.tag = 1
+        scriptureTopicPicker.tag = 1
         scriptureTopicTextField.inputAccessoryView = toolBar
         
         scriptureVolumeTextField.delegate = self
         scriptureVolumeTextField.inputView = scriptureVolumePicker
-        scriptureVolumeTextField.tag = 2
+        scriptureVolumePicker.tag = 2
         scriptureVolumeTextField.inputAccessoryView = toolBar
         
         scriptureBookTextField.delegate = self
         scriptureBookTextField.inputView = scriptureBookPicker
-        scriptureBookTextField.tag = 3
+        scriptureBookPicker.tag = 3
         scriptureBookTextField.inputAccessoryView = toolBar
         
         scriptureTitleTextField.inputAccessoryView = toolBar
@@ -116,12 +121,37 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView.tag == 1 {
+        switch pickerView.tag {
+        case 1:
             let scriptureTopic = topics[row]
             return scriptureTopic
-        } else {
-            let scriptureSource = volumes[row]
-            return scriptureSource
+        case 2:
+            let scriptureVolume = volumes[row]
+            return scriptureVolume
+        case 3:
+            switch scriptureVolumeTextField.text {
+            case "ot"?:
+                let scriptureBook = otBooks[row]
+                return scriptureBook
+            case "nt"?:
+                let scriptureBook = ntBooks[row]
+                return scriptureBook
+            case "bofm"?:
+                let scriptureBook = bofmBooks[row]
+                return scriptureBook
+            case "dc-testament"?:
+                let scriptureBook = dcBooks[row]
+                return scriptureBook
+            case "pgp"?:
+                let scriptureBook = pgpBooks[row]
+                return scriptureBook
+            default:
+                let scriptureAll = allBooks[row]
+                return scriptureAll
+            }
+        default:
+            let scriptureTopic = topics[row]
+            return scriptureTopic
         }
     }
     
@@ -131,12 +161,12 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         case 2: return volumes.count
         case 3:
             switch scriptureVolumeTextField.text {
-            case "Old Testament"?: return otBooks.count
-            case "New Testament"?: return ntBooks.count
-            case "Book of Mormon"?: return bofmBooks.count
-            case "Doctrine and Covenants"?: return dcBooks.count
-            case "Pearl of Great Price"?: return pgpBooks.count
-            default: return 1
+            case "ot"?: return otBooks.count
+            case "nt"?: return ntBooks.count
+            case "bofm"?: return bofmBooks.count
+            case "dc-testament"?: return dcBooks.count
+            case "pgp"?: return pgpBooks.count
+            default: return allBooks.count
             }
         default: return 0
         }
@@ -147,25 +177,42 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let scriptureTopic = topics[row]
-        let scriptureVolume = volumes[row]
-        let scriptureNT = ntBooks[row]
-        let scriptureOT = otBooks[row]
-        let scriptureBofM = bofmBooks[row]
-        let scriptureDC = dcBooks[row]
-        let scripturePGP = pgpBooks[row]
-        
         switch pickerView.tag {
-        case 1: scriptureTopicTextField.text = scriptureTopic
-        case 2: scriptureVolumeTextField.text = scriptureVolume
+        case 1:
+            let scriptureTopic = topics[row]
+            scriptureTopicTextField.text = scriptureTopic
+        case 2:
+            let scriptureVolume = volumes[row]
+            let scriptureName = scriptureVolumesDictionary[scriptureVolume]
+            scriptureVolumeTextField.text = scriptureName
         case 3:
             switch scriptureVolumeTextField.text {
-            case "Old Testament"?: scriptureBookTextField.text = scriptureOT
-            case "New Testament"?: scriptureBookTextField.text = scriptureNT
-            case "Book of Mormon"?: scriptureBookTextField.text = scriptureBofM
-            case "Doctrine and Covenants"?: scriptureBookTextField.text = scriptureDC
-            case "Pearl of Great Price"?: scriptureBookTextField.text = scripturePGP
-            default: scriptureBookTextField.text = "Select Scripture Volume First"
+            case "ot"?:
+                let scriptureOT = otBooks[row]
+                let scriptureArray = scripturesDictionary[scriptureOT]
+                let book = scriptureArray![0]
+                scriptureBookTextField.text = (book as! String)
+            case "nt"?:
+                let scriptureNT = ntBooks[row]
+                let scriptureArray = scripturesDictionary[scriptureNT]
+                let book = scriptureArray![0]
+                scriptureBookTextField.text = (book as! String)
+            case "bofm"?:
+                let scriptureBofM = bofmBooks[row]
+                let scriptureArray = scripturesDictionary[scriptureBofM]
+                let book = scriptureArray![0]
+                scriptureBookTextField.text = (book as! String)
+            case "dc-testament"?:
+                let scriptureDC = dcBooks[row]
+                let scriptureArray = scripturesDictionary[scriptureDC]
+                let book = scriptureArray![0]
+                scriptureBookTextField.text = (book as! String)
+            case "pgp"?:
+                let scripturePGP = pgpBooks[row]
+                let scriptureArray = scripturesDictionary[scripturePGP]
+                let book = scriptureArray![0]
+                scriptureBookTextField.text = (book as! String)
+            default: scriptureBookTextField.text = "Select Volume 1st"
             }
         default: return
         }

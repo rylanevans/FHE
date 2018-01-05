@@ -310,8 +310,9 @@
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0mB-tq-ntD">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <string key="text">- Everything that is orange text or an orange image is user interactive. It's either a button or a link to something. Touch anything orange and see what happens!
-- Turn the phone sideways to view in landscape mode.</string>
+                                                            <string key="text">All screens have the following features:
+- Interactive. All buttons or links are orange.
+- Landscape. View in portrait or landscape mode.</string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -384,10 +385,10 @@
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-xj-I6R">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <string key="text">- Add. You can add new family memebrs or guest. 
-- Edit. You can edit any family members name, age (only used for sorting).
-- Attending. Toggle the attending switch to reflect what family members are attending.
-- Delete. You can delete any family member or guest in the detail view.</string>
+                                                            <string key="text">You can do the following things in the family tab:
+- Add
+- Edit/Delete
+- Attending</string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -460,11 +461,15 @@
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58F-uL-fVt">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <mutableString key="text">- Add. You can not create a new task, but you can add your own unique: Songs, Rules, Scriptures, Quotes, Lessons, Activites, and Treats.
-- Edit. You can edit any task in the details page view.
-- Enabled. Toggle the enabled switch to reflect what tasks you want to have active for your family home evening meeting.
-- Delete. You can not delete a task, but you delete any of the following: Songs, Rules, Scriptures, Quotes, Lessons, Activites, and Treats.
-- Preview icon, in task lists, is a link. Tap on it to review the content before selecting it.</mutableString>
+                                                            <string key="text">You can do the following things in the tasks tab:
+- Enabled
+- Assign
+- Sort/Filter
+- Search
+- Preview
+- Add
+- Select
+- Edit/Delete</string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -537,9 +542,9 @@
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vci-o1-md8">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <string key="text">- Assigned. Each enabled tasks has a family member assignment. 
-- Auto. By default assignments are rotated automaticly when the recycle button is pressed on the home screen.
-- Manual. You can manually assign a member to any task. Doing so will permanently assign that individual to that specific task and it will no longer rotate when recycle button is pressed.</string>
+                                                            <string key="text">You can do the following things with assignments:
+- Auto
+- Manual</string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1181,18 +1186,6 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Thank you" width="200" height="200"/>
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
