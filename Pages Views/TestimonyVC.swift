@@ -20,6 +20,29 @@ class TestimonyVC: UIViewController {
         loadPageData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.testimonyTip == false {
+            counter.testimonyTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The testimony bullet points are only a list of suggestions. Pick one or more bullet points to testify about to your family members.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

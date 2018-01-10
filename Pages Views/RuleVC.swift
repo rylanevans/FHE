@@ -23,6 +23,29 @@ class RuleVC: UIViewController {
         loadPageData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.rulesTip == false {
+            counter.rulesTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest creating your own family rules using Google Docs. You can right click the Google Doc file to “get shareable link” and paste that in the URL for your custom rule(s). We have found reviewing rules regulary in our family meetings helps create better awareness, acceptance, and compliance.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func ruleDetailsPressed(_ sender: Any) {
         let URL = NSURL(string: "\(ruleURL)")!
         let ruleWebVC = SFSafariViewController(url: URL as URL)

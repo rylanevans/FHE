@@ -66,10 +66,27 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songNumberTextField.inputAccessoryView = toolBar
         songURLTextField.inputAccessoryView = toolBar
         
-        checkValidTitle()
+        runTutorial()
         
         if songToEdit != nil {
             loadSongData()
+        }
+    }
+    
+    func runTutorial() {
+        if counter.songDetailsTip == false {
+            counter.songDetailsTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Select the desired section from the sort & filter bar to arrange which and how your songs will be displayed. Also, the “★” in the sort & filter bar means “favorites only”.\n\nTRICK - Type in the search bar to find a specific song.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
         
@@ -82,13 +99,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidTitle()
-        switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
-        }
+        return
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -96,14 +107,31 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func checkValidTitle() {
-        let text = songTitleTextField.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
-        if text.isEmpty != true {
+        let text = songTitleTextField.text
+        let url = songURLTextField.text
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && url?.hasPrefix("https://www.") == true) {
             hideSaveButton.isHidden = true
+            self.navigationItem.title = text
+            saveButton.isEnabled = true
+        } else {
+            hideSaveButton.isHidden = false
+            saveButton.isEnabled = false
+            
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://www.”", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
     @objc func donePressedOnKeyboard() {
+        checkValidTitle()
         view.endEditing(true)
     }
     

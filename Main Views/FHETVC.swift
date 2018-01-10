@@ -60,8 +60,10 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     }
     
     func runTutorial() {
-        if counter.launched == 1 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.\n\nTRICK - Tap on the task Title to make quick edits or make a selection for the specific song, scripture, lesson, etc.\n\nTRICK -  The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTIP - Press the “BEGIN” button to display and swipe through your all enabled tasks and their assignments one-by-one.", preferredStyle: .alert)
+        if counter.homeTip == false {
+            counter.homeTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTRICK - Tap on the task Title to make quick edits or the Titles with “✓” in front to make a selection for the specific song, scripture, lesson, etc without going to the tasks tab.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

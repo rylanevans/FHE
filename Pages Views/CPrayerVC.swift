@@ -20,6 +20,29 @@ class CPrayerVC: UIViewController {
         loadPageData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.prayerTip == false {
+            counter.prayerTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Turn your phone sideways to view in landscape mode.\n\nTIP - Pair your phone to your family room TV for all to see. There is suggested hardware in the “More” tab under “Tutorials” if you don't know what you would need.\n\nTRICK - Press on the orange “🏠” (home) button in the top left corner to return to the home screen.\n\nTRICK - The steps to prayer can be edited in the prayer task.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

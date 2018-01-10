@@ -560,8 +560,754 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Tem-c2-1GJ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="yed-e2-N69">
                                         <rect key="frame" x="0.0" y="474" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yed-e2-N69" id="rtv-yC-NI1">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-tx-9eE">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELl-eE-yiS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUB-Yb-drp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRQ-y4-ors">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="DP0-eC-PhR"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Both opening prayer and closing prayer share the same Title and Details. You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-gY-Yz3">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HQY-tx-9eE" firstAttribute="leading" secondItem="rtv-yC-NI1" secondAttribute="leading" constant="8" id="5Od-1K-xAX"/>
+                                                <constraint firstAttribute="bottom" secondItem="HQY-tx-9eE" secondAttribute="bottom" constant="8" id="fUs-Dn-EnB"/>
+                                                <constraint firstItem="HQY-tx-9eE" firstAttribute="top" secondItem="rtv-yC-NI1" secondAttribute="top" constant="8" id="uUN-BT-hIn"/>
+                                                <constraint firstAttribute="trailing" secondItem="HQY-tx-9eE" secondAttribute="trailing" constant="8" id="wGA-tt-qyX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fhs-KQ-cx4">
+                                        <rect key="frame" x="0.0" y="518" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fhs-KQ-cx4" id="Dwu-YK-Sup">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uIv-S5-uSV">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="glJ-aK-QdT">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMP-ht-3Md">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="on8-DK-T2j">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWy-Ew-5oU" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="songTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="3id-4S-4XS"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="JWy-Ew-5oU" secondAttribute="trailing" id="INw-Qg-g1s"/>
+                                                                        <constraint firstItem="JWy-Ew-5oU" firstAttribute="top" secondItem="on8-DK-T2j" secondAttribute="top" id="bYt-5V-5V9"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="JWy-Ew-5oU" secondAttribute="bottom" constant="5" id="mt2-94-5lc"/>
+                                                                        <constraint firstItem="JWy-Ew-5oU" firstAttribute="leading" secondItem="on8-DK-T2j" secondAttribute="leading" id="rkB-rp-gXo"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="vQQ-e5-QKf"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Create your own custom songs and provide a URL link to the music video or Hymn." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xm-Ao-Ctf">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uIv-S5-uSV" firstAttribute="top" secondItem="Dwu-YK-Sup" secondAttribute="top" constant="8" id="06o-Bw-BUc"/>
+                                                <constraint firstAttribute="trailing" secondItem="uIv-S5-uSV" secondAttribute="trailing" constant="8" id="OOG-MN-SHU"/>
+                                                <constraint firstAttribute="bottom" secondItem="uIv-S5-uSV" secondAttribute="bottom" constant="8" id="dUS-7s-rdb"/>
+                                                <constraint firstItem="uIv-S5-uSV" firstAttribute="leading" secondItem="Dwu-YK-Sup" secondAttribute="leading" constant="8" id="ycc-oY-1JE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Eae-Q2-4eb">
+                                        <rect key="frame" x="0.0" y="562" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eae-Q2-4eb" id="QVS-oO-ENW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ms8-aD-65m">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIE-2m-4Or">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l1-Pw-AHt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77w-SG-X3e">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-D0-ElB" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="rulesTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="0Oi-Gb-AS9"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="rlw-D0-ElB" secondAttribute="bottom" constant="5" id="FXo-Lx-deh"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="rlw-D0-ElB" secondAttribute="trailing" id="PAD-mq-nNo"/>
+                                                                        <constraint firstItem="rlw-D0-ElB" firstAttribute="top" secondItem="77w-SG-X3e" secondAttribute="top" id="Tlk-90-Yll"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="XRB-Ao-UX7"/>
+                                                                        <constraint firstItem="rlw-D0-ElB" firstAttribute="leading" secondItem="77w-SG-X3e" secondAttribute="leading" id="s8a-4Z-aTH"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="The default family rules are suggestions. Clip on Tips &amp; Tricks to see how to link to your Google Docs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxv-iK-PtC">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ms8-aD-65m" firstAttribute="leading" secondItem="QVS-oO-ENW" secondAttribute="leading" constant="8" id="3M3-FT-Fyu"/>
+                                                <constraint firstItem="Ms8-aD-65m" firstAttribute="top" secondItem="QVS-oO-ENW" secondAttribute="top" constant="8" id="8kp-YX-vVb"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ms8-aD-65m" secondAttribute="bottom" constant="8" id="MqJ-YC-qSe"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ms8-aD-65m" secondAttribute="trailing" constant="8" id="qGD-Kx-69c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="R5V-S9-fdB">
+                                        <rect key="frame" x="0.0" y="606" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R5V-S9-fdB" id="oNO-9M-N9G">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3Av-9x-BKR">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb1-YM-Yus">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scripture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwx-0g-xWT">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2a-7d-9yi">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="0I5-Fb-hR6"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUb-QE-qcK">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <string key="text">Scriptures will default to the correct URL address to read from and highlight the verse if you select the correct volume, book, chapter, and verse from the drop downs provided.</string>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3Av-9x-BKR" secondAttribute="bottom" constant="8" id="2Gd-sY-h9t"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Av-9x-BKR" secondAttribute="trailing" constant="8" id="o9a-6V-DPX"/>
+                                                <constraint firstItem="3Av-9x-BKR" firstAttribute="leading" secondItem="oNO-9M-N9G" secondAttribute="leading" constant="8" id="p6k-i8-0Xe"/>
+                                                <constraint firstItem="3Av-9x-BKR" firstAttribute="top" secondItem="oNO-9M-N9G" secondAttribute="top" constant="8" id="xIa-kP-BBy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="FYK-aa-QXa">
+                                        <rect key="frame" x="0.0" y="650" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FYK-aa-QXa" id="OQJ-Dw-ouz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-PR-vwV">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx0-6b-o3J">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-GC-rZ6">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9eO-1F-K72">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="ZmA-gH-w5Z"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Click on the &quot;Show Calendar&quot; button to open your calendar app and click the FHE link in the top right corner to go back. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5D-vj-Uos">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Eqj-PR-vwV" secondAttribute="bottom" constant="8" id="2tG-Ya-jle"/>
+                                                <constraint firstItem="Eqj-PR-vwV" firstAttribute="leading" secondItem="OQJ-Dw-ouz" secondAttribute="leading" constant="8" id="jxC-uA-oLI"/>
+                                                <constraint firstAttribute="trailing" secondItem="Eqj-PR-vwV" secondAttribute="trailing" constant="8" id="y7C-fC-HGU"/>
+                                                <constraint firstItem="Eqj-PR-vwV" firstAttribute="top" secondItem="OQJ-Dw-ouz" secondAttribute="top" constant="8" id="zXq-bq-rK2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Wtg-iU-V4D">
+                                        <rect key="frame" x="0.0" y="694" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wtg-iU-V4D" id="cQl-RQ-6vM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-98-aD5">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2I-de-hjB">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Testimony" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elf-pk-d5S">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUI-Ew-5lu">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-az-D3q" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="testimonyTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="lVQ-oW-viF"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="2Za-az-D3q" secondAttribute="trailing" id="0ek-ni-sqX"/>
+                                                                        <constraint firstItem="2Za-az-D3q" firstAttribute="top" secondItem="HUI-Ew-5lu" secondAttribute="top" id="3A1-X6-5Da"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="2Za-az-D3q" secondAttribute="bottom" constant="5" id="HQU-Pm-6IH"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="JcW-oq-pcF"/>
+                                                                        <constraint firstItem="2Za-az-D3q" firstAttribute="leading" secondItem="HUI-Ew-5lu" secondAttribute="leading" id="vlw-0f-5Zd"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2P-9a-bW0">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="yLf-98-aD5" secondAttribute="trailing" constant="8" id="C6R-Cp-w5G"/>
+                                                <constraint firstItem="yLf-98-aD5" firstAttribute="leading" secondItem="cQl-RQ-6vM" secondAttribute="leading" constant="8" id="UVd-op-OrL"/>
+                                                <constraint firstAttribute="bottom" secondItem="yLf-98-aD5" secondAttribute="bottom" constant="8" id="e4w-Vw-9zC"/>
+                                                <constraint firstItem="yLf-98-aD5" firstAttribute="top" secondItem="cQl-RQ-6vM" secondAttribute="top" constant="8" id="uC8-0y-r1W"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="7Dn-fN-R6j">
+                                        <rect key="frame" x="0.0" y="738" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Dn-fN-R6j" id="yyP-Gl-H7o">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jj2-G6-kzV">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzi-h4-gHk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-6J-AXr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsX-JX-QyK">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leH-1i-pXc" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="spotlightTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="Fjm-GQ-rkv"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="leH-1i-pXc" secondAttribute="bottom" constant="5" id="esT-uf-mOn"/>
+                                                                        <constraint firstItem="leH-1i-pXc" firstAttribute="leading" secondItem="XsX-JX-QyK" secondAttribute="leading" id="ham-JS-YNS"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="isF-bM-r7F"/>
+                                                                        <constraint firstItem="leH-1i-pXc" firstAttribute="top" secondItem="XsX-JX-QyK" secondAttribute="top" id="meu-ES-ctP"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="leH-1i-pXc" secondAttribute="trailing" id="uxe-Pc-DeF"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xj9-10-GV2">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jj2-G6-kzV" firstAttribute="top" secondItem="yyP-Gl-H7o" secondAttribute="top" constant="8" id="0Yb-QW-DWG"/>
+                                                <constraint firstAttribute="bottom" secondItem="jj2-G6-kzV" secondAttribute="bottom" constant="8" id="3tP-EN-hpY"/>
+                                                <constraint firstItem="jj2-G6-kzV" firstAttribute="leading" secondItem="yyP-Gl-H7o" secondAttribute="leading" constant="8" id="L5O-Ev-AEL"/>
+                                                <constraint firstAttribute="trailing" secondItem="jj2-G6-kzV" secondAttribute="trailing" constant="8" id="Uho-YZ-8pU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="bhp-7A-Qzt">
+                                        <rect key="frame" x="0.0" y="782" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bhp-7A-Qzt" id="s1V-Us-pbe">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-eW-fkm">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-LZ-ka7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-M8-gjE">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xip-Fj-d2q">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDJ-Zg-05B" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="xDJ-Zg-05B" secondAttribute="trailing" id="6Un-1B-KfU"/>
+                                                                        <constraint firstItem="xDJ-Zg-05B" firstAttribute="top" secondItem="xip-Fj-d2q" secondAttribute="top" id="7Zx-3o-u9H"/>
+                                                                        <constraint firstItem="xDJ-Zg-05B" firstAttribute="leading" secondItem="xip-Fj-d2q" secondAttribute="leading" id="UNW-Dx-pkF"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="ga9-a7-zM6"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="xDJ-Zg-05B" secondAttribute="bottom" constant="5" id="o3J-il-Enl"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soS-pV-Yos">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XA1-eW-fkm" firstAttribute="top" secondItem="s1V-Us-pbe" secondAttribute="top" constant="8" id="3eH-8I-VXe"/>
+                                                <constraint firstAttribute="bottom" secondItem="XA1-eW-fkm" secondAttribute="bottom" constant="8" id="HEy-sW-Jy6"/>
+                                                <constraint firstItem="XA1-eW-fkm" firstAttribute="leading" secondItem="s1V-Us-pbe" secondAttribute="leading" constant="8" id="Uhb-JQ-KFY"/>
+                                                <constraint firstAttribute="trailing" secondItem="XA1-eW-fkm" secondAttribute="trailing" constant="8" id="c56-sg-Cv0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="8M5-gy-I8x">
+                                        <rect key="frame" x="0.0" y="826" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8M5-gy-I8x" id="b6a-92-sUG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oul-kZ-JVi">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTx-GM-D4K">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08p-Ef-bux">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nrs-ha-0MZ">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="l4T-HW-ytZ"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Add your own family or famous quotes or traditions that you would like to read or talk about. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEY-TO-pkg">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oul-kZ-JVi" secondAttribute="bottom" constant="8" id="6tw-wq-oog"/>
+                                                <constraint firstAttribute="trailing" secondItem="oul-kZ-JVi" secondAttribute="trailing" constant="8" id="92y-Fz-DvE"/>
+                                                <constraint firstItem="oul-kZ-JVi" firstAttribute="leading" secondItem="b6a-92-sUG" secondAttribute="leading" constant="8" id="EHs-ky-dfU"/>
+                                                <constraint firstItem="oul-kZ-JVi" firstAttribute="top" secondItem="b6a-92-sUG" secondAttribute="top" constant="8" id="ILH-X0-ePV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cgD-4F-ago">
+                                        <rect key="frame" x="0.0" y="870" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cgD-4F-ago" id="VZA-4k-M6A">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-Yr-QgV">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cww-Yw-a7y">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-kN-cuv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHl-N7-fje">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <subviews>
+                                                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqs-ua-9J1" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <state key="normal" title="Tips &amp; Tricks">
+                                                                                <color key="titleColor" name="Tint"/>
+                                                                            </state>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="5"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                    <real key="value" value="1"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                    <color key="value" name="Tint"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                            <connections>
+                                                                                <action selector="lessonTipsTricks:" destination="U1u-eF-GtX" eventType="touchUpInside" id="Ta6-r2-twa"/>
+                                                                            </connections>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="Zqs-ua-9J1" secondAttribute="bottom" constant="5" id="5Az-CV-3WP"/>
+                                                                        <constraint firstItem="Zqs-ua-9J1" firstAttribute="top" secondItem="mHl-N7-fje" secondAttribute="top" id="O0R-Vq-fAg"/>
+                                                                        <constraint firstItem="Zqs-ua-9J1" firstAttribute="leading" secondItem="mHl-N7-fje" secondAttribute="leading" id="Wcm-lj-O1f"/>
+                                                                        <constraint firstAttribute="width" constant="100" id="rNM-eo-tOD"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="Zqs-ua-9J1" secondAttribute="trailing" id="zfC-nj-dPR"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOF-Jy-po8">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <string key="text">You can make a custom YouTube playlist and link a custom lesson to that URL. This allows you to add videos throughout the week you may want to share with your family with a click of a button. </string>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="BEK-Yr-QgV" secondAttribute="trailing" constant="8" id="Nmy-EC-xHa"/>
+                                                <constraint firstAttribute="bottom" secondItem="BEK-Yr-QgV" secondAttribute="bottom" constant="8" id="rUV-3R-Yfv"/>
+                                                <constraint firstItem="BEK-Yr-QgV" firstAttribute="top" secondItem="VZA-4k-M6A" secondAttribute="top" constant="8" id="xvC-DI-yGm"/>
+                                                <constraint firstItem="BEK-Yr-QgV" firstAttribute="leading" secondItem="VZA-4k-M6A" secondAttribute="leading" constant="8" id="zBT-2h-c5L"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="0j0-Cd-gAZ">
+                                        <rect key="frame" x="0.0" y="914" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0j0-Cd-gAZ" id="WIg-iF-out">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zgZ-ku-bMK">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zcl-1E-kHA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Council" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9c-Mn-OCt">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATA-e3-gGE">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="LIN-at-G1d"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0G-tk-Lcq">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zgZ-ku-bMK" firstAttribute="leading" secondItem="WIg-iF-out" secondAttribute="leading" constant="8" id="0eU-k6-tR2"/>
+                                                <constraint firstAttribute="trailing" secondItem="zgZ-ku-bMK" secondAttribute="trailing" constant="8" id="Xsm-uA-fEb"/>
+                                                <constraint firstItem="zgZ-ku-bMK" firstAttribute="top" secondItem="WIg-iF-out" secondAttribute="top" constant="8" id="gqL-Lt-xGD"/>
+                                                <constraint firstAttribute="bottom" secondItem="zgZ-ku-bMK" secondAttribute="bottom" constant="8" id="mw1-wt-p09"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="1qv-sf-u2j">
+                                        <rect key="frame" x="0.0" y="958" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1qv-sf-u2j" id="mfz-YF-rC9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nfF-i7-hQD">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-AE-DfP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-D0-2Bp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmk-9J-PAs">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="mxc-aP-rDz"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can add any family games or activities you'd like." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62U-Sc-qRl">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="nfF-i7-hQD" secondAttribute="trailing" constant="8" id="DLY-iT-Jb1"/>
+                                                <constraint firstItem="nfF-i7-hQD" firstAttribute="top" secondItem="mfz-YF-rC9" secondAttribute="top" constant="8" id="MRH-es-Kch"/>
+                                                <constraint firstAttribute="bottom" secondItem="nfF-i7-hQD" secondAttribute="bottom" constant="8" id="V6f-fD-y9W"/>
+                                                <constraint firstItem="nfF-i7-hQD" firstAttribute="leading" secondItem="mfz-YF-rC9" secondAttribute="leading" constant="8" id="YIr-fb-HoA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="bbp-Ce-8C8">
+                                        <rect key="frame" x="0.0" y="1002" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bbp-Ce-8C8" id="MmK-WD-RQs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XZ7-Uq-nxT">
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saG-jW-lz6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-uZ-Cfq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                                    <color key="textColor" name="Text"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tll-jY-Mr3">
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="cza-4z-6IK"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can review any ingredients to a treat with the preview button. You can edit Title and Details in the task tab. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-Yc-QNE">
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XZ7-Uq-nxT" firstAttribute="leading" secondItem="MmK-WD-RQs" secondAttribute="leading" constant="8" id="OPa-le-CHV"/>
+                                                <constraint firstItem="XZ7-Uq-nxT" firstAttribute="top" secondItem="MmK-WD-RQs" secondAttribute="top" constant="8" id="Wd5-an-HPC"/>
+                                                <constraint firstAttribute="bottom" secondItem="XZ7-Uq-nxT" secondAttribute="bottom" constant="8" id="YhC-BS-BfW"/>
+                                                <constraint firstAttribute="trailing" secondItem="XZ7-Uq-nxT" secondAttribute="trailing" constant="8" id="x7z-0a-3VJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Tem-c2-1GJ">
+                                        <rect key="frame" x="0.0" y="1046" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tem-c2-1GJ" id="xAh-2y-HuO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -1185,7 +1931,64 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Teach" width="1940" height="1600"/>
         <image name="Thank you" width="200" height="200"/>
         <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Tint">
+            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

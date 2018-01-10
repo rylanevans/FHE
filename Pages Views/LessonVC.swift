@@ -42,6 +42,29 @@ class LessonVC: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.lessonTip == false {
+            counter.lessonTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Whoever is assigned the lesson can talk before or after sharing a video or visiting a URL with the planned lesson. Have a discussion, allow for questions, share thoughts, etc.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func detailsButtonPressed(_ sender: Any) {
         let URL = NSURL(string: "\(lessonURL)")!
         let treatWebVC = SFSafariViewController(url: URL as URL)

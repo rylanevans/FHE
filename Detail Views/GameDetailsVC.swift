@@ -50,8 +50,6 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         gameTitleTextField.inputAccessoryView = toolBar
         gameURLTextField.inputAccessoryView = toolBar
         
-        checkValidTitle()
-        
         if gameToEdit != nil {
             loadGameData()
         }
@@ -66,7 +64,6 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidTitle()
-        navigationItem.title = textField.text
         return
     }
     
@@ -75,14 +72,31 @@ class GameDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     }
     
     func checkValidTitle() {
-        let text = gameTitleTextField.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
-        if text.isEmpty != true {
+        let text = gameTitleTextField.text
+        let url = gameURLTextField.text
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && url?.hasPrefix("https://www.") == true) {
             hideSaveButton.isHidden = true
+            self.navigationItem.title = text
+            saveButton.isEnabled = true
+        } else {
+            hideSaveButton.isHidden = false
+            saveButton.isEnabled = false
+            
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://www.”", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
     @objc func donePressedOnKeyboard() {
+        checkValidTitle()
         view.endEditing(true)
     }
     

@@ -63,15 +63,15 @@ func addToOpenedCounter() {
     if counter.launched > 0 {
         counter.launched += 1
         
-        if counter.launched % 4 == 0 {
+        if counter.launched % 52 == 0 {
             counter.tipGiven = false
             ad.saveContext()
         }
-        if counter.launched % 4 == 0 {
+        if counter.launched % 25 == 0 {
             counter.shared = false
             ad.saveContext()
         }
-        if counter.launched % 4 == 0 {
+        if counter.launched % 52 == 0 {
             counter.feedbackGiven = false
             ad.saveContext()
         }

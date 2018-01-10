@@ -16,10 +16,19 @@ func beginOpenedCounter(){
     counter.hideAboutMe = false
     counter.hideSharedRequest = false
     counter.hideFeedbackRequest = false
-    
     counter.feedbackGiven = false
     counter.shared = false
     counter.tipGiven = false
+    counter.songTip = false
+    counter.rulesTip = false
+    counter.spotlightTip = false
+    counter.lessonTip = false
+    counter.testimonyTip = false
+    counter.familyTip = false
+    counter.tasksTip = false
+    counter.homeTip = false
+    counter.songDetailsTip = false
+    counter.lessonDetailsTip = false
     
     ad.saveContext()
     

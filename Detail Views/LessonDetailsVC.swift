@@ -66,10 +66,27 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         lessonDetailsTextField.inputAccessoryView = toolBar
         lessonURLTextField.inputAccessoryView = toolBar
         
-        checkValidTitle()
+        runTutorial()
         
         if lessonToEdit != nil {
             loadLessonData()
+        }
+    }
+    
+    func runTutorial() {
+        if counter.lessonDetailsTip == false {
+            counter.lessonDetailsTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the empty box to select the lesson you would like to share in your next family meeting.\n\nTIP - The “▶️” (play) icon is a visual indicator that the lesson is a YouTube video.\n\nTIP - Subtitle in the center of each lesson is the category.\n\nTIP - The “blue-boxed-text” in the bottom right of each lesson is the topic.\n\nTRICK - The “👁‍🗨” (eye) icon is a button that allows you to preview the lesson video/details from the URL provided.\n\nTIP - Press the “+” (plus) icon in the top right corner to add a new lesson.\n\nTIP - Select any lesson, by tapping the row, to edit or delete it.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
@@ -82,13 +99,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         checkValidTitle()
-        switch (textField.tag) {
-        case 1:
-            navigationItem.title = textField.text
-            break;
-        default:
-            return
-        }
+        return
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -96,14 +107,31 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     }
     
     func checkValidTitle() {
-        let text = lessonTitleTextField.text ?? ""
-        saveButton.isEnabled = !text.isEmpty
-        if text.isEmpty != true {
+        let text = lessonTitleTextField.text
+        let url = lessonURLTextField.text
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && url?.hasPrefix("https://www.") == true) {
             hideSaveButton.isHidden = true
+            self.navigationItem.title = text
+            saveButton.isEnabled = true
+        } else {
+            hideSaveButton.isHidden = false
+            saveButton.isEnabled = false
+            
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://www.”", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     
     @objc func donePressedOnKeyboard() {
+        checkValidTitle()
         view.endEditing(true)
     }
     

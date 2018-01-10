@@ -19,7 +19,18 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>5</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fb</string>
+		<string>twitter</string>
+		<string>instagram</string>
+		<string>yelp</string>
+		<string>linkedin</string>
+		<string>com.amazon.mobile.shopping.web</string>
+		<string>patreon</string>
+		<string>voyager</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSBluetoothPeripheralUsageDescription</key>
@@ -61,16 +72,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fb</string>
-		<string>twitter</string>
-		<string>instagram</string>
-		<string>yelp</string>
-		<string>linkedin</string>
-		<string>com.amazon.mobile.shopping.web</string>
-		<string>patreon</string>
-		<string>voyager</string>
-	</array>
 </dict>
 </plist>

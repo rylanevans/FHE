@@ -50,8 +50,10 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     }
     
     func runTutorial() {
-        if counter.launched == 1 {
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Flip the switch “ON” for any task to enable it for your family meeting. With the switch “OFF” it will not appear.\n\nTIP - Select a task, by tapping the desired row, to make edits or to make a selection.\n\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family.", preferredStyle: .alert)
+        if counter.tasksTip == false {
+            counter.tasksTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family. After you've seen each of the tasks “disable” those you want off.\n\nTRICK - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTIP - See tutorials in the “More” tab for video demos or to review any of the “TIPS & TRICKS” you may want to review again.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

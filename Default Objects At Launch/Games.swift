@@ -24,7 +24,6 @@ func generateGames() {
     game1.alphabet = String(describing: game1.title![(game1.title!.startIndex)])
     
     let game2 = Game(context: context)
-    game2.selectedOne = taskGame
     game2.category = gameCategoryArray[1]
     game2.title = "Button, Button, Who's Got the Button?"
     game2.url = "http://www.fungameskidsplay.com/buttonbuttongame.htm"
@@ -81,6 +80,7 @@ func generateGames() {
     
     let game11 = Game(context: context)
     game11.category = gameCategoryArray[1]
+    game11.selectedOne = taskGame
     game11.title = "Hide and Seek"
     game11.url = "http://www.fungameskidsplay.com/hideandseekgame.htm"
     game11.favorite = true

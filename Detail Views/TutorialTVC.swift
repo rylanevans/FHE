@@ -55,7 +55,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func homeTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Tap on the task Title to make quick edits or make a selection for the specific song, scripture, lesson, etc.\n\nTRICK -  The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTIP - Press the “BEGIN” button to display and swipe through your all enabled tasks and their assignments one-by-one.\n\nTIP - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTIP - Turn your phone sideways to view in landscape mode.\n\nTRICK - Pair your phone to your family room TV for all to see. There is suggested hardware just above in the “Display” tutorial.\n\nTRICK - Once you have began your FHE, press on the orange “🏠” (home) button in the top left corner to exit out and return to the home screen.\n\nTRICK - Once you have began your FHE, press any of the orange “Details” buttons in the center bottom of the screen to open the link for more info.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTRICK - Tap on the task Title to make quick edits or the Titles with “✓” in front to make a selection for the specific song, scripture, lesson, etc without going to the tasks tab.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.\n\nTIP - Turn your phone sideways to view in landscape mode.\n\nTIP - Pair your phone to your family room TV for all to see.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -68,7 +68,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func familyTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Press the “+” (plus) icon in the top right corner to add a new family member.\n\nTIP - Select any family memebr, by tapping the row, to edit or delete them.\n\nTRICK - Flip the switch “ON” for any family member or guest attending your family meeting.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Anything in orange text or an orange image is a button or a link to something. Try it out!", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -81,7 +81,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func tasksTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Flip the switch “ON” for any task to enable it for your family meeting. With the switch “OFF” it will not appear.\n\nTIP - Select a task, by tapping the desired row, to make edits or to make a selection.\n\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family.\n\nTIP - Spotlight is designed to be opposite of the other tasks. Instead of the assignee leading, they stand in the spotlight while everyone else takes turns and gives that person meaningful compliments.\n\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Select the desired section from the sort & filter bar to arrange which and how your lessons will be displayed. Also, the “★” in the sort & filter bar means “favorites only”.\n\nTRICK - Type in the search bar to find a specific lesson.\n\nTRICK - Press the empty box to select the lesson you would like to share in your next family meeting.\n\nTIP - The “▶️” (play) icon is a visual indicator that the lesson is a YouTube video.\n\nTIP - Subtitle in the center of each lesson is the category.\n\nTIP - The “blue-boxed-text” in the bottom right of each lesson is the topic.\n\nTRICK - The “👁‍🗨” (eye) icon is a button that allows you to preview the lesson video/details from the URL provided.\n\nTIP - Press the “+” (plus) icon in the top right corner to add a new lesson.\n\nTIP - Select any lesson, by tapping the row, to edit or delete it.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Select the desired section from the sort & filter bar to arrange which and how your lessons will be displayed. Also, the “★” in the sort & filter bar means “favorites only”.\n\nTRICK - Type in the search bar to find a specific lesson.\n\nTRICK - Press the empty box to select the lesson you would like to share in your next family meeting.\n\nTIP - The “▶️” (play) icon is a visual indicator that the lesson is a YouTube video.\n\nTIP - Subtitle in the center of each lesson is the category.\n\nTIP - The “blue-boxed-text” in the bottom right of each lesson is the topic.\n\nTRICK - The “👁‍🗨” (eye) icon is a button that allows you to preview the lesson video/details from the URL provided.\n\nTIP - Press the “+” (plus) icon in the top right corner to add a new lesson.\n\nTIP - Select any lesson, by tapping the row, to edit or delete it.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -106,7 +106,70 @@ class TutorialTVC: UITableViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func songTipsTricks(_ sender: Any) {
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press any of the orange “Sing Song” button in the center bottom of the screen to open the link for more info. For the song, press it to sing-a-long with the music and lyrics. Make sure to press “▶️” (play) button on the web page to hear the music.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
     
+    @IBAction func rulesTipsTricks(_ sender: Any) {
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest creating your own family rules using Google Docs. You can right click the Google Doc file to “get shareable link” and paste that in the URL for your custom rule(s). We have found reviewing rules regulary in our family meetings helps create better awareness, acceptance, and compliance.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func spotlightTipsTricks(_ sender: Any) {
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Spotlight is designed to be opposite of the other tasks. Instead of the assignee leading, they stand in the spotlight while everyone else takes turns and gives that person meaningful compliments.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func lessonTipsTricks(_ sender: Any) {
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Whoever is assigned the lesson can talk before or after sharing a video or visiting a URL with the planned lesson. Have a discussion, allow for questions, share thoughts, etc.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func testimonyTipsTricks(_ sender: Any) {
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The testimony bullet points are only a list of suggestions. Pick one or more bullet points to testify about to your family members.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension TutorialTVC: SFSafariViewControllerDelegate {

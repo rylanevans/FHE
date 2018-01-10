@@ -27,7 +27,9 @@ class SpotlightVC: UIViewController {
     }
     
     func runTutorial() {
-        if counter.launched < 3 && counter.launched % 2 != 0 {
+        if counter.spotlightTip == false {
+            counter.spotlightTip = true
+            ad.saveContext()
             let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Spotlight is designed to be opposite of the other tasks. Instead of the assignee leading, they stand in the spotlight while everyone else takes turns and gives that person meaningful compliments.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
