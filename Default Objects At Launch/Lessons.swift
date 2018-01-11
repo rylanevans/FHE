@@ -44,8 +44,8 @@ func generateLessons() {
     let lesson4 = Lesson(context: context)
     lesson4.category = "Temporal"
     lesson4.topic = "Financial"
-    lesson4.title = "7 Baby Steps to Financial Peace"
-    lesson4.detail = "Baby Step 1: $1,000 cash in a beginner emergency fund\nBaby Step 2: Use the debt snowball to pay off all your debt but the house\nBaby Step 3: A fully funded emergency fund of 3 to 6 months of expenses\nBaby Step 4: Invest 15% of your household income into retirement\nBaby Step 5: Start saving for college\nBaby Step 6: Pay off your home early\nBaby Step 7: Build wealth and give generously"
+    lesson4.title = "Financial Peace"
+    lesson4.detail = "Baby Step 1: $1,000 cash in a beginner emergency fund.\nBaby Step 2: Use the debt snowball to pay off all your debt but the house.\nBaby Step 3: A fully funded emergency fund of 3 to 6 months of expenses.\nBaby Step 4: Invest 15% of your household income into retirement.\nBaby Step 5: Start saving for college.\nBaby Step 6: Pay off your home early.\nBaby Step 7: Build wealth and give generously."
     lesson4.url = "https://www.daveramsey.com/baby-steps/?ectid=30.31.13181&gclid=CjwKCAiA9rjRBRAeEiwA2SV4ZW6QF6enSOGt5f5lC2mFQN8UoKfxSfCT3KWtDt9oT7kIQwzZSfPxCxoCTlUQAvD_BwE"
     lesson4.youTubeVideo = false
     lesson4.order = 4

@@ -86,7 +86,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         if counter.lessonListTip == false {
             counter.lessonListTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the empty box to select the lesson you would like to share in your next family meeting.\n\nTIP - The “▶️” (play) icon is a visual indicator that the lesson is a YouTube video.\n\nTIP - Subtitle in the center of each lesson is the category.\n\nTIP - The “blue-boxed-text” in the bottom right of each lesson is the topic.\n\nTRICK - The “👁‍🗨” (eye) icon is a button that allows you to preview the lesson video/details from the URL provided.\n\nTIP - Press the “+” (plus) icon in the top right corner to add a new lesson.\n\nTIP - Select any lesson, by tapping the row, to edit or delete it.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The “▶️” (play) icon is a visual indicator that the lesson is a YouTube video.\n\nTRICK - The “👁‍🗨” (eye) icon is a button that allows you to preview the lesson link from the URL entered.\n\nTIP - Add your own lessons or flag existing ones as favorites!", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

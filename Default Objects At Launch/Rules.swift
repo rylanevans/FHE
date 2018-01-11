@@ -19,22 +19,22 @@ func generateRules() {
     rule1.url = "https://drive.google.com/open?id=1U6DIUWVNML50SgX4p6mdkBrrKcXpdGIE"
     rule1.order = 1
     rule1.random = Int64(arc4random_uniform(1000))
-    rule1.selected = true
+    rule1.selected = false
     rule1.favorite = true
     rule1.sortingIndex = 0
     rule1.alphabet = String(describing: rule1.title![(rule1.title!.startIndex)])
-    rule1.selectedOne = taskRule
     
     let rule2 = Rule(context: context)
     rule2.title = "Respect Others"
-    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.”\n\n- Matt. 7:12"
+    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.”\n\n- Jesus Christ"
     rule2.url = "https://drive.google.com/open?id=1zuUzKcEdZS7ZjZh5mKhQWWFPPw77_AaV"
     rule2.order = 2
     rule2.random = Int64(arc4random_uniform(1000))
-    rule2.selected = false
+    rule2.selected = true
     rule2.favorite = true
     rule2.sortingIndex = 0
     rule2.alphabet = String(describing: rule2.title![(rule2.title!.startIndex)])
+    rule2.selectedOne = taskRule
     
     let rule3 = Rule(context: context)
     rule3.title = "Respect Belongings"

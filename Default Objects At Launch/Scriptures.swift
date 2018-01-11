@@ -1057,11 +1057,10 @@ func generateScripture() {
     scripture102.verse = "16"
     scripture102.favorite = true
     scripture102.random = Int64(arc4random_uniform(1000))
-    scripture102.selected = true
+    scripture102.selected = false
     scripture102.sortingIndex = 0
-    scripture102.alphabet = String(describing: scripture74.title![(scripture74.title!.startIndex)])
-    scripture102.order = Int64(defaultScriptureDictionary["\(scripture74.book!)"]!)
-    scripture102.selectedOne = taskScripture
+    scripture102.alphabet = String(describing: scripture102.title![(scripture102.title!.startIndex)])
+    scripture102.order = Int64(defaultScriptureDictionary["\(scripture102.book!)"]!)
     
     let scripture75 = Scripture(context: context)
     scripture75.topic = "Jesus Christ"
@@ -1440,6 +1439,21 @@ func generateScripture() {
     scripture101.sortingIndex = 0
     scripture101.alphabet = String(describing: scripture101.title![(scripture101.title!.startIndex)])
     scripture101.order = Int64(defaultScriptureDictionary["\(scripture101.book!)"]!)
+    
+    let scripture103 = Scripture(context: context)
+    scripture103.topic = "Scriptures"
+    scripture103.title = "The Golden Rule"
+    scripture103.volume = "nt"
+    scripture103.book = "matt"
+    scripture103.chapter = 7
+    scripture103.verse = "12"
+    scripture103.favorite = false
+    scripture103.random = Int64(arc4random_uniform(1000))
+    scripture103.selected = true
+    scripture103.sortingIndex = 0
+    scripture103.alphabet = String(describing: scripture103.title![(scripture103.title!.startIndex)])
+    scripture103.order = Int64(defaultScriptureDictionary["\(scripture103.book!)"]!)
+    scripture103.selectedOne = taskScripture
 
     ad.saveContext()
 }

@@ -4428,20 +4428,62 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdb-rm-Q4s" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="67" width="384" height="53"/>
+                                                        <rect key="frame" x="0.0" y="67" width="384" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="NjF-6a-A0I"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0N-vD-KBF">
+                                                        <rect key="frame" x="0.0" y="82" width="384" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6z-CE-WM3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="jgu-EU-iZO"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="8bT-ak-05g">
+                                                                <rect key="frame" x="20" y="0.0" width="344" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="fIt-9F-Hhi"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="25"/>
+                                                                <color key="textColor" name="Text"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnP-Qh-i3B">
+                                                                <rect key="frame" x="364" y="0.0" width="20" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="reQ-wS-2at"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEX-o0-av2" userLabel="Spacer">
+                                                        <rect key="frame" x="0.0" y="112" width="384" height="30.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="GamesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="iv1-4Z-eWm">
-                                                        <rect key="frame" x="0.0" y="120" width="384" height="150"/>
+                                                        <rect key="frame" x="0.0" y="142.66666666666669" width="384" height="150"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="150" id="JLt-Of-9Fd"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="SDD-5c-Icg"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQX-54-rIn" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="270" width="384" height="53"/>
+                                                        <rect key="frame" x="0.0" y="292.66666666666663" width="384" height="30.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -4494,7 +4536,7 @@
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="jdb-rm-Q4s" firstAttribute="height" secondItem="YQX-54-rIn" secondAttribute="height" id="nmZ-I4-MZw"/>
+                                                    <constraint firstItem="YQX-54-rIn" firstAttribute="height" secondItem="tEX-o0-av2" secondAttribute="height" id="WAF-Ky-SCu"/>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZJ-yW-e82" userLabel="Spacer">
@@ -4596,6 +4638,7 @@
                         <viewLayoutGuide key="safeArea" id="OH4-iK-jJn"/>
                     </view>
                     <connections>
+                        <outlet property="gameCategoryLabel" destination="8bT-ak-05g" id="faA-9O-dtu"/>
                         <outlet property="gameImage" destination="iv1-4Z-eWm" id="ijG-KI-cN2"/>
                         <outlet property="gameMemberNameLabel" destination="5xs-mA-B3g" id="4ej-4I-dUI"/>
                         <outlet property="gameMemberPhotoImage" destination="7Qb-SP-nf3" id="CC8-qD-RkE"/>
@@ -4759,20 +4802,62 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTL-Z7-Z03" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="67" width="384" height="53"/>
+                                                        <rect key="frame" x="0.0" y="67" width="384" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="TKZ-r6-R0F"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmT-fm-xxG">
+                                                        <rect key="frame" x="0.0" y="82" width="384" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO6-Kt-Ey1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="NjI-rg-YUK"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-Le-mt0">
+                                                                <rect key="frame" x="20" y="0.0" width="344" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="10Z-R6-OFz"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter-CondensedLight" family="American Typewriter" pointSize="25"/>
+                                                                <color key="textColor" name="Text"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-VX-yXw">
+                                                                <rect key="frame" x="364" y="0.0" width="20" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="BMo-hT-wBu"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htm-Ct-5yS" userLabel="Spacer">
+                                                        <rect key="frame" x="0.0" y="112" width="384" height="30.666666666666657"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="TreatsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-bF-JYQ">
-                                                        <rect key="frame" x="0.0" y="120" width="384" height="150"/>
+                                                        <rect key="frame" x="0.0" y="142.66666666666669" width="384" height="150"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Hf9-A0-nMq"/>
                                                             <constraint firstAttribute="height" constant="150" id="Tmh-L2-U8c"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DL-hE-Gt4" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="270" width="384" height="53"/>
+                                                        <rect key="frame" x="0.0" y="292.66666666666663" width="384" height="30.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -4825,7 +4910,7 @@
                                                     </label>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="9DL-hE-Gt4" firstAttribute="height" secondItem="XTL-Z7-Z03" secondAttribute="height" id="j88-B8-euX"/>
+                                                    <constraint firstItem="9DL-hE-Gt4" firstAttribute="height" secondItem="Htm-Ct-5yS" secondAttribute="height" id="fNh-Ma-Xub"/>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyg-yP-plE" userLabel="Spacer">
@@ -4927,6 +5012,7 @@
                         <viewLayoutGuide key="safeArea" id="gUK-LR-O3p"/>
                     </view>
                     <connections>
+                        <outlet property="treatCategoryLabel" destination="Dzl-Le-mt0" id="Vbh-iH-xOP"/>
                         <outlet property="treatImage" destination="lcc-bF-JYQ" id="idr-wV-Jmg"/>
                         <outlet property="treatMemberNameLabel" destination="VsY-0g-iTu" id="B6V-O9-dcB"/>
                         <outlet property="treatMemberPhotoImage" destination="QXj-PB-GoC" id="2Z4-h6-8WM"/>
@@ -4976,6 +5062,12 @@
         </namedColor>
         <namedColor name="Background">
             <color red="0.85900002717971802" green="0.9179999828338623" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.13400000333786011" green="0.1679999977350235" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

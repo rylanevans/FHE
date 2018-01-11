@@ -14,6 +14,7 @@ class GameVC: UIViewController {
     @IBOutlet weak var gameMemberNameLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
     @IBOutlet weak var gameImage: UIImageView!
+    @IBOutlet weak var gameCategoryLabel: UILabel!
     
     var gameURL = ""
     
@@ -39,6 +40,7 @@ class GameVC: UIViewController {
         let specificTask = taskGame
         if let task = specificTask.selectedGame {
             gameTitleLabel.text = task.title
+            gameCategoryLabel.text = task.category
             gameURL = task.url ?? "https://www.wikihow.com/Main-Page"
         }
         

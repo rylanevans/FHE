@@ -1285,7 +1285,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.urladdress.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-xK-p7C">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zW1-xK-p7C">
                                                         <rect key="frame" x="79" y="0.0" width="225" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
@@ -2480,10 +2480,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="umw-Kv-w3l">
-                                                <rect key="frame" x="0.0" y="43" width="304" height="35"/>
+                                                <rect key="frame" x="0.0" y="43" width="304" height="32"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrF-gy-WTy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="1P5-dc-bC8"/>
                                                         </constraints>
@@ -2494,7 +2494,7 @@
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e8T-vV-ISr">
-                                                <rect key="frame" x="0.0" y="86" width="304" height="250"/>
+                                                <rect key="frame" x="0.0" y="83" width="304" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="Xio-HO-gaf"/>
                                                 </constraints>
@@ -2503,10 +2503,10 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-fS-u1z">
-                                                <rect key="frame" x="0.0" y="344" width="304" height="32"/>
+                                                <rect key="frame" x="0.0" y="341" width="304" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="URL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBx-Wk-a0h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="zqp-7K-Rfr"/>
                                                         </constraints>
@@ -2514,8 +2514,8 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.urladdress.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0Y-MI-Gms">
-                                                        <rect key="frame" x="53" y="0.0" width="251" height="32"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0Y-MI-Gms">
+                                                        <rect key="frame" x="53" y="0.0" width="251" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="URL"/>
@@ -2654,7 +2654,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hx8-Sk-iTG">
-                                        <rect key="frame" x="17" y="119" width="304" height="250"/>
+                                        <rect key="frame" x="17" y="116" width="304" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="Text"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
@@ -4925,7 +4925,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.urladdress.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-Q0-aJT">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.youtube.com/watch?v=ABCDEFGHIJK" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-Q0-aJT">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
@@ -5808,7 +5808,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.urladdress.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZz-re-1K8">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZz-re-1K8">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
@@ -8196,7 +8196,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.urladdress.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1U-QG-BXl">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1U-QG-BXl">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
@@ -8488,7 +8488,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.urladdress.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACW-vE-53h">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ACW-vE-53h">
                                                         <rect key="frame" x="53" y="0.0" width="251" height="32"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>

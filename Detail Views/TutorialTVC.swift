@@ -55,7 +55,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func homeTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTRICK - Tap on the task Title to make quick edits or the Titles with “✓” in front to make a selection for the specific song, scripture, lesson, etc without going to the tasks tab.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.\n\nTIP - Turn your phone sideways to view in landscape mode.\n\nTIP - Pair your phone to your family room TV for all to see.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.\n\nTIP - Turn your phone sideways to view in landscape mode.\n\nTIP - Pair your phone to your family room TV for all to see.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -68,7 +68,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func familyTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Anything in orange text or an orange image is a button or a link to something. Try it out!", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Add new family members by tapping the “+” icon in the top right corner. Or edit existing ones by tapping on the cell you want to edit.\n\nTIP - Age is only used for sorting. Once it's entered you don't have to edit it again, because everyone grows at the same pace.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -94,7 +94,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func assignmentTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “👨‍💼✓” (profile ✓) button to make ALL tasks “Auto-Assign” with one button.\n\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the profile icon with a “✓” on it to make ALL tasks “Auto-Assign” with one button.\n\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -120,7 +120,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func rulesTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest creating your own family rules using Google Docs. You can right click the Google Doc file to “get shareable link” and paste that in the URL for your custom rule(s). We have found reviewing rules regulary in our family meetings helps create better awareness, acceptance, and compliance.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest creating your own family rules using Google Docs. Once created, you can right click the Google Doc file to “get shareable link” and paste that in the URL for your custom rule(s). In my family, we have found reviewing rules regulary in our family meetings helps create better awareness, acceptance, and compliance.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -159,7 +159,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func testimonyTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The testimony bullet points are only a list of suggestions. Pick one or more bullet points to testify about to your family members.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - The testimony bullet points are only a list of suggestions. Pick one or more bullet points to testify about to your family members. Don't stress about the whole list. You can always edit the suggested list in the testimony task.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in

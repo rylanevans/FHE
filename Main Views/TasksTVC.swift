@@ -53,7 +53,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         if counter.tasksTip == false {
             counter.tasksTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family. After you've seen each of the tasks “disable” those you want off.\n\nTRICK - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTIP - See tutorials in the “More” tab for video demos or to review any of the “TIPS & TRICKS” you may want to review again.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family. After you've seen each of the tasks “disable” those you want off.\n\nTIP - See tutorials in the “More” tab for video demos or to see any of the “TIPS & TRICKS” you may want to review again.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

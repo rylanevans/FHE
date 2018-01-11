@@ -77,7 +77,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if counter.lessonDetailsTip == false {
             counter.lessonDetailsTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video, you'll need to confirm 3 things:\n1) the URL address MUST be secure and include “https://www.”\n2) the URL needs to end with the video ID# after “watch?v=”. For example, “https://www.youtube.com/watch?v=ABCDEFGHIJK”\n3) Select the box to confirm your URL is a direct link to a YouTube video.\n\nIf your lesson is not a YouTube video enter your Title, details and any secure URL that begins with “https://www.”", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video make sure you select the box to confirm your URL is a direct link.\n\nTIP - If your lesson is NOT a YouTube video enter your Title, Details and any secure URL that begins with “https://www.”", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

@@ -14,6 +14,7 @@ class TreatVC: UIViewController {
     @IBOutlet weak var treatMemberNameLabel: UILabel!
     @IBOutlet weak var treatTitleLabel: UILabel!
     @IBOutlet weak var treatImage: UIImageView!
+    @IBOutlet weak var treatCategoryLabel: UILabel!
     
     var treatURL = ""
     
@@ -62,6 +63,7 @@ class TreatVC: UIViewController {
         let specificTask = taskTreat
         if let task = specificTask.selectedTreat {
             treatTitleLabel.text = task.title
+            treatCategoryLabel.text = task.category
             treatURL = task.url ?? "https://www.pinterest.com/search/pins/?q=treats"
         }
         
