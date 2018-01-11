@@ -45,7 +45,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         if counter.familyTip == false {
             counter.familyTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "Hi and welcome to the\nFamily Home Evening\n(FHE) app!\n👨‍👩‍👧‍👦🏠🌙", message: "\n🙏 Thank you for installing the FHE app! I hope you enjoy it.\n-Rylan Evans\n\nSince this is your first time here, I will help guide you with\n“📌 TIPS & TRICKS”\nalerts for each of the main pages. There is a prepopulated example family that you can either delete or modify. Let's begin...", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Hi and welcome to the\nFamily Home Evening\n(FHE) app!\n👨‍👩‍👧‍👦🏠🌙", message: "\n🙏 Thank you for installing the FHE app. I hope you enjoy it.\n-Rylan Evans\n\nSince this is your first time here, I will help guide you with “TIPS & TRICKS” alerts for each of the main pages. There is a prepopulated example family that you can either delete or modify. Let's begin...", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

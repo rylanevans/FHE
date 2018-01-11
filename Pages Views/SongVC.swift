@@ -66,7 +66,12 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         let specificTask = taskSong
         if let task = specificTask.selectedSong {
             songTitleLabel.text = task.title
-            songNumberLabel.text = "#\(task.number)"
+            let number = String(task.number)
+            if number == "0" {
+                songNumberLabel.text = "Music Video"
+            } else {
+                songNumberLabel.text = "#\(number)"
+            }
             songURL = task.url ?? "https://www.lds.org/music/library?lang=eng"
         }
         

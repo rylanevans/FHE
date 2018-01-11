@@ -94,7 +94,7 @@ func generateTasks() {
     let assigneetaskThought = membersAttendingArray[0]
     taskThought.assignment = assigneetaskThought
     taskThought.defaultNumber = 8
-    taskThought.enabled = false
+    taskThought.enabled = true
     taskThought.name = "Thought"
     taskThought.order = Int64(arc4random_uniform(100))
     taskThought.segment = 0
@@ -105,7 +105,7 @@ func generateTasks() {
     let assigneetaskQuote = membersAttendingArray[1]
     taskQuote.assignment = assigneetaskQuote
     taskQuote.defaultNumber = 9
-    taskQuote.enabled = false
+    taskQuote.enabled = true
     taskQuote.name = "Quote"
     taskQuote.order = Int64(arc4random_uniform(100))
     taskQuote.segment = 0
@@ -127,7 +127,7 @@ func generateTasks() {
     let assigneetaskCouncil = membersAttendingArray[2]
     taskCouncil.assignment = assigneetaskCouncil
     taskCouncil.defaultNumber = 11
-    taskCouncil.enabled = false
+    taskCouncil.enabled = true
     taskCouncil.name = "Council"
     taskCouncil.order = Int64(arc4random_uniform(100))
     taskCouncil.segment = 0

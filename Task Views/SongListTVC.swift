@@ -78,6 +78,25 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         attemptFetch()
         getSongs()
         tableView.reloadData()
+        
+        runTutorial()
+    }
+    
+    func runTutorial() {
+        if counter.songDetailsTip == false {
+            counter.songDetailsTip = true
+            ad.saveContext()
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Select the desired section from the sort & filter bar to arrange which and how your songs will be displayed. Also, the “★” in the sort & filter bar means “favorites only”.\n\nTRICK - Type in the search bar to find a specific song.\n\nTIP - Only one song can be selected at a time.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Picker View Set up
@@ -143,7 +162,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         var title = ""
         let sectionTitle = songController.sections
         
-        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 || segment.selectedSegmentIndex == 3 {
+        if segment.selectedSegmentIndex == 0 || segment.selectedSegmentIndex == 1 || segment.selectedSegmentIndex == 2 {
             switch sectionTitle![section].name {
             case "1": title = "1:"
             case "2": title = "2:"
@@ -180,6 +199,12 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             case "X": title = "X:"
             case "Y": title = "Y:"
             case "Z": title = "Z:"
+            default: title = "SEARCH RESULTS:"
+            }
+            
+        } else if segment.selectedSegmentIndex == 3 {
+            switch sectionTitle![section].name {
+            case "Music Video": title = "MUSIC VIDEOS:"
             default: title = "SEARCH RESULTS:"
             }
             
@@ -482,10 +507,10 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
             }
             
         } else if segment.selectedSegmentIndex == 3 {
-            fetchRequest.sortDescriptors = [sortByAlphabet, sortByTitle]
-            let predicate = NSPredicate(format: "book == %@", "Video")
+            fetchRequest.sortDescriptors = [sortByTitle]
+            let predicate = NSPredicate(format: "book == %@", "Music Video")
             fetchRequest.predicate = predicate
-            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "alphabet", cacheName: nil)
+            let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: "book", cacheName: nil)
             controller.delegate = self
             self.songController = controller
             

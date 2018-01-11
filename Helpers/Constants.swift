@@ -56,7 +56,7 @@ let lessonTopicsArray = [
     "Spiritual"
 ]
 
-let songBooksArray = ["Children's", "Hymn", "Video", "Other"]
+let songBooksArray = ["Children's", "Hymn", "Music Video", "Other"]
 
 //["Children's Songbook", "Hymns"]
 

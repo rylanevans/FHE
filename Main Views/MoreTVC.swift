@@ -59,18 +59,26 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     func thankYou() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .thankYou)
+        counter.tipGiven = true
+        ad.saveContext()
     }
     
     func likeIt() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .likeIt)
+        counter.tipGiven = true
+        ad.saveContext()
     }
     
     func loveIt() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .loveIt)
+        counter.tipGiven = true
+        ad.saveContext()
     }
     
     func amazing() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .amazing)
+        counter.tipGiven = true
+        ad.saveContext()
     }
     
     func checkPositiveOrNegitiveFeedback() {

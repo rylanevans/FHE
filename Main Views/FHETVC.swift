@@ -63,7 +63,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         if counter.homeTip == false {
             counter.homeTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTRICK - Tap on the task Title to make quick edits or the Titles with “✓” in front to make a selection for the specific song, scripture, lesson, etc without going to the tasks tab.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “👨‍💼✓” (profile ✓) button to make ALL tasks “Auto-Assign” with one button.\n\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTRICK - Tap on the task Title to make quick edits or the Titles with “✓” in front to make a selection for the specific song, scripture, lesson, etc without going to the tasks tab.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
@@ -77,7 +77,18 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     }
     
     @IBAction func editButtonPressed(_ sender: Any) {
-        self.tabBarController?.selectedIndex = 1
+        playClick()
+        
+        let alertController = UIAlertController(title: "⚠️ INACTIVE BUTTON", message: "This button will auto-assign all family members to enabled tasks but I don't have it working yet.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(okAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {

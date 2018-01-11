@@ -77,7 +77,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if counter.lessonDetailsTip == false {
             counter.lessonDetailsTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the empty box to select the lesson you would like to share in your next family meeting.\n\nTIP - The “▶️” (play) icon is a visual indicator that the lesson is a YouTube video.\n\nTIP - Subtitle in the center of each lesson is the category.\n\nTIP - The “blue-boxed-text” in the bottom right of each lesson is the topic.\n\nTRICK - The “👁‍🗨” (eye) icon is a button that allows you to preview the lesson video/details from the URL provided.\n\nTIP - Press the “+” (plus) icon in the top right corner to add a new lesson.\n\nTIP - Select any lesson, by tapping the row, to edit or delete it.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video, you'll need to confirm 3 things:\n1) the URL address MUST be secure and include “https://www.”\n2) the URL needs to end with the video ID# after “watch?v=”. For example, “https://www.youtube.com/watch?v=ABCDEFGHIJK”\n3) Select the box to confirm your URL is a direct link to a YouTube video.\n\nIf your lesson is not a YouTube video enter your Title, details and any secure URL that begins with “https://www.”", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

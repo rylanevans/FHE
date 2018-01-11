@@ -11,10 +11,12 @@ import CoreData
 import UIKit
 
 extension Counter {
-    convenience init(launched: Int64, songDetailsTip: Bool, lessonDetailsTip: Bool, prayerTip: Bool, songTip: Bool, rulesTip: Bool, spotlightTip: Bool, lessonTip: Bool, testimonyTip: Bool, familyTip: Bool, tasksTip: Bool, homeTip: Bool, hideAboutMe: Bool, feedbackGiven: Bool, tipGiven: Bool, shared: Bool, hideFeedbackRequest: Bool, hideSharedRequest: Bool, in context:NSManagedObjectContext) {
+    convenience init(launched: Int64, lessonListTip: Bool, developerTip: Bool, songDetailsTip: Bool, lessonDetailsTip: Bool, prayerTip: Bool, songTip: Bool, rulesTip: Bool, spotlightTip: Bool, lessonTip: Bool, testimonyTip: Bool, familyTip: Bool, tasksTip: Bool, homeTip: Bool, hideAboutMe: Bool, feedbackGiven: Bool, tipGiven: Bool, shared: Bool, hideFeedbackRequest: Bool, hideSharedRequest: Bool, in context:NSManagedObjectContext) {
         
         self.init(context:context)
         
+        self.lessonListTip = lessonListTip
+        self.developerTip = developerTip
         self.songDetailsTip = songDetailsTip
         self.lessonDetailsTip = lessonDetailsTip
         self.songTip = songTip

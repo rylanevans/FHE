@@ -29,6 +29,8 @@ func beginOpenedCounter(){
     counter.homeTip = false
     counter.songDetailsTip = false
     counter.lessonDetailsTip = false
+    counter.lessonListTip = false
+    counter.developerTip = false
     
     ad.saveContext()
     

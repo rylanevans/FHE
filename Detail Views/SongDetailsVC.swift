@@ -66,27 +66,8 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
         songNumberTextField.inputAccessoryView = toolBar
         songURLTextField.inputAccessoryView = toolBar
         
-        runTutorial()
-        
         if songToEdit != nil {
             loadSongData()
-        }
-    }
-    
-    func runTutorial() {
-        if counter.songDetailsTip == false {
-            counter.songDetailsTip = true
-            ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Select the desired section from the sort & filter bar to arrange which and how your songs will be displayed. Also, the “★” in the sort & filter bar means “favorites only”.\n\nTRICK - Type in the search bar to find a specific song.", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
-                (action : UIAlertAction!) -> Void in
-            })
-            
-            alertController.addAction(okAction)
-            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-            
-            self.present(alertController, animated: true, completion: nil)
         }
     }
         

@@ -30,7 +30,7 @@ func generateGames() {
     game2.favorite = true
     game2.order = 2
     game2.random = Int64(arc4random_uniform(1000))
-    game2.selected = true
+    game2.selected = false
     game2.sortingIndex = 0
     game2.alphabet = String(describing: game2.title![(game2.title!.startIndex)])
     
@@ -86,7 +86,7 @@ func generateGames() {
     game11.favorite = true
     game11.order = 11
     game11.random = Int64(arc4random_uniform(1000))
-    game11.selected = false
+    game11.selected = true
     game11.sortingIndex = 0
     game11.alphabet = String(describing: game11.title![(game11.title!.startIndex)])
     

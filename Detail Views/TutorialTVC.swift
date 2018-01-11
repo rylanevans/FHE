@@ -94,7 +94,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func assignmentTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “👨‍💼✓” (profile ✓) button to make ALL tasks “Auto-Assign” with one button.\n\nTRICK - Press the “♲” (recycle) button to rotate your family member assignments. It will only rotate with tasks that are on “Auto-Assign”. Any task that you manually assign will not rotate.\n\nTRICK - Tap on the “Auto” or “Manual” text by a family members picture to manually or automatically assign that specific task.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -107,7 +107,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func songTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press any of the orange “Sing Song” button in the center bottom of the screen to open the link for more info. For the song, press it to sing-a-long with the music and lyrics. Make sure to press “▶️” (play) button on the web page to hear the music.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press any of the orange “Sing Song” button in the center bottom of the screen to open the link for more info. For the song, press it to sing-a-long with the music and lyrics. Make sure to press “▶️” (play) button on the web page to hear the music.\n\nTIP - Only one song can be selected at a time.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -146,7 +146,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func lessonTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Whoever is assigned the lesson can talk before or after sharing a video or visiting a URL with the planned lesson. Have a discussion, allow for questions, share thoughts, etc.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video, you'll need to confirm 3 things:\n1) the URL address MUST be secure and include “https://www.”\n2) the URL needs to end with the video ID# after “watch?v=”. For example, “https://www.youtube.com/watch?v=ABCDEFGHIJK”\n3) Select the box to confirm your URL is a direct link to a YouTube video.\nIf your lesson is not a YouTube video enter your Title, details and any secure URL that begins with “https://www.”\n\nTIP - Whoever is assigned the lesson can talk before or after sharing a video or visiting a URL with the planned lesson. Have a discussion, allow for questions, share thoughts, etc.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
