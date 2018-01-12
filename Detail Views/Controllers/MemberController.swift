@@ -64,3 +64,20 @@ func getMembersAttending() {
         print("\(error)")
     }
 }
+
+func rotateAutoAssignments() {
+    for eachTask in tasksEnabledArray {
+        if eachTask.assigned == true {
+            
+        }
+    }
+}
+
+func autoAssignAllEnabledTasks() {
+    for eachTask in tasksEnabledArray {
+        if eachTask.assigned == true {
+            
+        }
+    }
+    
+}
