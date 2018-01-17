@@ -26,6 +26,7 @@
         <attribute name="lessonListTip" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="lessonTip" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="prayerTip" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rotationIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rulesTip" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="shared" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="songDetailsTip" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -198,7 +199,7 @@
     <elements>
         <element name="Calendar" positionX="9" positionY="117" width="128" height="30"/>
         <element name="Council" positionX="54" positionY="162" width="128" height="120"/>
-        <element name="Counter" positionX="9" positionY="153" width="128" height="345"/>
+        <element name="Counter" positionX="9" positionY="153" width="128" height="360"/>
         <element name="Game" positionX="9" positionY="108" width="128" height="210"/>
         <element name="Lesson" positionX="45" positionY="144" width="128" height="255"/>
         <element name="Member" positionX="27" positionY="162" width="128" height="180"/>

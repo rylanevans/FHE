@@ -13,6 +13,7 @@ import UIKit
 var membersAllArray = [Member]()
 var membersPickerArray = [Member]()
 var membersAttendingArray = [Member]()
+var arrayOfAttendingMembersAutoAssignOrder = [Member]()
 
 func getAllMembers() {
     let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
@@ -65,19 +66,21 @@ func getMembersAttending() {
     }
 }
 
-func rotateAutoAssignments() {
-    for eachTask in tasksEnabledArray {
-        if eachTask.assigned == true {
-            
-        }
-    }
-}
-
-func autoAssignAllEnabledTasks() {
-    for eachTask in tasksEnabledArray {
-        if eachTask.assigned == true {
-            
-        }
-    }
+func getArrayOfAttendingMembersAutoAssignOrder() {
+    let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
     
+    let filterByAttending = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
+    let filterOutAutoAssigned = NSPredicate(format: "name != %@", "Auto-Assign")
+    let sortByAutoAssignOrder = NSSortDescriptor(key: "order", ascending: true)
+    let predicateCompound = NSCompoundPredicate(type: .and, subpredicates: [filterByAttending, filterOutAutoAssigned])
+    
+    fetchRequest.predicate = predicateCompound
+    fetchRequest.sortDescriptors = [sortByAutoAssignOrder]
+    
+    do {
+        arrayOfAttendingMembersAutoAssignOrder = try context.fetch(fetchRequest)
+    } catch {
+        let error = error as NSError
+        print("\(error)")
+    }
 }

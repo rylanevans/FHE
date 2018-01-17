@@ -495,7 +495,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-AF-kla" userLabel="Text">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zQR-AF-kla" userLabel="Text">
                                                 <rect key="frame" x="15" y="0.0" width="384" height="368"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-BC-CEG" userLabel="Spacer">
@@ -577,8 +577,8 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="MusicalNotes" translatesAutoresizingMaskIntoConstraints="NO" id="jcu-uZ-lMb">
                                                         <rect key="frame" x="0.0" y="142.66666666666669" width="384" height="150"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="EJn-LJ-X14"/>
-                                                            <constraint firstAttribute="height" constant="150" id="Xbi-3C-0Jj"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="EJn-LJ-X14"/>
+                                                            <constraint firstAttribute="height" priority="750" constant="150" id="Xbi-3C-0Jj"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wld-PC-rP4" userLabel="Spacer">
@@ -587,7 +587,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="eYp-cA-YuN" userLabel="Button">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="eYp-cA-YuN" userLabel="Button">
                                                         <rect key="frame" x="0.0" y="323" width="384" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWy-3f-s3l" userLabel="Spacer">
@@ -1353,19 +1353,6 @@
                                 <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
-                            <visualEffectView hidden="YES" opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zEV-dX-zwL">
-                                <rect key="frame" x="20" y="222" width="160" height="57"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="J1H-uX-TT6">
-                                    <rect key="frame" x="0.0" y="0.0" width="160" height="57"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </visualEffectView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scripture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZv-du-65p">
                                 <rect key="frame" x="20" y="208" width="160" height="95"/>
                                 <constraints>
@@ -1447,16 +1434,12 @@
                             <constraint firstItem="zpZ-WJ-dpO" firstAttribute="leading" secondItem="R6X-eb-HTh" secondAttribute="leading" constant="20" id="3RT-dk-pge"/>
                             <constraint firstItem="eZv-du-65p" firstAttribute="leading" secondItem="R6X-eb-HTh" secondAttribute="leading" constant="20" id="A0f-aI-acX"/>
                             <constraint firstItem="8AH-zF-VDf" firstAttribute="centerY" secondItem="zpZ-WJ-dpO" secondAttribute="centerY" id="B3G-Dk-q0W"/>
-                            <constraint firstItem="zEV-dX-zwL" firstAttribute="width" secondItem="eZv-du-65p" secondAttribute="width" id="CXJ-At-mOC"/>
                             <constraint firstItem="T2c-Dy-EQN" firstAttribute="trailing" secondItem="pUD-kx-zBL" secondAttribute="trailing" constant="15" id="GwP-3x-XOj"/>
                             <constraint firstItem="8AH-zF-VDf" firstAttribute="centerX" secondItem="zpZ-WJ-dpO" secondAttribute="centerX" id="Ioz-Od-U7f"/>
                             <constraint firstItem="pUD-kx-zBL" firstAttribute="bottom" secondItem="AfL-XS-Z9Y" secondAttribute="bottom" constant="60" id="J6I-TB-17U"/>
                             <constraint firstItem="8AH-zF-VDf" firstAttribute="height" secondItem="zpZ-WJ-dpO" secondAttribute="height" multiplier="1.1" id="JMN-b3-nMX"/>
                             <constraint firstItem="8AH-zF-VDf" firstAttribute="width" secondItem="zpZ-WJ-dpO" secondAttribute="width" multiplier="1.1" id="L3G-l9-W5b"/>
-                            <constraint firstItem="zEV-dX-zwL" firstAttribute="height" secondItem="eZv-du-65p" secondAttribute="height" multiplier="0.6" id="PBi-kv-QL4"/>
-                            <constraint firstItem="zEV-dX-zwL" firstAttribute="centerY" secondItem="eZv-du-65p" secondAttribute="centerY" constant="-5" id="gfR-gB-axt"/>
                             <constraint firstItem="zpZ-WJ-dpO" firstAttribute="top" secondItem="bEH-mG-GQW" secondAttribute="top" constant="20" id="hlD-GJ-KI7"/>
-                            <constraint firstItem="zEV-dX-zwL" firstAttribute="centerX" secondItem="eZv-du-65p" secondAttribute="centerX" id="lN5-WR-zaF"/>
                             <constraint firstAttribute="trailing" secondItem="G8p-QA-UVp" secondAttribute="trailing" id="mii-kT-gh4"/>
                             <constraint firstItem="G8p-QA-UVp" firstAttribute="leading" secondItem="bEH-mG-GQW" secondAttribute="leading" id="ni8-0I-mKs"/>
                             <constraint firstItem="eZv-du-65p" firstAttribute="bottom" secondItem="AfL-XS-Z9Y" secondAttribute="bottom" id="rTM-vf-e0K"/>
@@ -4396,7 +4379,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pSc-7b-giM" userLabel="Text">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pSc-7b-giM" userLabel="Text">
                                                 <rect key="frame" x="15" y="0.0" width="384" height="368"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9T-KM-V5z" userLabel="Spacer">
@@ -4478,8 +4461,8 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="GamesIcon" translatesAutoresizingMaskIntoConstraints="NO" id="iv1-4Z-eWm">
                                                         <rect key="frame" x="0.0" y="142.66666666666669" width="384" height="150"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="150" id="JLt-Of-9Fd"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="SDD-5c-Icg"/>
+                                                            <constraint firstAttribute="height" priority="750" constant="150" id="JLt-Of-9Fd"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="SDD-5c-Icg"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQX-54-rIn" userLabel="Spacer">
@@ -4770,7 +4753,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-Lx-At9" userLabel="Text">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rtg-Lx-At9" userLabel="Text">
                                                 <rect key="frame" x="15" y="0.0" width="384" height="368"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY4-Of-jn1" userLabel="Spacer">
@@ -4852,8 +4835,8 @@
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="TreatsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="lcc-bF-JYQ">
                                                         <rect key="frame" x="0.0" y="142.66666666666669" width="384" height="150"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Hf9-A0-nMq"/>
-                                                            <constraint firstAttribute="height" constant="150" id="Tmh-L2-U8c"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="Hf9-A0-nMq"/>
+                                                            <constraint firstAttribute="height" priority="750" constant="150" id="Tmh-L2-U8c"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DL-hE-Gt4" userLabel="Spacer">

@@ -31,6 +31,7 @@ func beginOpenedCounter(){
     counter.lessonDetailsTip = false
     counter.lessonListTip = false
     counter.developerTip = false
+    counter.rotationIndex = 0
     
     ad.saveContext()
     

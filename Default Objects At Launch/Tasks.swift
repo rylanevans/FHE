@@ -14,8 +14,6 @@ func generateTasks() {
     getMembersAttending()
     let taskOpenPrayer = Task(context: context)
     taskOpenPrayer.assigned = false
-    let assigneetaskOpenPrayer = membersAttendingArray[0]
-    taskOpenPrayer.assignment = assigneetaskOpenPrayer
     taskOpenPrayer.defaultNumber = 1
     taskOpenPrayer.enabled = true
     taskOpenPrayer.name = "Opening Prayer"
@@ -25,8 +23,6 @@ func generateTasks() {
     
     let taskSongs = Task(context: context)
     taskSongs.assigned = false
-    let assigneetaskSongs = membersAttendingArray[1]
-    taskSongs.assignment = assigneetaskSongs
     taskSongs.defaultNumber = 2
     taskSongs.enabled = true
     taskSongs.name = "Song"
@@ -36,8 +32,6 @@ func generateTasks() {
     
     let taskRule = Task(context: context)
     taskRule.assigned = false
-    let assigneetaskRule = membersAttendingArray[2]
-    taskRule.assignment = assigneetaskRule
     taskRule.defaultNumber = 3
     taskRule.enabled = true
     taskRule.name = "Rule"
@@ -47,8 +41,6 @@ func generateTasks() {
     
     let taskScripture = Task(context: context)
     taskScripture.assigned = false
-    let assigneetaskScripture = membersAttendingArray[3]
-    taskScripture.assignment = assigneetaskScripture
     taskScripture.defaultNumber = 4
     taskScripture.enabled = true
     taskScripture.name = "Scripture"
@@ -58,8 +50,6 @@ func generateTasks() {
     
     let taskCalendar = Task(context: context)
     taskCalendar.assigned = false
-    let assigneetaskCalendar = membersAttendingArray[0]
-    taskCalendar.assignment = assigneetaskCalendar
     taskCalendar.defaultNumber = 5
     taskCalendar.enabled = true
     taskCalendar.name = "Calendar"
@@ -69,8 +59,6 @@ func generateTasks() {
     
     let taskTestimony = Task(context: context)
     taskTestimony.assigned = false
-    let assigneetaskTestimony = membersAttendingArray[1]
-    taskTestimony.assignment = assigneetaskTestimony
     taskTestimony.defaultNumber = 6
     taskTestimony.enabled = true
     taskTestimony.name = "Testimony"
@@ -80,8 +68,6 @@ func generateTasks() {
     
     let taskSpotlight = Task(context: context)
     taskSpotlight.assigned = false
-    let assigneetaskSpotlight = membersAttendingArray[2]
-    taskSpotlight.assignment = assigneetaskSpotlight
     taskSpotlight.defaultNumber = 7
     taskSpotlight.enabled = true
     taskSpotlight.name = "Spotlight"
@@ -91,8 +77,6 @@ func generateTasks() {
     
     let taskThought = Task(context: context)
     taskThought.assigned = false
-    let assigneetaskThought = membersAttendingArray[0]
-    taskThought.assignment = assigneetaskThought
     taskThought.defaultNumber = 8
     taskThought.enabled = true
     taskThought.name = "Thought"
@@ -102,8 +86,6 @@ func generateTasks() {
     
     let taskQuote = Task(context: context)
     taskQuote.assigned = false
-    let assigneetaskQuote = membersAttendingArray[1]
-    taskQuote.assignment = assigneetaskQuote
     taskQuote.defaultNumber = 9
     taskQuote.enabled = true
     taskQuote.name = "Quote"
@@ -113,8 +95,6 @@ func generateTasks() {
     
     let taskLesson = Task(context: context)
     taskLesson.assigned = false
-    let assigneetaskLesson = membersAttendingArray[3]
-    taskLesson.assignment = assigneetaskLesson
     taskLesson.defaultNumber = 10
     taskLesson.enabled = true
     taskLesson.name = "Lesson"
@@ -124,8 +104,6 @@ func generateTasks() {
     
     let taskCouncil = Task(context: context)
     taskCouncil.assigned = false
-    let assigneetaskCouncil = membersAttendingArray[2]
-    taskCouncil.assignment = assigneetaskCouncil
     taskCouncil.defaultNumber = 11
     taskCouncil.enabled = true
     taskCouncil.name = "Council"
@@ -135,8 +113,6 @@ func generateTasks() {
     
     let taskGame = Task(context: context)
     taskGame.assigned = false
-    let assigneetaskGame = membersAttendingArray[0]
-    taskGame.assignment = assigneetaskGame
     taskGame.defaultNumber = 12
     taskGame.enabled = true
     taskGame.name = "Activity"
@@ -146,8 +122,6 @@ func generateTasks() {
     
     let taskClosePrayer = Task(context: context)
     taskClosePrayer.assigned = false
-    let assigneetaskClosePrayer = membersAttendingArray[1]
-    taskClosePrayer.assignment = assigneetaskClosePrayer
     taskClosePrayer.defaultNumber = 13
     taskClosePrayer.enabled = true
     taskClosePrayer.name = "Closing Prayer"
@@ -157,8 +131,6 @@ func generateTasks() {
     
     let taskTreat = Task(context: context)
     taskTreat.assigned = false
-    let assigneetaskTreat = membersAttendingArray[2]
-    taskTreat.assignment = assigneetaskTreat
     taskTreat.defaultNumber = 14
     taskTreat.enabled = true
     taskTreat.name = "Treat"

@@ -24,6 +24,9 @@ func checkIfLauncedBefore() {
         addToOpenedCounter()
         getMembersAttending()
         getMembersForPicker()
+        getArrayOfEnabledAndNotAssignedTasks()
+        getArrayOfAttendingMembersAutoAssignOrder()
+        runAssignments()
     } else {
         print("First launch, setting UserDefault.")
         beginOpenedCounter()
@@ -46,6 +49,9 @@ func checkIfLauncedBefore() {
         getEnabledTasks()
         getMembersAttending()
         getMembersForPicker()
+        getArrayOfEnabledAndNotAssignedTasks()
+        getArrayOfAttendingMembersAutoAssignOrder()
+        runAssignments()
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
 }

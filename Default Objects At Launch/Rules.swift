@@ -26,7 +26,7 @@ func generateRules() {
     
     let rule2 = Rule(context: context)
     rule2.title = "Respect Others"
-    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.”\n\n- Jesus Christ"
+    rule2.detail = "We believe in the golden rule.\n“Do unto others as you would have them do unto you.”\n\n- Everyone"
     rule2.url = "https://drive.google.com/open?id=1zuUzKcEdZS7ZjZh5mKhQWWFPPw77_AaV"
     rule2.order = 2
     rule2.random = Int64(arc4random_uniform(1000))

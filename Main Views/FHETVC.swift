@@ -79,13 +79,19 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func editButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "⚠️ INACTIVE BUTTON", message: "This button will auto-assign all family members to enabled tasks but I don't have it working yet.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "✅ AUTO-ASSIGNMENT", message: "Do you want to auto-assign all tasks (youngest to oldest)?", preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+        let rotateAction = UIAlertAction(title: "✓ Assign", style: .default, handler: {
+            alert -> Void in
+            autoAssignAllEnabledTasks()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
         })
         
-        alertController.addAction(okAction)
+        alertController.addAction(rotateAction)
+        alertController.addAction(cancelAction)
         alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
         
         self.present(alertController, animated: true, completion: nil)
@@ -94,13 +100,19 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "⚠️ INACTIVE BUTTON", message: "This button will rotate through any tasks set to auto-assignment but I don't have it working yet.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "♻️ ASSIGNMENT ROTATION", message: "Do you want to rotate assignments for all tasks that are set to auto-assigned?", preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+        let rotateAction = UIAlertAction(title: "✓ Rotate", style: .default, handler: {
+            alert -> Void in
+            rotateAllAutoAssignedTasks()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
         })
         
-        alertController.addAction(okAction)
+        alertController.addAction(rotateAction)
+        alertController.addAction(cancelAction)
         alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
         
         self.present(alertController, animated: true, completion: nil)

@@ -290,20 +290,22 @@
                                             </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="LCk-TJ-WY6"/>
+                                            <constraint firstAttribute="height" priority="750" constant="40" id="LCk-TJ-WY6"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="XiS-3y-Nao"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age is only used for sorting." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-5c-gHk">
-                                        <rect key="frame" x="22.5" y="104" width="211.5" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Age is only used for sorting." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-5c-gHk">
+                                        <rect key="frame" x="22.5" y="104" width="211.5" height="6.5"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="JvC-BH-WS2"/>
+                                            <constraint firstAttribute="height" priority="750" constant="30" id="JvC-BH-WS2"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="K9Y-MX-dt0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="16"/>
                                         <color key="textColor" name="Text"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-W7-Z0X">
-                                        <rect key="frame" x="37.5" y="146" width="181" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-W7-Z0X">
+                                        <rect key="frame" x="37.5" y="122.5" width="181" height="40"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attending?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="73O-fz-oER">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="40"/>
@@ -346,7 +348,8 @@
                                             <constraint firstItem="73O-fz-oER" firstAttribute="leading" secondItem="bC3-W7-Z0X" secondAttribute="leadingMargin" id="f1d-4g-pJ7"/>
                                             <constraint firstItem="73O-fz-oER" firstAttribute="leading" secondItem="bC3-W7-Z0X" secondAttribute="leading" id="hOF-Ke-SbI"/>
                                             <constraint firstItem="73O-fz-oER" firstAttribute="top" secondItem="bC3-W7-Z0X" secondAttribute="topMargin" id="jkV-Iu-cJI"/>
-                                            <constraint firstAttribute="height" constant="40" id="o05-Es-x7x"/>
+                                            <constraint firstAttribute="height" priority="250" constant="40" id="o05-Es-x7x"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="rCm-8F-AIz"/>
                                             <constraint firstItem="73O-fz-oER" firstAttribute="top" secondItem="bC3-W7-Z0X" secondAttribute="top" id="sm8-tx-yPp"/>
                                             <constraint firstItem="NxU-sK-lkQ" firstAttribute="leading" secondItem="73O-fz-oER" secondAttribute="trailing" constant="25" id="ttK-f4-Aux"/>
                                             <constraint firstItem="73O-fz-oER" firstAttribute="leading" secondItem="bC3-W7-Z0X" secondAttribute="leading" id="uk1-BU-vb1"/>
@@ -357,23 +360,22 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysg-Xj-Bz5">
-                                        <rect key="frame" x="126" y="198" width="4.5" height="7.5"/>
+                                        <rect key="frame" x="126" y="174.5" width="4.5" height="7.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-rI-Q9I">
-                                        <rect key="frame" x="53" y="217.5" width="150" height="95.5"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="uAg-rI-Q9I">
+                                        <rect key="frame" x="78" y="194" width="100" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="1jO-aw-2pE"/>
-                                            <constraint firstAttribute="height" constant="150" id="A2U-FS-jhi"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="rR7-re-sJV"/>
+                                            <constraint firstAttribute="height" constant="100" id="HGn-ZY-DIk"/>
+                                            <constraint firstAttribute="width" constant="100" id="L9S-hN-hfF"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="75"/>
+                                                <real key="value" value="50"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="5"/>
@@ -383,22 +385,22 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="heightClass=compact-widthClass=compact" hidden="YES"/>
-                                        <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="tyX-El-c56" appends="YES" id="05P-9L-5FD"/>
                                         </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUz-i2-AUv">
-                                        <rect key="frame" x="126" y="325" width="4.5" height="0.0"/>
+                                        <rect key="frame" x="126" y="306" width="4.5" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-dY-zeM" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acs-dY-zeM" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="337" width="256" height="50"/>
                                         <color key="backgroundColor" name="Tint"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="DlD-b4-4JG"/>
+                                            <constraint firstAttribute="height" priority="750" constant="50" id="DlD-b4-4JG"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="m6A-Nz-Qz3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <state key="normal" title="SAVE">
@@ -713,7 +715,7 @@
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-dc-3qQ">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-dc-3qQ">
                                                                     <rect key="frame" x="16" y="0.0" width="288" height="61"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-b0-MfQ">
@@ -727,7 +729,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS1-7s-hkh">
                                                                             <rect key="frame" x="30" y="20.5" width="15" height="20.5"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="15" id="nhC-AQ-gAm"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="nhC-AQ-gAm"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -784,8 +786,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-KC-AHY" userLabel="Spacer">
                                                                             <rect key="frame" x="230" y="20.5" width="8" height="20.5"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="8" id="4Vl-FU-dfJ"/>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="QDa-d4-1z0"/>
+                                                                                <constraint firstAttribute="width" constant="8" id="4Vl-FU-dfJ"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
@@ -906,8 +907,9 @@
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opk-ej-Y5A" userLabel="Edit" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                 <rect key="frame" x="20" y="234.5" width="22" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="22" id="JZO-nq-sIa"/>
                                     <constraint firstAttribute="height" constant="30" id="NTq-7Q-Ulr"/>
-                                    <constraint firstAttribute="width" constant="22" id="feW-ZG-eLH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="22" id="cUx-Jh-plD"/>
                                 </constraints>
                                 <color key="tintColor" red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="Edit"/>
@@ -933,9 +935,9 @@
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="height" secondItem="Mhv-QS-hml" secondAttribute="height" multiplier="0.8" id="1GO-6G-EHS"/>
                             <constraint firstAttribute="trailing" secondItem="Mhv-QS-hml" secondAttribute="trailing" id="73C-bW-t3a"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerX" secondItem="Mhv-QS-hml" secondAttribute="centerX" id="88N-GQ-KUi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="opk-ej-Y5A" secondAttribute="trailing" constant="20" symbolic="YES" id="90A-ds-0r2"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerY" secondItem="Mhv-QS-hml" secondAttribute="centerY" id="C22-aD-mCq"/>
                             <constraint firstItem="Aim-AV-1uI" firstAttribute="top" secondItem="oX6-RR-eA2" secondAttribute="top" id="EEI-yf-uz5"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="opk-ej-Y5A" secondAttribute="trailing" constant="20" symbolic="YES" id="LL0-xY-RC8"/>
                             <constraint firstItem="tLa-h8-geB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JmO-vl-PYE" secondAttribute="leading" constant="20" symbolic="YES" id="Pcq-Qa-tdk"/>
                             <constraint firstItem="Aim-AV-1uI" firstAttribute="leading" secondItem="oX6-RR-eA2" secondAttribute="leading" id="WPn-Wr-LAw"/>
                             <constraint firstItem="c80-MV-Pho" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="Z2E-Vx-cBL"/>
@@ -1442,7 +1444,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t9n-J4-GcU">
-                                                    <rect key="frame" x="16" y="7" width="263" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="622" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Help" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-dA-aKj">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1453,7 +1455,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tutorial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-t2-uOh">
-                                                            <rect key="frame" x="38" y="0.0" width="212.5" height="30"/>
+                                                            <rect key="frame" x="38" y="0.0" width="571.5" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Yoh-7F-aPE"/>
                                                             </constraints>
@@ -1462,7 +1464,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdz-Sh-jIW">
-                                                            <rect key="frame" x="258.5" y="0.0" width="4.5" height="30"/>
+                                                            <rect key="frame" x="617.5" y="0.0" width="4.5" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -2017,7 +2019,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="9tb-ff-jdK"/>
-                                                                <constraint firstAttribute="width" constant="110" id="Dwi-ts-rGs"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="Dwi-ts-rGs"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="ABOUT ME">
@@ -2044,6 +2046,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="nXS-YD-lAG" firstAttribute="trailing" secondItem="Sy8-Al-h86" secondAttribute="trailing" id="9d4-4e-ibv"/>
                                                         <constraint firstAttribute="trailing" secondItem="Sy8-Al-h86" secondAttribute="trailing" id="Axc-ZG-hfV"/>
                                                         <constraint firstItem="cau-Wy-ZGG" firstAttribute="bottom" secondItem="Sy8-Al-h86" secondAttribute="bottom" constant="-10" id="FaZ-p5-gwy"/>
+                                                        <constraint firstItem="cau-Wy-ZGG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8qv-VB-Qup" secondAttribute="leading" constant="20" symbolic="YES" id="LPy-xQ-7oP"/>
                                                         <constraint firstItem="cau-Wy-ZGG" firstAttribute="trailing" secondItem="Sy8-Al-h86" secondAttribute="trailing" constant="-10" id="PNJ-Ei-15n"/>
                                                         <constraint firstItem="nXS-YD-lAG" firstAttribute="bottom" secondItem="Sy8-Al-h86" secondAttribute="bottom" id="akr-jv-86R"/>
                                                         <constraint firstItem="Sy8-Al-h86" firstAttribute="leading" secondItem="8qv-VB-Qup" secondAttribute="leading" id="wK4-7c-scM"/>
@@ -2119,7 +2122,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <rect key="frame" x="390" y="494" width="110" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="110" id="MxG-3Z-uxR"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="MxG-3Z-uxR"/>
                                                                 <constraint firstAttribute="height" constant="30" id="pa7-pi-Vkm"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
@@ -2142,6 +2145,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="DAR-00-VEE" secondAttribute="bottom" id="BwF-d9-4ar"/>
+                                                        <constraint firstItem="V6Q-0s-Gz3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tf2-Ul-FS0" secondAttribute="leading" constant="20" symbolic="YES" id="CId-Dm-8RC"/>
                                                         <constraint firstItem="V6Q-0s-Gz3" firstAttribute="trailing" secondItem="DAR-00-VEE" secondAttribute="trailing" constant="-10" id="MOP-t3-z6P"/>
                                                         <constraint firstItem="x1t-TC-kRt" firstAttribute="top" secondItem="DAR-00-VEE" secondAttribute="top" id="MZk-cb-naS"/>
                                                         <constraint firstItem="x1t-TC-kRt" firstAttribute="bottom" secondItem="DAR-00-VEE" secondAttribute="bottom" id="QC9-4i-hoo"/>
@@ -2211,7 +2215,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="1aL-1j-6l5"/>
-                                                                <constraint firstAttribute="width" constant="110" id="VxR-g8-tdv"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="VxR-g8-tdv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="INSTALL">
@@ -2237,6 +2241,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="uqh-y8-pHW" firstAttribute="leading" secondItem="RfP-8s-CTH" secondAttribute="leading" id="IDa-k2-ghh"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="leading" secondItem="uqh-y8-pHW" secondAttribute="leading" id="WzK-4x-7eJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="uqh-y8-pHW" secondAttribute="trailing" id="bgh-zY-2ls"/>
+                                                        <constraint firstItem="WTO-N1-Bq8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RfP-8s-CTH" secondAttribute="leading" constant="20" symbolic="YES" id="k46-Mp-L11"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="bottom" secondItem="uqh-y8-pHW" secondAttribute="bottom" id="p6j-4i-Ope"/>
                                                         <constraint firstItem="F8X-az-dGe" firstAttribute="trailing" secondItem="uqh-y8-pHW" secondAttribute="trailing" id="rdr-1R-2Ox"/>
                                                         <constraint firstItem="WTO-N1-Bq8" firstAttribute="bottom" secondItem="uqh-y8-pHW" secondAttribute="bottom" constant="-10" id="roQ-FN-RNi"/>
@@ -2302,7 +2307,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="4mT-KJ-goN"/>
-                                                                <constraint firstAttribute="width" constant="125" id="LS1-Qu-Fpt"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="LS1-Qu-Fpt"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="SHARE">
@@ -2339,6 +2344,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="3vm-0h-JiV" firstAttribute="top" secondItem="5Ii-fZ-IVe" secondAttribute="top" id="Z5o-2n-G91"/>
                                                         <constraint firstItem="3vm-0h-JiV" firstAttribute="leading" secondItem="5Ii-fZ-IVe" secondAttribute="leading" id="Z9D-mC-IfG"/>
                                                         <constraint firstItem="6Xs-r5-T9r" firstAttribute="top" secondItem="5Ii-fZ-IVe" secondAttribute="top" constant="8" id="bSq-Zt-aAE"/>
+                                                        <constraint firstItem="FQ1-Vq-XoY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Ii-fZ-IVe" secondAttribute="leading" constant="20" symbolic="YES" id="eEg-iW-6Ro"/>
                                                         <constraint firstAttribute="trailing" secondItem="3vm-0h-JiV" secondAttribute="trailing" id="mUQ-O0-RdW"/>
                                                         <constraint firstAttribute="bottom" secondItem="3vm-0h-JiV" secondAttribute="bottom" id="qyS-gC-g6r"/>
                                                         <constraint firstItem="FQ1-Vq-XoY" firstAttribute="bottom" secondItem="ulJ-2x-CkM" secondAttribute="bottom" constant="-10" id="sYh-zG-f8s"/>
@@ -2401,7 +2407,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <rect key="frame" x="452" y="574" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="125" id="5NG-it-IYK"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="5NG-it-IYK"/>
                                                                 <constraint firstAttribute="height" constant="30" id="Myf-3k-hAv"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
@@ -2432,6 +2438,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="4zc-Nk-s5T" firstAttribute="trailing" secondItem="0gA-r3-24i" secondAttribute="trailing" constant="-10" id="L6M-7m-ggJ"/>
                                                         <constraint firstItem="bSq-Iv-HLe" firstAttribute="top" secondItem="0gA-r3-24i" secondAttribute="top" id="Q9F-pH-pW1"/>
                                                         <constraint firstAttribute="bottom" secondItem="0gA-r3-24i" secondAttribute="bottom" id="UXP-8v-Fdi"/>
+                                                        <constraint firstItem="4zc-Nk-s5T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3L5-ny-cRT" secondAttribute="leading" constant="20" symbolic="YES" id="duK-0C-WpQ"/>
                                                         <constraint firstItem="bSq-Iv-HLe" firstAttribute="bottom" secondItem="0gA-r3-24i" secondAttribute="bottom" id="nvz-XE-C2Q"/>
                                                     </constraints>
                                                 </view>
@@ -2503,7 +2510,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="CqN-MP-hJY"/>
-                                                                <constraint firstAttribute="width" constant="125" id="KCv-fT-PA6"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="KCv-fT-PA6"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="WEBSITE">
@@ -2528,6 +2535,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="bottom" secondItem="axk-2H-13r" secondAttribute="bottom" id="EZz-Qs-fGM"/>
                                                         <constraint firstItem="sOQ-09-gQn" firstAttribute="trailing" secondItem="TS5-Vm-x69" secondAttribute="trailing" constant="-10" id="Gkt-4N-Ut6"/>
                                                         <constraint firstItem="axk-2H-13r" firstAttribute="leading" secondItem="yis-LW-9iE" secondAttribute="leading" id="NBs-Gf-ABo"/>
+                                                        <constraint firstItem="sOQ-09-gQn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="yis-LW-9iE" secondAttribute="leading" constant="20" symbolic="YES" id="Se4-jP-PTn"/>
                                                         <constraint firstItem="axk-2H-13r" firstAttribute="centerX" secondItem="yis-LW-9iE" secondAttribute="centerX" id="Tkq-Uy-kwF"/>
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="trailing" secondItem="axk-2H-13r" secondAttribute="trailing" id="ajw-vq-40U"/>
                                                         <constraint firstItem="TS5-Vm-x69" firstAttribute="leading" secondItem="axk-2H-13r" secondAttribute="leading" id="bD6-oJ-Gcq"/>
@@ -2596,7 +2604,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="FsN-vp-7pe"/>
-                                                                <constraint firstAttribute="width" constant="125" id="Kva-Ea-lv5"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="Kva-Ea-lv5"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="LIKE">
@@ -2626,6 +2634,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="PiM-pc-ojP" firstAttribute="leading" secondItem="HV2-AM-tmI" secondAttribute="leading" id="aiE-Fh-jCf"/>
                                                         <constraint firstAttribute="bottom" secondItem="PiM-pc-ojP" secondAttribute="bottom" id="gh5-7B-Bnc"/>
                                                         <constraint firstItem="KHI-tg-CnG" firstAttribute="trailing" secondItem="PiM-pc-ojP" secondAttribute="trailing" id="iZ8-Uy-7Zh"/>
+                                                        <constraint firstItem="sNb-bE-Dto" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HV2-AM-tmI" secondAttribute="leading" constant="20" symbolic="YES" id="mDU-pP-iQP"/>
                                                         <constraint firstItem="PiM-pc-ojP" firstAttribute="top" secondItem="HV2-AM-tmI" secondAttribute="top" id="svK-mI-gYb"/>
                                                     </constraints>
                                                 </view>
@@ -2687,7 +2696,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Fg6-2R-74K"/>
-                                                                <constraint firstAttribute="width" constant="125" id="v7y-uW-TEp"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="v7y-uW-TEp"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="FOLLOW">
@@ -2713,6 +2722,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <constraint firstItem="mGs-wH-eI8" firstAttribute="leading" secondItem="Kya-HV-bLB" secondAttribute="leading" id="78m-IV-Z7I"/>
                                                         <constraint firstItem="pJR-kf-zbK" firstAttribute="bottom" secondItem="Kya-HV-bLB" secondAttribute="bottom" constant="-10" id="HwQ-zr-mcf"/>
                                                         <constraint firstItem="pJR-kf-zbK" firstAttribute="trailing" secondItem="Kya-HV-bLB" secondAttribute="trailing" constant="-10" id="Mhp-3R-oxf"/>
+                                                        <constraint firstItem="pJR-kf-zbK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RhU-Fw-TrQ" secondAttribute="leading" constant="20" symbolic="YES" id="Mi6-OD-rxm"/>
                                                         <constraint firstAttribute="bottom" secondItem="Kya-HV-bLB" secondAttribute="bottom" id="NVh-Rk-anb"/>
                                                         <constraint firstItem="Kya-HV-bLB" firstAttribute="top" secondItem="RhU-Fw-TrQ" secondAttribute="top" id="P2l-Vd-sBP"/>
                                                         <constraint firstItem="mGs-wH-eI8" firstAttribute="top" secondItem="Kya-HV-bLB" secondAttribute="top" id="WEo-Kx-F5n"/>
@@ -2777,7 +2787,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <rect key="frame" x="955" y="460" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="125" id="YI9-Rx-n3P"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="YI9-Rx-n3P"/>
                                                                 <constraint firstAttribute="height" constant="30" id="th0-N0-vSI"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
@@ -2799,6 +2809,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="Jz0-6O-OFH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Nqt-iR-BLh" secondAttribute="leading" constant="20" symbolic="YES" id="4Xv-wd-MbG"/>
                                                         <constraint firstItem="xJv-YI-bHS" firstAttribute="top" secondItem="YDW-tV-iac" secondAttribute="top" id="MQ4-Nd-rRk"/>
                                                         <constraint firstItem="xJv-YI-bHS" firstAttribute="bottom" secondItem="YDW-tV-iac" secondAttribute="bottom" id="S0g-3G-Q3I"/>
                                                         <constraint firstAttribute="trailing" secondItem="YDW-tV-iac" secondAttribute="trailing" id="UNb-Vc-c2Y"/>
@@ -2869,7 +2880,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Wam-61-wsL"/>
-                                                                <constraint firstAttribute="width" constant="125" id="zsG-iP-cSa"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="zsG-iP-cSa"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="REVIEW">
@@ -2890,6 +2901,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="Oqn-KA-WRh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fJI-Ke-WNz" secondAttribute="leading" constant="20" symbolic="YES" id="4zG-pN-FcW"/>
                                                         <constraint firstItem="JaW-0e-Qoe" firstAttribute="trailing" secondItem="Nye-qq-gbr" secondAttribute="trailing" id="I7s-M0-5oz"/>
                                                         <constraint firstItem="Oqn-KA-WRh" firstAttribute="bottom" secondItem="Nye-qq-gbr" secondAttribute="bottom" constant="-10" id="Ifu-rM-3gl"/>
                                                         <constraint firstItem="JaW-0e-Qoe" firstAttribute="top" secondItem="Nye-qq-gbr" secondAttribute="top" id="OUn-jQ-BrS"/>
@@ -2960,7 +2972,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="97n-Uj-tVW"/>
-                                                                <constraint firstAttribute="width" constant="125" id="iWS-P2-0bJ"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="iWS-P2-0bJ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                                             <state key="normal" title="SUPPORT">
@@ -2983,6 +2995,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <constraints>
                                                         <constraint firstItem="Tba-fL-eYq" firstAttribute="top" secondItem="Mj4-h6-BKu" secondAttribute="top" id="1G0-we-vc5"/>
                                                         <constraint firstItem="Mj4-h6-BKu" firstAttribute="top" secondItem="HX2-Af-TeO" secondAttribute="top" id="H34-aI-Bjx"/>
+                                                        <constraint firstItem="dcy-78-PlS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HX2-Af-TeO" secondAttribute="leading" constant="20" symbolic="YES" id="Tgq-No-Z5z"/>
                                                         <constraint firstItem="Mj4-h6-BKu" firstAttribute="leading" secondItem="HX2-Af-TeO" secondAttribute="leading" id="Yjc-uH-k9g"/>
                                                         <constraint firstItem="dcy-78-PlS" firstAttribute="trailing" secondItem="Mj4-h6-BKu" secondAttribute="trailing" constant="-10" id="c7b-YP-aNL"/>
                                                         <constraint firstItem="Tba-fL-eYq" firstAttribute="leading" secondItem="Mj4-h6-BKu" secondAttribute="leading" id="hOU-PH-ObP"/>
@@ -3067,7 +3080,6 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                 <constraint firstItem="JbW-hn-eGM" firstAttribute="centerX" secondItem="PnC-kS-F6c" secondAttribute="centerX" id="9Up-2D-wwm"/>
                                 <constraint firstItem="tNB-px-Y3f" firstAttribute="leading" secondItem="PnC-kS-F6c" secondAttribute="leading" constant="10" id="CHv-PI-6LL"/>
                                 <constraint firstItem="JbW-hn-eGM" firstAttribute="top" secondItem="PnC-kS-F6c" secondAttribute="top" id="O5J-QO-42g"/>
-                                <constraint firstItem="PnK-z0-dAD" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="Okr-Dx-bB8"/>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="centerY" secondItem="PnC-kS-F6c" secondAttribute="centerY" id="S9o-Um-U3U"/>
                                 <constraint firstAttribute="height" secondItem="PnK-z0-dAD" secondAttribute="height" id="Tsf-Lx-3SZ"/>
                                 <constraint firstItem="JbW-hn-eGM" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="nTN-0e-03X"/>
