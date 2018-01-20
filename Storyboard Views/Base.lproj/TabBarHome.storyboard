@@ -294,7 +294,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="XiS-3y-Nao"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="Age is only used for sorting." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-5c-gHk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Age is only used for sorting." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEM-5c-gHk">
                                         <rect key="frame" x="22.5" y="104" width="211.5" height="6.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="30" id="JvC-BH-WS2"/>
@@ -535,10 +535,9 @@
                         <color key="tintColor" name="Accent"/>
                     </tabBar>
                     <connections>
+                        <segue destination="LBe-KQ-wgR" kind="relationship" relationship="viewControllers" id="Lkc-Qe-eTQ"/>
                         <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="hjv-Up-wWY"/>
                         <segue destination="O6E-UL-t1p" kind="relationship" relationship="viewControllers" id="C5L-Jy-SSh"/>
-                        <segue destination="LBe-KQ-wgR" kind="relationship" relationship="viewControllers" id="Lkc-Qe-eTQ"/>
-                        <segue destination="yd2-88-qUk" kind="relationship" relationship="viewControllers" id="R8m-Wa-JUH"/>
                         <segue destination="KbM-YR-tSG" kind="relationship" relationship="viewControllers" id="XIj-uw-p08"/>
                     </connections>
                 </tabBarController>
@@ -899,7 +898,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Serve" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-AV-1uI" userLabel="Serve Text">
-                                <rect key="frame" x="0.0" y="125" width="192" height="79.5"/>
+                                <rect key="frame" x="0.0" y="113" width="192" height="79.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Aim-AV-1uI" secondAttribute="height" multiplier="94:39" id="0hA-iO-hBA"/>
                                 </constraints>
@@ -1436,8 +1435,54 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="INFO:" id="omr-hH-vEo">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="rTd-gR-LJt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="ciU-6o-R9T">
                                         <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciU-6o-R9T" id="70q-Ao-gF3">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="apw-D2-85Y">
+                                                    <rect key="frame" x="16" y="7" width="263" height="30"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="fCX-fd-a8d">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="fCX-fd-a8d" secondAttribute="height" multiplier="1:1" id="EBp-xw-b2g"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="HaQ-Lz-xcV"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JM0-Os-7ZV">
+                                                            <rect key="frame" x="38" y="0.0" width="212.5" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="cGO-zT-lEh"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vk-jY-Yzf">
+                                                            <rect key="frame" x="258.5" y="0.0" width="4.5" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="apw-D2-85Y" secondAttribute="trailing" id="Xgf-Pc-56K"/>
+                                                <constraint firstItem="apw-D2-85Y" firstAttribute="centerY" secondItem="70q-Ao-gF3" secondAttribute="centerY" id="kvm-SS-eR3"/>
+                                                <constraint firstItem="apw-D2-85Y" firstAttribute="leading" secondItem="70q-Ao-gF3" secondAttribute="leadingMargin" constant="8" id="xe4-bW-HBd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zHT-LK-G62" kind="show" id="PEJ-tr-Xb3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="rTd-gR-LJt">
+                                        <rect key="frame" x="0.0" y="548" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rTd-gR-LJt" id="yLX-lH-pxK">
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
@@ -1483,7 +1528,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="hbd-OL-Eqw">
-                                        <rect key="frame" x="0.0" y="548" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="592" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hbd-OL-Eqw" id="iZN-MB-voy">
                                             <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
@@ -1542,7 +1587,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qtu-4V-tG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6775.1999999999998" y="1135.6821589205399"/>
+            <point key="canvasLocation" x="4318" y="1117"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="HHW-2o-wCf">
@@ -1550,7 +1595,7 @@
                 <viewControllerPlaceholder storyboardName="More" referencedIdentifier="Tutorial" id="Ej9-wx-lWD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sse-8r-Ubg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7484" y="1276.4617691154424"/>
+            <point key="canvasLocation" x="5026" y="1257"/>
         </scene>
         <!--About me-->
         <scene sceneID="2oL-a5-wba">
@@ -1558,7 +1603,7 @@
                 <viewControllerPlaceholder storyboardName="More" referencedIdentifier="About me" id="l98-P3-lzI" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyX-Jm-xGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5211.1999999999998" y="1134.3328335832084"/>
+            <point key="canvasLocation" x="4965" y="1853"/>
         </scene>
         <!--Disclaimer-->
         <scene sceneID="mM2-jD-0da">
@@ -1566,34 +1611,7 @@
                 <viewControllerPlaceholder storyboardName="More" referencedIdentifier="Disclaimer" id="L3Q-ss-ODH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63h-g1-aKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7496" y="1347.5262368815593"/>
-        </scene>
-        <!--Developer-->
-        <scene sceneID="hvV-g8-06a">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yd2-88-qUk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Developer" image="Profile25" selectedImage="ProfileFilled25" id="Esy-Re-CHC">
-                        <color key="badgeColor" name="Accent"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XqK-WD-NvT">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="Tint"/>
-                        <color key="barTintColor" name="Background"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                            <color key="textColor" name="Accent"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zHT-LK-G62" kind="relationship" relationship="rootViewController" id="tT6-g8-ljZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wTS-eg-lRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3820" y="1135.6821589205399"/>
+            <point key="canvasLocation" x="5038" y="1328"/>
         </scene>
         <!--Family-->
         <scene sceneID="cuO-uk-6EL">
@@ -1647,7 +1665,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMH-Co-wKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6010.3999999999996" y="1135.6821589205399"/>
+            <point key="canvasLocation" x="3553" y="1117"/>
         </scene>
         <!--About me-->
         <scene sceneID="HJM-lD-MkX">
@@ -3025,14 +3043,16 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                             <outlet property="delegate" destination="zHT-LK-G62" id="cxT-b8-Hhf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Developer Details" id="7eX-Hz-ion"/>
+                    <navigationItem key="navigationItem" title="Developer Details" id="7eX-Hz-ion">
+                        <barButtonItem key="backBarButtonItem" title=" " id="tlI-nb-Av1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableCell" destination="yis-LW-9iE" id="vmQ-vG-6om"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThV-jG-Vhv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4564" y="1135.6821589205399"/>
+            <point key="canvasLocation" x="4318" y="1855"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="EDR-vA-Bi6">
@@ -3587,7 +3607,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6b6-Wk-pd2">
-                        <rect key="frame" x="0.0" y="20" width="320" height="105"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Tint"/>
                         <color key="barTintColor" name="Background"/>
@@ -3723,15 +3743,14 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Patreon" width="341" height="166"/>
         <image name="PositiveFeedback" width="45" height="43"/>
         <image name="Prayer" width="48" height="80"/>
-        <image name="Profile25" width="26" height="26"/>
-        <image name="ProfileFilled25" width="25" height="25"/>
+        <image name="Profile" width="314" height="314"/>
         <image name="Recycle" width="74" height="75"/>
         <image name="ReportBug" width="84" height="76"/>
         <image name="Rylan" width="1508" height="1113"/>
         <image name="Serve" width="333" height="199"/>
         <image name="Share" width="144" height="171"/>
         <image name="Signature" width="98" height="31"/>
-        <image name="Subscribe" width="76" height="72"/>
+        <image name="Subscribe" width="310" height="310"/>
         <image name="Suggestions" width="84" height="85"/>
         <image name="Tasks" width="74" height="72"/>
         <image name="Tasks25" width="25" height="25"/>
@@ -3743,8 +3762,14 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <namedColor name="Accent">
+            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="Background">
             <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3754,19 +3779,19 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jBQ-Ru-iYP"/>
-        <segue reference="6zL-t5-3Ct"/>
-        <segue reference="V5q-lq-RWj"/>
-        <segue reference="ZyK-vh-hyO"/>
-        <segue reference="CPb-Ys-WWB"/>
-        <segue reference="5Sp-jg-2M1"/>
-        <segue reference="AqR-Cm-zRA"/>
-        <segue reference="geT-Vr-Cb1"/>
-        <segue reference="HRK-vV-oOE"/>
-        <segue reference="B76-IG-1fl"/>
-        <segue reference="fA6-h3-h7G"/>
-        <segue reference="CY9-aF-U2H"/>
-        <segue reference="8JJ-8f-PXH"/>
+        <segue reference="zo5-HV-Ykr"/>
+        <segue reference="Hu8-j0-LrC"/>
+        <segue reference="62d-fj-n5k"/>
+        <segue reference="1Ip-Qm-3IC"/>
+        <segue reference="ktT-fE-CXW"/>
+        <segue reference="OLX-No-sfi"/>
+        <segue reference="64D-36-E2v"/>
+        <segue reference="9P0-m0-b2K"/>
+        <segue reference="4yL-57-dYB"/>
+        <segue reference="lqx-jC-3VV"/>
+        <segue reference="EbF-I8-KYK"/>
+        <segue reference="fVt-7Q-RzX"/>
+        <segue reference="9jh-Si-QQ7"/>
         <segue reference="h4y-nB-v6D"/>
     </inferredMetricsTieBreakers>
 </document>

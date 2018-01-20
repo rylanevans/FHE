@@ -23,11 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if launchedBefore == true {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
-                tabBar.selectedIndex = 2
+                tabBar.selectedIndex = 0
             }
         } else {
             if let tabBar = self.window?.rootViewController as? UITabBarController {
-                tabBar.selectedIndex = 0
+                tabBar.selectedIndex = 1
             }
         }
         
