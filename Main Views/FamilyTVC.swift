@@ -31,6 +31,13 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         super.viewWillAppear(true)
         
         tableView.reloadData()
+        
+        if counter.launched > 5 && counter.launched % 5 != 0 && counter.seeApps == false && counter.hideSeeApps == false {
+            counter.hideSeeApps = true
+            ad.saveContext()
+            
+            checkIfUSerWantsToSeeMyOtherApps()
+        }
     }
     
     // MARK: - Text Field Options
@@ -58,6 +65,37 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
+    func checkIfUSerWantsToSeeMyOtherApps() {
+        let alertController = UIAlertController(title: "📲 OTHER APPS?", message: "Are you intrested in seeing my other apps?", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Yes, I'll take a look.", style: .default, handler: {
+            alert -> Void in
+            self.allApps()
+        })
+        
+        let dislikeAction = UIAlertAction(title: "✗ No, thank you.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            counter.seeApps = true
+            ad.saveContext()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel, maybe another time.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(likeAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func allApps() {
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: ["":""], completionHandler: nil)
+        counter.seeApps = true
+        ad.saveContext()
+    }
     
     // MARK: - Table view data source
     

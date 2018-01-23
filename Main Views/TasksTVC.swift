@@ -83,9 +83,9 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             (action : UIAlertAction!) -> Void in
         })
         
-        alertController.addAction(cancelAction)
-        alertController.addAction(dislikeAction)
         alertController.addAction(likeAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(cancelAction)
         alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
         
         self.present(alertController, animated: true, completion: nil)

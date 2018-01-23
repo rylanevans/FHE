@@ -59,7 +59,7 @@ class ArtistTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func facebook() {
-        let id = 1500675806896806
+        let id = 24424629347498
         let url = NSURL(string: "fb://profile/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
             UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)

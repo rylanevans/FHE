@@ -16,6 +16,7 @@ func beginOpenedCounter(){
     counter.hideAboutMe = false
     counter.hideSharedRequest = false
     counter.hideFeedbackRequest = false
+    counter.hideSeeApps = false
     counter.feedbackGiven = false
     counter.shared = false
     counter.tipGiven = false
@@ -31,6 +32,7 @@ func beginOpenedCounter(){
     counter.lessonDetailsTip = false
     counter.lessonListTip = false
     counter.developerTip = false
+    counter.seeApps = false
     counter.rotationIndex = 0
     
     ad.saveContext()

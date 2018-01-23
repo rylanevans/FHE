@@ -164,8 +164,11 @@
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Best used when paired with your Apple TV or HDMI Cable to be displayed on your family room television." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-Ed-qKe">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-Ed-qKe">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <string key="text">Best used when paired with your Apple TV or HDMI Cable to be displayed on your family room television.
+
+Also note, that if your phone is in "Zoomed" mode where you icons and text are bigger than some text and images are squished on smaller devices to fit. It may not look as clean as "Standard" mode. To change, go to Display &amp; Brightness in your phone Settings. </string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>

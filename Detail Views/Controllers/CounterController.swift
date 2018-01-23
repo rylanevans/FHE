@@ -71,20 +71,20 @@ func addToOpenedCounter() {
         
         if counter.launched % 52 == 0 {
             counter.tipGiven = false
+            counter.feedbackGiven = false
             ad.saveContext()
         }
+        
         if counter.launched % 25 == 0 {
             counter.shared = false
-            ad.saveContext()
-        }
-        if counter.launched % 52 == 0 {
-            counter.feedbackGiven = false
+            counter.seeApps = false
             ad.saveContext()
         }
         
         counter.hideFeedbackRequest = false
         counter.hideSharedRequest = false
         counter.hideAboutMe = false
+        counter.hideSeeApps = false
         ad.saveContext()
         print("\(counter.launched)")
     }
