@@ -593,6 +593,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Song" id="faX-ua-dqA">
+                        <barButtonItem key="backBarButtonItem" title=" " id="HrL-rI-gXc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qk9-Ba-xP4">
                             <connections>
                                 <segue destination="6h5-I3-Zmd" kind="show" identifier="SongDetailsVCNew" id="ihB-K5-KCE"/>
@@ -2424,6 +2425,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Rule" id="llP-Sg-WZy">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FQ8-Tj-0ux"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zMK-XF-WPL">
                             <connections>
                                 <segue destination="ebl-Md-fK1" kind="show" identifier="RuleDetailsVCNew" id="2hD-bb-1eK">
@@ -3301,6 +3303,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Scripture" id="jme-EJ-Exm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="E48-Ve-aMT"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="OhH-dA-xSa">
                             <connections>
                                 <segue destination="37l-gK-2tp" kind="show" identifier="ScriptureDetailsVCNew" id="c7O-gn-fvR">
@@ -4204,6 +4207,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Quote" id="h9v-h8-LX6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="4XL-du-Z9R"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ccA-En-aPq">
                             <connections>
                                 <segue destination="m0Q-wy-DRm" kind="show" identifier="ScriptureDetailsVCNew" id="I00-lo-NSb"/>
@@ -4796,6 +4800,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Lesson" id="RQT-1z-e0d">
+                        <barButtonItem key="backBarButtonItem" title=" " id="DPM-wn-T5Q"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="apE-z6-PIl">
                             <connections>
                                 <segue destination="dKF-lO-TJs" kind="show" identifier="LessonDetailsVCNew" id="59X-nj-9V4">
@@ -4905,7 +4910,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick Topic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Io-vk-o3j">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Io-vk-o3j">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
@@ -4925,7 +4930,7 @@
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.youtube.com/watch?v=ABCDEFGHIJK" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-Q0-aJT">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="https://www.youtube.com/watch?v=ABCDEFGHIJK" textAlignment="natural" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="vgt-Q0-aJT">
                                                         <rect key="frame" x="92" y="0.0" width="212" height="35"/>
                                                         <color key="textColor" name="Text"/>
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter-Condensed" family="American Typewriter" pointSize="14"/>
@@ -5719,6 +5724,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select An Activity" id="asz-Ut-Byb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ZoX-L1-osa"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Exk-AO-1iu">
                             <connections>
                                 <segue destination="Wb7-YV-pbm" kind="show" identifier="GameDetailsVCNew" id="ijP-Wx-7k3">
@@ -8107,6 +8113,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select A Treat" id="JYg-Nv-kvf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="DLp-cd-bgF"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Z87-ka-fXw">
                             <connections>
                                 <segue destination="xkD-eN-zad" kind="show" identifier="TreatDetailsVCNew" id="VVw-Xy-PGr">
@@ -8433,10 +8440,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuO-Yg-R9S">
-                                <rect key="frame" x="19" y="56.5" width="337.5" height="656"/>
+                                <rect key="frame" x="19" y="56.5" width="337.5" height="655"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h3Q-XF-ybB">
-                                        <rect key="frame" x="17" y="33" width="304" height="590.5"/>
+                                        <rect key="frame" x="17" y="32.5" width="304" height="590.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t6a-Pn-2Ca">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="35"/>
@@ -8599,7 +8606,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="so4-fO-g4b" userLabel="Change Selected">
-                                        <rect key="frame" x="17" y="481" width="40" height="40"/>
+                                        <rect key="frame" x="17" y="480.5" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -8609,7 +8616,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-pp-RvG">
-                                        <rect key="frame" x="17.5" y="433" width="40" height="40"/>
+                                        <rect key="frame" x="17.5" y="432.5" width="40" height="40"/>
                                         <color key="tintColor" name="Tint"/>
                                         <state key="normal">
                                             <color key="titleColor" name="Accent"/>
@@ -8619,7 +8626,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgQ-Xm-jE2">
-                                        <rect key="frame" x="17" y="545" width="304" height="50"/>
+                                        <rect key="frame" x="17" y="544.5" width="304" height="50"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.84999999999999998" colorSpace="calibratedWhite"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -8628,14 +8635,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0as-CA-K5T">
-                                        <rect key="frame" x="17" y="119" width="304" height="250"/>
+                                        <rect key="frame" x="17" y="118.5" width="304" height="250"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="Text"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="yes"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29j-hX-hqs">
-                                        <rect key="frame" x="256" y="33" width="55" height="35"/>
+                                        <rect key="frame" x="256" y="32.5" width="55" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="Zqa-mO-a8f"/>
                                         </constraints>

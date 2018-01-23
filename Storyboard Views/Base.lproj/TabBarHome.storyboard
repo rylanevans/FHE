@@ -711,7 +711,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-dc-3qQ">
-                                                                    <rect key="frame" x="16" y="0.0" width="288" height="61"/>
+                                                                    <rect key="frame" x="16" y="0.0" width="343" height="61"/>
                                                                     <subviews>
                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-b0-MfQ">
                                                                             <rect key="frame" x="0.0" y="15.666666666666664" width="30" height="30"/>
@@ -731,19 +731,19 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gho-GZ-9LU">
-                                                                            <rect key="frame" x="45" y="4.3333333333333321" width="185" height="52.333333333333343"/>
+                                                                            <rect key="frame" x="45" y="4.3333333333333321" width="240" height="52.333333333333343"/>
                                                                             <subviews>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="32"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task to be assigned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="32"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="164.33333333333334" height="32"/>
                                                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                                                             <color key="textColor" name="Text"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assignee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
-                                                                                            <rect key="frame" x="126.66666666666664" y="0.0" width="58.333333333333329" height="32"/>
+                                                                                            <rect key="frame" x="164.33333333333334" y="0.0" width="75.666666666666657" height="32"/>
                                                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                                                             <color key="textColor" name="Text"/>
                                                                                             <nil key="highlightedColor"/>
@@ -751,7 +751,7 @@
                                                                                     </subviews>
                                                                                 </stackView>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-gk-Zgi">
-                                                                                    <rect key="frame" x="0.0" y="32" width="185" height="20.333333333333329"/>
+                                                                                    <rect key="frame" x="0.0" y="32" width="240" height="20.333333333333329"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Title of the task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="105" height="20.333333333333332"/>
@@ -760,7 +760,7 @@
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-1x-N9m">
-                                                                                            <rect key="frame" x="105" y="0.0" width="48" height="20.333333333333332"/>
+                                                                                            <rect key="frame" x="105" y="0.0" width="103" height="20.333333333333332"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="gs1-rc-mUe"/>
                                                                                             </constraints>
@@ -769,7 +769,7 @@
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="752" text="Auto" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-dd-jDb">
-                                                                                            <rect key="frame" x="153" y="0.0" width="32" height="20.333333333333332"/>
+                                                                                            <rect key="frame" x="208" y="0.0" width="32" height="20.333333333333332"/>
                                                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                                                             <color key="textColor" name="Tint"/>
                                                                                             <nil key="highlightedColor"/>
@@ -779,7 +779,7 @@
                                                                             </subviews>
                                                                         </stackView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-KC-AHY" userLabel="Spacer">
-                                                                            <rect key="frame" x="230" y="20.333333333333336" width="8" height="20.333333333333336"/>
+                                                                            <rect key="frame" x="285" y="20.333333333333336" width="8" height="20.333333333333336"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="8" id="4Vl-FU-dfJ"/>
                                                                             </constraints>
@@ -788,7 +788,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="ypC-5u-PsV">
-                                                                            <rect key="frame" x="238" y="5.6666666666666679" width="50" height="50"/>
+                                                                            <rect key="frame" x="293" y="5.6666666666666679" width="50" height="50"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="50" id="57j-XD-fGN"/>
                                                                                 <constraint firstAttribute="height" constant="50" id="JOw-JW-Th1"/>
@@ -808,7 +808,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-X9-5hA">
-                                                                    <rect key="frame" x="198.66666666666666" y="0.0" width="121.33333333333334" height="61"/>
+                                                                    <rect key="frame" x="232.66666666666663" y="0.0" width="142.33333333333337" height="61"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2271,7 +2271,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-N1-Bq8">
-                                                            <rect key="frame" x="206" y="301.66666666666669" width="110" height="30"/>
+                                                            <rect key="frame" x="206" y="301.66666666666663" width="110" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="1aL-1j-6l5"/>
@@ -2328,7 +2328,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ii-fZ-IVe">
-                                                    <rect key="frame" x="24" y="12.666666666666657" width="272" height="357.66666666666674"/>
+                                                    <rect key="frame" x="24" y="12.666666666666657" width="327" height="357.66666666666674"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ulJ-2x-CkM" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.66666666666665719" width="341" height="357"/>
@@ -2386,7 +2386,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please share with your family and friends." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xs-r5-T9r">
-                                                            <rect key="frame" x="25" y="8.6666666666666679" width="222" height="39.333333333333329"/>
+                                                            <rect key="frame" x="25" y="8.6666666666666679" width="277" height="39.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -2628,7 +2628,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-tg-CnG" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2649,7 +2649,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="PiM-pc-ojP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="PiM-pc-ojP" secondAttribute="height" multiplier="327:150" id="TTD-Nh-sCk"/>
                                                             </constraints>
@@ -2660,7 +2660,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-bE-Dto">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="FsN-vp-7pe"/>
@@ -2720,7 +2720,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGs-wH-eI8" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2741,7 +2741,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="Kya-HV-bLB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Kya-HV-bLB" secondAttribute="height" multiplier="327:150" id="g2z-2U-9fb"/>
                                                             </constraints>
@@ -2752,7 +2752,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJR-kf-zbK">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Fg6-2R-74K"/>
@@ -2812,7 +2812,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJv-YI-bHS" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2833,7 +2833,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="YDW-tV-iac">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="YDW-tV-iac" secondAttribute="height" multiplier="327:150" id="art-RI-T1e"/>
                                                             </constraints>
@@ -2844,7 +2844,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-6O-OFH">
-                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
+                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="YI9-Rx-n3P"/>
@@ -2904,7 +2904,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-0e-Qoe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2925,7 +2925,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yelp" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-qq-gbr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Nye-qq-gbr" secondAttribute="height" multiplier="327:150" id="XVw-Sc-itt"/>
                                                             </constraints>
@@ -2936,7 +2936,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqn-KA-WRh">
-                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
+                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Wam-61-wsL"/>
@@ -2996,7 +2996,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-fL-eYq" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3017,7 +3017,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-h6-BKu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Mj4-h6-BKu" secondAttribute="height" multiplier="327:150" id="i4A-sV-vWx"/>
                                                             </constraints>
@@ -3028,7 +3028,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcy-78-PlS">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="97n-Uj-tVW"/>
@@ -3595,7 +3595,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vm-ea-Wlo" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3616,7 +3616,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapas" translatesAutoresizingMaskIntoConstraints="NO" id="hVR-0V-Sc8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="hVR-0V-Sc8" secondAttribute="height" multiplier="327:150" id="Rtt-mM-Yil"/>
                                                             </constraints>
@@ -3627,7 +3627,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nP-0v-BHa">
-                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
+                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="7pw-rW-3u5"/>
@@ -3687,7 +3687,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOa-RS-pyu" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3708,7 +3708,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="t9N-Mg-iFE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="t9N-Mg-iFE" secondAttribute="height" multiplier="327:150" id="oAQ-Bc-Wvq"/>
                                                             </constraints>
@@ -3719,7 +3719,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zey-LF-gqd">
-                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="4gV-sl-vqc"/>
@@ -3779,7 +3779,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-LR-zfx" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3800,7 +3800,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="19A-WK-iir">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="19A-WK-iir" secondAttribute="height" multiplier="327:150" id="9ui-Gz-cEQ"/>
                                                             </constraints>
@@ -3811,7 +3811,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TL-OC-WQ1">
-                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="1hN-V8-FtC"/>
@@ -3932,23 +3932,14 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <namedColor name="Accent">
             <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="Background">
             <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Text">
-            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

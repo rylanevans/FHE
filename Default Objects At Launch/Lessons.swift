@@ -1039,7 +1039,7 @@ func generateLessons() {
     lesson95.category = "Temporal"
     lesson95.topic = "Intellectual"
     lesson95.title = "Hollywood Media vs. Your Mind"
-    lesson95.detail = "Imagine a group so powerful they could beam ideas directly into your head. Well, you don't have to imagine -- it's Hollywood. "
+    lesson95.detail = "Imagine a group so powerful they could beam ideas directly into your head. Well, you don't have to imagine -- it's Hollywood."
     lesson95.url = "https://www.youtube.com/watch?v=vjMYCnI5kz0"
     lesson95.youTubeVideo = true
     lesson95.order = 9
@@ -1048,6 +1048,20 @@ func generateLessons() {
     lesson95.selected = false
     lesson95.sortingIndex = 0
     lesson95.alphabet = String(describing: lesson95.title![(lesson95.title!.startIndex)])
+    
+    let lesson96 = Lesson(context: context)
+    lesson96.category = "Spiritual"
+    lesson96.topic = "Restoration"
+    lesson96.title = "The First Vision"
+    lesson96.detail = "Joseph Smith saw God the Father and His son, Jesus Christ."
+    lesson96.url = "https://www.youtube.com/watch?v=uwrKvraWP1M"
+    lesson96.youTubeVideo = true
+    lesson96.order = 9
+    lesson96.favorite = true
+    lesson96.random = Int64(arc4random_uniform(1000))
+    lesson96.selected = false
+    lesson96.sortingIndex = 0
+    lesson96.alphabet = String(describing: lesson96.title![(lesson96.title!.startIndex)])
     
     ad.saveContext()
 }

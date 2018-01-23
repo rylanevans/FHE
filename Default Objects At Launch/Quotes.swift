@@ -14,14 +14,13 @@ import CoreData
 func generateQuotes() {
     getAllTasks()
     let quote1 = Quote(context: context)
-    quote1.selectedOne = taskQuote
     quote1.title = "Christlike"
     quote1.detail = "“If thoughts make us who we are and we are to be like Christ then we must think Christlike thoughts.”\n\n- Ezra Taft Benson"
     quote1.url = "https://www.lds.org/ensign/1984/04/think-on-christ?lang=eng"
     quote1.order = 1
     quote1.favorite = false
     quote1.random = Int64(arc4random_uniform(1000))
-    quote1.selected = true
+    quote1.selected = false
     quote1.sortingIndex = 0
     quote1.alphabet = String(describing: quote1.title![(quote1.title!.startIndex)])
     
@@ -156,6 +155,30 @@ func generateQuotes() {
     quote13.selected = false
     quote13.sortingIndex = 0
     quote13.alphabet = String(describing: quote13.title![(quote13.title!.startIndex)])
+    
+    let quote14 = Quote(context: context)
+    quote14.selectedOne = taskQuote
+    quote14.title = "Daily Quote"
+    quote14.detail = "Press “See details” to read todays inspiring quote.\n\n- from the Mormon Channel"
+    quote14.url = "https://www.mormonchannel.org/blog"
+    quote14.order = 14
+    quote14.favorite = true
+    quote14.random = Int64(arc4random_uniform(1000))
+    quote14.selected = true
+    quote14.sortingIndex = 0
+    quote14.alphabet = String(describing: quote14.title![(quote14.title!.startIndex)])
+    
+    let quote15 = Quote(context: context)
+    quote15.title = "Share Galley"
+    quote15.detail = "“The MormonHub Share Galley is your place to find inspiring quotes and images to share with your friends, family, and followers on social media.” Press “See details” and pick a quote to read.\n\n- from the Mormon Hub"
+    quote15.url = "https://mormonhub.com/share-gallery/"
+    quote15.order = 15
+    quote15.favorite = true
+    quote15.random = Int64(arc4random_uniform(1000))
+    quote15.selected = false
+    quote15.sortingIndex = 0
+    quote15.alphabet = String(describing: quote15.title![(quote15.title!.startIndex)])
+
     
     ad.saveContext()
 }
