@@ -16,6 +16,8 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     @IBOutlet weak var spotlightAssigneeMemberImage: UIImageView!
     @IBOutlet weak var spotlightAssigneeLabel: UILabel!
     @IBOutlet weak var spotlightAssigneeText: UITextField!
+    @IBOutlet weak var saveButton: BounceButton!
+    @IBOutlet weak var hideSaveButton: UIImageView!
     
     let memberPicker = UIPickerView()
     
@@ -51,6 +53,7 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         if spotlight.selectedSpotlight != nil {
             loadSpotlightData()
+            checkValidTitle()
         }
     }
     
@@ -92,15 +95,46 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         ad.saveContext()
     }
     
-    // MARK: - Text Field Options
+    // MARK: UITextFieldDelegate
     
-    // Hide the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkValidTitle()
+        return
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+    }
+    
+    func checkValidTitle() {
+        let text = spotlightTitleTextField.text
+        if text?.isEmpty == false {
+            hideSaveButton.isHidden = true
+            saveButton.isEnabled = true
+        } else {
+            hideSaveButton.isHidden = false
+            saveButton.isEnabled = false
+            
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @objc func donePressedOnKeyboard() {
+        checkValidTitle()
         view.endEditing(true)
     }
     

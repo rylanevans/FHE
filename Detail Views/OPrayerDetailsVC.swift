@@ -1,5 +1,5 @@
 //
-//  TestimonyDetailsVC.swift
+//  PrayerDetailsVC.swift
 //  FHE
 //
 //  Created by Rylan Evans on 12/19/17.
@@ -9,26 +9,27 @@
 import UIKit
 import CoreData
 
-class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class OPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
-    @IBOutlet weak var testimonyTitleTextField: UITextField!
-    @IBOutlet weak var testimonyDetailsTextField: UITextView!
-    @IBOutlet weak var testimonyAssigneeMemberImage: UIImageView!
-    @IBOutlet weak var testimonyAssigneeLabel: UILabel!
-    @IBOutlet weak var testimonyAssigneeText: UITextField!
+    @IBOutlet weak var prayerTitleTextField: UITextField!
+    @IBOutlet weak var prayerDetailsTextField: UITextView!
+    @IBOutlet weak var prayerAssigneeMemberImage: UIImageView!
+    @IBOutlet weak var prayerAssigneeLabel: UILabel!
+    @IBOutlet weak var prayerAssigneeText: UITextField!
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var hideSaveButton: UIImageView!
     
-    let memberPicker = UIPickerView()
+    let openingPicker = UIPickerView()
     
-    let testimony = taskTestimony
+    let openingPrayer = taskPrayer
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        memberPicker.delegate = self
-        memberPicker.dataSource = self
-        memberPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        openingPicker.delegate = self
+        openingPicker.dataSource = self
+        openingPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        openingPicker.tag = 1
         
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
@@ -37,10 +38,10 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        testimonyAssigneeText.inputView = memberPicker
-        testimonyAssigneeText.inputAccessoryView = toolBar
-        testimonyTitleTextField.inputAccessoryView = toolBar
-        testimonyDetailsTextField.inputAccessoryView = toolBar
+        prayerAssigneeText.inputView = openingPicker
+        prayerAssigneeText.inputAccessoryView = toolBar
+        prayerTitleTextField.inputAccessoryView = toolBar
+        prayerDetailsTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
@@ -48,11 +49,11 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         getAllTasks()
         getMembersForPicker()
-        loadTestimonyData()
-        loadTestimonyAssignmentImage()
+        loadPrayerData()
+        loadPrayerAssignmentImage()
         
-        if testimony.selectedTestimony != nil {
-            loadTestimonyData()
+        if openingPrayer.selectedPrayer != nil{
+            loadPrayerData()
             checkValidTitle()
         }
     }
@@ -62,8 +63,8 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         
         getAllTasks()
         getMembersForPicker()
-        loadTestimonyData()
-        loadTestimonyAssignmentImage()
+        loadPrayerData()
+        loadPrayerAssignmentImage()
     }
     
     // MARK: - Picker View Set up
@@ -83,16 +84,19 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
-        let testimony = taskTestimony
-        testimonyAssigneeMemberImage.image = assignee.photo as? UIImage
-        testimonyAssigneeLabel.text = assignee.name
-        testimony.assignment = assignee
-        if assignee.name == "Auto-Assign" {
-            testimony.assigned = false
-        } else {
-            testimony.assigned = true
+        
+        if pickerView.tag == 1 {
+            prayerAssigneeMemberImage.image = assignee.photo as? UIImage
+            prayerAssigneeLabel.text = assignee.name
+            openingPrayer.assignment = assignee
+            if assignee.name == "Auto-Assign" {
+                openingPrayer.assigned = false
+            } else {
+                openingPrayer.assigned = true
+            }
+            ad.saveContext()
         }
-        ad.saveContext()
+
     }
     
     // MARK: UITextFieldDelegate
@@ -112,7 +116,7 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func checkValidTitle() {
-        let text = testimonyTitleTextField.text
+        let text = prayerTitleTextField.text
         if text?.isEmpty == false {
             hideSaveButton.isHidden = true
             saveButton.isEnabled = true
@@ -141,14 +145,14 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
-        let testimonyToSave = testimony.selectedTestimony
+        let prayerToSave = openingPrayer.selectedPrayer
         
-        if let title = testimonyTitleTextField.text {
-            testimonyToSave?.title = title
+        if let title = prayerTitleTextField.text {
+            prayerToSave?.title = title
         }
         
-        if let details = testimonyDetailsTextField.text {
-            testimonyToSave?.detail = details
+        if let details = prayerDetailsTextField.text {
+            prayerToSave?.detail = details
         }
         
         ad.saveContext()
@@ -156,21 +160,22 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         _ = navigationController?.popViewController(animated: true)
     }
     
-    func loadTestimonyData() {
-        if let testimonyToEdit = testimony.selectedTestimony {
-            testimonyTitleTextField.text = testimonyToEdit.title
-            testimonyDetailsTextField.text = testimonyToEdit.detail
+    func loadPrayerData() {
+        if let prayerToEdit = openingPrayer.selectedPrayer {
+            prayerTitleTextField.text = prayerToEdit.title
+            prayerDetailsTextField.text = prayerToEdit.detail
         }
     }
     
-    func loadTestimonyAssignmentImage() {
-        let assignee = testimony.assignment
-        if assignee != nil {
-            testimonyAssigneeMemberImage.image = assignee?.photo as? UIImage
-            testimonyAssigneeLabel.text = assignee?.name
+    func loadPrayerAssignmentImage() {
+        let openingAssignee = openingPrayer.assignment
+        
+        if openingAssignee != nil {
+            prayerAssigneeMemberImage.image = openingAssignee?.photo as? UIImage
+            prayerAssigneeLabel.text = openingAssignee?.name
         } else {
-            testimonyAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
-            testimonyAssigneeLabel.text = "Auto-Assign"
+            prayerAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
+            prayerAssigneeLabel.text = "Auto-Assign"
         }
     }
 }

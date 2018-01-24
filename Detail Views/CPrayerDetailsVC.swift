@@ -1,5 +1,5 @@
 //
-//  PrayerDetailsVC.swift
+//  CPrayerDetailsVC.swift
 //  FHE
 //
 //  Created by Rylan Evans on 12/19/17.
@@ -9,30 +9,24 @@
 import UIKit
 import CoreData
 
-class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class CPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var prayerTitleTextField: UITextField!
     @IBOutlet weak var prayerDetailsTextField: UITextView!
-    @IBOutlet weak var prayerAssigneeMemberImage: UIImageView!
-    @IBOutlet weak var prayerAssigneeLabel: UILabel!
-    @IBOutlet weak var prayerAssigneeText: UITextField!
     @IBOutlet weak var closingAssigneeMemberImage: UIImageView!
     @IBOutlet weak var closingAssigneeLabel: UILabel!
     @IBOutlet weak var closingAssigneeText: UITextField!
+    @IBOutlet weak var saveButton: BounceButton!
+    @IBOutlet weak var hideSaveButton: UIImageView!
     
-    let openingPicker = UIPickerView()
     let closingPicker = UIPickerView()
     
-    let openingPrayer = taskPrayer
     let closingPrayer = taskPrayerClosing
+    
+    let prayer = taskPrayer
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        openingPicker.delegate = self
-        openingPicker.dataSource = self
-        openingPicker.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        openingPicker.tag = 1
         
         closingPicker.delegate = self
         closingPicker.dataSource = self
@@ -46,8 +40,6 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
-        prayerAssigneeText.inputView = openingPicker
-        prayerAssigneeText.inputAccessoryView = toolBar
         prayerTitleTextField.inputAccessoryView = toolBar
         prayerDetailsTextField.inputAccessoryView = toolBar
         
@@ -63,8 +55,9 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         loadPrayerData()
         loadPrayerAssignmentImage()
         
-        if openingPrayer.selectedPrayer != nil || closingPrayer.selectedPrayer != nil{
+        if closingPrayer.selectedPrayer != nil{
             loadPrayerData()
+            checkValidTitle()
         }
     }
     
@@ -95,41 +88,66 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let assignee = membersPickerArray[row]
         
-        if pickerView.tag == 1 {
-            prayerAssigneeMemberImage.image = assignee.photo as? UIImage
-            prayerAssigneeLabel.text = assignee.name
-            openingPrayer.assignment = assignee
-            if assignee.name == "Auto-Assign" {
-                openingPrayer.assigned = false
-            } else {
-                openingPrayer.assigned = true
-            }
-            ad.saveContext()
-        } else if pickerView.tag == 2 {
+        if pickerView.tag == 2 {
             closingAssigneeMemberImage.image = assignee.photo as? UIImage
             closingAssigneeLabel.text = assignee.name
             closingPrayer.assignment = assignee
+            if assignee.name == "Auto-Assign" {
+                closingPrayer.assigned = false
+            } else {
+                closingPrayer.assigned = true
+            }
             ad.saveContext()
         }
-
     }
     
-    // MARK: - Text Field Options
+    // MARK: UITextFieldDelegate
     
-    // Hide the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        checkValidTitle()
+        return
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+    }
+    
+    func checkValidTitle() {
+        let text = prayerTitleTextField.text
+        if text?.isEmpty == false {
+            hideSaveButton.isHidden = true
+            saveButton.isEnabled = true
+        } else {
+            hideSaveButton.isHidden = false
+            saveButton.isEnabled = false
+            
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+                (action : UIAlertAction!) -> Void in
+            })
+            
+            alertController.addAction(okAction)
+            alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @objc func donePressedOnKeyboard() {
+        checkValidTitle()
         view.endEditing(true)
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         playClick()
         
-        let prayerToSave = openingPrayer.selectedPrayer
+        let prayerToSave = prayer.selectedPrayer
         
         if let title = prayerTitleTextField.text {
             prayerToSave?.title = title
@@ -145,24 +163,14 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     }
     
     func loadPrayerData() {
-        if let prayerToEdit = openingPrayer.selectedPrayer {
+        if let prayerToEdit = prayer.selectedPrayer {
             prayerTitleTextField.text = prayerToEdit.title
             prayerDetailsTextField.text = prayerToEdit.detail
         }
     }
     
     func loadPrayerAssignmentImage() {
-        let openingAssignee = openingPrayer.assignment
-        
         let closingAssignee = closingPrayer.assignment
-        
-        if openingAssignee != nil {
-            prayerAssigneeMemberImage.image = openingAssignee?.photo as? UIImage
-            prayerAssigneeLabel.text = openingAssignee?.name
-        } else {
-            prayerAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
-            prayerAssigneeLabel.text = "Auto-Assign"
-        }
         
         if closingAssignee != nil {
             closingAssigneeMemberImage.image = closingAssignee?.photo as? UIImage
@@ -173,4 +181,5 @@ class PrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         }
     }
 }
+
 

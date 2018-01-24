@@ -23,7 +23,7 @@ func generateFamilyMembers() {
     memberLilly.name = "Dad"
     memberLilly.age = 30
     memberLilly.attending = true
-    memberLilly.order = 1
+    memberLilly.order = 30
     memberLilly.photo = #imageLiteral(resourceName: "Dad") as UIImage
     memberLilly.random = Int64(arc4random_uniform(100))
     
@@ -31,7 +31,7 @@ func generateFamilyMembers() {
     memberAnisten.name = "Mom"
     memberAnisten.age = 25
     memberAnisten.attending = true
-    memberAnisten.order = 2
+    memberAnisten.order = 25
     memberAnisten.photo = #imageLiteral(resourceName: "Mom") as UIImage
     memberAnisten.random = Int64(arc4random_uniform(100))
     
@@ -39,7 +39,7 @@ func generateFamilyMembers() {
     memberReed.name = "Son"
     memberReed.age = 8
     memberReed.attending = true
-    memberReed.order = 3
+    memberReed.order = 8
     memberReed.photo = #imageLiteral(resourceName: "Reed") as UIImage
     memberReed.random = Int64(arc4random_uniform(100))
     
@@ -47,7 +47,7 @@ func generateFamilyMembers() {
     memberClaire.name = "Daughter"
     memberClaire.age = 5
     memberClaire.attending = true
-    memberClaire.order = 4
+    memberClaire.order = 5
     memberClaire.photo = #imageLiteral(resourceName: "Claire") as UIImage
     memberClaire.random = Int64(arc4random_uniform(100))
     
@@ -55,7 +55,7 @@ func generateFamilyMembers() {
     memberPapa.name = "Grandpa"
     memberPapa.age = 50
     memberPapa.attending = false
-    memberPapa.order = 5
+    memberPapa.order = 50
     memberPapa.photo = #imageLiteral(resourceName: "Grandpa") as UIImage
     memberPapa.random = Int64(arc4random_uniform(100))
     
@@ -63,7 +63,7 @@ func generateFamilyMembers() {
     memberGrammy.name = "Grandma"
     memberGrammy.age = 45
     memberGrammy.attending = false
-    memberGrammy.order = 6
+    memberGrammy.order = 45
     memberGrammy.photo = #imageLiteral(resourceName: "Grandma") as UIImage
     memberGrammy.random = Int64(arc4random_uniform(100))
     
@@ -71,7 +71,7 @@ func generateFamilyMembers() {
     memberGuest1.name = "Guest 1"
     memberGuest1.age = 100
     memberGuest1.attending = false
-    memberGuest1.order = 7
+    memberGuest1.order = 101
     memberGuest1.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
     memberGuest1.random = Int64(arc4random_uniform(100))
     
@@ -79,7 +79,7 @@ func generateFamilyMembers() {
     memberGuest2.name = "Guest 2"
     memberGuest2.age = 100
     memberGuest2.attending = false
-    memberGuest2.order = 8
+    memberGuest2.order = 102
     memberGuest2.photo = #imageLiteral(resourceName: "Missing Profile") as UIImage
     memberGuest2.random = Int64(arc4random_uniform(100))
     

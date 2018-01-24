@@ -68,15 +68,15 @@ func getMembersAttending() {
 
 func getArrayOfAttendingMembersAutoAssignOrder() {
     let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
-    
+
     let filterByAttending = NSPredicate(format: "attending == %@", NSNumber(booleanLiteral: true))
     let filterOutAutoAssigned = NSPredicate(format: "name != %@", "Auto-Assign")
     let sortByAutoAssignOrder = NSSortDescriptor(key: "order", ascending: true)
     let predicateCompound = NSCompoundPredicate(type: .and, subpredicates: [filterByAttending, filterOutAutoAssigned])
-    
+
     fetchRequest.predicate = predicateCompound
     fetchRequest.sortDescriptors = [sortByAutoAssignOrder]
-    
+
     do {
         arrayOfAttendingMembersAutoAssignOrder = try context.fetch(fetchRequest)
     } catch {
@@ -84,3 +84,4 @@ func getArrayOfAttendingMembersAutoAssignOrder() {
         print("\(error)")
     }
 }
+

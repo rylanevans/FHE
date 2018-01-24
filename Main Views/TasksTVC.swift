@@ -223,7 +223,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
 //            performSegue(withIdentifier: "ShowSongs", sender: task)
             let segueTask = task as! Task
             switch segueTask.name {
-            case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
+            case "Opening Prayer"?: performSegue(withIdentifier: "ShowOPrayer", sender: task)
+            case "Closing Prayer"?: performSegue(withIdentifier: "ShowCPrayer", sender: task)
             case "Song"?: performSegue(withIdentifier: "ShowSongs", sender: task)
             case "Rule"?: performSegue(withIdentifier: "ShowRules", sender: task)
             case "Scripture"?: performSegue(withIdentifier: "ShowScriptures", sender: task)

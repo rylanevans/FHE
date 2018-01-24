@@ -37,6 +37,18 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         runTutorial()
     }
     
+//    func test() {
+//        let test = membersAttendingArray[1]
+//        let name = test.name
+//        let array = [name, "cow", "camel", "sheep", "goat"]
+//
+//        let defaults = UserDefaults.standard
+//        defaults.set(array, forKey: "SavedStringArray")
+//
+//        let myarray = defaults.stringArray(forKey: "SavedStringArray") ?? [String]()
+//        print(myarray)
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
@@ -157,7 +169,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             let task = sections.objects![indexPath.row]
             let segueTask: Task = task as! Task
             switch segueTask.name {
-            case "Opening Prayer"?: performSegue(withIdentifier: "ShowPrayer", sender: task)
+            case "Opening Prayer"?: performSegue(withIdentifier: "ShowOPrayer", sender: task)
+            case "Closing Prayer"?: performSegue(withIdentifier: "ShowCPrayer", sender: task)
             case "Song"?: performSegue(withIdentifier: "ShowSongs", sender: task)
             case "Rule"?: performSegue(withIdentifier: "ShowRules", sender: task)
             case "Scripture"?: performSegue(withIdentifier: "ShowScriptures", sender: task)

@@ -14,14 +14,6 @@ var tasksAllArray = [Task]()
 var tasksEnabledArray = [Task]()
 var arrayOfEnabledAndNotAssignedTasks = [Task]()
 
-// save the array
-func resetArray() {
-    UserDefaults.standard.set(arrayOfEnabledAndNotAssignedTasks, forKey: "arrayTasksToRotate")
-}
-
-// fetch the array
-var arrayTasksToRotate = UserDefaults.standard.array(forKey: "arrayTasksToRotate")
-
 func getAllTasks() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
     let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
@@ -53,9 +45,10 @@ func getEnabledTasks() {
 func getArrayOfEnabledAndNotAssignedTasks() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
     let enabled = NSPredicate(format: "enabled == %@", NSNumber(booleanLiteral: true))
-    let assigned = NSPredicate(format: "assigned == %@", NSNumber(booleanLiteral: false))
+    let notAssigned = NSPredicate(format: "assigned == %@", NSNumber(booleanLiteral: false))
     let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
-    let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [enabled, assigned])
+    let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [enabled, notAssigned])
+    
     fetchRequest.predicate = predicateCompound
     fetchRequest.sortDescriptors = [sortByDefaultNumber]
 
@@ -65,8 +58,6 @@ func getArrayOfEnabledAndNotAssignedTasks() {
         let error = error as NSError
         print("\(error)")
     }
-
-    resetArray()
 }
 
 func runAssignments() {
@@ -82,15 +73,36 @@ func runAssignments() {
     }
 }
 
+func runAssignmentsYoungestToOldest() {
+    getMembersAttending()
+    getArrayOfAttendingMembersAutoAssignOrder()
+    getArrayOfEnabledAndNotAssignedTasks()
+    
+    arrayOfAttendingMembersAutoAssignOrder = membersAttendingArray
+    
+    var i = 0
+    for eachTask in arrayOfAttendingMembersAutoAssignOrder {
+        eachTask.order = Int64(i)
+        ad.saveContext()
+        i += 1
+    }
+    
+    var index = 0
+    for eachTask in arrayOfEnabledAndNotAssignedTasks {
+        if index >= arrayOfAttendingMembersAutoAssignOrder.count {
+            index = 0
+        }
+        eachTask.assignment = arrayOfAttendingMembersAutoAssignOrder[index]
+        index += 1
+    }
+}
 
-//Fix both of these functions tomorrow...
+
 func autoAssignAllEnabledTasks() {
     for eachTask in tasksAllArray {
         eachTask.assigned = false
     }
-    getArrayOfEnabledAndNotAssignedTasks()
-    getArrayOfAttendingMembersAutoAssignOrder()
-    runAssignments()
+    runAssignmentsYoungestToOldest()
 }
 
 func rotateAllAutoAssignedTasks() {
@@ -99,7 +111,12 @@ func rotateAllAutoAssignedTasks() {
     let count = arrayOfAttendingMembersAutoAssignOrder.count
     let element = arrayOfAttendingMembersAutoAssignOrder.remove(at: (count - 1))
     arrayOfAttendingMembersAutoAssignOrder.insert(element, at: 0)
+    var index = 0
+    for eachTask in arrayOfAttendingMembersAutoAssignOrder {
+        eachTask.order = Int64(index)
+        ad.saveContext()
+        index += 1
+    }
     runAssignments()
-    resetArray()
 }
 
