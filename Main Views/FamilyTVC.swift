@@ -32,7 +32,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         
         tableView.reloadData()
         
-        if counter.launched > 5 && counter.launched % 5 != 0 && counter.seeApps == false && counter.hideSeeApps == false {
+        if counter.launched > 5 && counter.launched % 5 == 0 && counter.seeApps == false && counter.hideSeeApps == false {
             counter.hideSeeApps = true
             ad.saveContext()
             

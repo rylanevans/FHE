@@ -47,7 +47,7 @@ func getArrayOfEnabledAndNotAssignedTasks() {
     let enabled = NSPredicate(format: "enabled == %@", NSNumber(booleanLiteral: true))
     let notAssigned = NSPredicate(format: "assigned == %@", NSNumber(booleanLiteral: false))
     let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
-    let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [enabled, notAssigned])
+    let predicateCompound = NSCompoundPredicate(type: .and, subpredicates: [enabled, notAssigned])
     
     fetchRequest.predicate = predicateCompound
     fetchRequest.sortDescriptors = [sortByDefaultNumber]
@@ -96,7 +96,6 @@ func runAssignmentsYoungestToOldest() {
         index += 1
     }
 }
-
 
 func autoAssignAllEnabledTasks() {
     for eachTask in tasksAllArray {

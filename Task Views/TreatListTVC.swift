@@ -100,12 +100,13 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
         let treat = taskTreat
         treatAssigneeMemberImage.image = assignee.photo as? UIImage
         treatAssigneeLabel.text = assignee.name
-        treat.assignment = assignee
         if assignee.name == "Auto-Assign" {
             treat.assigned = false
         } else {
             treat.assigned = true
+            treat.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

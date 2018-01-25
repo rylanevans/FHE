@@ -107,7 +107,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func songTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press any of the orange “Sing Song” button in the center bottom of the screen to open the link for more info. For the song, press it to sing-a-long with the music and lyrics. Make sure to press “▶️” (play) button on the web page to hear the music.\n\nTIP - Only one song can be selected at a time.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the orange “Sing Song” button to open the link to play the song and sing-a-long with lyrics. Make sure to press “▶️” (play) button on the web page to hear the music.\n\nTIP - Only one song can be selected at a time.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in

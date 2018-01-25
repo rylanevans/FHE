@@ -54,6 +54,7 @@ class FamilyCell: UITableViewCell {
     @IBAction func attendingSwitchPressed(_ sender: Any) {
         playClick()
         delegate?.attendingNeedsChanged(self)
+        runAssignmentsYoungestToOldest()
     }
     
     

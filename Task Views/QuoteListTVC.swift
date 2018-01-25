@@ -100,12 +100,13 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
         let quote = taskQuote
         quoteAssigneeMemberImage.image = assignee.photo as? UIImage
         quoteAssigneeLabel.text = assignee.name
-        quote.assignment = assignee
         if assignee.name == "Auto-Assign" {
             quote.assigned = false
         } else {
             quote.assigned = true
+            quote.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

@@ -86,12 +86,13 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         let testimony = taskTestimony
         testimonyAssigneeMemberImage.image = assignee.photo as? UIImage
         testimonyAssigneeLabel.text = assignee.name
-        testimony.assignment = assignee
         if assignee.name == "Auto-Assign" {
             testimony.assigned = false
         } else {
             testimony.assigned = true
+            testimony.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     
@@ -164,8 +165,10 @@ class TestimonyDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func loadTestimonyAssignmentImage() {
+        let assigned = testimony.assigned
         let assignee = testimony.assignment
-        if assignee != nil {
+        
+        if assigned == true {
             testimonyAssigneeMemberImage.image = assignee?.photo as? UIImage
             testimonyAssigneeLabel.text = assignee?.name
         } else {

@@ -99,12 +99,13 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         let scripture = taskScripture
         scriptureAssigneeMemberImage.image = assignee.photo as? UIImage
         scriptureAssigneeLabel.text = assignee.name
-        scripture.assignment = assignee
         if assignee.name == "Auto-Assign" {
             scripture.assigned = false
         } else {
             scripture.assigned = true
+            scripture.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

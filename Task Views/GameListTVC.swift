@@ -100,12 +100,13 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let game = taskGame
         gameAssigneeMemberImage.image = assignee.photo as? UIImage
         gameAssigneeLabel.text = assignee.name
-        game.assignment = assignee
         if assignee.name == "Auto-Assign" {
             game.assigned = false
         } else {
             game.assigned = true
+            game.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

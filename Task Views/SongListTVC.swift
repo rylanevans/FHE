@@ -119,12 +119,13 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let song = taskSong
         songAssigneeMemberImage.image = assignee.photo as? UIImage
         songAssigneeLabel.text = assignee.name
-        song.assignment = assignee
         if assignee.name == "Auto-Assign" {
             song.assigned = false
         } else {
             song.assigned = true
+            song.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

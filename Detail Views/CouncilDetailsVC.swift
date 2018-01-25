@@ -86,12 +86,13 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         let council = taskCouncil
         councilAssigneeMemberImage.image = assignee.photo as? UIImage
         councilAssigneeLabel.text = assignee.name
-        council.assignment = assignee
         if assignee.name == "Auto-Assign" {
             council.assigned = false
         } else {
             council.assigned = true
+            council.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     
@@ -164,8 +165,10 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     }
     
     func loadCouncilAssignmentImage() {
+        let assigned = council.assigned
         let assignee = council.assignment
-        if assignee != nil {
+        
+        if assigned == true {
             councilAssigneeMemberImage.image = assignee?.photo as? UIImage
             councilAssigneeLabel.text = assignee?.name
         } else {

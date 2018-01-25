@@ -86,12 +86,13 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         let thought = taskThought
         thoughtAssigneeMemberImage.image = assignee.photo as? UIImage
         thoughtAssigneeLabel.text = assignee.name
-        thought.assignment = assignee
         if assignee.name == "Auto-Assign" {
             thought.assigned = false
         } else {
             thought.assigned = true
+            thought.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     
@@ -164,8 +165,10 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     }
     
     func loadThoughtAssignmentImage() {
+        let assigned = thought.assigned
         let assignee = thought.assignment
-        if assignee != nil {
+        
+        if assigned == true {
             thoughtAssigneeMemberImage.image = assignee?.photo as? UIImage
             thoughtAssigneeLabel.text = assignee?.name
         } else {

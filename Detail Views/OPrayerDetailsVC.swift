@@ -91,8 +91,10 @@ class OPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
             openingPrayer.assignment = assignee
             if assignee.name == "Auto-Assign" {
                 openingPrayer.assigned = false
+                runAssignments()
             } else {
                 openingPrayer.assigned = true
+                runAssignments()
             }
             ad.saveContext()
         }
@@ -168,9 +170,10 @@ class OPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     }
     
     func loadPrayerAssignmentImage() {
+        let assigned = openingPrayer.assigned
         let openingAssignee = openingPrayer.assignment
         
-        if openingAssignee != nil {
+        if assigned == true {
             prayerAssigneeMemberImage.image = openingAssignee?.photo as? UIImage
             prayerAssigneeLabel.text = openingAssignee?.name
         } else {

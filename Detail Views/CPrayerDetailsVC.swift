@@ -91,12 +91,13 @@ class CPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         if pickerView.tag == 2 {
             closingAssigneeMemberImage.image = assignee.photo as? UIImage
             closingAssigneeLabel.text = assignee.name
-            closingPrayer.assignment = assignee
             if assignee.name == "Auto-Assign" {
                 closingPrayer.assigned = false
             } else {
                 closingPrayer.assigned = true
+                closingPrayer.assignment = assignee
             }
+            runAssignments()
             ad.saveContext()
         }
     }
@@ -170,11 +171,12 @@ class CPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     }
     
     func loadPrayerAssignmentImage() {
-        let closingAssignee = closingPrayer.assignment
+        let assigned = closingPrayer.assigned
+        let assignee = closingPrayer.assignment
         
-        if closingAssignee != nil {
-            closingAssigneeMemberImage.image = closingAssignee?.photo as? UIImage
-            closingAssigneeLabel.text = closingAssignee?.name
+        if assigned == true {
+            closingAssigneeMemberImage.image = assignee?.photo as? UIImage
+            closingAssigneeLabel.text = assignee?.name
         } else {
             closingAssigneeMemberImage.image = #imageLiteral(resourceName: "Missing Profile")
             closingAssigneeLabel.text = "Auto-Assign"

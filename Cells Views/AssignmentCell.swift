@@ -93,14 +93,14 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
 //    }
     
     func configureAssignmentCell(task: Task) {
-        let taskName = task.name ?? ""
+        let taskName = task.name ?? " "
         let image = task.image ?? #imageLiteral(resourceName: "NoPhoto")
         let photo = task.assignment?.photo ?? #imageLiteral(resourceName: "Missing Profile")
         let name = task.assignment?.name ?? "Assignee"
-        var selectedName = ""
+        var selectedName = " "
         
         switch taskName {
-        case "Opening Prayer": selectedName = task.selectedPrayer?.title ?? "No Prayer selected"
+        case "Opening Prayer": selectedName = (task.selectedPrayer?.title) ?? "No Prayer selected"
         case "Song": selectedName = "✓\(task.selectedSong?.title ?? "No Song selected")"
         case "Rule": selectedName = "✓\(task.selectedRule?.title ?? "No Rule selected")"
         case "Scripture": selectedName = "✓\(task.selectedScripture?.title ?? "No Scripture selected")"

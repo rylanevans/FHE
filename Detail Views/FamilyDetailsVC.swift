@@ -176,6 +176,8 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
+        
+        runAssignmentsYoungestToOldest()
     }
     
     func loadMemberData() {
@@ -219,6 +221,8 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         }
         
         _ = navigationController?.popViewController(animated: true)
+        
+        runAssignmentsYoungestToOldest()
     }
 }
 

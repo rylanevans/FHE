@@ -99,12 +99,13 @@ class RuleListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let rule = taskRule
         ruleAssigneeMemberImage.image = assignee.photo as? UIImage
         ruleAssigneeLabel.text = assignee.name
-        rule.assignment = assignee
         if assignee.name == "Auto-Assign" {
             rule.assigned = false
         } else {
             rule.assigned = true
+            rule.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

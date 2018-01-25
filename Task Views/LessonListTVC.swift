@@ -119,12 +119,13 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
         let lesson = taskLesson
         lessonAssigneeMemberImage.image = assignee.photo as? UIImage
         lessonAssigneeLabel.text = assignee.name
-        lesson.assignment = assignee
         if assignee.name == "Auto-Assign" {
             lesson.assigned = false
         } else {
             lesson.assigned = true
+            lesson.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     

@@ -86,12 +86,13 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         let spotlight = taskSpotlight
         spotlightAssigneeMemberImage.image = assignee.photo as? UIImage
         spotlightAssigneeLabel.text = assignee.name
-        spotlight.assignment = assignee
         if assignee.name == "Auto-Assign" {
             spotlight.assigned = false
         } else {
             spotlight.assigned = true
+            spotlight.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     
@@ -164,8 +165,10 @@ class SpotlightDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func loadSpotlightAssignmentImage() {
+        let assigned = spotlight.assigned
         let assignee = spotlight.assignment
-        if assignee != nil {
+        
+        if assigned == true {
             spotlightAssigneeMemberImage.image = assignee?.photo as? UIImage
             spotlightAssigneeLabel.text = assignee?.name
         } else {

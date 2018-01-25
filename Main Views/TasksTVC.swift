@@ -266,7 +266,9 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     // Change status of selected bool
     func selectedValueToggle(_ Task: Task) {
         Task.enabled = !Task.enabled
+        Task.assigned = false
         ad.saveContext()
+        runAssignmentsYoungestToOldest()
         tableView.reloadData()
     }
     

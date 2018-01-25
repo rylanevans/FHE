@@ -91,7 +91,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func editButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "✅ AUTO-ASSIGNMENT", message: "Do you want to auto-assign all tasks (youngest to oldest)?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "✅ AUTO-ASSIGNMENT", message: "Auto-assign all enabled tasks (youngest to oldest)?", preferredStyle: .alert)
         
         let rotateAction = UIAlertAction(title: "✓ Assign", style: .default, handler: {
             alert -> Void in
@@ -112,7 +112,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "♻️ ASSIGNMENT ROTATION", message: "Do you want to rotate assignments for all tasks that are set to auto-assigned?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "♻️ ASSIGNMENT ROTATION", message: "Rotate assignments for all enabled tasks that are not manually assigned?", preferredStyle: .alert)
         
         let rotateAction = UIAlertAction(title: "✓ Rotate", style: .default, handler: {
             alert -> Void in
@@ -224,9 +224,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         } else {
             specificTask.assigned = true
             specificTask.assignment = specificMember
-            
-            ad.saveContext()
         }
+        runAssignments()
+        ad.saveContext()
     }
     
     // MARK: - Boiler Code for Core Data

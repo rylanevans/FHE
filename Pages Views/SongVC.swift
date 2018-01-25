@@ -37,7 +37,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         if counter.songTip == false {
             counter.songTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Turn your phone sideways to view in landscape mode.\n\nTIP - Pair your phone to your family room TV for all to see. There is suggested hardware in the “More” tab under “Tutorials” if you don't know what you would need.\n\nTRICK - Press any of the orange “Sing Song” button in the center bottom of the screen to open the link for more info.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - Turn your phone sideways to view in landscape mode.\n\nTIP - Pair your phone to your family room TV for all to see. There is suggested hardware in the “More” tab under “Tutorials” if you don't know what you would need.\n\nTRICK - Press the orange “Sing Song” button to open the link to play the song and sing-a-long with lyrics.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

@@ -85,12 +85,13 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         let calendar = taskCalendar
         calendarAssigneeMemberImage.image = assignee.photo as? UIImage
         calendarAssigneeLabel.text = assignee.name
-        calendar.assignment = assignee
         if assignee.name == "Auto-Assign" {
             calendar.assigned = false
         } else {
             calendar.assigned = true
+            calendar.assignment = assignee
         }
+        runAssignments()
         ad.saveContext()
     }
     
@@ -163,8 +164,10 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     }
     
     func loadCalendarAssignmentImage() {
+        let assigned = calendar.assigned
         let assignee = calendar.assignment
-        if assignee != nil {
+        
+        if assigned == true {
             calendarAssigneeMemberImage.image = assignee?.photo as? UIImage
             calendarAssigneeLabel.text = assignee?.name
         } else {
