@@ -136,7 +136,7 @@ func generateTreats() {
     
     let treat12 = Treat(context: context)
     treat12.category = treatsCategoryArray[9]
-    treat12.title = "Butterfinders"
+    treat12.title = "Butterfingers"
     treat12.url = "https://pin.it/3ikto7zqomaxtl"
     treat12.favorite = false
     treat12.order = 12

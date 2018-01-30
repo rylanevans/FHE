@@ -290,7 +290,7 @@ func generateGames() {
     
     let game30 = Game(context: context)
     game30.category = gameCategoryArray[0]
-    game30.title = "You're It!"
+    game30.title = "Who's It?"
     game30.url = "http://www.fungameskidsplay.com/youreit.htm"
     game30.favorite = false
     game30.order = 30
@@ -598,7 +598,7 @@ func generateGames() {
     
     let game58 = Game(context: context)
     game58.category = gameCategoryArray[7]
-    game58.title = "Yard Work / Gardening / Planting"
+    game58.title = "Yard Work / Gardening"
     game58.url = "https://www.wikihow.com/Garden"
     game58.favorite = false
     game58.order = 58
@@ -1235,7 +1235,7 @@ func generateGames() {
     game115.alphabet = String(describing: game115.title![(game115.title!.startIndex)])
     
     let game116 = Game(context: context)
-    game116.category = gameCategoryArray[1]
+    game116.category = gameCategoryArray[2]
     game116.title = "Puzzle"
     game116.url = "https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=puzzles"
     game116.favorite = false

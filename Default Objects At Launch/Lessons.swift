@@ -407,11 +407,11 @@ func generateLessons() {
     
     let lesson31 = Lesson(context: context)
     lesson31.category = "Temporal"
-    lesson31.topic = "Environmental"
-    lesson31.title = "A Message For All Of Humanity"
+    lesson31.topic = "Relational/Social"
+    lesson31.title = "Love - All Of Humanity"
     lesson31.detail = "Charlie Chaplin's inspirational final speech in 'The Great Dictator'."
     lesson31.url = "https://www.youtube.com/watch?v=CsgaFKwUA6g"
-    lesson31.youTubeVideo = true
+    lesson31.youTubeVideo = false
     lesson31.order = 9
     lesson31.favorite = true
     lesson31.random = Int64(arc4random_uniform(1000))
@@ -1062,6 +1062,34 @@ func generateLessons() {
     lesson96.selected = false
     lesson96.sortingIndex = 0
     lesson96.alphabet = String(describing: lesson96.title![(lesson96.title!.startIndex)])
+    
+    let lesson97 = Lesson(context: context)
+    lesson97.category = "Spiritual"
+    lesson97.topic = "Heavenly Father"
+    lesson97.title = "Discovering Truth"
+    lesson97.detail = "What is truth, and how can we know it? President Dieter F. Uchtdorf explains"
+    lesson97.url = "https://www.youtube.com/watch?v=hXiGaV8tY5M"
+    lesson97.youTubeVideo = true
+    lesson97.order = 9
+    lesson97.favorite = true
+    lesson97.random = Int64(arc4random_uniform(1000))
+    lesson97.selected = false
+    lesson97.sortingIndex = 0
+    lesson97.alphabet = String(describing: lesson97.title![(lesson97.title!.startIndex)])
+    
+    let lesson98 = Lesson(context: context)
+    lesson98.category = "Temporal"
+    lesson98.topic = "Environmental"
+    lesson98.title = "Fix Yourself"
+    lesson98.detail = "Want to make the world a better place? Start by bettering yourself."
+    lesson98.url = "https://www.youtube.com/watch?v=o73pqQ9Gzt4"
+    lesson98.youTubeVideo = true
+    lesson98.order = 9
+    lesson98.favorite = false
+    lesson98.random = Int64(arc4random_uniform(1000))
+    lesson98.selected = false
+    lesson98.sortingIndex = 0
+    lesson98.alphabet = String(describing: lesson98.title![(lesson98.title!.startIndex)])
     
     ad.saveContext()
 }
