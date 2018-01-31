@@ -82,7 +82,7 @@ func generateRules() {
     
     let rule7 = Rule(context: context)
     rule7.title = "Bedtime Routine"
-    rule7.detail = "Go to be with dreams. Wake up with plans."
+    rule7.detail = "Go to bed with dreams. Wake up with plans."
     rule7.url = "https://drive.google.com/open?id=1VhCDrnKvr_w4nv3tvZQnmXJMtAJzOphd"
     rule7.order = 6
     rule7.random = Int64(arc4random_uniform(1000))

@@ -63,7 +63,12 @@ class RuleVC: UIViewController {
         if let task = specificTask.selectedRule {
             ruleTitleLabel.text = task.title
             ruleDetailLabel.text = task.detail
-            ruleURL = task.url ?? "https://drive.google.com/drive/my-drive"
+            
+            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+                ruleURL = "https://drive.google.com/drive/my-drive"
+            } else {
+                ruleURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {

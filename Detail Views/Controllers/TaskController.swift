@@ -63,6 +63,13 @@ func getArrayOfEnabledAndNotAssignedTasks() {
 func runAssignments() {
     getArrayOfAttendingMembersAutoAssignOrder()
     getArrayOfEnabledAndNotAssignedTasks()
+    
+    if membersAttendingArray.count == 0 {
+        arrayOfAttendingMembersAutoAssignOrder = membersPickerArray
+    } else {
+        arrayOfAttendingMembersAutoAssignOrder = membersAttendingArray
+    }
+    
     var index = 0
     for eachTask in arrayOfEnabledAndNotAssignedTasks {
         if index >= arrayOfAttendingMembersAutoAssignOrder.count {
@@ -78,7 +85,11 @@ func runAssignmentsYoungestToOldest() {
     getArrayOfAttendingMembersAutoAssignOrder()
     getArrayOfEnabledAndNotAssignedTasks()
     
-    arrayOfAttendingMembersAutoAssignOrder = membersAttendingArray
+    if membersAttendingArray.count == 0 {
+        arrayOfAttendingMembersAutoAssignOrder = membersPickerArray
+    } else {
+        arrayOfAttendingMembersAutoAssignOrder = membersAttendingArray
+    }
     
     var i = 0
     for eachTask in arrayOfAttendingMembersAutoAssignOrder {

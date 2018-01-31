@@ -164,11 +164,8 @@
                                                                 </view>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-Ed-qKe">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Best used when paired with your Apple TV or HDMI Cable to be displayed on your family room television." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-Ed-qKe">
                                                             <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
-                                                            <string key="text">Best used when paired with your Apple TV or HDMI Cable to be displayed on your family room television.
-
-Also note, that if your phone is in "Zoomed" mode where you icons and text are bigger than some text and images are squished on smaller devices to fit. It may not look as clean as "Standard" mode. To change, go to Display &amp; Brightness in your phone Settings. </string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -837,13 +834,13 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Eqj-PR-vwV">
-                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kx0-6b-o3J">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Exi-GC-rZ6">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
@@ -851,7 +848,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Click on the &quot;Show Calendar&quot; button to open your calendar app and click the FHE link in the top right corner to go back. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5D-vj-Uos">
-                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -875,19 +872,19 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yLf-98-aD5">
-                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2I-de-hjB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Testimony" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elf-pk-d5S">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HUI-Ew-5lu">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="27.5"/>
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Za-az-D3q" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
@@ -923,7 +920,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2P-9a-bW0">
-                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -947,19 +944,19 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jj2-G6-kzV">
-                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzi-h4-gHk">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spotlight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-6J-AXr">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsX-JX-QyK">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="27.5"/>
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leH-1i-pXc" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
@@ -995,7 +992,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xj9-10-GV2">
-                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1019,13 +1016,13 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XA1-eW-fkm">
-                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-LZ-ka7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thought" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmS-M8-gjE">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
@@ -1033,7 +1030,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soS-pV-Yos">
-                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1057,13 +1054,13 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oul-kZ-JVi">
-                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTx-GM-D4K">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08p-Ef-bux">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
@@ -1071,7 +1068,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Add your own family or famous quotes or traditions that you would like to read or talk about. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEY-TO-pkg">
-                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1095,19 +1092,19 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-Yr-QgV">
-                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cww-Yw-a7y">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lesson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SB1-kN-cuv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="259" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mHl-N7-fje">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="27.5"/>
+                                                                    <rect key="frame" x="259" y="0.0" width="100" height="27.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zqs-ua-9J1" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="22.5"/>
@@ -1143,7 +1140,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOF-Jy-po8">
-                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <string key="text">You can make a custom YouTube playlist and link a custom lesson to that URL. This allows you to add videos throughout the week you may want to share with your family with a click of a button. </string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
@@ -1168,13 +1165,13 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zgZ-ku-bMK">
-                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zcl-1E-kHA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Council" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9c-Mn-OCt">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
@@ -1182,7 +1179,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can edit the Title and Details in the task tab." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0G-tk-Lcq">
-                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1206,13 +1203,13 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nfF-i7-hQD">
-                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-AE-DfP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-D0-2Bp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
@@ -1220,7 +1217,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can add any family games or activities you'd like." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62U-Sc-qRl">
-                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1244,13 +1241,13 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XZ7-Uq-nxT">
-                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saG-jW-lz6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng7-uZ-Cfq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
                                                                     <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                                     <color key="textColor" name="Text"/>
                                                                     <nil key="highlightedColor"/>
@@ -1258,7 +1255,7 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="You can review any ingredients to a treat with the preview button. You can edit Title and Details in the task tab. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5Y-Yc-QNE">
-                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1282,16 +1279,16 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-Lk-fnd">
-                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Storage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5g-Aw-fc1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="27.5"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5C-3U-lll">
-                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="27.5" width="359" height="0.0"/>
                                                             <string key="text">- Data. All data is saved on your local device. If you loose or replace your device all custom lessons will be lost.
 - Size. The app is large in memory because of the dozen HD images to be displayed on your TV so it doesn't pixelate. </string>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
@@ -1306,6 +1303,40 @@ Also note, that if your phone is in "Zoomed" mode where you icons and text are b
                                                 <constraint firstAttribute="bottom" secondItem="xnw-Lk-fnd" secondAttribute="bottom" constant="8" id="Pd8-FO-txl"/>
                                                 <constraint firstAttribute="trailing" secondItem="xnw-Lk-fnd" secondAttribute="trailing" constant="8" id="TvV-Th-ajd"/>
                                                 <constraint firstItem="xnw-Lk-fnd" firstAttribute="leading" secondItem="xAh-2y-HuO" secondAttribute="leading" constant="8" id="jd6-y4-urJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="SrS-hC-Yph">
+                                        <rect key="frame" x="0.0" y="1134" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SrS-hC-Yph" id="O2y-13-enc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SxI-1X-3DR">
+                                                    <rect key="frame" x="0.0" y="8" width="0.0" height="27.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoomed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmj-Tj-gFq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6v-J5-kIO">
+                                                            <rect key="frame" x="0.0" y="27.5" width="0.0" height="0.0"/>
+                                                            <string key="text">If your phone is in "Zoomed" mode where your icons and text are bigger than some of the text and images will be squished on smaller devices. It may not look as clean as "Standard" mode. To change, go to Display &amp; Brightness in your phone Settings and switch to "Standard" mode.</string>
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="17"/>
+                                                            <color key="textColor" name="Text"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SxI-1X-3DR" firstAttribute="leading" secondItem="O2y-13-enc" secondAttribute="leading" constant="8" id="Cbn-zg-nWB"/>
+                                                <constraint firstAttribute="trailing" secondItem="SxI-1X-3DR" secondAttribute="trailing" constant="8" id="EJR-8z-cku"/>
+                                                <constraint firstItem="SxI-1X-3DR" firstAttribute="top" secondItem="O2y-13-enc" secondAttribute="top" constant="8" id="EsB-08-jUC"/>
+                                                <constraint firstAttribute="bottom" secondItem="SxI-1X-3DR" secondAttribute="bottom" constant="8" id="qlz-aN-hMF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1899,6 +1930,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Signature" width="98" height="31"/>
         <image name="Teach" width="1940" height="1600"/>
         <image name="Thank you" width="200" height="200"/>
+        <namedColor name="Text">
+            <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Text">
             <color red="0.1340000033" green="0.16799999769999999" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

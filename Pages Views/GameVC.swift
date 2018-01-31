@@ -41,7 +41,12 @@ class GameVC: UIViewController {
         if let task = specificTask.selectedGame {
             gameTitleLabel.text = task.title
             gameCategoryLabel.text = task.category
-            gameURL = task.url ?? "https://www.wikihow.com/Main-Page"
+            
+            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+                gameURL = "https://www.wikihow.com/Main-Page"
+            } else {
+                gameURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {

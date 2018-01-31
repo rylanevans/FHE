@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+import SafariServices
 
 class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, FamilyCellDelegate {
     @IBOutlet weak var segment: UISegmentedControl!
@@ -38,6 +39,13 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             
             checkIfUSerWantsToSeeMyOtherApps()
         }
+        
+        if counter.launched > 10 && counter.launched % 4 == 0 && counter.facebookRequest == false && counter.hideFaceBookRequest == false {
+            counter.hideFaceBookRequest = true
+            ad.saveContext()
+            
+            followMeOnFacebook()
+        }
     }
     
     // MARK: - Text Field Options
@@ -52,7 +60,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         if counter.familyTip == false {
             counter.familyTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "Hi and welcome to the\nFamily Home Evening\n(FHE) app!\n👨‍👩‍👧‍👦🏠🌙", message: "\n🙏 Thank you for installing the FHE app. I hope you enjoy it.\n-Rylan Evans\n\nSince this is your first time here, I will help guide you with “TIPS & TRICKS” alerts for each of the main pages. There is a prepopulated example family that you can either delete or modify. Press the “+” in the top right corner to begin...", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Hi and welcome to the\nFamily Home Evening\n(FHE) app!\n👨‍👩‍👧‍👦🏠🌙", message: "\nThank you for installing the FHE app. I hope you enjoy it. 🙏\n-Rylan Evans\n\nSince this is your first time here, I will help guide you with “TIPS & TRICKS” alerts for each of the main pages. There is a prepopulated example family that you can either delete or modify. Press the “+” in the top right corner to begin...", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
@@ -91,9 +99,52 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func followMeOnFacebook() {
+        let alertController = UIAlertController(title: "👍 Facebook?", message: "Are you intrested in following me on facebook?", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Yes, I'll follow you.", style: .default, handler: {
+            alert -> Void in
+            self.facebookFollower()
+        })
+        
+        let dislikeAction = UIAlertAction(title: "✗ No, thank you.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            counter.facebookRequest = true
+            ad.saveContext()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel, maybe another time.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(likeAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     func allApps() {
         UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: ["":""], completionHandler: nil)
         counter.seeApps = true
+        ad.saveContext()
+    }
+    
+    func facebookFollower() {
+        let id = 660877290751092
+        let url = NSURL(string: "fb://profile/\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
+            let facebookWeb = SFSafariViewController(url: URL as URL)
+            facebookWeb.delegate = self
+            
+            present(facebookWeb, animated: true, completion: nil)
+        }
+        
+        counter.facebookRequest = true
         ad.saveContext()
     }
     
@@ -297,5 +348,11 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         default:
             break
         }
+    }
+}
+
+extension FamilyTVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }

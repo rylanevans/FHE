@@ -64,7 +64,12 @@ class TreatVC: UIViewController {
         if let task = specificTask.selectedTreat {
             treatTitleLabel.text = task.title
             treatCategoryLabel.text = task.category
-            treatURL = task.url ?? "https://www.pinterest.com/search/pins/?q=treats"
+            
+            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+                treatURL = "https://www.pinterest.com/search/pins/?q=treats"
+            } else {
+                treatURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {

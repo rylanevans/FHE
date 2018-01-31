@@ -54,6 +54,7 @@ class CalendarDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         if calendar.selectedCalendar != nil {
             loadCalendarData()
         }
+        checkValidTitle()
     }
     
     override func viewDidAppear(_ animated: Bool) {

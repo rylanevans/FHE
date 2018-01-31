@@ -40,7 +40,12 @@ class ThoughtVC: UIViewController {
         if let task = specificTask.selectedThought {
             thoughtTitleLabel.text = task.title
             thoughtDetailLabel.text = task.detail
-            thoughtURL = task.url ?? "https://en.wiktionary.org/"
+            
+            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+                thoughtURL = "https://www.lds.org/?lang=eng"
+            } else {
+                thoughtURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {

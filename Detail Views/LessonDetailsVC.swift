@@ -117,7 +117,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://”", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://”.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

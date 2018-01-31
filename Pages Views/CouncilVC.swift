@@ -40,7 +40,12 @@ class CouncilVC: UIViewController {
         if let task = specificTask.selectedCouncil {
             councilTitleLabel.text = task.title
             councilDetailLabel.text = task.detail
-            councilURL = task.url ?? "https://www.lds.org/blog/the-beginners-guide-to-family-councils?lang=eng"
+            
+            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+                councilURL = "https://www.lds.org/blog/the-beginners-guide-to-family-councils?lang=eng"
+            } else {
+                councilURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {

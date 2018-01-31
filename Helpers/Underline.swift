@@ -24,7 +24,7 @@ extension UILabel {
         
         self.layer.masksToBounds = false
         self.layer.shadowColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.35)
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }

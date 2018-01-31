@@ -17,7 +17,7 @@ func generateThought() {
     thought.selectedOne = taskThought
     thought.title = "I've been thinking..."
     thought.detail = "While knowledge is orderly and cumulative, information is random and miscellaneous."
-    thought.url = "https://www.mormonchannel.org/watch/series/mormon-channel-studio/mormon-channel-studio-nashville-tribute-band"
+    thought.url = "https://www.mormonchannel.org/"
     thought.selected = true
     
     ad.saveContext()

@@ -159,7 +159,7 @@ func generateQuotes() {
     let quote14 = Quote(context: context)
     quote14.selectedOne = taskQuote
     quote14.title = "Daily Quote"
-    quote14.detail = "Press “See details” to read todays inspiring quote.\n\n- from the Mormon Channel"
+    quote14.detail = "Press “Details” to read todays inspiring quote.\n\n- from the Mormon Channel"
     quote14.url = "https://www.mormonchannel.org/blog"
     quote14.order = 14
     quote14.favorite = true

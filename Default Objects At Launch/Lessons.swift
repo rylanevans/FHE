@@ -1091,5 +1091,19 @@ func generateLessons() {
     lesson98.sortingIndex = 0
     lesson98.alphabet = String(describing: lesson98.title![(lesson98.title!.startIndex)])
     
+    let lesson99 = Lesson(context: context)
+    lesson99.category = "Temporal"
+    lesson99.topic = "Spiritual"
+    lesson99.title = "Trials are Often Blessings in Disguise"
+    lesson99.detail = "Our struggles and trials are often worth it in the end."
+    lesson99.url = "https://www.youtube.com/watch?v=TizrHKEqvqA"
+    lesson99.youTubeVideo = true
+    lesson99.order = 9
+    lesson99.favorite = false
+    lesson99.random = Int64(arc4random_uniform(1000))
+    lesson99.selected = false
+    lesson99.sortingIndex = 0
+    lesson99.alphabet = String(describing: lesson99.title![(lesson99.title!.startIndex)])
+    
     ad.saveContext()
 }

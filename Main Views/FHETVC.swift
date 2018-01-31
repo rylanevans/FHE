@@ -37,18 +37,6 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         runTutorial()
     }
     
-//    func test() {
-//        let test = membersAttendingArray[1]
-//        let name = test.name
-//        let array = [name, "cow", "camel", "sheep", "goat"]
-//
-//        let defaults = UserDefaults.standard
-//        defaults.set(array, forKey: "SavedStringArray")
-//
-//        let myarray = defaults.stringArray(forKey: "SavedStringArray") ?? [String]()
-//        print(myarray)
-//    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true

@@ -42,6 +42,7 @@ class FamilyCell: UITableViewCell {
         if UIViewController.clickSound.isPlaying {
             UIViewController.clickSound.stop()
         }
+        
         UIViewController.clickSound.play()
     }
     
@@ -52,7 +53,9 @@ class FamilyCell: UITableViewCell {
     }
     
     @IBAction func attendingSwitchPressed(_ sender: Any) {
-        playClick()
+        if counter.launched > 1 {
+            playClick()
+        }
         delegate?.attendingNeedsChanged(self)
         runAssignmentsYoungestToOldest()
     }

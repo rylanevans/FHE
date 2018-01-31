@@ -110,7 +110,7 @@ class AssignmentCell: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSou
         case "Thought": selectedName = (task.selectedThought?.title) ?? "No Thought selected"
         case "Quote": selectedName = "✓\(task.selectedQuote?.title ?? "No Quote selected")"
         case "Lesson": selectedName = "✓\(task.selectedLesson?.title ?? "No Lesson selected")"
-        case "Counsil": selectedName = (task.selectedCouncil?.title) ?? "No Counsil selected"
+        case "Council": selectedName = (task.selectedCouncil?.title) ?? "No Council selected"
         case "Activity": selectedName = "✓\(task.selectedGame?.title ?? "No Activity selected")"
         case "Closing Prayer": selectedName = (task.selectedClosing?.title) ?? "No Prayer selected"
         case "Treat": selectedName = "✓\(task.selectedTreat?.title ?? "No Treat selected")"

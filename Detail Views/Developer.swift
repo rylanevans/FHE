@@ -63,7 +63,8 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             case 7: twitter()
             case 8: linkedin()
             case 9: yelp()
-            case 10: patreon()
+            case 10: google()
+            case 11: patreon()
             default: print("Error with MoreTVC index selection")
             }
         }
@@ -167,6 +168,22 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             yelpWebVC.delegate = self
             
             present(yelpWebVC, animated: true, completion: nil)
+        }
+    }
+    
+    func google() {
+        let id = "?q=Rylan+Evans'+Apps&center=40.3963818,-112.038677&zoom=10"
+        let url = NSURL(string: "comgooglemaps://\(id)")!
+
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.google.com/maps/search/Rylan+Evans'+Apps/@40.3963818,-112.038677,10z")!
+            
+            let googleWebVC = SFSafariViewController(url: URL as URL)
+            googleWebVC.delegate = self
+            
+            present(googleWebVC, animated: true, completion: nil)
         }
     }
     

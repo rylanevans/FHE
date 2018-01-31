@@ -18,6 +18,7 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     @IBOutlet weak var thoughtAssigneeText: UITextField!
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var hideSaveButton: UIImageView!
+    @IBOutlet weak var thoughtURLTextField: UITextField!
     
     let memberPicker = UIPickerView()
     
@@ -41,6 +42,7 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         thoughtAssigneeText.inputAccessoryView = toolBar
         thoughtTitleTextField.inputAccessoryView = toolBar
         thoughtDetailsTextField.inputAccessoryView = toolBar
+        thoughtURLTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
@@ -114,14 +116,15 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     
     func checkValidTitle() {
         let text = thoughtTitleTextField.text
-        if text?.isEmpty == false {
+        let url = thoughtURLTextField.text
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && url?.hasPrefix("https://") == true) {
             hideSaveButton.isHidden = true
             saveButton.isEnabled = true
         } else {
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://”.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
@@ -152,6 +155,10 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
             thoughtToSave?.detail = details
         }
         
+        if let url = thoughtURLTextField.text {
+            thoughtToSave?.url = url
+        }
+        
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
@@ -161,6 +168,7 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         if let thoughtToEdit = thought.selectedThought {
             thoughtTitleTextField.text = thoughtToEdit.title
             thoughtDetailsTextField.text = thoughtToEdit.detail
+            thoughtURLTextField.text = thoughtToEdit.url
         }
     }
     

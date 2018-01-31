@@ -191,7 +191,25 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
-        deleteAlertMessage()
+        getArrayOfAttendingMembersAutoAssignOrder()
+        if arrayOfAttendingMembersAutoAssignOrder.count <= 1 {
+            deleteNotAllowed()
+        } else {
+            deleteAlertMessage()
+        }
+    }
+    
+    func deleteNotAllowed() {
+        let alertController = UIAlertController(title: "⛔️ DELETION PROHIBITED!", message: "You can not delete the last attending family member? In other words, you must have at least two attending family members before you can delete this profile.", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func deleteAlertMessage() {

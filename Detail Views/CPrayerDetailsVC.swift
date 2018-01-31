@@ -57,8 +57,8 @@ class CPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         
         if closingPrayer.selectedPrayer != nil{
             loadPrayerData()
-            checkValidTitle()
         }
+        checkValidTitle()
     }
     
     override func viewDidAppear(_ animated: Bool) {

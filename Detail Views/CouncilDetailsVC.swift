@@ -18,6 +18,7 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     @IBOutlet weak var councilAssigneeText: UITextField!
     @IBOutlet weak var saveButton: BounceButton!
     @IBOutlet weak var hideSaveButton: UIImageView!
+    @IBOutlet weak var councilURLTextField: UITextField!
     
     let memberPicker = UIPickerView()
     
@@ -41,6 +42,7 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         councilAssigneeText.inputAccessoryView = toolBar
         councilTitleTextField.inputAccessoryView = toolBar
         councilDetailsTextField.inputAccessoryView = toolBar
+        councilURLTextField.inputAccessoryView = toolBar
         
         self.clickSoundURL()
         
@@ -152,6 +154,10 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
             councilToSave?.detail = details
         }
         
+        if let url = councilURLTextField.text {
+            councilToSave?.url = url
+        }
+        
         ad.saveContext()
         
         _ = navigationController?.popViewController(animated: true)
@@ -161,6 +167,7 @@ class CouncilDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         if let councilToEdit = council.selectedCouncil {
             councilTitleTextField.text = councilToEdit.title
             councilDetailsTextField.text = councilToEdit.detail
+            councilURLTextField.text = councilToEdit.url
         }
     }
     

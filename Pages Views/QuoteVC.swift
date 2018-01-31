@@ -40,7 +40,12 @@ class QuoteVC: UIViewController {
         if let task = specificTask.selectedQuote {
             quoteTitleLabel.text = task.title
             quoteDetailLabel.text = task.detail
-            quoteURL = task.url ?? "https://www.pinterest.com/pin/42221315236979309/?lp=true"
+            
+            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+                quoteURL = "https://www.pinterest.com/pin/42221315236979309/?lp=true"
+            } else {
+                quoteURL = task.url!
+            }
         }
         
         if let assignee = specificTask.assignment {

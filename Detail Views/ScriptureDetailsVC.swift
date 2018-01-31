@@ -270,12 +270,21 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
         }
         
         if let book = scriptureBookTextField.text {
-            scripture.book = book
-            scripture.order = Int64(defaultScriptureDictionary["\(book)"]!)
+            if scriptureBookTextField.text == nil || scriptureBookTextField.text == "" {
+                scripture.book = ""
+                scripture.order = Int64(0)
+            } else {
+                scripture.book = book
+                scripture.order = Int64(defaultScriptureDictionary["\(book)"]!)
+            }
         }
         
         if let chapter = scriptureChapterTextField.text {
-            scripture.chapter = Int64(chapter)!
+            if scriptureChapterTextField.text == nil || scriptureChapterTextField.text == "" {
+                scripture.chapter = Int64(0)
+            } else {
+                scripture.chapter = Int64(chapter)!
+            }
         }
         
         if let verse = scriptureVerseTextField.text {
