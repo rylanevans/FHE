@@ -9,6 +9,7 @@
 import UIKit
 import MessageUI
 import StoreKit
+import SafariServices
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
@@ -125,7 +126,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["customerservice@rylanevans.com"])
+        mailController.setToRecipients(["rylanevans@hotmail.com"])
         mailController.setSubject("FHE App Tips")
         mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
@@ -152,7 +153,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["support@rylanevans.com"])
+        mailController.setToRecipients(["rylanevans@hotmail.com"])
         mailController.setSubject("FHE App Bugs")
         mailController.setMessageBody("Please provide details to the problem(s) you are experiencing...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
@@ -161,15 +162,23 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
     // MARK: -  MFMailComposeViewControllerDelegate Method to subscribe
     
+//    func subscribeEmail() {
+//        guard MFMailComposeViewController.canSendMail() else {return}
+//        let mailController = MFMailComposeViewController()
+//        mailController.mailComposeDelegate = self
+//        mailController.setToRecipients(["rylanevans@hotmail.com"])
+//        mailController.setSubject("FHE App Subscription")
+//        mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
+//
+//        self.present(mailController, animated: true, completion: nil)
+//    }
+    
     func subscribe() {
-        guard MFMailComposeViewController.canSendMail() else {return}
-        let mailController = MFMailComposeViewController()
-        mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["subscribe@rylanevans.com"])
-        mailController.setSubject("FHE App Subscription")
-        mailController.setMessageBody("Please add any emails below that you would like to include for future updates and new app releases...", isHTML: false)
+        let URL = NSURL(string: "https://docs.google.com/forms/d/e/1FAIpQLSd-mtNgUloOsryGRlv2PuGHd1Nz3feIDLobkoFgrvMkL487TQ/viewform?usp=sf_link")!
+        let subscribeWeb = SFSafariViewController(url: URL as URL)
+        subscribeWeb.delegate = self
         
-        self.present(mailController, animated: true, completion: nil)
+        present(subscribeWeb, animated: true, completion: nil)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -230,6 +239,12 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
                 print("Error with MoreTVC index selection")
             }
         }
+    }
+}
+
+extension MoreTVC: SFSafariViewControllerDelegate {
+    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        controller.dismiss(animated: true, completion: nil)
     }
 }
 

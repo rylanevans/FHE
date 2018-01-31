@@ -110,7 +110,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         let mailController = MFMailComposeViewController()
         mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["customerservice@rylanevans.com"])
+        mailController.setToRecipients(["rylanevans@hotmail.com"])
         mailController.setSubject("FHE App Tips")
         mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
         
