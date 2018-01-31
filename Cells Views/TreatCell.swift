@@ -19,6 +19,7 @@ class TreatCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: TreatCellDelegate?
     
@@ -67,6 +68,7 @@ class TreatCell: UITableViewCell {
         let category = treat.category
         let onDeck = treat.selected
         let favorite = treat.favorite
+        let url = treat.url
         categoryLabel.text = category
         titleLabel.text = title
         if onDeck == true {
@@ -78,6 +80,10 @@ class TreatCell: UITableViewCell {
             favoriteImage.isHidden = false
         } else {
             favoriteImage.isHidden = true
+        }
+        
+        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+            previewTextField.isEnabled = false
         }
     }
 }

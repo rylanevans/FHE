@@ -582,6 +582,7 @@
                                     <outlet property="favoriteImage" destination="qMD-sD-lP4" id="97M-ex-p07"/>
                                     <outlet property="numberLabel" destination="xUW-6g-xtE" id="mNg-SD-JH7"/>
                                     <outlet property="onDeckImage" destination="ZCv-oA-AJk" id="81d-UX-lgD"/>
+                                    <outlet property="previewTextField" destination="6an-Kn-lJF" id="rcS-ga-er7"/>
                                     <outlet property="titleLabel" destination="gSI-Cq-29i" id="q4A-cz-IQr"/>
                                     <outlet property="topicLabel" destination="uh9-qd-hDy" id="Az7-uB-C7d"/>
                                 </connections>
@@ -2265,6 +2266,7 @@
                                     <outlet property="detailsLabel" destination="13A-SF-tU3" id="HmL-xU-SGH"/>
                                     <outlet property="favoriteImage" destination="nQz-eN-bnW" id="OuL-AW-2PI"/>
                                     <outlet property="onDeckImage" destination="KM7-sc-K2B" id="B6g-Ue-QXv"/>
+                                    <outlet property="previewTextField" destination="SuQ-j4-W83" id="B0e-Gs-XnL"/>
                                     <outlet property="titleLabel" destination="WkL-Tw-RMH" id="xeZ-Hn-6UF"/>
                                 </connections>
                             </tableViewCell>
@@ -3141,6 +3143,7 @@
                                 <connections>
                                     <outlet property="favoriteImage" destination="WHe-gm-7oa" id="LLQ-Jx-9c8"/>
                                     <outlet property="onDeckImage" destination="6vF-ZF-Kfl" id="9WI-S5-U1p"/>
+                                    <outlet property="previewTextField" destination="Y4w-9Q-YYm" id="f83-56-FNl"/>
                                     <outlet property="scriptureLabel" destination="TbN-pb-36h" id="nce-Hk-GUa"/>
                                     <outlet property="titleLabel" destination="NF6-I3-1PN" id="evb-i1-xcx"/>
                                     <outlet property="topicLabel" destination="IaO-p8-ZZv" id="VoD-65-fUd"/>
@@ -4047,6 +4050,7 @@
                                     <outlet property="detailsLabel" destination="cZu-bt-Nb2" id="H3U-lw-JBj"/>
                                     <outlet property="favoriteImage" destination="y2L-qz-rWO" id="Jj1-e3-0mK"/>
                                     <outlet property="onDeckImage" destination="cZc-dw-3uK" id="Of6-b5-XE2"/>
+                                    <outlet property="previewTextField" destination="Sxc-0m-rG8" id="dPK-wg-EpA"/>
                                     <outlet property="titleLabel" destination="jP5-wL-YKL" id="TZq-D0-NVh"/>
                                 </connections>
                             </tableViewCell>
@@ -4638,6 +4642,7 @@
                                     <outlet property="categoryLabel" destination="ql0-Td-IzW" id="LA0-hq-4TZ"/>
                                     <outlet property="favoriteImage" destination="l4a-Mg-ZyU" id="CFE-gA-crC"/>
                                     <outlet property="onDeckImage" destination="9BE-0u-h0N" id="4Ox-5u-iFP"/>
+                                    <outlet property="previewTextField" destination="7F0-Ah-gWP" id="44J-FF-9tg"/>
                                     <outlet property="titleLabel" destination="CfK-ET-l8a" id="e4G-Yk-QZ5"/>
                                     <outlet property="topicLabel" destination="Etg-m3-p4g" id="rwm-qw-A1U"/>
                                     <outlet property="youTubeStackView" destination="G9F-zQ-5zC" id="ZWZ-w3-9q3"/>
@@ -5564,6 +5569,7 @@
                                     <outlet property="categoryLabel" destination="CTm-iS-qov" id="hnK-2q-liy"/>
                                     <outlet property="favoriteImage" destination="vq0-eR-70T" id="5Ni-TN-DCh"/>
                                     <outlet property="onDeckImage" destination="4cT-Wu-l8M" id="dIj-Oc-Nz6"/>
+                                    <outlet property="previewTextField" destination="uJI-bA-k8C" id="q1S-Te-g48"/>
                                     <outlet property="titleLabel" destination="TZH-N9-NcH" id="ElJ-Cw-9O2"/>
                                 </connections>
                             </tableViewCell>
@@ -8055,6 +8061,7 @@
                                     <outlet property="categoryLabel" destination="fU5-9e-nHx" id="iJz-GB-s8X"/>
                                     <outlet property="favoriteImage" destination="DGW-ak-C56" id="Hzb-eH-06Z"/>
                                     <outlet property="onDeckImage" destination="2UT-ZH-xsz" id="uuU-j2-Jtl"/>
+                                    <outlet property="previewTextField" destination="hVV-jT-soe" id="MW8-KE-T5b"/>
                                     <outlet property="titleLabel" destination="op7-YY-Cz6" id="VTA-wm-hZQ"/>
                                 </connections>
                             </tableViewCell>

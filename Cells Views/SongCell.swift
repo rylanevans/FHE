@@ -21,6 +21,7 @@ class SongCell: UITableViewCell {
     @IBOutlet weak var bookLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: SongCellDelegate?
     
@@ -71,6 +72,7 @@ class SongCell: UITableViewCell {
         let book = song.book
         let onDeck = song.selected
         let favorite = song.favorite
+        let url = song.url
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
         if number == "0" || number == "" {
@@ -88,6 +90,10 @@ class SongCell: UITableViewCell {
             favoriteImage.isHidden = false
         } else {
             favoriteImage.isHidden = true
+        }
+        
+        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+            previewTextField.isEnabled = false
         }
     }
 }

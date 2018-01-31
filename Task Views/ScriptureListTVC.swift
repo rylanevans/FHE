@@ -516,10 +516,10 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
             let predicateTitle = NSPredicate(format: "title contains[c] %@", targetText!)
             let predicateVolume = NSPredicate(format: "volume contains[c] %@", targetText!)
             let predicateBook = NSPredicate(format: "book contains[c] %@", targetText!)
-            let predicateChapter = NSPredicate(format: "chapter contains[c] %@", targetText!)
+//            let predicateChapter = NSPredicate(format: "chapter contains[c] %@", targetText!)
             let predicateVerse = NSPredicate(format: "verse contains[c] %@", targetText!)
             let predicateTopic = NSPredicate(format: "topic contains[c] %@", targetText!)
-            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateTopic, predicateVolume, predicateBook, predicateChapter, predicateVerse])
+            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateTopic, predicateVolume, predicateBook, predicateVerse])
             
             fetchRequest.predicate = predicateCompound
             //            fetchRequest.predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)

@@ -438,9 +438,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         if targetText != nil {
             fetchRequest.sortDescriptors = [sortByTitle]
             let predicateTitle = NSPredicate(format: "title contains[c] %@", targetText!)
-            let predicateNumber = NSPredicate(format: "number contains[c] %@", targetText!)
+//            let predicateNumber = NSPredicate(format: "number contains[c] %@", targetText!)
             let predicateTopic = NSPredicate(format: "topic contains[c] %@", targetText!)
-            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateNumber, predicateTopic])
+            let predicateCompound = NSCompoundPredicate(type: .or, subpredicates: [predicateTitle, predicateTopic])
 
             fetchRequest.predicate = predicateCompound
 //            fetchRequest.predicate = NSPredicate(format: "\(filterKeyword) contains[c] %@", targetText!)

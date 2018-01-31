@@ -19,6 +19,7 @@ class QuoteCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: QuoteCellDelegate?
     
@@ -67,6 +68,7 @@ class QuoteCell: UITableViewCell {
         let detail = quote.detail
         let onDeck = quote.selected
         let favorite = quote.favorite
+        let url = quote.url
         detailsLabel.text = detail
         titleLabel.text = title
         if onDeck == true {
@@ -78,6 +80,10 @@ class QuoteCell: UITableViewCell {
             favoriteImage.isHidden = false
         } else {
             favoriteImage.isHidden = true
+        }
+        
+        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+            previewTextField.isEnabled = false
         }
     }
 }

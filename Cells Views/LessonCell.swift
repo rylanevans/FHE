@@ -21,6 +21,7 @@ class LessonCell: UITableViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
     @IBOutlet weak var youTubeStackView: UIStackView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: LessonCellDelegate?
     
@@ -71,6 +72,7 @@ class LessonCell: UITableViewCell {
         let onDeck = lesson.selected
         let favorite = lesson.favorite
         let youTube = lesson.youTubeVideo
+        let url = lesson.url
         topicLabel.text = "\(topic)   "
         titleLabel.text = title
         categoryLabel.text = category
@@ -88,6 +90,10 @@ class LessonCell: UITableViewCell {
             favoriteImage.isHidden = false
         } else {
             favoriteImage.isHidden = true
+        }
+        
+        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+            previewTextField.isEnabled = false
         }
     }
 }

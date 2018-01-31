@@ -19,6 +19,7 @@ class RuleCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: RuleCellDelegate?
     
@@ -67,6 +68,7 @@ class RuleCell: UITableViewCell {
         let detail = rule.detail
         let onDeck = rule.selected
         let favorite = rule.favorite
+        let url = rule.url
         detailsLabel.text = "\(detail ?? "")"
         titleLabel.text = title
         if onDeck == true {
@@ -78,6 +80,9 @@ class RuleCell: UITableViewCell {
             favoriteImage.isHidden = false
         } else {
             favoriteImage.isHidden = true
+        }
+        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+            previewTextField.isEnabled = false
         }
     }
 }

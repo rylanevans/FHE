@@ -66,8 +66,6 @@ func runAssignments() {
     
     if membersAttendingArray.count == 0 {
         arrayOfAttendingMembersAutoAssignOrder = membersPickerArray
-    } else {
-        arrayOfAttendingMembersAutoAssignOrder = membersAttendingArray
     }
     
     var index = 0

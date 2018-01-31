@@ -20,6 +20,7 @@ class ScriptureCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scriptureLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: ScriptureCellDelegate?
     

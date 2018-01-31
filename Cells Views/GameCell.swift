@@ -19,6 +19,7 @@ class GameCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIImageView!
+    @IBOutlet weak var previewTextField: UIButton!
     
     var delegate: GameCellDelegate?
     
@@ -67,6 +68,7 @@ class GameCell: UITableViewCell {
         let category = game.category
         let onDeck = game.selected
         let favorite = game.favorite
+        let url = game.url
         categoryLabel.text = category
         titleLabel.text = title
         if onDeck == true {
@@ -78,6 +80,10 @@ class GameCell: UITableViewCell {
             favoriteImage.isHidden = false
         } else {
             favoriteImage.isHidden = true
+        }
+        
+        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+            previewTextField.isEnabled = false
         }
     }
 }
