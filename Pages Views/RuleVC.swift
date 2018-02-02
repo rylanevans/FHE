@@ -64,7 +64,7 @@ class RuleVC: UIViewController {
             ruleTitleLabel.text = task.title
             ruleDetailLabel.text = task.detail
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 ruleURL = "https://drive.google.com/drive/my-drive"
             } else {
                 ruleURL = task.url!

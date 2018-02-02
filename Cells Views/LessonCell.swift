@@ -92,7 +92,7 @@ class LessonCell: UITableViewCell {
             favoriteImage.isHidden = true
         }
         
-        if url == nil || url == "" || url?.hasPrefix("https://") != true {
+        if url == nil || url == "" {
             previewTextField.isEnabled = false
         }
     }

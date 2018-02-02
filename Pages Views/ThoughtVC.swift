@@ -41,7 +41,7 @@ class ThoughtVC: UIViewController {
             thoughtTitleLabel.text = task.title
             thoughtDetailLabel.text = task.detail
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 thoughtURL = "https://www.lds.org/?lang=eng"
             } else {
                 thoughtURL = task.url!

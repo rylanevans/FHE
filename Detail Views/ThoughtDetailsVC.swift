@@ -117,14 +117,14 @@ class ThoughtDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     func checkValidTitle() {
         let text = thoughtTitleTextField.text
         let url = thoughtURLTextField.text
-        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && url?.hasPrefix("https://") == true) {
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && (url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true)) {
             hideSaveButton.isHidden = true
             saveButton.isEnabled = true
         } else {
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://” or “http://”.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

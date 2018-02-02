@@ -65,7 +65,7 @@ class TreatVC: UIViewController {
             treatTitleLabel.text = task.title
             treatCategoryLabel.text = task.category
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 treatURL = "https://www.pinterest.com/search/pins/?q=treats"
             } else {
                 treatURL = task.url!

@@ -42,7 +42,7 @@ class GameVC: UIViewController {
             gameTitleLabel.text = task.title
             gameCategoryLabel.text = task.category
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 gameURL = "https://www.wikihow.com/Main-Page"
             } else {
                 gameURL = task.url!

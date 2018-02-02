@@ -74,7 +74,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
                 songNumberLabel.text = "\(book)  #\(number)"
             }
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 songURL = "https://www.lds.org/music/library?lang=eng"
             } else {
                 songURL = task.url!

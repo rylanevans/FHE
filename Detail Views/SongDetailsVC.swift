@@ -90,7 +90,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
     func checkValidTitle() {
         let text = songTitleTextField.text
         let url = songURLTextField.text
-        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && url?.hasPrefix("https://") == true) {
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && (url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true)) {
             hideSaveButton.isHidden = true
             self.navigationItem.title = text
             saveButton.isEnabled = true
@@ -98,7 +98,7 @@ class SongDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSour
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://” or “http://”.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

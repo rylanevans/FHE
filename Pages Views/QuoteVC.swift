@@ -41,7 +41,7 @@ class QuoteVC: UIViewController {
             quoteTitleLabel.text = task.title
             quoteDetailLabel.text = task.detail
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 quoteURL = "https://www.pinterest.com/pin/42221315236979309/?lp=true"
             } else {
                 quoteURL = task.url!

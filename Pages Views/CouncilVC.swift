@@ -41,7 +41,7 @@ class CouncilVC: UIViewController {
             councilTitleLabel.text = task.title
             councilDetailLabel.text = task.detail
             
-            if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            if task.url == nil || task.url == "" {
                 councilURL = "https://www.lds.org/blog/the-beginners-guide-to-family-councils?lang=eng"
             } else {
                 councilURL = task.url!

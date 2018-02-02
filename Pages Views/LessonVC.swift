@@ -87,7 +87,7 @@ class LessonVC: UIViewController {
             if task.url != nil && task.youTubeVideo == true {
                 let url = (task.url?.components(separatedBy: "=")[1])!
                 lessonURL = "https://www.youtube.com/embed/\(url)?rel=0&amp;controls=0&amp;showinfo=0"
-            } else if task.url == nil || task.url == "" || task.url?.hasPrefix("https://") != true {
+            } else if task.url == nil || task.url == "" {
                 lessonURL = "https://www.lds.org/?lang=eng"
             } else {
                 lessonURL = task.url!
