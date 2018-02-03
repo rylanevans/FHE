@@ -53,9 +53,9 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         if counter.tasksTip == false {
             counter.tasksTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family. After you've seen each of the tasks “disable” those you want off.\n\nTIP - See tutorials in the “More” tab for video demos or to see any of the “TIPS & TRICKS” you may want to review again.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - I suggest you turn everything on the first time to get an idea of what's avaliable and which ones you may like to have enabled for your family. After you've seen each of the tasks “disable” those you want off.\n\nTIP - See tutorials in the “More” tab for video demos or to see any of the “TIPS & TRICKS” you may want to review again.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             
@@ -67,7 +67,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     }
     
     func checkPositiveOrNegitiveFeedback() {
-        let alertController = UIAlertController(title: "👍 APP FEEDBACK?", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "APP FEEDBACK?", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
         
         let likeAction = UIAlertAction(title: "✓ Yes", style: .default, handler: {
             alert -> Void in
@@ -122,7 +122,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     }
     
     func checkIfUserWantsToShare() {
-        let alertController = UIAlertController(title: "📣 SHARE APP?", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "SHARE APP?", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "✓ Yea, sure", style: .default, handler: {
             alert -> Void in

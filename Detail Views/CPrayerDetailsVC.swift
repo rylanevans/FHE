@@ -127,9 +127,9 @@ class CPrayerDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             

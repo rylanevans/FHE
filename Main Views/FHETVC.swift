@@ -63,9 +63,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         if counter.homeTip == false {
             counter.homeTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTRICK - Anything in orange text or an orange image is a button or a link to something. Try it out!\n\nTIP - The “✓” in front of the task Title means there are multiple choices and that's the one you selected.\n\nTIP - When you are ready with the selected tasks and desired assignments press the “BEGIN” button to start your family meeting.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             
@@ -79,7 +79,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func editButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "✅ AUTO-ASSIGNMENT", message: "Auto-assign all enabled tasks (youngest to oldest)?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "＋ AUTO-ASSIGNMENT", message: "Auto-assign all enabled tasks (youngest to oldest)?", preferredStyle: .alert)
         
         let rotateAction = UIAlertAction(title: "✓ Assign", style: .default, handler: {
             alert -> Void in
@@ -100,7 +100,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "♻️ ASSIGNMENT ROTATION", message: "Rotate assignments for all enabled tasks that are not manually assigned?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "♺ ASSIGNMENT ROTATION", message: "Rotate assignments for all enabled tasks that are not manually assigned?", preferredStyle: .alert)
         
         let rotateAction = UIAlertAction(title: "✓ Rotate", style: .default, handler: {
             alert -> Void in

@@ -73,9 +73,9 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://” or “http://”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://” or “http://”.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             
@@ -177,7 +177,7 @@ class QuoteDetailsVC: UIViewController, UITextFieldDelegate {
     }
     
     func deleteAlertMessage() {
-        let alertController = UIAlertController(title: "⚠️ DELETE WARNING!", message: "Are you sure you want to delete this quote?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "⚠ DELETE WARNING!", message: "Are you sure you want to delete this quote?", preferredStyle: .alert)
         
         let deleteAction = UIAlertAction(title: "✗ Delete", style: .default, handler: {
             alert -> Void in

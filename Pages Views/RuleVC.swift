@@ -33,9 +33,9 @@ class RuleVC: UIViewController {
         if counter.rulesTip == false {
             counter.rulesTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - I suggest creating your own family rules using Google Docs. Once created, you can right click the Google Doc file to “get shareable link” and paste that in the URL for your custom rule(s). In my family, we have found reviewing rules regulary in our family meetings helps create better awareness, acceptance, and compliance.\n\nTIP - Press the “Details” button to see an example of family rules.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - I suggest creating your own family rules using Google Docs. Once created, you can right click the Google Doc file to “get shareable link” and paste that in the URL for your custom rule(s). In my family, we have found reviewing rules regulary in our family meetings helps create better awareness, acceptance, and compliance.\n\nTIP - Press the “Details” button to see an example of family rules.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             

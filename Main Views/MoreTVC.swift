@@ -83,7 +83,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func checkPositiveOrNegitiveFeedback() {
-        let alertController = UIAlertController(title: "👍 App Feedback", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "App Feedback", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
         
         let likeAction = UIAlertAction(title: "✓ Yes", style: .default, handler: {
             alert -> Void in

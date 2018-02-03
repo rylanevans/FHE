@@ -86,9 +86,9 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         if counter.songDetailsTip == false {
             counter.songDetailsTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Press the empty box to select the song you would like to sing in your family meeting.\n\nTIP - Only one song can be selected at a time.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTRICK - Press the “Auto-Assign” button on the top to manually assign someone permanently. Otherwise leave it blank for auto-assign to work.\n\nTRICK - Press the empty box to select the song you would like to sing in your family meeting.\n\nTIP - Only one song can be selected at a time.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             

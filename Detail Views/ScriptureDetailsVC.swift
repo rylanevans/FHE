@@ -113,9 +113,9 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠️ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠ WARNING!", message: "In order to enable save option, you need a “Title”.", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 OK", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             
@@ -340,7 +340,7 @@ class ScriptureDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDat
     }
     
     func deleteAlertMessage() {
-        let alertController = UIAlertController(title: "⚠️ DELETE WARNING!", message: "Are you sure you want to delete this scripture?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "⚠ DELETE WARNING!", message: "Are you sure you want to delete this scripture?", preferredStyle: .alert)
         
         let deleteAction = UIAlertAction(title: "✗ Delete", style: .default, handler: {
             alert -> Void in

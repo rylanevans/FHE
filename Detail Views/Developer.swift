@@ -36,9 +36,9 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         if counter.developerTip == false {
             counter.developerTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "📌 TIPS & TRICKS", message: "\nTIP - This is my marketing page for all app users to share their appreciation for my work. Donations and/or any social followings are appreciated.\nPlease show your support with a tip 💰, a review ⭐️, and/or a like 👍 on any of my social media platforms.\nThank you!", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - This is my marketing page for all app users to share their appreciation for my work. Donations and/or any social followings are appreciated.\nPlease show your support with a tip, a review, and a like on any of my social media platforms.\nThank you!", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "😃 I'm happy to help!", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ I'm happy to help!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             

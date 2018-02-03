@@ -60,9 +60,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         if counter.familyTip == false {
             counter.familyTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "Hi and welcome to the\nFamily Home Evening\n(FHE) app!\n👨‍👩‍👧‍👦🏠🌙", message: "\nThank you for installing the FHE app. I hope you enjoy it. 🙏\n-Rylan Evans\n\nSince this is your first time here, I will help guide you with “TIPS & TRICKS” alerts for each of the main pages. There is a prepopulated example family that you can either delete or modify. Press the “+” in the top right corner to begin...", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Hi and welcome to the\nFamily Home Evening\n(FHE) app!\n", message: "\nThank you for installing the FHE app. I hope you enjoy it.\n-Rylan Evans\n\nSince this is your first time here, I will help guide you with “TIPS & TRICKS” alerts for each of the main pages. There is a prepopulated example family that you can either delete or modify. Press the “+” in the top right corner to begin...", preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "👌 Got it!", style: .default, handler: {
+            let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
             })
             
@@ -74,7 +74,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     func checkIfUSerWantsToSeeMyOtherApps() {
-        let alertController = UIAlertController(title: "📲 OTHER APPS?", message: "Are you intrested in seeing my other apps?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "OTHER APPS?", message: "Are you intrested in seeing my other apps?", preferredStyle: .alert)
         
         let likeAction = UIAlertAction(title: "✓ Yes, I'll take a look.", style: .default, handler: {
             alert -> Void in
@@ -100,7 +100,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     func followMeOnFacebook() {
-        let alertController = UIAlertController(title: "👍 Facebook?", message: "Are you intrested in following me on facebook?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Facebook?", message: "Are you intrested in following me on facebook?", preferredStyle: .alert)
         
         let likeAction = UIAlertAction(title: "✓ Yes, I'll follow you.", style: .default, handler: {
             alert -> Void in
