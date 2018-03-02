@@ -1241,7 +1241,7 @@ func generateSongs() {
     song102.book = songBooksArray[2]
     song102.number = 0
     song102.url = "https://www.youtube.com/watch?v=nomxXk6Q1rk"
-    song102.title = "Glourious"
+    song102.title = "Glorious"
     song102.topic = "Plan of Salvation"
     song102.selected = false
     song102.favorite = true

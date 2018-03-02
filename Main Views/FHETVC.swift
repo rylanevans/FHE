@@ -13,6 +13,9 @@ import CoreData
 class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate, AssignmentCellDelegate {
     @IBOutlet weak var christTeachingImage: UIImageView!
     @IBOutlet weak var assignmentTableView: UITableView!
+    @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
+    @IBOutlet weak var imageHeight: UIImageView!
+    
     
     //    var member: Member?
     //    var task: Task?
@@ -23,6 +26,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
+        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
             NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
             NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
@@ -37,11 +41,6 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         runTutorial()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         getMembersForPicker()
         getMembersAttending()
@@ -51,12 +50,17 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             ad.saveContext()
             performSegue(withIdentifier: "AboutMe", sender: nil)
         }
+        
+        let size = imageHeight.frame.size
+        viewHeight.frame.size = size
         assignmentTableView.reloadData()
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        let size = imageHeight.frame.size
+        viewHeight.frame.size = size
+        assignmentTableView.reloadData()
     }
     
     func runTutorial() {
@@ -79,7 +83,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func editButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "＋ AUTO-ASSIGNMENT", message: "Auto-assign all enabled tasks (youngest to oldest)?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "⟳ RESET", message: "1. Auto-assign all tasks\n2. Sort youngest to oldest", preferredStyle: .alert)
         
         let rotateAction = UIAlertAction(title: "✓ Assign", style: .default, handler: {
             alert -> Void in
@@ -100,7 +104,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
         playClick()
         
-        let alertController = UIAlertController(title: "♺ ASSIGNMENT ROTATION", message: "Rotate assignments for all enabled tasks that are not manually assigned?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "♺ ROTATION", message: "Rotate assignments for all tasks that are NOT manually assigned", preferredStyle: .alert)
         
         let rotateAction = UIAlertAction(title: "✓ Rotate", style: .default, handler: {
             alert -> Void in

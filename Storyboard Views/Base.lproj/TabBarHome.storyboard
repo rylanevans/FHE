@@ -32,13 +32,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="Dz5-eb-DfC">
+                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="Dz5-eb-DfC">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FamilyBG" translatesAutoresizingMaskIntoConstraints="NO" id="yit-FP-ZBH">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <color key="tintColor" name="Accent"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="yit-FP-ZBH" secondAttribute="height" multiplier="15:8" id="Crj-pO-bit"/>
+                                    </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtM-Bi-kPZ" userLabel="Blue Line">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="4"/>
@@ -61,7 +64,6 @@
                                 <constraint firstItem="AtM-Bi-kPZ" firstAttribute="centerX" secondItem="Dz5-eb-DfC" secondAttribute="centerX" id="f05-H6-ssn"/>
                                 <constraint firstItem="yit-FP-ZBH" firstAttribute="centerX" secondItem="Dz5-eb-DfC" secondAttribute="centerX" id="l4Y-hM-Xzh"/>
                                 <constraint firstItem="AtM-Bi-kPZ" firstAttribute="top" secondItem="Dz5-eb-DfC" secondAttribute="top" id="lqz-2D-Hfz"/>
-                                <constraint firstItem="yit-FP-ZBH" firstAttribute="height" secondItem="Dz5-eb-DfC" secondAttribute="height" id="nry-5v-Aro"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -209,6 +211,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageHeight" destination="yit-FP-ZBH" id="2dL-dq-MTv"/>
+                        <outlet property="viewHeight" destination="Dz5-eb-DfC" id="8e2-iR-Awa"/>
                         <segue destination="z09-W1-aaa" kind="show" identifier="MemberDetailsVCExisting" id="h4y-nB-v6D"/>
                     </connections>
                 </tableViewController>
@@ -465,7 +469,7 @@
                         <viewLayoutGuide key="safeArea" id="dpJ-l3-JPO"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Member" id="LPQ-jU-ouS">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="qGF-JT-Mmm">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qGF-JT-Mmm">
                             <connections>
                                 <action selector="cancel:" destination="z09-W1-aaa" id="xyH-3w-3Re"/>
                             </connections>
@@ -531,7 +535,7 @@
                         <color key="tintColor" name="Accent"/>
                     </tabBar>
                     <connections>
-                        <segue destination="LBe-KQ-wgR" kind="relationship" relationship="viewControllers" id="Lkc-Qe-eTQ"/>
+                        <segue destination="H6A-IW-Phm" kind="relationship" relationship="viewControllers" id="1OS-bq-Skd"/>
                         <segue destination="PTO-3H-9Lv" kind="relationship" relationship="viewControllers" id="hjv-Up-wWY"/>
                         <segue destination="O6E-UL-t1p" kind="relationship" relationship="viewControllers" id="C5L-Jy-SSh"/>
                         <segue destination="KbM-YR-tSG" kind="relationship" relationship="viewControllers" id="XIj-uw-p08"/>
@@ -553,320 +557,241 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="c80-MV-Pho" userLabel="Picture and Table">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a9M-Bv-gwV" userLabel="Image and header">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="329.66666666666669"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JesusChrist" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-LN-14A">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="260.66666666666669"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct9-Dg-tH8" userLabel="Blue Line">
-                                                <rect key="frame" x="0.0" y="260.66666666666669" width="375" height="4"/>
-                                                <color key="backgroundColor" name="Accent"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="4" id="B25-Js-beQ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="5"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Family Home Evening" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns5-fd-g1d" userLabel="Light Blue BG">
-                                                <rect key="frame" x="0.0" y="264.66666666666669" width="375" height="65"/>
-                                                <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="65" id="Lzd-zn-G7L"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
-                                                <color key="textColor" name="Accent"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Xbf-LN-14A" secondAttribute="trailing" id="5A3-SR-cte"/>
-                                            <constraint firstItem="Ct9-Dg-tH8" firstAttribute="leading" secondItem="a9M-Bv-gwV" secondAttribute="leading" id="R4a-iA-fOz"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ct9-Dg-tH8" secondAttribute="trailing" id="Ue5-5L-Jo1"/>
-                                            <constraint firstItem="Xbf-LN-14A" firstAttribute="top" secondItem="a9M-Bv-gwV" secondAttribute="top" id="VmO-Ze-U3O"/>
-                                            <constraint firstItem="Xbf-LN-14A" firstAttribute="leading" secondItem="a9M-Bv-gwV" secondAttribute="leading" id="hCB-LR-KUz"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KSk-zz-gqD">
-                                        <rect key="frame" x="0.0" y="329.66666666666674" width="375" height="329.33333333333326"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignments" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3K6-Df-2s4">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="DaM-Kg-k8P"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
-                                                <color key="textColor" name="Text"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfY-Q8-EZl">
-                                                <rect key="frame" x="0.0" y="50" width="375" height="2"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dm-Os-rMD" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="2"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="IBf-ur-Iu5"/>
-                                                            <constraint firstAttribute="height" constant="2" id="UL9-5s-jVw"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df0-sH-6N2" userLabel="Gray Line">
-                                                        <rect key="frame" x="10" y="0.0" width="355" height="2"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="JlN-s1-cc0"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhn-yq-VH2" userLabel="Spacer">
-                                                        <rect key="frame" x="365" y="0.0" width="10" height="2"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="QoU-Th-z6Y"/>
-                                                            <constraint firstAttribute="width" constant="10" id="RiM-Hk-5ib"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQR-L4-ssG">
-                                                <rect key="frame" x="0.0" y="52" width="375" height="2"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95J-u3-JJt" userLabel="Spacer">
-                                                        <rect key="frame" x="0.0" y="0.0" width="10" height="2"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="D7I-ZZ-Yh7"/>
-                                                            <constraint firstAttribute="height" constant="2" id="E09-Dr-78W"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cc-2S-1bY" userLabel="Gray Line">
-                                                        <rect key="frame" x="10" y="0.0" width="355" height="2"/>
-                                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="yNb-Cm-I2g"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDy-Du-i2J" userLabel="Spacer">
-                                                        <rect key="frame" x="365" y="0.0" width="10" height="2"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="2" id="Mnh-AN-uHU"/>
-                                                            <constraint firstAttribute="width" constant="10" id="fEu-Oc-uft"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-f8-Nhu" userLabel="Assignment Table">
-                                                <rect key="frame" x="0.0" y="54" width="375" height="275.33333333333331"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AssignmentCell" rowHeight="61" id="W4q-P9-ZwW" customClass="AssignmentCell" customModule="FHE" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="375" height="61"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W4q-P9-ZwW" id="JEp-di-pef">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uxw-f8-Nhu" userLabel="Assignment Table">
+                                <rect key="frame" x="0.0" y="88" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="r04-sY-i5Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JesusChrist" translatesAutoresizingMaskIntoConstraints="NO" id="Xbf-LN-14A">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Xbf-LN-14A" secondAttribute="height" multiplier="16:9" id="bbJ-nI-EcP"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebc-MK-3QM">
+                                            <rect key="frame" x="0.0" y="165" width="375" height="35"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="AZ6-C7-RkF"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   ASSIGNMENTS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USE-kU-y9N">
+                                            <rect key="frame" x="0.0" y="165" width="375" height="35"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                            <color key="textColor" name="Accent"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ct9-Dg-tH8" userLabel="Blue Line">
+                                            <rect key="frame" x="-1" y="0.0" width="375.66666666666669" height="4"/>
+                                            <color key="backgroundColor" name="Accent"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="4" id="B25-Js-beQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="0.0" height="5"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="Ct9-Dg-tH8" firstAttribute="top" secondItem="r04-sY-i5Q" secondAttribute="top" id="47C-Rv-xHR"/>
+                                        <constraint firstItem="Xbf-LN-14A" firstAttribute="top" secondItem="r04-sY-i5Q" secondAttribute="top" id="7qV-Nz-chR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xbf-LN-14A" secondAttribute="trailing" id="8bs-vd-Sbo"/>
+                                        <constraint firstItem="USE-kU-y9N" firstAttribute="height" secondItem="Ebc-MK-3QM" secondAttribute="height" id="FCL-5s-fqx"/>
+                                        <constraint firstItem="USE-kU-y9N" firstAttribute="centerX" secondItem="Ebc-MK-3QM" secondAttribute="centerX" id="FaM-x1-yEI"/>
+                                        <constraint firstItem="Xbf-LN-14A" firstAttribute="leading" secondItem="r04-sY-i5Q" secondAttribute="leading" id="QFv-bj-zjA"/>
+                                        <constraint firstItem="Ebc-MK-3QM" firstAttribute="width" secondItem="r04-sY-i5Q" secondAttribute="width" id="QJU-w6-cgM"/>
+                                        <constraint firstItem="Ct9-Dg-tH8" firstAttribute="centerX" secondItem="r04-sY-i5Q" secondAttribute="centerX" id="WBv-ic-sI1"/>
+                                        <constraint firstItem="Ct9-Dg-tH8" firstAttribute="width" secondItem="r04-sY-i5Q" secondAttribute="width" id="Yi8-FQ-HRk"/>
+                                        <constraint firstItem="Ebc-MK-3QM" firstAttribute="bottom" secondItem="r04-sY-i5Q" secondAttribute="bottom" id="Znh-rV-Tw7"/>
+                                        <constraint firstItem="Ebc-MK-3QM" firstAttribute="trailing" secondItem="r04-sY-i5Q" secondAttribute="trailing" id="auk-up-YQG"/>
+                                        <constraint firstItem="USE-kU-y9N" firstAttribute="width" secondItem="Ebc-MK-3QM" secondAttribute="width" id="ieq-it-gPx"/>
+                                        <constraint firstItem="USE-kU-y9N" firstAttribute="bottom" secondItem="Ebc-MK-3QM" secondAttribute="bottom" id="kTn-TM-NRg"/>
+                                        <constraint firstItem="Ebc-MK-3QM" firstAttribute="leading" secondItem="r04-sY-i5Q" secondAttribute="leading" id="qaS-1P-lYf"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AssignmentCell" rowHeight="61" id="W4q-P9-ZwW" customClass="AssignmentCell" customModule="FHE" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="228" width="375" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W4q-P9-ZwW" id="JEp-di-pef">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-vK-HJm">
+                                                    <rect key="frame" x="6" y="5.6666666666666679" width="50" height="50"/>
+                                                    <color key="backgroundColor" name="Background"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="0CK-om-1fH"/>
+                                                        <constraint firstAttribute="width" constant="50" id="1Op-Qy-p10"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="Accent"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-dc-3qQ">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="61"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-b0-MfQ">
+                                                            <rect key="frame" x="0.0" y="15.666666666666664" width="30" height="30"/>
+                                                            <color key="tintColor" name="Accent"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="29x-uh-edz"/>
+                                                                <constraint firstAttribute="width" constant="30" id="V6z-kb-43r"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS1-7s-hkh">
+                                                            <rect key="frame" x="30" y="20.333333333333336" width="15" height="20.333333333333336"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="nhC-AQ-gAm"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gho-GZ-9LU">
+                                                            <rect key="frame" x="45" y="4.3333333333333321" width="240" height="52.333333333333343"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tlt-vK-HJm">
-                                                                    <rect key="frame" x="6" y="5.6666666666666679" width="50" height="50"/>
-                                                                    <color key="backgroundColor" name="Background"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="0CK-om-1fH"/>
-                                                                        <constraint firstAttribute="width" constant="50" id="1Op-Qy-p10"/>
-                                                                    </constraints>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="25"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="1"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                            <color key="value" name="Accent"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f9a-dc-3qQ">
-                                                                    <rect key="frame" x="16" y="0.0" width="343" height="61"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
                                                                     <subviews>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="UYC-b0-MfQ">
-                                                                            <rect key="frame" x="0.0" y="15.666666666666664" width="30" height="30"/>
-                                                                            <color key="tintColor" name="Accent"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="30" id="29x-uh-edz"/>
-                                                                                <constraint firstAttribute="width" constant="30" id="V6z-kb-43r"/>
-                                                                            </constraints>
-                                                                        </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GS1-7s-hkh">
-                                                                            <rect key="frame" x="30" y="20.333333333333336" width="15" height="20.333333333333336"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="15" id="nhC-AQ-gAm"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task to be assigned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="149" height="32"/>
+                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                            <color key="textColor" name="Text"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gho-GZ-9LU">
-                                                                            <rect key="frame" x="45" y="4.3333333333333321" width="240" height="52.333333333333343"/>
-                                                                            <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAU-jJ-BlC">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="32"/>
-                                                                                    <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task to be assigned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5b-fX-lol">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="149" height="32"/>
-                                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                                                                            <color key="textColor" name="Text"/>
-                                                                                            <nil key="highlightedColor"/>
-                                                                                        </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assignee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
-                                                                                            <rect key="frame" x="149" y="0.0" width="91" height="32"/>
-                                                                                            <constraints>
-                                                                                                <constraint firstAttribute="width" priority="750" constant="110" id="VQ2-6J-ofm"/>
-                                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="110" id="yJ4-EM-hOe"/>
-                                                                                            </constraints>
-                                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
-                                                                                            <color key="textColor" name="Text"/>
-                                                                                            <nil key="highlightedColor"/>
-                                                                                        </label>
-                                                                                    </subviews>
-                                                                                </stackView>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-gk-Zgi">
-                                                                                    <rect key="frame" x="0.0" y="32" width="240" height="20.333333333333329"/>
-                                                                                    <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Title of the task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="20.333333333333332"/>
-                                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                                                            <color key="textColor" name="Tint"/>
-                                                                                            <nil key="highlightedColor"/>
-                                                                                        </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-1x-N9m">
-                                                                                            <rect key="frame" x="105" y="0.0" width="103" height="20.333333333333332"/>
-                                                                                            <constraints>
-                                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="gs1-rc-mUe"/>
-                                                                                            </constraints>
-                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                            <nil key="textColor"/>
-                                                                                            <nil key="highlightedColor"/>
-                                                                                        </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="752" text="Auto" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-dd-jDb">
-                                                                                            <rect key="frame" x="208" y="0.0" width="32" height="20.333333333333332"/>
-                                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                                                            <color key="textColor" name="Tint"/>
-                                                                                            <nil key="highlightedColor"/>
-                                                                                        </label>
-                                                                                    </subviews>
-                                                                                </stackView>
-                                                                            </subviews>
-                                                                        </stackView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-KC-AHY" userLabel="Spacer">
-                                                                            <rect key="frame" x="285" y="20.333333333333336" width="8" height="20.333333333333336"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Assignee" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUd-Kh-N35">
+                                                                            <rect key="frame" x="149" y="0.0" width="91" height="32"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="8" id="4Vl-FU-dfJ"/>
+                                                                                <constraint firstAttribute="width" priority="750" constant="110" id="VQ2-6J-ofm"/>
+                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="110" id="yJ4-EM-hOe"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                            <nil key="textColor"/>
+                                                                            <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                                                            <color key="textColor" name="Text"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="ypC-5u-PsV">
-                                                                            <rect key="frame" x="293" y="5.6666666666666679" width="50" height="50"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="50" id="57j-XD-fGN"/>
-                                                                                <constraint firstAttribute="height" constant="50" id="JOw-JW-Th1"/>
-                                                                            </constraints>
-                                                                            <userDefinedRuntimeAttributes>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                    <real key="value" value="25"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                                    <real key="value" value="3"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                                    <color key="value" name="Accent"/>
-                                                                                </userDefinedRuntimeAttribute>
-                                                                            </userDefinedRuntimeAttributes>
-                                                                        </imageView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-X9-5hA">
-                                                                    <rect key="frame" x="232.66666666666663" y="0.0" width="142.33333333333337" height="61"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                    <textInputTraits key="textInputTraits"/>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                            <real key="value" value="0.0"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </textField>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgG-gk-Zgi">
+                                                                    <rect key="frame" x="0.0" y="32" width="240" height="20.333333333333329"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Title of the task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuf-Tw-Z7V">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="20.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <color key="textColor" name="Tint"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lO3-1x-N9m">
+                                                                            <rect key="frame" x="105" y="0.0" width="103" height="20.333333333333332"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="gs1-rc-mUe"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="752" text="Auto" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHS-dd-jDb">
+                                                                            <rect key="frame" x="208" y="0.0" width="32" height="20.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                                                            <color key="textColor" name="Tint"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
                                                             </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiS-KC-AHY" userLabel="Spacer">
+                                                            <rect key="frame" x="285" y="20.333333333333336" width="8" height="20.333333333333336"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="lo6-X9-5hA" secondAttribute="bottom" id="29Z-mm-oBd"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="width" secondItem="JEp-di-pef" secondAttribute="width" multiplier="0.38" id="CPh-BY-DyG"/>
-                                                                <constraint firstAttribute="trailing" secondItem="lo6-X9-5hA" secondAttribute="trailing" id="Chw-0M-JdA"/>
-                                                                <constraint firstItem="f9a-dc-3qQ" firstAttribute="leading" secondItem="JEp-di-pef" secondAttribute="leading" constant="16" id="F9W-s6-LFZ"/>
-                                                                <constraint firstItem="f9a-dc-3qQ" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="K9m-3k-Zgw"/>
-                                                                <constraint firstItem="tlt-vK-HJm" firstAttribute="centerY" secondItem="UYC-b0-MfQ" secondAttribute="centerY" id="MIf-rg-7Yo"/>
-                                                                <constraint firstItem="tlt-vK-HJm" firstAttribute="centerX" secondItem="UYC-b0-MfQ" secondAttribute="centerX" id="Uit-RQ-Ylp"/>
-                                                                <constraint firstAttribute="bottom" secondItem="f9a-dc-3qQ" secondAttribute="bottom" id="Wjv-mr-kft"/>
-                                                                <constraint firstAttribute="trailing" secondItem="f9a-dc-3qQ" secondAttribute="trailing" constant="16" id="aOe-Bm-O1s"/>
-                                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="jgD-Ev-6p4"/>
+                                                                <constraint firstAttribute="width" constant="8" id="4Vl-FU-dfJ"/>
                                                             </constraints>
-                                                        </tableViewCellContentView>
-                                                        <connections>
-                                                            <outlet property="manualOrAutoLabel" destination="WHS-dd-jDb" id="wek-Bz-oBt"/>
-                                                            <outlet property="memberAssigneeText" destination="lo6-X9-5hA" id="avY-uw-JYG"/>
-                                                            <outlet property="memberImage" destination="ypC-5u-PsV" id="r89-kP-4wJ"/>
-                                                            <outlet property="memberNameLabel" destination="iUd-Kh-N35" id="6lF-cL-PTQ"/>
-                                                            <outlet property="taskImage" destination="UYC-b0-MfQ" id="VL5-eL-Rd2"/>
-                                                            <outlet property="taskNameLabel" destination="g5b-fX-lol" id="Qvz-Tk-o11"/>
-                                                            <outlet property="taskTitleLabel" destination="kuf-Tw-Z7V" id="t3G-Cj-oqw"/>
-                                                        </connections>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                                <sections/>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="blj-Lq-6RZ" id="lvA-f4-6wS"/>
-                                                    <outlet property="delegate" destination="blj-Lq-6RZ" id="KGy-py-vfg"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
-                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
-                            </stackView>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Missing Profile" translatesAutoresizingMaskIntoConstraints="NO" id="ypC-5u-PsV">
+                                                            <rect key="frame" x="293" y="5.6666666666666679" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="57j-XD-fGN"/>
+                                                                <constraint firstAttribute="height" constant="50" id="JOw-JW-Th1"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="25"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" name="Accent"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </imageView>
+                                                    </subviews>
+                                                </stackView>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lo6-X9-5hA">
+                                                    <rect key="frame" x="232.66666666666663" y="0.0" width="142.33333333333337" height="61"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lo6-X9-5hA" secondAttribute="bottom" id="29Z-mm-oBd"/>
+                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="width" secondItem="JEp-di-pef" secondAttribute="width" multiplier="0.38" id="CPh-BY-DyG"/>
+                                                <constraint firstAttribute="trailing" secondItem="lo6-X9-5hA" secondAttribute="trailing" id="Chw-0M-JdA"/>
+                                                <constraint firstItem="f9a-dc-3qQ" firstAttribute="leading" secondItem="JEp-di-pef" secondAttribute="leading" constant="16" id="F9W-s6-LFZ"/>
+                                                <constraint firstItem="f9a-dc-3qQ" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="K9m-3k-Zgw"/>
+                                                <constraint firstItem="tlt-vK-HJm" firstAttribute="centerY" secondItem="UYC-b0-MfQ" secondAttribute="centerY" id="MIf-rg-7Yo"/>
+                                                <constraint firstItem="tlt-vK-HJm" firstAttribute="centerX" secondItem="UYC-b0-MfQ" secondAttribute="centerX" id="Uit-RQ-Ylp"/>
+                                                <constraint firstAttribute="bottom" secondItem="f9a-dc-3qQ" secondAttribute="bottom" id="Wjv-mr-kft"/>
+                                                <constraint firstAttribute="trailing" secondItem="f9a-dc-3qQ" secondAttribute="trailing" constant="16" id="aOe-Bm-O1s"/>
+                                                <constraint firstItem="lo6-X9-5hA" firstAttribute="top" secondItem="JEp-di-pef" secondAttribute="top" id="jgD-Ev-6p4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="manualOrAutoLabel" destination="WHS-dd-jDb" id="wek-Bz-oBt"/>
+                                            <outlet property="memberAssigneeText" destination="lo6-X9-5hA" id="avY-uw-JYG"/>
+                                            <outlet property="memberImage" destination="ypC-5u-PsV" id="r89-kP-4wJ"/>
+                                            <outlet property="memberNameLabel" destination="iUd-Kh-N35" id="6lF-cL-PTQ"/>
+                                            <outlet property="taskImage" destination="UYC-b0-MfQ" id="VL5-eL-Rd2"/>
+                                            <outlet property="taskNameLabel" destination="g5b-fX-lol" id="Qvz-Tk-o11"/>
+                                            <outlet property="taskTitleLabel" destination="kuf-Tw-Z7V" id="t3G-Cj-oqw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="blj-Lq-6RZ" id="lvA-f4-6wS"/>
+                                    <outlet property="delegate" destination="blj-Lq-6RZ" id="KGy-py-vfg"/>
+                                </connections>
+                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhv-QS-hml" userLabel="BG Spacer">
                                 <rect key="frame" x="0.0" y="659" width="375" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -897,69 +822,42 @@
                                     <segue destination="sPM-tt-iak" kind="presentation" id="z9d-Dd-CN2"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Serve" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-AV-1uI" userLabel="Serve Text">
-                                <rect key="frame" x="0.0" y="140" width="225" height="93.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Aim-AV-1uI" secondAttribute="height" multiplier="94:39" id="0hA-iO-hBA"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opk-ej-Y5A" userLabel="Edit" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
-                                <rect key="frame" x="30" y="339.66666666666669" width="22" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="22" id="JZO-nq-sIa"/>
-                                    <constraint firstAttribute="height" constant="30" id="NTq-7Q-Ulr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="22" id="cUx-Jh-plD"/>
-                                </constraints>
-                                <color key="tintColor" red="0.98900002239999996" green="0.7400000095" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button" image="Edit"/>
-                                <connections>
-                                    <action selector="editButtonPressed:" destination="blj-Lq-6RZ" eventType="touchUpInside" id="UwN-79-SKR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLa-h8-geB" userLabel="Recycle" customClass="BounceButton" customModule="FHE" customModuleProvider="target">
-                                <rect key="frame" x="320" y="342" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="DtY-Hc-XDX"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="25" id="SCX-mB-nmf"/>
-                                </constraints>
-                                <color key="tintColor" name="Tint"/>
-                                <state key="normal" title="Button" image="Recycle"/>
-                                <connections>
-                                    <action selector="refreshAssignmentsButtonPressed:" destination="blj-Lq-6RZ" eventType="touchUpInside" id="XzE-k1-U5l"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="height" secondItem="Mhv-QS-hml" secondAttribute="height" multiplier="0.8" id="1GO-6G-EHS"/>
+                            <constraint firstItem="Uxw-f8-Nhu" firstAttribute="top" secondItem="oX6-RR-eA2" secondAttribute="top" id="1T5-gu-nEY"/>
                             <constraint firstAttribute="trailing" secondItem="Mhv-QS-hml" secondAttribute="trailing" id="73C-bW-t3a"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerX" secondItem="Mhv-QS-hml" secondAttribute="centerX" id="88N-GQ-KUi"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="opk-ej-Y5A" secondAttribute="trailing" constant="20" symbolic="YES" id="90A-ds-0r2"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerY" secondItem="Mhv-QS-hml" secondAttribute="centerY" id="C22-aD-mCq"/>
-                            <constraint firstItem="Aim-AV-1uI" firstAttribute="top" secondItem="oX6-RR-eA2" secondAttribute="top" id="EEI-yf-uz5"/>
-                            <constraint firstItem="tLa-h8-geB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JmO-vl-PYE" secondAttribute="leading" constant="20" symbolic="YES" id="Pcq-Qa-tdk"/>
-                            <constraint firstItem="Aim-AV-1uI" firstAttribute="leading" secondItem="oX6-RR-eA2" secondAttribute="leading" id="WPn-Wr-LAw"/>
-                            <constraint firstItem="c80-MV-Pho" firstAttribute="top" secondItem="JmO-vl-PYE" secondAttribute="top" id="Z2E-Vx-cBL"/>
-                            <constraint firstItem="opk-ej-Y5A" firstAttribute="leading" secondItem="KSk-zz-gqD" secondAttribute="leading" constant="30" id="ZK5-F1-p5g"/>
-                            <constraint firstItem="Mhv-QS-hml" firstAttribute="top" secondItem="c80-MV-Pho" secondAttribute="bottom" id="Zf9-DV-rtl"/>
+                            <constraint firstItem="Uxw-f8-Nhu" firstAttribute="centerX" secondItem="oX6-RR-eA2" secondAttribute="centerX" id="Zqc-Gw-yRl"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="width" secondItem="Mhv-QS-hml" secondAttribute="width" multiplier="0.95" id="euf-0c-zP9"/>
-                            <constraint firstItem="c80-MV-Pho" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" id="hge-UY-1FI"/>
-                            <constraint firstItem="tLa-h8-geB" firstAttribute="centerY" secondItem="3K6-Df-2s4" secondAttribute="centerY" id="ltN-9E-aRx"/>
+                            <constraint firstItem="Uxw-f8-Nhu" firstAttribute="width" secondItem="JmO-vl-PYE" secondAttribute="width" id="ixc-Jq-SVW"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="leading" secondItem="JmO-vl-PYE" secondAttribute="leading" id="nq3-Dw-QuO"/>
-                            <constraint firstAttribute="trailing" secondItem="c80-MV-Pho" secondAttribute="trailing" id="u2e-rH-K4S"/>
-                            <constraint firstItem="opk-ej-Y5A" firstAttribute="centerY" secondItem="3K6-Df-2s4" secondAttribute="centerY" id="whX-2V-fnn"/>
-                            <constraint firstItem="Aim-AV-1uI" firstAttribute="trailing" secondItem="Xbf-LN-14A" secondAttribute="trailing" multiplier="0.6" id="xCj-hb-Lsg"/>
-                            <constraint firstItem="tLa-h8-geB" firstAttribute="trailing" secondItem="KSk-zz-gqD" secondAttribute="trailing" constant="-30" id="xZy-95-sLi"/>
+                            <constraint firstItem="Uxw-f8-Nhu" firstAttribute="bottom" secondItem="Mhv-QS-hml" secondAttribute="top" id="qvY-yh-VD5"/>
                             <constraint firstItem="Mhv-QS-hml" firstAttribute="bottom" secondItem="oX6-RR-eA2" secondAttribute="bottom" id="zVD-ll-0K8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oX6-RR-eA2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CpR-VD-ekg">
-                        <barButtonItem key="backBarButtonItem" title=" " id="geh-CA-Buy"/>
+                    <navigationItem key="navigationItem" title="Family Home Evening" id="CpR-VD-ekg">
+                        <barButtonItem key="backBarButtonItem" title="FHE" id="geh-CA-Buy"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Ulp-xh-50g">
+                            <color key="tintColor" name="Tint"/>
+                            <connections>
+                                <action selector="editButtonPressed:" destination="blj-Lq-6RZ" id="VjA-Uz-Sb4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Rotate" image="Recycle-25" id="nCc-CI-as9">
+                            <connections>
+                                <action selector="refreshAssignmentsButtonPressed:" destination="blj-Lq-6RZ" id="b9c-E6-Yfc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="assignmentTableView" destination="Uxw-f8-Nhu" id="sCn-sT-VvM"/>
                         <outlet property="christTeachingImage" destination="Xbf-LN-14A" id="HjA-k1-QtP"/>
+                        <outlet property="imageHeight" destination="Xbf-LN-14A" id="tgn-8D-5EM"/>
+                        <outlet property="viewHeight" destination="r04-sY-i5Q" id="jMb-lw-bJ3"/>
                         <segue destination="mtq-fi-jtC" kind="presentation" identifier="AboutMe" id="XaN-bW-a2L"/>
                         <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowOPrayer" id="fA6-h3-h7G"/>
                         <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="8JJ-8f-PXH"/>
@@ -979,7 +877,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOx-IT-pkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="1136"/>
+            <point key="canvasLocation" x="2303.1999999999998" y="1135.7142857142858"/>
         </scene>
         <!--FHE-->
         <scene sceneID="Lwj-uJ-db0">
@@ -1634,7 +1532,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qtu-4V-tG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4318" y="1117"/>
+            <point key="canvasLocation" x="4660" y="1116.5024630541873"/>
         </scene>
         <!--Tutorial-->
         <scene sceneID="HHW-2o-wCf">
@@ -1642,7 +1540,7 @@
                 <viewControllerPlaceholder storyboardName="More" referencedIdentifier="Tutorial" id="Ej9-wx-lWD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sse-8r-Ubg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5026" y="1257"/>
+            <point key="canvasLocation" x="5367.1999999999998" y="1256.8965517241379"/>
         </scene>
         <!--About me-->
         <scene sceneID="2oL-a5-wba">
@@ -1658,7 +1556,7 @@
                 <viewControllerPlaceholder storyboardName="More" referencedIdentifier="Disclaimer" id="L3Q-ss-ODH" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63h-g1-aKD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5038" y="1328"/>
+            <point key="canvasLocation" x="5379.1999999999998" y="1327.8325123152711"/>
         </scene>
         <!--Family-->
         <scene sceneID="cuO-uk-6EL">
@@ -1712,7 +1610,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMH-Co-wKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3553" y="1117"/>
+            <point key="canvasLocation" x="3895.1999999999998" y="1116.5024630541873"/>
         </scene>
         <!--About me-->
         <scene sceneID="HJM-lD-MkX">
@@ -1795,7 +1693,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
                                                         <rect key="frame" x="0.0" y="240.33333333333331" width="345" height="178"/>
                                                         <string key="text">My name is Rylan Evans. 
 
@@ -1805,6 +1703,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="40"/>
+                                                        </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4n-Yq-ez1">
                                                         <rect key="frame" x="0.0" y="418.33333333333331" width="345" height="20"/>
@@ -2024,7 +1925,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H48-ok-T1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="1135"/>
+            <point key="canvasLocation" x="3055.1999999999998" y="1134.9753694581282"/>
         </scene>
         <!--Developer-->
         <scene sceneID="d7Q-1X-TVt">
@@ -2633,7 +2534,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-tg-CnG" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2654,7 +2555,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="PiM-pc-ojP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="PiM-pc-ojP" secondAttribute="height" multiplier="327:150" id="TTD-Nh-sCk"/>
                                                             </constraints>
@@ -2665,7 +2566,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-bE-Dto">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="FsN-vp-7pe"/>
@@ -2725,7 +2626,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGs-wH-eI8" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2746,7 +2647,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="Kya-HV-bLB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Kya-HV-bLB" secondAttribute="height" multiplier="327:150" id="g2z-2U-9fb"/>
                                                             </constraints>
@@ -2757,7 +2658,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJR-kf-zbK">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Fg6-2R-74K"/>
@@ -2817,7 +2718,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJv-YI-bHS" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2838,7 +2739,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="YDW-tV-iac">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="YDW-tV-iac" secondAttribute="height" multiplier="327:150" id="art-RI-T1e"/>
                                                             </constraints>
@@ -2849,7 +2750,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-6O-OFH">
-                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
+                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="YI9-Rx-n3P"/>
@@ -2909,7 +2810,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-0e-Qoe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2930,7 +2831,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yelp" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-qq-gbr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Nye-qq-gbr" secondAttribute="height" multiplier="327:150" id="XVw-Sc-itt"/>
                                                             </constraints>
@@ -2941,7 +2842,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqn-KA-WRh">
-                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
+                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Wam-61-wsL"/>
@@ -3001,7 +2902,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euv-qr-okN" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3022,7 +2923,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Google" translatesAutoresizingMaskIntoConstraints="NO" id="d3f-e3-FSo">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="d3f-e3-FSo" secondAttribute="height" multiplier="327:150" id="jLI-DB-cLT"/>
                                                             </constraints>
@@ -3033,7 +2934,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54c-qJ-foV">
-                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
+                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="YDA-Sa-BBg"/>
@@ -3093,7 +2994,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-fL-eYq" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3114,7 +3015,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-h6-BKu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Mj4-h6-BKu" secondAttribute="height" multiplier="327:150" id="i4A-sV-vWx"/>
                                                             </constraints>
@@ -3125,7 +3026,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcy-78-PlS">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="97n-Uj-tVW"/>
@@ -3201,7 +3102,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="PnC-kS-F6c">
+                        <view key="tableHeaderView" clipsSubviews="YES" contentMode="scaleToFill" id="PnC-kS-F6c">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -3238,7 +3139,6 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="centerX" secondItem="PnC-kS-F6c" secondAttribute="centerX" id="8nR-qs-CSX"/>
                                 <constraint firstItem="JbW-hn-eGM" firstAttribute="centerX" secondItem="PnC-kS-F6c" secondAttribute="centerX" id="9Up-2D-wwm"/>
                                 <constraint firstItem="tNB-px-Y3f" firstAttribute="leading" secondItem="PnC-kS-F6c" secondAttribute="leading" constant="10" id="CHv-PI-6LL"/>
-                                <constraint firstItem="PnK-z0-dAD" firstAttribute="height" secondItem="PnC-kS-F6c" secondAttribute="height" id="Gqd-on-YO3"/>
                                 <constraint firstItem="JbW-hn-eGM" firstAttribute="top" secondItem="PnC-kS-F6c" secondAttribute="top" id="O5J-QO-42g"/>
                                 <constraint firstItem="PnK-z0-dAD" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="WTC-wp-Zgs"/>
                                 <constraint firstItem="JbW-hn-eGM" firstAttribute="width" secondItem="PnC-kS-F6c" secondAttribute="width" id="nTN-0e-03X"/>
@@ -3422,6 +3322,8 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                         <barButtonItem key="backBarButtonItem" title=" " id="iYP-Sa-QVz"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageHeight" destination="PnK-z0-dAD" id="Zqa-Aw-hz3"/>
+                        <outlet property="viewHeight" destination="PnC-kS-F6c" id="0Gx-Ek-yb5"/>
                         <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="9jh-Si-QQ7"/>
                         <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowOPrayer" id="EbF-I8-KYK"/>
                         <segue destination="JuR-Q2-URo" kind="show" identifier="ShowScriptures" id="fVt-7Q-RzX"/>
@@ -3468,36 +3370,6 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Mk-XS-qTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2431" y="1136"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="fWZ-9A-rJx">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LBe-KQ-wgR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Home25" selectedImage="HomeFilled25" id="irb-mt-ZHO">
-                        <color key="badgeColor" name="Accent"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6b6-Wk-pd2">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="Tint"/>
-                        <color key="barTintColor" name="Background"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
-                            <color key="textColor" name="Accent"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="35"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="rootViewController" id="S6Q-fU-ynr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rm9-zB-TVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1294" y="1136"/>
         </scene>
         <!--RuleDetails-->
         <scene sceneID="dm9-TL-f4E">
@@ -3693,7 +3565,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vm-ea-Wlo" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3714,7 +3586,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapas" translatesAutoresizingMaskIntoConstraints="NO" id="hVR-0V-Sc8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1089.3333333333333" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="hVR-0V-Sc8" secondAttribute="height" multiplier="327:150" id="Rtt-mM-Yil"/>
                                                             </constraints>
@@ -3725,7 +3597,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nP-0v-BHa">
-                                                            <rect key="frame" x="954.33333333333337" y="460.33333333333337" width="125.00000000000011" height="30"/>
+                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="7pw-rW-3u5"/>
@@ -3785,7 +3657,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOa-RS-pyu" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3806,7 +3678,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="t9N-Mg-iFE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="t9N-Mg-iFE" secondAttribute="height" multiplier="327:150" id="oAQ-Bc-Wvq"/>
                                                             </constraints>
@@ -3817,7 +3689,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zey-LF-gqd">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="4gV-sl-vqc"/>
@@ -3877,7 +3749,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                     <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-LR-zfx" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3898,7 +3770,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="19A-WK-iir">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361.33333333333331" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166.33333333333334"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="19A-WK-iir" secondAttribute="height" multiplier="327:150" id="9ui-Gz-cEQ"/>
                                                             </constraints>
@@ -3909,7 +3781,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TL-OC-WQ1">
-                                                            <rect key="frame" x="226.33333333333337" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="227" y="126.33333333333334" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="1hN-V8-FtC"/>
@@ -3982,6 +3854,31 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
             </objects>
             <point key="canvasLocation" x="-796" y="2447"/>
         </scene>
+        <!--Home-->
+        <scene sceneID="ieg-k5-Zzm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6A-IW-Phm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home25" selectedImage="HomeFilled25" id="PIG-uR-1gQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x5k-uU-bZr">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="Tint"/>
+                        <color key="barTintColor" name="Background"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="26"/>
+                            <color key="textColor" name="Accent"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="blj-Lq-6RZ" kind="relationship" relationship="rootViewController" id="ET6-SO-Mt8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YGN-Jh-RAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="1136"/>
+        </scene>
     </scenes>
     <resources>
         <image name="$High" width="72" height="85"/>
@@ -3996,7 +3893,6 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Close" width="267" height="267"/>
         <image name="DigiLilly" width="587" height="592"/>
         <image name="Discloser" width="67" height="117"/>
-        <image name="Edit" width="239" height="306"/>
         <image name="Evans" width="341" height="341"/>
         <image name="FHE Icon" width="341" height="341"/>
         <image name="Facebook" width="341" height="166"/>
@@ -4008,7 +3904,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Home25" width="25" height="25"/>
         <image name="HomeFilled25" width="25" height="25"/>
         <image name="Info" width="64" height="64"/>
-        <image name="JesusChrist" width="800" height="533"/>
+        <image name="JesusChrist" width="984" height="617"/>
         <image name="Josephine" width="1000" height="1000"/>
         <image name="Like it" width="200" height="200"/>
         <image name="Linkedin" width="1024" height="500"/>
@@ -4020,10 +3916,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="PositiveFeedback" width="45" height="43"/>
         <image name="Prayer" width="48" height="80"/>
         <image name="Profile" width="314" height="314"/>
-        <image name="Recycle" width="74" height="75"/>
+        <image name="Recycle-25" width="22" height="22"/>
         <image name="ReportBug" width="84" height="76"/>
         <image name="Rylan" width="1508" height="1113"/>
-        <image name="Serve" width="333" height="199"/>
         <image name="Share" width="144" height="171"/>
         <image name="Signature" width="98" height="31"/>
         <image name="Subscribe" width="310" height="310"/>
@@ -4037,7 +3932,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <image name="Website" width="509" height="420"/>
         <image name="Yelp" width="1024" height="500"/>
         <namedColor name="Accent">
-            <color red="0.20800000430000001" green="0.47099998589999997" blue="0.96499997380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.20800000429153442" green="0.47099998593330383" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Background">
             <color red="0.85900002720000002" green="0.91799998279999995" blue="0.98799997569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -4047,9 +3942,6 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         </namedColor>
         <namedColor name="Tint">
             <color red="0.98799997568130493" green="0.74099999666213989" blue="0.016000000759959221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Tint">
-            <color red="0.98799997569999998" green="0.74099999670000005" blue="0.016000000760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>

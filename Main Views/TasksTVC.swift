@@ -12,6 +12,8 @@ import CoreData
 import MessageUI
 
 class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskCellDelegate, MFMailComposeViewControllerDelegate {
+    @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
+    @IBOutlet weak var imageHeight: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,12 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         tableView.reloadData()
         
         runTutorial()
+        
+        tableView.tableFooterView = UIView()
     }
     
     override func viewDidAppear(_ animated: Bool) {        
         taskAttemptFetch()
-        tableView.reloadData()
         
         if counter.launched > 5 && counter.launched % 2 == 0 && counter.feedbackGiven == false && counter.hideFeedbackRequest == false {
             counter.hideFeedbackRequest = true
@@ -47,6 +50,10 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             
             checkIfUserWantsToShare()
         }
+        
+        let size = imageHeight.frame.size
+        viewHeight.frame.size = size
+        tableView.reloadData()
     }
     
     func runTutorial() {

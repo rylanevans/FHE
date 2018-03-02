@@ -12,6 +12,10 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     // MARK: - View did load for FamilyHomeEveningVC
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

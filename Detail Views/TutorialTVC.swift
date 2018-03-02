@@ -10,9 +10,18 @@ import UIKit
 import SafariServices
 
 class TutorialTVC: UITableViewController {
+    @IBOutlet weak var viewHeight: UIView!
+    @IBOutlet weak var imageHeight: UIImageView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        let size = imageHeight.frame.size
+        viewHeight.frame.size = size
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let size = imageHeight.frame.size
+        viewHeight.frame.size = size
+        tableView.reloadData()
     }
     
     @IBAction func videoTutorialsButtonPressed(_ sender: Any) {

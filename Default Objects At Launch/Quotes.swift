@@ -51,7 +51,7 @@ func generateQuotes() {
     quote4.detail = "“Refuse to remain in the realm of negative thought and cultivate within our hearts an attitude of gratitude.”\n\n- Thomas S. Monson"
     quote4.url = "https://www.lds.org/general-conference/1992/04/an-attitude-of-gratitude?lang=eng"
     quote4.order = 4
-    quote4.favorite = true
+    quote4.favorite = false
     quote4.random = Int64(arc4random_uniform(1000))
     quote4.selected = false
     quote4.sortingIndex = 0
@@ -62,7 +62,7 @@ func generateQuotes() {
     quote5.detail = "“If Life Gets Too Hard To Stand, Kneel.”\n\n- Gordon B. Hinckley"
     quote5.url = "https://www.lds.org/general-conference/1996/10/women-of-the-church?lang=eng"
     quote5.order = 5
-    quote5.favorite = true
+    quote5.favorite = false
     quote5.random = Int64(arc4random_uniform(1000))
     quote5.selected = false
     quote5.sortingIndex = 0
@@ -84,7 +84,7 @@ func generateQuotes() {
     quote7.detail = "“First doubt your doubts before you doubt your faith.”\n\n- Dieter F. Uchtdorf"
     quote7.url = "https://www.lds.org/general-conference/2013/10/come-join-with-us?lang=eng"
     quote7.order = 7
-    quote7.favorite = true
+    quote7.favorite = false
     quote7.random = Int64(arc4random_uniform(1000))
     quote7.selected = false
     quote7.sortingIndex = 0
@@ -95,7 +95,7 @@ func generateQuotes() {
     quote8.detail = "“May we ever choose the harder right instead of the easier wrong.”\n\n- Thomas S. Monson"
     quote8.url = "https://www.lds.org/general-conference/2016/04/choices?lang=eng"
     quote8.order = 8
-    quote8.favorite = true
+    quote8.favorite = false
     quote8.random = Int64(arc4random_uniform(1000))
     quote8.selected = false
     quote8.sortingIndex = 0
@@ -139,7 +139,7 @@ func generateQuotes() {
     quote12.detail = "“Lord, I believe; help thou mine unbelief.”\n\n- Elder Jeffrey R. Holland"
     quote12.url = "https://www.lds.org/general-conference/2013/04/lord-i-believe?lang=eng"
     quote12.order = 12
-    quote12.favorite = true
+    quote12.favorite = false
     quote12.random = Int64(arc4random_uniform(1000))
     quote12.selected = false
     quote12.sortingIndex = 0
@@ -178,7 +178,28 @@ func generateQuotes() {
     quote15.selected = false
     quote15.sortingIndex = 0
     quote15.alphabet = String(describing: quote15.title![(quote15.title!.startIndex)])
-
+    
+    let quote16 = Quote(context: context)
+    quote16.title = "The Living Christ"
+    quote16.detail = "“The Testimony of the Apostles”\n\n- The Church of Jesus Christ of Latter Day Saints"
+    quote16.url = "https://www.lds.org/bc/content/shared/content/images/magazines/ensign/2017/05/living-christ-testimony-apostles_1916605.pdf"
+    quote16.order = 15
+    quote16.favorite = true
+    quote16.random = Int64(arc4random_uniform(1000))
+    quote16.selected = false
+    quote16.sortingIndex = 0
+    quote16.alphabet = String(describing: quote16.title![(quote16.title!.startIndex)])
+    
+    let quote17 = Quote(context: context)
+    quote17.title = "The Family"
+    quote17.detail = "“A Proclamation to the World”\n\n- The Church of Jesus Christ of Latter Day Saints"
+    quote17.url = "https://www.lds.org/bc/content/shared/content/images/gospel-library/manual/34190/34190_000_WWC_26-FamProc.pdf"
+    quote17.order = 15
+    quote17.favorite = true
+    quote17.random = Int64(arc4random_uniform(1000))
+    quote17.selected = false
+    quote17.sortingIndex = 0
+    quote17.alphabet = String(describing: quote17.title![(quote17.title!.startIndex)])
     
     ad.saveContext()
 }

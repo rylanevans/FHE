@@ -13,6 +13,9 @@ import SafariServices
 
 class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, FamilyCellDelegate {
     @IBOutlet weak var segment: UISegmentedControl!
+    @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
+    @IBOutlet weak var imageHeight: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +34,6 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        tableView.reloadData()
-        
         if counter.launched > 5 && counter.launched % 5 == 0 && counter.seeApps == false && counter.hideSeeApps == false {
             counter.hideSeeApps = true
             ad.saveContext()
@@ -46,6 +47,10 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             
             followMeOnFacebook()
         }
+        
+        let size = imageHeight.frame.size
+        viewHeight.frame.size = size
+        tableView.reloadData()
     }
     
     // MARK: - Text Field Options

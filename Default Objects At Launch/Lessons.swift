@@ -741,19 +741,19 @@ func generateLessons() {
     lesson69.sortingIndex = 0
     lesson69.alphabet = String(describing: lesson69.title![(lesson69.title!.startIndex)])
     
-    let lesson70 = Lesson(context: context)
-    lesson70.category = "Temporal"
-    lesson70.topic = "Emotional"
-    lesson70.title = "The Anger Eating Monster"
-    lesson70.detail = "Depression, anger or anxiety, we all have issues that we struggle with. The key to overcoming any issue is how you deal with it."
-    lesson70.url = "https://www.youtube.com/watch?v=4izOVj-SylA"
-    lesson70.youTubeVideo = true
-    lesson70.order = 9
-    lesson70.favorite = false
-    lesson70.random = Int64(arc4random_uniform(1000))
-    lesson70.selected = false
-    lesson70.sortingIndex = 0
-    lesson70.alphabet = String(describing: lesson70.title![(lesson70.title!.startIndex)])
+//    let lesson70 = Lesson(context: context)
+//    lesson70.category = "Temporal"
+//    lesson70.topic = "Emotional"
+//    lesson70.title = "The Anger Eating Monster"
+//    lesson70.detail = "Depression, anger or anxiety, we all have issues that we struggle with. The key to overcoming any issue is how you deal with it."
+//    lesson70.url = "https://www.youtube.com/watch?v=4izOVj-SylA"
+//    lesson70.youTubeVideo = true
+//    lesson70.order = 9
+//    lesson70.favorite = false
+//    lesson70.random = Int64(arc4random_uniform(1000))
+//    lesson70.selected = false
+//    lesson70.sortingIndex = 0
+//    lesson70.alphabet = String(describing: lesson70.title![(lesson70.title!.startIndex)])
     
     let lesson71 = Lesson(context: context)
     lesson71.category = lessonCategoryArray[0]
@@ -1104,6 +1104,22 @@ func generateLessons() {
     lesson99.selected = false
     lesson99.sortingIndex = 0
     lesson99.alphabet = String(describing: lesson99.title![(lesson99.title!.startIndex)])
+    
+    let lesson100 = Lesson(context: context)
+    lesson100.category = "Temporal"
+    lesson100.topic = "Spiritual"
+    lesson100.title = "LDS Charities Initiatives"
+    lesson100.detail = "Our struggles and trials are often worth it in the end."
+    lesson100.url = "https://www.youtube.com/watch?v=THnD6Cp9Rk0&list=PL-2ihKjhqm0VC7M-lfJPxz9H7HZvIYKEC"
+    lesson100.youTubeVideo = true
+    lesson100.order = 9
+    lesson100.favorite = false
+    lesson100.random = Int64(arc4random_uniform(1000))
+    lesson100.selected = false
+    lesson100.sortingIndex = 0
+    lesson100.alphabet = String(describing: lesson100.title![(lesson100.title!.startIndex)])
+    
+    
     
     ad.saveContext()
 }
