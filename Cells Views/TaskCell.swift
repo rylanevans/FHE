@@ -53,7 +53,9 @@ class TaskCell: UITableViewCell {
     }
     
     @IBAction func enabledSwitchPressed(_ sender: Any) {
-        playClick()
+        if counter.launched > 1 {
+            playClick()
+        }
         delegate?.enabledNeedsChanged(self)
     }
     

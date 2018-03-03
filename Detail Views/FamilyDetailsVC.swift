@@ -200,7 +200,7 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     }
     
     func deleteNotAllowed() {
-        let alertController = UIAlertController(title: "⚠ DELETION PROHIBITED!", message: "You can not delete the last attending family member? In other words, you must have at least two attending family members before you can delete this profile.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "⚠ DELETION PROHIBITED!", message: "You can not delete the last attending family member? In other words, you must have at least one attending family member before you can delete this profile.", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
             (action : UIAlertAction!) -> Void in

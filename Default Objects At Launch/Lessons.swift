@@ -184,8 +184,8 @@ func generateLessons() {
     let lesson14 = Lesson(context: context)
     lesson14.category = "Temporal"
     lesson14.topic = "Spiritual"
-    lesson14.title = "Motivational"
-    lesson14.detail = "Inspiration from Prince EA."
+    lesson14.title = "Inspiration from Prince EA"
+    lesson14.detail = "Motivational video playlist.\nWARNING! Some content may not be appropriate for everyone, viewer discretion advised."
     lesson14.url = "https://www.youtube.com/playlist?list=PLtY1iLdia2RygWmqtjHGYm9P3Lz8HHhma"
     lesson14.youTubeVideo = false
     lesson14.order = 9
@@ -436,7 +436,7 @@ func generateLessons() {
     let lesson33 = Lesson(context: context)
     lesson33.category = "Temporal"
     lesson33.topic = "Intellectual"
-    lesson33.title = "What the Internet is Doing to Our Brains"
+    lesson33.title = "Internet vs. our Brains"
     lesson33.detail = "Most of us are on the Internet on a daily basis and whether we like it or not, the Internet is affecting us. It changes how we think, how we work, and it even changes our brains."
     lesson33.url = "https://www.youtube.com/watch?v=cKaWJ72x1rI"
     lesson33.youTubeVideo = true
@@ -674,7 +674,7 @@ func generateLessons() {
     let lesson64 = Lesson(context: context)
     lesson64.category = "Temporal"
     lesson64.topic = "Spiritual"
-    lesson64.title = "Does Science Argue for or against God?"
+    lesson64.title = "Science and God?"
     lesson64.detail = "Why are we here? Literally. The latest science says we shouldn’t be."
     lesson64.url = "https://www.youtube.com/watch?v=UjGPHF5A6Po"
     lesson64.youTubeVideo = true
@@ -741,19 +741,19 @@ func generateLessons() {
     lesson69.sortingIndex = 0
     lesson69.alphabet = String(describing: lesson69.title![(lesson69.title!.startIndex)])
     
-//    let lesson70 = Lesson(context: context)
-//    lesson70.category = "Temporal"
-//    lesson70.topic = "Emotional"
-//    lesson70.title = "The Anger Eating Monster"
-//    lesson70.detail = "Depression, anger or anxiety, we all have issues that we struggle with. The key to overcoming any issue is how you deal with it."
-//    lesson70.url = "https://www.youtube.com/watch?v=4izOVj-SylA"
-//    lesson70.youTubeVideo = true
-//    lesson70.order = 9
-//    lesson70.favorite = false
-//    lesson70.random = Int64(arc4random_uniform(1000))
-//    lesson70.selected = false
-//    lesson70.sortingIndex = 0
-//    lesson70.alphabet = String(describing: lesson70.title![(lesson70.title!.startIndex)])
+    let lesson70 = Lesson(context: context)
+    lesson70.category = "Spiritual"
+    lesson70.topic = "Atonement"
+    lesson70.title = "A New Life"
+    lesson70.detail = "My belief in Jesus Christ has given me a new life. The life that is full of happiness, the life that is full of miracles, the life that is full of blessings."
+    lesson70.url = "https://www.youtube.com/watch?v=tRSZBINJ0eA"
+    lesson70.youTubeVideo = true
+    lesson70.order = 9
+    lesson70.favorite = false
+    lesson70.random = Int64(arc4random_uniform(1000))
+    lesson70.selected = false
+    lesson70.sortingIndex = 0
+    lesson70.alphabet = String(describing: lesson70.title![(lesson70.title!.startIndex)])
     
     let lesson71 = Lesson(context: context)
     lesson71.category = lessonCategoryArray[0]

@@ -55,16 +55,11 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
             switch indexPath.row {
             case 0: aboutRylan()
             case 1: allApps()
-            case 2: basketballSSTapped()
-            case 3: shareWithNetwork()
-            case 4: digiLilly()
-            case 5: rylanEvans()
-            case 6: facebook()
-            case 7: twitter()
-            case 8: linkedin()
-            case 9: yelp()
-            case 10: google()
-            case 11: patreon()
+            case 2: digiLilly()
+            case 3: facebook()
+            case 4: twitter()
+            case 5: linkedin()
+            case 6: patreon()
             default: print("Error with MoreTVC index selection")
             }
         }
@@ -91,7 +86,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func shareWithNetwork() {
-        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
+        let string: String = String("Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/apple-store/id1292069519")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }

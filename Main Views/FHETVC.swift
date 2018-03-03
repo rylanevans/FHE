@@ -102,7 +102,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     }
     
     @IBAction func refreshAssignmentsButtonPressed(_ sender: Any) {
-        playClick()
+        if counter.launched > 1 {
+            playClick()
+        }
         
         let alertController = UIAlertController(title: "♺ ROTATION", message: "Rotate assignments for all tasks that are NOT manually assigned", preferredStyle: .alert)
         
@@ -123,7 +125,9 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     }
     
     @IBAction func beginButtonPressed(_ sender: Any) {
-        playClick()
+        if counter.launched > 1 {
+            playClick()
+        }
         print("\(counter)")
         //        let appReviewPresentedRandom = arc4random_uniform(3)
         //        if appReviewPresentedRandom == UInt32(1) {

@@ -74,11 +74,11 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     }
     
     func checkPositiveOrNegitiveFeedback() {
-        let alertController = UIAlertController(title: "APP FEEDBACK?", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "APP FEEDBACK", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
         
         let likeAction = UIAlertAction(title: "✓ Yes", style: .default, handler: {
             alert -> Void in
-            self.positiveReview()
+            self.educateUniqueNameNeededForReview()
         })
         
         let dislikeAction = UIAlertAction(title: "✗ No", style: .default, handler: {
@@ -93,6 +93,20 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         alertController.addAction(likeAction)
         alertController.addAction(dislikeAction)
         alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func educateUniqueNameNeededForReview() {
+        let alertController = UIAlertController(title: "⚠ APP REVIEW ALERT", message: "When writing a review in the app store, you must enter a unique user name! Otherwise the review will not get submitted. Unfortunately, there is no error message to indicate if your user name entered will work. If it is a unique name it will provide a message confirming feedback was submitted. If it is not a unique name when you press “Send” nothing will happen. You will have to cancel and try again with a diffent user name. It's a bug with Apple, not my app. Sorry. Thanks for leaving a review, it really helps.", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Got it", style: .default, handler: {
+            alert -> Void in
+            self.positiveReview()
+        })
+        
+        alertController.addAction(likeAction)
         alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
         
         self.present(alertController, animated: true, completion: nil)
@@ -129,7 +143,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     }
     
     func checkIfUserWantsToShare() {
-        let alertController = UIAlertController(title: "SHARE APP?", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "SHARE APP", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "✓ Yea, sure", style: .default, handler: {
             alert -> Void in
@@ -151,7 +165,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         counter.shared = true
         ad.saveContext()
         
-        let string: String = String("Checkout this Family Home Evening App!\n\nitms-apps://itunes.apple.com/us/app/apple-store/id1292069519?")
+        let string: String = String("Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/apple-store/id1292069519")
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         present(activityViewController, animated: true, completion: nil)
     }

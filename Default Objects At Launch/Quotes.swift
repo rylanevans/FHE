@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 
-
 func generateQuotes() {
     getAllTasks()
     let quote1 = Quote(context: context)

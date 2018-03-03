@@ -19,6 +19,7 @@ func checkIfLauncedBefore() {
     
     if launchedBefore == true {
         print("Not first launch.")
+        makeUpdatesToContent()
         getAllTasks()
         getEnabledTasks()
         addToOpenedCounter()

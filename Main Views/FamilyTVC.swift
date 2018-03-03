@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 import CoreData
 import SafariServices
+import MessageUI
 
-class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, FamilyCellDelegate {
+class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, FamilyCellDelegate, MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
     @IBOutlet weak var imageHeight: UIImageView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,9 +105,9 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     func followMeOnFacebook() {
-        let alertController = UIAlertController(title: "Facebook?", message: "Are you intrested in following me on facebook?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "FACEBOOK", message: "Will you Like my Facebook page and follow me for future updates and apps?", preferredStyle: .alert)
         
-        let likeAction = UIAlertAction(title: "✓ Yes, I'll follow you.", style: .default, handler: {
+        let likeAction = UIAlertAction(title: "✓ Yes, I'll Like you.", style: .default, handler: {
             alert -> Void in
             self.facebookFollower()
         })
@@ -268,6 +268,67 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         ad.saveContext()
         tableView.reloadData()
     }
+    
+    @IBAction func sendMessageToFamilyAboutAssignmentsButtonPressed(_ sender: Any) {
+        if counter.launched > 1 {
+            playClick()
+        }
+        let alertController = UIAlertController(title: "TEXT ASSIGNMENTS", message: "Do you want to send a reminder to your family about their assignments?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "✓ Send", style: .default, handler: {
+            alert -> Void in
+            self.shareWithNetWork()
+        })
+        
+        let noAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+//    func shareWithNetWork() {
+//        let array = tasksEnabledArray
+//        var textString = ""
+//        for eachObject in array {
+//            textString += eachObject.name! + " = " + (eachObject.assignment?.name)! + "\n"
+//        }
+//        let string: String = String(textString)
+//        if UIApplication.shared.canOpenURL(URL(string:"sms:")!) {
+//            UIApplication.shared.open(URL(string:"sms:")!, options: [:], completionHandler: nil)
+//        } else {
+//            let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+//            present(activityViewController, animated: true, completion: nil)
+//        }
+//    }
+    
+    func shareWithNetWork() {
+        let array = tasksEnabledArray
+        var textString = "FHE Assignments:\n"
+        for eachObject in array {
+            textString += eachObject.name! + " = " + (eachObject.assignment?.name)! + "\n"
+        }
+        if MFMessageComposeViewController.canSendText() == true {
+//            let recipients:[String] = ["phoneNumbers"]
+            let messageController = MFMessageComposeViewController()
+            messageController.messageComposeDelegate  = self
+//            messageController.recipients = recipients
+            messageController.body = "\(textString)👨‍👩‍👧‍👦🏠🌙"
+            self.present(messageController, animated: true, completion: nil)
+        } else {
+            let activityViewController = UIActivityViewController(activityItems: [textString], applicationActivities: nil)
+            present(activityViewController, animated: true, completion: nil)
+        }
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+
     
     // MARK: - Boiler Code for Core Data
     
