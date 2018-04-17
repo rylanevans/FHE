@@ -204,11 +204,18 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     // MARK: - Assignment Cell Delegate
     
     func assignmentNeedsChanged(_ sender: AssignmentCell, _ assignee: Member) {
-        if let objects = taskController.fetchedObjects, objects.count > 0 {
+//        if let objects = taskController.fetchedObjects, objects.count > 0 {
+//            let indexPath = assignmentTableView.indexPath(for: sender)
+//            let sections = taskController.sections![(indexPath?.section)!]
+//            let task = sections.objects![(indexPath?.row)!]
+//            assignedMemberChanged(task as! Task, assignee)
+//        guard let controller = taskController else { return }
+        let controller = taskController
+        if let objects = controller.fetchedObjects, objects.count > 0 {
             let indexPath = assignmentTableView.indexPath(for: sender)
-            let sections = taskController.sections![(indexPath?.section)!]
-            let task = sections.objects![(indexPath?.row)!]
-            assignedMemberChanged(task as! Task, assignee)
+            let sections = controller.sections[(indexPath?.section)]
+            let task = sections.objects[(indexPath?.row)]
+            assignedMemberChanged(task as Task, assignee)
         }
     }
     
@@ -227,7 +234,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     
     // MARK: - Boiler Code for Core Data
     
-    var taskController: NSFetchedResultsController<Task>!
+//    var taskController: NSFetchedResultsController<Task>!
+    var taskController: NSFetchedResultsController<Task>
     
     func taskAttemptFetch() {
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
