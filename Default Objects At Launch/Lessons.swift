@@ -130,7 +130,7 @@ func generateLessons() {
     lesson10.topic = "Jesus Christ"
     lesson10.title = "Lord I Believe"
     lesson10.detail = "I am not asking you to pretend to have faith you don't have. I am asking you to be true to the faith you do have.\n\n- Elder Holland"
-    lesson10.url = "https://www.lds.org/general-conference/2013/04/lord-i-believe?lang=eng"
+    lesson10.url = "https://www.churchofjesuschrist.org/general-conference/2013/04/lord-i-believe?lang=eng"
     lesson10.youTubeVideo = false
     lesson10.order = 10
     lesson10.favorite = true

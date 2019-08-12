@@ -66,7 +66,7 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate {
     func checkValidTitle() {
         let text = ruleTitleTextField.text
         let url = ruleURLTextField.text
-        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && (url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true)) {
+        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && (url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true)) || (url?.isEmpty == false && (url?.contains("bing") == false || url?.contains("google") == false || url?.contains("yahoo") == false || url?.contains("duckduckgo") == false || url?.contains("wiki") == false)) {
             hideSaveButton.isHidden = true
             self.navigationItem.title = text
             saveButton.isEnabled = true
@@ -74,7 +74,7 @@ class RuleDetailsVC: UIViewController, UITextFieldDelegate {
             hideSaveButton.isHidden = false
             saveButton.isEnabled = false
             
-            let alertController = UIAlertController(title: "⚠ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must include: “https://” or “http://”.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "⚠ WARNING!", message: "In order to enable save option, you need a “Title” and if you have a URL it must be a direct link to a website or youtube video.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "✓ OK", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in

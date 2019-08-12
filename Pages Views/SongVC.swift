@@ -75,7 +75,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
             }
             
             if task.url == nil || task.url == "" {
-                songURL = "https://www.lds.org/music/library?lang=eng"
+                songURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
             } else {
                 songURL = task.url!
             }

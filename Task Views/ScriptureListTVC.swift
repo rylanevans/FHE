@@ -23,7 +23,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
     
     let scripture = taskScripture
     
-    var scriptureURL = "https://www.lds.org/scriptures?lang=eng"
+    var scriptureURL = "https://www.churchofjesuschrist.org/scriptures?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -455,7 +455,7 @@ class ScriptureListTVC: UITableViewController, UIPickerViewDataSource, UIPickerV
         
         if scripture.volume != nil && scripture.book != nil && scripture.verse != nil {
             let chapter = String(scripture.chapter)
-            let scripture = "https://www.lds.org/scriptures/\(scripture.volume!)/\(scripture.book!)/\(chapter).\(scripture.verse!)?lang=eng#\(firstVerse)"
+            let scripture = "https://www.churchofjesuschrist.org/scriptures/\(scripture.volume!)/\(scripture.book!)/\(chapter).\(scripture.verse!)?lang=eng#\(firstVerse)"
             scriptureURL = scripture
         }
         

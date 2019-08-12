@@ -30,7 +30,7 @@ func addNewContent() {
     let quote16 = Quote(context: context)
     quote16.title = "The Living Christ"
     quote16.detail = "“The Testimony of the Apostles”\n\n- The Church of Jesus Christ of Latter Day Saints"
-    quote16.url = "https://www.lds.org/bc/content/shared/content/images/magazines/ensign/2017/05/living-christ-testimony-apostles_1916605.pdf"
+    quote16.url = "https://www.churchofjesuschrist.org/bc/content/shared/content/images/magazines/ensign/2017/05/living-christ-testimony-apostles_1916605.pdf"
     quote16.order = 15
     quote16.favorite = true
     quote16.random = Int64(arc4random_uniform(1000))
@@ -41,7 +41,7 @@ func addNewContent() {
     let quote17 = Quote(context: context)
     quote17.title = "The Family"
     quote17.detail = "“A Proclamation to the World”\n\n- The Church of Jesus Christ of Latter Day Saints"
-    quote17.url = "https://www.lds.org/bc/content/shared/content/images/gospel-library/manual/34190/34190_000_WWC_26-FamProc.pdf"
+    quote17.url = "https://www.churchofjesuschrist.org/bc/content/shared/content/images/gospel-library/manual/34190/34190_000_WWC_26-FamProc.pdf"
     quote17.order = 15
     quote17.favorite = true
     quote17.random = Int64(arc4random_uniform(1000))

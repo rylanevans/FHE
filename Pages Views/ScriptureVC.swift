@@ -16,7 +16,7 @@ class ScriptureVC: UIViewController {
     @IBOutlet weak var scriptureDetailLabel: UILabel!
     @IBOutlet weak var scriptureWebKit: WKWebView!
     
-    var scriptureURL = "https://www.lds.org/scriptures?lang=eng"
+    var scriptureURL = "https://www.churchofjesuschrist.org/scriptures?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +67,8 @@ class ScriptureVC: UIViewController {
             if task.volume != nil && task.book != nil && task.verse != nil {
                 let firstVerse = (task.verse?.components(separatedBy: "-")[0])!
                 let chapter = String(task.chapter)
-                scriptureURL = "https://www.lds.org/scriptures/\(task.volume!)/\(task.book!)/\(chapter).\(task.verse!)?lang=eng#\(firstVerse)"
-                // scriptureURL pattern needs to follow this example = "https://www.lds.org/scriptures/ot/prov/3.5-6?lang=eng#5"
+                scriptureURL = "https://www.churchofjesuschrist.org/scriptures/\(task.volume!)/\(task.book!)/\(chapter).\(task.verse!)?lang=eng#\(firstVerse)"
+                // scriptureURL pattern needs to follow this example = "https://www.churchofjesuschrist.org/scriptures/ot/prov/3.5-6?lang=eng#5"
             }
             
             let URL = NSURL(string: scriptureURL)

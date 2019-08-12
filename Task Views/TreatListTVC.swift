@@ -23,7 +23,7 @@ class TreatListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     let treat = taskTreat
     
-    var treatURL = "https://www.lds.org/music/library?lang=eng"
+    var treatURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,7 +16,7 @@ func generateCouncils() {
     council.selectedOne = taskCouncil
     council.title = "Family Meeting"
     council.detail = "“If people don't weigh in, they can't buy in.”\n\n- Patrick Lencioni"
-    council.url = "https://www.lds.org/blog/bc/images/family-councils-cheat-sheet.pdf"
+    council.url = "https://www.churchofjesuschrist.org/blog/bc/images/family-councils-cheat-sheet.pdf"
     council.selected = true
     
     ad.saveContext()

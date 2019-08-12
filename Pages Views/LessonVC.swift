@@ -21,7 +21,7 @@ class LessonVC: UIViewController {
     @IBOutlet weak var buttonDetailsView: UIStackView!
     @IBOutlet weak var buttonSpacer: UILabel!
     
-    var lessonURL = "https://www.lds.org/?lang=eng"
+    var lessonURL = "https://www.churchofjesuschrist.org/?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +88,7 @@ class LessonVC: UIViewController {
                 let url = (task.url?.components(separatedBy: "=")[1])!
                 lessonURL = "https://www.youtube.com/embed/\(url)?rel=0&amp;controls=0&amp;showinfo=0"
             } else if task.url == nil || task.url == "" {
-                lessonURL = "https://www.lds.org/?lang=eng"
+                lessonURL = "https://www.churchofjesuschrist.org/?lang=eng"
             } else {
                 lessonURL = task.url!
             }

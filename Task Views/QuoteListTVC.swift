@@ -23,7 +23,7 @@ class QuoteListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewD
     
     let quote = taskQuote
     
-    var quoteURL = "https://www.lds.org/music/library?lang=eng"
+    var quoteURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()

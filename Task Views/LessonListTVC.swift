@@ -23,7 +23,7 @@ class LessonListTVC: UITableViewController, UIPickerViewDataSource, UIPickerView
     
     let lesson = taskLesson
     
-    var lessonURL = "https://www.lds.org/music/library?lang=eng"
+    var lessonURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,7 +23,7 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let game = taskGame
     
-    var gameURL = "https://www.lds.org/music/library?lang=eng"
+    var gameURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()

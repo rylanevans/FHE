@@ -17,7 +17,7 @@ func generateSongs() {
     song1.random = Int64(arc4random_uniform(100))
     song1.book = songBooksArray[1]
     song1.number = 2
-    song1.url = "https://www.lds.org/music/library/hymns/the-spirit-of-god?lang=eng"
+    song1.url = "https://www.churchofjesuschrist.org/music/library/hymns/the-spirit-of-god?lang=eng"
     song1.title = "The Spirit of God"
     song1.topic = "Holy Ghost"
     song1.selected = false
@@ -30,7 +30,7 @@ func generateSongs() {
     song2.random = Int64(arc4random_uniform(1000))
     song2.book = songBooksArray[1]
     song2.number = 19
-    song2.url = "https://www.lds.org/music/library/hymns/we-thank-thee-o-god-for-a-prophet?lang=eng"
+    song2.url = "https://www.churchofjesuschrist.org/music/library/hymns/we-thank-thee-o-god-for-a-prophet?lang=eng"
     song2.title = "We Thank Thee, O God, for a Prophet"
     song2.topic = "Restoration"
     song2.selected = false
@@ -43,7 +43,7 @@ func generateSongs() {
     song3.random = Int64(arc4random_uniform(1000))
     song3.book = songBooksArray[1]
     song3.number = 27
-    song3.url = "https://www.lds.org/music/library/hymns/praise-to-the-man?lang=eng"
+    song3.url = "https://www.churchofjesuschrist.org/music/library/hymns/praise-to-the-man?lang=eng"
     song3.title = "Praise to the Man"
     song3.topic = "Restoration"
     song3.selected = false
@@ -56,7 +56,7 @@ func generateSongs() {
     song4.random = Int64(arc4random_uniform(1000))
     song4.book = songBooksArray[1]
     song4.number = 29
-    song4.url = "https://www.lds.org/music/library/hymns/a-poor-wayfaring-man-of-grief?lang=eng"
+    song4.url = "https://www.churchofjesuschrist.org/music/library/hymns/a-poor-wayfaring-man-of-grief?lang=eng"
     song4.title = "A Poor Wayfaring Man of Grief"
     song4.topic = "Care for the Poor & Needy"
     song4.selected = false
@@ -69,7 +69,7 @@ func generateSongs() {
     song5.random = Int64(arc4random_uniform(1000))
     song5.book = songBooksArray[1]
     song5.number = 85
-    song5.url = "https://www.lds.org/music/library/hymns/how-firm-a-foundation?lang=eng"
+    song5.url = "https://www.churchofjesuschrist.org/music/library/hymns/how-firm-a-foundation?lang=eng"
     song5.title = "How Firm a Foundation"
     song5.topic = "Atonement"
     song5.selected = false
@@ -82,7 +82,7 @@ func generateSongs() {
     song6.random = Int64(arc4random_uniform(1000))
     song6.book = songBooksArray[1]
     song6.number = 89
-    song6.url = "https://www.lds.org/music/library/hymns/the-lord-is-my-light?lang=eng"
+    song6.url = "https://www.churchofjesuschrist.org/music/library/hymns/the-lord-is-my-light?lang=eng"
     song6.title = "The Lord Is My Light"
     song6.topic = "Jesus Christ"
     song6.selected = false
@@ -95,7 +95,7 @@ func generateSongs() {
     song7.random = Int64(arc4random_uniform(1000))
     song7.book = songBooksArray[1]
     song7.number = 92
-    song7.url = "https://www.lds.org/music/library/hymns/for-the-beauty-of-the-earth?lang=eng"
+    song7.url = "https://www.churchofjesuschrist.org/music/library/hymns/for-the-beauty-of-the-earth?lang=eng"
     song7.title = "For the Beauty of the Earth"
     song7.topic = "Plan of Salvation"
     song7.selected = false
@@ -108,7 +108,7 @@ func generateSongs() {
     song8.random = Int64(arc4random_uniform(1000))
     song8.book = songBooksArray[1]
     song8.number = 98
-    song8.url = "https://www.lds.org/music/library/hymns/i-need-thee-every-hour?lang=eng"
+    song8.url = "https://www.churchofjesuschrist.org/music/library/hymns/i-need-thee-every-hour?lang=eng"
     song8.title = "I Need Thee Every Hour"
     song8.topic = "Jesus Christ"
     song8.selected = false
@@ -121,7 +121,7 @@ func generateSongs() {
     song9.random = Int64(arc4random_uniform(1000))
     song9.book = songBooksArray[1]
     song9.number = 100
-    song9.url = "https://www.lds.org/music/library/hymns/nearer-my-god-to-thee?lang=eng"
+    song9.url = "https://www.churchofjesuschrist.org/music/library/hymns/nearer-my-god-to-thee?lang=eng"
     song9.title = "Nearer, My God, to Thee"
     song9.topic = "Heavenly Father"
     song9.selected = false
@@ -134,7 +134,7 @@ func generateSongs() {
     song10.random = Int64(arc4random_uniform(1000))
     song10.book = songBooksArray[1]
     song10.number = 103
-    song10.url = "https://www.lds.org/music/library/hymns/precious-savior-dear-redeemer?lang=eng"
+    song10.url = "https://www.churchofjesuschrist.org/music/library/hymns/precious-savior-dear-redeemer?lang=eng"
     song10.title = "Precious Savior, Dear Redeemer"
     song10.topic = "Jesus Christ"
     song10.selected = false
@@ -147,7 +147,7 @@ func generateSongs() {
     song11.random = Int64(arc4random_uniform(1000))
     song11.book = songBooksArray[1]
     song11.number = 106
-    song11.url = "https://www.lds.org/music/library/hymns/god-speed-the-right?lang=eng"
+    song11.url = "https://www.churchofjesuschrist.org/music/library/hymns/god-speed-the-right?lang=eng"
     song11.title = "God Speed the Right"
     song11.topic = "Heavenly Father"
     song11.selected = false
@@ -160,7 +160,7 @@ func generateSongs() {
     song12.random = Int64(arc4random_uniform(1000))
     song12.book = songBooksArray[1]
     song12.number = 108
-    song12.url = "https://www.lds.org/music/library/hymns/the-lord-is-my-shepherd?lang=eng"
+    song12.url = "https://www.churchofjesuschrist.org/music/library/hymns/the-lord-is-my-shepherd?lang=eng"
     song12.title = "The Lord Is My Shepherd"
     song12.topic = "Jesus Christ"
     song12.selected = false
@@ -173,7 +173,7 @@ func generateSongs() {
     song13.random = Int64(arc4random_uniform(1000))
     song13.book = songBooksArray[1]
     song13.number = 113
-    song13.url = "https://www.lds.org/music/library/hymns/our-saviors-love?lang=eng"
+    song13.url = "https://www.churchofjesuschrist.org/music/library/hymns/our-saviors-love?lang=eng"
     song13.title = "Our Savior’s Love"
     song13.topic = "Christlike Attributes"
     song13.selected = false
@@ -186,7 +186,7 @@ func generateSongs() {
     song14.random = Int64(arc4random_uniform(1000))
     song14.book = songBooksArray[1]
     song14.number = 116
-    song14.url = "https://www.lds.org/music/library/hymns/come-follow-me?lang=eng"
+    song14.url = "https://www.churchofjesuschrist.org/music/library/hymns/come-follow-me?lang=eng"
     song14.title = "Come, Follow Me"
     song14.topic = "Commandments"
     song14.selected = false
@@ -199,7 +199,7 @@ func generateSongs() {
     song15.random = Int64(arc4random_uniform(1000))
     song15.book = songBooksArray[1]
     song15.number = 130
-    song15.url = "https://www.lds.org/music/library/hymns/be-thou-humble?lang=eng"
+    song15.url = "https://www.churchofjesuschrist.org/music/library/hymns/be-thou-humble?lang=eng"
     song15.title = "Be Thou Humble"
     song15.topic = "Christlike Attributes"
     song15.selected = false
@@ -212,7 +212,7 @@ func generateSongs() {
     song16.random = Int64(arc4random_uniform(1000))
     song16.book = songBooksArray[1]
     song16.number = 131
-    song16.url = "https://www.lds.org/music/library/hymns/more-holiness-give-me?lang=eng"
+    song16.url = "https://www.churchofjesuschrist.org/music/library/hymns/more-holiness-give-me?lang=eng"
     song16.title = "More Holiness Give Me"
     song16.topic = "Christlike Attributes"
     song16.selected = false
@@ -225,7 +225,7 @@ func generateSongs() {
     song17.random = Int64(arc4random_uniform(1000))
     song17.book = songBooksArray[1]
     song17.number = 133
-    song17.url = "https://www.lds.org/music/library/hymns/father-in-heaven?lang=eng"
+    song17.url = "https://www.churchofjesuschrist.org/music/library/hymns/father-in-heaven?lang=eng"
     song17.title = "Father in Heaven"
     song17.topic = "Heavenly Father"
     song17.selected = false
@@ -238,7 +238,7 @@ func generateSongs() {
     song18.random = Int64(arc4random_uniform(1000))
     song18.book = songBooksArray[1]
     song18.number = 134
-    song18.url = "https://www.lds.org/music/library/hymns/i-believe-in-christ?lang=eng"
+    song18.url = "https://www.churchofjesuschrist.org/music/library/hymns/i-believe-in-christ?lang=eng"
     song18.title = "I Believe in Christ"
     song18.topic = "Jesus Christ"
     song18.selected = false
@@ -251,7 +251,7 @@ func generateSongs() {
     song19.random = Int64(arc4random_uniform(1000))
     song19.book = songBooksArray[1]
     song19.number = 136
-    song19.url = "https://www.lds.org/music/library/hymns/i-know-that-my-redeemer-lives?lang=eng"
+    song19.url = "https://www.churchofjesuschrist.org/music/library/hymns/i-know-that-my-redeemer-lives?lang=eng"
     song19.title = "I Know That My Redeemer Lives"
     song19.topic = "Jesus Christ"
     song19.selected = false
@@ -264,7 +264,7 @@ func generateSongs() {
     song20.random = Int64(arc4random_uniform(1000))
     song20.book = songBooksArray[1]
     song20.number = 137
-    song20.url = "https://www.lds.org/music/library/hymns/testimony?lang=eng"
+    song20.url = "https://www.churchofjesuschrist.org/music/library/hymns/testimony?lang=eng"
     song20.title = "Testimony"
     song20.topic = "Christlike Attributes"
     song20.selected = false
@@ -277,7 +277,7 @@ func generateSongs() {
     song21.random = Int64(arc4random_uniform(1000))
     song21.book = songBooksArray[1]
     song21.number = 140
-    song21.url = "https://www.lds.org/music/library/hymns/did-you-think-to-pray?lang=eng"
+    song21.url = "https://www.churchofjesuschrist.org/music/library/hymns/did-you-think-to-pray?lang=eng"
     song21.title = "Did You Think to Pray?"
     song21.topic = "Commandments"
     song21.selected = false
@@ -290,7 +290,7 @@ func generateSongs() {
     song22.random = Int64(arc4random_uniform(1000))
     song22.book = songBooksArray[1]
     song22.number = 142
-    song22.url = "https://www.lds.org/music/library/hymns/sweet-hour-of-prayer?lang=eng"
+    song22.url = "https://www.churchofjesuschrist.org/music/library/hymns/sweet-hour-of-prayer?lang=eng"
     song22.title = "Sweet Hour of Prayer"
     song22.topic = "Commandments"
     song22.selected = false
@@ -303,7 +303,7 @@ func generateSongs() {
     song23.random = Int64(arc4random_uniform(1000))
     song23.book = songBooksArray[1]
     song23.number = 152
-    song23.url = "https://www.lds.org/music/library/hymns/god-be-with-you-till-we-meet-again?lang=eng"
+    song23.url = "https://www.churchofjesuschrist.org/music/library/hymns/god-be-with-you-till-we-meet-again?lang=eng"
     song23.title = "God Be with You Till We Meet Again"
     song23.topic = "Plan of Salvation"
     song23.selected = false
@@ -316,7 +316,7 @@ func generateSongs() {
     song24.random = Int64(arc4random_uniform(1000))
     song24.book = songBooksArray[1]
     song24.number = 165
-    song24.url = "https://www.lds.org/music/library/hymns/abide-with-me-tis-eventide?lang=eng"
+    song24.url = "https://www.churchofjesuschrist.org/music/library/hymns/abide-with-me-tis-eventide?lang=eng"
     song24.title = "Abide with Me; ’Tis Eventide"
     song24.topic = "Jesus Christ"
     song24.selected = false
@@ -329,7 +329,7 @@ func generateSongs() {
     song25.random = Int64(arc4random_uniform(1000))
     song25.book = songBooksArray[1]
     song25.number = 170
-    song25.url = "https://www.lds.org/music/library/hymns/god-our-father-hear-us-pray?lang=eng"
+    song25.url = "https://www.churchofjesuschrist.org/music/library/hymns/god-our-father-hear-us-pray?lang=eng"
     song25.title = "God, Our Father, Hear Us Pray"
     song25.topic = "Heavenly Father"
     song25.selected = false
@@ -342,7 +342,7 @@ func generateSongs() {
     song26.random = Int64(arc4random_uniform(1000))
     song26.book = songBooksArray[1]
     song26.number = 193
-    song26.url = "https://www.lds.org/music/library/hymns/i-stand-all-amazed?lang=eng"
+    song26.url = "https://www.churchofjesuschrist.org/music/library/hymns/i-stand-all-amazed?lang=eng"
     song26.title = "I Stand All Amazed"
     song26.topic = "Heavenly Father"
     song26.selected = false
@@ -355,7 +355,7 @@ func generateSongs() {
     song27.random = Int64(arc4random_uniform(1000))
     song27.book = songBooksArray[1]
     song27.number = 194
-    song27.url = "https://www.lds.org/music/library/hymns/there-is-a-green-hill-far-away?lang=eng"
+    song27.url = "https://www.churchofjesuschrist.org/music/library/hymns/there-is-a-green-hill-far-away?lang=eng"
     song27.title = "There Is a Green Hill Far Away"
     song27.topic = "Atonement"
     song27.selected = false
@@ -368,7 +368,7 @@ func generateSongs() {
     song28.random = Int64(arc4random_uniform(1000))
     song28.book = songBooksArray[1]
     song28.number = 199
-    song28.url = "https://www.lds.org/music/library/hymns/he-is-risen?lang=eng"
+    song28.url = "https://www.churchofjesuschrist.org/music/library/hymns/he-is-risen?lang=eng"
     song28.title = "He Is Risen!"
     song28.topic = "Resurrection"
     song28.selected = false
@@ -381,7 +381,7 @@ func generateSongs() {
     song29.random = Int64(arc4random_uniform(1000))
     song29.book = songBooksArray[1]
     song29.number = 203
-    song29.url = "https://www.lds.org/music/library/hymns/angels-we-have-heard-on-high?lang=eng"
+    song29.url = "https://www.churchofjesuschrist.org/music/library/hymns/angels-we-have-heard-on-high?lang=eng"
     song29.title = "Angels We Have Heard on High"
     song29.topic = "Birth of our Savior"
     song29.selected = false
@@ -394,7 +394,7 @@ func generateSongs() {
     song30.random = Int64(arc4random_uniform(1000))
     song30.book = songBooksArray[1]
     song30.number = 204
-    song30.url = "https://www.lds.org/music/library/hymns/silent-night?lang=eng"
+    song30.url = "https://www.churchofjesuschrist.org/music/library/hymns/silent-night?lang=eng"
     song30.title = "Silent Night"
     song30.topic = "Birth of our Savior"
     song30.selected = false
@@ -407,7 +407,7 @@ func generateSongs() {
     song31.random = Int64(arc4random_uniform(1000))
     song31.book = songBooksArray[1]
     song31.number = 209
-    song31.url = "https://www.lds.org/music/library/hymns/hark-the-herald-angels-sing?lang=eng"
+    song31.url = "https://www.churchofjesuschrist.org/music/library/hymns/hark-the-herald-angels-sing?lang=eng"
     song31.title = "Hark! The Herald Angels Sing"
     song31.topic = "Birth of our Savior"
     song31.selected = false
@@ -420,7 +420,7 @@ func generateSongs() {
     song32.random = Int64(arc4random_uniform(1000))
     song32.book = songBooksArray[1]
     song32.number = 213
-    song32.url = "https://www.lds.org/music/library/hymns/the-first-noel?lang=eng"
+    song32.url = "https://www.churchofjesuschrist.org/music/library/hymns/the-first-noel?lang=eng"
     song32.title = "The First Noel"
     song32.topic = "Birth of our Savior"
     song32.selected = false
@@ -433,7 +433,7 @@ func generateSongs() {
     song33.random = Int64(arc4random_uniform(1000))
     song33.book = songBooksArray[1]
     song33.number = 223
-    song33.url = "https://www.lds.org/music/library/hymns/have-i-done-any-good?lang=eng"
+    song33.url = "https://www.churchofjesuschrist.org/music/library/hymns/have-i-done-any-good?lang=eng"
     song33.title = "Have I Done Any Good?"
     song33.topic = "Care for the Poor & Needy"
     song33.selected = false
@@ -446,7 +446,7 @@ func generateSongs() {
     song34.random = Int64(arc4random_uniform(1000))
     song34.book = songBooksArray[1]
     song34.number = 227
-    song34.url = "https://www.lds.org/music/library/hymns/there-is-sunshine-in-my-soul-today?lang=eng"
+    song34.url = "https://www.churchofjesuschrist.org/music/library/hymns/there-is-sunshine-in-my-soul-today?lang=eng"
     song34.title = "There Is Sunshine in My Soul Today"
     song34.topic = "Holy Ghost"
     song34.selected = false
@@ -459,7 +459,7 @@ func generateSongs() {
     song35.random = Int64(arc4random_uniform(1000))
     song35.book = songBooksArray[1]
     song35.number = 239
-    song35.url = "https://www.lds.org/music/library/hymns/choose-the-right?lang=eng"
+    song35.url = "https://www.churchofjesuschrist.org/music/library/hymns/choose-the-right?lang=eng"
     song35.title = "Choose the Right"
     song35.topic = "Commandments"
     song35.selected = false
@@ -472,7 +472,7 @@ func generateSongs() {
     song36.random = Int64(arc4random_uniform(1000))
     song36.book = songBooksArray[1]
     song36.number = 243
-    song36.url = "https://www.lds.org/music/library/hymns/let-us-all-press-on?lang=eng"
+    song36.url = "https://www.churchofjesuschrist.org/music/library/hymns/let-us-all-press-on?lang=eng"
     song36.title = "Let Us All Press On"
     song36.topic = "Endure to the end"
     song36.selected = false
@@ -485,7 +485,7 @@ func generateSongs() {
     song37.random = Int64(arc4random_uniform(1000))
     song37.book = songBooksArray[1]
     song37.number = 246
-    song37.url = "https://www.lds.org/music/library/hymns/onward-christian-soldiers?lang=eng"
+    song37.url = "https://www.churchofjesuschrist.org/music/library/hymns/onward-christian-soldiers?lang=eng"
     song37.title = "Onward, Christian Soldiers"
     song37.topic = "Perfect the Saints"
     song37.selected = false
@@ -498,7 +498,7 @@ func generateSongs() {
     song38.random = Int64(arc4random_uniform(1000))
     song38.book = songBooksArray[1]
     song38.number = 249
-    song38.url = "https://www.lds.org/music/library/hymns/called-to-serve?lang=eng"
+    song38.url = "https://www.churchofjesuschrist.org/music/library/hymns/called-to-serve?lang=eng"
     song38.title = "Called to Serve"
     song38.topic = "Proclaim the Gospel"
     song38.selected = false
@@ -511,7 +511,7 @@ func generateSongs() {
     song39.random = Int64(arc4random_uniform(1000))
     song39.book = songBooksArray[1]
     song39.number = 250
-    song39.url = "https://www.lds.org/music/library/hymns/we-are-all-enlisted?lang=eng"
+    song39.url = "https://www.churchofjesuschrist.org/music/library/hymns/we-are-all-enlisted?lang=eng"
     song39.title = "We Are All Enlisted"
     song39.topic = "Perfect the Saints"
     song39.selected = false
@@ -524,7 +524,7 @@ func generateSongs() {
     song40.random = Int64(arc4random_uniform(1000))
     song40.book = songBooksArray[1]
     song40.number = 252
-    song40.url = "https://www.lds.org/music/library/hymns/put-your-shoulder-to-the-wheel?lang=eng"
+    song40.url = "https://www.churchofjesuschrist.org/music/library/hymns/put-your-shoulder-to-the-wheel?lang=eng"
     song40.title = "Put Your Shoulder to the Wheel"
     song40.topic = "Endure to the end"
     song40.selected = false
@@ -537,7 +537,7 @@ func generateSongs() {
     song41.random = Int64(arc4random_uniform(1000))
     song41.book = songBooksArray[1]
     song41.number = 255
-    song41.url = "https://www.lds.org/music/library/hymns/carry-on?lang=eng"
+    song41.url = "https://www.churchofjesuschrist.org/music/library/hymns/carry-on?lang=eng"
     song41.title = "Carry On"
     song41.topic = "Endure to the end"
     song41.selected = false
@@ -550,7 +550,7 @@ func generateSongs() {
     song42.random = Int64(arc4random_uniform(1000))
     song42.book = songBooksArray[1]
     song42.number = 259
-    song42.url = "https://www.lds.org/music/library/hymns/hope-of-israel?lang=eng"
+    song42.url = "https://www.churchofjesuschrist.org/music/library/hymns/hope-of-israel?lang=eng"
     song42.title = "Hope of Israel"
     song42.topic = "Perfect the Saints"
     song42.selected = false
@@ -563,7 +563,7 @@ func generateSongs() {
     song43.random = Int64(arc4random_uniform(1000))
     song43.book = songBooksArray[1]
     song43.number = 260
-    song43.url = "https://www.lds.org/music/library/hymns/whos-on-the-lords-side?lang=eng"
+    song43.url = "https://www.churchofjesuschrist.org/music/library/hymns/whos-on-the-lords-side?lang=eng"
     song43.title = "Who’s on the Lord’s Side?"
     song43.topic = "Perfect the Saints"
     song43.selected = false
@@ -576,7 +576,7 @@ func generateSongs() {
     song51.random = Int64(arc4random_uniform(100))
     song51.book = songBooksArray[0]
     song51.number = 2
-    song51.url = "https://www.lds.org/music/library/childrens-songbook/i-am-a-child-of-god?lang=eng"
+    song51.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-am-a-child-of-god?lang=eng"
     song51.title = "I Am a Child of God"
     song51.topic = "Heavenly Father"
     song51.selected = false
@@ -589,7 +589,7 @@ func generateSongs() {
     song52.random = Int64(arc4random_uniform(1000))
     song52.book = songBooksArray[0]
     song52.number = 4
-    song52.url = "https://www.lds.org/music/library/childrens-songbook/i-lived-in-heaven?lang=eng"
+    song52.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-lived-in-heaven?lang=eng"
     song52.title = "I Lived in Heaven"
     song52.topic = "Plan of Salvation"
     song52.selected = false
@@ -602,7 +602,7 @@ func generateSongs() {
     song53.random = Int64(arc4random_uniform(1000))
     song53.book = songBooksArray[0]
     song53.number = 5
-    song53.url = "https://www.lds.org/music/library/childrens-songbook/i-know-my-father-lives?lang=eng"
+    song53.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-know-my-father-lives?lang=eng"
     song53.title = "I Know My Father Lives"
     song53.topic = "Heavenly Father"
     song53.selected = false
@@ -615,7 +615,7 @@ func generateSongs() {
     song54.random = Int64(arc4random_uniform(1000))
     song54.book = songBooksArray[0]
     song54.number = 7
-    song54.url = "https://www.lds.org/music/library/childrens-songbook/i-thank-thee-dear-father?lang=eng"
+    song54.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-thank-thee-dear-father?lang=eng"
     song54.title = "I Thank Thee, Dear Father"
     song54.topic = "Heavenly Father"
     song54.selected = false
@@ -628,7 +628,7 @@ func generateSongs() {
     song55.random = Int64(arc4random_uniform(1000))
     song55.book = songBooksArray[0]
     song55.number = 11
-    song55.url = "https://www.lds.org/music/library/childrens-songbook/im-thankful-to-be-me?lang=eng"
+    song55.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/im-thankful-to-be-me?lang=eng"
     song55.title = "I’m Thankful to Be Me"
     song55.topic = "Christlike Attributes"
     song55.selected = false
@@ -641,7 +641,7 @@ func generateSongs() {
     song56.random = Int64(arc4random_uniform(1000))
     song56.book = songBooksArray[0]
     song56.number = 12
-    song56.url = "https://www.lds.org/music/library/childrens-songbook/a-childs-prayer?lang=eng"
+    song56.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/a-childs-prayer?lang=eng"
     song56.title = "A Child’s Prayer"
     song56.topic = "Heavenly Father"
     song56.selected = true
@@ -655,7 +655,7 @@ func generateSongs() {
     song57.random = Int64(arc4random_uniform(1000))
     song57.book = songBooksArray[0]
     song57.number = 16
-    song57.url = "https://www.lds.org/music/library/childrens-songbook/children-all-over-the-world?lang=eng"
+    song57.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/children-all-over-the-world?lang=eng"
     song57.title = "Children All Over the World"
     song57.topic = "Plan of Salvation"
     song57.selected = false
@@ -668,7 +668,7 @@ func generateSongs() {
     song58.random = Int64(arc4random_uniform(1000))
     song58.book = songBooksArray[0]
     song58.number = 26
-    song58.url = "https://www.lds.org/music/library/childrens-songbook/reverently-quietly?lang=eng"
+    song58.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/reverently-quietly?lang=eng"
     song58.title = "Reverently, Quietly"
     song58.topic = "Christlike Attributes"
     song58.selected = false
@@ -681,7 +681,7 @@ func generateSongs() {
     song59.random = Int64(arc4random_uniform(1000))
     song59.book = songBooksArray[0]
     song59.number = 37
-    song59.url = "https://www.lds.org/music/library/childrens-songbook/stars-were-gleaming?lang=eng"
+    song59.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/stars-were-gleaming?lang=eng"
     song59.title = "Stars Were Gleaming"
     song59.topic = "Birth of our Savior"
     song59.selected = false
@@ -694,7 +694,7 @@ func generateSongs() {
     song60.random = Int64(arc4random_uniform(1000))
     song60.book = songBooksArray[0]
     song60.number = 42
-    song60.url = "https://www.lds.org/music/library/childrens-songbook/away-in-a-manger?lang=eng"
+    song60.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/away-in-a-manger?lang=eng"
     song60.title = "Away in a Manger"
     song60.topic = "Birth of our Savior"
     song60.selected = false
@@ -707,7 +707,7 @@ func generateSongs() {
     song61.random = Int64(arc4random_uniform(1000))
     song61.book = songBooksArray[0]
     song61.number = 47
-    song61.url = "https://www.lds.org/music/library/childrens-songbook/sleep-little-jesus?lang=eng"
+    song61.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/sleep-little-jesus?lang=eng"
     song61.title = "Sleep, Little Jesus"
     song61.topic = "Birth of our Savior"
     song61.selected = false
@@ -720,7 +720,7 @@ func generateSongs() {
     song62.random = Int64(arc4random_uniform(1000))
     song62.book = songBooksArray[0]
     song62.number = 55
-    song62.url = "https://www.lds.org/music/library/childrens-songbook/jesus-once-was-a-little-child?lang=eng"
+    song62.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/jesus-once-was-a-little-child?lang=eng"
     song62.title = "Jesus Once Was a Little Child"
     song62.topic = "Jesus Christ"
     song62.selected = false
@@ -733,7 +733,7 @@ func generateSongs() {
     song63.random = Int64(arc4random_uniform(1000))
     song63.book = songBooksArray[0]
     song63.number = 57
-    song63.url = "https://www.lds.org/music/library/childrens-songbook/tell-me-the-stories-of-jesus?lang=eng"
+    song63.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/tell-me-the-stories-of-jesus?lang=eng"
     song63.title = "Tell Me the Stories of Jesus"
     song63.topic = "Jesus Christ"
     song63.selected = false
@@ -746,7 +746,7 @@ func generateSongs() {
     song64.random = Int64(arc4random_uniform(1000))
     song64.book = songBooksArray[0]
     song64.number = 60
-    song64.url = "https://www.lds.org/music/library/childrens-songbook/jesus-wants-me-for-a-sunbeam?lang=eng"
+    song64.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/jesus-wants-me-for-a-sunbeam?lang=eng"
     song64.title = "Jesus Wants Me for a Sunbeam"
     song64.topic = "Jesus Christ"
     song64.selected = false
@@ -759,7 +759,7 @@ func generateSongs() {
     song65.random = Int64(arc4random_uniform(1000))
     song65.book = songBooksArray[0]
     song65.number = 74
-    song65.url = "https://www.lds.org/music/library/childrens-songbook/i-feel-my-saviors-love?lang=eng"
+    song65.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-feel-my-saviors-love?lang=eng"
     song65.title = "I Feel My Savior’s Love"
     song65.topic = "Christlike Attributes"
     song65.selected = false
@@ -772,7 +772,7 @@ func generateSongs() {
     song66.random = Int64(arc4random_uniform(1000))
     song66.book = songBooksArray[0]
     song66.number = 78
-    song66.url = "https://www.lds.org/music/library/childrens-songbook/im-trying-to-be-like-jesus?lang=eng"
+    song66.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/im-trying-to-be-like-jesus?lang=eng"
     song66.title = "I’m Trying to Be like Jesus"
     song66.topic = "Jesus Christ"
     song66.selected = false
@@ -785,7 +785,7 @@ func generateSongs() {
     song67.random = Int64(arc4random_uniform(1000))
     song67.book = songBooksArray[0]
     song67.number = 82
-    song67.url = "https://www.lds.org/music/library/childrens-songbook/when-he-comes-again?lang=eng"
+    song67.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/when-he-comes-again?lang=eng"
     song67.title = "When He Comes Again"
     song67.topic = "Jesus Christ"
     song67.selected = false
@@ -798,7 +798,7 @@ func generateSongs() {
     song68.random = Int64(arc4random_uniform(1000))
     song68.book = songBooksArray[0]
     song68.number = 86
-    song68.url = "https://www.lds.org/music/library/childrens-songbook/the-golden-plates?lang=eng"
+    song68.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/the-golden-plates?lang=eng"
     song68.title = "The Golden Plates"
     song68.topic = "Scriptures"
     song68.selected = false
@@ -811,7 +811,7 @@ func generateSongs() {
     song69.random = Int64(arc4random_uniform(1000))
     song69.book = songBooksArray[0]
     song69.number = 95
-    song69.url = "https://www.lds.org/music/library/childrens-songbook/i-love-to-see-the-temple?lang=eng"
+    song69.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-love-to-see-the-temple?lang=eng"
     song69.title = "I Love to See the Temple"
     song69.topic = "Redeem the Dead"
     song69.selected = false
@@ -824,7 +824,7 @@ func generateSongs() {
     song70.random = Int64(arc4random_uniform(1000))
     song70.book = songBooksArray[0]
     song70.number = 96
-    song70.url = "https://www.lds.org/music/library/childrens-songbook/faith?lang=eng"
+    song70.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/faith?lang=eng"
     song70.title = "Faith"
     song70.topic = "Principles & Ordinances"
     song70.selected = false
@@ -837,7 +837,7 @@ func generateSongs() {
     song71.random = Int64(arc4random_uniform(1000))
     song71.book = songBooksArray[0]
     song71.number = 98
-    song71.url = "https://www.lds.org/music/library/childrens-songbook/repentance?lang=eng"
+    song71.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/repentance?lang=eng"
     song71.title = "Repentance"
     song71.topic = "Principles & Ordinances"
     song71.selected = false
@@ -850,7 +850,7 @@ func generateSongs() {
     song72.random = Int64(arc4random_uniform(1000))
     song72.book = songBooksArray[0]
     song72.number = 100
-    song72.url = "https://www.lds.org/music/library/childrens-songbook/baptism?lang=eng"
+    song72.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/baptism?lang=eng"
     song72.title = "Baptism"
     song72.topic = "Principles & Ordinances"
     song72.selected = false
@@ -863,7 +863,7 @@ func generateSongs() {
     song73.random = Int64(arc4random_uniform(1000))
     song73.book = songBooksArray[0]
     song73.number = 103
-    song73.url = "https://www.lds.org/music/library/childrens-songbook/when-i-am-baptized?lang=eng"
+    song73.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/when-i-am-baptized?lang=eng"
     song73.title = "When I Am Baptized"
     song73.topic = "Principles & Ordinances"
     song73.selected = false
@@ -876,7 +876,7 @@ func generateSongs() {
     song74.random = Int64(arc4random_uniform(1000))
     song74.book = songBooksArray[0]
     song74.number = 105
-    song74.url = "https://www.lds.org/music/library/childrens-songbook/the-holy-ghost?lang=eng"
+    song74.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/the-holy-ghost?lang=eng"
     song74.title = "The Holy Ghost"
     song74.topic = "Principles & Ordinances"
     song74.selected = false
@@ -889,7 +889,7 @@ func generateSongs() {
     song75.random = Int64(arc4random_uniform(1000))
     song75.book = songBooksArray[0]
     song75.number = 109
-    song75.url = "https://www.lds.org/music/library/childrens-songbook/search-ponder-and-pray?lang=eng"
+    song75.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/search-ponder-and-pray?lang=eng"
     song75.title = "Search, Ponder, and Pray"
     song75.topic = "Commandments"
     song75.selected = false
@@ -902,7 +902,7 @@ func generateSongs() {
     song76.random = Int64(arc4random_uniform(1000))
     song76.book = songBooksArray[0]
     song76.number = 110
-    song76.url = "https://www.lds.org/music/library/childrens-songbook/follow-the-prophet?lang=eng"
+    song76.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/follow-the-prophet?lang=eng"
     song76.title = "Follow the Prophet"
     song76.topic = "Restoration"
     song76.selected = false
@@ -915,7 +915,7 @@ func generateSongs() {
     song77.random = Int64(arc4random_uniform(1000))
     song77.book = songBooksArray[0]
     song77.number = 112
-    song77.url = "https://www.lds.org/music/library/childrens-songbook/the-commandments?lang=eng"
+    song77.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/the-commandments?lang=eng"
     song77.title = "The Commandments"
     song77.topic = "Commandments"
     song77.selected = false
@@ -928,7 +928,7 @@ func generateSongs() {
     song78.random = Int64(arc4random_uniform(1000))
     song78.book = songBooksArray[0]
     song78.number = 118
-    song78.url = "https://www.lds.org/music/library/childrens-songbook/book-of-mormon-stories?lang=eng"
+    song78.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/book-of-mormon-stories?lang=eng"
     song78.title = "Book of Mormon Stories"
     song78.topic = "Scriptures"
     song78.selected = false
@@ -941,7 +941,7 @@ func generateSongs() {
     song79.random = Int64(arc4random_uniform(1000))
     song79.book = songBooksArray[0]
     song79.number = 120
-    song79.url = "https://www.lds.org/music/library/childrens-songbook/nephis-courage?lang=eng"
+    song79.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/nephis-courage?lang=eng"
     song79.title = "Nephi’s Courage"
     song79.topic = "Christlike Attributes"
     song79.selected = false
@@ -954,7 +954,7 @@ func generateSongs() {
     song80.random = Int64(arc4random_uniform(1000))
     song80.book = songBooksArray[0]
     song80.number = 136
-    song80.url = "https://www.lds.org/music/library/childrens-songbook/love-one-another?lang=eng"
+    song80.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/love-one-another?lang=eng"
     song80.title = "Love One Another"
     song80.topic = "Commandments"
     song80.selected = false
@@ -967,7 +967,7 @@ func generateSongs() {
     song81.random = Int64(arc4random_uniform(1000))
     song81.book = songBooksArray[0]
     song81.number = 146
-    song81.url = "https://www.lds.org/music/library/childrens-songbook/keep-the-commandments?lang=eng"
+    song81.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/keep-the-commandments?lang=eng"
     song81.title = "Keep the Commandments"
     song81.topic = "Commandments"
     song81.selected = false
@@ -980,7 +980,7 @@ func generateSongs() {
     song82.random = Int64(arc4random_uniform(1000))
     song82.book = songBooksArray[0]
     song82.number = 158
-    song82.url = "https://www.lds.org/music/library/childrens-songbook/dare-to-do-right?lang=eng"
+    song82.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/dare-to-do-right?lang=eng"
     song82.title = "Dare to Do Right"
     song82.topic = "Endure to the end"
     song82.selected = false
@@ -993,7 +993,7 @@ func generateSongs() {
     song83.random = Int64(arc4random_uniform(1000))
     song83.book = songBooksArray[0]
     song83.number = 159
-    song83.url = "https://www.lds.org/music/library/childrens-songbook/stand-for-the-right?lang=eng"
+    song83.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/stand-for-the-right?lang=eng"
     song83.title = "Stand for the Right"
     song83.topic = "Commandments"
     song83.selected = false
@@ -1006,7 +1006,7 @@ func generateSongs() {
     song84.random = Int64(arc4random_uniform(1000))
     song84.book = songBooksArray[0]
     song84.number = 160
-    song84.url = "https://www.lds.org/music/library/childrens-songbook/choose-the-right-way?lang=eng"
+    song84.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/choose-the-right-way?lang=eng"
     song84.title = "Choose the Right Way"
     song84.topic = "Christlike Attributes"
     song84.selected = false
@@ -1019,7 +1019,7 @@ func generateSongs() {
     song85.random = Int64(arc4random_uniform(1000))
     song85.book = songBooksArray[0]
     song85.number = 163
-    song85.url = "https://www.lds.org/music/library/childrens-songbook/i-am-like-a-star?lang=eng"
+    song85.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-am-like-a-star?lang=eng"
     song85.title = "I Am Like a Star"
     song85.topic = "Heavenly Father"
     song85.selected = false
@@ -1032,7 +1032,7 @@ func generateSongs() {
     song86.random = Int64(arc4random_uniform(1000))
     song86.book = songBooksArray[0]
     song86.number = 169
-    song86.url = "https://www.lds.org/music/library/childrens-songbook/i-hope-they-call-me-on-a-mission?lang=eng"
+    song86.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/i-hope-they-call-me-on-a-mission?lang=eng"
     song86.title = "I Hope They Call Me on a Mission"
     song86.topic = "Proclaim the Gospel"
     song86.selected = false
@@ -1045,7 +1045,7 @@ func generateSongs() {
     song87.random = Int64(arc4random_uniform(1000))
     song87.book = songBooksArray[0]
     song87.number = 172
-    song87.url = "https://www.lds.org/music/library/childrens-songbook/well-bring-the-world-his-truth-army-of-helaman?lang=eng"
+    song87.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/well-bring-the-world-his-truth-army-of-helaman?lang=eng"
     song87.title = "We’ll Bring the World His Truth"
     song87.topic = "Proclaim the Gospel"
     song87.selected = false
@@ -1058,7 +1058,7 @@ func generateSongs() {
     song88.random = Int64(arc4random_uniform(1000))
     song88.book = songBooksArray[0]
     song88.number = 174
-    song88.url = "https://www.lds.org/music/library/childrens-songbook/called-to-serve?lang=eng"
+    song88.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/called-to-serve?lang=eng"
     song88.title = "Called to Serve"
     song88.topic = "Proclaim the Gospel"
     song88.selected = false
@@ -1071,7 +1071,7 @@ func generateSongs() {
     song89.random = Int64(arc4random_uniform(1000))
     song89.book = songBooksArray[0]
     song89.number = 176
-    song89.url = "https://www.lds.org/music/library/childrens-songbook/tell-me-dear-lord?lang=eng"
+    song89.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/tell-me-dear-lord?lang=eng"
     song89.title = "Tell Me, Dear Lord"
     song89.topic = "Heavenly Father"
     song89.selected = false
@@ -1084,7 +1084,7 @@ func generateSongs() {
     song90.random = Int64(arc4random_uniform(1000))
     song90.book = songBooksArray[0]
     song90.number = 177
-    song90.url = "https://www.lds.org/music/library/childrens-songbook/teach-me-to-walk-in-the-light?lang=eng"
+    song90.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/teach-me-to-walk-in-the-light?lang=eng"
     song90.title = "Teach Me to Walk in the Light"
     song90.topic = "Christlike Attributes"
     song90.selected = false
@@ -1097,7 +1097,7 @@ func generateSongs() {
     song91.random = Int64(arc4random_uniform(1000))
     song91.book = songBooksArray[0]
     song91.number = 178
-    song91.url = "https://www.lds.org/music/library/childrens-songbook/teacher-do-you-love-me?lang=eng"
+    song91.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/teacher-do-you-love-me?lang=eng"
     song91.title = "Teacher, Do You Love Me?"
     song91.topic = "Christlike Attributes"
     song91.selected = false
@@ -1110,7 +1110,7 @@ func generateSongs() {
     song92.random = Int64(arc4random_uniform(1000))
     song92.book = songBooksArray[0]
     song92.number = 188
-    song92.url = "https://www.lds.org/music/library/childrens-songbook/families-can-be-together-forever?lang=eng"
+    song92.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/families-can-be-together-forever?lang=eng"
     song92.title = "Families Can Be Together Forever"
     song92.topic = "Plan of Salvation"
     song92.selected = false
@@ -1123,7 +1123,7 @@ func generateSongs() {
     song93.random = Int64(arc4random_uniform(1000))
     song93.book = songBooksArray[0]
     song93.number = 190
-    song93.url = "https://www.lds.org/music/library/childrens-songbook/love-is-spoken-here?lang=eng"
+    song93.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/love-is-spoken-here?lang=eng"
     song93.title = "Love Is Spoken Here"
     song93.topic = "Christlike Attributes"
     song93.selected = false
@@ -1136,7 +1136,7 @@ func generateSongs() {
     song94.random = Int64(arc4random_uniform(1000))
     song94.book = songBooksArray[0]
     song94.number = 204
-    song94.url = "https://www.lds.org/music/library/childrens-songbook/mother-tell-me-the-story?lang=eng"
+    song94.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/mother-tell-me-the-story?lang=eng"
     song94.title = "Mother, Tell Me the Story"
     song94.topic = "Jesus Christ"
     song94.selected = false
@@ -1149,7 +1149,7 @@ func generateSongs() {
     song95.random = Int64(arc4random_uniform(1000))
     song95.book = songBooksArray[0]
     song95.number = 206
-    song95.url = "https://www.lds.org/music/library/childrens-songbook/dearest-mother-i-love-you?lang=eng"
+    song95.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/dearest-mother-i-love-you?lang=eng"
     song95.title = "Dearest Mother, I Love You"
     song95.topic = "Christlike Attributes"
     song95.selected = false
@@ -1162,7 +1162,7 @@ func generateSongs() {
     song96.random = Int64(arc4random_uniform(1000))
     song96.book = songBooksArray[0]
     song96.number = 206
-    song96.url = "https://www.lds.org/music/library/childrens-songbook/mother-dear?lang=eng"
+    song96.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/mother-dear?lang=eng"
     song96.title = "Mother Dear"
     song96.topic = "Plan of Salvation"
     song96.selected = false
@@ -1175,7 +1175,7 @@ func generateSongs() {
     song97.random = Int64(arc4random_uniform(1000))
     song97.book = songBooksArray[0]
     song97.number = 236
-    song97.url = "https://www.lds.org/music/library/childrens-songbook/give-said-the-little-stream?lang=eng"
+    song97.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/give-said-the-little-stream?lang=eng"
     song97.title = "Give, Said the Little Stream"
     song97.topic = "Christlike Attributes"
     song97.selected = false
@@ -1188,7 +1188,7 @@ func generateSongs() {
     song98.random = Int64(arc4random_uniform(1000))
     song98.book = songBooksArray[0]
     song98.number = 266
-    song98.url = "https://www.lds.org/music/library/childrens-songbook/if-youre-happy?lang=eng"
+    song98.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/if-youre-happy?lang=eng"
     song98.title = "If You’re Happy"
     song98.topic = "Christlike Attributes"
     song98.selected = false
@@ -1201,7 +1201,7 @@ func generateSongs() {
     song99.random = Int64(arc4random_uniform(1000))
     song99.book = songBooksArray[0]
     song99.number = 278
-    song99.url = "https://www.lds.org/music/library/childrens-songbook/stand-up?lang=eng"
+    song99.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/stand-up?lang=eng"
     song99.title = "Stand Up"
     song99.topic = "Christlike Attributes"
     song99.selected = false
@@ -1214,7 +1214,7 @@ func generateSongs() {
     song100.random = Int64(arc4random_uniform(1000))
     song100.book = songBooksArray[0]
     song100.number = 281
-    song100.url = "https://www.lds.org/music/library/childrens-songbook/the-wise-man-and-the-foolish-man?lang=eng"
+    song100.url = "https://www.churchofjesuschrist.org/music/library/childrens-songbook/the-wise-man-and-the-foolish-man?lang=eng"
     song100.title = "The Wise Man and the Foolish Man"
     song100.topic = "Christlike Attributes"
     song100.selected = false

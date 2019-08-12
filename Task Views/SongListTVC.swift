@@ -23,7 +23,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let song = taskSong
     
-    var songURL = "https://www.lds.org/music/library?lang=eng"
+    var songURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
     
     override func viewDidLoad() {
         super.viewDidLoad()
