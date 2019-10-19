@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hyC-og-ZeS">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hyC-og-ZeS">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -491,7 +489,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="602" y="1136"/>
+            <point key="canvasLocation" x="600.79999999999995" y="1135.7142857142858"/>
         </scene>
         <!--SongDetails-->
         <scene sceneID="AwE-hz-dsU">
@@ -670,7 +668,6 @@
                                                                             <rect key="frame" x="149" y="0.0" width="91" height="32"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" priority="750" constant="110" id="VQ2-6J-ofm"/>
-                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="110" id="yJ4-EM-hOe"/>
                                                                             </constraints>
                                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
                                                                             <color key="textColor" name="Text"/>
@@ -820,7 +817,7 @@
                         <constraints>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="height" secondItem="Mhv-QS-hml" secondAttribute="height" multiplier="0.8" id="1GO-6G-EHS"/>
                             <constraint firstItem="Uxw-f8-Nhu" firstAttribute="top" secondItem="oX6-RR-eA2" secondAttribute="top" id="1T5-gu-nEY"/>
-                            <constraint firstAttribute="trailing" secondItem="Mhv-QS-hml" secondAttribute="trailing" id="73C-bW-t3a"/>
+                            <constraint firstAttribute="trailing" secondItem="Mhv-QS-hml" secondAttribute="trailing" priority="999" id="73C-bW-t3a"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerX" secondItem="Mhv-QS-hml" secondAttribute="centerX" id="88N-GQ-KUi"/>
                             <constraint firstItem="FpX-2P-h4B" firstAttribute="centerY" secondItem="Mhv-QS-hml" secondAttribute="centerY" id="C22-aD-mCq"/>
                             <constraint firstItem="Uxw-f8-Nhu" firstAttribute="centerX" secondItem="oX6-RR-eA2" secondAttribute="centerX" id="Zqc-Gw-yRl"/>
@@ -895,7 +892,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ma-P6-KKd" id="waZ-L2-MSb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="l2I-TT-OWT">
@@ -944,7 +941,7 @@
                                         <rect key="frame" x="0.0" y="78" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RvB-Eg-ceJ" id="4a4-Pi-Y87">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-DA-37j">
@@ -993,7 +990,7 @@
                                         <rect key="frame" x="0.0" y="128" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbL-lc-twB" id="lDf-1O-X6G">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tIN-KX-41w">
@@ -1018,9 +1015,6 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9.99  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-Hu-lVe">
                                                             <rect key="frame" x="284" y="0.0" width="38.333333333333314" height="30"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="fGn-Dt-ctz"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="AmericanTypewriter-Light" family="American Typewriter" pointSize="12"/>
                                                             <color key="textColor" name="Text"/>
                                                             <nil key="highlightedColor"/>
@@ -1045,7 +1039,7 @@
                                         <rect key="frame" x="0.0" y="178" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hcc-rr-RSk" id="pYn-Wy-wvK">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="49.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LEO-6D-NxA">
@@ -1095,14 +1089,14 @@
                             <tableViewSection headerTitle="FEEDBACK:" id="3id-ha-FiU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="99W-ZT-FGa">
-                                        <rect key="frame" x="0.0" y="256" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="284" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="99W-ZT-FGa" id="Z8q-xs-JTi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlw-S9-9XD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gFX-Sr-DfX">
                                                     <rect key="frame" x="24" y="7" width="335" height="30"/>
@@ -1145,14 +1139,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="q0x-Lm-NOR">
-                                        <rect key="frame" x="0.0" y="300" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="328" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q0x-Lm-NOR" id="taw-AL-tZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVr-Gk-HkD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ikg-PT-2uW">
                                                     <rect key="frame" x="24" y="7" width="335" height="30"/>
@@ -1195,10 +1189,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="ci0-og-XJ1">
-                                        <rect key="frame" x="0.0" y="344" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="372" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ci0-og-XJ1" id="a7J-en-k3R">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="647-Es-Jap">
@@ -1238,10 +1232,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="jWO-lj-cao">
-                                        <rect key="frame" x="0.0" y="388" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="416" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jWO-lj-cao" id="Rtq-2v-XQk">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K0s-iP-Xae">
@@ -1281,10 +1275,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="2wD-ee-pv5">
-                                        <rect key="frame" x="0.0" y="432" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="460" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2wD-ee-pv5" id="xpT-jI-tCd">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Nj-jo-7uK">
@@ -1328,14 +1322,14 @@
                             <tableViewSection headerTitle="INFO:" id="omr-hH-vEo">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="ciU-6o-R9T">
-                                        <rect key="frame" x="0.0" y="504" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="560" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ciU-6o-R9T" id="70q-Ao-gF3">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="apw-D2-85Y">
-                                                    <rect key="frame" x="24" y="7" width="309" height="30"/>
+                                                    <rect key="frame" x="24" y="7" width="316" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="fCX-fd-a8d">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1346,7 +1340,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JM0-Os-7ZV">
-                                                            <rect key="frame" x="38" y="0.0" width="258.33333333333331" height="30"/>
+                                                            <rect key="frame" x="38" y="0.0" width="265.33333333333331" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="cGO-zT-lEh"/>
                                                             </constraints>
@@ -1355,7 +1349,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vk-jY-Yzf">
-                                                            <rect key="frame" x="304.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
+                                                            <rect key="frame" x="311.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1374,14 +1368,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="8JH-ex-rrB">
-                                        <rect key="frame" x="0.0" y="548" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="604" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8JH-ex-rrB" id="InO-IM-jhE">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DPz-26-s9J">
-                                                    <rect key="frame" x="24" y="7" width="309" height="30"/>
+                                                    <rect key="frame" x="24" y="7" width="316" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Artist" translatesAutoresizingMaskIntoConstraints="NO" id="A1b-0I-AzE">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1392,7 +1386,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kh-a0-TKn">
-                                                            <rect key="frame" x="38" y="0.0" width="258.33333333333331" height="30"/>
+                                                            <rect key="frame" x="38" y="0.0" width="265.33333333333331" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="N5I-Fh-LX9"/>
                                                             </constraints>
@@ -1401,7 +1395,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQX-ei-BNL">
-                                                            <rect key="frame" x="304.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
+                                                            <rect key="frame" x="311.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1420,14 +1414,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="rTd-gR-LJt">
-                                        <rect key="frame" x="0.0" y="592" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="648" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rTd-gR-LJt" id="yLX-lH-pxK">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t9n-J4-GcU">
-                                                    <rect key="frame" x="24" y="7" width="309" height="30"/>
+                                                    <rect key="frame" x="24" y="7" width="316" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Help" translatesAutoresizingMaskIntoConstraints="NO" id="BWo-dA-aKj">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1438,7 +1432,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tutorial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFr-t2-uOh">
-                                                            <rect key="frame" x="38" y="0.0" width="258.33333333333331" height="30"/>
+                                                            <rect key="frame" x="38" y="0.0" width="265.33333333333331" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Yoh-7F-aPE"/>
                                                             </constraints>
@@ -1447,7 +1441,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdz-Sh-jIW">
-                                                            <rect key="frame" x="304.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
+                                                            <rect key="frame" x="311.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1466,14 +1460,14 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="detailDisclosureButton" id="hbd-OL-Eqw">
-                                        <rect key="frame" x="0.0" y="636" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="692" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hbd-OL-Eqw" id="iZN-MB-voy">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k3e-M3-Nwq">
-                                                    <rect key="frame" x="24" y="7" width="309" height="30"/>
+                                                    <rect key="frame" x="24" y="7" width="316" height="30"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Info" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-Pa-RYU">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -1484,7 +1478,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Disclaimer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LR-tg-HlU">
-                                                            <rect key="frame" x="38" y="0.0" width="258.33333333333331" height="30"/>
+                                                            <rect key="frame" x="38" y="0.0" width="265.33333333333331" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="wcr-ZA-tuq"/>
                                                             </constraints>
@@ -1493,7 +1487,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZb-HZ-i1G">
-                                                            <rect key="frame" x="304.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
+                                                            <rect key="frame" x="311.33333333333331" y="0.0" width="4.6666666666666856" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -1614,14 +1608,14 @@
                         <viewControllerLayoutGuide type="bottom" id="1in-g8-KIY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dx4-8I-2Ce">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="750"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="696"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwI-lT-ZdP">
-                                <rect key="frame" x="0.0" y="44" width="375" height="706"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="696"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRJ-qp-Fum">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="706"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="696"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-VD-tBk">
                                                 <rect key="frame" x="15" y="15" width="345" height="605.66666666666663"/>
@@ -1686,8 +1680,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
-                                                        <rect key="frame" x="0.0" y="240.33333333333331" width="345" height="178"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-tw-xt4">
+                                                        <rect key="frame" x="0.0" y="240.33333333333337" width="345" height="178"/>
                                                         <string key="text">My name is Rylan Evans. 
 
 I am an independent app developer.  I would appreciate your support.
@@ -1728,13 +1722,13 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbY-ji-HoK">
-                                                        <rect key="frame" x="0.0" y="473.33333333333337" width="345" height="20.333333333333314"/>
+                                                        <rect key="frame" x="0.0" y="473.33333333333331" width="345" height="20.333333333333314"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Donations..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThD-zC-OfR">
-                                                        <rect key="frame" x="0.0" y="493.66666666666663" width="345" height="27.333333333333371"/>
+                                                        <rect key="frame" x="0.0" y="493.66666666666669" width="345" height="27.333333333333314"/>
                                                         <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                         <color key="textColor" name="Text"/>
                                                         <nil key="highlightedColor"/>
@@ -1932,17 +1926,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                             <tableViewSection id="c79-aN-Y3T">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="367" id="eCZ-JJ-LyQ" userLabel="About Me">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eCZ-JJ-LyQ" id="8PY-qa-By5">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qv-VB-Qup">
-                                                    <rect key="frame" x="24" y="12" width="327" height="1577"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="3154.3333333333335"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nXS-YD-lAG" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1508" height="1577"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="3016" height="3154.3333333333335"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1963,7 +1957,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rylan" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-Al-h86">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1508" height="1577"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="3016" height="3154.3333333333335"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Sy8-Al-h86" secondAttribute="height" multiplier="109:114" id="naC-tz-z84"/>
                                                             </constraints>
@@ -1974,7 +1968,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cau-Wy-ZGG">
-                                                            <rect key="frame" x="1388" y="1537" width="110" height="30"/>
+                                                            <rect key="frame" x="2896" y="3114.3333333333335" width="110" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="9tb-ff-jdK"/>
@@ -2027,17 +2021,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="367" id="hga-oJ-3hc" userLabel="Download">
-                                        <rect key="frame" x="0.0" y="367" width="375" height="367"/>
+                                        <rect key="frame" x="0.0" y="395" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hga-oJ-3hc" id="tLx-Pm-PfQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfP-8s-CTH">
-                                                    <rect key="frame" x="24" y="12" width="327" height="341"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="682"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8X-az-dGe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="326" height="341"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="652" height="682"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2058,7 +2052,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BSS" translatesAutoresizingMaskIntoConstraints="NO" id="uqh-y8-pHW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="326" height="341"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="652" height="682"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="uqh-y8-pHW" secondAttribute="height" multiplier="109:114" id="Jq7-md-r8V"/>
                                                             </constraints>
@@ -2069,7 +2063,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTO-N1-Bq8">
-                                                            <rect key="frame" x="206" y="301" width="110" height="30"/>
+                                                            <rect key="frame" x="532" y="642" width="110" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="1aL-1j-6l5"/>
@@ -2119,17 +2113,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="367" id="AQN-n6-8xM" userLabel="DigiLilly">
-                                        <rect key="frame" x="0.0" y="734" width="375" height="367"/>
+                                        <rect key="frame" x="0.0" y="762" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQN-n6-8xM" id="lqg-bD-kGt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="366.66666666666669"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3L5-ny-cRT">
-                                                    <rect key="frame" x="24" y="12" width="327" height="614"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="1228"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-Iv-HLe" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="587" height="614"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1174" height="1228"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2150,7 +2144,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DigiLilly" translatesAutoresizingMaskIntoConstraints="NO" id="0gA-r3-24i">
-                                                            <rect key="frame" x="0.0" y="0.0" width="587" height="614"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="1174" height="1228"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="0gA-r3-24i" secondAttribute="height" multiplier="109:114" id="kKG-wz-Ca9"/>
                                                             </constraints>
@@ -2161,7 +2155,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-Nk-s5T">
-                                                            <rect key="frame" x="452" y="574" width="125" height="30"/>
+                                                            <rect key="frame" x="1039" y="1188" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="5NG-it-IYK"/>
@@ -2211,17 +2205,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="tsw-Bw-5EM" userLabel="Facebook">
-                                        <rect key="frame" x="0.0" y="1101" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="1129" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tsw-Bw-5EM" id="Rbo-qa-lXg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HV2-AM-tmI">
-                                                    <rect key="frame" x="24" y="12" width="327" height="166"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="333"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-tg-CnG" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2242,7 +2236,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="PiM-pc-ojP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="PiM-pc-ojP" secondAttribute="height" multiplier="327:150" id="TTD-Nh-sCk"/>
                                                             </constraints>
@@ -2253,7 +2247,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-bE-Dto">
-                                                            <rect key="frame" x="227" y="126" width="125" height="30"/>
+                                                            <rect key="frame" x="591" y="293" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="FsN-vp-7pe"/>
@@ -2303,17 +2297,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="ggk-CY-oFa" userLabel="Twitter">
-                                        <rect key="frame" x="0.0" y="1232" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="1260" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ggk-CY-oFa" id="G4P-94-jO7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RhU-Fw-TrQ">
-                                                    <rect key="frame" x="24" y="12" width="327" height="166"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="333"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mGs-wH-eI8" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2334,7 +2328,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="Kya-HV-bLB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Kya-HV-bLB" secondAttribute="height" multiplier="327:150" id="g2z-2U-9fb"/>
                                                             </constraints>
@@ -2345,7 +2339,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJR-kf-zbK">
-                                                            <rect key="frame" x="227" y="126" width="125" height="30"/>
+                                                            <rect key="frame" x="591" y="293" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="Fg6-2R-74K"/>
@@ -2395,17 +2389,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="Lwp-Bo-0jq" userLabel="Linkedin">
-                                        <rect key="frame" x="0.0" y="1363" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="1391" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lwp-Bo-0jq" id="eVQ-eq-5Y2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-iR-BLh">
-                                                    <rect key="frame" x="24" y="12" width="327" height="500"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="1000"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJv-YI-bHS" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="2180" height="1000"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2426,7 +2420,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linkedin" translatesAutoresizingMaskIntoConstraints="NO" id="YDW-tV-iac">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="2180" height="1000"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="YDW-tV-iac" secondAttribute="height" multiplier="327:150" id="art-RI-T1e"/>
                                                             </constraints>
@@ -2437,7 +2431,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz0-6O-OFH">
-                                                            <rect key="frame" x="955" y="460" width="125" height="30"/>
+                                                            <rect key="frame" x="2045" y="960" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="YI9-Rx-n3P"/>
@@ -2487,17 +2481,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="2xH-fd-4HH" userLabel="Patreon">
-                                        <rect key="frame" x="0.0" y="1494" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="1522" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2xH-fd-4HH" id="uvc-ZC-3VR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="130.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HX2-Af-TeO">
-                                                    <rect key="frame" x="24" y="12" width="327" height="166"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="333"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tba-fL-eYq" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2518,7 +2512,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="Mj4-h6-BKu">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362" height="166"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="Mj4-h6-BKu" secondAttribute="height" multiplier="327:150" id="i4A-sV-vWx"/>
                                                             </constraints>
@@ -2529,7 +2523,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcy-78-PlS">
-                                                            <rect key="frame" x="227" y="126" width="125" height="30"/>
+                                                            <rect key="frame" x="591" y="293" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="97n-Uj-tVW"/>
@@ -2963,17 +2957,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                             <tableViewSection id="R0t-Pk-lmb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="367" id="m9J-fF-X1E" userLabel="About Me">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m9J-fF-X1E" id="LYh-Rf-Z15">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW0-4e-kxG">
-                                                    <rect key="frame" x="24" y="12" width="327" height="1045.6666666666667"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="2091.6666666666665"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vg4-b7-ZBr" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1045.6666666666667"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="2000" height="2091.6666666666665"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2994,7 +2988,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Josephine" translatesAutoresizingMaskIntoConstraints="NO" id="B0p-5Z-tB4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1045.6666666666667"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="2000" height="2091.6666666666665"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="B0p-5Z-tB4" secondAttribute="height" multiplier="109:114" id="eL1-9S-sr2"/>
                                                             </constraints>
@@ -3005,7 +2999,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADI-RI-VUO">
-                                                            <rect key="frame" x="880" y="1005.6666666666667" width="110" height="30"/>
+                                                            <rect key="frame" x="1880" y="2051.6666666666665" width="110" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="EUk-P9-xgN"/>
@@ -3055,17 +3049,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="vGf-Sr-ETe" userLabel="Tapas">
-                                        <rect key="frame" x="0.0" y="367" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="395" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGf-Sr-ETe" id="Edd-JT-3DI">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuN-dC-soJ">
-                                                    <rect key="frame" x="24" y="11.999999999999972" width="327" height="500.33333333333326"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="1000"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vm-ea-Wlo" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="2180" height="1000"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3086,7 +3080,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tapas" translatesAutoresizingMaskIntoConstraints="NO" id="hVR-0V-Sc8">
-                                                            <rect key="frame" x="0.0" y="0.0" width="1090" height="500.33333333333331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="2180" height="1000"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="hVR-0V-Sc8" secondAttribute="height" multiplier="327:150" id="Rtt-mM-Yil"/>
                                                             </constraints>
@@ -3097,7 +3091,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nP-0v-BHa">
-                                                            <rect key="frame" x="955" y="460.33333333333337" width="125" height="30"/>
+                                                            <rect key="frame" x="2045" y="960" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="7pw-rW-3u5"/>
@@ -3147,17 +3141,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="kYG-Cd-8kf" userLabel="Facebook">
-                                        <rect key="frame" x="0.0" y="498" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="526" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYG-Cd-8kf" id="V2D-Gb-wva">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAV-a7-2kM">
-                                                    <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="333"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOa-RS-pyu" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3178,7 +3172,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="t9N-Mg-iFE">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="t9N-Mg-iFE" secondAttribute="height" multiplier="327:150" id="oAQ-Bc-Wvq"/>
                                                             </constraints>
@@ -3189,7 +3183,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zey-LF-gqd">
-                                                            <rect key="frame" x="227.66666666666663" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="591" y="293" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="4gV-sl-vqc"/>
@@ -3239,17 +3233,17 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="131" id="VSH-4Y-djI" userLabel="Patreon">
-                                        <rect key="frame" x="0.0" y="629" width="375" height="131"/>
+                                        <rect key="frame" x="0.0" y="657" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VSH-4Y-djI" id="d9g-9d-kJM">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvo-hs-0Rs">
-                                                    <rect key="frame" x="24" y="12" width="327" height="166.33333333333334"/>
+                                                    <rect key="frame" x="24" y="12" width="327" height="333"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-LR-zfx" customClass="DesignableView" customModule="FHE" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -3270,7 +3264,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patreon" translatesAutoresizingMaskIntoConstraints="NO" id="19A-WK-iir">
-                                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="166.33333333333334"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="726" height="333"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="19A-WK-iir" secondAttribute="height" multiplier="327:150" id="9ui-Gz-cEQ"/>
                                                             </constraints>
@@ -3281,7 +3275,7 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TL-OC-WQ1">
-                                                            <rect key="frame" x="227.66666666666663" y="126.33333333333334" width="125" height="30"/>
+                                                            <rect key="frame" x="591" y="293" width="125" height="30"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="1hN-V8-FtC"/>

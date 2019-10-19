@@ -19,8 +19,8 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
-            NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
         
         clickSoundURL()
@@ -66,7 +66,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     
@@ -82,7 +82,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func basketballSSTapped() {
-        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1224378809?")! as URL, options: ["":""], completionHandler: nil)
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1224378809?")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
     }
     
     func shareWithNetwork() {
@@ -92,7 +92,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     func allApps() {
-        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: ["":""], completionHandler: nil)
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
     }
     
     func digiLilly() {
@@ -107,7 +107,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let id = 660877290751092
         let url = NSURL(string: "fb://profile/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
             let facebookWeb = SFSafariViewController(url: URL as URL)
@@ -126,7 +126,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         //        156383146
         let url = NSURL(string: "twitter://user?screen_name=\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://twitter.com/rylan_evans")!
             let twitterWeb = SFSafariViewController(url: URL as URL)
@@ -140,7 +140,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let id = "rylanevans"
         let url = NSURL(string: "voyager://in/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.linkedin.com/in/rylanevans/")!
             let linkedinWeb = SFSafariViewController(url: URL as URL)
@@ -155,7 +155,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let url = NSURL(string: "yelp:///biz/\(id)")!
         
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.yelp.com/biz/rylan-evans-apps-pleasant-grove-2")!
             
@@ -171,7 +171,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let url = NSURL(string: "comgooglemaps://\(id)")!
 
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.google.com/maps/search/Rylan+Evans'+Apps/@40.3963818,-112.038677,10z")!
             
@@ -187,7 +187,7 @@ class DeveloperTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let url = NSURL(string: "https://www.patreon.com/\(id)")!
         
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.patreon.com/rylanevans")!
             
@@ -207,4 +207,9 @@ extension DeveloperTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

@@ -114,14 +114,14 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
-        self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
+        self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
     }
     
     
     // MARK: - Page Controller scroll backward
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -145,7 +145,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
-        guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }
         
@@ -176,7 +176,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
-            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
+            let firstViewControllerIndex = orderedViewControllers.firstIndex(of: firstViewController) else {
                 return 0
         }
         return firstViewControllerIndex

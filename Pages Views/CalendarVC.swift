@@ -31,7 +31,7 @@ class CalendarVC: UIViewController {
     func gotoAppleCalendar(date: NSDate) {
         let interval = date.timeIntervalSinceReferenceDate
         let url = NSURL(string: "calshow:\(interval)")!
-        UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+        UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
     }
     
     func loadPageData() {
@@ -49,3 +49,8 @@ class CalendarVC: UIViewController {
 }
 
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}

@@ -21,7 +21,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1), NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1), NSAttributedString.Key.font: UIFont(name: "Noteworthy-Bold", size: 35)!]
         
         self.hideKeyboardWhenTappedAround()
         
@@ -131,7 +131,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     }
     
     func allApps() {
-        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: ["":""], completionHandler: nil)
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         counter.seeApps = true
         ad.saveContext()
     }
@@ -140,7 +140,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         let id = 660877290751092
         let url = NSURL(string: "fb://profile/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
             let facebookWeb = SFSafariViewController(url: URL as URL)
@@ -401,6 +401,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
             }
             tableView.reloadData()
             break
+        @unknown default:
+            fatalError("Error with unknown default")
         }
     }
     
@@ -421,4 +423,9 @@ extension FamilyTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

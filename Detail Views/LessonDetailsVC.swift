@@ -41,8 +41,8 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.sizeToFit()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
  
         lessonTopicPicker.delegate = self
@@ -77,7 +77,7 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
         if counter.lessonDetailsTip == false {
             counter.lessonDetailsTip = true
             ad.saveContext()
-            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video make sure you select the box to confirm your URL is a direct link.\n\nTIP - If your lesson is NOT a YouTube video enter your Title, Details and any secure URL that begins with “https://www.”", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video make sure you select the box to confirm your URL is a direct link.\n\nTIP - If your lesson is NOT a YouTube video enter your Title, Details and any secure URL with a valid website or youtube link.", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
                 (action : UIAlertAction!) -> Void in
@@ -109,7 +109,8 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     func checkValidTitle() {
         let text = lessonTitleTextField.text
         let url = lessonURLTextField.text
-        if (text?.isEmpty == false && url?.isEmpty == true) || (url?.isEmpty == false && (url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true)) || (url?.isEmpty == false && (url?.contains("bing") == false || url?.contains("google") == false || url?.contains("yahoo") == false || url?.contains("duckduckgo") == false || url?.contains("wiki") == false)) {
+        if (text?.isEmpty == false && url?.isEmpty == true) || (text?.isEmpty == false && url?.isEmpty == false && ((url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true) && (url?.contains("bing") == false || url?.contains("google") == false || url?.contains("yahoo") == false || url?.contains("duckduckgo") == false || url?.contains("wiki") == false))) {
+            // the problem is that it's doing a check on everything and it's passing. I only want to check for one of them. 
             hideSaveButton.isHidden = true
             self.navigationItem.title = text
             saveButton.isEnabled = true

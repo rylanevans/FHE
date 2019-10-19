@@ -44,16 +44,16 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.default
         toolBar.sizeToFit()
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
         gameAssigneeText.inputView = memberPicker
         gameAssigneeText.inputAccessoryView = toolBar
         searchController.inputAccessoryView = toolBar
         
-        let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedStringKey.font as NSCopying)
-        segment.setTitleTextAttributes(font as! [NSObject : Any], for: .normal)
+        let font = NSDictionary(object: UIFont(name: "American Typewriter", size: 15.0)!, forKey: NSAttributedString.Key.font as NSCopying)
+        segment.setTitleTextAttributes(font as! [NSObject : Any] as? [NSAttributedString.Key : Any], for: .normal)
         
         offSoundURL()
         getAllTasks()
@@ -501,6 +501,8 @@ class GameListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
+        @unknown default:
+            fatalError("Error with unknown default")
         }
     }
 }

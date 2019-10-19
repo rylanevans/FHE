@@ -82,6 +82,8 @@ extension InAppPurchasesService: SKPaymentTransactionObserver {
                 break
             case .purchasing:
                 break
+            @unknown default:
+                fatalError("Error with unknown default")
             }
         }
     }

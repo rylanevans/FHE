@@ -30,16 +30,16 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         
-        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
         
-        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(self.donePressedOnKeyboard))
         
         toolBar.setItems([flexibleSpace, doneButton], animated: false)
         
         memberAgeText.delegate = self
         memberNameText.delegate = self
-        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
-        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        memberAgeText.attributedPlaceholder = NSAttributedString(string: "40", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
+        memberNameText.attributedPlaceholder = NSAttributedString(string: "Dad", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)])
         memberAgeText.inputAccessoryView = toolBar
         memberNameText.inputAccessoryView = toolBar
         
@@ -93,9 +93,12 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
         dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+// Local variable inserted by Swift 4.2 migrator.
+let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
+
         // The info dictionary contains multiple representations of the image, and this uses the original.
-        if let selectedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let selectedImage = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as? UIImage {
             // Set photoImageView to display the selected image.
             photoMemberImage.image = selectedImage
         }
@@ -244,3 +247,13 @@ class FamilyDetailsVC: UIViewController, UITextFieldDelegate, UIImagePickerContr
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+	return input.rawValue
+}

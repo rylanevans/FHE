@@ -20,8 +20,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
-            NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
         
         clickSoundURL()
@@ -116,7 +116,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         counter.feedbackGiven = true
         ad.saveContext()
         
-        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: ["":""], completionHandler: nil)
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
     }
     
     // MARK: -  MFMailComposeViewControllerDelegate Method to provide suggestions
@@ -361,6 +361,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             }
             tableView.reloadData()
             break
+        @unknown default:
+            fatalError("Error with unknown default")
         }
     }
     
@@ -375,4 +377,9 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
             break
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

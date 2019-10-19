@@ -17,8 +17,8 @@ class ArtistTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
-            NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
     }
     
@@ -35,7 +35,7 @@ class ArtistTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
     
     
@@ -62,7 +62,7 @@ class ArtistTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let id = 24424629347498
         let url = NSURL(string: "fb://profile/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.facebook.com/jomoellmer/")!
             let facebookWeb = SFSafariViewController(url: URL as URL)
@@ -77,7 +77,7 @@ class ArtistTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         let url = NSURL(string: "https://www.patreon.com/\(id)")!
         
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.patreon.com/GoodMoeJo")!
             
@@ -99,3 +99,8 @@ extension ArtistTVC: SFSafariViewControllerDelegate {
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
+}

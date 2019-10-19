@@ -28,8 +28,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
-            NSAttributedStringKey.font: UIFont(name: "Noteworthy-Bold", size: 35)!
+            NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.006879295688, green: 0.4784864783, blue: 0.9987255931, alpha: 1),
+            NSAttributedString.Key.font: UIFont(name: "Noteworthy-Bold", size: 35)!
         ]
         
         self.clickSoundURL()
@@ -290,6 +290,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
                 assignmentTableView.insertRows(at: [indexPath], with: .automatic)
             }
             break
+        @unknown default:
+            fatalError("Error with unknown default")
         }
     }
 }

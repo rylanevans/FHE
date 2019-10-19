@@ -37,7 +37,7 @@ class TutorialTVC: UITableViewController {
         let id = "B075NCMLYL"
         let url = NSURL(string: "com.amazon.mobile.shopping.web://amazon.com/gp/product/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.amazon.com/gp/product/B075NCMLYL")!
             
@@ -52,7 +52,7 @@ class TutorialTVC: UITableViewController {
         let id = "B009WHV3BM"
         let url = NSURL(string: "com.amazon.mobile.shopping.web://amazon.com/gp/product/\(id)")!
         if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: ["":""], completionHandler: nil)
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
         } else {
             let URL = NSURL(string: "https://www.amazon.com/gp/product/B009WHV3BM")!
             
@@ -155,7 +155,7 @@ class TutorialTVC: UITableViewController {
     }
     
     @IBAction func lessonTipsTricks(_ sender: Any) {
-        let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video, you'll need to confirm 3 things:\n1) the URL address MUST be secure and include “https://www.”\n2) the URL needs to end with the video ID# after “watch?v=”. For example, “https://www.youtube.com/watch?v=ABCDEFGHIJK”\n3) Select the box to confirm your URL is a direct link to a YouTube video.\nIf your lesson is not a YouTube video enter your Title, details and any secure URL that begins with “https://www.”\n\nTIP - Whoever is assigned the lesson can talk before or after sharing a video or visiting a URL with the planned lesson. Have a discussion, allow for questions, share thoughts, etc.", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "TIPS & TRICKS", message: "\nTIP - If you are adding a lesson with a YouTube video, you'll need to confirm 3 things:\n1) the URL address MUST be a valid website or youtube link.\n2) the URL needs to end with the video ID# after “watch?v=”. For example, “https://www.youtube.com/watch?v=ABCDEFGHIJK”\n3) Select the box to confirm your URL is a direct link to a YouTube video.\nIf your lesson is not a YouTube video enter your Title, details and any secure URL with a valid website or youtube link.\n\nTIP - Whoever is assigned the lesson can talk before or after sharing a video or visiting a URL with the planned lesson. Have a discussion, allow for questions, share thoughts, etc.", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "✓ Got it!", style: .default, handler: {
             (action : UIAlertAction!) -> Void in
@@ -185,4 +185,9 @@ extension TutorialTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
