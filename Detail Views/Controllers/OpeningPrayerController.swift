@@ -11,5 +11,3 @@ import CoreData
 import UIKit
 
 let taskPrayer = tasksAllArray[0]
-
-

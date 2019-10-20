@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -76,14 +74,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6e-j7-Mck" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="6.666666666666667"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="2IY-k0-QeC">
-                                                                <rect key="frame" x="0.0" y="11" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="6.6666666666666856" width="40" height="40"/>
                                                                 <color key="backgroundColor" name="Background"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -92,7 +90,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRA-Nt-90z" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="51" width="40" height="14"/>
+                                                                <rect key="frame" x="0.0" y="46.666666666666686" width="40" height="18.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -424,14 +422,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL3-Dr-N6f" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="10.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="6.333333333333333"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Song" translatesAutoresizingMaskIntoConstraints="NO" id="w08-Cv-mRz">
-                                                                <rect key="frame" x="0.0" y="10.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="6.3333333333333144" width="40" height="40"/>
                                                                 <color key="backgroundColor" name="Background"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -440,7 +438,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dX-WC-BQN" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="50.666666666666686" width="40" height="14.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="46.333333333333314" width="40" height="18.666666666666671"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -811,14 +809,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-bT-HfV" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="11"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="6.666666666666667"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rule" translatesAutoresizingMaskIntoConstraints="NO" id="8Vb-0P-HbN">
-                                                                <rect key="frame" x="0.0" y="11" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="6.6666666666666856" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -827,7 +825,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUW-Db-yFV" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="51" width="40" height="14"/>
+                                                                <rect key="frame" x="0.0" y="46.666666666666686" width="40" height="18.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -1181,14 +1179,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80C-DS-wde" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="11.333333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="7"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scripture" translatesAutoresizingMaskIntoConstraints="NO" id="OdA-zV-O9b">
-                                                                <rect key="frame" x="0.0" y="11.333333333333314" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="7" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -1197,7 +1195,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpK-m8-M3E" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="51.333333333333314" width="40" height="13.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="47" width="40" height="18"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -1477,7 +1475,7 @@
                         <outlet property="scriptureMemberNameLabel" destination="vqh-T7-JAY" id="qyV-nd-I3k"/>
                         <outlet property="scriptureMemberPhotoImage" destination="cAC-Xm-JbC" id="Ea1-QM-MTW"/>
                         <outlet property="scriptureTitleLabel" destination="reb-RJ-bmf" id="Pcm-Sp-NPQ"/>
-                        <outlet property="scriptureWebKit" destination="SNL-mc-xfy" id="Pbn-Jq-AzB"/>
+                        <outlet property="scriptureWebKit" destination="SNL-mc-xfy" id="zbv-iv-s6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxb-vr-Iua" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1537,14 +1535,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdV-o9-roK" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="11.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="7"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-EU-SLn">
-                                                                <rect key="frame" x="0.0" y="11.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="7" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -1553,7 +1551,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-BB-uKj" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="51.666666666666686" width="40" height="13.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="47" width="40" height="18"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -2223,14 +2221,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGI-nn-i37" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="13.333333333333334"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="8.3333333333333339"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="hhc-sa-YW7">
-                                                                <rect key="frame" x="0.0" y="13.333333333333314" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="8.3333333333333144" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -2239,7 +2237,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-vw-toY" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="53.333333333333314" width="40" height="11.666666666666671"/>
+                                                                <rect key="frame" x="0.0" y="48.333333333333314" width="40" height="16.666666666666671"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -2556,14 +2554,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns0-S9-h5a" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="11.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="7"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thought" translatesAutoresizingMaskIntoConstraints="NO" id="lM5-bh-e5E">
-                                                                <rect key="frame" x="0.0" y="11.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="7" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -2572,7 +2570,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Buo-N1-ahk" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="51.666666666666686" width="40" height="13.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="47" width="40" height="18"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -2926,14 +2924,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j36-Qh-FfF" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="13.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="8.6666666666666661"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Quote" translatesAutoresizingMaskIntoConstraints="NO" id="82Q-Lw-TgY">
-                                                                <rect key="frame" x="0.0" y="13.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="8.6666666666666856" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -2942,7 +2940,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5h-xF-R0R" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="53.666666666666686" width="40" height="11.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="48.666666666666686" width="40" height="16.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -3296,14 +3294,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7u-Vs-gVF" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="11.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="7"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lesson" translatesAutoresizingMaskIntoConstraints="NO" id="kPp-ox-xvT">
-                                                                <rect key="frame" x="0.0" y="11.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="7" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -3312,7 +3310,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zti-0f-JpC" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="51.666666666666686" width="40" height="13.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="47" width="40" height="18"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -3691,14 +3689,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-G7-zSD" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="14.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="9.3333333333333339"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Council" translatesAutoresizingMaskIntoConstraints="NO" id="q3U-K6-xZ8">
-                                                                <rect key="frame" x="0.0" y="14.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="9.3333333333333144" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -3707,7 +3705,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqb-he-vlc" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="54.666666666666686" width="40" height="10.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="49.333333333333314" width="40" height="15.666666666666671"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -4061,14 +4059,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-Y3-J19" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="23.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="6.666666666666667"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Prayer" translatesAutoresizingMaskIntoConstraints="NO" id="xmH-41-E2F">
-                                                                <rect key="frame" x="0.0" y="23.333333333333314" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="6.6666666666666856" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -4077,7 +4075,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXs-lC-qHY" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="63.333333333333307" width="40" height="1.6666666666666643"/>
+                                                                <rect key="frame" x="0.0" y="46.666666666666686" width="40" height="18.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -4407,14 +4405,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OB0-Jd-3fM" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="10.666666666666666"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="6.333333333333333"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Game" translatesAutoresizingMaskIntoConstraints="NO" id="Nf4-ex-Ktv">
-                                                                <rect key="frame" x="0.0" y="10.666666666666686" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="6.3333333333333144" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -4423,7 +4421,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8O-Tw-xrh" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="50.666666666666686" width="40" height="14.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="46.333333333333314" width="40" height="18.666666666666671"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -4790,14 +4788,14 @@
                                                         <rect key="frame" x="20" y="0.0" width="40" height="65"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofr-fD-lcC" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="23.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="40" height="6.666666666666667"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Treat" translatesAutoresizingMaskIntoConstraints="NO" id="fGY-p8-FIC">
-                                                                <rect key="frame" x="0.0" y="23.333333333333314" width="40" height="40"/>
+                                                                <rect key="frame" x="0.0" y="6.6666666666666856" width="40" height="40"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <color key="tintColor" name="Accent"/>
                                                                 <constraints>
@@ -4806,7 +4804,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4W-AL-4UD" userLabel="Spacer">
-                                                                <rect key="frame" x="0.0" y="63.333333333333307" width="40" height="1.6666666666666643"/>
+                                                                <rect key="frame" x="0.0" y="46.666666666666686" width="40" height="18.333333333333329"/>
                                                                 <color key="backgroundColor" red="0.84874820709999999" green="0.91649860139999995" blue="0.99562174079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>

@@ -9,10 +9,15 @@
 import UIKit
 
 class OPrayerVC: UIViewController {
+    
+    // MARK: - Custom Variables
+    
     @IBOutlet weak var prayerMemberPhotoImage: UIImageView!
     @IBOutlet weak var prayerMemberNameLabel: UILabel!
     @IBOutlet weak var prayerTitleLabel: UILabel!
     @IBOutlet weak var prayerDetailLabel: UILabel!
+    
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +27,8 @@ class OPrayerVC: UIViewController {
         loadPageData()
     }
     
+    // MARK: - Interface Builder Methods
+    
     @objc func gestureRecognizerAction(_ gesture: UIPanGestureRecognizer) {
         print(gesture)
     }
@@ -29,6 +36,8 @@ class OPrayerVC: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Load Content
     
     func loadPageData() {
         let specificTask = taskPrayer

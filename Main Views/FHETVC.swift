@@ -16,10 +16,11 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
     @IBOutlet weak var imageHeight: UIImageView!
     
-    
     //    var member: Member?
     //    var task: Task?
     //    var tasks = [Task]()
+    
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +64,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
         assignmentTableView.reloadData()
     }
     
+    // MARK: - Tutorial Methods
+    
     func runTutorial() {
         if counter.homeTip == false {
             counter.homeTip = true
@@ -79,6 +82,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             self.present(alertController, animated: true, completion: nil)
         }
     }
+    
+    // MARK: - Interface Builder Methods
     
     @IBAction func editButtonPressed(_ sender: Any) {
         playClick()
@@ -135,6 +140,8 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
             SKStoreReviewController.requestReview()
         }
     }
+    
+    // MARK: - Table View Methods
     
     // Number of rows in section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -201,7 +208,7 @@ class FHETVC: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFe
     //        }
     //    }
     
-    // MARK: - Assignment Cell Delegate
+    // MARK: - Cell Delegate Assignments
     
     func assignmentNeedsChanged(_ sender: AssignmentCell, _ assignee: Member) {
         if let objects = taskController.fetchedObjects, objects.count > 0 {

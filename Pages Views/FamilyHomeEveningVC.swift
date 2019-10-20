@@ -10,12 +10,51 @@ import UIKit
 
 class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    // MARK: - View did load for FamilyHomeEveningVC
+    // MARK: - Custom Variables
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
-        
+    
+    // Ordered Page Views Array
+    lazy var orderedViewControllers = [UIViewController]()
+    
+    var enabledTasksStringsOnlyArray: [String] = [
+        "Opening Prayer",
+        "Song",
+        "Rule",
+        "Scripture",
+        "Calendar",
+        "Testimony",
+        "Spotlight",
+        "Thought",
+        "Quote",
+        "Lesson",
+        "Council",
+        "Activity",
+        "Closing Prayer",
+        "Treat"
+    ]
+    
+    //    lazy var orderedViewControllers: [UIViewController] = {
+    //        return [self.instanceVC(name: "OpeningPrayer"),
+    //                self.instanceVC(name: "Song"),
+    //                self.instanceVC(name: "Rule"),
+    //                self.instanceVC(name: "Scripture"),
+    //                self.instanceVC(name: "Calendar"),
+    //                self.instanceVC(name: "Testimony"),
+    //                self.instanceVC(name: "Spotlight"),
+    //                self.instanceVC(name: "Thought"),
+    //                self.instanceVC(name: "Quote"),
+    //                self.instanceVC(name: "Lesson"),
+    //                self.instanceVC(name: "Council"),
+    //                self.instanceVC(name: "Activity"),
+    //                self.instanceVC(name: "ClosingPrayer"),
+    //                self.instanceVC(name: "Treat")]
+    //    }()
+    
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,26 +81,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         
     }
     
-    // MARK: - Ordered Page Views Array
-    
-    lazy var orderedViewControllers = [UIViewController]()
-    
-    var enabledTasksStringsOnlyArray: [String] = [
-        "Opening Prayer",
-        "Song",
-        "Rule",
-        "Scripture",
-        "Calendar",
-        "Testimony",
-        "Spotlight",
-        "Thought",
-        "Quote",
-        "Lesson",
-        "Council",
-        "Activity",
-        "Closing Prayer",
-        "Treat"
-    ]
+    // MARK: - Loop Methods
     
     func loopThroughEnabledTask() {
         let enabledTasksArray: [Task] = tasksEnabledArray
@@ -80,46 +100,26 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
         }
     }
         
-//    lazy var orderedViewControllers: [UIViewController] = {
-//        return [self.instanceVC(name: "OpeningPrayer"),
-//                self.instanceVC(name: "Song"),
-//                self.instanceVC(name: "Rule"),
-//                self.instanceVC(name: "Scripture"),
-//                self.instanceVC(name: "Calendar"),
-//                self.instanceVC(name: "Testimony"),
-//                self.instanceVC(name: "Spotlight"),
-//                self.instanceVC(name: "Thought"),
-//                self.instanceVC(name: "Quote"),
-//                self.instanceVC(name: "Lesson"),
-//                self.instanceVC(name: "Council"),
-//                self.instanceVC(name: "Activity"),
-//                self.instanceVC(name: "ClosingPrayer"),
-//                self.instanceVC(name: "Treat")]
-//    }()
-
+    // MARK: - Page View Controller (Paginated)
     
-    // MARK: - Instance View Controller
-
+    // Instance View Controller
     func instanceVC(name: String) -> UIViewController {
         return UIStoryboard(name: "FHE", bundle: nil).instantiateViewController(withIdentifier: name)
     }
     
     
-    // MARK: - Page Control variable set up
-    
+    // Page Control variable set up
     var pageControl = UIPageControl()
     
     
-    // MARK: - Page Controller Animation
-    
+    // Page Controller Animation
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.firstIndex(of: pageContentViewController)!
     }
     
     
-    // MARK: - Page Controller scroll backward
-    
+    // Page Controller scroll backward
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
@@ -141,8 +141,7 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     }
     
     
-    // MARK: - Page Controller scroll forward
-    
+    // Page Controller scroll forward
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
@@ -165,15 +164,13 @@ class FamilyHomeEveningVC: UIPageViewController, UIPageViewControllerDataSource,
     }
     
     
-    // MARK: - Page Controller show how many dots
-    
+    // Page Controller show how many dots
     public func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return orderedViewControllers.count
     }
     
     
-    // MARK: - Page Controller show page dots on bottom
-    
+    // Page Controller show page dots on bottom
     public func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
             let firstViewControllerIndex = orderedViewControllers.firstIndex(of: firstViewController) else {

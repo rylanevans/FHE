@@ -15,6 +15,8 @@ var membersPickerArray = [Member]()
 var membersAttendingArray = [Member]()
 var arrayOfAttendingMembersAutoAssignOrder = [Member]()
 
+// MARK: - Getting Members
+
 func getAllMembers() {
     let fetchRequest: NSFetchRequest<Member> = Member.fetchRequest()
     

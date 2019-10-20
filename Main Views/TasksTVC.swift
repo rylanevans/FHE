@@ -15,6 +15,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
     @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
     @IBOutlet weak var imageHeight: UIImageView!
     
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -56,6 +58,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         tableView.reloadData()
     }
     
+    // MARK: - Tutorial Methods
+    
     func runTutorial() {
         if counter.tasksTip == false {
             counter.tasksTip = true
@@ -73,104 +77,8 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         }
     }
     
-    func checkPositiveOrNegitiveFeedback() {
-        let alertController = UIAlertController(title: "APP FEEDBACK", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
-        
-        let likeAction = UIAlertAction(title: "✓ Yes", style: .default, handler: {
-            alert -> Void in
-            self.educateUniqueNameNeededForReview()
-        })
-        
-        let dislikeAction = UIAlertAction(title: "✗ No", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-            self.suggestions()
-        })
-        
-        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-        })
-        
-        alertController.addAction(likeAction)
-        alertController.addAction(dislikeAction)
-        alertController.addAction(cancelAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func educateUniqueNameNeededForReview() {
-        let alertController = UIAlertController(title: "⚠ APP REVIEW ALERT", message: "When writing a review in the app store, you must enter a unique user name! Otherwise the review will not get submitted. Unfortunately, there is no error message to indicate if your user name entered will work. If it is a unique name it will provide a message confirming feedback was submitted. If it is not a unique name when you press “Send” nothing will happen. You will have to cancel and try again with a diffent user name. It's a bug with Apple, not my app. Sorry. Thanks for leaving a review, it really helps.", preferredStyle: .alert)
-        
-        let likeAction = UIAlertAction(title: "✓ Got it", style: .default, handler: {
-            alert -> Void in
-            self.positiveReview()
-        })
-        
-        alertController.addAction(likeAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func positiveReview() {
-        counter.feedbackGiven = true
-        ad.saveContext()
-        
-        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
-    }
-    
-    // MARK: -  MFMailComposeViewControllerDelegate Method to provide suggestions
-    
-    func suggestions() {
-        counter.feedbackGiven = true
-        ad.saveContext()
-        
-        guard MFMailComposeViewController.canSendMail() else {return}
-        let modelName = UIDevice.current.modelName
-        let OSVersion = UIDevice.current.systemVersion
-        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-        let mailController = MFMailComposeViewController()
-        mailController.mailComposeDelegate = self
-        mailController.setToRecipients(["rylanevans@hotmail.com"])
-        mailController.setSubject("FHE App Tips")
-        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
-        
-        self.present(mailController, animated: true, completion: nil)
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
-    func checkIfUserWantsToShare() {
-        let alertController = UIAlertController(title: "SHARE APP", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
-        
-        let yesAction = UIAlertAction(title: "✓ Yea, sure", style: .default, handler: {
-            alert -> Void in
-            self.shareWithNetWork()
-        })
-        
-        let noAction = UIAlertAction(title: "✗ No, thanks", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-        })
-        
-        alertController.addAction(noAction)
-        alertController.addAction(yesAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func shareWithNetWork() {
-        counter.shared = true
-        ad.saveContext()
-        
-        let string: String = String("Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/apple-store/id1292069519")
-        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
-        present(activityViewController, animated: true, completion: nil)
-    }
-    
-    // MARK: - Table view data source
+
+    // MARK: - Table View Methods
     
     // View for header in section
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -272,7 +180,7 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         }
     }
     
-    // MARK: - Task Cell Delegate
+    // MARK: - Cell Delegate (Enable)
     
     func enabledNeedsChanged(_ sender: TaskCell) {
         if let objects = taskController.fetchedObjects, objects.count > 0 {
@@ -290,6 +198,106 @@ class TasksTVC: UITableViewController, NSFetchedResultsControllerDelegate, TaskC
         ad.saveContext()
         runAssignmentsYoungestToOldest()
         tableView.reloadData()
+    }
+    
+    // MARK: - Alert Controller Methods (Modal)
+    
+    func checkPositiveOrNegitiveFeedback() {
+        let alertController = UIAlertController(title: "APP FEEDBACK", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Yes", style: .default, handler: {
+            alert -> Void in
+            self.educateUniqueNameNeededForReview()
+        })
+        
+        let dislikeAction = UIAlertAction(title: "✗ No", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            self.suggestions()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(likeAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func educateUniqueNameNeededForReview() {
+        let alertController = UIAlertController(title: "⚠ APP REVIEW ALERT", message: "When writing a review in the app store, you must enter a unique user name! Otherwise the review will not get submitted. Unfortunately, there is no error message to indicate if your user name entered will work. If it is a unique name it will provide a message confirming feedback was submitted. If it is not a unique name when you press “Send” nothing will happen. You will have to cancel and try again with a diffent user name. It's a bug with Apple, not my app. Sorry. Thanks for leaving a review, it really helps.", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Got it", style: .default, handler: {
+            alert -> Void in
+            self.positiveReview()
+        })
+        
+        alertController.addAction(likeAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func positiveReview() {
+        counter.feedbackGiven = true
+        ad.saveContext()
+        
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
+    }
+    
+    
+    // MARK: -  Mail Compose View Controller (Email)
+    
+    func suggestions() {
+        counter.feedbackGiven = true
+        ad.saveContext()
+        
+        guard MFMailComposeViewController.canSendMail() else {return}
+        let modelName = UIDevice.current.modelName
+        let OSVersion = UIDevice.current.systemVersion
+        let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+        let mailController = MFMailComposeViewController()
+        mailController.mailComposeDelegate = self
+        mailController.setToRecipients(["rylanevans@hotmail.com"])
+        mailController.setSubject("FHE App Tips")
+        mailController.setMessageBody("Please provide details to any feature requests or suggestions on how to improve the app below...\n\n\n\n\nDeveloper Support Information:\n📱 Device Type = \(modelName)\n⚙️ Operating System = \(OSVersion)\n🛠 App Version = \(appVersion ?? "Info not avaliable")", isHTML: false)
+        
+        self.present(mailController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    func checkIfUserWantsToShare() {
+        let alertController = UIAlertController(title: "SHARE APP", message: "Will you share the FHE app with your friends and family?", preferredStyle: .alert)
+        
+        let yesAction = UIAlertAction(title: "✓ Yea, sure", style: .default, handler: {
+            alert -> Void in
+            self.shareWithNetWork()
+        })
+        
+        let noAction = UIAlertAction(title: "✗ No, thanks", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(noAction)
+        alertController.addAction(yesAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func shareWithNetWork() {
+        counter.shared = true
+        ad.saveContext()
+        
+        let string: String = String("Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/apple-store/id1292069519")
+        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
     
     // MARK: - Boiler Code for Core Data

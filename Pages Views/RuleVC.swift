@@ -10,12 +10,17 @@ import UIKit
 import SafariServices
 
 class RuleVC: UIViewController {
+    
+    // MARK: - Custom Variables
+    
     @IBOutlet weak var ruleMemberPhotoImage: UIImageView!
     @IBOutlet weak var ruleMemberNameLabel: UILabel!
     @IBOutlet weak var ruleTitleLabel: UILabel!
     @IBOutlet weak var ruleDetailLabel: UILabel!
     
     var ruleURL = ""
+    
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,8 @@ class RuleVC: UIViewController {
         
         runTutorial()
     }
+    
+    // MARK: - Tutorial Methods
     
     func runTutorial() {
         if counter.rulesTip == false {
@@ -46,6 +53,8 @@ class RuleVC: UIViewController {
         }
     }
     
+    // MARK: - Interface Builder Methods
+    
     @IBAction func ruleDetailsPressed(_ sender: Any) {
         let URL = NSURL(string: "\(ruleURL)")!
         let ruleWebVC = SFSafariViewController(url: URL as URL)
@@ -57,6 +66,8 @@ class RuleVC: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Load Content
     
     func loadPageData() {
         let specificTask = taskRule
@@ -77,6 +88,8 @@ class RuleVC: UIViewController {
         }
     }
 }
+
+// MARK: - Extensions
 
 extension RuleVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

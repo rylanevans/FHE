@@ -12,13 +12,18 @@ import WebKit
 import CoreData
 
 class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
+    
+    // MARK: - Custom Variables
+    
     @IBOutlet weak var songMemberPhotoImage: UIImageView!
     @IBOutlet weak var songMemberNameLabel: UILabel!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songNumberLabel: UILabel!
     
     var songURL = ""
-        
+    
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +37,8 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         
         runTutorial()
     }
+    
+    // MARK: - Tutorial Method
     
     func runTutorial() {
         if counter.songTip == false {
@@ -49,6 +56,8 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
             self.present(alertController, animated: true, completion: nil)
         }
     }
+    
+    // MARK: - Interface Builder Methods
 
     @IBAction func singSongPressed(_ sender: Any) {
         let URL = NSURL(string: "\(songURL)")!
@@ -61,6 +70,8 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Load Content
     
     func loadPageData() {
         let specificTask = taskSong
@@ -87,6 +98,8 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         }
     }
 }
+
+// MARK: - Extensions
 
 extension SongVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {

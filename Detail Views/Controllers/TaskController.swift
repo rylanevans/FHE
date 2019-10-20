@@ -14,6 +14,8 @@ var tasksAllArray = [Task]()
 var tasksEnabledArray = [Task]()
 var arrayOfEnabledAndNotAssignedTasks = [Task]()
 
+// MARK: - Getting Tasks
+
 func getAllTasks() {
     let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
     let sortByDefaultNumber = NSSortDescriptor(key: "defaultNumber", ascending: true)
@@ -59,6 +61,8 @@ func getArrayOfEnabledAndNotAssignedTasks() {
         print("\(error)")
     }
 }
+
+// MARK: - Getting Assignments
 
 func runAssignments() {
     getArrayOfAttendingMembersAutoAssignOrder()

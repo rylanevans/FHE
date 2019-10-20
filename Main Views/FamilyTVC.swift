@@ -17,6 +17,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
     @IBOutlet weak var viewHeight: UITableViewHeaderFooterView!
     @IBOutlet weak var imageHeight: UIImageView!
     
+    // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -53,13 +55,15 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         tableView.reloadData()
     }
     
-    // MARK: - Text Field Options
+    // MARK: - Text Field Methods
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
         return true
     }
+    
+    // MARK: - Tutorials Methods
     
     func runTutorial() {
         if counter.familyTip == false {
@@ -78,82 +82,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-    func checkIfUSerWantsToSeeMyOtherApps() {
-        let alertController = UIAlertController(title: "OTHER APPS?", message: "Are you intrested in seeing my other apps?", preferredStyle: .alert)
-        
-        let likeAction = UIAlertAction(title: "✓ Yes, I'll take a look.", style: .default, handler: {
-            alert -> Void in
-            self.allApps()
-        })
-        
-        let dislikeAction = UIAlertAction(title: "✗ No, thank you.", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-            counter.seeApps = true
-            ad.saveContext()
-        })
-        
-        let cancelAction = UIAlertAction(title: "⌀ Cancel, maybe another time.", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-        })
-        
-        alertController.addAction(likeAction)
-        alertController.addAction(dislikeAction)
-        alertController.addAction(cancelAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func followMeOnFacebook() {
-        let alertController = UIAlertController(title: "FACEBOOK", message: "Will you Like my Facebook page and follow me for future updates and apps?", preferredStyle: .alert)
-        
-        let likeAction = UIAlertAction(title: "✓ Yes, I'll Like you.", style: .default, handler: {
-            alert -> Void in
-            self.facebookFollower()
-        })
-        
-        let dislikeAction = UIAlertAction(title: "✗ No, thank you.", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-            counter.facebookRequest = true
-            ad.saveContext()
-        })
-        
-        let cancelAction = UIAlertAction(title: "⌀ Cancel, maybe another time.", style: .default, handler: {
-            (action : UIAlertAction!) -> Void in
-        })
-        
-        alertController.addAction(likeAction)
-        alertController.addAction(dislikeAction)
-        alertController.addAction(cancelAction)
-        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func allApps() {
-        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
-        counter.seeApps = true
-        ad.saveContext()
-    }
-    
-    func facebookFollower() {
-        let id = 660877290751092
-        let url = NSURL(string: "fb://profile/\(id)")!
-        if UIApplication.shared.canOpenURL(url as URL) == true {
-            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
-        } else {
-            let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
-            let facebookWeb = SFSafariViewController(url: URL as URL)
-            facebookWeb.delegate = self
-            
-            present(facebookWeb, animated: true, completion: nil)
-        }
-        
-        counter.facebookRequest = true
-        ad.saveContext()
-    }
-    
-    // MARK: - Table view data source
+    // MARK: - Table View Methods
     
     // Title for header in section
     //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -251,7 +180,7 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         }
     }
     
-    // MARK: - Family Cell Delegate
+    // MARK: - Cell Delegate Attending
     
     func attendingNeedsChanged(_ sender: FamilyCell) {
         if let objects = memberController.fetchedObjects, objects.count > 0 {
@@ -268,6 +197,8 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
         ad.saveContext()
         tableView.reloadData()
     }
+    
+    // MARK: - Interface Builder Methods
     
     @IBAction func sendMessageToFamilyAboutAssignmentsButtonPressed(_ sender: Any) {
         if counter.launched > 1 {
@@ -305,6 +236,85 @@ class FamilyTVC: UITableViewController, UINavigationControllerDelegate, NSFetche
 //            present(activityViewController, animated: true, completion: nil)
 //        }
 //    }
+    
+    // MARK: - Alert Controller Methods
+    
+    func checkIfUSerWantsToSeeMyOtherApps() {
+        let alertController = UIAlertController(title: "OTHER APPS?", message: "Are you intrested in seeing my other apps?", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Yes, I'll take a look.", style: .default, handler: {
+            alert -> Void in
+            self.allApps()
+        })
+        
+        let dislikeAction = UIAlertAction(title: "✗ No, thank you.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            counter.seeApps = true
+            ad.saveContext()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel, maybe another time.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(likeAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func followMeOnFacebook() {
+        let alertController = UIAlertController(title: "FACEBOOK", message: "Will you Like my Facebook page and follow me for future updates and apps?", preferredStyle: .alert)
+        
+        let likeAction = UIAlertAction(title: "✓ Yes, I'll Like you.", style: .default, handler: {
+            alert -> Void in
+            self.facebookFollower()
+        })
+        
+        let dislikeAction = UIAlertAction(title: "✗ No, thank you.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+            counter.facebookRequest = true
+            ad.saveContext()
+        })
+        
+        let cancelAction = UIAlertAction(title: "⌀ Cancel, maybe another time.", style: .default, handler: {
+            (action : UIAlertAction!) -> Void in
+        })
+        
+        alertController.addAction(likeAction)
+        alertController.addAction(dislikeAction)
+        alertController.addAction(cancelAction)
+        alertController.view.tintColor = #colorLiteral(red: 0.9879999757, green: 0.7409999967, blue: 0.01600000076, alpha: 1)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func allApps() {
+        UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/us/developer/rylan-evans/id1224378808")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
+        counter.seeApps = true
+        ad.saveContext()
+    }
+    
+    func facebookFollower() {
+        let id = 660877290751092
+        let url = NSURL(string: "fb://profile/\(id)")!
+        if UIApplication.shared.canOpenURL(url as URL) == true {
+            UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
+            let facebookWeb = SFSafariViewController(url: URL as URL)
+            facebookWeb.delegate = self
+            
+            present(facebookWeb, animated: true, completion: nil)
+        }
+        
+        counter.facebookRequest = true
+        ad.saveContext()
+    }
+    
+    // MARK: - Message Compose View Controller
     
     func shareWithNetWork() {
         let array = tasksEnabledArray

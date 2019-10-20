@@ -10,9 +10,10 @@ import Foundation
 import CoreData
 import UIKit
 
-// MARK: - Blank Arrays
 var counterArray = [Counter]()
 var counter = counterArray[0]
+
+// MARK: - Setting up for new users
 
 func checkIfLauncedBefore() {
     let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
@@ -56,6 +57,8 @@ func checkIfLauncedBefore() {
         UserDefaults.standard.set(true, forKey: "launchedBefore")
     }
 }
+
+// MARK: - When opened add a new counter everytime
 
 func addToOpenedCounter() {
     let fetchRequest: NSFetchRequest<Counter> = Counter.fetchRequest()

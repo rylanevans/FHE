@@ -13,7 +13,7 @@ import SafariServices
 
 class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     
-    // MARK: - View did load settings
+    // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
+    // MARK: - In App Purchase Methods (IAP)
+    
     @objc func handlePurchase(_ notification: Notification) {
         guard let productID = notification.object as? String else { return }
         switch productID {
@@ -57,8 +59,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     func hideAdsBtnWasPressed(_ sender: Any) {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .hideAds)
     }
-    
-    // MARK: - Functions for each table view cell
     
     func thankYou() {
         InAppPurchasesService.instance.attemptPurchaseForItemWith(productIndex: .thankYou)
@@ -83,6 +83,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         counter.tipGiven = true
         ad.saveContext()
     }
+    
+    // MARK: - Alert Controller Methods (Modal)
     
     func checkPositiveOrNegitiveFeedback() {
         let alertController = UIAlertController(title: "APP FEEDBACK", message: "Are you enjoying the FHE app?", preferredStyle: .alert)
@@ -130,7 +132,18 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         UIApplication.shared.open(NSURL(string: "itms-apps://itunes.apple.com/app/id1292069519?action=write-review")! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
     }
     
-    // MARK: -  MFMailComposeViewControllerDelegate Method to provide suggestions
+    // MARK: - Activity View Controller Methods (Share)
+    
+    func shareWithNetwork() {
+        counter.shared = true
+        ad.saveContext()
+        
+        let string: String = String("Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/apple-store/id1292069519")
+        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
+    // MARK: -  Mail Compose View Controller Methods (Email)
     
     func suggestions() {
         counter.feedbackGiven = true
@@ -149,19 +162,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.present(mailController, animated: true, completion: nil)
     }
     
-    // MARK: - Activity view contorller share options
-    
-    func shareWithNetwork() {
-        counter.shared = true
-        ad.saveContext()
-        
-        let string: String = String("Checkout this Family Home Evening App!\n\nhttps://itunes.apple.com/us/app/apple-store/id1292069519")
-        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
-        present(activityViewController, animated: true, completion: nil)
-    }
-    
-    // MARK: -  MFMailComposeViewControllerDelegate Method to report a problem
-    
     func reportProblem() {
         guard MFMailComposeViewController.canSendMail() else {return}
         let modelName = UIDevice.current.modelName
@@ -176,8 +176,6 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         self.present(mailController, animated: true, completion: nil)
     }
     
-    // MARK: -  MFMailComposeViewControllerDelegate Method to subscribe
-    
 //    func subscribeEmail() {
 //        guard MFMailComposeViewController.canSendMail() else {return}
 //        let mailController = MFMailComposeViewController()
@@ -188,6 +186,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
 //
 //        self.present(mailController, animated: true, completion: nil)
 //    }
+    
+    // MARK: - Safari View Controller Methods (Website)
     
     func subscribe() {
         let URL = NSURL(string: "https://docs.google.com/forms/d/e/1FAIpQLSd-mtNgUloOsryGRlv2PuGHd1Nz3feIDLobkoFgrvMkL487TQ/viewform?usp=sf_link")!
@@ -200,6 +200,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: - Table View Methods
     
     // Table view set up
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -232,8 +234,7 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         return 30
     }
     
-    // MARK: - Did select row at calls certain functions
-    
+    //Did select row at calls certain functions
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
             switch indexPath.row {
@@ -257,6 +258,8 @@ class MoreTVC: UITableViewController, MFMailComposeViewControllerDelegate {
         }
     }
 }
+
+// MARK: - Extensions
 
 extension MoreTVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
