@@ -494,7 +494,9 @@
         <!--SongDetails-->
         <scene sceneID="AwE-hz-dsU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="SongDetails" id="9zX-aS-GUX" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="SongDetails" id="9zX-aS-GUX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fDF-mS-EHc"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gHC-Yg-n8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-582" y="2447"/>
@@ -502,7 +504,9 @@
         <!--ScriptureDetails-->
         <scene sceneID="bAJ-TN-g5c">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ScriptureDetails" id="JuR-Q2-URo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ScriptureDetails" id="JuR-Q2-URo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="F6N-J0-FB4"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LHV-ie-HNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-135" y="2447"/>
@@ -510,7 +514,9 @@
         <!--OPrayerDetails-->
         <scene sceneID="eUD-F7-Ok3">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="OPrayerDetails" id="1fm-xr-Qgd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="OPrayerDetails" id="1fm-xr-Qgd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1T1-rG-i8E"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c41-2j-ohx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1041" y="2447"/>
@@ -809,7 +815,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="beginButtonPressed:" destination="blj-Lq-6RZ" eventType="touchUpInside" id="UzY-Bc-eXo"/>
-                                    <segue destination="sPM-tt-iak" kind="presentation" id="z9d-Dd-CN2"/>
+                                    <segue destination="sPM-tt-iak" kind="presentation" modalPresentationStyle="fullScreen" id="z9d-Dd-CN2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -849,20 +855,20 @@
                         <outlet property="imageHeight" destination="Xbf-LN-14A" id="tgn-8D-5EM"/>
                         <outlet property="viewHeight" destination="r04-sY-i5Q" id="jMb-lw-bJ3"/>
                         <segue destination="mtq-fi-jtC" kind="presentation" identifier="AboutMe" id="XaN-bW-a2L"/>
-                        <segue destination="1fm-xr-Qgd" kind="show" identifier="ShowOPrayer" id="fA6-h3-h7G"/>
-                        <segue destination="9zX-aS-GUX" kind="show" identifier="ShowSongs" id="8JJ-8f-PXH"/>
-                        <segue destination="Rdk-1J-HCu" kind="show" identifier="ShowRules" id="B76-IG-1fl"/>
-                        <segue destination="JuR-Q2-URo" kind="show" identifier="ShowScriptures" id="CY9-aF-U2H"/>
-                        <segue destination="OPB-i0-XTf" kind="show" identifier="ShowCalendar" id="HRK-vV-oOE"/>
-                        <segue destination="bFm-Lv-Fcd" kind="show" identifier="ShowTestimony" id="geT-Vr-Cb1"/>
-                        <segue destination="rUm-v7-8DB" kind="show" identifier="ShowSpotlight" id="AqR-Cm-zRA"/>
-                        <segue destination="5Az-eD-lEO" kind="show" identifier="ShowThought" id="5Sp-jg-2M1"/>
-                        <segue destination="arE-4i-0Zk" kind="show" identifier="ShowQuotes" id="CPb-Ys-WWB"/>
-                        <segue destination="DXI-yq-1Wv" kind="show" identifier="ShowLessons" id="ZyK-vh-hyO"/>
-                        <segue destination="E2P-re-10A" kind="show" identifier="ShowCouncil" id="V5q-lq-RWj"/>
-                        <segue destination="Gx3-wC-DpV" kind="show" identifier="ShowGames" id="6zL-t5-3Ct"/>
-                        <segue destination="gPl-Pe-f5w" kind="show" identifier="ShowTreats" id="jBQ-Ru-iYP"/>
-                        <segue destination="1bO-k4-b22" kind="show" identifier="ShowCPrayer" id="Z1X-p6-O8s"/>
+                        <segue destination="1fm-xr-Qgd" kind="presentation" identifier="ShowOPrayer" modalPresentationStyle="fullScreen" id="fA6-h3-h7G"/>
+                        <segue destination="9zX-aS-GUX" kind="presentation" identifier="ShowSongs" modalPresentationStyle="fullScreen" id="8JJ-8f-PXH"/>
+                        <segue destination="Rdk-1J-HCu" kind="presentation" identifier="ShowRules" modalPresentationStyle="fullScreen" id="B76-IG-1fl"/>
+                        <segue destination="JuR-Q2-URo" kind="presentation" identifier="ShowScriptures" modalPresentationStyle="fullScreen" id="CY9-aF-U2H"/>
+                        <segue destination="OPB-i0-XTf" kind="presentation" identifier="ShowCalendar" modalPresentationStyle="fullScreen" id="HRK-vV-oOE"/>
+                        <segue destination="bFm-Lv-Fcd" kind="presentation" identifier="ShowTestimony" modalPresentationStyle="fullScreen" id="geT-Vr-Cb1"/>
+                        <segue destination="rUm-v7-8DB" kind="presentation" identifier="ShowSpotlight" modalPresentationStyle="fullScreen" id="AqR-Cm-zRA"/>
+                        <segue destination="5Az-eD-lEO" kind="presentation" identifier="ShowThought" modalPresentationStyle="fullScreen" id="5Sp-jg-2M1"/>
+                        <segue destination="arE-4i-0Zk" kind="presentation" identifier="ShowQuotes" modalPresentationStyle="fullScreen" id="CPb-Ys-WWB"/>
+                        <segue destination="DXI-yq-1Wv" kind="presentation" identifier="ShowLessons" modalPresentationStyle="fullScreen" id="ZyK-vh-hyO"/>
+                        <segue destination="E2P-re-10A" kind="presentation" identifier="ShowCouncil" modalPresentationStyle="fullScreen" id="V5q-lq-RWj"/>
+                        <segue destination="Gx3-wC-DpV" kind="presentation" identifier="ShowGames" modalPresentationStyle="fullScreen" id="6zL-t5-3Ct"/>
+                        <segue destination="gPl-Pe-f5w" kind="presentation" identifier="ShowTreats" modalPresentationStyle="fullScreen" id="jBQ-Ru-iYP"/>
+                        <segue destination="1bO-k4-b22" kind="presentation" identifier="ShowCPrayer" modalPresentationStyle="fullScreen" id="Z1X-p6-O8s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOx-IT-pkG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2868,7 +2874,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--RuleDetails-->
         <scene sceneID="dm9-TL-f4E">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="RuleDetails" id="Rdk-1J-HCu" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="RuleDetails" id="Rdk-1J-HCu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gIh-iv-dbB"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQH-L9-fNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-367" y="2447"/>
@@ -2876,7 +2884,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--CalendarDetails-->
         <scene sceneID="dhz-wW-NxD">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CalendarDetails" id="OPB-i0-XTf" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CalendarDetails" id="OPB-i0-XTf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="3pZ-UF-FKa"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-I9-TZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="111" y="2447"/>
@@ -2884,7 +2894,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--TestimonyDetails-->
         <scene sceneID="7AX-PX-48g">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="TestimonyDetails" id="bFm-Lv-Fcd" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="TestimonyDetails" id="bFm-Lv-Fcd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Mo9-tQ-W0Q"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jH7-ch-fBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="2447"/>
@@ -2892,7 +2904,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--SpotlightDetails-->
         <scene sceneID="mii-ez-glH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="SpotlightDetails" id="rUm-v7-8DB" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="SpotlightDetails" id="rUm-v7-8DB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vQe-kz-V9W"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xp3-1r-ljv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="608" y="2447"/>
@@ -2900,7 +2914,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--ThoughtDetails-->
         <scene sceneID="chF-JT-6Zd">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ThoughtDetails" id="5Az-eD-lEO" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="ThoughtDetails" id="5Az-eD-lEO" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="37c-Ey-cXk"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhJ-k6-hBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="2447"/>
@@ -2908,7 +2924,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--QuoteDetails-->
         <scene sceneID="WRm-Hx-iQ2">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="QuoteDetails" id="arE-4i-0Zk" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="QuoteDetails" id="arE-4i-0Zk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Cr8-Rc-Xnh"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5o8-1H-opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1033" y="2447"/>
@@ -2916,7 +2934,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--LessonDetails-->
         <scene sceneID="W4h-bZ-1pH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="LessonDetails" id="DXI-yq-1Wv" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="LessonDetails" id="DXI-yq-1Wv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IlX-Hh-lWU"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hV-AC-7bN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1273" y="2447"/>
@@ -2924,7 +2944,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--CouncilDetails-->
         <scene sceneID="ffO-Yu-psV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CouncilDetails" id="E2P-re-10A" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CouncilDetails" id="E2P-re-10A" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gXy-cp-W8f"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KK9-PK-7q4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1525" y="2447"/>
@@ -2932,7 +2954,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--GameDetails-->
         <scene sceneID="lHR-P3-v3e">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="GameDetails" id="Gx3-wC-DpV" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="GameDetails" id="Gx3-wC-DpV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FS1-4z-BEM"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfe-yv-jD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1730" y="2447"/>
@@ -2940,7 +2964,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--TreatDetails-->
         <scene sceneID="x8G-hA-JwK">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="TreatDetails" id="gPl-Pe-f5w" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="TreatDetails" id="gPl-Pe-f5w" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XnN-XX-FMV"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fna-6y-mjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1954" y="2447"/>
@@ -3343,7 +3369,9 @@ I have a passion for faith, family, and technology.  The FHE app combines all th
         <!--CPrayerDetails-->
         <scene sceneID="Xbx-of-BFG">
             <objects>
-                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CPrayerDetails" id="1bO-k4-b22" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Tasks" referencedIdentifier="CPrayerDetails" id="1bO-k4-b22" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gdz-mJ-F0o"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsO-H8-hSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-796" y="2447"/>

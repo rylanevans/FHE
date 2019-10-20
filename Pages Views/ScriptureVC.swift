@@ -178,3 +178,8 @@ class ScriptureVC: UIViewController, WKNavigationDelegate {
         }
     }
 }
+
+// Example of how deep link to Gospel Library works
+//gospellibrary://content/scriptures/bofm/1-ne/1.1?lang=eng
+//gospellibrary://content/manual/teachings-of-presidents-of-the-church-ezra-taft-benson?lang=eng
+//gospellibrary://content/manual/hymns/the-morning-breaks?lang=eng

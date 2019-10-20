@@ -28,7 +28,6 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         super.viewDidLoad()
         
         offSoundURL()
-        
         loadPageData()
     }
     
@@ -60,11 +59,22 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     // MARK: - Interface Builder Methods
 
     @IBAction func singSongPressed(_ sender: Any) {
-        let URL = NSURL(string: "\(songURL)")!
-        let songWebVC = SFSafariViewController(url: URL as URL)
-        songWebVC.delegate = self
+//        let URL = NSURL(string: "\(songURL)")!
+//        let songWebVC = SFSafariViewController(url: URL as URL)
+//        songWebVC.delegate = self
+//
+//        present(songWebVC, animated: true, completion: nil)
         
-        present(songWebVC, animated: true, completion: nil)
+        let url = NSURL(string: "\(songURL)")
+        if UIApplication.shared.canOpenURL(url! as URL) == true {
+            UIApplication.shared.open(url! as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
+        } else {
+            let URL = NSURL(string: "https://www.churchofjesuschrist.org/music/library?lang=eng")!
+            let sacriedHymnsWeb = SFSafariViewController(url: URL as URL)
+            sacriedHymnsWeb.delegate = self
+            
+            present(sacriedHymnsWeb, animated: true, completion: nil)
+        }
     }
     
     @IBAction func closeButtonPressed(_ sender: Any) {
@@ -76,19 +86,28 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
     func loadPageData() {
         let specificTask = taskSong
         if let task = specificTask.selectedSong {
-            songTitleLabel.text = task.title
+            let title = task.title
+            let deepLinkTitle = task.title?.lowercased()
+            let deepLinkTitleLowerCased = deepLinkTitle?.replacingOccurrences(of: " ", with: "-")
             let number = String(task.number)
             let book = task.book?.capitalized ?? ""
+            let bookType = task.book?.lowercased()
+            
+//            I need to change childer's "childrens-songbook"
+            
+            songTitleLabel.text = title
+            
             if number == "0" || number == "" {
                 songNumberLabel.text = "\(book)"
             } else {
                 songNumberLabel.text = "\(book)  #\(number)"
             }
             
-            if task.url == nil || task.url == "" {
-                songURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
+            if task.book == nil || task.book == "" || task.title == nil || task.title == "" {
+                songURL = "sacredmusic://content"
             } else {
-                songURL = task.url!
+                songURL = "sacredmusic://content/manual/\(bookType ?? "")/\(deepLinkTitleLowerCased ?? "")?lang=eng"
+//                songURL = task.url!
             }
         }
         
@@ -106,4 +125,9 @@ extension SongVC: SFSafariViewControllerDelegate {
         turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
     }
+}
+
+// Used for deep links.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+    return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

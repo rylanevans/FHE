@@ -23,7 +23,7 @@ class SongListTVC: UITableViewController, UIPickerViewDataSource, UIPickerViewDe
     
     let song = taskSong
     
-    var songURL = "https://www.churchofjesuschrist.org/music/library?lang=eng"
+    var songURL = "sacredmusic://content"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -616,3 +616,15 @@ extension SongListTVC: SFSafariViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
+//let id = 660877290751092
+//let url = NSURL(string: "sacredmusic://content/manual/hymns/the-morning-breaks?lang=eng")!
+//if UIApplication.shared.canOpenURL(url as URL) == true {
+//    UIApplication.shared.open(url as URL, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary(["":""]), completionHandler: nil)
+//} else {
+//    let URL = NSURL(string: "https://www.facebook.com/rylanevans.apps/")!
+//    let facebookWeb = SFSafariViewController(url: URL as URL)
+//    facebookWeb.delegate = self
+//    
+//    present(facebookWeb, animated: true, completion: nil)
+//}
