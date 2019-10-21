@@ -93,7 +93,7 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
             let book = task.book?.capitalized ?? ""
             let bookType = task.book?.lowercased()
             
-//            I need to change childer's "childrens-songbook"
+            #warning("I need to change 'childer's' to 'childrens-songbook' for bookType")
             
             songTitleLabel.text = title
             
