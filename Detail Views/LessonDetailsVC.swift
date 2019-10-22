@@ -109,8 +109,10 @@ class LessonDetailsVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSo
     func checkValidTitle() {
         let text = lessonTitleTextField.text
         let url = lessonURLTextField.text
-        if (text?.isEmpty == false && url?.isEmpty == true) || (text?.isEmpty == false && url?.isEmpty == false && ((url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true) && (url?.contains("bing") == false || url?.contains("google") == false || url?.contains("yahoo") == false || url?.contains("duckduckgo") == false || url?.contains("wiki") == false))) {
-            #warning("the problem is that it's doing a check on everything and it's passing. I only want to check for one of them.")
+        if (text?.isEmpty == false && url?.isEmpty == true) ||
+            (text?.isEmpty == false && url?.isEmpty == false &&
+                (url?.hasPrefix("http://") == true || url?.hasPrefix("https://") == true || url?.hasPrefix("www.") == true) &&
+                (url?.contains("bing") != true && url?.contains("google") != true && url?.contains("yahoo") != true && url?.contains("duckduckgo") != true && url?.contains("wiki") != true && url?.contains("sex") != true && url?.contains("porn") != true && url?.contains("porno") != true && url?.contains("xxx") != true && url?.contains("redtube") != true && url?.contains("dailydot") != true)) {
             hideSaveButton.isHidden = true
             self.navigationItem.title = text
             saveButton.isEnabled = true

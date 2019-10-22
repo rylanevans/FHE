@@ -87,26 +87,31 @@ class SongVC: UIViewController, NSFetchedResultsControllerDelegate {
         let specificTask = taskSong
         if let task = specificTask.selectedSong {
             let title = task.title
-            let deepLinkTitle = task.title?.lowercased()
-            let deepLinkTitleLowerCased = deepLinkTitle?.replacingOccurrences(of: " ", with: "-")
+            let deepLinkTitleRemoveSpecialCharactersAndLowerCased = task.title?.stripped.lowercased()
+            let deepLinkTitle = deepLinkTitleRemoveSpecialCharactersAndLowerCased?.replacingOccurrences(of: " ", with: "-")
             let number = String(task.number)
-            let book = task.book?.capitalized ?? ""
-            let bookType = task.book?.lowercased()
-            
-            #warning("I need to change 'childer's' to 'childrens-songbook' for bookType")
+            let book = task.book
+            var deepLinkBook = "childrens-songbook"
+            if book == "Children's" {
+                deepLinkBook = "childrens-songbook"
+            } else if book == "Hymns" {
+                deepLinkBook = "hymns"
+            } else {
+                deepLinkBook = "youth-theme-music"
+            }
             
             songTitleLabel.text = title
             
             if number == "0" || number == "" {
-                songNumberLabel.text = "\(book)"
+                songNumberLabel.text = "\(book ?? "Hymns")"
             } else {
-                songNumberLabel.text = "\(book)  #\(number)"
+                songNumberLabel.text = "\(book ?? "Hymns")  #\(number)"
             }
             
             if task.book == nil || task.book == "" || task.title == nil || task.title == "" {
                 songURL = "sacredmusic://content"
             } else {
-                songURL = "sacredmusic://content/manual/\(bookType ?? "")/\(deepLinkTitleLowerCased ?? "")?lang=eng"
+                songURL = "sacredmusic://content/manual/\(deepLinkBook)/\(deepLinkTitle ?? "")?lang=eng"
 //                songURL = task.url!
             }
         }
@@ -124,6 +129,14 @@ extension SongVC: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         turnOffAudio()
         controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension String {
+
+    var stripped: String {
+        let okayChars = Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890")
+        return self.filter {okayChars.contains($0) }
     }
 }
 

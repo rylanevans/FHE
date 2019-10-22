@@ -109,69 +109,12 @@ class ScriptureVC: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("finish to load")
         //        let elementID = "app"
-        //        let headerNav = "contentHead-3F0ox"
+        //        let headerNav = "panelHeader-2k7Jd contentHead-3F0ox"
         //        let footerNav = "mobileNav-1qobD"
         let removeElementIdScript = """
-        var els = document.getElementsByClassName('mobileNav-1qobD');
-        removeClass(els, 'mobileNav-1qobD');
-        addClass(els, 'new-class-name');
-
-        var el = document.getElementById('app');
-        removeClass([el], 'mobileNav-1qobD');
-        addClass([el], 'new-class-name');
-
-        function addClass(elements, className) {
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                if (element.classList) {
-                    element.classList.add(className);
-                } else {
-                    element.className += ' ' + className;
-                }
-            }
-        }
-
-        function removeClass(elements, className) {
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                if (element.classList) {
-                    element.classList.remove(className);
-                } else {
-                    element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-                }
-            }
-        }
-
-        var els1 = document.getElementsByClassName('contentHead-3F0ox');
-        removeClass1(els1, 'contentHead-3F0ox');
-        addClass1(els1, 'new-class-name');
-
-        var el1 = document.getElementById('app');
-        removeClass1([el1], 'contentHead-3F0ox');
-        addClass1([el1], 'new-class-name');
-
-        function addClass1(elements, className) {
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                if (element.classList) {
-                    element.classList.add(className);
-                } else {
-                    element.className += ' ' + className;
-                }
-            }
-        }
-
-        function removeClass1(elements, className) {
-            for (var i = 0; i < elements.length; i++) {
-                var element = elements[i];
-                if (element.classList) {
-                    element.classList.remove(className);
-                } else {
-                    element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-                }
-            }
-        }
-"""
+        document.querySelectorAll('[class^=panelHeader]').forEach(e => {e.remove()});
+        document.querySelectorAll('[class^=mobileNav]').forEach(e => {e.remove()});
+        """
         webView.evaluateJavaScript(removeElementIdScript) { (response, error) in
             debugPrint("Confrim that it worked")
             print(removeElementIdScript)
@@ -179,7 +122,78 @@ class ScriptureVC: UIViewController, WKNavigationDelegate {
     }
 }
 
+
+
 // Example of how deep link to Gospel Library works
 //gospellibrary://content/scriptures/bofm/1-ne/1.1?lang=eng
 //gospellibrary://content/manual/teachings-of-presidents-of-the-church-ezra-taft-benson?lang=eng
 //gospellibrary://content/manual/hymns/the-morning-breaks?lang=eng
+
+//Sustainable way to remove the header and footer
+//document.querySelectorAll('header').forEach(e => { e.remove()});
+//document.querySelectorAll('[class^=mobileNav]').forEach(e => {e.remove()});
+
+//CSS Options
+//header, div[class^=mobileNav] {
+// display: none !important;
+//}
+
+//        var els = document.getElementsByClassName('mobileNav-1qobD');
+//        removeClass(els, 'mobileNav-1qobD');
+//        addClass(els, 'new-class-name');
+//
+//        var el = document.getElementById('app');
+//        removeClass([el], 'mobileNav-1qobD');
+//        addClass([el], 'new-class-name');
+//
+//        function addClass(elements, className) {
+//            for (var i = 0; i < elements.length; i++) {
+//                var element = elements[i];
+//                if (element.classList) {
+//                    element.classList.add(className);
+//                } else {
+//                    element.className += ' ' + className;
+//                }
+//            }
+//        }
+//
+//        function removeClass(elements, className) {
+//            for (var i = 0; i < elements.length; i++) {
+//                var element = elements[i];
+//                if (element.classList) {
+//                    element.classList.remove(className);
+//                } else {
+//                    element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+//                }
+//            }
+//        }
+//
+//        var els1 = document.getElementsByClassName('contentHead-3F0ox');
+//        removeClass1(els1, 'contentHead-3F0ox');
+//        addClass1(els1, 'new-class-name');
+//
+//        var el1 = document.getElementById('app');
+//        removeClass1([el1], 'contentHead-3F0ox');
+//        addClass1([el1], 'new-class-name');
+//
+//        function addClass1(elements, className) {
+//            for (var i = 0; i < elements.length; i++) {
+//                var element = elements[i];
+//                if (element.classList) {
+//                    element.classList.add(className);
+//                } else {
+//                    element.className += ' ' + className;
+//                }
+//            }
+//        }
+//
+//        function removeClass1(elements, className) {
+//            for (var i = 0; i < elements.length; i++) {
+//                var element = elements[i];
+//                if (element.classList) {
+//                    element.classList.remove(className);
+//                } else {
+//                    element.className = element.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+//                }
+//            }
+//        }
